@@ -1,0 +1,201 @@
+pigz: not found
+>>> perl-html-formatter: Building main/perl-html-formatter 2.16-r3 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:19:44 +0000
+>>> perl-html-formatter: Validating /home/packager/aports/main/perl-html-formatter/APKBUILD...
+>>> perl-html-formatter: Analyzing dependencies...
+>>> perl-html-formatter: Installing for build: build-base perl perl-font-afm perl-html-tree perl-file-slurper perl-test-warnings
+(1/19) Installing libbz2 (1.0.8-r6)
+(2/19) Installing perl (5.40.2-r0)
+(3/19) Installing perl-font-afm (1.20-r4)
+(4/19) Installing perl-html-tagset (3.24-r0)
+(5/19) Installing perl-clone (0.47-r0)
+(6/19) Installing perl-http-date (6.06-r0)
+(7/19) Installing perl-uri (5.28-r0)
+(8/19) Installing perl-io-html (1.004-r1)
+(9/19) Installing perl-encode-locale (1.05-r5)
+(10/19) Installing perl-lwp-mediatypes (6.04-r3)
+(11/19) Installing perl-http-message (7.00-r0)
+(12/19) Installing perl-html-parser (3.83-r0)
+(13/19) Installing perl-html-tree (5.07-r5)
+(14/19) Installing perl-file-slurper (0.014-r1)
+(15/19) Installing perl-test-warnings (0.038-r0)
+(16/19) Installing .makedepends-perl-html-formatter (20250518.091947)
+(17/19) Installing perl-error (0.17030-r0)
+(18/19) Installing perl-git (2.47.2-r0)
+(19/19) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 298 MiB in 100 packages
+>>> perl-html-formatter: Cleaning up srcdir
+>>> perl-html-formatter: Cleaning up pkgdir
+>>> perl-html-formatter: Cleaning up tmpdir
+>>> perl-html-formatter: Fetching https://cpan.metacpan.org/authors/id/N/NI/NIGELM/HTML-Formatter-2.16.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/HTML-Formatter-2.16.tar.gz.part'
+HTML-Formatter-2.16. 100% |********************************| 54362  0:00:00 ETA
+'/var/cache/distfiles/HTML-Formatter-2.16.tar.gz.part' saved
+>>> perl-html-formatter: Fetching https://cpan.metacpan.org/authors/id/N/NI/NIGELM/HTML-Formatter-2.16.tar.gz
+>>> perl-html-formatter: Checking sha512sums...
+HTML-Formatter-2.16.tar.gz: OK
+>>> perl-html-formatter: Unpacking /var/cache/distfiles/HTML-Formatter-2.16.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for HTML::Formatter
+Writing MYMETA.yml and MYMETA.json
+cp lib/HTML/FormatText.pm blib/lib/HTML/FormatText.pm
+cp lib/HTML/FormatPS.pm blib/lib/HTML/FormatPS.pm
+cp lib/HTML/Formatter.pm blib/lib/HTML/Formatter.pm
+cp lib/HTML/FormatRTF.pm blib/lib/HTML/FormatRTF.pm
+cp lib/HTML/FormatMarkdown.pm blib/lib/HTML/FormatMarkdown.pm
+Manifying 5 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/00-compile.t ............... ok
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module              Want     Have
+#     ------------------- ---- --------
+#     ExtUtils::MakeMaker  any     7.70
+#     File::Slurper        any    0.014
+#     File::Spec           any     3.91
+#     FindBin              any     1.54
+#     IO::Handle           any     1.55
+#     IPC::Open3           any     1.22
+#     Test::More          0.96 1.302199
+#     Test::Warnings       any    0.038
+#     blib                1.01     1.07
+#     bytes                any     1.09
+#     lib                  any     0.65
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Runtime Requires ===
+# 
+#     Module                              Want  Have
+#     ----------------------------------- ---- -----
+#     Carp                                 any  1.54
+#     Data::Dumper                         any 2.189
+#     Encode                               any  3.21
+#     Font::Metrics::Courier               any undef
+#     Font::Metrics::CourierBold           any undef
+#     Font::Metrics::CourierBoldOblique    any undef
+#     Font::Metrics::CourierOblique        any undef
+#     Font::Metrics::Helvetica             any undef
+#     Font::Metrics::HelveticaBold         any undef
+#     Font::Metrics::HelveticaBoldOblique  any undef
+#     Font::Metrics::HelveticaOblique      any undef
+#     Font::Metrics::TimesBold             any undef
+#     Font::Metrics::TimesBoldItalic       any undef
+#     Font::Metrics::TimesItalic           any undef
+#     Font::Metrics::TimesRoman            any undef
+#     HTML::Element                       3.15  5.07
+#     HTML::TreeBuilder                    any  5.07
+#     IO::File                             any  1.55
+#     base                                 any  2.27
+#     integer                              any  1.01
+#     parent                               any 0.241
+#     strict                               any  1.13
+#     utf8                                 any  1.25
+#     warnings                             any  1.70
+# 
+t/00-report-prereqs.t ........ ok
+t/01_ps.t .................... ok
+t/02_rtf.t ................... ok
+t/03_text.t .................. ok
+t/04_md.t .................... ok
+t/author-critic.t ............ skipped: these tests are for testing by the author
+t/author-eol.t ............... skipped: these tests are for testing by the author
+t/author-no-tabs.t ........... skipped: these tests are for testing by the author
+t/author-pod-spell.t ......... skipped: these tests are for testing by the author
+t/author-pod-syntax.t ........ skipped: these tests are for testing by the author
+t/author-portability.t ....... skipped: these tests are for testing by the author
+t/author-synopsis.t .......... skipped: these tests are for testing by the author
+t/release-dist-manifest.t .... skipped: these tests are for release candidate testing
+t/release-distmeta.t ......... skipped: these tests are for release candidate testing
+t/release-has-version.t ...... skipped: these tests are for release candidate testing
+t/release-minimum-version.t .. skipped: these tests are for release candidate testing
+t/release-unused-vars.t ...... skipped: these tests are for release candidate testing
+t/rt111783.t ................. ok
+t/rt69426.t .................. ok
+All tests successful.
+Files=20, Tests=94,  1 wallclock secs ( 0.05 usr  0.03 sys +  1.13 cusr  0.15 csys =  1.36 CPU)
+Result: PASS
+>>> perl-html-formatter: Entering fakeroot...
+Manifying 5 pod documents
+Appending installation info to /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/lib/perl5/core_perl/perllocal.pod
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/perl5/vendor_perl/HTML/FormatPS.pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/perl5/vendor_perl/HTML/Formatter.pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/perl5/vendor_perl/HTML/FormatMarkdown.pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/perl5/vendor_perl/HTML/FormatText.pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/perl5/vendor_perl/HTML/FormatRTF.pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/man/man3/HTML::FormatRTF.3pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/man/man3/HTML::Formatter.3pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/man/man3/HTML::FormatPS.3pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/man/man3/HTML::FormatText.3pm
+Installing /home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter/usr/share/man/man3/HTML::FormatMarkdown.3pm
+>>> perl-html-formatter-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-html-formatter/pkg/perl-html-formatter-doc/usr/share/man'
+>>> perl-html-formatter-doc*: Preparing subpackage perl-html-formatter-doc...
+>>> perl-html-formatter-doc*: Running postcheck for perl-html-formatter-doc
+>>> perl-html-formatter*: Running postcheck for perl-html-formatter
+>>> perl-html-formatter*: Preparing package perl-html-formatter...
+>>> perl-html-formatter-doc*: Tracing dependencies...
+>>> perl-html-formatter-doc*: Package size: 11.2 KB
+>>> perl-html-formatter-doc*: Compressing data...
+>>> perl-html-formatter-doc*: Create checksum...
+pigz: not found
+>>> perl-html-formatter-doc*: Create perl-html-formatter-doc-2.16-r3.apk
+>>> perl-html-formatter*: Tracing dependencies...
+	perl
+	perl-font-afm
+	perl-html-tree
+>>> perl-html-formatter*: Package size: 89.1 KB
+>>> perl-html-formatter*: Compressing data...
+>>> perl-html-formatter*: Create checksum...
+pigz: not found
+>>> perl-html-formatter*: Create perl-html-formatter-2.16-r3.apk
+>>> perl-html-formatter: Build complete at Sun, 18 May 2025 09:19:50 +0000 elapsed time 0h 0m 6s
+>>> perl-html-formatter: Cleaning up srcdir
+>>> perl-html-formatter: Cleaning up pkgdir
+>>> perl-html-formatter: Uninstalling dependencies...
+(1/19) Purging .makedepends-perl-html-formatter (20250518.091947)
+(2/19) Purging perl-font-afm (1.20-r4)
+(3/19) Purging perl-html-tree (5.07-r5)
+(4/19) Purging perl-html-parser (3.83-r0)
+(5/19) Purging perl-html-tagset (3.24-r0)
+(6/19) Purging perl-http-message (7.00-r0)
+(7/19) Purging perl-clone (0.47-r0)
+(8/19) Purging perl-http-date (6.06-r0)
+(9/19) Purging perl-io-html (1.004-r1)
+(10/19) Purging perl-encode-locale (1.05-r5)
+(11/19) Purging perl-lwp-mediatypes (6.04-r3)
+(12/19) Purging perl-uri (5.28-r0)
+(13/19) Purging perl-file-slurper (0.014-r1)
+(14/19) Purging perl-test-warnings (0.038-r0)
+(15/19) Purging git-perl (2.47.2-r0)
+(16/19) Purging perl-git (2.47.2-r0)
+(17/19) Purging perl-error (0.17030-r0)
+(18/19) Purging perl (5.40.2-r0)
+(19/19) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-html-formatter: Updating the main/x86_64 repository index...
+>>> perl-html-formatter: Signing the index...
+pigz: not found

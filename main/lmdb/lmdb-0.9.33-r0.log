@@ -1,0 +1,771 @@
+pigz: not found
+>>> lmdb: Building main/lmdb 0.9.33-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:07:17 +0000
+>>> lmdb: Validating /home/packager/aports/main/lmdb/APKBUILD...
+>>> lmdb: Analyzing dependencies...
+>>> lmdb: Installing for build: build-base
+(1/1) Installing .makedepends-lmdb (20250518.090719)
+OK: 261 MiB in 82 packages
+>>> lmdb: Cleaning up srcdir
+>>> lmdb: Cleaning up pkgdir
+>>> lmdb: Cleaning up tmpdir
+>>> lmdb: Fetching https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.33/openldap-LMDB_0.9.33.tar.gz
+Connecting to git.openldap.org (198.58.99.104:443)
+saving to '/var/cache/distfiles/openldap-LMDB_0.9.33.tar.gz.part'
+openldap-LMDB_0.9.33 100% |********************************|  145k  0:00:00 ETA
+'/var/cache/distfiles/openldap-LMDB_0.9.33.tar.gz.part' saved
+>>> lmdb: Fetching https://git.openldap.org/openldap/openldap/-/archive/LMDB_0.9.33/openldap-LMDB_0.9.33.tar.gz
+>>> lmdb: Checking sha512sums...
+openldap-LMDB_0.9.33.tar.gz: OK
+lmdb-make.patch: OK
+lmdb.pc: OK
+>>> lmdb: Unpacking /var/cache/distfiles/openldap-LMDB_0.9.33.tar.gz...
+>>> lmdb: lmdb-make.patch
+patching file Makefile
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -fPIC  -c mdb.c -o mdb.lo
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -fPIC  -c midl.c -o midl.lo
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mdb_stat.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mdb_copy.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mdb_dump.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mdb_load.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mtest.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mtest2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mtest3.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mtest4.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC  -c mtest5.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -pthread -shared -Wl,-soname,liblmdb.so.0 -o liblmdb.so.0.0.0 mdb.lo midl.lo 
+rm -f liblmdb.so
+rm -f liblmdb.so.0
+ln -s liblmdb.so.0.0.0 liblmdb.so
+ln -s liblmdb.so.0.0.0 liblmdb.so.0
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mdb_stat.o liblmdb.so  -o mdb_stat
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mdb_copy.o liblmdb.so  -o mdb_copy
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mdb_dump.o liblmdb.so  -o mdb_dump
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mdb_load.o liblmdb.so  -o mdb_load
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mtest.o liblmdb.so  -o mtest
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mtest2.o liblmdb.so  -o mtest2
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mtest3.o liblmdb.so  -o mtest3
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mtest4.o liblmdb.so  -o mtest4
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mtest5.o liblmdb.so  -o mtest5
+rm -rf testdb && mkdir testdb
+./mtest && ./mdb_stat testdb
+Adding 274 values
+30 duplicates skipped
+key: 0x7fa52e2bffdc 001 , data: 0x7fa52e2bffe0 001 1 foo bar
+key: 0x7fa52e2bffb0 004 , data: 0x7fa52e2bffb4 004 4 foo bar
+key: 0x7fa52e2bff84 007 , data: 0x7fa52e2bff88 007 7 foo bar
+key: 0x7fa52e2bff58 008 , data: 0x7fa52e2bff5c 008 8 foo bar
+key: 0x7fa52e2bf668 00c , data: 0x7fa52e2bf66c 00c 12 foo bar
+key: 0x7fa52e2bf694 010 , data: 0x7fa52e2bf698 010 16 foo bar
+key: 0x7fa52e2bff2c 017 , data: 0x7fa52e2bff30 017 23 foo bar
+key: 0x7fa52e2bff00 018 , data: 0x7fa52e2bff04 018 24 foo bar
+key: 0x7fa52e2bfed4 030 , data: 0x7fa52e2bfed8 030 48 foo bar
+key: 0x7fa52e2bf744 034 , data: 0x7fa52e2bf748 034 52 foo bar
+key: 0x7fa52e2bfea8 03b , data: 0x7fa52e2bfeac 03b 59 foo bar
+key: 0x7fa52e2bf820 03e , data: 0x7fa52e2bf824 03e 62 foo bar
+key: 0x7fa52e2bf7f4 044 , data: 0x7fa52e2bf7f8 044 68 foo bar
+key: 0x7fa52e2bfe7c 048 , data: 0x7fa52e2bfe80 048 72 foo bar
+key: 0x7fa52e2bfe50 04f , data: 0x7fa52e2bfe54 04f 79 foo bar
+key: 0x7fa52e2bfe24 054 , data: 0x7fa52e2bfe28 054 84 foo bar
+key: 0x7fa52e2bfdf8 057 , data: 0x7fa52e2bfdfc 057 87 foo bar
+key: 0x7fa52e2bfdcc 059 , data: 0x7fa52e2bfdd0 059 89 foo bar
+key: 0x7fa52e2bfda0 064 , data: 0x7fa52e2bfda4 064 100 foo bar
+key: 0x7fa52e2bfd74 06e , data: 0x7fa52e2bfd78 06e 110 foo bar
+key: 0x7fa52e2bfd48 06f , data: 0x7fa52e2bfd4c 06f 111 foo bar
+key: 0x7fa52e2bfd1c 070 , data: 0x7fa52e2bfd20 070 112 foo bar
+key: 0x7fa52e2bfcf0 07c , data: 0x7fa52e2bfcf4 07c 124 foo bar
+key: 0x7fa52e2bfcc4 087 , data: 0x7fa52e2bfcc8 087 135 foo bar
+key: 0x7fa52e2bfc98 08f , data: 0x7fa52e2bfc9c 08f 143 foo bar
+key: 0x7fa52e2bf6ec 094 , data: 0x7fa52e2bf6f0 094 148 foo bar
+key: 0x7fa52e2bfc6c 096 , data: 0x7fa52e2bfc70 096 150 foo bar
+key: 0x7fa52e2bfc40 099 , data: 0x7fa52e2bfc44 099 153 foo bar
+key: 0x7fa52e2bfc14 09b , data: 0x7fa52e2bfc18 09b 155 foo bar
+key: 0x7fa52e2bfbe8 0a1 , data: 0x7fa52e2bfbec 0a1 161 foo bar
+key: 0x7fa52e2bfbbc 0a3 , data: 0x7fa52e2bfbc0 0a3 163 foo bar
+key: 0x7fa52e2bfb90 0a4 , data: 0x7fa52e2bfb94 0a4 164 foo bar
+key: 0x7fa52e2bfb64 0a5 , data: 0x7fa52e2bfb68 0a5 165 foo bar
+key: 0x7fa52e2bfb38 0a7 , data: 0x7fa52e2bfb3c 0a7 167 foo bar
+key: 0x7fa52e2bfb0c 0ab , data: 0x7fa52e2bfb10 0ab 171 foo bar
+key: 0x7fa52e2bfae0 0b4 , data: 0x7fa52e2bfae4 0b4 180 foo bar
+key: 0x7fa52e2bfab4 0b5 , data: 0x7fa52e2bfab8 0b5 181 foo bar
+key: 0x7fa52e2bfa88 0bc , data: 0x7fa52e2bfa8c 0bc 188 foo bar
+key: 0x7fa52e2bfa5c 0c0 , data: 0x7fa52e2bfa60 0c0 192 foo bar
+key: 0x7fa52e2bfa30 0c1 , data: 0x7fa52e2bfa34 0c1 193 foo bar
+key: 0x7fa52e2bf770 0c8 , data: 0x7fa52e2bf774 0c8 200 foo bar
+key: 0x7fa52e2bfa04 0c9 , data: 0x7fa52e2bfa08 0c9 201 foo bar
+key: 0x7fa52e2bf9d8 0cf , data: 0x7fa52e2bf9dc 0cf 207 foo bar
+key: 0x7fa52e2bf9ac 0d1 , data: 0x7fa52e2bf9b0 0d1 209 foo bar
+key: 0x7fa52e2bf980 0da , data: 0x7fa52e2bf984 0da 218 foo bar
+key: 0x7fa52e2bf79c 0ec , data: 0x7fa52e2bf7a0 0ec 236 foo bar
+key: 0x7fa52e2bf954 0ed , data: 0x7fa52e2bf958 0ed 237 foo bar
+key: 0x7fa52e2bf718 0ee , data: 0x7fa52e2bf71c 0ee 238 foo bar
+key: 0x7fa52e2bf928 0f0 , data: 0x7fa52e2bf92c 0f0 240 foo bar
+key: 0x7fa52e2bf84c 0f2 , data: 0x7fa52e2bf850 0f2 242 foo bar
+key: 0x7fa52e2bf6c0 0f3 , data: 0x7fa52e2bf6c4 0f3 243 foo bar
+key: 0x7fa52e2bf8fc 100 , data: 0x7fa52e2bf900 100 256 foo bar
+key: 0x7fa52e2bf7c8 107 , data: 0x7fa52e2bf7cc 107 263 foo bar
+key: 0x7fa52e2bf8d0 113 , data: 0x7fa52e2bf8d4 113 275 foo bar
+key: 0x7fa52e2bf8a4 117 , data: 0x7fa52e2bf8a8 117 279 foo bar
+key: 0x7fa52e2bf878 118 , data: 0x7fa52e2bf87c 118 280 foo bar
+key: 0x7fa52e2c3fdc 119 , data: 0x7fa52e2c3fe0 119 281 foo bar
+key: 0x7fa52e2c3fb0 120 , data: 0x7fa52e2c3fb4 120 288 foo bar
+key: 0x7fa52e2c3f84 121 , data: 0x7fa52e2c3f88 121 289 foo bar
+key: 0x7fa52e2c3f58 122 , data: 0x7fa52e2c3f5c 122 290 foo bar
+key: 0x7fa52e2c3f2c 126 , data: 0x7fa52e2c3f30 126 294 foo bar
+key: 0x7fa52e2c3f00 130 , data: 0x7fa52e2c3f04 130 304 foo bar
+key: 0x7fa52e2c3ed4 13a , data: 0x7fa52e2c3ed8 13a 314 foo bar
+key: 0x7fa52e2c37c8 13d , data: 0x7fa52e2c37cc 13d 317 foo bar
+key: 0x7fa52e2c3ea8 13f , data: 0x7fa52e2c3eac 13f 319 foo bar
+key: 0x7fa52e2c3e7c 140 , data: 0x7fa52e2c3e80 140 320 foo bar
+key: 0x7fa52e2c3e50 142 , data: 0x7fa52e2c3e54 142 322 foo bar
+key: 0x7fa52e2c3e24 14e , data: 0x7fa52e2c3e28 14e 334 foo bar
+key: 0x7fa52e2c3df8 158 , data: 0x7fa52e2c3dfc 158 344 foo bar
+key: 0x7fa52e2c3dcc 15c , data: 0x7fa52e2c3dd0 15c 348 foo bar
+key: 0x7fa52e2c3da0 162 , data: 0x7fa52e2c3da4 162 354 foo bar
+key: 0x7fa52e2c3d74 166 , data: 0x7fa52e2c3d78 166 358 foo bar
+key: 0x7fa52e2c3d48 172 , data: 0x7fa52e2c3d4c 172 370 foo bar
+key: 0x7fa52e2c3d1c 174 , data: 0x7fa52e2c3d20 174 372 foo bar
+key: 0x7fa52e2c37f4 17a , data: 0x7fa52e2c37f8 17a 378 foo bar
+key: 0x7fa52e2c3cf0 17b , data: 0x7fa52e2c3cf4 17b 379 foo bar
+key: 0x7fa52e2c3cc4 17e , data: 0x7fa52e2c3cc8 17e 382 foo bar
+key: 0x7fa52e2c3c98 185 , data: 0x7fa52e2c3c9c 185 389 foo bar
+key: 0x7fa52e2c3c6c 18a , data: 0x7fa52e2c3c70 18a 394 foo bar
+key: 0x7fa52e2c3c40 193 , data: 0x7fa52e2c3c44 193 403 foo bar
+key: 0x7fa52e2c3c14 195 , data: 0x7fa52e2c3c18 195 405 foo bar
+key: 0x7fa52e2c3be8 19b , data: 0x7fa52e2c3bec 19b 411 foo bar
+key: 0x7fa52e2c3bbc 19e , data: 0x7fa52e2c3bc0 19e 414 foo bar
+key: 0x7fa52e2c3b90 1a3 , data: 0x7fa52e2c3b94 1a3 419 foo bar
+key: 0x7fa52e2c3b64 1a9 , data: 0x7fa52e2c3b68 1a9 425 foo bar
+key: 0x7fa52e2c3b38 1ad , data: 0x7fa52e2c3b3c 1ad 429 foo bar
+key: 0x7fa52e2c3b0c 1b0 , data: 0x7fa52e2c3b10 1b0 432 foo bar
+key: 0x7fa52e2c3ae0 1b6 , data: 0x7fa52e2c3ae4 1b6 438 foo bar
+key: 0x7fa52e2c3ab4 1b7 , data: 0x7fa52e2c3ab8 1b7 439 foo bar
+key: 0x7fa52e2c3a88 1bd , data: 0x7fa52e2c3a8c 1bd 445 foo bar
+key: 0x7fa52e2c3a5c 1c2 , data: 0x7fa52e2c3a60 1c2 450 foo bar
+key: 0x7fa52e2c3a30 1c3 , data: 0x7fa52e2c3a34 1c3 451 foo bar
+key: 0x7fa52e2c3a04 1c7 , data: 0x7fa52e2c3a08 1c7 455 foo bar
+key: 0x7fa52e2c39d8 1c9 , data: 0x7fa52e2c39dc 1c9 457 foo bar
+key: 0x7fa52e2c39ac 1ca , data: 0x7fa52e2c39b0 1ca 458 foo bar
+key: 0x7fa52e2c3980 1cd , data: 0x7fa52e2c3984 1cd 461 foo bar
+key: 0x7fa52e2c3718 1d2 , data: 0x7fa52e2c371c 1d2 466 foo bar
+key: 0x7fa52e2c3770 1da , data: 0x7fa52e2c3774 1da 474 foo bar
+key: 0x7fa52e2c379c 1dc , data: 0x7fa52e2c37a0 1dc 476 foo bar
+key: 0x7fa52e2c3954 1e1 , data: 0x7fa52e2c3958 1e1 481 foo bar
+key: 0x7fa52e2c3744 1e3 , data: 0x7fa52e2c3748 1e3 483 foo bar
+key: 0x7fa52e2c3928 1e5 , data: 0x7fa52e2c392c 1e5 485 foo bar
+key: 0x7fa52e2c38fc 1e7 , data: 0x7fa52e2c3900 1e7 487 foo bar
+key: 0x7fa52e2c38d0 1e8 , data: 0x7fa52e2c38d4 1e8 488 foo bar
+key: 0x7fa52e2c38a4 1ea , data: 0x7fa52e2c38a8 1ea 490 foo bar
+key: 0x7fa52e2c3878 1f2 , data: 0x7fa52e2c387c 1f2 498 foo bar
+key: 0x7fa52e2c384c 1f5 , data: 0x7fa52e2c3850 1f5 501 foo bar
+key: 0x7fa52e2c3820 1f9 , data: 0x7fa52e2c3824 1f9 505 foo bar
+key: 0x7fa52e2c0fdc 1fc , data: 0x7fa52e2c0fe0 1fc 508 foo bar
+key: 0x7fa52e2c0fb0 201 , data: 0x7fa52e2c0fb4 201 513 foo bar
+key: 0x7fa52e2c0f84 206 , data: 0x7fa52e2c0f88 206 518 foo bar
+key: 0x7fa52e2c0484 20a , data: 0x7fa52e2c0488 20a 522 foo bar
+key: 0x7fa52e2c084c 20c , data: 0x7fa52e2c0850 20c 524 foo bar
+key: 0x7fa52e2c0f58 20e , data: 0x7fa52e2c0f5c 20e 526 foo bar
+key: 0x7fa52e2c0f2c 217 , data: 0x7fa52e2c0f30 217 535 foo bar
+key: 0x7fa52e2c0f00 218 , data: 0x7fa52e2c0f04 218 536 foo bar
+key: 0x7fa52e2c0ed4 21c , data: 0x7fa52e2c0ed8 21c 540 foo bar
+key: 0x7fa52e2c0718 220 , data: 0x7fa52e2c071c 220 544 foo bar
+key: 0x7fa52e2c0694 223 , data: 0x7fa52e2c0698 223 547 foo bar
+key: 0x7fa52e2c0508 225 , data: 0x7fa52e2c050c 225 549 foo bar
+key: 0x7fa52e2c0ea8 228 , data: 0x7fa52e2c0eac 228 552 foo bar
+key: 0x7fa52e2c0820 229 , data: 0x7fa52e2c0824 229 553 foo bar
+key: 0x7fa52e2c0e7c 22a , data: 0x7fa52e2c0e80 22a 554 foo bar
+key: 0x7fa52e2c0e50 22c , data: 0x7fa52e2c0e54 22c 556 foo bar
+key: 0x7fa52e2c0e24 230 , data: 0x7fa52e2c0e28 230 560 foo bar
+key: 0x7fa52e2c0400 231 , data: 0x7fa52e2c0404 231 561 foo bar
+key: 0x7fa52e2c06ec 236 , data: 0x7fa52e2c06f0 236 566 foo bar
+key: 0x7fa52e2c0df8 23f , data: 0x7fa52e2c0dfc 23f 575 foo bar
+key: 0x7fa52e2c0dcc 245 , data: 0x7fa52e2c0dd0 245 581 foo bar
+key: 0x7fa52e2c0da0 247 , data: 0x7fa52e2c0da4 247 583 foo bar
+key: 0x7fa52e2c0d74 249 , data: 0x7fa52e2c0d78 249 585 foo bar
+key: 0x7fa52e2c0d48 24a , data: 0x7fa52e2c0d4c 24a 586 foo bar
+key: 0x7fa52e2c0d1c 24d , data: 0x7fa52e2c0d20 24d 589 foo bar
+key: 0x7fa52e2c0770 250 , data: 0x7fa52e2c0774 250 592 foo bar
+key: 0x7fa52e2c0cf0 253 , data: 0x7fa52e2c0cf4 253 595 foo bar
+key: 0x7fa52e2c05e4 258 , data: 0x7fa52e2c05e8 258 600 foo bar
+key: 0x7fa52e2c0cc4 259 , data: 0x7fa52e2c0cc8 259 601 foo bar
+key: 0x7fa52e2c0c98 25b , data: 0x7fa52e2c0c9c 25b 603 foo bar
+key: 0x7fa52e2c079c 25c , data: 0x7fa52e2c07a0 25c 604 foo bar
+key: 0x7fa52e2c0c6c 25f , data: 0x7fa52e2c0c70 25f 607 foo bar
+key: 0x7fa52e2c0c40 261 , data: 0x7fa52e2c0c44 261 609 foo bar
+key: 0x7fa52e2c0c14 263 , data: 0x7fa52e2c0c18 263 611 foo bar
+key: 0x7fa52e2c07f4 266 , data: 0x7fa52e2c07f8 266 614 foo bar
+key: 0x7fa52e2c042c 267 , data: 0x7fa52e2c0430 267 615 foo bar
+key: 0x7fa52e2c0be8 26e , data: 0x7fa52e2c0bec 26e 622 foo bar
+key: 0x7fa52e2c0bbc 275 , data: 0x7fa52e2c0bc0 275 629 foo bar
+key: 0x7fa52e2c063c 27f , data: 0x7fa52e2c0640 27f 639 foo bar
+key: 0x7fa52e2c0b90 287 , data: 0x7fa52e2c0b94 287 647 foo bar
+key: 0x7fa52e2c0b64 288 , data: 0x7fa52e2c0b68 288 648 foo bar
+key: 0x7fa52e2c0b38 28c , data: 0x7fa52e2c0b3c 28c 652 foo bar
+key: 0x7fa52e2c0b0c 28e , data: 0x7fa52e2c0b10 28e 654 foo bar
+key: 0x7fa52e2c0560 28f , data: 0x7fa52e2c0564 28f 655 foo bar
+key: 0x7fa52e2c05b8 297 , data: 0x7fa52e2c05bc 297 663 foo bar
+key: 0x7fa52e2c06c0 299 , data: 0x7fa52e2c06c4 299 665 foo bar
+key: 0x7fa52e2c0458 29c , data: 0x7fa52e2c045c 29c 668 foo bar
+key: 0x7fa52e2c07c8 2a0 , data: 0x7fa52e2c07cc 2a0 672 foo bar
+key: 0x7fa52e2c0ae0 2a5 , data: 0x7fa52e2c0ae4 2a5 677 foo bar
+key: 0x7fa52e2c0ab4 2a7 , data: 0x7fa52e2c0ab8 2a7 679 foo bar
+key: 0x7fa52e2c0a88 2a8 , data: 0x7fa52e2c0a8c 2a8 680 foo bar
+key: 0x7fa52e2c0a5c 2aa , data: 0x7fa52e2c0a60 2aa 682 foo bar
+key: 0x7fa52e2c0a30 2ac , data: 0x7fa52e2c0a34 2ac 684 foo bar
+key: 0x7fa52e2c0a04 2b0 , data: 0x7fa52e2c0a08 2b0 688 foo bar
+key: 0x7fa52e2c0610 2b1 , data: 0x7fa52e2c0614 2b1 689 foo bar
+key: 0x7fa52e2c09d8 2b4 , data: 0x7fa52e2c09dc 2b4 692 foo bar
+key: 0x7fa52e2c09ac 2b9 , data: 0x7fa52e2c09b0 2b9 697 foo bar
+key: 0x7fa52e2c0980 2bb , data: 0x7fa52e2c0984 2bb 699 foo bar
+key: 0x7fa52e2c0954 2bc , data: 0x7fa52e2c0958 2bc 700 foo bar
+key: 0x7fa52e2c04b0 2bf , data: 0x7fa52e2c04b4 2bf 703 foo bar
+key: 0x7fa52e2c0928 2c1 , data: 0x7fa52e2c092c 2c1 705 foo bar
+key: 0x7fa52e2c08fc 2c2 , data: 0x7fa52e2c0900 2c2 706 foo bar
+key: 0x7fa52e2c0744 2c6 , data: 0x7fa52e2c0748 2c6 710 foo bar
+key: 0x7fa52e2c04dc 2ca , data: 0x7fa52e2c04e0 2ca 714 foo bar
+key: 0x7fa52e2c0534 2ce , data: 0x7fa52e2c0538 2ce 718 foo bar
+key: 0x7fa52e2c08d0 2d2 , data: 0x7fa52e2c08d4 2d2 722 foo bar
+key: 0x7fa52e2c058c 2d4 , data: 0x7fa52e2c0590 2d4 724 foo bar
+key: 0x7fa52e2c0668 2d7 , data: 0x7fa52e2c066c 2d7 727 foo bar
+key: 0x7fa52e2c08a4 2ea , data: 0x7fa52e2c08a8 2ea 746 foo bar
+key: 0x7fa52e2c0878 2eb , data: 0x7fa52e2c087c 2eb 747 foo bar
+key: 0x7fa52e2c2fdc 2ef , data: 0x7fa52e2c2fe0 2ef 751 foo bar
+key: 0x7fa52e2c2fb0 2f1 , data: 0x7fa52e2c2fb4 2f1 753 foo bar
+key: 0x7fa52e2c2f84 2fa , data: 0x7fa52e2c2f88 2fa 762 foo bar
+key: 0x7fa52e2c2f58 301 , data: 0x7fa52e2c2f5c 301 769 foo bar
+key: 0x7fa52e2c2f2c 302 , data: 0x7fa52e2c2f30 302 770 foo bar
+key: 0x7fa52e2c2f00 308 , data: 0x7fa52e2c2f04 308 776 foo bar
+key: 0x7fa52e2c2ed4 30e , data: 0x7fa52e2c2ed8 30e 782 foo bar
+key: 0x7fa52e2c2668 30f , data: 0x7fa52e2c266c 30f 783 foo bar
+key: 0x7fa52e2c2ea8 310 , data: 0x7fa52e2c2eac 310 784 foo bar
+key: 0x7fa52e2c2e7c 311 , data: 0x7fa52e2c2e80 311 785 foo bar
+key: 0x7fa52e2c258c 312 , data: 0x7fa52e2c2590 312 786 foo bar
+key: 0x7fa52e2c2560 314 , data: 0x7fa52e2c2564 314 788 foo bar
+key: 0x7fa52e2c2e50 31e , data: 0x7fa52e2c2e54 31e 798 foo bar
+key: 0x7fa52e2c2e24 31f , data: 0x7fa52e2c2e28 31f 799 foo bar
+key: 0x7fa52e2c26ec 320 , data: 0x7fa52e2c26f0 320 800 foo bar
+key: 0x7fa52e2c2df8 323 , data: 0x7fa52e2c2dfc 323 803 foo bar
+key: 0x7fa52e2c2dcc 326 , data: 0x7fa52e2c2dd0 326 806 foo bar
+key: 0x7fa52e2c2da0 32f , data: 0x7fa52e2c2da4 32f 815 foo bar
+key: 0x7fa52e2c2d74 332 , data: 0x7fa52e2c2d78 332 818 foo bar
+key: 0x7fa52e2c2d48 333 , data: 0x7fa52e2c2d4c 333 819 foo bar
+key: 0x7fa52e2c263c 335 , data: 0x7fa52e2c2640 335 821 foo bar
+key: 0x7fa52e2c2d1c 339 , data: 0x7fa52e2c2d20 339 825 foo bar
+key: 0x7fa52e2c2cf0 33a , data: 0x7fa52e2c2cf4 33a 826 foo bar
+key: 0x7fa52e2c2cc4 33d , data: 0x7fa52e2c2cc8 33d 829 foo bar
+key: 0x7fa52e2c2508 348 , data: 0x7fa52e2c250c 348 840 foo bar
+key: 0x7fa52e2c2c98 349 , data: 0x7fa52e2c2c9c 349 841 foo bar
+key: 0x7fa52e2c2c6c 34a , data: 0x7fa52e2c2c70 34a 842 foo bar
+key: 0x7fa52e2c2c40 350 , data: 0x7fa52e2c2c44 350 848 foo bar
+key: 0x7fa52e2c279c 353 , data: 0x7fa52e2c27a0 353 851 foo bar
+key: 0x7fa52e2c2c14 359 , data: 0x7fa52e2c2c18 359 857 foo bar
+key: 0x7fa52e2c2be8 363 , data: 0x7fa52e2c2bec 363 867 foo bar
+key: 0x7fa52e2c2bbc 364 , data: 0x7fa52e2c2bc0 364 868 foo bar
+key: 0x7fa52e2c2610 369 , data: 0x7fa52e2c2614 369 873 foo bar
+key: 0x7fa52e2c2b90 372 , data: 0x7fa52e2c2b94 372 882 foo bar
+key: 0x7fa52e2c2b64 375 , data: 0x7fa52e2c2b68 375 885 foo bar
+key: 0x7fa52e2c2b38 376 , data: 0x7fa52e2c2b3c 376 886 foo bar
+key: 0x7fa52e2c2744 377 , data: 0x7fa52e2c2748 377 887 foo bar
+key: 0x7fa52e2c2b0c 379 , data: 0x7fa52e2c2b10 379 889 foo bar
+key: 0x7fa52e2c2ae0 37a , data: 0x7fa52e2c2ae4 37a 890 foo bar
+key: 0x7fa52e2c2ab4 37b , data: 0x7fa52e2c2ab8 37b 891 foo bar
+key: 0x7fa52e2c2a88 387 , data: 0x7fa52e2c2a8c 387 903 foo bar
+key: 0x7fa52e2c26c0 38a , data: 0x7fa52e2c26c4 38a 906 foo bar
+key: 0x7fa52e2c2a5c 392 , data: 0x7fa52e2c2a60 392 914 foo bar
+key: 0x7fa52e2c2694 3a0 , data: 0x7fa52e2c2698 3a0 928 foo bar
+key: 0x7fa52e2c2a30 3a1 , data: 0x7fa52e2c2a34 3a1 929 foo bar
+key: 0x7fa52e2c2a04 3a2 , data: 0x7fa52e2c2a08 3a2 930 foo bar
+key: 0x7fa52e2c24dc 3a7 , data: 0x7fa52e2c24e0 3a7 935 foo bar
+key: 0x7fa52e2c29d8 3ab , data: 0x7fa52e2c29dc 3ab 939 foo bar
+key: 0x7fa52e2c2534 3ae , data: 0x7fa52e2c2538 3ae 942 foo bar
+key: 0x7fa52e2c29ac 3af , data: 0x7fa52e2c29b0 3af 943 foo bar
+key: 0x7fa52e2c27c8 3b1 , data: 0x7fa52e2c27cc 3b1 945 foo bar
+key: 0x7fa52e2c2980 3b6 , data: 0x7fa52e2c2984 3b6 950 foo bar
+key: 0x7fa52e2c2820 3b7 , data: 0x7fa52e2c2824 3b7 951 foo bar
+key: 0x7fa52e2c25b8 3b9 , data: 0x7fa52e2c25bc 3b9 953 foo bar
+key: 0x7fa52e2c2954 3ba , data: 0x7fa52e2c2958 3ba 954 foo bar
+key: 0x7fa52e2c2928 3c1 , data: 0x7fa52e2c292c 3c1 961 foo bar
+key: 0x7fa52e2c27f4 3c5 , data: 0x7fa52e2c27f8 3c5 965 foo bar
+key: 0x7fa52e2c28fc 3df , data: 0x7fa52e2c2900 3df 991 foo bar
+key: 0x7fa52e2c25e4 3e7 , data: 0x7fa52e2c25e8 3e7 999 foo bar
+key: 0x7fa52e2c24b0 3e9 , data: 0x7fa52e2c24b4 3e9 1001 foo bar
+key: 0x7fa52e2c28d0 3ec , data: 0x7fa52e2c28d4 3ec 1004 foo bar
+key: 0x7fa52e2c2718 3f0 , data: 0x7fa52e2c271c 3f0 1008 foo bar
+key: 0x7fa52e2c28a4 3f4 , data: 0x7fa52e2c28a8 3f4 1012 foo bar
+key: 0x7fa52e2c2770 3f5 , data: 0x7fa52e2c2774 3f5 1013 foo bar
+key: 0x7fa52e2c2878 3fc , data: 0x7fa52e2c287c 3fc 1020 foo bar
+key: 0x7fa52e2c284c 3fe , data: 0x7fa52e2c2850 3fe 1022 foo bar
+Deleted 107 values
+Cursor next
+key: 001 , data: 001 1 foo bar
+key: 004 , data: 004 4 foo bar
+key: 007 , data: 007 7 foo bar
+key: 008 , data: 008 8 foo bar
+key: 010 , data: 010 16 foo bar
+key: 017 , data: 017 23 foo bar
+key: 03b , data: 03b 59 foo bar
+key: 044 , data: 044 68 foo bar
+key: 048 , data: 048 72 foo bar
+key: 04f , data: 04f 79 foo bar
+key: 06e , data: 06e 110 foo bar
+key: 06f , data: 06f 111 foo bar
+key: 070 , data: 070 112 foo bar
+key: 07c , data: 07c 124 foo bar
+key: 08f , data: 08f 143 foo bar
+key: 094 , data: 094 148 foo bar
+key: 096 , data: 096 150 foo bar
+key: 0a1 , data: 0a1 161 foo bar
+key: 0a3 , data: 0a3 163 foo bar
+key: 0a4 , data: 0a4 164 foo bar
+key: 0b4 , data: 0b4 180 foo bar
+key: 0c1 , data: 0c1 193 foo bar
+key: 0c9 , data: 0c9 201 foo bar
+key: 0da , data: 0da 218 foo bar
+key: 0f0 , data: 0f0 240 foo bar
+key: 0f2 , data: 0f2 242 foo bar
+key: 100 , data: 100 256 foo bar
+key: 113 , data: 113 275 foo bar
+key: 117 , data: 117 279 foo bar
+key: 122 , data: 122 290 foo bar
+key: 130 , data: 130 304 foo bar
+key: 13a , data: 13a 314 foo bar
+key: 13d , data: 13d 317 foo bar
+key: 140 , data: 140 320 foo bar
+key: 142 , data: 142 322 foo bar
+key: 15c , data: 15c 348 foo bar
+key: 172 , data: 172 370 foo bar
+key: 17a , data: 17a 378 foo bar
+key: 17b , data: 17b 379 foo bar
+key: 18a , data: 18a 394 foo bar
+key: 193 , data: 193 403 foo bar
+key: 195 , data: 195 405 foo bar
+key: 19b , data: 19b 411 foo bar
+key: 19e , data: 19e 414 foo bar
+key: 1b6 , data: 1b6 438 foo bar
+key: 1c3 , data: 1c3 451 foo bar
+key: 1c9 , data: 1c9 457 foo bar
+key: 1cd , data: 1cd 461 foo bar
+key: 1d2 , data: 1d2 466 foo bar
+key: 1dc , data: 1dc 476 foo bar
+key: 1e1 , data: 1e1 481 foo bar
+key: 1e3 , data: 1e3 483 foo bar
+key: 1e7 , data: 1e7 487 foo bar
+key: 1ea , data: 1ea 490 foo bar
+key: 1f2 , data: 1f2 498 foo bar
+key: 1f5 , data: 1f5 501 foo bar
+key: 1f9 , data: 1f9 505 foo bar
+key: 1fc , data: 1fc 508 foo bar
+key: 201 , data: 201 513 foo bar
+key: 206 , data: 206 518 foo bar
+key: 218 , data: 218 536 foo bar
+key: 21c , data: 21c 540 foo bar
+key: 220 , data: 220 544 foo bar
+key: 223 , data: 223 547 foo bar
+key: 228 , data: 228 552 foo bar
+key: 229 , data: 229 553 foo bar
+key: 22a , data: 22a 554 foo bar
+key: 22c , data: 22c 556 foo bar
+key: 236 , data: 236 566 foo bar
+key: 247 , data: 247 583 foo bar
+key: 249 , data: 249 585 foo bar
+key: 24a , data: 24a 586 foo bar
+key: 24d , data: 24d 589 foo bar
+key: 250 , data: 250 592 foo bar
+key: 258 , data: 258 600 foo bar
+key: 25b , data: 25b 603 foo bar
+key: 25c , data: 25c 604 foo bar
+key: 261 , data: 261 609 foo bar
+key: 263 , data: 263 611 foo bar
+key: 267 , data: 267 615 foo bar
+key: 26e , data: 26e 622 foo bar
+key: 275 , data: 275 629 foo bar
+key: 287 , data: 287 647 foo bar
+key: 28c , data: 28c 652 foo bar
+key: 28f , data: 28f 655 foo bar
+key: 297 , data: 297 663 foo bar
+key: 299 , data: 299 665 foo bar
+key: 29c , data: 29c 668 foo bar
+key: 2a7 , data: 2a7 679 foo bar
+key: 2aa , data: 2aa 682 foo bar
+key: 2ac , data: 2ac 684 foo bar
+key: 2b4 , data: 2b4 692 foo bar
+key: 2bf , data: 2bf 703 foo bar
+key: 2c2 , data: 2c2 706 foo bar
+key: 2ca , data: 2ca 714 foo bar
+key: 2ce , data: 2ce 718 foo bar
+key: 2d2 , data: 2d2 722 foo bar
+key: 2d7 , data: 2d7 727 foo bar
+key: 2ea , data: 2ea 746 foo bar
+key: 2ef , data: 2ef 751 foo bar
+key: 301 , data: 301 769 foo bar
+key: 308 , data: 308 776 foo bar
+key: 30e , data: 30e 782 foo bar
+key: 311 , data: 311 785 foo bar
+key: 312 , data: 312 786 foo bar
+key: 314 , data: 314 788 foo bar
+key: 31e , data: 31e 798 foo bar
+key: 31f , data: 31f 799 foo bar
+key: 332 , data: 332 818 foo bar
+key: 333 , data: 333 819 foo bar
+key: 33a , data: 33a 826 foo bar
+key: 33d , data: 33d 829 foo bar
+key: 349 , data: 349 841 foo bar
+key: 34a , data: 34a 842 foo bar
+key: 350 , data: 350 848 foo bar
+key: 353 , data: 353 851 foo bar
+key: 359 , data: 359 857 foo bar
+key: 363 , data: 363 867 foo bar
+key: 369 , data: 369 873 foo bar
+key: 372 , data: 372 882 foo bar
+key: 375 , data: 375 885 foo bar
+key: 376 , data: 376 886 foo bar
+key: 379 , data: 379 889 foo bar
+key: 37a , data: 37a 890 foo bar
+key: 38a , data: 38a 906 foo bar
+key: 392 , data: 392 914 foo bar
+key: 3b6 , data: 3b6 950 foo bar
+key: 3b7 , data: 3b7 951 foo bar
+key: 3b9 , data: 3b9 953 foo bar
+key: 3c1 , data: 3c1 961 foo bar
+key: 3c5 , data: 3c5 965 foo bar
+key: 3df , data: 3df 991 foo bar
+key: 3e7 , data: 3e7 999 foo bar
+key: 3e9 , data: 3e9 1001 foo bar
+key: 3ec , data: 3ec 1004 foo bar
+key: 3f4 , data: 3f4 1012 foo bar
+key: 3fe , data: 3fe 1022 foo bar
+Cursor last
+key: 3fe , data: 3fe 1022 foo bar
+Cursor prev
+key: 3f4 , data: 3f4 1012 foo bar
+key: 3ec , data: 3ec 1004 foo bar
+key: 3e9 , data: 3e9 1001 foo bar
+key: 3e7 , data: 3e7 999 foo bar
+key: 3df , data: 3df 991 foo bar
+key: 3c5 , data: 3c5 965 foo bar
+key: 3c1 , data: 3c1 961 foo bar
+key: 3b9 , data: 3b9 953 foo bar
+key: 3b7 , data: 3b7 951 foo bar
+key: 3b6 , data: 3b6 950 foo bar
+key: 392 , data: 392 914 foo bar
+key: 38a , data: 38a 906 foo bar
+key: 37a , data: 37a 890 foo bar
+key: 379 , data: 379 889 foo bar
+key: 376 , data: 376 886 foo bar
+key: 375 , data: 375 885 foo bar
+key: 372 , data: 372 882 foo bar
+key: 369 , data: 369 873 foo bar
+key: 363 , data: 363 867 foo bar
+key: 359 , data: 359 857 foo bar
+key: 353 , data: 353 851 foo bar
+key: 350 , data: 350 848 foo bar
+key: 34a , data: 34a 842 foo bar
+key: 349 , data: 349 841 foo bar
+key: 33d , data: 33d 829 foo bar
+key: 33a , data: 33a 826 foo bar
+key: 333 , data: 333 819 foo bar
+key: 332 , data: 332 818 foo bar
+key: 31f , data: 31f 799 foo bar
+key: 31e , data: 31e 798 foo bar
+key: 314 , data: 314 788 foo bar
+key: 312 , data: 312 786 foo bar
+key: 311 , data: 311 785 foo bar
+key: 30e , data: 30e 782 foo bar
+key: 308 , data: 308 776 foo bar
+key: 301 , data: 301 769 foo bar
+key: 2ef , data: 2ef 751 foo bar
+key: 2ea , data: 2ea 746 foo bar
+key: 2d7 , data: 2d7 727 foo bar
+key: 2d2 , data: 2d2 722 foo bar
+key: 2ce , data: 2ce 718 foo bar
+key: 2ca , data: 2ca 714 foo bar
+key: 2c2 , data: 2c2 706 foo bar
+key: 2bf , data: 2bf 703 foo bar
+key: 2b4 , data: 2b4 692 foo bar
+key: 2ac , data: 2ac 684 foo bar
+key: 2aa , data: 2aa 682 foo bar
+key: 2a7 , data: 2a7 679 foo bar
+key: 29c , data: 29c 668 foo bar
+key: 299 , data: 299 665 foo bar
+key: 297 , data: 297 663 foo bar
+key: 28f , data: 28f 655 foo bar
+key: 28c , data: 28c 652 foo bar
+key: 287 , data: 287 647 foo bar
+key: 275 , data: 275 629 foo bar
+key: 26e , data: 26e 622 foo bar
+key: 267 , data: 267 615 foo bar
+key: 263 , data: 263 611 foo bar
+key: 261 , data: 261 609 foo bar
+key: 25c , data: 25c 604 foo bar
+key: 25b , data: 25b 603 foo bar
+key: 258 , data: 258 600 foo bar
+key: 250 , data: 250 592 foo bar
+key: 24d , data: 24d 589 foo bar
+key: 24a , data: 24a 586 foo bar
+key: 249 , data: 249 585 foo bar
+key: 247 , data: 247 583 foo bar
+key: 236 , data: 236 566 foo bar
+key: 22c , data: 22c 556 foo bar
+key: 22a , data: 22a 554 foo bar
+key: 229 , data: 229 553 foo bar
+key: 228 , data: 228 552 foo bar
+key: 223 , data: 223 547 foo bar
+key: 220 , data: 220 544 foo bar
+key: 21c , data: 21c 540 foo bar
+key: 218 , data: 218 536 foo bar
+key: 206 , data: 206 518 foo bar
+key: 201 , data: 201 513 foo bar
+key: 1fc , data: 1fc 508 foo bar
+key: 1f9 , data: 1f9 505 foo bar
+key: 1f5 , data: 1f5 501 foo bar
+key: 1f2 , data: 1f2 498 foo bar
+key: 1ea , data: 1ea 490 foo bar
+key: 1e7 , data: 1e7 487 foo bar
+key: 1e3 , data: 1e3 483 foo bar
+key: 1e1 , data: 1e1 481 foo bar
+key: 1dc , data: 1dc 476 foo bar
+key: 1d2 , data: 1d2 466 foo bar
+key: 1cd , data: 1cd 461 foo bar
+key: 1c9 , data: 1c9 457 foo bar
+key: 1c3 , data: 1c3 451 foo bar
+key: 1b6 , data: 1b6 438 foo bar
+key: 19e , data: 19e 414 foo bar
+key: 19b , data: 19b 411 foo bar
+key: 195 , data: 195 405 foo bar
+key: 193 , data: 193 403 foo bar
+key: 18a , data: 18a 394 foo bar
+key: 17b , data: 17b 379 foo bar
+key: 17a , data: 17a 378 foo bar
+key: 172 , data: 172 370 foo bar
+key: 15c , data: 15c 348 foo bar
+key: 142 , data: 142 322 foo bar
+key: 140 , data: 140 320 foo bar
+key: 13d , data: 13d 317 foo bar
+key: 13a , data: 13a 314 foo bar
+key: 130 , data: 130 304 foo bar
+key: 122 , data: 122 290 foo bar
+key: 117 , data: 117 279 foo bar
+key: 113 , data: 113 275 foo bar
+key: 100 , data: 100 256 foo bar
+key: 0f2 , data: 0f2 242 foo bar
+key: 0f0 , data: 0f0 240 foo bar
+key: 0da , data: 0da 218 foo bar
+key: 0c9 , data: 0c9 201 foo bar
+key: 0c1 , data: 0c1 193 foo bar
+key: 0b4 , data: 0b4 180 foo bar
+key: 0a4 , data: 0a4 164 foo bar
+key: 0a3 , data: 0a3 163 foo bar
+key: 0a1 , data: 0a1 161 foo bar
+key: 096 , data: 096 150 foo bar
+key: 094 , data: 094 148 foo bar
+key: 08f , data: 08f 143 foo bar
+key: 07c , data: 07c 124 foo bar
+key: 070 , data: 070 112 foo bar
+key: 06f , data: 06f 111 foo bar
+key: 06e , data: 06e 110 foo bar
+key: 04f , data: 04f 79 foo bar
+key: 048 , data: 048 72 foo bar
+key: 044 , data: 044 68 foo bar
+key: 03b , data: 03b 59 foo bar
+key: 017 , data: 017 23 foo bar
+key: 010 , data: 010 16 foo bar
+key: 008 , data: 008 8 foo bar
+key: 007 , data: 007 7 foo bar
+key: 004 , data: 004 4 foo bar
+key: 001 , data: 001 1 foo bar
+Cursor last/prev
+key: 3fe , data: 3fe 1022 foo bar
+key: 3f4 , data: 3f4 1012 foo bar
+Deleting with cursor
+key: 0x7fa52e2c7fdc 001 , data: 0x7fa52e2c7fe0 001 1 foo bar
+key: 0x7fa52e2b758c 004 , data: 0x7fa52e2b7590 004 4 foo bar
+key: 0x7fa52e2b758c 007 , data: 0x7fa52e2b7590 007 7 foo bar
+key: 0x7fa52e2b758c 008 , data: 0x7fa52e2b7590 008 8 foo bar
+key: 0x7fa52e2b716c 010 , data: 0x7fa52e2b7170 010 16 foo bar
+key: 0x7fa52e2b758c 017 , data: 0x7fa52e2b7590 017 23 foo bar
+key: 0x7fa52e2b758c 03b , data: 0x7fa52e2b7590 03b 59 foo bar
+key: 0x7fa52e2b721c 044 , data: 0x7fa52e2b7220 044 68 foo bar
+key: 0x7fa52e2b758c 048 , data: 0x7fa52e2b7590 048 72 foo bar
+key: 0x7fa52e2b758c 04f , data: 0x7fa52e2b7590 04f 79 foo bar
+key: 0x7fa52e2b758c 06e , data: 0x7fa52e2b7590 06e 110 foo bar
+key: 0x7fa52e2b758c 06f , data: 0x7fa52e2b7590 06f 111 foo bar
+key: 0x7fa52e2b758c 070 , data: 0x7fa52e2b7590 070 112 foo bar
+key: 0x7fa52e2b758c 07c , data: 0x7fa52e2b7590 07c 124 foo bar
+key: 0x7fa52e2b758c 08f , data: 0x7fa52e2b7590 08f 143 foo bar
+key: 0x7fa52e2b7350 094 , data: 0x7fa52e2b7354 094 148 foo bar
+key: 0x7fa52e2b758c 096 , data: 0x7fa52e2b7590 096 150 foo bar
+key: 0x7fa52e2b758c 0a1 , data: 0x7fa52e2b7590 0a1 161 foo bar
+key: 0x7fa52e2b758c 0a3 , data: 0x7fa52e2b7590 0a3 163 foo bar
+key: 0x7fa52e2b758c 0a4 , data: 0x7fa52e2b7590 0a4 164 foo bar
+key: 0x7fa52e2b758c 0b4 , data: 0x7fa52e2b7590 0b4 180 foo bar
+key: 0x7fa52e2b758c 0c1 , data: 0x7fa52e2b7590 0c1 193 foo bar
+key: 0x7fa52e2b758c 0c9 , data: 0x7fa52e2b7590 0c9 201 foo bar
+key: 0x7fa52e2b758c 0da , data: 0x7fa52e2b7590 0da 218 foo bar
+key: 0x7fa52e2b758c 0f0 , data: 0x7fa52e2b7590 0f0 240 foo bar
+key: 0x7fa52e2b7508 0f2 , data: 0x7fa52e2b750c 0f2 242 foo bar
+key: 0x7fa52e2b758c 100 , data: 0x7fa52e2b7590 100 256 foo bar
+key: 0x7fa52e2b758c 113 , data: 0x7fa52e2b7590 113 275 foo bar
+key: 0x7fa52e2b758c 117 , data: 0x7fa52e2b7590 117 279 foo bar
+key: 0x7fa52e2b758c 122 , data: 0x7fa52e2b7590 122 290 foo bar
+key: 0x7fa52e2b758c 130 , data: 0x7fa52e2b7590 130 304 foo bar
+key: 0x7fa52e2b758c 13a , data: 0x7fa52e2b7590 13a 314 foo bar
+key: 0x7fa52e2b758c 13d , data: 0x7fa52e2b7590 13d 317 foo bar
+key: 0x7fa52e2b758c 140 , data: 0x7fa52e2b7590 140 320 foo bar
+key: 0x7fa52e2b758c 142 , data: 0x7fa52e2b7590 142 322 foo bar
+key: 0x7fa52e2b758c 15c , data: 0x7fa52e2b7590 15c 348 foo bar
+key: 0x7fa52e2b758c 172 , data: 0x7fa52e2b7590 172 370 foo bar
+key: 0x7fa52e2b758c 17a , data: 0x7fa52e2b7590 17a 378 foo bar
+key: 0x7fa52e2b758c 17b , data: 0x7fa52e2b7590 17b 379 foo bar
+key: 0x7fa52e2b758c 18a , data: 0x7fa52e2b7590 18a 394 foo bar
+key: 0x7fa52e2b758c 193 , data: 0x7fa52e2b7590 193 403 foo bar
+key: 0x7fa52e2b758c 195 , data: 0x7fa52e2b7590 195 405 foo bar
+key: 0x7fa52e2b758c 19b , data: 0x7fa52e2b7590 19b 411 foo bar
+key: 0x7fa52e2b758c 19e , data: 0x7fa52e2b7590 19e 414 foo bar
+key: 0x7fa52e2b758c 1b6 , data: 0x7fa52e2b7590 1b6 438 foo bar
+key: 0x7fa52e2b758c 1c3 , data: 0x7fa52e2b7590 1c3 451 foo bar
+key: 0x7fa52e2b758c 1c9 , data: 0x7fa52e2b7590 1c9 457 foo bar
+key: 0x7fa52e2b758c 1cd , data: 0x7fa52e2b7590 1cd 461 foo bar
+key: 0x7fa52e2b758c 1d2 , data: 0x7fa52e2b7590 1d2 466 foo bar
+key: 0x7fa52e2b758c 1dc , data: 0x7fa52e2b7590 1dc 476 foo bar
+Restarting cursor in txn
+key: 0x7fa52e2b758c 1e1 , data: 0x7fa52e2b7590 1e1 481 foo bar
+key: 0x7fa52e2b7560 1e3 , data: 0x7fa52e2b7564 1e3 483 foo bar
+key: 0x7fa52e2b7534 1e7 , data: 0x7fa52e2b7538 1e7 487 foo bar
+key: 0x7fa52e2b7508 1ea , data: 0x7fa52e2b750c 1ea 490 foo bar
+key: 0x7fa52e2b74dc 1f2 , data: 0x7fa52e2b74e0 1f2 498 foo bar
+key: 0x7fa52e2b74b0 1f5 , data: 0x7fa52e2b74b4 1f5 501 foo bar
+key: 0x7fa52e2b7484 1f9 , data: 0x7fa52e2b7488 1f9 505 foo bar
+key: 0x7fa52e2b7458 1fc , data: 0x7fa52e2b745c 1fc 508 foo bar
+key: 0x7fa52e2b742c 201 , data: 0x7fa52e2b7430 201 513 foo bar
+key: 0x7fa52e2b7400 206 , data: 0x7fa52e2b7404 206 518 foo bar
+key: 0x7fa52e2b73d4 218 , data: 0x7fa52e2b73d8 218 536 foo bar
+key: 0x7fa52e2b73a8 21c , data: 0x7fa52e2b73ac 21c 540 foo bar
+key: 0x7fa52e2b737c 220 , data: 0x7fa52e2b7380 220 544 foo bar
+key: 0x7fa52e2b7350 223 , data: 0x7fa52e2b7354 223 547 foo bar
+key: 0x7fa52e2b7324 228 , data: 0x7fa52e2b7328 228 552 foo bar
+key: 0x7fa52e2b72f8 229 , data: 0x7fa52e2b72fc 229 553 foo bar
+key: 0x7fa52e2b72cc 22a , data: 0x7fa52e2b72d0 22a 554 foo bar
+key: 0x7fa52e2b72a0 22c , data: 0x7fa52e2b72a4 22c 556 foo bar
+key: 0x7fa52e2b7274 236 , data: 0x7fa52e2b7278 236 566 foo bar
+key: 0x7fa52e2b7248 247 , data: 0x7fa52e2b724c 247 583 foo bar
+key: 0x7fa52e2b721c 249 , data: 0x7fa52e2b7220 249 585 foo bar
+key: 0x7fa52e2b71f0 24a , data: 0x7fa52e2b71f4 24a 586 foo bar
+key: 0x7fa52e2b71c4 24d , data: 0x7fa52e2b71c8 24d 589 foo bar
+key: 0x7fa52e2b8838 250 , data: 0x7fa52e2b883c 250 592 foo bar
+key: 0x7fa52e2b87b4 258 , data: 0x7fa52e2b87b8 258 600 foo bar
+key: 0x7fa52e2b8acc 25b , data: 0x7fa52e2b8ad0 25b 603 foo bar
+key: 0x7fa52e2b8864 25c , data: 0x7fa52e2b8868 25c 604 foo bar
+key: 0x7fa52e2b8aa0 261 , data: 0x7fa52e2b8aa4 261 609 foo bar
+key: 0x7fa52e2b8a74 263 , data: 0x7fa52e2b8a78 263 611 foo bar
+key: 0x7fa52e2b8680 267 , data: 0x7fa52e2b8684 267 615 foo bar
+key: 0x7fa52e2b8a48 26e , data: 0x7fa52e2b8a4c 26e 622 foo bar
+key: 0x7fa52e2b8a1c 275 , data: 0x7fa52e2b8a20 275 629 foo bar
+key: 0x7fa52e2b89f0 287 , data: 0x7fa52e2b89f4 287 647 foo bar
+Restarting cursor outside txn
+key: 0x7fa52e2c5fdc 1e1 , data: 0x7fa52e2c5fe0 1e1 481 foo bar
+key: 0x7fa52e2c5fb0 1e3 , data: 0x7fa52e2c5fb4 1e3 483 foo bar
+key: 0x7fa52e2c5f84 1e7 , data: 0x7fa52e2c5f88 1e7 487 foo bar
+key: 0x7fa52e2c5f58 1ea , data: 0x7fa52e2c5f5c 1ea 490 foo bar
+key: 0x7fa52e2c5f2c 1f2 , data: 0x7fa52e2c5f30 1f2 498 foo bar
+key: 0x7fa52e2c5f00 1f5 , data: 0x7fa52e2c5f04 1f5 501 foo bar
+key: 0x7fa52e2c5ed4 1f9 , data: 0x7fa52e2c5ed8 1f9 505 foo bar
+key: 0x7fa52e2c5ea8 1fc , data: 0x7fa52e2c5eac 1fc 508 foo bar
+key: 0x7fa52e2c5e7c 201 , data: 0x7fa52e2c5e80 201 513 foo bar
+key: 0x7fa52e2c5e50 206 , data: 0x7fa52e2c5e54 206 518 foo bar
+key: 0x7fa52e2c5e24 218 , data: 0x7fa52e2c5e28 218 536 foo bar
+key: 0x7fa52e2c5df8 21c , data: 0x7fa52e2c5dfc 21c 540 foo bar
+key: 0x7fa52e2c5dcc 220 , data: 0x7fa52e2c5dd0 220 544 foo bar
+key: 0x7fa52e2c5da0 223 , data: 0x7fa52e2c5da4 223 547 foo bar
+key: 0x7fa52e2c5d74 228 , data: 0x7fa52e2c5d78 228 552 foo bar
+key: 0x7fa52e2c5d48 229 , data: 0x7fa52e2c5d4c 229 553 foo bar
+key: 0x7fa52e2c5d1c 22a , data: 0x7fa52e2c5d20 22a 554 foo bar
+key: 0x7fa52e2c5cf0 22c , data: 0x7fa52e2c5cf4 22c 556 foo bar
+key: 0x7fa52e2c5cc4 236 , data: 0x7fa52e2c5cc8 236 566 foo bar
+key: 0x7fa52e2c5c98 247 , data: 0x7fa52e2c5c9c 247 583 foo bar
+key: 0x7fa52e2c5c6c 249 , data: 0x7fa52e2c5c70 249 585 foo bar
+key: 0x7fa52e2c5c40 24a , data: 0x7fa52e2c5c44 24a 586 foo bar
+key: 0x7fa52e2c5c14 24d , data: 0x7fa52e2c5c18 24d 589 foo bar
+key: 0x7fa52e2cad48 250 , data: 0x7fa52e2cad4c 250 592 foo bar
+key: 0x7fa52e2cacc4 258 , data: 0x7fa52e2cacc8 258 600 foo bar
+key: 0x7fa52e2cafdc 25b , data: 0x7fa52e2cafe0 25b 603 foo bar
+key: 0x7fa52e2cad74 25c , data: 0x7fa52e2cad78 25c 604 foo bar
+key: 0x7fa52e2cafb0 261 , data: 0x7fa52e2cafb4 261 609 foo bar
+key: 0x7fa52e2caf84 263 , data: 0x7fa52e2caf88 263 611 foo bar
+key: 0x7fa52e2cab90 267 , data: 0x7fa52e2cab94 267 615 foo bar
+key: 0x7fa52e2caf58 26e , data: 0x7fa52e2caf5c 26e 622 foo bar
+key: 0x7fa52e2caf2c 275 , data: 0x7fa52e2caf30 275 629 foo bar
+key: 0x7fa52e2caf00 287 , data: 0x7fa52e2caf04 287 647 foo bar
+Status of Main DB
+  Tree depth: 2
+  Branch pages: 1
+  Leaf pages: 3
+  Overflow pages: 0
+  Entries: 87
+>>> lmdb: Entering fakeroot...
+mkdir -p /home/packager/aports/main/lmdb/pkg/lmdb/usr/bin
+mkdir -p /home/packager/aports/main/lmdb/pkg/lmdb/usr/lib
+mkdir -p /home/packager/aports/main/lmdb/pkg/lmdb/usr/include
+mkdir -p /home/packager/aports/main/lmdb/pkg/lmdb/usr/share/man/man1
+for f in mdb_stat mdb_copy mdb_dump mdb_load; do cp -a $f /home/packager/aports/main/lmdb/pkg/lmdb/usr/bin; done
+for f in liblmdb.so liblmdb.so.0.0.0 liblmdb.so.0; do cp -a $f /home/packager/aports/main/lmdb/pkg/lmdb/usr/lib; done
+for f in lmdb.h; do cp -a $f /home/packager/aports/main/lmdb/pkg/lmdb/usr/include; done
+for f in mdb_stat.1 mdb_copy.1 mdb_dump.1 mdb_load.1; do cp -a $f /home/packager/aports/main/lmdb/pkg/lmdb/usr/share/man/man1; done
+>>> lmdb-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/lmdb/pkg/lmdb-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/lmdb/pkg/lmdb-dev/usr/lib/pkgconfig'
+'usr/lib/liblmdb.so' -> '/home/packager/aports/main/lmdb/pkg/lmdb-dev/usr/lib/liblmdb.so'
+>>> lmdb-dev*: Preparing subpackage lmdb-dev...
+>>> lmdb-dev*: Stripping binaries
+>>> lmdb-dev*: Running postcheck for lmdb-dev
+>>> lmdb-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/lmdb/pkg/lmdb-doc/usr/share/man'
+>>> lmdb-doc*: Preparing subpackage lmdb-doc...
+>>> lmdb-doc*: Running postcheck for lmdb-doc
+>>> lmdb-tools*: Running split function tools...
+>>> lmdb-tools*: Preparing subpackage lmdb-tools...
+>>> lmdb-tools*: Stripping binaries
+>>> lmdb-tools*: Running postcheck for lmdb-tools
+>>> lmdb*: Running postcheck for lmdb
+>>> lmdb*: Preparing package lmdb...
+>>> lmdb*: Stripping binaries
+>>> lmdb-dev*: Scanning shared objects
+>>> lmdb-doc*: Scanning shared objects
+>>> lmdb-tools*: Scanning shared objects
+>>> lmdb*: Scanning shared objects
+>>> lmdb-dev*: Tracing dependencies...
+	lmdb=0.9.33-r0
+	pkgconfig
+>>> lmdb-dev*: Package size: 72.5 KB
+>>> lmdb-dev*: Compressing data...
+>>> lmdb-dev*: Create checksum...
+pigz: not found
+>>> lmdb-dev*: Create lmdb-dev-0.9.33-r0.apk
+>>> lmdb-doc*: Tracing dependencies...
+>>> lmdb-doc*: Package size: 4.0 KB
+>>> lmdb-doc*: Compressing data...
+>>> lmdb-doc*: Create checksum...
+pigz: not found
+>>> lmdb-doc*: Create lmdb-doc-0.9.33-r0.apk
+>>> lmdb-tools*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:liblmdb.so.0
+>>> lmdb-tools*: Package size: 63.6 KB
+>>> lmdb-tools*: Compressing data...
+>>> lmdb-tools*: Create checksum...
+pigz: not found
+>>> lmdb-tools*: Create lmdb-tools-0.9.33-r0.apk
+>>> lmdb*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lmdb*: Package size: 93.7 KB
+>>> lmdb*: Compressing data...
+>>> lmdb*: Create checksum...
+pigz: not found
+>>> lmdb*: Create lmdb-0.9.33-r0.apk
+>>> lmdb: Build complete at Sun, 18 May 2025 09:07:28 +0000 elapsed time 0h 0m 11s
+>>> lmdb: Cleaning up srcdir
+>>> lmdb: Cleaning up pkgdir
+>>> lmdb: Uninstalling dependencies...
+(1/1) Purging .makedepends-lmdb (20250518.090719)
+OK: 261 MiB in 81 packages
+>>> lmdb: Updating the main/x86_64 repository index...
+>>> lmdb: Signing the index...
+pigz: not found

@@ -1,0 +1,149 @@
+pigz: not found
+>>> lua-maxminddb: Building main/lua-maxminddb 0.1-r4 (using abuild 3.14.1-r4) started Fri, 23 May 2025 02:14:03 +0000
+>>> lua-maxminddb: Validating /home/packager/aports/main/lua-maxminddb/APKBUILD...
+>>> lua-maxminddb: Analyzing dependencies...
+>>> lua-maxminddb: Installing for build: build-base libmaxminddb-dev lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/14) Installing libmaxminddb-libs (1.9.1-r0)
+(2/14) Installing libmaxminddb-dev (1.9.1-r0)
+(3/14) Installing lua5.1-libs (5.1.5-r13)
+(4/14) Installing lua5.1 (5.1.5-r13)
+(5/14) Installing lua5.1-dev (5.1.5-r13)
+(6/14) Installing lua5.2-libs (5.2.4-r13)
+(7/14) Installing lua5.2 (5.2.4-r13)
+(8/14) Installing lua5.2-dev (5.2.4-r13)
+(9/14) Installing linenoise (1.0-r5)
+(10/14) Installing lua5.3-libs (5.3.6-r6)
+(11/14) Installing lua5.3 (5.3.6-r6)
+(12/14) Installing lua5.3-dev (5.3.6-r6)
+(13/14) Installing lua5.4-dev (5.4.7-r0)
+(14/14) Installing .makedepends-lua-maxminddb (20250523.021406)
+Executing busybox-1.37.0-r12.trigger
+OK: 319 MiB in 128 packages
+>>> lua-maxminddb: Cleaning up srcdir
+>>> lua-maxminddb: Cleaning up pkgdir
+>>> lua-maxminddb: Cleaning up tmpdir
+>>> lua-maxminddb: Fetching lua-maxminddb-0.1.tar.gz::https://github.com/fabled/lua-maxminddb/archive/v0.1.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lua-maxminddb-0.1.tar.gz.part'
+lua-maxminddb-0.1.ta 100% |********************************|  2621  0:00:00 ETA
+'/var/cache/distfiles/lua-maxminddb-0.1.tar.gz.part' saved
+>>> lua-maxminddb: Fetching lua-maxminddb-0.1.tar.gz::https://github.com/fabled/lua-maxminddb/archive/v0.1.tar.gz
+>>> lua-maxminddb: Checking sha512sums...
+lua-maxminddb-0.1.tar.gz: OK
+>>> lua-maxminddb: Unpacking /var/cache/distfiles/lua-maxminddb-0.1.tar.gz...
+>>> lua-maxminddb: build for Lua 5.1
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -std=c99  -shared maxminddb.c -o maxminddb.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lmaxminddb
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: maxminddb.so has a LOAD segment with RWX permissions
+>>> lua-maxminddb: build for Lua 5.2
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -std=c99 -I/usr/include/lua5.2 -shared maxminddb.c -o maxminddb.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lmaxminddb
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: maxminddb.so has a LOAD segment with RWX permissions
+>>> lua-maxminddb: build for Lua 5.3
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -std=c99 -I/usr/include/lua5.3 -shared maxminddb.c -o maxminddb.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lmaxminddb
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: maxminddb.so has a LOAD segment with RWX permissions
+>>> lua-maxminddb: build for Lua 5.4
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -std=c99 -I/usr/include/lua5.4 -shared maxminddb.c -o maxminddb.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lmaxminddb
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: maxminddb.so has a LOAD segment with RWX permissions
+>>> lua-maxminddb: Entering fakeroot...
+>>> lua5.1-maxminddb*: Running split function _split...
+install -d /home/packager/aports/main/lua-maxminddb/pkg/lua5.1-maxminddb/usr/lib/lua/5.1
+install -c maxminddb.so /home/packager/aports/main/lua-maxminddb/pkg/lua5.1-maxminddb/usr/lib/lua/5.1
+>>> lua5.1-maxminddb*: Preparing subpackage lua5.1-maxminddb...
+>>> lua5.1-maxminddb*: Stripping binaries
+>>> lua5.1-maxminddb*: Running postcheck for lua5.1-maxminddb
+>>> lua5.2-maxminddb*: Running split function _split...
+install -d /home/packager/aports/main/lua-maxminddb/pkg/lua5.2-maxminddb/usr/lib/lua/5.2
+install -c maxminddb.so /home/packager/aports/main/lua-maxminddb/pkg/lua5.2-maxminddb/usr/lib/lua/5.2
+>>> lua5.2-maxminddb*: Preparing subpackage lua5.2-maxminddb...
+>>> lua5.2-maxminddb*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> lua5.2-maxminddb*: Running postcheck for lua5.2-maxminddb
+>>> lua5.3-maxminddb*: Running split function _split...
+install -d /home/packager/aports/main/lua-maxminddb/pkg/lua5.3-maxminddb/usr/lib/lua/5.3
+install -c maxminddb.so /home/packager/aports/main/lua-maxminddb/pkg/lua5.3-maxminddb/usr/lib/lua/5.3
+>>> lua5.3-maxminddb*: Preparing subpackage lua5.3-maxminddb...
+>>> lua5.3-maxminddb*: Stripping binaries
+>>> lua5.3-maxminddb*: Running postcheck for lua5.3-maxminddb
+>>> lua5.4-maxminddb*: Running split function _split...
+install -d /home/packager/aports/main/lua-maxminddb/pkg/lua5.4-maxminddb/usr/lib/lua/5.4
+install -c maxminddb.so /home/packager/aports/main/lua-maxminddb/pkg/lua5.4-maxminddb/usr/lib/lua/5.4
+>>> lua5.4-maxminddb*: Preparing subpackage lua5.4-maxminddb...
+>>> lua5.4-maxminddb*: Stripping binaries
+>>> lua5.4-maxminddb*: Running postcheck for lua5.4-maxminddb
+>>> lua-maxminddb*: Running postcheck for lua-maxminddb
+>>> lua-maxminddb*: Preparing package lua-maxminddb...
+>>> lua-maxminddb*: Stripping binaries
+>>> WARNING: lua-maxminddb*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-maxminddb*: Scanning shared objects
+libfakeroot internal error: payload not recognized!
+>>> lua5.1-maxminddb*: Scanning shared objects
+libfakeroot internal error: payload not recognized!
+>>> lua5.2-maxminddb*: Scanning shared objects
+>>> lua5.3-maxminddb*: Scanning shared objects
+>>> lua5.4-maxminddb*: Scanning shared objects
+>>> lua-maxminddb*: Tracing dependencies...
+	lua5.1-maxminddb
+	lua5.2-maxminddb
+	lua5.3-maxminddb
+	lua5.4-maxminddb
+>>> lua-maxminddb*: Package size: 0.0 
+>>> lua-maxminddb*: Compressing data...
+>>> lua-maxminddb*: Create checksum...
+pigz: not found
+>>> lua-maxminddb*: Create lua-maxminddb-0.1-r4.apk
+>>> lua5.1-maxminddb*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libmaxminddb.so.0
+>>> lua5.1-maxminddb*: Package size: 10.6 KB
+>>> lua5.1-maxminddb*: Compressing data...
+>>> lua5.1-maxminddb*: Create checksum...
+pigz: not found
+>>> lua5.1-maxminddb*: Create lua5.1-maxminddb-0.1-r4.apk
+>>> lua5.2-maxminddb*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libmaxminddb.so.0
+>>> lua5.2-maxminddb*: Package size: 10.3 KB
+>>> lua5.2-maxminddb*: Compressing data...
+>>> lua5.2-maxminddb*: Create checksum...
+pigz: not found
+>>> lua5.2-maxminddb*: Create lua5.2-maxminddb-0.1-r4.apk
+>>> lua5.3-maxminddb*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libmaxminddb.so.0
+>>> lua5.3-maxminddb*: Package size: 10.5 KB
+>>> lua5.3-maxminddb*: Compressing data...
+>>> lua5.3-maxminddb*: Create checksum...
+pigz: not found
+>>> lua5.3-maxminddb*: Create lua5.3-maxminddb-0.1-r4.apk
+>>> lua5.4-maxminddb*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libmaxminddb.so.0
+>>> lua5.4-maxminddb*: Package size: 10.5 KB
+>>> lua5.4-maxminddb*: Compressing data...
+>>> lua5.4-maxminddb*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.4-maxminddb*: Create lua5.4-maxminddb-0.1-r4.apk
+>>> lua-maxminddb: Build complete at Fri, 23 May 2025 02:14:17 +0000 elapsed time 0h 0m 14s
+>>> lua-maxminddb: Cleaning up srcdir
+>>> lua-maxminddb: Cleaning up pkgdir
+>>> lua-maxminddb: Uninstalling dependencies...
+(1/14) Purging .makedepends-lua-maxminddb (20250523.021406)
+(2/14) Purging libmaxminddb-dev (1.9.1-r0)
+(3/14) Purging libmaxminddb-libs (1.9.1-r0)
+(4/14) Purging lua5.1-dev (5.1.5-r13)
+(5/14) Purging lua5.1 (5.1.5-r13)
+(6/14) Purging lua5.1-libs (5.1.5-r13)
+(7/14) Purging lua5.2-dev (5.2.4-r13)
+(8/14) Purging lua5.2 (5.2.4-r13)
+(9/14) Purging lua5.2-libs (5.2.4-r13)
+(10/14) Purging lua5.3-dev (5.3.6-r6)
+(11/14) Purging lua5.3 (5.3.6-r6)
+(12/14) Purging lua5.3-libs (5.3.6-r6)
+(13/14) Purging lua5.4-dev (5.4.7-r0)
+(14/14) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-maxminddb: Updating the main/x86_64 repository index...
+>>> lua-maxminddb: Signing the index...
+pigz: not found

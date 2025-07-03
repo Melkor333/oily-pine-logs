@@ -1,0 +1,68 @@
+pigz: not found
+>>> wireguard-tools: Building main/wireguard-tools 1.0.20210914-r7 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:22:38 +0000
+>>> wireguard-tools: Validating /home/packager/aports/main/wireguard-tools/APKBUILD...
+>>> wireguard-tools: Analyzing dependencies...
+>>> wireguard-tools: Installing for build: build-base libmnl-dev cmd:bash cmd:resolvconf iproute2
+(1/10) Installing libmnl (1.0.5-r2)
+(2/10) Installing libmnl-dev (1.0.5-r2)
+(3/10) Installing openresolv (3.14.1-r0)
+(4/10) Installing libelf (0.191-r0)
+(5/10) Installing iproute2-minimal (6.11.0-r0)
+(6/10) Installing libxtables (1.8.11-r1)
+(7/10) Installing iproute2-tc (6.11.0-r0)
+(8/10) Installing iproute2-ss (6.11.0-r0)
+(9/10) Installing iproute2 (6.11.0-r0)
+Executing iproute2-6.11.0-r0.post-install
+(10/10) Installing .makedepends-wireguard-tools (20250523.172240)
+Executing busybox-1.37.0-r12.trigger
+OK: 566 MiB in 142 packages
+>>> wireguard-tools: Cleaning up srcdir
+>>> wireguard-tools: Cleaning up pkgdir
+>>> wireguard-tools: Cleaning up tmpdir
+>>> wireguard-tools: Fetching https://git.zx2c4.com/wireguard-tools/snapshot/wireguard-tools-1.0.20210914.tar.xz
+Connecting to git.zx2c4.com (86.109.7.149:443)
+saving to '/var/cache/distfiles/wireguard-tools-1.0.20210914.tar.xz.part'
+wireguard-tools-1.0. 32143 --:--:-- ETA
+wireguard-tools-1.0. 100% |********************************| 99744  0:00:00 ETA
+'/var/cache/distfiles/wireguard-tools-1.0.20210914.tar.xz.part' saved
+>>> wireguard-tools: Fetching https://git.zx2c4.com/wireguard-tools/snapshot/wireguard-tools-1.0.20210914.tar.xz
+>>> wireguard-tools: Checking sha512sums...
+wireguard-tools-1.0.20210914.tar.xz: OK
+wg-quick.initd: OK
+wg-quick-different-sudo.patch: OK
+>>> wireguard-tools: Unpacking /var/cache/distfiles/wireguard-tools-1.0.20210914.tar.xz...
+>>> wireguard-tools: wg-quick-different-sudo.patch
+patching file src/wg-quick/linux.bash
+make: Entering directory '/home/packager/aports/main/wireguard-tools/src/wireguard-tools-1.0.20210914/src'
+  CC      wg.o
+  CC      config.o
+  CC      curve25519.o
+  CC      encoding.o
+  CC      genkey.o
+  CC      ipc.o
+  CC      pubkey.o
+  CC      set.o
+  CC      setconf.o
+  CC      show.o
+  CC      showconf.o
+  CC      terminal.o
+  LD      wg
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: wg: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: wg has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: wg] Error 1
+make: Leaving directory '/home/packager/aports/main/wireguard-tools/src/wireguard-tools-1.0.20210914/src'
+>>> ERROR: wireguard-tools: build failed
+>>> wireguard-tools: Uninstalling dependencies...
+(1/10) Purging .makedepends-wireguard-tools (20250523.172240)
+(2/10) Purging libmnl-dev (1.0.5-r2)
+(3/10) Purging iproute2 (6.11.0-r0)
+(4/10) Purging iproute2-minimal (6.11.0-r0)
+(5/10) Purging iproute2-tc (6.11.0-r0)
+(6/10) Purging iproute2-ss (6.11.0-r0)
+(7/10) Purging libelf (0.191-r0)
+(8/10) Purging libmnl (1.0.5-r2)
+(9/10) Purging libxtables (1.8.11-r1)
+(10/10) Purging openresolv (3.14.1-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

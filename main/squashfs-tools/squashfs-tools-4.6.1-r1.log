@@ -1,0 +1,94 @@
+pigz: not found
+>>> squashfs-tools: Building main/squashfs-tools 4.6.1-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:13:01 +0000
+>>> squashfs-tools: Validating /home/packager/aports/main/squashfs-tools/APKBUILD...
+>>> squashfs-tools: Analyzing dependencies...
+>>> squashfs-tools: Installing for build: build-base attr-dev lz4-dev lzo-dev xz-dev zlib-dev zstd-dev
+(1/11) Installing attr-dev (2.5.2-r2)
+(2/11) Installing lz4-libs (1.10.0-r0)
+(3/11) Installing lz4-dev (1.10.0-r0)
+(4/11) Installing lzo (2.10-r5)
+(5/11) Installing lzo-dev (2.10-r5)
+(6/11) Installing xz-libs (5.6.3-r1)
+(7/11) Installing xz (5.6.3-r1)
+(8/11) Installing xz-dev (5.6.3-r1)
+(9/11) Installing zstd (1.5.7-r0)
+(10/11) Installing zstd-dev (1.5.7-r0)
+(11/11) Installing .makedepends-squashfs-tools (20250523.181307)
+Executing busybox-1.37.0-r12.trigger
+OK: 566 MiB in 143 packages
+>>> squashfs-tools: Cleaning up srcdir
+>>> squashfs-tools: Cleaning up pkgdir
+>>> squashfs-tools: Cleaning up tmpdir
+>>> squashfs-tools: Fetching squashfs-tools-4.6.1.tar.gz::https://github.com/plougher/squashfs-tools/archive/4.6.1.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/squashfs-tools-4.6.1.tar.gz.part'
+squashfs-tools-4.6.1 100% |********************************|  280k  0:00:00 ETA
+'/var/cache/distfiles/squashfs-tools-4.6.1.tar.gz.part' saved
+>>> squashfs-tools: Fetching squashfs-tools-4.6.1.tar.gz::https://github.com/plougher/squashfs-tools/archive/4.6.1.tar.gz
+>>> squashfs-tools: Checking sha512sums...
+squashfs-tools-4.6.1.tar.gz: OK
+>>> squashfs-tools: Unpacking /var/cache/distfiles/squashfs-tools-4.6.1.tar.gz...
+make: Entering directory '/home/packager/aports/main/squashfs-tools/src/squashfs-tools-4.6.1/squashfs-tools'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o mksquashfs.o mksquashfs.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o read_fs.o read_fs.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o action.o action.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o swap.o swap.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o pseudo.o pseudo.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o compressor.o compressor.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o sort.o sort.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o progressbar.o progressbar.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o info.o info.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o restore.o restore.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o process_fragments.o process_fragments.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o caches-queues-lists.o caches-queues-lists.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o reader.o reader.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o tar.o tar.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o date.o date.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o gzip_wrapper.o gzip_wrapper.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o xz_wrapper.o xz_wrapper.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o lzo_wrapper.o lzo_wrapper.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o lz4_wrapper.o lz4_wrapper.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o zstd_wrapper.o zstd_wrapper.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o xattr.o xattr.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o read_xattrs.o read_xattrs.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o tar_xattr.o tar_xattr.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o pseudo_xattr.o pseudo_xattr.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquashfs.o unsquashfs.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-1.o unsquash-1.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-2.o unsquash-2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-3.o unsquash-3.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-4.o unsquash-4.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-123.o unsquash-123.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-34.o unsquash-34.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-1234.o unsquash-1234.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquash-12.o unsquash-12.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquashfs_info.o unsquashfs_info.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto  -I. -D_FILE_OFFSET_BITS=64 -D_LARGEFILE_SOURCE -D_GNU_SOURCE -DCOMP_DEFAULT=\"gzip\" -Wall -DGZIP_SUPPORT -DXZ_SUPPORT -DLZO_SUPPORT -DLZ4_SUPPORT -DZSTD_SUPPORT -DXATTR_SUPPORT -DXATTR_DEFAULT -DREPRODUCIBLE_DEFAULT -DVERSION=\"4.6.1\" -DDATE=\"2023/03/25\" -DYEAR=\"2023\"  -O2 -flto=auto  -c -o unsquashfs_xattr.o unsquashfs_xattr.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  unsquashfs.o unsquash-1.o unsquash-2.o unsquash-3.o unsquash-4.o unsquash-123.o unsquash-34.o unsquash-1234.o unsquash-12.o swap.o compressor.o unsquashfs_info.o date.o gzip_wrapper.o xz_wrapper.o lzo_wrapper.o lz4_wrapper.o zstd_wrapper.o read_xattrs.o unsquashfs_xattr.o -lpthread -lm -lz -llzma -llzo2 -llz4 -lzstd -o unsquashfs
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  mksquashfs.o read_fs.o action.o swap.o pseudo.o compressor.o sort.o progressbar.o info.o restore.o process_fragments.o caches-queues-lists.o reader.o tar.o date.o gzip_wrapper.o xz_wrapper.o lzo_wrapper.o lz4_wrapper.o zstd_wrapper.o xattr.o read_xattrs.o tar_xattr.o pseudo_xattr.o -lpthread -lm -lz -llzma -llzo2 -llz4 -lzstd -o mksquashfs
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: unsquashfs: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: unsquashfs has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:432: unsquashfs] Error 1
+make: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: mksquashfs: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: mksquashfs has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:371: mksquashfs] Error 1
+make: Leaving directory '/home/packager/aports/main/squashfs-tools/src/squashfs-tools-4.6.1/squashfs-tools'
+>>> ERROR: squashfs-tools: build failed
+>>> squashfs-tools: Uninstalling dependencies...
+(1/11) Purging .makedepends-squashfs-tools (20250523.181307)
+(2/11) Purging attr-dev (2.5.2-r2)
+(3/11) Purging lz4-dev (1.10.0-r0)
+(4/11) Purging lz4-libs (1.10.0-r0)
+(5/11) Purging lzo-dev (2.10-r5)
+(6/11) Purging lzo (2.10-r5)
+(7/11) Purging xz-dev (5.6.3-r1)
+(8/11) Purging xz (5.6.3-r1)
+(9/11) Purging xz-libs (5.6.3-r1)
+(10/11) Purging zstd-dev (1.5.7-r0)
+(11/11) Purging zstd (1.5.7-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

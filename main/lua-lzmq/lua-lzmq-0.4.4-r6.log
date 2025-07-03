@@ -1,0 +1,118 @@
+pigz: not found
+>>> lua-lzmq: Building main/lua-lzmq 0.4.4-r6 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:05:00 +0000
+>>> lua-lzmq: Validating /home/packager/aports/main/lua-lzmq/APKBUILD...
+>>> lua-lzmq: Analyzing dependencies...
+>>> lua-lzmq: Installing for build: build-base cmake samurai zeromq-dev lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/23) Installing lz4-libs (1.10.0-r0)
+(2/23) Installing xz-libs (5.6.3-r1)
+(3/23) Installing libarchive (3.7.9-r0)
+(4/23) Installing rhash-libs (1.4.5-r0)
+(5/23) Installing libuv (1.49.2-r0)
+(6/23) Installing cmake (3.31.7-r0)
+(7/23) Installing samurai (1.2-r6)
+(8/23) Installing libsodium (1.0.20-r0)
+(9/23) Installing libzmq (4.3.5-r2)
+(10/23) Installing libsodium-dev (1.0.20-r0)
+(11/23) Installing zeromq-dev (4.3.5-r2)
+(12/23) Installing lua5.1-libs (5.1.5-r13)
+(13/23) Installing lua5.1 (5.1.5-r13)
+(14/23) Installing lua5.1-dev (5.1.5-r13)
+(15/23) Installing lua5.2-libs (5.2.4-r13)
+(16/23) Installing lua5.2 (5.2.4-r13)
+(17/23) Installing lua5.2-dev (5.2.4-r13)
+(18/23) Installing linenoise (1.0-r5)
+(19/23) Installing lua5.3-libs (5.3.6-r6)
+(20/23) Installing lua5.3 (5.3.6-r6)
+(21/23) Installing lua5.3-dev (5.3.6-r6)
+(22/23) Installing lua5.4-dev (5.4.7-r0)
+(23/23) Installing .makedepends-lua-lzmq (20250523.180502)
+Executing busybox-1.37.0-r12.trigger
+OK: 625 MiB in 155 packages
+>>> lua-lzmq: Cleaning up srcdir
+>>> lua-lzmq: Cleaning up pkgdir
+>>> lua-lzmq: Cleaning up tmpdir
+>>> lua-lzmq: Fetching lua-lzmq-0.4.4.tar.gz::https://github.com/zeromq/lzmq/archive/v0.4.4.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lua-lzmq-0.4.4.tar.gz.part'
+lua-lzmq-0.4.4.tar.g 100% |********************************|  106k  0:00:00 ETA
+'/var/cache/distfiles/lua-lzmq-0.4.4.tar.gz.part' saved
+>>> lua-lzmq: Fetching lua-lzmq-0.4.4.tar.gz::https://github.com/zeromq/lzmq/archive/v0.4.4.tar.gz
+>>> lua-lzmq: Checking sha512sums...
+lua-lzmq-0.4.4.tar.gz: OK
+gcc14.patch: OK
+>>> lua-lzmq: Unpacking /var/cache/distfiles/lua-lzmq-0.4.4.tar.gz...
+>>> lua-lzmq: gcc14.patch
+patching file src/lzmq.c
+>>> lua-lzmq: Building for Lua 5.1...
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/lua-lzmq/src/lzmq-0.4.4/build/5.1/CMakeFiles/CMakeScratch/TryCompile-gJhkNC'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_076d2
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o CMakeFiles/cmTC_076d2.dir/testCCompiler.c.o -c /home/packager/aports/main/lua-lzmq/src/lzmq-0.4.4/build/5.1/CMakeFiles/CMakeScratch/TryCompile-gJhkNC/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_076d2.dir/testCCompiler.c.o -o cmTC_076d2   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_076d2.dir/testCCompiler.c.o -o cmTC_076d2   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_076d2: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_076d2 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:3 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: lua-lzmq: build failed
+>>> lua-lzmq: Uninstalling dependencies...
+(1/23) Purging .makedepends-lua-lzmq (20250523.180502)
+(2/23) Purging cmake (3.31.7-r0)
+(3/23) Purging samurai (1.2-r6)
+(4/23) Purging zeromq-dev (4.3.5-r2)
+(5/23) Purging libzmq (4.3.5-r2)
+(6/23) Purging lua5.1-dev (5.1.5-r13)
+(7/23) Purging lua5.1 (5.1.5-r13)
+(8/23) Purging lua5.1-libs (5.1.5-r13)
+(9/23) Purging lua5.2-dev (5.2.4-r13)
+(10/23) Purging lua5.2 (5.2.4-r13)
+(11/23) Purging lua5.2-libs (5.2.4-r13)
+(12/23) Purging lua5.3-dev (5.3.6-r6)
+(13/23) Purging lua5.3 (5.3.6-r6)
+(14/23) Purging lua5.3-libs (5.3.6-r6)
+(15/23) Purging lua5.4-dev (5.4.7-r0)
+(16/23) Purging libarchive (3.7.9-r0)
+(17/23) Purging libsodium-dev (1.0.20-r0)
+(18/23) Purging libsodium (1.0.20-r0)
+(19/23) Purging libuv (1.49.2-r0)
+(20/23) Purging linenoise (1.0-r5)
+(21/23) Purging lz4-libs (1.10.0-r0)
+(22/23) Purging rhash-libs (1.4.5-r0)
+(23/23) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,1257 @@
+pigz: not found
+>>> seabios: Building main/seabios 1.16.3-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:17:49 +0000
+>>> seabios: Validating /home/packager/aports/main/seabios/APKBUILD...
+>>> seabios: Analyzing dependencies...
+>>> seabios: Installing for build: build-base python3 iasl
+(1/12) Installing libbz2 (1.0.8-r6)
+(2/12) Installing libffi (3.4.7-r0)
+(3/12) Installing gdbm (1.24-r0)
+(4/12) Installing xz-libs (5.6.3-r1)
+(5/12) Installing mpdecimal (4.0.0-r0)
+(6/12) Installing sqlite-libs (3.49.2-r0)
+(7/12) Installing python3 (3.12.10-r0)
+(8/12) Installing python3-pycache-pyc0 (3.12.10-r0)
+(9/12) Installing pyc (3.12.10-r0)
+(10/12) Installing python3-pyc (3.12.10-r0)
+(11/12) Installing iasl (20230628-r0)
+(12/12) Installing .makedepends-seabios (20250518.091751)
+Executing busybox-1.37.0-r12.trigger
+OK: 297 MiB in 93 packages
+>>> seabios: Cleaning up srcdir
+>>> seabios: Cleaning up pkgdir
+>>> seabios: Cleaning up tmpdir
+>>> seabios: Fetching https://www.seabios.org/downloads/seabios-1.16.3.tar.gz
+Connecting to www.seabios.org (78.46.105.101:443)
+saving to '/var/cache/distfiles/seabios-1.16.3.tar.gz.part'
+seabios-1.16.3.tar.g 100% |********************************|  622k  0:00:00 ETA
+'/var/cache/distfiles/seabios-1.16.3.tar.gz.part' saved
+>>> seabios: Fetching https://www.seabios.org/downloads/seabios-1.16.3.tar.gz
+>>> seabios: Checking sha512sums...
+seabios-1.16.3.tar.gz: OK
+0001-Workaround-for-a-win8.1-32-S4-resume-bug.patch: OK
+0002-reserve-more-memory-on-fseg.patch: OK
+config.coreboot: OK
+config.csm: OK
+config.seabios-128k: OK
+config.seabios-256k: OK
+config.vga.cirrus: OK
+config.vga.isavga: OK
+config.vga.qxl: OK
+config.vga.stdvga: OK
+config.vga.virtio: OK
+config.vga.vmware: OK
+>>> seabios: Unpacking /var/cache/distfiles/seabios-1.16.3.tar.gz...
+>>> seabios: 0001-Workaround-for-a-win8.1-32-S4-resume-bug.patch
+patching file src/clock.c
+>>> seabios: 0002-reserve-more-memory-on-fseg.patch
+patching file scripts/layoutrom.py
+>>> seabios: building bios-csm.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Build Kconfig config file
+  Compile checking out/src/misc.o
+  Compile checking out/src/stacks.o
+  Compile checking out/src/output.o
+  Compile checking out/src/string.o
+  Compile checking out/src/block.o
+  Compile checking out/src/cdrom.o
+  Compile checking out/src/disk.o
+  Compile checking out/src/mouse.o
+  Compile checking out/src/kbd.o
+  Compile checking out/src/system.o
+  Compile checking out/src/serial.o
+  Compile checking out/src/sercon.o
+  Compile checking out/src/clock.o
+  Compile checking out/src/resume.o
+  Compile checking out/src/pnpbios.o
+  Compile checking out/src/vgahooks.o
+  Compile checking out/src/pcibios.o
+  Compile checking out/src/apm.o
+  Compile checking out/src/cp437.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/hw/timer.o
+  Compile checking out/src/hw/rtc.o
+  Compile checking out/src/hw/dma.o
+  Compile checking out/src/hw/pic.o
+  Compile checking out/src/hw/ps2port.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/src/hw/usb.o
+  Compile checking out/src/hw/usb-uhci.o
+  Compile checking out/src/hw/usb-ohci.o
+  Compile checking out/src/hw/usb-ehci.o
+  Compile checking out/src/hw/usb-hid.o
+  Compile checking out/src/hw/usb-msc.o
+  Compile checking out/src/hw/usb-uas.o
+  Compile checking out/src/hw/blockcmd.o
+  Compile checking out/src/hw/floppy.o
+  Compile checking out/src/hw/ata.o
+  Compile checking out/src/hw/ramdisk.o
+  Compile checking out/src/hw/lsi-scsi.o
+  Compile checking out/src/hw/esp-scsi.o
+  Compile checking out/src/hw/megasas.o
+  Compile checking out/src/hw/mpt-scsi.o
+  Compile checking out/src/post.o
+  Compile checking out/src/e820map.o
+  Compile checking out/src/malloc.o
+  Compile checking out/src/romfile.o
+  Compile checking out/src/x86.o
+  Compile checking out/src/optionroms.o
+  Compile checking out/src/pmm.o
+  Compile checking out/src/font.o
+  Compile checking out/src/boot.o
+  Compile checking out/src/bootsplash.o
+  Compile checking out/src/jpeg.o
+  Compile checking out/src/bmp.o
+  Compile checking out/src/tcgbios.o
+  Compile checking out/src/sha1.o
+  Compile checking out/src/hw/ahci.o
+  Compile checking out/src/hw/pcidevice.o
+  Compile checking out/src/hw/pvscsi.o
+  Compile checking out/src/hw/usb-xhci.o
+  Compile checking out/src/hw/usb-hub.o
+  Compile checking out/src/hw/sdcard.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/src/fw/lzmadecode.o
+  Compile checking out/src/fw/multiboot.o
+  Compile checking out/src/fw/csm.o
+  Compile checking out/src/fw/biostables.o
+  Compile checking out/src/fw/paravirt.o
+  Compile checking out/src/fw/shadow.o
+  Compile checking out/src/fw/pciinit.o
+  Compile checking out/src/fw/smm.o
+  Compile checking out/src/fw/mtrr.o
+  Compile checking out/src/fw/smp.o
+  Compile checking out/src/fw/xen.o
+  Compile checking out/src/fw/acpi.o
+  Compile checking out/src/fw/mptable.o
+  Compile checking out/src/fw/pirtable.o
+  Compile checking out/src/fw/smbios.o
+  Compile checking out/src/fw/romfile_loader.o
+  Compile checking out/src/fw/dsdt_parser.o
+  Compile checking out/src/hw/virtio-ring.o
+  Compile checking out/src/hw/virtio-mmio.o
+  Compile checking out/src/hw/virtio-pci.o
+  Compile checking out/src/hw/virtio-blk.o
+  Compile checking out/src/hw/virtio-scsi.o
+  Compile checking out/src/hw/tpm_drivers.o
+  Compile checking out/src/hw/nvme.o
+  Compile checking out/src/sha256.o
+  Compile checking out/src/sha512.o
+  Compiling whole program out/code32seg.o
+  Compiling whole program out/ccode16.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/romlayout.o
+  Compiling whole program out/ccode32flat.o
+In file included from out/ccode32flat.o.tmp.c:52:
+./src/jpeg.c:42:9: warning: "__LITTLE_ENDIAN" redefined
+   42 | #define __LITTLE_ENDIAN
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/stdarg.h:10,
+                 from ./src/output.c:7,
+                 from out/ccode32flat.o.tmp.c:3:
+/usr/include/bits/alltypes.h:45:9: note: this is the location of the previous definition
+   45 | #define __LITTLE_ENDIAN 1234
+      |         ^~~~~~~~~~~~~~~
+  Building ld scripts
+Version: 1.16.3-20250518_091803-da8503bdeacb
+Fixed space: 0xe05b-0x10000  total: 8101  slack: 14  Percent slack: 0.2%
+16bit size:           36576
+32bit segmented size: 2289
+32bit flat size:      43695
+32bit flat init size: 55616
+Lowmem size:          2224
+f-segment var size:   3328
+  Linking out/rom16.o
+  Linking out/rom32seg.o
+  Stripping out/rom32seg.noexec.o
+ld: warning: out/rom16.o has a LOAD segment with RWX permissions
+  Stripping out/rom16.noexec.o
+  Linking out/rom.o
+ld: warning: out/rom.o has a LOAD segment with RWX permissions
+  Prepping out/bios.bin.prep
+Total size: 147776  Fixed: 85888  Free: 114368 (used 56.4% of 256KiB rom)
+  Creating out/Csm16.bin
+>>> seabios: building bios-coreboot.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Build Kconfig config file
+  Compile checking out/src/string.o
+  Compile checking out/src/block.o
+  Compile checking out/src/misc.o
+  Compile checking out/src/stacks.o
+  Compile checking out/src/output.o
+  Compile checking out/src/cdrom.o
+  Compile checking out/src/disk.o
+  Compile checking out/src/mouse.o
+  Compile checking out/src/kbd.o
+  Compile checking out/src/system.o
+  Compile checking out/src/serial.o
+  Compile checking out/src/sercon.o
+  Compile checking out/src/clock.o
+  Compile checking out/src/resume.o
+  Compile checking out/src/pnpbios.o
+  Compile checking out/src/vgahooks.o
+  Compile checking out/src/pcibios.o
+  Compile checking out/src/apm.o
+  Compile checking out/src/cp437.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/hw/timer.o
+  Compile checking out/src/hw/rtc.o
+  Compile checking out/src/hw/dma.o
+  Compile checking out/src/hw/pic.o
+  Compile checking out/src/hw/ps2port.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/src/hw/usb.o
+  Compile checking out/src/hw/usb-ohci.o
+  Compile checking out/src/hw/usb-uhci.o
+  Compile checking out/src/hw/usb-ehci.o
+  Compile checking out/src/hw/usb-hid.o
+  Compile checking out/src/hw/usb-msc.o
+  Compile checking out/src/hw/usb-uas.o
+  Compile checking out/src/hw/blockcmd.o
+  Compile checking out/src/hw/floppy.o
+  Compile checking out/src/hw/ata.o
+  Compile checking out/src/hw/ramdisk.o
+  Compile checking out/src/hw/lsi-scsi.o
+  Compile checking out/src/hw/esp-scsi.o
+  Compile checking out/src/hw/megasas.o
+  Compile checking out/src/hw/mpt-scsi.o
+  Compile checking out/src/post.o
+  Compile checking out/src/e820map.o
+  Compile checking out/src/malloc.o
+  Compile checking out/src/romfile.o
+  Compile checking out/src/x86.o
+  Compile checking out/src/optionroms.o
+  Compile checking out/src/pmm.o
+  Compile checking out/src/font.o
+  Compile checking out/src/boot.o
+  Compile checking out/src/bootsplash.o
+  Compile checking out/src/jpeg.o
+  Compile checking out/src/bmp.o
+  Compile checking out/src/tcgbios.o
+  Compile checking out/src/sha1.o
+  Compile checking out/src/hw/pcidevice.o
+  Compile checking out/src/hw/ahci.o
+  Compile checking out/src/hw/pvscsi.o
+  Compile checking out/src/hw/usb-xhci.o
+  Compile checking out/src/hw/usb-hub.o
+  Compile checking out/src/hw/sdcard.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/src/fw/lzmadecode.o
+  Compile checking out/src/fw/multiboot.o
+  Compile checking out/src/fw/csm.o
+  Compile checking out/src/fw/biostables.o
+  Compile checking out/src/fw/paravirt.o
+  Compile checking out/src/fw/shadow.o
+  Compile checking out/src/fw/pciinit.o
+  Compile checking out/src/fw/smm.o
+  Compile checking out/src/fw/smp.o
+  Compile checking out/src/fw/mtrr.o
+  Compile checking out/src/fw/xen.o
+  Compile checking out/src/fw/acpi.o
+  Compile checking out/src/fw/mptable.o
+  Compile checking out/src/fw/pirtable.o
+  Compile checking out/src/fw/smbios.o
+  Compile checking out/src/fw/romfile_loader.o
+  Compile checking out/src/fw/dsdt_parser.o
+  Compile checking out/src/hw/virtio-ring.o
+  Compile checking out/src/hw/virtio-pci.o
+  Compile checking out/src/hw/virtio-mmio.o
+  Compile checking out/src/hw/virtio-blk.o
+  Compile checking out/src/hw/virtio-scsi.o
+  Compile checking out/src/hw/tpm_drivers.o
+  Compile checking out/src/hw/nvme.o
+  Compile checking out/src/sha256.o
+  Compile checking out/src/sha512.o
+  Compiling whole program out/code32seg.o
+  Compiling whole program out/ccode16.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/romlayout.o
+  Compiling whole program out/ccode32flat.o
+In file included from out/ccode32flat.o.tmp.c:52:
+./src/jpeg.c:42:9: warning: "__LITTLE_ENDIAN" redefined
+   42 | #define __LITTLE_ENDIAN
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/stdarg.h:10,
+                 from ./src/output.c:7,
+                 from out/ccode32flat.o.tmp.c:3:
+/usr/include/bits/alltypes.h:45:9: note: this is the location of the previous definition
+   45 | #define __LITTLE_ENDIAN 1234
+      |         ^~~~~~~~~~~~~~~
+  Building ld scripts
+Version: 1.16.3-20250518_091815-da8503bdeacb
+Fixed space: 0xe05b-0x10000  total: 8101  slack: 14  Percent slack: 0.2%
+16bit size:           37952
+32bit segmented size: 2289
+32bit flat size:      47567
+32bit flat init size: 61824
+Lowmem size:          2240
+f-segment var size:   3168
+  Linking out/rom16.o
+  Linking out/rom32seg.o
+  Stripping out/rom32seg.noexec.o
+ld: warning: out/rom16.o has a LOAD segment with RWX permissions
+  Stripping out/rom16.noexec.o
+  Linking out/rom.o
+ld: warning: out/rom.o has a LOAD segment with RWX permissions
+  Prepping out/bios.bin.prep
+Total size: 159648  Fixed: 90976  Free: 102496 (used 60.9% of 256KiB rom)
+  Creating out/bios.bin.elf
+>>> seabios: building bios.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Build Kconfig config file
+  Compile checking out/src/misc.o
+  Compile checking out/src/output.o
+  Compile checking out/src/stacks.o
+  Compile checking out/src/string.o
+  Compile checking out/src/block.o
+  Compile checking out/src/cdrom.o
+  Compile checking out/src/disk.o
+  Compile checking out/src/mouse.o
+  Compile checking out/src/kbd.o
+  Compile checking out/src/system.o
+  Compile checking out/src/serial.o
+  Compile checking out/src/sercon.o
+  Compile checking out/src/clock.o
+  Compile checking out/src/resume.o
+  Compile checking out/src/pnpbios.o
+  Compile checking out/src/vgahooks.o
+  Compile checking out/src/pcibios.o
+  Compile checking out/src/apm.o
+  Compile checking out/src/cp437.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/hw/timer.o
+  Compile checking out/src/hw/rtc.o
+  Compile checking out/src/hw/dma.o
+  Compile checking out/src/hw/pic.o
+  Compile checking out/src/hw/ps2port.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/src/hw/usb.o
+  Compile checking out/src/hw/usb-uhci.o
+  Compile checking out/src/hw/usb-ohci.o
+  Compile checking out/src/hw/usb-ehci.o
+  Compile checking out/src/hw/usb-hid.o
+  Compile checking out/src/hw/usb-msc.o
+  Compile checking out/src/hw/usb-uas.o
+  Compile checking out/src/hw/blockcmd.o
+  Compile checking out/src/hw/floppy.o
+  Compile checking out/src/hw/ata.o
+  Compile checking out/src/hw/ramdisk.o
+  Compile checking out/src/hw/lsi-scsi.o
+  Compile checking out/src/hw/esp-scsi.o
+  Compile checking out/src/hw/megasas.o
+  Compile checking out/src/hw/mpt-scsi.o
+  Compile checking out/src/post.o
+  Compile checking out/src/e820map.o
+  Compile checking out/src/malloc.o
+  Compile checking out/src/romfile.o
+  Compile checking out/src/x86.o
+  Compile checking out/src/optionroms.o
+  Compile checking out/src/pmm.o
+  Compile checking out/src/font.o
+  Compile checking out/src/boot.o
+  Compile checking out/src/bootsplash.o
+  Compile checking out/src/jpeg.o
+  Compile checking out/src/bmp.o
+  Compile checking out/src/tcgbios.o
+  Compile checking out/src/sha1.o
+  Compile checking out/src/hw/pcidevice.o
+  Compile checking out/src/hw/ahci.o
+  Compile checking out/src/hw/pvscsi.o
+  Compile checking out/src/hw/usb-xhci.o
+  Compile checking out/src/hw/usb-hub.o
+  Compile checking out/src/hw/sdcard.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/src/fw/multiboot.o
+  Compile checking out/src/fw/lzmadecode.o
+  Compile checking out/src/fw/csm.o
+  Compile checking out/src/fw/biostables.o
+  Compile checking out/src/fw/paravirt.o
+  Compile checking out/src/fw/shadow.o
+  Compile checking out/src/fw/pciinit.o
+  Compile checking out/src/fw/smm.o
+  Compile checking out/src/fw/smp.o
+  Compile checking out/src/fw/mtrr.o
+  Compile checking out/src/fw/xen.o
+  Compile checking out/src/fw/acpi.o
+  Compile checking out/src/fw/mptable.o
+  Compile checking out/src/fw/pirtable.o
+  Compile checking out/src/fw/smbios.o
+  Compile checking out/src/fw/romfile_loader.o
+  Compile checking out/src/fw/dsdt_parser.o
+  Compile checking out/src/hw/virtio-ring.o
+  Compile checking out/src/hw/virtio-pci.o
+  Compile checking out/src/hw/virtio-mmio.o
+  Compile checking out/src/hw/virtio-blk.o
+  Compile checking out/src/hw/virtio-scsi.o
+  Compile checking out/src/hw/tpm_drivers.o
+  Compile checking out/src/hw/nvme.o
+  Compile checking out/src/sha256.o
+  Compile checking out/src/sha512.o
+  Compiling whole program out/code32seg.o
+  Compiling whole program out/ccode16.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/romlayout.o
+  Compiling whole program out/ccode32flat.o
+In file included from out/ccode32flat.o.tmp.c:52:
+./src/jpeg.c:42:9: warning: "__LITTLE_ENDIAN" redefined
+   42 | #define __LITTLE_ENDIAN
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/stdarg.h:10,
+                 from ./src/output.c:7,
+                 from out/ccode32flat.o.tmp.c:3:
+/usr/include/bits/alltypes.h:45:9: note: this is the location of the previous definition
+   45 | #define __LITTLE_ENDIAN 1234
+      |         ^~~~~~~~~~~~~~~
+  Building ld scripts
+Version: 1.16.3-20250518_091824-da8503bdeacb
+Fixed space: 0xe05b-0x10000  total: 8101  slack: 9  Percent slack: 0.1%
+16bit size:           28448
+32bit segmented size: 1316
+32bit flat size:      15500
+32bit flat init size: 43968
+Lowmem size:          2192
+f-segment var size:   3120
+  Linking out/rom16.o
+  Linking out/rom32seg.o
+  Stripping out/rom32seg.noexec.o
+ld: warning: out/rom16.o has a LOAD segment with RWX permissions
+  Stripping out/rom16.noexec.o
+  Linking out/rom.o
+ld: warning: out/rom.o has a LOAD segment with RWX permissions
+  Prepping out/bios.bin.prep
+Total size: 97376  Fixed: 48384  Free: 33696 (used 74.3% of 128KiB rom)
+  Creating out/bios.bin
+>>> seabios: building bios-256k.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Build Kconfig config file
+  Compile checking out/src/misc.o
+  Compile checking out/src/stacks.o
+  Compile checking out/src/output.o
+  Compile checking out/src/string.o
+  Compile checking out/src/block.o
+  Compile checking out/src/cdrom.o
+  Compile checking out/src/disk.o
+  Compile checking out/src/mouse.o
+  Compile checking out/src/kbd.o
+  Compile checking out/src/system.o
+  Compile checking out/src/serial.o
+  Compile checking out/src/sercon.o
+  Compile checking out/src/clock.o
+  Compile checking out/src/resume.o
+  Compile checking out/src/pnpbios.o
+  Compile checking out/src/vgahooks.o
+  Compile checking out/src/pcibios.o
+  Compile checking out/src/apm.o
+  Compile checking out/src/cp437.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/hw/rtc.o
+  Compile checking out/src/hw/timer.o
+  Compile checking out/src/hw/dma.o
+  Compile checking out/src/hw/pic.o
+  Compile checking out/src/hw/ps2port.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/src/hw/usb.o
+  Compile checking out/src/hw/usb-uhci.o
+  Compile checking out/src/hw/usb-ohci.o
+  Compile checking out/src/hw/usb-ehci.o
+  Compile checking out/src/hw/usb-hid.o
+  Compile checking out/src/hw/usb-msc.o
+  Compile checking out/src/hw/usb-uas.o
+  Compile checking out/src/hw/blockcmd.o
+  Compile checking out/src/hw/floppy.o
+  Compile checking out/src/hw/ata.o
+  Compile checking out/src/hw/ramdisk.o
+  Compile checking out/src/hw/lsi-scsi.o
+  Compile checking out/src/hw/megasas.o
+  Compile checking out/src/hw/esp-scsi.o
+  Compile checking out/src/hw/mpt-scsi.o
+  Compile checking out/src/post.o
+  Compile checking out/src/e820map.o
+  Compile checking out/src/malloc.o
+  Compile checking out/src/romfile.o
+  Compile checking out/src/x86.o
+  Compile checking out/src/optionroms.o
+  Compile checking out/src/pmm.o
+  Compile checking out/src/font.o
+  Compile checking out/src/boot.o
+  Compile checking out/src/bootsplash.o
+  Compile checking out/src/jpeg.o
+  Compile checking out/src/bmp.o
+  Compile checking out/src/tcgbios.o
+  Compile checking out/src/sha1.o
+  Compile checking out/src/hw/pcidevice.o
+  Compile checking out/src/hw/ahci.o
+  Compile checking out/src/hw/pvscsi.o
+  Compile checking out/src/hw/usb-xhci.o
+  Compile checking out/src/hw/usb-hub.o
+  Compile checking out/src/hw/sdcard.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/src/fw/lzmadecode.o
+  Compile checking out/src/fw/multiboot.o
+  Compile checking out/src/fw/csm.o
+  Compile checking out/src/fw/biostables.o
+  Compile checking out/src/fw/paravirt.o
+  Compile checking out/src/fw/shadow.o
+  Compile checking out/src/fw/pciinit.o
+  Compile checking out/src/fw/smm.o
+  Compile checking out/src/fw/smp.o
+  Compile checking out/src/fw/mtrr.o
+  Compile checking out/src/fw/xen.o
+  Compile checking out/src/fw/acpi.o
+  Compile checking out/src/fw/mptable.o
+  Compile checking out/src/fw/pirtable.o
+  Compile checking out/src/fw/smbios.o
+  Compile checking out/src/fw/romfile_loader.o
+  Compile checking out/src/fw/dsdt_parser.o
+  Compile checking out/src/hw/virtio-ring.o
+  Compile checking out/src/hw/virtio-pci.o
+  Compile checking out/src/hw/virtio-mmio.o
+  Compile checking out/src/hw/virtio-blk.o
+  Compile checking out/src/hw/virtio-scsi.o
+  Compile checking out/src/hw/tpm_drivers.o
+  Compile checking out/src/hw/nvme.o
+  Compile checking out/src/sha256.o
+  Compile checking out/src/sha512.o
+  Compiling whole program out/code32seg.o
+  Compiling whole program out/ccode16.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/romlayout.o
+  Compiling whole program out/ccode32flat.o
+In file included from out/ccode32flat.o.tmp.c:52:
+./src/jpeg.c:42:9: warning: "__LITTLE_ENDIAN" redefined
+   42 | #define __LITTLE_ENDIAN
+      |         ^~~~~~~~~~~~~~~
+In file included from /usr/include/stdarg.h:10,
+                 from ./src/output.c:7,
+                 from out/ccode32flat.o.tmp.c:3:
+/usr/include/bits/alltypes.h:45:9: note: this is the location of the previous definition
+   45 | #define __LITTLE_ENDIAN 1234
+      |         ^~~~~~~~~~~~~~~
+  Building ld scripts
+Version: 1.16.3-20250518_091837-da8503bdeacb
+Fixed space: 0xe05b-0x10000  total: 8101  slack: 14  Percent slack: 0.2%
+16bit size:           38016
+32bit segmented size: 2277
+32bit flat size:      56971
+32bit flat init size: 85376
+Lowmem size:          2240
+f-segment var size:   3152
+  Linking out/rom16.o
+  Linking out/rom32seg.o
+  Stripping out/rom32seg.noexec.o
+ld: warning: out/rom16.o has a LOAD segment with RWX permissions
+  Stripping out/rom16.noexec.o
+  Linking out/rom.o
+ld: warning: out/rom.o has a LOAD segment with RWX permissions
+  Prepping out/bios.bin.prep
+Total size: 194528  Fixed: 100416  Free: 67616 (used 74.2% of 256KiB rom)
+  Creating out/bios.bin
+cp: can't stat 'out/src/fw/*dsdt*.aml': No such file or directory
+>>> seabios: building vgabios-cirrus.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Precompiling out/vgasrc/vgalayout.lds
+  Build Kconfig config file
+  Compile checking out/src/output.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/string.o
+  Compile checking out/vgasrc/vgainit.o
+  Compile checking out/vgasrc/vgabios.o
+  Compile checking out/vgasrc/vgafb.o
+  Compile checking out/vgasrc/swcursor.o
+  Compile checking out/vgasrc/vgafonts.o
+  Compile checking out/vgasrc/vbe.o
+  Compile checking out/vgasrc/stdvga.o
+  Compile checking out/vgasrc/stdvgamodes.o
+  Compile checking out/vgasrc/stdvgaio.o
+  Compile checking out/vgasrc/clext.o
+  Compile checking out/vgasrc/svgamodes.o
+  Compile checking out/vgasrc/atiext.o
+  Compile checking out/vgasrc/bochsvga.o
+  Compile checking out/vgasrc/geodevga.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/vgasrc/cbvga.o
+  Compile checking out/vgasrc/bochsdisplay.o
+  Compile checking out/vgasrc/ramfb.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/vgaentry.o
+  Compiling whole program out/vgaccode16.raw.s
+  Fixup VGA rom assembler
+  Linking out/vgarom.o
+Version: 1.16.3-20250518_091843-da8503bdeacb
+ld: warning: out/vgarom.o has a LOAD segment with RWX permissions
+  Extracting binary out/vgabios.bin.raw
+  Finalizing rom out/vgabios.bin
+>>> seabios: building vgabios-isavga.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Precompiling out/vgasrc/vgalayout.lds
+  Compiling to assembler out/src/asm-offsets.s
+  Build Kconfig config file
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/output.o
+  Compile checking out/src/string.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/vgasrc/vgainit.o
+  Compile checking out/vgasrc/vgabios.o
+  Compile checking out/vgasrc/vgafb.o
+  Compile checking out/vgasrc/swcursor.o
+  Compile checking out/vgasrc/vgafonts.o
+  Compile checking out/vgasrc/vbe.o
+  Compile checking out/vgasrc/stdvga.o
+  Compile checking out/vgasrc/stdvgamodes.o
+  Compile checking out/vgasrc/stdvgaio.o
+  Compile checking out/vgasrc/clext.o
+  Compile checking out/vgasrc/svgamodes.o
+  Compile checking out/vgasrc/atiext.o
+  Compile checking out/vgasrc/bochsvga.o
+  Compile checking out/vgasrc/geodevga.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/vgasrc/cbvga.o
+  Compile checking out/vgasrc/bochsdisplay.o
+  Compile checking out/vgasrc/ramfb.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/vgaentry.o
+  Compiling whole program out/vgaccode16.raw.s
+  Fixup VGA rom assembler
+  Linking out/vgarom.o
+Version: 1.16.3-20250518_091847-da8503bdeacb
+ld: warning: out/vgarom.o has a LOAD segment with RWX permissions
+  Extracting binary out/vgabios.bin.raw
+  Finalizing rom out/vgabios.bin
+>>> seabios: building vgabios-qxl.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Precompiling out/vgasrc/vgalayout.lds
+  Build Kconfig config file
+  Compile checking out/src/output.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/string.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/vgasrc/vgainit.o
+  Compile checking out/vgasrc/vgabios.o
+  Compile checking out/vgasrc/vgafb.o
+  Compile checking out/vgasrc/swcursor.o
+  Compile checking out/vgasrc/vgafonts.o
+  Compile checking out/vgasrc/vbe.o
+  Compile checking out/vgasrc/stdvga.o
+  Compile checking out/vgasrc/stdvgamodes.o
+  Compile checking out/vgasrc/stdvgaio.o
+  Compile checking out/vgasrc/clext.o
+  Compile checking out/vgasrc/svgamodes.o
+  Compile checking out/vgasrc/atiext.o
+  Compile checking out/vgasrc/bochsvga.o
+  Compile checking out/vgasrc/geodevga.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/vgasrc/cbvga.o
+  Compile checking out/vgasrc/bochsdisplay.o
+  Compile checking out/vgasrc/ramfb.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/vgaentry.o
+  Compiling whole program out/vgaccode16.raw.s
+  Fixup VGA rom assembler
+  Linking out/vgarom.o
+Version: 1.16.3-20250518_091852-da8503bdeacb
+ld: warning: out/vgarom.o has a LOAD segment with RWX permissions
+  Extracting binary out/vgabios.bin.raw
+  Finalizing rom out/vgabios.bin
+>>> seabios: building vgabios-stdvga.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Precompiling out/vgasrc/vgalayout.lds
+  Build Kconfig config file
+  Compile checking out/src/string.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/output.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/vgasrc/vgainit.o
+  Compile checking out/vgasrc/vgabios.o
+  Compile checking out/vgasrc/vgafb.o
+  Compile checking out/vgasrc/swcursor.o
+  Compile checking out/vgasrc/vgafonts.o
+  Compile checking out/vgasrc/vbe.o
+  Compile checking out/vgasrc/stdvga.o
+  Compile checking out/vgasrc/stdvgamodes.o
+  Compile checking out/vgasrc/stdvgaio.o
+  Compile checking out/vgasrc/clext.o
+  Compile checking out/vgasrc/svgamodes.o
+  Compile checking out/vgasrc/atiext.o
+  Compile checking out/vgasrc/bochsvga.o
+  Compile checking out/vgasrc/geodevga.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/vgasrc/cbvga.o
+  Compile checking out/vgasrc/bochsdisplay.o
+  Compile checking out/vgasrc/ramfb.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/vgaentry.o
+  Compiling whole program out/vgaccode16.raw.s
+  Fixup VGA rom assembler
+  Linking out/vgarom.o
+Version: 1.16.3-20250518_091857-da8503bdeacb
+ld: warning: out/vgarom.o has a LOAD segment with RWX permissions
+  Extracting binary out/vgabios.bin.raw
+  Finalizing rom out/vgabios.bin
+>>> seabios: building vgabios-virtio.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Precompiling out/vgasrc/vgalayout.lds
+  Build Kconfig config file
+  Compile checking out/src/string.o
+  Compile checking out/src/output.o
+  Compile checking out/vgasrc/vgainit.o
+  Compile checking out/vgasrc/vgabios.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/vgasrc/vgafb.o
+  Compile checking out/vgasrc/swcursor.o
+  Compile checking out/vgasrc/vgafonts.o
+  Compile checking out/vgasrc/vbe.o
+  Compile checking out/vgasrc/stdvga.o
+  Compile checking out/vgasrc/stdvgamodes.o
+  Compile checking out/vgasrc/stdvgaio.o
+  Compile checking out/vgasrc/clext.o
+  Compile checking out/vgasrc/svgamodes.o
+  Compile checking out/vgasrc/atiext.o
+  Compile checking out/vgasrc/bochsvga.o
+  Compile checking out/vgasrc/geodevga.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/vgasrc/cbvga.o
+  Compile checking out/vgasrc/ramfb.o
+  Compile checking out/vgasrc/bochsdisplay.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/vgaentry.o
+  Compiling whole program out/vgaccode16.raw.s
+  Fixup VGA rom assembler
+  Linking out/vgarom.o
+Version: 1.16.3-20250518_091902-da8503bdeacb
+ld: warning: out/vgarom.o has a LOAD segment with RWX permissions
+  Extracting binary out/vgabios.bin.raw
+  Finalizing rom out/vgabios.bin
+>>> seabios: building vgabios-vmware.bin
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_stdin':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:77:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   77 |                 printf(_("aborted!\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:78:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   78 |                 printf(_("Console input/output is redirected. "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:79:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   79 |                 printf(_("Run 'make oldconfig' to update configuration.\n\n"));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_askvalue':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:89:17: warning: format not a string literal and no format arguments [-Wformat-security]
+   89 |                 printf(_("(NEW) "));
+      |                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'conf_choice':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:290:33: warning: format not a string literal and no format arguments [-Wformat-security]
+  290 |                                 printf(_(" (NEW)"));
+      |                                 ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'check_conf':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:438:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  438 |                                         printf(_("*\n* Restart config...\n*\n"));
+      |                                         ^~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c: In function 'main':
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:636:41: warning: format not a string literal and no format arguments [-Wformat-security]
+  636 |                                         _("\n*** The configuration requires explicit update.\n\n"));
+      |                                         ^
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:689:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  689 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:693:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  693 |                         fprintf(stderr, _("\n*** Error during update of the configuration.\n\n"));
+      |                         ^~~~~~~
+/home/packager/aports/main/seabios/src/seabios-1.16.3/scripts/kconfig/conf.c:704:25: warning: format not a string literal and no format arguments [-Wformat-security]
+  704 |                         fprintf(stderr, _("\n*** Error during writing of the configuration.\n\n"));
+      |                         ^~~~~~~
+scripts/kconfig/conf --olddefconfig /home/packager/aports/main/seabios/src/seabios-1.16.3/src/Kconfig
+#
+# configuration written to /home/packager/aports/main/seabios/src/seabios-1.16.3/.config
+#
+  Compiling to assembler out/src/asm-offsets.s
+  Precompiling out/vgasrc/vgalayout.lds
+  Build Kconfig config file
+  Compile checking out/src/string.o
+  Compile checking out/src/output.o
+  Compile checking out/src/hw/pci.o
+  Compile checking out/src/hw/serialio.o
+  Compile checking out/vgasrc/vgainit.o
+  Compile checking out/vgasrc/vgabios.o
+  Compile checking out/vgasrc/vgafb.o
+  Compile checking out/vgasrc/swcursor.o
+  Compile checking out/vgasrc/vgafonts.o
+  Compile checking out/vgasrc/vbe.o
+  Compile checking out/vgasrc/stdvga.o
+  Compile checking out/vgasrc/stdvgamodes.o
+  Compile checking out/vgasrc/stdvgaio.o
+  Compile checking out/vgasrc/clext.o
+  Compile checking out/vgasrc/svgamodes.o
+  Compile checking out/vgasrc/atiext.o
+  Compile checking out/vgasrc/bochsvga.o
+  Compile checking out/vgasrc/geodevga.o
+  Compile checking out/src/fw/coreboot.o
+  Compile checking out/vgasrc/cbvga.o
+  Compile checking out/vgasrc/bochsdisplay.o
+  Compile checking out/vgasrc/ramfb.o
+  Generating offset file out/asm-offsets.h
+  Compiling (16bit) out/vgaentry.o
+  Compiling whole program out/vgaccode16.raw.s
+  Fixup VGA rom assembler
+  Linking out/vgarom.o
+Version: 1.16.3-20250518_091906-da8503bdeacb
+ld: warning: out/vgarom.o has a LOAD segment with RWX permissions
+  Extracting binary out/vgabios.bin.raw
+  Finalizing rom out/vgabios.bin
+>>> seabios: Entering fakeroot...
+>>> seabios-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/seabios/pkg/seabios-doc/usr/share/doc'
+'usr/share/licenses' -> '/home/packager/aports/main/seabios/pkg/seabios-doc/usr/share/licenses'
+>>> seabios-doc*: Preparing subpackage seabios-doc...
+>>> seabios-doc*: Running postcheck for seabios-doc
+>>> seabios-bin*: Running split function _seabios...
+>>> seabios-bin*: Preparing subpackage seabios-bin...
+>>> seabios-bin*: Stripping binaries
+>>> seabios-bin*: Running postcheck for seabios-bin
+>>> seavgabios-bin*: Running split function _seavgabios...
+>>> seavgabios-bin*: Preparing subpackage seavgabios-bin...
+>>> seavgabios-bin*: Stripping binaries
+>>> WARNING: seavgabios-bin*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> seavgabios-bin*: Running postcheck for seavgabios-bin
+>>> seabios*: Running postcheck for seabios
+>>> seabios*: Preparing package seabios...
+>>> seabios*: Stripping binaries
+>>> WARNING: seabios*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> seabios-bin*: Scanning shared objects
+>>> seabios-doc*: Scanning shared objects
+>>> seabios*: Scanning shared objects
+>>> seavgabios-bin*: Scanning shared objects
+>>> seabios-bin*: Tracing dependencies...
+>>> seabios-bin*: Package size: 796.1 KB
+>>> seabios-bin*: Compressing data...
+>>> seabios-bin*: Create checksum...
+pigz: not found
+>>> seabios-bin*: Create seabios-bin-1.16.3-r0.apk
+>>> seabios-doc*: Tracing dependencies...
+>>> seabios-doc*: Package size: 113.1 KB
+>>> seabios-doc*: Compressing data...
+>>> seabios-doc*: Create checksum...
+pigz: not found
+>>> seabios-doc*: Create seabios-doc-1.16.3-r0.apk
+>>> seabios*: Tracing dependencies...
+	seabios-bin=1.16.3-r0
+	seavgabios-bin=1.16.3-r0
+>>> seabios*: Package size: 1.0 B
+>>> seabios*: Compressing data...
+>>> seabios*: Create checksum...
+pigz: not found
+>>> seabios*: Create seabios-1.16.3-r0.apk
+>>> seavgabios-bin*: Tracing dependencies...
+>>> seavgabios-bin*: Package size: 230.0 KB
+>>> seavgabios-bin*: Compressing data...
+>>> seavgabios-bin*: Create checksum...
+pigz: not found
+>>> seavgabios-bin*: Create seavgabios-bin-1.16.3-r0.apk
+>>> seabios: Build complete at Sun, 18 May 2025 09:19:08 +0000 elapsed time 0h 1m 19s
+>>> seabios: Cleaning up srcdir
+>>> seabios: Cleaning up pkgdir
+>>> seabios: Uninstalling dependencies...
+(1/12) Purging .makedepends-seabios (20250518.091751)
+(2/12) Purging python3-pyc (3.12.10-r0)
+(3/12) Purging python3-pycache-pyc0 (3.12.10-r0)
+(4/12) Purging pyc (3.12.10-r0)
+(5/12) Purging python3 (3.12.10-r0)
+(6/12) Purging iasl (20230628-r0)
+(7/12) Purging gdbm (1.24-r0)
+(8/12) Purging libbz2 (1.0.8-r6)
+(9/12) Purging libffi (3.4.7-r0)
+(10/12) Purging mpdecimal (4.0.0-r0)
+(11/12) Purging sqlite-libs (3.49.2-r0)
+(12/12) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> seabios: Updating the main/x86_64 repository index...
+>>> seabios: Signing the index...
+pigz: not found

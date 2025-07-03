@@ -1,0 +1,122 @@
+pigz: not found
+>>> lua-file-magic: Building main/lua-file-magic 0.2-r5 (using abuild 3.14.1-r4) started Thu, 22 May 2025 23:35:24 +0000
+>>> lua-file-magic: Validating /home/packager/aports/main/lua-file-magic/APKBUILD...
+>>> lua-file-magic: Analyzing dependencies...
+>>> lua-file-magic: Installing for build: build-base lua file-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/10) Installing file-dev (5.46-r2)
+(2/10) Installing lua5.2-libs (5.2.4-r13)
+(3/10) Installing lua5.2 (5.2.4-r13)
+(4/10) Installing lua5.2-dev (5.2.4-r13)
+(5/10) Installing linenoise (1.0-r5)
+(6/10) Installing lua5.3-libs (5.3.6-r6)
+(7/10) Installing lua5.3 (5.3.6-r6)
+(8/10) Installing lua5.3-dev (5.3.6-r6)
+(9/10) Installing lua5.4-dev (5.4.7-r0)
+(10/10) Installing .makedepends-lua-file-magic (20250522.233527)
+Executing busybox-1.37.0-r12.trigger
+OK: 318 MiB in 124 packages
+>>> lua-file-magic: Cleaning up srcdir
+>>> lua-file-magic: Cleaning up pkgdir
+>>> lua-file-magic: Cleaning up tmpdir
+>>> lua-file-magic: Fetching lua-file-magic-0.2.tar.gz::https://github.com/ncopa/lua-file-magic/archive/v0.2.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lua-file-magic-0.2.tar.gz.part'
+lua-file-magic-0.2.t 100% |********************************|  2557  0:00:00 ETA
+'/var/cache/distfiles/lua-file-magic-0.2.tar.gz.part' saved
+>>> lua-file-magic: Fetching lua-file-magic-0.2.tar.gz::https://github.com/ncopa/lua-file-magic/archive/v0.2.tar.gz
+>>> lua-file-magic: Checking sha512sums...
+lua-file-magic-0.2.tar.gz: OK
+>>> lua-file-magic: Unpacking /var/cache/distfiles/lua-file-magic-0.2.tar.gz...
+>>> lua-file-magic: Building for Lua 5.2...
+make: Entering directory '/home/packager/aports/main/lua-file-magic/src/lua-file-magic-0.2-5.2'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.2 -DMODULE_VERSION=\"0.2\"   -c -o magic.o magic.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o magic.so -fPIC -shared magic.o -lmagic
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: magic.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-file-magic/src/lua-file-magic-0.2-5.2'
+>>> lua-file-magic: Building for Lua 5.3...
+make: Entering directory '/home/packager/aports/main/lua-file-magic/src/lua-file-magic-0.2-5.3'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.3 -DMODULE_VERSION=\"0.2\"   -c -o magic.o magic.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o magic.so -fPIC -shared magic.o -lmagic
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: magic.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-file-magic/src/lua-file-magic-0.2-5.3'
+>>> lua-file-magic: Building for Lua 5.4...
+make: Entering directory '/home/packager/aports/main/lua-file-magic/src/lua-file-magic-0.2-5.4'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.4 -DMODULE_VERSION=\"0.2\"   -c -o magic.o magic.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o magic.so -fPIC -shared magic.o -lmagic
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: magic.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-file-magic/src/lua-file-magic-0.2-5.4'
+>>> lua-file-magic: Entering fakeroot...
+>>> lua5.2-file-magic*: Running split function _subpackage...
+>>> lua5.2-file-magic*: Preparing subpackage lua5.2-file-magic...
+>>> lua5.2-file-magic*: Stripping binaries
+>>> lua5.2-file-magic*: Running postcheck for lua5.2-file-magic
+>>> lua5.3-file-magic*: Running split function _subpackage...
+>>> lua5.3-file-magic*: Preparing subpackage lua5.3-file-magic...
+>>> lua5.3-file-magic*: Stripping binaries
+>>> lua5.3-file-magic*: Running postcheck for lua5.3-file-magic
+>>> lua5.4-file-magic*: Running split function _subpackage...
+>>> lua5.4-file-magic*: Preparing subpackage lua5.4-file-magic...
+>>> lua5.4-file-magic*: Stripping binaries
+>>> lua5.4-file-magic*: Running postcheck for lua5.4-file-magic
+>>> lua-file-magic*: Running postcheck for lua-file-magic
+>>> lua-file-magic*: Preparing package lua-file-magic...
+>>> lua-file-magic*: Stripping binaries
+>>> WARNING: lua-file-magic*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-file-magic*: Scanning shared objects
+>>> lua5.2-file-magic*: Scanning shared objects
+>>> lua5.3-file-magic*: Scanning shared objects
+>>> lua5.4-file-magic*: Scanning shared objects
+>>> lua-file-magic*: Tracing dependencies...
+	lua
+>>> lua-file-magic*: Package size: 0.0 
+>>> lua-file-magic*: Compressing data...
+>>> lua-file-magic*: Create checksum...
+pigz: not found
+>>> lua-file-magic*: Create lua-file-magic-0.2-r5.apk
+>>> lua5.2-file-magic*: Tracing dependencies...
+	lua5.2
+	so:libc.musl-x86_64.so.1
+	so:libmagic.so.1
+>>> lua5.2-file-magic*: Package size: 12.6 KB
+>>> lua5.2-file-magic*: Compressing data...
+>>> lua5.2-file-magic*: Create checksum...
+pigz: not found
+>>> lua5.2-file-magic*: Create lua5.2-file-magic-0.2-r5.apk
+>>> lua5.3-file-magic*: Tracing dependencies...
+	lua5.3
+	so:libc.musl-x86_64.so.1
+	so:libmagic.so.1
+>>> lua5.3-file-magic*: Package size: 12.7 KB
+>>> lua5.3-file-magic*: Compressing data...
+>>> lua5.3-file-magic*: Create checksum...
+pigz: not found
+>>> lua5.3-file-magic*: Create lua5.3-file-magic-0.2-r5.apk
+>>> lua5.4-file-magic*: Tracing dependencies...
+	lua5.4
+	so:libc.musl-x86_64.so.1
+	so:libmagic.so.1
+>>> lua5.4-file-magic*: Package size: 12.7 KB
+>>> lua5.4-file-magic*: Compressing data...
+>>> lua5.4-file-magic*: Create checksum...
+pigz: not found
+>>> lua5.4-file-magic*: Create lua5.4-file-magic-0.2-r5.apk
+>>> lua-file-magic: Build complete at Thu, 22 May 2025 23:35:35 +0000 elapsed time 0h 0m 11s
+>>> lua-file-magic: Cleaning up srcdir
+>>> lua-file-magic: Cleaning up pkgdir
+>>> lua-file-magic: Uninstalling dependencies...
+(1/10) Purging .makedepends-lua-file-magic (20250522.233527)
+(2/10) Purging file-dev (5.46-r2)
+(3/10) Purging lua5.2-dev (5.2.4-r13)
+(4/10) Purging lua5.2 (5.2.4-r13)
+(5/10) Purging lua5.2-libs (5.2.4-r13)
+(6/10) Purging lua5.3-dev (5.3.6-r6)
+(7/10) Purging lua5.3 (5.3.6-r6)
+(8/10) Purging lua5.3-libs (5.3.6-r6)
+(9/10) Purging lua5.4-dev (5.4.7-r0)
+(10/10) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-file-magic: Updating the main/x86_64 repository index...
+>>> lua-file-magic: Signing the index...
+pigz: not found

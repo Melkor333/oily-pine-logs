@@ -1,0 +1,84 @@
+pigz: not found
+>>> samurai: Building main/samurai 1.2-r6 (using abuild 3.14.1-r4) started Fri, 16 May 2025 20:27:45 +0000
+>>> samurai: Validating /home/packager/aports/main/samurai/APKBUILD...
+>>> samurai: Analyzing dependencies...
+>>> samurai: Installing for build: build-base
+(1/1) Installing .makedepends-samurai (20250516.202746)
+OK: 259 MiB in 75 packages
+>>> samurai: Cleaning up srcdir
+>>> samurai: Cleaning up pkgdir
+>>> samurai: Cleaning up tmpdir
+>>> samurai: Fetching https://github.com/michaelforney/samurai/releases/download/1.2/samurai-1.2.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to objects.githubusercontent.com (185.199.111.133:443)
+saving to '/var/cache/distfiles/samurai-1.2.tar.gz.part'
+samurai-1.2.tar.gz.p 100% |********************************| 32709  0:00:00 ETA
+'/var/cache/distfiles/samurai-1.2.tar.gz.part' saved
+>>> samurai: Fetching https://github.com/michaelforney/samurai/releases/download/1.2/samurai-1.2.tar.gz
+>>> samurai: Checking sha512sums...
+samurai-1.2.tar.gz: OK
+CVE-2021-30218.patch: OK
+CVE-2021-30219.patch: OK
+>>> samurai: Unpacking /var/cache/distfiles/samurai-1.2.tar.gz...
+>>> samurai: CVE-2021-30218.patch
+patching file util.c
+>>> samurai: CVE-2021-30219.patch
+patching file parse.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o build.o build.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o deps.o deps.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o env.o env.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o graph.o graph.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o htab.o htab.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o log.o log.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o parse.o parse.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o samu.o samu.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o scan.o scan.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o tool.o tool.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o tree.o tree.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -std=c99 -Wall -Wextra -Wpedantic -Wno-unused-parameter -c -o util.o util.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o samu build.o deps.o env.o graph.o htab.o log.o parse.o samu.o scan.o tool.o tree.o util.o
+>>> samurai: Entering fakeroot...
+mkdir -p /home/packager/aports/main/samurai/pkg/samurai/usr/bin
+cp samu /home/packager/aports/main/samurai/pkg/samurai/usr/bin/
+mkdir -p /home/packager/aports/main/samurai/pkg/samurai/usr/share/man/man1
+cp samu.1 /home/packager/aports/main/samurai/pkg/samurai/usr/share/man/man1/
+>>> samurai-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/samurai/pkg/samurai-doc/usr/share/man'
+>>> samurai-doc*: Preparing subpackage samurai-doc...
+>>> samurai-doc*: Running postcheck for samurai-doc
+>>> samurai-dbg*: Running split function dbg...
+>>> samurai-dbg*: Preparing subpackage samurai-dbg...
+>>> samurai-dbg*: Running postcheck for samurai-dbg
+>>> samurai*: Running postcheck for samurai
+>>> samurai*: Preparing package samurai...
+>>> samurai-dbg*: Scanning shared objects
+>>> samurai-doc*: Scanning shared objects
+>>> samurai*: Scanning shared objects
+>>> samurai-dbg*: Tracing dependencies...
+>>> samurai-dbg*: Package size: 160.1 KB
+>>> samurai-dbg*: Compressing data...
+>>> samurai-dbg*: Create checksum...
+pigz: not found
+>>> samurai-dbg*: Create samurai-dbg-1.2-r6.apk
+>>> samurai-doc*: Tracing dependencies...
+>>> samurai-doc*: Package size: 2.0 KB
+>>> samurai-doc*: Compressing data...
+>>> samurai-doc*: Create checksum...
+pigz: not found
+>>> samurai-doc*: Create samurai-doc-1.2-r6.apk
+>>> samurai*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> samurai*: Package size: 62.0 KB
+>>> samurai*: Compressing data...
+>>> samurai*: Create checksum...
+pigz: not found
+>>> samurai*: Create samurai-1.2-r6.apk
+>>> samurai: Build complete at Fri, 16 May 2025 20:27:49 +0000 elapsed time 0h 0m 4s
+>>> samurai: Cleaning up srcdir
+>>> samurai: Cleaning up pkgdir
+>>> samurai: Uninstalling dependencies...
+(1/1) Purging .makedepends-samurai (20250516.202746)
+OK: 259 MiB in 74 packages
+>>> samurai: Updating the main/x86_64 repository index...
+>>> samurai: Signing the index...
+pigz: not found

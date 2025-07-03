@@ -1,0 +1,181 @@
+pigz: not found
+>>> lm-sensors: Building main/lm-sensors 3.6.0-r5 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:17:05 +0000
+>>> lm-sensors: Validating /home/packager/aports/main/lm-sensors/APKBUILD...
+>>> lm-sensors: Analyzing dependencies...
+>>> lm-sensors: Installing for build: build-base sysfsutils cmd:bash perl rrdtool-dev bison flex
+(1/29) Installing sysfsutils (2.1.1-r3)
+(2/29) Installing libxau (1.0.12-r0)
+(3/29) Installing libmd (1.1.0-r0)
+(4/29) Installing libbsd (0.12.2-r0)
+(5/29) Installing libxdmcp (1.1.5-r1)
+(6/29) Installing libxcb (1.16.1-r0)
+(7/29) Installing libx11 (1.8.10-r0)
+(8/29) Installing libxext (1.3.6-r2)
+(9/29) Installing libxrender (0.9.11-r5)
+(10/29) Installing libpng (1.6.47-r0)
+(11/29) Installing freetype (2.13.3-r0)
+(12/29) Installing fontconfig (2.15.0-r1)
+(13/29) Installing pixman (0.43.4-r1)
+(14/29) Installing cairo (1.18.2-r1)
+(15/29) Installing libffi (3.4.7-r0)
+(16/29) Installing libeconf (0.6.3-r0)
+(17/29) Installing libblkid (2.40.4-r1)
+(18/29) Installing libmount (2.40.4-r1)
+(19/29) Installing glib (2.82.5-r0)
+(20/29) Installing libxft (2.3.8-r3)
+(21/29) Installing fribidi (1.0.16-r0)
+(22/29) Installing graphite2 (1.3.14-r6)
+(23/29) Installing harfbuzz (9.0.0-r1)
+(24/29) Installing pango (1.54.0-r1)
+(25/29) Installing xz-libs (5.6.3-r1)
+(26/29) Installing libxml2 (2.13.4-r6)
+(27/29) Installing librrd (1.9.0-r0)
+(28/29) Installing rrdtool-dev (1.9.0-r0)
+(29/29) Installing .makedepends-lm-sensors (20250523.171707)
+Executing glib-2.82.5-r0.trigger
+Executing busybox-1.37.0-r12.trigger
+OK: 581 MiB in 161 packages
+>>> lm-sensors: Cleaning up srcdir
+>>> lm-sensors: Cleaning up pkgdir
+>>> lm-sensors: Cleaning up tmpdir
+>>> lm-sensors: Fetching lm-sensors-3.6.0.tar.gz::https://github.com/lm-sensors/lm-sensors/archive/V3-6-0.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/lm-sensors-3.6.0.tar.gz.part'
+lm-sensors-3.6.0.tar 100% |********************************|  266k  0:00:00 ETA
+'/var/cache/distfiles/lm-sensors-3.6.0.tar.gz.part' saved
+>>> lm-sensors: Fetching lm-sensors-3.6.0.tar.gz::https://github.com/lm-sensors/lm-sensors/archive/V3-6-0.tar.gz
+>>> lm-sensors: Checking sha512sums...
+lm-sensors-3.6.0.tar.gz: OK
+sensors-detect-alpine.patch: OK
+gcc14.patch: OK
+fancontrol.initd: OK
+sensord.confd: OK
+sensord.initd: OK
+>>> lm-sensors: Unpacking /var/cache/distfiles/lm-sensors-3.6.0.tar.gz...
+>>> lm-sensors: sensors-detect-alpine.patch
+patching file prog/detect/sensors-detect
+Hunk #1 succeeded at 7386 with fuzz 1 (offset 327 lines).
+>>> lm-sensors: gcc14.patch
+patching file prog/sensord/rrd.c
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/data.c | \
+sed -e 's@^\(.*\)\.o:@lib/data.ld lib/data.lo: Makefile '`dirname lib/data.ld`/Module.mk' @' > lib/data.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/general.c | \
+sed -e 's@^\(.*\)\.o:@lib/general.ld lib/general.lo: Makefile '`dirname lib/general.ld`/Module.mk' @' > lib/general.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/error.c | \
+sed -e 's@^\(.*\)\.o:@lib/error.ld lib/error.lo: Makefile '`dirname lib/error.ld`/Module.mk' @' > lib/error.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/access.c | \
+sed -e 's@^\(.*\)\.o:@lib/access.ld lib/access.lo: Makefile '`dirname lib/access.ld`/Module.mk' @' > lib/access.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/init.c | \
+sed -e 's@^\(.*\)\.o:@lib/init.ld lib/init.lo: Makefile '`dirname lib/init.ld`/Module.mk' @' > lib/init.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/sysfs.c | \
+sed -e 's@^\(.*\)\.o:@lib/sysfs.ld lib/sysfs.lo: Makefile '`dirname lib/sysfs.ld`/Module.mk' @' > lib/sysfs.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/data.c | \
+sed -e 's@^\(.*\)\.o:@lib/data.ad lib/data.ao: Makefile '`dirname lib/data.ad`/Module.mk' @' > lib/data.ad
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/general.c | \
+sed -e 's@^\(.*\)\.o:@lib/general.ad lib/general.ao: Makefile '`dirname lib/general.ad`/Module.mk' @' > lib/general.ad
+/usr/bin/bison
+bison -p sensors_yy -d lib/conf-parse.y -o lib/conf-parse.c
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/error.c | \
+sed -e 's@^\(.*\)\.o:@lib/error.ad lib/error.ao: Makefile '`dirname lib/error.ad`/Module.mk' @' > lib/error.ad
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/access.c | \
+sed -e 's@^\(.*\)\.o:@lib/access.ad lib/access.ao: Makefile '`dirname lib/access.ad`/Module.mk' @' > lib/access.ad
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/init.c | \
+sed -e 's@^\(.*\)\.o:@lib/init.ad lib/init.ao: Makefile '`dirname lib/init.ad`/Module.mk' @' > lib/init.ad
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/sysfs.c | \
+sed -e 's@^\(.*\)\.o:@lib/sysfs.ad lib/sysfs.ao: Makefile '`dirname lib/sysfs.ad`/Module.mk' @' > lib/sysfs.ad
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector prog/sensors/main.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensors/main.rd prog/sensors/main.ro: Makefile '`dirname prog/sensors/main.rd`/Module.mk' @' > prog/sensors/main.rd
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector prog/sensors/chips.c | \
+sed -e 's@^\(.*\)\.o:@prog/sensors/chips.rd prog/sensors/chips.ro: Makefile '`dirname prog/sensors/chips.rd`/Module.mk' @' > prog/sensors/chips.rd
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector prog/dump/util.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/util.rd prog/dump/util.ro: Makefile '`dirname prog/dump/util.rd`/Module.mk' @' > prog/dump/util.rd
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector prog/dump/isadump.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/isadump.rd prog/dump/isadump.ro: Makefile '`dirname prog/dump/isadump.rd`/Module.mk' @' > prog/dump/isadump.rd
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector prog/dump/isaset.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/isaset.rd prog/dump/isaset.ro: Makefile '`dirname prog/dump/isaset.rd`/Module.mk' @' > prog/dump/isaset.rd
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector prog/dump/superio.c | \
+sed -e 's@^\(.*\)\.o:@prog/dump/superio.rd prog/dump/superio.ro: Makefile '`dirname prog/dump/superio.rd`/Module.mk' @' > prog/dump/superio.rd
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/conf-parse.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-parse.ld lib/conf-parse.lo: Makefile '`dirname lib/conf-parse.ld`/Module.mk' @' > lib/conf-parse.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/conf-parse.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-parse.ad lib/conf-parse.ao: Makefile '`dirname lib/conf-parse.ad`/Module.mk' @' > lib/conf-parse.ad
+/usr/bin/flex
+flex -Psensors_yy -t -Cfe -8 lib/conf-lex.l > lib/conf-lex.c
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/conf-lex.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-lex.ld lib/conf-lex.lo: Makefile '`dirname lib/conf-lex.ld`/Module.mk' @' > lib/conf-lex.ld
+gcc -M -MG -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector lib/conf-lex.c | \
+sed -e 's@^\(.*\)\.o:@lib/conf-lex.ad lib/conf-lex.ao: Makefile '`dirname lib/conf-lex.ad`/Module.mk' @' > lib/conf-lex.ad
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/data.c -o lib/data.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/general.c -o lib/general.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/error.c -o lib/error.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/access.c -o lib/access.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/init.c -o lib/init.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/sysfs.c -o lib/sysfs.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -Wno-undef -c lib/conf-parse.c -o lib/conf-parse.lo
+gcc -DETCDIR="\"/etc\"" -I. -fpic -D_REENTRANT -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -Wno-shadow -Wno-undef -Wno-unused -Wno-missing-prototypes -Wno-sign-compare -c lib/conf-lex.c -o lib/conf-lex.lo
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/data.c -o lib/data.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/general.c -o lib/general.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/error.c -o lib/error.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/access.c -o lib/access.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/init.c -o lib/init.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c lib/sysfs.c -o lib/sysfs.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -Wno-undef -c lib/conf-parse.c -o lib/conf-parse.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -Wno-shadow -Wno-undef -Wno-unused -Wno-missing-prototypes -Wno-sign-compare -c lib/conf-lex.c -o lib/conf-lex.ao
+gcc -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--version-script=lib/libsensors.map -Wl,-soname,libsensors.so.5 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o lib/libsensors.so.5.0.0 lib/data.lo lib/general.lo lib/error.lo lib/access.lo lib/init.lo lib/sysfs.lo lib/conf-parse.lo lib/conf-lex.lo -lc -lm
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lib/libsensors.so.5.0.0 has a LOAD segment with RWX permissions
+rm -f lib/libsensors.so.5
+rm -f lib/libsensors.so 
+ln -sf libsensors.so.5.0.0 lib/libsensors.so.5
+ln -sf libsensors.so.5.0.0 lib/libsensors.so
+rm -f lib/libsensors.a
+ar rcvs lib/libsensors.a lib/data.ao lib/general.ao lib/error.ao lib/access.ao lib/init.ao lib/sysfs.ao lib/conf-parse.ao lib/conf-lex.ao
+a - lib/data.ao
+a - lib/general.ao
+a - lib/error.ao
+a - lib/access.ao
+a - lib/init.ao
+a - lib/sysfs.ao
+a - lib/conf-parse.ao
+a - lib/conf-lex.ao
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c prog/sensors/main.c -o prog/sensors/main.ro
+gcc -DETCDIR="\"/etc\"" -I. -Wall -O2 -Wstrict-prototypes -Wshadow -Wpointer-arith -Wcast-qual -Wcast-align -Wwrite-strings -Wnested-externs -Winline -W -Wmissing-prototypes -Wundef -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fno-stack-protector -c prog/sensors/chips.c -o prog/sensors/chips.ro
+gcc -Wl,-rpath,/usr/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o prog/sensors/sensors prog/sensors/main.ro prog/sensors/chips.ro  -Llib -lsensors
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: prog/sensors/sensors: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: prog/sensors/sensors has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [prog/sensors/Module.mk:43: prog/sensors/sensors] Error 1
+>>> ERROR: lm-sensors: build failed
+>>> lm-sensors: Uninstalling dependencies...
+(1/29) Purging .makedepends-lm-sensors (20250523.171707)
+(2/29) Purging sysfsutils (2.1.1-r3)
+(3/29) Purging rrdtool-dev (1.9.0-r0)
+(4/29) Purging librrd (1.9.0-r0)
+(5/29) Purging libxml2 (2.13.4-r6)
+(6/29) Purging pango (1.54.0-r1)
+Executing pango-1.54.0-r1.pre-deinstall
+(7/29) Purging xz-libs (5.6.3-r1)
+(8/29) Purging cairo (1.18.2-r1)
+(9/29) Purging libxft (2.3.8-r3)
+(10/29) Purging fontconfig (2.15.0-r1)
+(11/29) Purging harfbuzz (9.0.0-r1)
+(12/29) Purging freetype (2.13.3-r0)
+(13/29) Purging fribidi (1.0.16-r0)
+(14/29) Purging glib (2.82.5-r0)
+(15/29) Purging graphite2 (1.3.14-r6)
+(16/29) Purging libmount (2.40.4-r1)
+(17/29) Purging libblkid (2.40.4-r1)
+(18/29) Purging libxext (1.3.6-r2)
+(19/29) Purging libxrender (0.9.11-r5)
+(20/29) Purging libx11 (1.8.10-r0)
+(21/29) Purging libxcb (1.16.1-r0)
+(22/29) Purging libxdmcp (1.1.5-r1)
+(23/29) Purging libbsd (0.12.2-r0)
+(24/29) Purging libeconf (0.6.3-r0)
+(25/29) Purging libffi (3.4.7-r0)
+(26/29) Purging libmd (1.1.0-r0)
+(27/29) Purging libpng (1.6.47-r0)
+(28/29) Purging libxau (1.0.12-r0)
+(29/29) Purging pixman (0.43.4-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

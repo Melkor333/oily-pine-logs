@@ -1,0 +1,954 @@
+pigz: not found
+>>> rtmpdump: Building main/rtmpdump 2.4_git20190330-r5 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:32:21 +0000
+>>> rtmpdump: Validating /home/packager/aports/main/rtmpdump/APKBUILD...
+>>> rtmpdump: Analyzing dependencies...
+>>> rtmpdump: Installing for build: build-base zlib-dev linux-headers gnutls-dev
+(1/13) Installing nettle (3.10-r1)
+(2/13) Installing libffi (3.4.7-r0)
+(3/13) Installing libtasn1 (4.20.0-r0)
+(4/13) Installing p11-kit (0.25.5-r2)
+(5/13) Installing gnutls (3.8.8-r0)
+(6/13) Installing gnutls-c++ (3.8.8-r0)
+(7/13) Installing nettle-dev (3.10-r1)
+(8/13) Installing libidn2-dev (2.3.7-r0)
+(9/13) Installing libtasn1-progs (4.20.0-r0)
+(10/13) Installing libtasn1-dev (4.20.0-r0)
+(11/13) Installing p11-kit-dev (0.25.5-r2)
+(12/13) Installing gnutls-dev (3.8.8-r0)
+(13/13) Installing .makedepends-rtmpdump (20250523.183224)
+Executing busybox-1.37.0-r12.trigger
+OK: 569 MiB in 145 packages
+>>> rtmpdump: Cleaning up srcdir
+>>> rtmpdump: Cleaning up pkgdir
+>>> rtmpdump: Cleaning up tmpdir
+>>> rtmpdump: Fetching https://dev.alpinelinux.org/archive/rtmpdump/rtmpdump-2.4_git20190330.tar.gz
+Connecting to dev.alpinelinux.org (185.15.220.34:443)
+saving to '/var/cache/distfiles/rtmpdump-2.4_git20190330.tar.gz.part'
+rtmpdump-2.4_git2019 100% |********************************|  144k  0:00:00 ETA
+'/var/cache/distfiles/rtmpdump-2.4_git20190330.tar.gz.part' saved
+>>> rtmpdump: Fetching https://dev.alpinelinux.org/archive/rtmpdump/rtmpdump-2.4_git20190330.tar.gz
+>>> rtmpdump: Checking sha512sums...
+rtmpdump-2.4_git20190330.tar.gz: OK
+fix-chunk-size.patch: OK
+gnutls.patch: OK
+>>> rtmpdump: Unpacking /var/cache/distfiles/rtmpdump-2.4_git20190330.tar.gz...
+>>> rtmpdump: fix-chunk-size.patch
+patching file librtmp/rtmp.c
+>>> rtmpdump: gnutls.patch
+patching file Makefile
+patching file librtmp/Makefile
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\"   -O2   -c -o rtmpdump.o rtmpdump.c
+make[1]: Entering directory '/home/packager/aports/main/rtmpdump/src/rtmpdump-2.4_git20190330/librtmp'
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\" -DUSE_GNUTLS  -O2 -fPIC   -c -o rtmp.o rtmp.c
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\" -DUSE_GNUTLS  -O2 -fPIC   -c -o log.o log.c
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\"   -O2   -c -o rtmpgw.o rtmpgw.c
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\" -DUSE_GNUTLS  -O2 -fPIC   -c -o amf.o amf.c
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\"   -O2   -c -o thread.o thread.c
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\" -DUSE_GNUTLS  -O2 -fPIC   -c -o hashswf.o hashswf.c
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\" -DUSE_GNUTLS  -O2 -fPIC   -c -o parseurl.o parseurl.c
+In file included from amf.c:33:
+bytes.h:74:2: warning: #warning "Float word order not defined, assuming the same as byte order!" [-Wcpp]
+   74 | #warning "Float word order not defined, assuming the same as byte order!"
+      |  ^~~~~~~
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\"   -O2   -c -o rtmpsrv.o rtmpsrv.c
+In file included from rtmp.c:152:
+handshake.h: In function 'InitRC4Encryption':
+handshake.h:119:16: warning: variable 'digestLen' set but not used [-Wunused-but-set-variable]
+  119 |   unsigned int digestLen = 0;
+      |                ^~~~~~~~~
+hashswf.c: In function 'RTMP_HashSWF':
+hashswf.c:595:22: warning: pointer targets in passing argument 3 of 'nettle_hmac_sha256_set_key' differ in signedness [-Wpointer-sign]
+  595 |   HMAC_setup(in.ctx, "Genuine Adobe Flash Player 001", 30);
+      |                      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                      |
+      |                      char *
+hashswf.c:51:72: note: in definition of macro 'HMAC_setup'
+   51 | #define HMAC_setup(ctx, key, len)       hmac_sha256_set_key(&ctx, len, key)
+      |                                                                        ^~~
+In file included from hashswf.c:45:
+/usr/include/nettle/hmac.h:172:55: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+  172 |                     size_t key_length, const uint8_t *key);
+      |                                        ~~~~~~~~~~~~~~~^~~
+rtmp.c: In function 'RTMP_TLS_AllocServerContext':
+rtmp.c:280:3: warning: 'gnutls_certificate_credentials' is deprecated [-Wdeprecated-declarations]
+  280 |   gnutls_certificate_allocate_credentials((gnutls_certificate_credentials*) &ctx);
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rtmp.c: In function 'b64enc':
+rtmp.c:2478:23: warning: pointer targets in passing argument 1 of 'nettle_base64_encode_raw' differ in signedness [-Wpointer-sign]
+ 2478 |     base64_encode_raw((uint8_t*) output, length, input);
+      |                       ^~~~~~~~~~~~~~~~~
+      |                       |
+      |                       uint8_t * {aka unsigned char *}
+In file included from rtmp.c:57:
+/usr/include/nettle/base64.h:117:25: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+  117 | base64_encode_raw(char *dst, size_t length, const uint8_t *src);
+      |                   ~~~~~~^~~
+rtmp.c: In function 'PublisherAuth':
+rtmp.c:2625:35: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2625 |           MD5_Update(&md5ctx, user.av_val, user.av_len);
+      |                               ~~~~^~~~~~~
+      |                                   |
+      |                                   char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+In file included from rtmp.c:58:
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2626:35: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2626 |           MD5_Update(&md5ctx, salt.av_val, salt.av_len);
+      |                               ~~~~^~~~~~~
+      |                                   |
+      |                                   char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2627:48: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2627 |           MD5_Update(&md5ctx, r->Link.pubPasswd.av_val, r->Link.pubPasswd.av_len);
+      |                               ~~~~~~~~~~~~~~~~~^~~~~~~
+      |                                                |
+      |                                                char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2642:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2642 |           MD5_Update(&md5ctx, salted2, B64DIGEST_LEN);
+      |                               ^~~~~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2645:39: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2645 |             MD5_Update(&md5ctx, opaque.av_val, opaque.av_len);
+      |                                 ~~~~~~^~~~~~~
+      |                                       |
+      |                                       char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2647:42: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2647 |             MD5_Update(&md5ctx, challenge.av_val, challenge.av_len);
+      |                                 ~~~~~~~~~^~~~~~~
+      |                                          |
+      |                                          char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2648:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2648 |           MD5_Update(&md5ctx, challenge2, B64INT_LEN);
+      |                               ^~~~~~~~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2791:35: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2791 |           MD5_Update(&md5ctx, user.av_val, user.av_len);
+      |                               ~~~~^~~~~~~
+      |                                   |
+      |                                   char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2792:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2792 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2793:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2793 |           MD5_Update(&md5ctx, realm, sizeof(realm)-1);
+      |                               ^~~~~
+      |                               |
+      |                               const char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'const char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2794:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2794 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2795:48: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2795 |           MD5_Update(&md5ctx, r->Link.pubPasswd.av_val, r->Link.pubPasswd.av_len);
+      |                               ~~~~~~~~~~~~~~~~~^~~~~~~
+      |                                                |
+      |                                                char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2810:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2810 |           MD5_Update(&md5ctx, method, sizeof(method)-1);
+      |                               ^~~~~~
+      |                               |
+      |                               const char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'const char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2811:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2811 |           MD5_Update(&md5ctx, ":/", 2);
+      |                               ^~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2812:37: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2812 |           MD5_Update(&md5ctx, apptmp.av_val, apptmp.av_len);
+      |                               ~~~~~~^~~~~~~
+      |                                     |
+      |                                     char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2814:33: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2814 |             MD5_Update(&md5ctx, "/_definst_", sizeof("/_definst_") - 1);
+      |                                 ^~~~~~~~~~~~
+      |                                 |
+      |                                 char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2823:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2823 |           MD5_Update(&md5ctx, hash1, HEXHASH_LEN);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2824:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2824 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2825:36: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2825 |           MD5_Update(&md5ctx, nonce.av_val, nonce.av_len);
+      |                               ~~~~~^~~~~~~
+      |                                    |
+      |                                    char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2826:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2826 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2827:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2827 |           MD5_Update(&md5ctx, nchex, sizeof(nchex)-1);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2828:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2828 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2829:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2829 |           MD5_Update(&md5ctx, cnonce, sizeof(cnonce)-1);
+      |                               ^~~~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmpsrv.c:147:35: warning: 'av_secureToken' defined but not used [-Wunused-const-variable=]
+  147 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsrv.c:170:1: note: in expansion of macro 'SAVC'
+  170 | SAVC(secureToken);
+      | ^~~~
+rtmpsrv.c:147:35: warning: 'av_videoFunction' defined but not used [-Wunused-const-variable=]
+  147 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsrv.c:159:1: note: in expansion of macro 'SAVC'
+  159 | SAVC(videoFunction);
+      | ^~~~
+rtmpsrv.c:147:35: warning: 'av_fpad' defined but not used [-Wunused-const-variable=]
+  147 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsrv.c:155:1: note: in expansion of macro 'SAVC'
+  155 | SAVC(fpad);
+      | ^~~~
+rtmp.c:2830:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2830 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2831:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2831 |           MD5_Update(&md5ctx, qop, sizeof(qop)-1);
+      |                               ^~~
+      |                               |
+      |                               const char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'const char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2832:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2832 |           MD5_Update(&md5ctx, ":", 1);
+      |                               ^~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c:2833:31: warning: pointer targets in passing argument 3 of 'nettle_md5_update' differ in signedness [-Wpointer-sign]
+ 2833 |           MD5_Update(&md5ctx, hash2, HEXHASH_LEN);
+      |                               ^~~~~
+      |                               |
+      |                               char *
+rtmp.c:2516:60: note: in definition of macro 'MD5_Update'
+ 2516 | #define MD5_Update(ctx,data,len)        md5_update(ctx,len,data)
+      |                                                            ^~~~
+/usr/include/nettle/md5.h:71:27: note: expected 'const uint8_t *' {aka 'const unsigned char *'} but argument is of type 'char *'
+   71 |            const uint8_t *data);
+      |            ~~~~~~~~~~~~~~~^~~~
+rtmp.c: In function 'RTMP_ReadPacket':
+rtmp.c:3583:7: warning: variable 'didAlloc' set but not used [-Wunused-but-set-variable]
+ 3583 |   int didAlloc = FALSE;
+      |       ^~~~~~~~
+gcc -Wall   -DRTMPDUMP_VERSION=\"v2.4\"   -O2   -c -o rtmpsuck.o rtmpsuck.c
+rtmp.c: At top level:
+rtmp.c:2930:19: warning: 'av_NetConnection_Connect_Rejected' defined but not used [-Wunused-const-variable=]
+ 2930 | static const AVal av_NetConnection_Connect_Rejected =
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+rtmp.c:1559:35: warning: 'av_record' defined but not used [-Wunused-const-variable=]
+ 1559 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmp.c:1905:1: note: in expansion of macro 'SAVC'
+ 1905 | SAVC(record);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_secureToken' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:141:1: note: in expansion of macro 'SAVC'
+  141 | SAVC(secureToken);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_mode' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:138:1: note: in expansion of macro 'SAVC'
+  138 | SAVC(mode);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_fmsVer' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:137:1: note: in expansion of macro 'SAVC'
+  137 | SAVC(fmsVer);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_createStream' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:134:1: note: in expansion of macro 'SAVC'
+  134 | SAVC(createStream);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av__result' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:133:1: note: in expansion of macro 'SAVC'
+  133 | SAVC(_result);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_videoFunction' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:131:1: note: in expansion of macro 'SAVC'
+  131 | SAVC(videoFunction);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_capabilities' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:128:1: note: in expansion of macro 'SAVC'
+  128 | SAVC(capabilities);
+      | ^~~~
+rtmpsuck.c:119:35: warning: 'av_fpad' defined but not used [-Wunused-const-variable=]
+  119 | #define SAVC(x) static const AVal av_##x = AVC(#x)
+      |                                   ^~~
+rtmpsuck.c:127:1: note: in expansion of macro 'SAVC'
+  127 | SAVC(fpad);
+      | ^~~~
+In function 'DecodeTEA',
+    inlined from 'HandleInvoke' at rtmp.c:2988:5:
+rtmp.c:4416:5: warning: '*(uint32_t *)out' may be used uninitialized [-Wmaybe-uninitialized]
+ 4416 |   y = v[0];
+      |   ~~^~~~~~
+ar rs librtmp.a rtmp.o log.o amf.o hashswf.o parseurl.o
+gcc -shared -Wl,-soname,librtmp.so.1  -o librtmp.so.1 rtmp.o log.o amf.o hashswf.o parseurl.o  -lgnutls -lhogweed -lnettle -lgmp -lz 
+ar: creating librtmp.a
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: librtmp.so.1 has a LOAD segment with RWX permissions
+ln -sf librtmp.so.1 librtmp.so
+make[1]: Leaving directory '/home/packager/aports/main/rtmpdump/src/rtmpdump-2.4_git20190330/librtmp'
+gcc -Wall  -o rtmpdump rtmpdump.o -Llibrtmp -lrtmp -lgnutls -lhogweed -lnettle -lgmp -lz  
+gcc -Wall  -o rtmpgw rtmpgw.o thread.o -lpthread -Llibrtmp -lrtmp -lgnutls -lhogweed -lnettle -lgmp -lz  
+gcc -Wall  -o rtmpsrv rtmpsrv.o thread.o -lpthread -Llibrtmp -lrtmp -lgnutls -lhogweed -lnettle -lgmp -lz  
+gcc -Wall  -o rtmpsuck rtmpsuck.o thread.o -lpthread -Llibrtmp -lrtmp -lgnutls -lhogweed -lnettle -lgmp -lz  
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libp11-kit.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libidn2.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libunistring.so.5, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libtasn1.so.6, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: rtmpdump: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: rtmpdump has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_node_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_strerror@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_check'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_next@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_file_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_and_not'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_config_option@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_register_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_begin_with@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_So'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Cc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sk'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_copy_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pe'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pi'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_not_a_character'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ps'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_coding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lt'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Po'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ll'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_modules_load_and_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_length@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mn'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_request@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_release@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_load@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_object@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_unicode_8z8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_number_of_elements@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_add_filter@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unref@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_name@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_ascii_8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u16'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strlen@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_array2tree@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_finalize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strdup@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_No'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_write_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unregister_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_general_category'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_new_for_string@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_source@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_join_control'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value_type@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_parse@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_default_ignorable_code_point'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: warning: : undefined reference to `libp11-kit.so.0idn2_strerror@IDN2_0.0.0, needed by '
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libidn2.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: warning: : undefined reference to `libunistring.so.5UC_CATEGORY_Lm, needed by '
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libtasn1.so.6, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pf'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_message@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding_startEnd@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_free@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u32'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lu'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lo'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_flags@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Me'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_set_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_check_version@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Zs'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nl'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfkc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_find_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_or'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_create_element@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_format@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_tag_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_encode_simple_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: rtmpsrv: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: rtmpsrv has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_node_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_strerror@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_check'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_next@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_file_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_and_not'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_config_option@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_register_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_begin_with@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_So'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Cc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sk'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_copy_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pe'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pi'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_not_a_character'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ps'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_coding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lt'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Po'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ll'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_modules_load_and_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_length@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mn'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_request@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_release@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_load@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_object@LIBP11_KIT_1.0'
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:79: rtmpdump] Error 1
+make: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libp11-kit.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libidn2.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libunistring.so.5, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libtasn1.so.6, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_unicode_8z8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_number_of_elements@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_add_filter@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unref@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_name@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_ascii_8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u16'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strlen@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_array2tree@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_finalize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strdup@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_No'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_write_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unregister_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_general_category'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_new_for_string@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_source@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_join_control'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value_type@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_parse@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_default_ignorable_code_point'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_strerror@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pf'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_message@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding_startEnd@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_free@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u32'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lu'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lo'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_flags@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Me'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_set_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_check_version@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Zs'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nl'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfkc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_find_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_or'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_create_element@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_format@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_tag_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_encode_simple_der@LIBTASN1_0_3'
+collect2: error: ld returned 1 exit status
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libp11-kit.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libidn2.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libunistring.so.5, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libtasn1.so.6, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so, not found (try using -rpath or -rpath-link)
+make: *** [Makefile:82: rtmpsrv] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: rtmpsuck: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: rtmpsuck has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_node_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_strerror@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_check'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_next@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_file_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_and_not'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_config_option@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_register_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_begin_with@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_So'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Cc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sk'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_copy_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pe'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pi'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_not_a_character'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ps'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_coding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lt'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Po'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ll'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_modules_load_and_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_length@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mn'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_request@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_release@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_load@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_object@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_unicode_8z8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_number_of_elements@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_add_filter@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unref@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_name@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_ascii_8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u16'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strlen@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_array2tree@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_finalize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strdup@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_No'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_write_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unregister_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_general_category'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_new_for_string@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_source@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_join_control'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value_type@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_parse@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_default_ignorable_code_point'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_strerror@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pf'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_message@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding_startEnd@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_free@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u32'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lu'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lo'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_flags@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Me'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_set_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_check_version@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Zs'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nl'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfkc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_find_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_or'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_create_element@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_format@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_tag_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_encode_simple_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: rtmpgw: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: rtmpgw has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_new@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_node_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_strerror@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_check'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_next@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_file_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_and_not'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_config_option@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_register_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_begin_with@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_So'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Cc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Sk'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_value@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_copy_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pe'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pi'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_not_a_character'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ps'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_coding@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_new@LIBP11_KIT_1.0'
+collect2: error: ld returned 1 exit status
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lt'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Po'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Ll'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_modules_load_and_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_get_length@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mn'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_request@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_release@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_load@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_get_object@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_unicode_8z8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_number_of_elements@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_add_filter@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unref@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_name@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_to_ascii_8z@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u16'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_match_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strlen@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_array2tree@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_finalize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_space_strdup@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_No'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_write_value@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_unregister_callback@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_general_category'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_pin_new_for_string@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_to_u8'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_decode_simple_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_pin_source@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_join_control'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_read_value_type@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_parse@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_is_property_default_ignorable_code_point'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_strerror@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lm'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Pf'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_message@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_der_decoding_startEnd@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `idn2_free@IDN2_0.0.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_module_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_token_info@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u8_to_u32'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_length_ber@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u16_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lu'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Lo'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_get_flags@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Me'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_delete_structure2@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Mc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_set_attribute@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_check_version@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_iter_free@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `u32_normalize'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_module_initialize@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_get_attributes@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nd'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Zs'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `UC_CATEGORY_Nl'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uninorm_nfkc'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_find_node@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `uc_general_category_or'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_create_element@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `p11_kit_uri_format@LIBP11_KIT_1.0'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_get_tag_der@LIBTASN1_0_3'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libgnutls.so: undefined reference to `asn1_encode_simple_der@LIBTASN1_0_3'
+make: *** [Makefile:85: rtmpsuck] Error 1
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:88: rtmpgw] Error 1
+>>> ERROR: rtmpdump: build failed
+>>> rtmpdump: Uninstalling dependencies...
+(1/13) Purging .makedepends-rtmpdump (20250523.183224)
+(2/13) Purging gnutls-dev (3.8.8-r0)
+(3/13) Purging gnutls-c++ (3.8.8-r0)
+(4/13) Purging gnutls (3.8.8-r0)
+(5/13) Purging libidn2-dev (2.3.7-r0)
+(6/13) Purging libtasn1-dev (4.20.0-r0)
+(7/13) Purging libtasn1-progs (4.20.0-r0)
+(8/13) Purging nettle-dev (3.10-r1)
+(9/13) Purging nettle (3.10-r1)
+(10/13) Purging p11-kit-dev (0.25.5-r2)
+(11/13) Purging p11-kit (0.25.5-r2)
+(12/13) Purging libffi (3.4.7-r0)
+(13/13) Purging libtasn1 (4.20.0-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

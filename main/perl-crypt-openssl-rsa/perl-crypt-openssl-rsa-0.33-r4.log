@@ -1,0 +1,364 @@
+pigz: not found
+>>> perl-crypt-openssl-rsa: Building main/perl-crypt-openssl-rsa 0.33-r4 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:07:43 +0000
+>>> perl-crypt-openssl-rsa: Validating /home/packager/aports/main/perl-crypt-openssl-rsa/APKBUILD...
+>>> perl-crypt-openssl-rsa: Analyzing dependencies...
+>>> perl-crypt-openssl-rsa: Installing for build: build-base perl perl-crypt-openssl-random perl-dev openssl-dev>3 perl-crypt-openssl-guess
+(1/11) Installing libbz2 (1.0.8-r6)
+(2/11) Installing perl (5.40.2-r0)
+(3/11) Installing perl-crypt-openssl-random (0.17-r0)
+(4/11) Installing perl-utils (5.40.2-r0)
+(5/11) Installing perl-dev (5.40.2-r0)
+(6/11) Installing openssl-dev (3.3.3-r0)
+(7/11) Installing perl-crypt-openssl-guess (0.15-r1)
+(8/11) Installing .makedepends-perl-crypt-openssl-rsa (20250518.070745)
+(9/11) Installing perl-error (0.17029-r2)
+(10/11) Installing perl-git (2.47.2-r0)
+(11/11) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 308 MiB in 92 packages
+>>> perl-crypt-openssl-rsa: Cleaning up srcdir
+>>> perl-crypt-openssl-rsa: Cleaning up pkgdir
+>>> perl-crypt-openssl-rsa: Cleaning up tmpdir
+>>> perl-crypt-openssl-rsa: Fetching https://cpan.metacpan.org/authors/id/T/TO/TODDR/Crypt-OpenSSL-RSA-0.33.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Crypt-OpenSSL-RSA-0.33.tar.gz.part'
+Crypt-OpenSSL-RSA-0. 100% |********************************| 29010  0:00:00 ETA
+'/var/cache/distfiles/Crypt-OpenSSL-RSA-0.33.tar.gz.part' saved
+>>> perl-crypt-openssl-rsa: Fetching https://cpan.metacpan.org/authors/id/T/TO/TODDR/Crypt-OpenSSL-RSA-0.33.tar.gz
+>>> perl-crypt-openssl-rsa: Checking sha512sums...
+Crypt-OpenSSL-RSA-0.33.tar.gz: OK
+>>> perl-crypt-openssl-rsa: Unpacking /var/cache/distfiles/Crypt-OpenSSL-RSA-0.33.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Crypt::OpenSSL::RSA
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-crypt-openssl-rsa/src/Crypt-OpenSSL-RSA-0.33/typemap'  RSA.xs > RSA.xsc
+Running Mkbootstrap for RSA ()
+chmod 644 "RSA.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- RSA.bs blib/arch/auto/Crypt/OpenSSL/RSA/RSA.bs 644
+cp RSA.pm blib/lib/Crypt/OpenSSL/RSA.pm
+AutoSplitting blib/lib/Crypt/OpenSSL/RSA.pm (blib/lib/auto/Crypt/OpenSSL/RSA)
+mv RSA.xsc RSA.c
+cc -c  -I/usr/include -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.33\" -DXS_VERSION=\"0.33\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DPERL5 -DOPENSSL_NO_KRB5 RSA.c
+RSA.xs: In function '_is_private':
+RSA.xs:59:5: warning: 'RSA_get0_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+   59 |     RSA_get0_key(p_rsa->rsa, NULL, NULL, &d);
+      |     ^~~~~~~~~~~~
+In file included from /usr/include/openssl/x509.h:36,
+                 from /usr/include/openssl/pem.h:23,
+                 from RSA.xs:10:
+/usr/include/openssl/rsa.h:228:28: note: declared here
+  228 | OSSL_DEPRECATEDIN_3_0 void RSA_get0_key(const RSA *r,
+      |                            ^~~~~~~~~~~~
+RSA.xs: In function 'get_message_digest':
+RSA.xs:125:13: warning: 'MD5' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  125 |             return MD5(text, text_length, NULL);
+      |             ^~~~~~
+In file included from RSA.xs:8:
+/usr/include/openssl/md5.h:52:38: note: declared here
+   52 | OSSL_DEPRECATEDIN_3_0 unsigned char *MD5(const unsigned char *d, size_t n,
+      |                                      ^~~
+RSA.xs:145:13: warning: 'RIPEMD160' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  145 |             return RIPEMD160(text, text_length, NULL);
+      |             ^~~~~~
+In file included from RSA.xs:12:
+/usr/include/openssl/ripemd.h:49:38: note: declared here
+   49 | OSSL_DEPRECATEDIN_3_0 unsigned char *RIPEMD160(const unsigned char *d, size_t n,
+      |                                      ^~~~~~~~~
+RSA.xs: In function 'rsa_crypt':
+RSA.xs:218:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  218 |     size = RSA_size(p_rsa->rsa);
+      |     ^~~~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_new_private_key':
+RSA.xs:255:9: warning: 'PEM_read_bio_RSAPrivateKey' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  255 |         proto, _load_rsa_key(key_string_SV, PEM_read_bio_RSAPrivateKey, passphase_SV));
+      |         ^~~~~
+/usr/include/openssl/pem.h:451:1: note: declared here
+  451 | DECLARE_PEM_rw_cb_attr(OSSL_DEPRECATEDIN_3_0, RSAPrivateKey, RSA)
+      | ^~~~~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA__new_public_key_pkcs1':
+RSA.xs:265:9: warning: 'PEM_read_bio_RSAPublicKey' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  265 |         proto, _load_rsa_key(key_string_SV, PEM_read_bio_RSAPublicKey, &PL_sv_undef));
+      |         ^~~~~
+/usr/include/openssl/pem.h:452:1: note: declared here
+  452 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, RSAPublicKey, RSA)
+      | ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA__new_public_key_x509':
+RSA.xs:275:9: warning: 'PEM_read_bio_RSA_PUBKEY' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  275 |         proto, _load_rsa_key(key_string_SV, PEM_read_bio_RSA_PUBKEY, &PL_sv_undef));
+      |         ^~~~~
+/usr/include/openssl/pem.h:453:1: note: declared here
+  453 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, RSA_PUBKEY, RSA)
+      | ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_DESTROY':
+RSA.xs:283:5: warning: 'RSA_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  283 |     RSA_free(p_rsa->rsa);
+      |     ^~~~~~~~
+/usr/include/openssl/rsa.h:304:28: note: declared here
+  304 | OSSL_DEPRECATEDIN_3_0 void RSA_free(RSA *r);
+      |                            ^~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_get_private_key_string':
+RSA.xs:316:5: warning: 'PEM_write_bio_RSAPrivateKey' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  316 |     PEM_write_bio_RSAPrivateKey(
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/openssl/pem.h:451:1: note: declared here
+  451 | DECLARE_PEM_rw_cb_attr(OSSL_DEPRECATEDIN_3_0, RSAPrivateKey, RSA)
+      | ^~~~~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_get_public_key_string':
+RSA.xs:330:5: warning: 'PEM_write_bio_RSAPublicKey' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  330 |     PEM_write_bio_RSAPublicKey(stringBIO, p_rsa->rsa);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/openssl/pem.h:452:1: note: declared here
+  452 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, RSAPublicKey, RSA)
+      | ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_get_public_key_x509_string':
+RSA.xs:343:5: warning: 'PEM_write_bio_RSA_PUBKEY' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  343 |     PEM_write_bio_RSA_PUBKEY(stringBIO, p_rsa->rsa);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/openssl/pem.h:453:1: note: declared here
+  453 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, RSA_PUBKEY, RSA)
+      | ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_generate_key':
+RSA.xs:362:5: warning: 'RSA_new' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  362 |     rsa = RSA_new();
+      |     ^~~
+/usr/include/openssl/rsa.h:212:28: note: declared here
+  212 | OSSL_DEPRECATEDIN_3_0 RSA *RSA_new(void);
+      |                            ^~~~~~~
+RSA.xs:363:5: warning: 'RSA_generate_key_ex' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  363 |     rc = RSA_generate_key_ex(rsa, SvIV(bitsSV), e, NULL);
+      |     ^~
+/usr/include/openssl/rsa.h:271:27: note: declared here
+  271 | OSSL_DEPRECATEDIN_3_0 int RSA_generate_key_ex(RSA *rsa, int bits, BIGNUM *e,
+      |                           ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA__new_key_from_parameters':
+RSA.xs:399:5: warning: 'RSA_new' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  399 |     CHECK_OPEN_SSL(rsa = RSA_new());
+      |     ^~~~~~~~~~~~~~
+/usr/include/openssl/rsa.h:212:28: note: declared here
+  212 | OSSL_DEPRECATEDIN_3_0 RSA *RSA_new(void);
+      |                            ^~~~~~~
+RSA.xs:422:9: warning: 'RSA_set0_factors' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  422 |         THROW(RSA_set0_factors(rsa, p, q));
+      |         ^~~~~
+/usr/include/openssl/rsa.h:219:27: note: declared here
+  219 | OSSL_DEPRECATEDIN_3_0 int RSA_set0_factors(RSA *r, BIGNUM *p, BIGNUM *q);
+      |                           ^~~~~~~~~~~~~~~~
+RSA.xs:437:9: warning: 'RSA_set0_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  437 |         THROW(RSA_set0_key(rsa, n, e, d));
+      |         ^~~~~
+/usr/include/openssl/rsa.h:218:27: note: declared here
+  218 | OSSL_DEPRECATEDIN_3_0 int RSA_set0_key(RSA *r, BIGNUM *n, BIGNUM *e, BIGNUM *d);
+      |                           ^~~~~~~~~~~~
+RSA.xs:450:9: warning: 'RSA_set0_crt_params' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  450 |         THROW(RSA_set0_crt_params(rsa, dmp1, dmq1, iqmp));
+      |         ^~~~~
+/usr/include/openssl/rsa.h:220:27: note: declared here
+  220 | OSSL_DEPRECATEDIN_3_0 int RSA_set0_crt_params(RSA *r,
+      |                           ^~~~~~~~~~~~~~~~~~~
+RSA.xs:453:9: warning: 'RSA_check_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  453 |         THROW(RSA_check_key(rsa) == 1);
+      |         ^~~~~
+/usr/include/openssl/rsa.h:289:27: note: declared here
+  289 | OSSL_DEPRECATEDIN_3_0 int RSA_check_key(const RSA *);
+      |                           ^~~~~~~~~~~~~
+RSA.xs:463:13: warning: 'RSA_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  463 |             RSA_free(rsa);
+      |             ^~~~~~~~
+/usr/include/openssl/rsa.h:304:28: note: declared here
+  304 | OSSL_DEPRECATEDIN_3_0 void RSA_free(RSA *r);
+      |                            ^~~~~~~~
+RSA.xs:472:9: warning: 'RSA_set0_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  472 |         CHECK_OPEN_SSL(RSA_set0_key(rsa, n, e, d));
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/rsa.h:218:27: note: declared here
+  218 | OSSL_DEPRECATEDIN_3_0 int RSA_set0_key(RSA *r, BIGNUM *n, BIGNUM *e, BIGNUM *d);
+      |                           ^~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA__get_key_parameters':
+RSA.xs:506:5: warning: 'RSA_get0_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  506 |     RSA_get0_key(rsa, &n, &e, &d);
+      |     ^~~~~~~~~~~~
+/usr/include/openssl/rsa.h:228:28: note: declared here
+  228 | OSSL_DEPRECATEDIN_3_0 void RSA_get0_key(const RSA *r,
+      |                            ^~~~~~~~~~~~
+RSA.xs:507:5: warning: 'RSA_get0_factors' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  507 |     RSA_get0_factors(rsa, &p, &q);
+      |     ^~~~~~~~~~~~~~~~
+/usr/include/openssl/rsa.h:231:28: note: declared here
+  231 | OSSL_DEPRECATEDIN_3_0 void RSA_get0_factors(const RSA *r,
+      |                            ^~~~~~~~~~~~~~~~
+RSA.xs:508:5: warning: 'RSA_get0_crt_params' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  508 |     RSA_get0_crt_params(rsa, &dmp1, &dmq1, &iqmp);
+      |     ^~~~~~~~~~~~~~~~~~~
+/usr/include/openssl/rsa.h:236:28: note: declared here
+  236 | OSSL_DEPRECATEDIN_3_0 void RSA_get0_crt_params(const RSA *r,
+      |                            ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_encrypt':
+RSA.xs:525:5: warning: 'RSA_public_encrypt' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  525 |     RETVAL = rsa_crypt(p_rsa, p_plaintext, RSA_public_encrypt);
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:293:5: note: declared here
+  293 | int RSA_public_encrypt(int flen, const unsigned char *from, unsigned char *to,
+      |     ^~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_decrypt':
+RSA.xs:538:5: warning: 'RSA_private_decrypt' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  538 |     RETVAL = rsa_crypt(p_rsa, p_ciphertext, RSA_private_decrypt);
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:302:5: note: declared here
+  302 | int RSA_private_decrypt(int flen, const unsigned char *from, unsigned char *to,
+      |     ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_private_encrypt':
+RSA.xs:551:5: warning: 'RSA_private_encrypt' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  551 |     RETVAL = rsa_crypt(p_rsa, p_plaintext, RSA_private_encrypt);
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:296:5: note: declared here
+  296 | int RSA_private_encrypt(int flen, const unsigned char *from, unsigned char *to,
+      |     ^~~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_public_decrypt':
+RSA.xs:560:5: warning: 'RSA_public_decrypt' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  560 |     RETVAL = rsa_crypt(p_rsa, p_ciphertext, RSA_public_decrypt);
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:299:5: note: declared here
+  299 | int RSA_public_decrypt(int flen, const unsigned char *from, unsigned char *to,
+      |     ^~~~~~~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_size':
+RSA.xs:568:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  568 |     RETVAL = RSA_size(p_rsa->rsa);
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_check_key':
+RSA.xs:580:5: warning: 'RSA_check_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  580 |     RETVAL = RSA_check_key(p_rsa->rsa);
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:289:27: note: declared here
+  289 | OSSL_DEPRECATEDIN_3_0 int RSA_check_key(const RSA *);
+      |                           ^~~~~~~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_sign':
+RSA.xs:710:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  710 |     CHECK_NEW(signature, RSA_size(p_rsa->rsa), char);
+      |     ^~~~~~~~~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs:710:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  710 |     CHECK_NEW(signature, RSA_size(p_rsa->rsa), char);
+      |     ^~~~~~~~~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs:710:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  710 |     CHECK_NEW(signature, RSA_size(p_rsa->rsa), char);
+      |     ^~~~~~~~~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs:710:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  710 |     CHECK_NEW(signature, RSA_size(p_rsa->rsa), char);
+      |     ^~~~~~~~~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs:713:5: warning: 'RSA_sign' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  713 |     CHECK_OPEN_SSL(RSA_sign(p_rsa->hashMode,
+      |     ^~~~~~~~~~~~~~
+/usr/include/openssl/rsa.h:359:27: note: declared here
+  359 | OSSL_DEPRECATEDIN_3_0 int RSA_sign(int type, const unsigned char *m,
+      |                           ^~~~~~~~
+RSA.xs: In function 'XS_Crypt__OpenSSL__RSA_verify':
+RSA.xs:739:5: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  739 |     if (RSA_size(p_rsa->rsa) < sig_length)
+      |     ^~
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+RSA.xs:745:5: warning: 'RSA_verify' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  745 |     switch(RSA_verify(p_rsa->hashMode,
+      |     ^~~~~~
+/usr/include/openssl/rsa.h:362:27: note: declared here
+  362 | OSSL_DEPRECATEDIN_3_0 int RSA_verify(int type, const unsigned char *m,
+      |                           ^~~~~~~~~~
+rm -f blib/arch/auto/Crypt/OpenSSL/RSA/RSA.so
+LD_RUN_PATH="/usr/lib" cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  RSA.o  -o blib/arch/auto/Crypt/OpenSSL/RSA/RSA.so  \
+   -L/usr -L/usr/lib -lssl -lcrypto   \
+  
+chmod 755 blib/arch/auto/Crypt/OpenSSL/RSA/RSA.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- RSA.bs blib/arch/auto/Crypt/OpenSSL/RSA/RSA.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/bignum.t .................. skipped: Crypt::OpenSSL::Bignum required for bignum tests
+t/format.t .................. ok
+t/rsa.t ..................... ok
+t/sig_die.t ................. ok
+t/z_kwalitee.t .............. skipped: This test is only run for the module author
+t/z_meta.t .................. skipped: This test is only run for the module author
+t/z_perl_minimum_version.t .. skipped: Author tests not required for installation
+t/z_pod-coverage.t .......... skipped: This test is only run for the module author
+t/z_pod.t ................... skipped: This test is only run for the module author
+All tests successful.
+Files=9, Tests=83,  1 wallclock secs ( 0.05 usr  0.01 sys +  0.55 cusr  0.11 csys =  0.72 CPU)
+Result: PASS
+>>> perl-crypt-openssl-rsa: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- RSA.bs blib/arch/auto/Crypt/OpenSSL/RSA/RSA.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/auto/Crypt/OpenSSL/RSA/RSA.so
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/auto/Crypt/OpenSSL/RSA/new_public_key.al
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/auto/Crypt/OpenSSL/RSA/import_random_seed.al
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/auto/Crypt/OpenSSL/RSA/get_key_parameters.al
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/auto/Crypt/OpenSSL/RSA/new_key_from_parameters.al
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/auto/Crypt/OpenSSL/RSA/autosplit.ix
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/lib/perl5/vendor_perl/Crypt/OpenSSL/RSA.pm
+Installing /home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa/usr/share/man/man3/Crypt::OpenSSL::RSA.3pm
+>>> perl-crypt-openssl-rsa-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-crypt-openssl-rsa/pkg/perl-crypt-openssl-rsa-doc/usr/share/man'
+>>> perl-crypt-openssl-rsa-doc*: Preparing subpackage perl-crypt-openssl-rsa-doc...
+>>> perl-crypt-openssl-rsa-doc*: Running postcheck for perl-crypt-openssl-rsa-doc
+>>> perl-crypt-openssl-rsa*: Running postcheck for perl-crypt-openssl-rsa
+>>> perl-crypt-openssl-rsa*: Preparing package perl-crypt-openssl-rsa...
+>>> perl-crypt-openssl-rsa*: Stripping binaries
+>>> WARNING: perl-crypt-openssl-rsa*: Redundant /usr/lib in rpath found
+>>> perl-crypt-openssl-rsa-doc*: Scanning shared objects
+>>> perl-crypt-openssl-rsa*: Scanning shared objects
+>>> perl-crypt-openssl-rsa-doc*: Tracing dependencies...
+>>> perl-crypt-openssl-rsa-doc*: Package size: 4.1 KB
+>>> perl-crypt-openssl-rsa-doc*: Compressing data...
+>>> perl-crypt-openssl-rsa-doc*: Create checksum...
+pigz: not found
+>>> perl-crypt-openssl-rsa-doc*: Create perl-crypt-openssl-rsa-doc-0.33-r4.apk
+>>> perl-crypt-openssl-rsa*: Tracing dependencies...
+	perl
+	perl-crypt-openssl-random
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+>>> perl-crypt-openssl-rsa*: Package size: 45.7 KB
+>>> perl-crypt-openssl-rsa*: Compressing data...
+>>> perl-crypt-openssl-rsa*: Create checksum...
+pigz: not found
+>>> perl-crypt-openssl-rsa*: Create perl-crypt-openssl-rsa-0.33-r4.apk
+>>> perl-crypt-openssl-rsa: Build complete at Sun, 18 May 2025 07:07:49 +0000 elapsed time 0h 0m 6s
+>>> perl-crypt-openssl-rsa: Cleaning up srcdir
+>>> perl-crypt-openssl-rsa: Cleaning up pkgdir
+>>> perl-crypt-openssl-rsa: Uninstalling dependencies...
+(1/11) Purging .makedepends-perl-crypt-openssl-rsa (20250518.070745)
+(2/11) Purging perl-crypt-openssl-random (0.17-r0)
+(3/11) Purging perl-dev (5.40.2-r0)
+(4/11) Purging perl-utils (5.40.2-r0)
+(5/11) Purging openssl-dev (3.3.3-r0)
+(6/11) Purging perl-crypt-openssl-guess (0.15-r1)
+(7/11) Purging git-perl (2.47.2-r0)
+(8/11) Purging perl-git (2.47.2-r0)
+(9/11) Purging perl-error (0.17029-r2)
+(10/11) Purging perl (5.40.2-r0)
+(11/11) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-crypt-openssl-rsa: Updating the main/x86_64 repository index...
+>>> perl-crypt-openssl-rsa: Signing the index...
+pigz: not found

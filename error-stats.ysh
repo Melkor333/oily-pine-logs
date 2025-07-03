@@ -1,0 +1,12 @@
+#!/usr/bin/env ysh
+
+# remove the pkg name first
+... sed 's/[^ ]* //' categorizations.txt
+  | tr '[:upper:]' '[:lower:]' # lowercase!
+  # Sort errors
+  | sort
+  # count
+  | uniq -c
+  # sort numerically
+  | sort -nr
+  ;

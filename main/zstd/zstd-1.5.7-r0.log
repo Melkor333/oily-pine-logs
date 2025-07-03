@@ -1,0 +1,707 @@
+pigz: not found
+>>> zstd: Building main/zstd 1.5.7-r0 (using abuild 3.14.1-r4) started Fri, 16 May 2025 20:29:55 +0000
+>>> zstd: Validating /home/packager/aports/main/zstd/APKBUILD...
+>>> zstd: Analyzing dependencies...
+>>> zstd: Installing for build: build-base grep meson file
+(1/17) Installing grep (3.11-r0)
+(2/17) Installing samurai (1.2-r6)
+(3/17) Installing libbz2 (1.0.8-r6)
+(4/17) Installing libffi (3.4.7-r0)
+(5/17) Installing gdbm (1.24-r0)
+(6/17) Installing xz-libs (5.6.3-r1)
+(7/17) Installing mpdecimal (4.0.0-r0)
+(8/17) Installing libpanelw (6.5_p20250503-r0)
+(9/17) Installing sqlite-libs (3.49.2-r0)
+(10/17) Installing python3 (3.12.10-r0)
+(11/17) Installing python3-pycache-pyc0 (3.12.10-r0)
+(12/17) Installing pyc (3.12.10-r0)
+(13/17) Installing meson-pyc (1.6.1-r4)
+(14/17) Installing python3-pyc (3.12.10-r0)
+(15/17) Installing meson (1.6.1-r4)
+(16/17) Installing .makedepends-zstd (20250516.202956)
+(17/17) Installing abuild-meson (1.6.1-r4)
+Executing busybox-1.37.0-r12.trigger
+OK: 302 MiB in 91 packages
+>>> zstd: Cleaning up srcdir
+>>> zstd: Cleaning up pkgdir
+>>> zstd: Cleaning up tmpdir
+>>> zstd: Fetching zstd-1.5.7.tar.gz::https://github.com/facebook/zstd/archive/v1.5.7.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/zstd-1.5.7.tar.gz.part'
+zstd-1.5.7.tar.gz.pa 100% |********************************| 2394k  0:00:00 ETA
+'/var/cache/distfiles/zstd-1.5.7.tar.gz.part' saved
+>>> zstd: Fetching zstd-1.5.7.tar.gz::https://github.com/facebook/zstd/archive/v1.5.7.tar.gz
+>>> zstd: Checking sha512sums...
+zstd-1.5.7.tar.gz: OK
+>>> zstd: Unpacking /var/cache/distfiles/zstd-1.5.7.tar.gz...
+The Meson build system
+Version: 1.6.1
+Source dir: /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson
+Build dir: /home/packager/aports/main/zstd/src/zstd-1.5.7/output
+Build type: native build
+Program GetZstdLibraryVersion.py found: YES (/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/GetZstdLibraryVersion.py)
+Project name: zstd
+Project version: 1.5.7
+C compiler for the host machine: gcc (gcc 14.2.0 "gcc (Alpine 14.2.0) 14.2.0")
+C linker for the host machine: gcc ld.bfd 2.43.1
+C++ compiler for the host machine: g++ (gcc 14.2.0 "g++ (Alpine 14.2.0) 14.2.0")
+C++ linker for the host machine: g++ ld.bfd 2.43.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Library m found: YES
+Run-time dependency threads found: YES
+Dependency zlib skipped: feature zlib disabled
+Dependency liblzma skipped: feature lzma disabled
+Dependency liblz4 skipped: feature lz4 disabled
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wcast-qual: YES 
+Compiler for C supports arguments -Wa,--noexecstack: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C++ supports arguments -Wundef: YES 
+Compiler for C++ supports arguments -Wshadow: YES 
+Compiler for C++ supports arguments -Wcast-align: YES 
+Compiler for C++ supports arguments -Wcast-qual: YES 
+Compiler for C++ supports arguments -Wa,--noexecstack: YES 
+Compiler for C supports link arguments -Wl,-z,noexecstack: YES 
+Compiler for C++ supports link arguments -Wl,-z,noexecstack: YES 
+Message: Enable legacy support back to version 0.5
+Message: Enable multi-threading support
+Found pkg-config: YES (/usr/bin/pkg-config) 2.3.0
+Has header "execinfo.h" skipped: feature backtrace disabled
+Program valgrind /usr/bin/valgrind found: NO
+Program ../../../tests/playTests.sh found: YES (/home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/tests/../../../tests/playTests.sh)
+Build targets in project: 19
+
+zstd 1.5.7
+
+  User defined options
+    auto_features     : auto
+    b_lto             : false
+    b_ndebug          : true
+    b_pgo             : generate
+    b_pie             : true
+    b_staticpic       : true
+    backtrace         : disabled
+    bin_contrib       : true
+    bin_programs      : true
+    bin_tests         : true
+    bindir            : /usr/bin
+    buildtype         : plain
+    datadir           : /usr/share
+    default_library   : both
+    includedir        : /usr/include
+    infodir           : /usr/share/info
+    libdir            : /usr/lib
+    libexecdir        : /usr/libexec
+    localedir         : /usr/share/locale
+    localstatedir     : /var
+    lz4               : disabled
+    lzma              : disabled
+    mandir            : /usr/share/man
+    multi_thread      : enabled
+    prefix            : /usr
+    python.bytecompile: 0
+    sbindir           : /usr/sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    werror            : false
+    wrap_mode         : nodownload
+    zlib              : disabled
+
+Found ninja-1.9 at /usr/bin/ninja
+ninja: entering directory '/home/packager/aports/main/zstd/src/zstd-1.5.7/output'
+[1/94] Compiling C++ object contrib/gen_html/gen_html.p/.._.._.._.._contrib_gen_html_gen_html.cpp.o
+[2/94] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_SkippableFrame.cpp.o
+[3/94] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_Pzstd.cpp.o
+[4/94] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_Options.cpp.o
+[5/94] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_main.cpp.o
+[6/94] Compiling C object contrib/pzstd/pzstd.p/.._.._.._.._programs_util.c.o
+[7/94] Compiling C object tests/checkTag.p/.._.._.._tests_checkTag.c.o
+[8/94] Compiling C object tests/roundTripCrash.p/.._.._.._tests_roundTripCrash.c.o
+[9/94] Compiling C object tests/paramgrill.p/.._.._.._tests_paramgrill.c.o
+[10/94] Compiling C object tests/fuzzer.p/.._.._.._tests_fuzzer.c.o
+[11/94] Compiling C object programs/zstd-frugal.p/.._.._.._programs_fileio_asyncio.c.o
+[12/94] Compiling C object programs/zstd-frugal.p/.._.._.._programs_fileio.c.o
+[13/94] Compiling C object programs/zstd-frugal.p/.._.._.._programs_util.c.o
+[14/94] Compiling C object programs/zstd-frugal.p/.._.._.._programs_timefn.c.o
+[15/94] Compiling C object programs/zstd-frugal.p/.._.._.._programs_zstdcli.c.o
+[16/94] Compiling C object tests/poolTests.p/.._.._.._tests_poolTests.c.o
+[17/94] Compiling C object tests/decodecorpus.p/.._.._.._tests_decodecorpus.c.o
+[18/94] Compiling C object tests/invalidDictionaries.p/.._.._.._tests_invalidDictionaries.c.o
+[01m[K../tests/paramgrill.c:[m[K In function '[01m[KcreateBuffers[m[K':
+[01m[K../tests/paramgrill.c:1245:39:[m[K [01;35m[Kwarning: [m[K'[01m[Kcalloc[m[K' sizes specified with '[01m[Ksizeof[m[K' in the earlier argument and not in the later argument [[01;35m[K-Wcalloc-transposed-args[m[K]
+ 1245 |     size_t* fileSizes = calloc(sizeof([01;35m[Ksize_t[m[K), nbFiles);
+      |                                       [01;35m[K^~~~~~[m[K
+[01m[K../tests/paramgrill.c:1245:39:[m[K [01;36m[Knote: [m[Kearlier argument should specify number of elements, later size of each element
+[01m[K../tests/paramgrill.c:[m[K In function '[01m[KcreateMemoTableArray[m[K':
+[01m[K../tests/paramgrill.c:1460:60:[m[K [01;35m[Kwarning: [m[K'[01m[Kcalloc[m[K' sizes specified with '[01m[Ksizeof[m[K' in the earlier argument and not in the later argument [[01;35m[K-Wcalloc-transposed-args[m[K]
+ 1460 |     memoTable_t* const mtAll = (memoTable_t*)calloc(sizeof([01;35m[KmemoTable_t[m[K),(ZSTD_STRATEGY_MAX + 1));
+      |                                                            [01;35m[K^~~~~~~~~~~[m[K
+[01m[K../tests/paramgrill.c:1460:60:[m[K [01;36m[Knote: [m[Kearlier argument should specify number of elements, later size of each element
+[01m[K../tests/paramgrill.c:1497:47:[m[K [01;35m[Kwarning: [m[K'[01m[Kcalloc[m[K' sizes specified with '[01m[Ksizeof[m[K' in the earlier argument and not in the later argument [[01;35m[K-Wcalloc-transposed-args[m[K]
+ 1497 |         mtAll[i].table = (BYTE*)calloc(sizeof([01;35m[KBYTE[m[K), mtl);
+      |                                               [01;35m[K^~~~[m[K
+[01m[K../tests/paramgrill.c:1497:47:[m[K [01;36m[Knote: [m[Kearlier argument should specify number of elements, later size of each element
+[19/94] Compiling C object tests/longmatch.p/.._.._.._tests_longmatch.c.o
+[01m[K../tests/invalidDictionaries.c:15:9:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K164[m[K' to '[01m[K-92[m[K' [[01;35m[K-Woverflow[m[K]
+   15 |   0x37, [01;35m[K0xa4[m[K, 0x30, 0xec, 0x2a, 0x00, 0x00, 0x00, 0x39, 0x10, 0xc0, 0xc2,
+      |         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:15:21:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K236[m[K' to '[01m[K-20[m[K' [[01;35m[K-Woverflow[m[K]
+   15 |   0x37, 0xa4, 0x30, [01;35m[K0xec[m[K, 0x2a, 0x00, 0x00, 0x00, 0x39, 0x10, 0xc0, 0xc2,
+      |                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:15:63:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K192[m[K' to '[01m[K-64[m[K' [[01;35m[K-Woverflow[m[K]
+   15 |   0x37, 0xa4, 0x30, 0xec, 0x2a, 0x00, 0x00, 0x00, 0x39, 0x10, [01;35m[K0xc0[m[K, 0xc2,
+      |                                                               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:15:69:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K194[m[K' to '[01m[K-62[m[K' [[01;35m[K-Woverflow[m[K]
+   15 |   0x37, 0xa4, 0x30, 0xec, 0x2a, 0x00, 0x00, 0x00, 0x39, 0x10, 0xc0, [01;35m[K0xc2[m[K,
+      |                                                                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:16:3:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K166[m[K' to '[01m[K-90[m[K' [[01;35m[K-Woverflow[m[K]
+   16 |   [01;35m[K0xa6[m[K, 0x00, 0x0c, 0x30, 0xc0, 0x00, 0x03, 0x0c, 0x30, 0x20, 0x72, 0xf8,
+      |   [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:16:27:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K192[m[K' to '[01m[K-64[m[K' [[01;35m[K-Woverflow[m[K]
+   16 |   0xa6, 0x00, 0x0c, 0x30, [01;35m[K0xc0[m[K, 0x00, 0x03, 0x0c, 0x30, 0x20, 0x72, 0xf8,
+      |                           [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:16:69:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K248[m[K' to '[01m[K-8[m[K' [[01;35m[K-Woverflow[m[K]
+   16 |   0xa6, 0x00, 0x0c, 0x30, 0xc0, 0x00, 0x03, 0x0c, 0x30, 0x20, 0x72, [01;35m[K0xf8[m[K,
+      |                                                                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:17:3:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K180[m[K' to '[01m[K-76[m[K' [[01;35m[K-Woverflow[m[K]
+   17 |   [01;35m[K0xb4[m[K, 0x6d, 0x4b, 0x9f, 0xfc, 0x97, 0x29, 0x49, 0xb2, 0xdf, 0x4b, 0x29,
+      |   [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:17:21:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K159[m[K' to '[01m[K-97[m[K' [[01;35m[K-Woverflow[m[K]
+   17 |   0xb4, 0x6d, 0x4b, [01;35m[K0x9f[m[K, 0xfc, 0x97, 0x29, 0x49, 0xb2, 0xdf, 0x4b, 0x29,
+      |                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:17:27:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K252[m[K' to '[01m[K-4[m[K' [[01;35m[K-Woverflow[m[K]
+   17 |   0xb4, 0x6d, 0x4b, 0x9f, [01;35m[K0xfc[m[K, 0x97, 0x29, 0x49, 0xb2, 0xdf, 0x4b, 0x29,
+      |                           [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:17:33:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K151[m[K' to '[01m[K-105[m[K' [[01;35m[K-Woverflow[m[K]
+   17 |   0xb4, 0x6d, 0x4b, 0x9f, 0xfc, [01;35m[K0x97[m[K, 0x29, 0x49, 0xb2, 0xdf, 0x4b, 0x29,
+      |                                 [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:17:51:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K178[m[K' to '[01m[K-78[m[K' [[01;35m[K-Woverflow[m[K]
+   17 |   0xb4, 0x6d, 0x4b, 0x9f, 0xfc, 0x97, 0x29, 0x49, [01;35m[K0xb2[m[K, 0xdf, 0x4b, 0x29,
+      |                                                   [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:17:57:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K223[m[K' to '[01m[K-33[m[K' [[01;35m[K-Woverflow[m[K]
+   17 |   0xb4, 0x6d, 0x4b, 0x9f, 0xfc, 0x97, 0x29, 0x49, 0xb2, [01;35m[K0xdf[m[K, 0x4b, 0x29,
+      |                                                         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:18:15:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K252[m[K' to '[01m[K-4[m[K' [[01;35m[K-Woverflow[m[K]
+   18 |   0x7d, 0x4a, [01;35m[K0xfc[m[K, 0x83, 0x18, 0x22, 0x75, 0x23, 0x24, 0x44, 0x4d, 0x02,
+      |               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:18:21:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K131[m[K' to '[01m[K-125[m[K' [[01;35m[K-Woverflow[m[K]
+   18 |   0x7d, 0x4a, 0xfc, [01;35m[K0x83[m[K, 0x18, 0x22, 0x75, 0x23, 0x24, 0x44, 0x4d, 0x02,
+      |                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:3:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K183[m[K' to '[01m[K-73[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   [01;35m[K0xb7[m[K, 0x97, 0x96, 0xf6, 0xcb, 0xd1, 0xcf, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |   [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:9:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K151[m[K' to '[01m[K-105[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, [01;35m[K0x97[m[K, 0x96, 0xf6, 0xcb, 0xd1, 0xcf, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:15:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K150[m[K' to '[01m[K-106[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, [01;35m[K0x96[m[K, 0xf6, 0xcb, 0xd1, 0xcf, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:21:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K246[m[K' to '[01m[K-10[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, 0x96, [01;35m[K0xf6[m[K, 0xcb, 0xd1, 0xcf, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:27:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K203[m[K' to '[01m[K-53[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, 0x96, 0xf6, [01;35m[K0xcb[m[K, 0xd1, 0xcf, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |                           [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:33:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K209[m[K' to '[01m[K-47[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, 0x96, 0xf6, 0xcb, [01;35m[K0xd1[m[K, 0xcf, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |                                 [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:39:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K207[m[K' to '[01m[K-49[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, 0x96, 0xf6, 0xcb, 0xd1, [01;35m[K0xcf[m[K, 0xe8, 0x22, 0xea, 0x27, 0x36,
+      |                                       [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:45:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K232[m[K' to '[01m[K-24[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, 0x96, 0xf6, 0xcb, 0xd1, 0xcf, [01;35m[K0xe8[m[K, 0x22, 0xea, 0x27, 0x36,
+      |                                             [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:19:57:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K234[m[K' to '[01m[K-22[m[K' [[01;35m[K-Woverflow[m[K]
+   19 |   0xb7, 0x97, 0x96, 0xf6, 0xcb, 0xd1, 0xcf, 0xe8, 0x22, [01;35m[K0xea[m[K, 0x27, 0x36,
+      |                                                         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:20:3:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K183[m[K' to '[01m[K-73[m[K' [[01;35m[K-Woverflow[m[K]
+   20 |   [01;35m[K0xb7[m[K, 0x2c, 0x40, 0x46, 0x01, 0x08, 0x23, 0x01, 0x00, 0x00, 0x06, 0x1e,
+      |   [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:21:9:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K131[m[K' to '[01m[K-125[m[K' [[01;35m[K-Woverflow[m[K]
+   21 |   0x3c, [01;35m[K0x83[m[K, 0x81, 0xd6, 0x18, 0xd4, 0x12, 0x3a, 0x04, 0x00, 0x80, 0x03,
+      |         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:21:15:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K129[m[K' to '[01m[K-127[m[K' [[01;35m[K-Woverflow[m[K]
+   21 |   0x3c, 0x83, [01;35m[K0x81[m[K, 0xd6, 0x18, 0xd4, 0x12, 0x3a, 0x04, 0x00, 0x80, 0x03,
+      |               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:21:21:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K214[m[K' to '[01m[K-42[m[K' [[01;35m[K-Woverflow[m[K]
+   21 |   0x3c, 0x83, 0x81, [01;35m[K0xd6[m[K, 0x18, 0xd4, 0x12, 0x3a, 0x04, 0x00, 0x80, 0x03,
+      |                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:21:33:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K212[m[K' to '[01m[K-44[m[K' [[01;35m[K-Woverflow[m[K]
+   21 |   0x3c, 0x83, 0x81, 0xd6, 0x18, [01;35m[K0xd4[m[K, 0x12, 0x3a, 0x04, 0x00, 0x80, 0x03,
+      |                                 [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:21:63:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K128[m[K' to '[01m[K-128[m[K' [[01;35m[K-Woverflow[m[K]
+   21 |   0x3c, 0x83, 0x81, 0xd6, 0x18, 0xd4, 0x12, 0x3a, 0x04, 0x00, [01;35m[K0x80[m[K, 0x03,
+      |                                                               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:25:27:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K129[m[K' to '[01m[K-127[m[K' [[01;35m[K-Woverflow[m[K]
+   25 |   0x0d, 0x01, 0x10, 0x04, [01;35m[K0x81[m[K, 0x07, 0x00, 0x00, 0x04, 0xb9, 0x58, 0x18,
+      |                           [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:25:57:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K185[m[K' to '[01m[K-71[m[K' [[01;35m[K-Woverflow[m[K]
+   25 |   0x0d, 0x01, 0x10, 0x04, 0x81, 0x07, 0x00, 0x00, 0x04, [01;35m[K0xb9[m[K, 0x58, 0x18,
+      |                                                         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:15:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K146[m[K' to '[01m[K-110[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, [01;35m[K0x92[m[K, 0x43, 0xce, 0x28, 0xa5, 0x08, 0x88, 0xc0, 0x80, 0x88,
+      |               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:27:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K206[m[K' to '[01m[K-50[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, 0x92, 0x43, [01;35m[K0xce[m[K, 0x28, 0xa5, 0x08, 0x88, 0xc0, 0x80, 0x88,
+      |                           [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:39:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K165[m[K' to '[01m[K-91[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, 0x92, 0x43, 0xce, 0x28, [01;35m[K0xa5[m[K, 0x08, 0x88, 0xc0, 0x80, 0x88,
+      |                                       [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:51:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K136[m[K' to '[01m[K-120[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, 0x92, 0x43, 0xce, 0x28, 0xa5, 0x08, [01;35m[K0x88[m[K, 0xc0, 0x80, 0x88,
+      |                                                   [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:57:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K192[m[K' to '[01m[K-64[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, 0x92, 0x43, 0xce, 0x28, 0xa5, 0x08, 0x88, [01;35m[K0xc0[m[K, 0x80, 0x88,
+      |                                                         [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:63:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K128[m[K' to '[01m[K-128[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, 0x92, 0x43, 0xce, 0x28, 0xa5, 0x08, 0x88, 0xc0, [01;35m[K0x80[m[K, 0x88,
+      |                                                               [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:26:69:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K136[m[K' to '[01m[K-120[m[K' [[01;35m[K-Woverflow[m[K]
+   26 |   0x06, 0x59, 0x92, 0x43, 0xce, 0x28, 0xa5, 0x08, 0x88, 0xc0, 0x80, [01;35m[K0x88[m[K,
+      |                                                                     [01;35m[K^~~~[m[K
+[01m[K../tests/invalidDictionaries.c:27:3:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from '[01m[Kint[m[K' to '[01m[Kchar[m[K' changes value from '[01m[K140[m[K' to '[01m[K-116[m[K' [[01;35m[K-Woverflow[m[K]
+   27 |   [01;35m[K0x8c[m[K, 0x00, 0x01, 0x00, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
+      |   [01;35m[K^~~~[m[K
+[20/94] Compiling C object tests/zstreamtest.p/.._.._.._tests_external_matchfinder.c.o
+[21/94] Compiling C object tests/zstreamtest.p/.._.._.._tests_zstreamtest.c.o
+[22/94] Compiling C object tests/zstreamtest.p/.._.._.._tests_seqgen.c.o
+[23/94] Compiling C object tests/fullbench.p/.._.._.._tests_fullbench.c.o
+[24/94] Compiling C object programs/zstd.p/.._.._.._programs_zstdcli_trace.c.o
+[25/94] Compiling C object programs/zstd.p/.._.._.._programs_dibio.c.o
+[01m[K../contrib/gen_html/gen_html.cpp:128:29:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  128 |         /* comments of type /**< and /*!< are detected and only function declaration is highlighted (bold) */
+[01m[K../contrib/gen_html/gen_html.cpp:128:38:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+[01m[K../contrib/gen_html/gen_html.cpp:162:29:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  162 |         /* comments of type /*! mean: this is a function declaration; switch comments with declarations */
+[01m[K../contrib/gen_html/gen_html.cpp:182:57:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  182 |         } else if (exclam == '=') { /* comments of type /*= and /**= mean: use a <H3> header and show also all functions until first empty line */
+[01m[K../contrib/gen_html/gen_html.cpp:182:65:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+[01m[K../contrib/gen_html/gen_html.cpp:194:38:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  194 |         } else { /* comments of type /** and /*- mean: this is a comment; use a <H2> header for the first line */
+[01m[K../contrib/gen_html/gen_html.cpp:194:46:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+[26/94] Linking target contrib/gen_html/gen_html
+[27/94] Compiling C object programs/zstd.p/.._.._.._programs_lorem.c.o
+[28/94] Compiling C object programs/zstd.p/.._.._.._programs_datagen.c.o
+[29/94] Compiling C object programs/zstd.p/.._.._.._programs_benchzstd.c.o
+[30/94] Compiling C object programs/zstd.p/.._.._.._programs_benchfn.c.o
+[31/94] Compiling C object programs/zstd.p/.._.._.._programs_fileio_asyncio.c.o
+[32/94] Compiling C object programs/zstd.p/.._.._.._programs_fileio.c.o
+[33/94] Compiling C object programs/zstd.p/.._.._.._programs_timefn.c.o
+[34/94] Compiling C object programs/zstd.p/.._.._.._programs_util.c.o
+[35/94] Compiling C object programs/zstd.p/.._.._.._programs_zstdcli.c.o
+[36/94] Compiling C object tests/libtestcommon.a.p/.._.._.._programs_benchzstd.c.o
+[37/94] Compiling C object tests/libtestcommon.a.p/.._.._.._programs_benchfn.c.o
+[38/94] Compiling C object tests/libtestcommon.a.p/.._.._.._programs_timefn.c.o
+[39/94] Compiling C object tests/libtestcommon.a.p/.._.._.._programs_util.c.o
+[40/94] Compiling C object tests/libtestcommon.a.p/.._.._.._programs_lorem.c.o
+[41/94] Compiling C object tests/libtestcommon.a.p/.._.._.._programs_datagen.c.o
+[42/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_legacy_zstd_v07.c.o
+[43/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_legacy_zstd_v06.c.o
+[44/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_legacy_zstd_v05.c.o
+[45/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_huf_decompress_amd64.S.o
+[46/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_zdict.c.o
+[47/94] Linking static target tests/libtestcommon.a
+[48/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_divsufsort.c.o
+[49/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_fastcover.c.o
+[50/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_cover.c.o
+[51/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_zstd_ddict.c.o
+[52/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_zstd_decompress_block.c.o
+[53/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_zstd_decompress.c.o
+[54/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_huf_decompress.c.o
+[55/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_ldm.c.o
+[56/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_opt.c.o
+[57/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_lazy.c.o
+[58/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_double_fast.c.o
+[59/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_fast.c.o
+[60/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstdmt_compress.c.o
+[61/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_preSplit.c.o
+[62/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress_superblock.c.o
+[63/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress_sequences.c.o
+[64/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress_literals.c.o
+[65/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress.c.o
+[66/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_huf_compress.c.o
+[67/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_fse_compress.c.o
+[68/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_hist.c.o
+[69/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_xxhash.c.o
+[70/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_error_private.c.o
+[71/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_zstd_common.c.o
+[72/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_pool.c.o
+[73/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_threading.c.o
+[74/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_fse_decompress.c.o
+[75/94] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_entropy_common.c.o
+[76/94] Compiling C object tests/datagen.p/.._.._.._tests_loremOut.c.o
+[77/94] Compiling C object tests/datagen.p/.._.._.._tests_datagencli.c.o
+[78/94] Linking static target lib/libzstd.a
+[79/94] Linking target lib/libzstd.so.1.5.7
+[80/94] Linking target tests/poolTests
+[81/94] Linking target tests/decodecorpus
+[82/94] Linking target tests/roundTripCrash
+[83/94] Linking target tests/paramgrill
+[84/94] Linking target tests/zstreamtest
+[85/94] Linking target tests/fuzzer
+[86/94] Linking target tests/fullbench
+[87/94] Linking target tests/datagen
+[88/94] Generating symbol file lib/libzstd.so.1.5.7.p/libzstd.so.1.5.7.symbols
+[89/94] Linking target contrib/pzstd/pzstd
+[90/94] Linking target tests/checkTag
+[91/94] Linking target tests/invalidDictionaries
+[92/94] Linking target tests/longmatch
+[93/94] Linking target programs/zstd-frugal
+[94/94] Linking target programs/zstd
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/packager/aports/main/zstd/src/zstd-1.5.7/output
+1/9 zstd / test-invalidDictionaries OK                 0.02s
+2/9 zstd / test-poolTests           OK                 0.43s
+3/9 zstd / test-longmatch           OK                 6.19s
+4/9 zstd / test-fullbench-2         OK                28.45s
+5/9 zstd / test-decodecorpus        OK                30.04s
+6/9 zstd / test-fullbench-1         OK                40.88s
+7/9 zstd:fast / test-zstd-fast      OK                52.77s
+8/9 zstd / test-zstream-3           OK                90.17s
+9/9 zstd / test-zstream-1           OK               113.77s
+
+Ok:                 9   
+Expected Fail:      0   
+Fail:               0   
+Unexpected Pass:    0   
+Skipped:            0   
+Timeout:            0   
+
+Full log written to /home/packager/aports/main/zstd/src/zstd-1.5.7/output/meson-logs/testlog.txt
+ninja: entering directory '/home/packager/aports/main/zstd/src/zstd-1.5.7/output'
+[1/1] Regenerating build files.
+The Meson build system
+Version: 1.6.1
+Source dir: /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson
+Build dir: /home/packager/aports/main/zstd/src/zstd-1.5.7/output
+Build type: native build
+Program GetZstdLibraryVersion.py found: YES (/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/GetZstdLibraryVersion.py)
+Project name: zstd
+Project version: 1.5.7
+C compiler for the host machine: gcc (gcc 14.2.0 "gcc (Alpine 14.2.0) 14.2.0")
+C linker for the host machine: gcc ld.bfd 2.43.1
+C++ compiler for the host machine: g++ (gcc 14.2.0 "g++ (Alpine 14.2.0) 14.2.0")
+C++ linker for the host machine: g++ ld.bfd 2.43.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Library m found: YES
+Dependency threads found: YES unknown (cached)
+Dependency zlib skipped: feature zlib disabled
+Dependency liblzma skipped: feature lzma disabled
+Dependency liblz4 skipped: feature lz4 disabled
+Compiler for C supports arguments -Wundef: YES (cached)
+Compiler for C supports arguments -Wshadow: YES (cached)
+Compiler for C supports arguments -Wcast-align: YES (cached)
+Compiler for C supports arguments -Wcast-qual: YES (cached)
+Compiler for C supports arguments -Wa,--noexecstack: YES (cached)
+Compiler for C supports arguments -Wstrict-prototypes: YES (cached)
+Compiler for C++ supports arguments -Wundef: YES (cached)
+Compiler for C++ supports arguments -Wshadow: YES (cached)
+Compiler for C++ supports arguments -Wcast-align: YES (cached)
+Compiler for C++ supports arguments -Wcast-qual: YES (cached)
+Compiler for C++ supports arguments -Wa,--noexecstack: YES (cached)
+Compiler for C supports link arguments -Wl,-z,noexecstack: YES (cached)
+Compiler for C++ supports link arguments -Wl,-z,noexecstack: YES (cached)
+Message: Enable legacy support back to version 0.5
+Message: Enable multi-threading support
+Found pkg-config: YES (/usr/bin/pkg-config) 2.3.0
+Has header "execinfo.h" skipped: feature backtrace disabled
+Build targets in project: 7
+
+zstd 1.5.7
+
+  User defined options
+    auto_features     : auto
+    b_lto             : false
+    b_ndebug          : true
+    b_pgo             : use
+    b_pie             : true
+    b_staticpic       : true
+    backtrace         : disabled
+    bin_contrib       : true
+    bin_programs      : true
+    bin_tests         : false
+    bindir            : /usr/bin
+    buildtype         : plain
+    datadir           : /usr/share
+    default_library   : both
+    includedir        : /usr/include
+    infodir           : /usr/share/info
+    libdir            : /usr/lib
+    libexecdir        : /usr/libexec
+    localedir         : /usr/share/locale
+    localstatedir     : /var
+    lz4               : disabled
+    lzma              : disabled
+    mandir            : /usr/share/man
+    multi_thread      : enabled
+    prefix            : /usr
+    python.bytecompile: 0
+    sbindir           : /usr/sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    werror            : false
+    wrap_mode         : nodownload
+    zlib              : disabled
+
+Found ninja-1.9 at /usr/bin/ninja
+[1/62] Compiling C++ object contrib/gen_html/gen_html.p/.._.._.._.._contrib_gen_html_gen_html.cpp.o
+[2/62] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_SkippableFrame.cpp.o
+[3/62] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_Pzstd.cpp.o
+[4/62] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_Options.cpp.o
+[5/62] Compiling C++ object contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_main.cpp.o
+[6/62] Compiling C object contrib/pzstd/pzstd.p/.._.._.._.._programs_util.c.o
+[7/62] Compiling C object programs/zstd-frugal.p/.._.._.._programs_fileio_asyncio.c.o
+[8/62] Compiling C object programs/zstd-frugal.p/.._.._.._programs_fileio.c.o
+[01m[K../contrib/pzstd/SkippableFrame.cpp:[m[K In function '[01m[Kpzstd::SkippableFrame::tryRead(pzstd::Range<unsigned char const*>)[m[K':
+[01m[K../contrib/pzstd/SkippableFrame.cpp:30:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_SkippableFrame.cpp.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+   30 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[9/62] Compiling C object programs/zstd-frugal.p/.._.._.._programs_util.c.o
+[01m[K../programs/fileio_asyncio.c:[m[K In function '[01m[KAIO_ReadPool_setAsync[m[K':
+[01m[K../programs/fileio_asyncio.c:663:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/programs/zstd-frugal.p/.._.._.._programs_fileio_asyncio.c.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+  663 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[10/62] Compiling C object programs/zstd-frugal.p/.._.._.._programs_timefn.c.o
+[01m[K../programs/timefn.c:[m[K In function '[01m[KUTIL_support_MT_measurements[m[K':
+[01m[K../programs/timefn.c:168:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/programs/zstd-frugal.p/.._.._.._programs_timefn.c.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+  168 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[11/62] Compiling C object programs/zstd-frugal.p/.._.._.._programs_zstdcli.c.o
+[01m[K../contrib/pzstd/main.cpp:[m[K In function '[01m[Kstd::_Destroy_aux<false>::__destroy<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*>(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*)void[m[K':
+[01m[K../contrib/pzstd/main.cpp:27:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_main.cpp.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+   27 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[12/62] Compiling C object programs/zstd.p/.._.._.._programs_zstdcli_trace.c.o
+[01m[K../programs/util.c:[m[K In function '[01m[KUTIL_countLogicalCores[m[K':
+[01m[K../programs/util.c:1643:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/contrib/pzstd/pzstd.p/.._.._.._.._programs_util.c.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+ 1643 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[13/62] Compiling C object programs/zstd.p/.._.._.._programs_dibio.c.o
+[14/62] Compiling C object programs/zstd.p/.._.._.._programs_lorem.c.o
+[15/62] Compiling C object programs/zstd.p/.._.._.._programs_datagen.c.o
+[16/62] Compiling C object programs/zstd.p/.._.._.._programs_benchzstd.c.o
+[01m[K../programs/util.c:[m[K In function '[01m[KUTIL_countLogicalCores[m[K':
+[01m[K../programs/util.c:1643:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/programs/zstd-frugal.p/.._.._.._programs_util.c.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+ 1643 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[17/62] Compiling C object programs/zstd.p/.._.._.._programs_benchfn.c.o
+[18/62] Compiling C object programs/zstd.p/.._.._.._programs_fileio_asyncio.c.o
+[19/62] Compiling C object programs/zstd.p/.._.._.._programs_fileio.c.o
+[01m[K../contrib/pzstd/Options.cpp:[m[K In function '[01m[K_GLOBAL__sub_I__ZN5pzstd7OptionsC2Ev[m[K':
+[01m[K../contrib/pzstd/Options.cpp:424:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_Options.cpp.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+  424 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[20/62] Compiling C object programs/zstd.p/.._.._.._programs_timefn.c.o
+[21/62] Compiling C object programs/zstd.p/.._.._.._programs_util.c.o
+[01m[K../programs/zstdcli.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../programs/zstdcli.c:1658:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/programs/zstd-frugal.p/.._.._.._programs_zstdcli.c.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+ 1658 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[22/62] Compiling C object programs/zstd.p/.._.._.._programs_zstdcli.c.o
+[23/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_legacy_zstd_v07.c.o
+[24/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_legacy_zstd_v06.c.o
+[01m[K../contrib/gen_html/gen_html.cpp:128:29:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  128 |         /* comments of type /**< and /*!< are detected and only function declaration is highlighted (bold) */
+[01m[K../contrib/gen_html/gen_html.cpp:128:38:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+[01m[K../contrib/gen_html/gen_html.cpp:162:29:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  162 |         /* comments of type /*! mean: this is a function declaration; switch comments with declarations */
+[01m[K../contrib/gen_html/gen_html.cpp:182:57:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  182 |         } else if (exclam == '=') { /* comments of type /*= and /**= mean: use a <H3> header and show also all functions until first empty line */
+[01m[K../contrib/gen_html/gen_html.cpp:182:65:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+[01m[K../contrib/gen_html/gen_html.cpp:194:38:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+  194 |         } else { /* comments of type /** and /*- mean: this is a comment; use a <H2> header for the first line */
+[01m[K../contrib/gen_html/gen_html.cpp:194:46:[m[K [01;35m[Kwarning: [m[K"/*" within comment [[01;35m[K-Wcomment[m[K]
+[01m[K../contrib/gen_html/gen_html.cpp:[m[K In function '[01m[Kstd::__relocate_object_a<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >*, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&)void[m[K':
+[01m[K../contrib/gen_html/gen_html.cpp:225:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/contrib/gen_html/gen_html.p/.._.._.._.._contrib_gen_html_gen_html.cpp.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+  225 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[25/62] Linking target contrib/gen_html/gen_html
+[01m[K../programs/fileio.c:[m[K In function '[01m[KFIO_listMultipleFiles[m[K':
+[01m[K../programs/fileio.c:3461:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/programs/zstd-frugal.p/.._.._.._programs_fileio.c.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+ 3461 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[26/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_legacy_zstd_v05.c.o
+[27/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_huf_decompress_amd64.S.o
+[28/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_zdict.c.o
+[29/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_divsufsort.c.o
+[30/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_fastcover.c.o
+[31/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_dictBuilder_cover.c.o
+[32/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_zstd_ddict.c.o
+[33/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_zstd_decompress_block.c.o
+[34/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_zstd_decompress.c.o
+[35/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_decompress_huf_decompress.c.o
+[36/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_ldm.c.o
+[37/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_opt.c.o
+[38/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_lazy.c.o
+[39/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_double_fast.c.o
+[40/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_fast.c.o
+[41/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstdmt_compress.c.o
+[01m[K../contrib/pzstd/Pzstd.cpp:[m[K In function '[01m[K_GLOBAL__sub_I__ZN5pzstd9pzstdMainERKNS_7OptionsE[m[K':
+[01m[K../contrib/pzstd/Pzstd.cpp:626:1:[m[K [01;35m[Kwarning: [m[K'[01m[K/home/packager/aports/main/zstd/src/zstd-1.5.7/output/contrib/pzstd/pzstd.p/.._.._.._.._contrib_pzstd_Pzstd.cpp.gcda[m[K' profile count data file not found [[01;35m[K-Wmissing-profile[m[K]
+  626 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[42/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_preSplit.c.o
+[43/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress_superblock.c.o
+[44/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress_sequences.c.o
+[45/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress_literals.c.o
+[46/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_zstd_compress.c.o
+[47/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_huf_compress.c.o
+[48/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_fse_compress.c.o
+[49/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_compress_hist.c.o
+[50/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_xxhash.c.o
+[51/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_error_private.c.o
+[52/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_zstd_common.c.o
+[53/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_pool.c.o
+[54/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_threading.c.o
+[55/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_fse_decompress.c.o
+[56/62] Compiling C object lib/libzstd.so.1.5.7.p/.._.._.._lib_common_entropy_common.c.o
+[57/62] Linking static target lib/libzstd.a
+[58/62] Linking target lib/libzstd.so.1.5.7
+[59/62] Generating symbol file lib/libzstd.so.1.5.7.p/libzstd.so.1.5.7.symbols
+[60/62] Linking target contrib/pzstd/pzstd
+[61/62] Linking target programs/zstd-frugal
+[62/62] Linking target programs/zstd
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/packager/aports/main/zstd/src/zstd-1.5.7/output
+>>> zstd: Entering fakeroot...
+Installing symlink PosixPath('/home/packager/aports/main/zstd/pkg/zstd/usr/bin/zstdcat') -> 'zstd'
+Installing symlink PosixPath('/home/packager/aports/main/zstd/pkg/zstd/usr/share/man/man1/zstdcat.1') -> 'zstd.1'
+Installing symlink PosixPath('/home/packager/aports/main/zstd/pkg/zstd/usr/bin/unzstd') -> 'zstd'
+Installing symlink PosixPath('/home/packager/aports/main/zstd/pkg/zstd/usr/share/man/man1/unzstd.1') -> 'zstd.1'
+Installing symlink PosixPath('/home/packager/aports/main/zstd/pkg/zstd/usr/bin/zstdmt') -> 'zstd'
+Installing symlink PosixPath('/home/packager/aports/main/zstd/pkg/zstd/usr/share/man/man1/zstdmt.1') -> 'zstd.1'
+Installing lib/libzstd.so.1.5.7 to /home/packager/aports/main/zstd/pkg/zstd/usr/lib
+Installing lib/libzstd.a to /home/packager/aports/main/zstd/pkg/zstd/usr/lib
+Installing programs/zstd to /home/packager/aports/main/zstd/pkg/zstd/usr/bin
+Installing programs/zstd-frugal to /home/packager/aports/main/zstd/pkg/zstd/usr/bin
+Installing contrib/pzstd/pzstd to /home/packager/aports/main/zstd/pkg/zstd/usr/bin
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/lib/../../../lib/zstd.h to /home/packager/aports/main/zstd/pkg/zstd/usr/include
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/lib/../../../lib/zdict.h to /home/packager/aports/main/zstd/pkg/zstd/usr/include
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/lib/../../../lib/zstd_errors.h to /home/packager/aports/main/zstd/pkg/zstd/usr/include
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../../../programs/zstd.1 to /home/packager/aports/main/zstd/pkg/zstd/usr/share/man/man1
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../../../programs/zstdgrep.1 to /home/packager/aports/main/zstd/pkg/zstd/usr/share/man/man1
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../../../programs/zstdless.1 to /home/packager/aports/main/zstd/pkg/zstd/usr/share/man/man1
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/output/meson-private/libzstd.pc to /home/packager/aports/main/zstd/pkg/zstd/usr/lib/pkgconfig
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../../../programs/zstdgrep to /home/packager/aports/main/zstd/pkg/zstd/usr/bin
+Installing /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../../../programs/zstdless to /home/packager/aports/main/zstd/pkg/zstd/usr/bin
+Installing symlink pointing to libzstd.so.1.5.7 to /home/packager/aports/main/zstd/pkg/zstd/usr/lib/libzstd.so.1
+Installing symlink pointing to libzstd.so.1 to /home/packager/aports/main/zstd/pkg/zstd/usr/lib/libzstd.so
+Running custom install script '/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../InstallSymlink.py zstd zstdcat bin'
+Running custom install script '/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../InstallSymlink.py zstd.1 zstdcat.1 share/man/man1'
+Running custom install script '/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../InstallSymlink.py zstd unzstd bin'
+Running custom install script '/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../InstallSymlink.py zstd.1 unzstd.1 share/man/man1'
+Running custom install script '/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../InstallSymlink.py zstd zstdmt bin'
+Running custom install script '/usr/bin/python3 /home/packager/aports/main/zstd/src/zstd-1.5.7/build/meson/programs/../InstallSymlink.py zstd.1 zstdmt.1 share/man/man1'
+>>> zstd-libs*: Running split function libs...
+'usr/lib/libzstd.so.1' -> '/home/packager/aports/main/zstd/pkg/zstd-libs/usr/lib/libzstd.so.1'
+'usr/lib/libzstd.so.1.5.7' -> '/home/packager/aports/main/zstd/pkg/zstd-libs/usr/lib/libzstd.so.1.5.7'
+>>> zstd-libs*: Preparing subpackage zstd-libs...
+>>> zstd-libs*: Stripping binaries
+>>> zstd-libs*: Running postcheck for zstd-libs
+>>> zstd-static*: Running split function static...
+'./usr/lib/libzstd.a' -> '/home/packager/aports/main/zstd/pkg/zstd-static/./usr/lib/libzstd.a'
+>>> zstd-static*: Preparing subpackage zstd-static...
+>>> zstd-static*: Stripping binaries
+>>> zstd-static*: Running postcheck for zstd-static
+>>> zstd-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/zstd/pkg/zstd-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/zstd/pkg/zstd-dev/usr/lib/pkgconfig'
+'usr/lib/libzstd.so' -> '/home/packager/aports/main/zstd/pkg/zstd-dev/usr/lib/libzstd.so'
+>>> zstd-dev*: Preparing subpackage zstd-dev...
+>>> zstd-dev*: Stripping binaries
+>>> zstd-dev*: Running postcheck for zstd-dev
+>>> zstd-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/zstd/pkg/zstd-doc/usr/share/man'
+>>> zstd-doc*: Preparing subpackage zstd-doc...
+>>> zstd-doc*: Running postcheck for zstd-doc
+>>> zstd-frugal*: Running split function frugal...
+'usr/bin/zstd-frugal' -> '/home/packager/aports/main/zstd/pkg/zstd-frugal/usr/bin/zstd-frugal'
+>>> zstd-frugal*: Preparing subpackage zstd-frugal...
+>>> zstd-frugal*: Stripping binaries
+>>> zstd-frugal*: Running postcheck for zstd-frugal
+>>> zstd*: Running postcheck for zstd
+>>> zstd*: Preparing package zstd...
+>>> zstd*: Stripping binaries
+>>> zstd-dev*: Scanning shared objects
+>>> zstd-doc*: Scanning shared objects
+>>> zstd-frugal*: Scanning shared objects
+>>> zstd-libs*: Scanning shared objects
+>>> zstd-static*: Scanning shared objects
+>>> zstd*: Scanning shared objects
+>>> zstd-dev*: Tracing dependencies...
+	zstd=1.5.7-r0
+	pkgconfig
+	zstd-libs=1.5.7-r0
+>>> zstd-dev*: Package size: 207.8 KB
+>>> zstd-dev*: Compressing data...
+>>> zstd-dev*: Create checksum...
+pigz: not found
+>>> zstd-dev*: Create zstd-dev-1.5.7-r0.apk
+>>> zstd-doc*: Tracing dependencies...
+>>> zstd-doc*: Package size: 12.1 KB
+>>> zstd-doc*: Compressing data...
+>>> zstd-doc*: Create checksum...
+pigz: not found
+>>> zstd-doc*: Create zstd-doc-1.5.7-r0.apk
+>>> zstd-frugal*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libzstd.so.1
+>>> zstd-frugal*: Package size: 135.0 KB
+>>> zstd-frugal*: Compressing data...
+>>> zstd-frugal*: Create checksum...
+pigz: not found
+>>> zstd-frugal*: Create zstd-frugal-1.5.7-r0.apk
+>>> zstd-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> zstd-libs*: Package size: 701.7 KB
+>>> zstd-libs*: Compressing data...
+>>> zstd-libs*: Create checksum...
+pigz: not found
+>>> zstd-libs*: Create zstd-libs-1.5.7-r0.apk
+>>> zstd-static*: Tracing dependencies...
+>>> zstd-static*: Package size: 4.4 MB
+>>> zstd-static*: Compressing data...
+>>> zstd-static*: Create checksum...
+pigz: not found
+>>> zstd-static*: Create zstd-static-1.5.7-r0.apk
+>>> zstd*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libgcc_s.so.1
+	so:libstdc++.so.6
+	so:libzstd.so.1
+>>> zstd*: Package size: 279.1 KB
+>>> zstd*: Compressing data...
+>>> zstd*: Create checksum...
+pigz: not found
+>>> zstd*: Create zstd-1.5.7-r0.apk
+>>> zstd: Build complete at Fri, 16 May 2025 20:34:13 +0000 elapsed time 0h 4m 18s
+>>> zstd: Cleaning up srcdir
+>>> zstd: Cleaning up pkgdir
+>>> zstd: Uninstalling dependencies...
+(1/17) Purging .makedepends-zstd (20250516.202956)
+(2/17) Purging grep (3.11-r0)
+(3/17) Purging abuild-meson (1.6.1-r4)
+(4/17) Purging meson-pyc (1.6.1-r4)
+(5/17) Purging meson (1.6.1-r4)
+(6/17) Purging samurai (1.2-r6)
+(7/17) Purging python3-pyc (3.12.10-r0)
+(8/17) Purging python3-pycache-pyc0 (3.12.10-r0)
+(9/17) Purging pyc (3.12.10-r0)
+(10/17) Purging python3 (3.12.10-r0)
+(11/17) Purging gdbm (1.24-r0)
+(12/17) Purging libbz2 (1.0.8-r6)
+(13/17) Purging libffi (3.4.7-r0)
+(14/17) Purging libpanelw (6.5_p20250503-r0)
+(15/17) Purging mpdecimal (4.0.0-r0)
+(16/17) Purging sqlite-libs (3.49.2-r0)
+(17/17) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 259 MiB in 74 packages
+>>> zstd: Updating the main/x86_64 repository index...
+>>> zstd: Signing the index...
+pigz: not found

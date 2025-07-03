@@ -1,0 +1,119 @@
+pigz: not found
+>>> acf-postgresql: Building main/acf-postgresql 0.12.0-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 03:31:47 +0000
+>>> acf-postgresql: Validating /home/packager/aports/main/acf-postgresql/APKBUILD...
+>>> acf-postgresql: Analyzing dependencies...
+>>> acf-postgresql: Installing for build: build-base acf-core postgresql acf-db-lib lua-sql-postgres
+(1/29) Installing acf-jquery (0.4.3-r2)
+(2/29) Installing lua-subprocess (0_git20230625-r1)
+(3/29) Installing acf-lib (0.11.1-r0)
+(4/29) Installing acf-skins (0.6.0-r3)
+(5/29) Installing haserl-lua5.4 (0.9.36-r4)
+(6/29) Installing acf-lib-lua5.4 (0.11.1-r0)
+(7/29) Installing lua5.4-subprocess (0_git20230625-r1)
+(8/29) Installing lua5.4-bit32 (5.3.0-r6)
+(9/29) Installing lua5.4-posix (36.3-r0)
+(10/29) Installing lua5.4-md5 (1.3-r2)
+(11/29) Installing lua-json4 (1.0.1-r0)
+(12/29) Installing acf-core (0.24.1-r0)
+(13/29) Installing postgresql-common (1.2-r1)
+Executing postgresql-common-1.2-r1.pre-install
+(14/29) Installing lz4-libs (1.10.0-r0)
+(15/29) Installing libpq (17.5-r0)
+(16/29) Installing postgresql17-client (17.5-r0)
+(17/29) Installing tzdata (2025b-r0)
+(18/29) Installing icu-data-en (74.2-r0)
+Executing icu-data-en-74.2-r0.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(19/29) Installing icu-libs (74.2-r0)
+(20/29) Installing gdbm (1.24-r0)
+(21/29) Installing libsasl (2.1.28-r8)
+(22/29) Installing libldap (2.6.8-r0)
+(23/29) Installing xz-libs (5.6.3-r1)
+(24/29) Installing libxml2 (2.13.4-r6)
+(25/29) Installing postgresql17 (17.5-r0)
+Executing postgresql17-17.5-r0.post-install
+*
+* If you want to use JIT in PostgreSQL, install postgresql17-jit or
+* postgresql-jit (if you didn't install specific major version of postgresql).
+*
+(26/29) Installing acf-db-lib (0.2.1-r4)
+(27/29) Installing lua-sql-postgres (2.6.0-r5)
+(28/29) Installing lua5.4-sql-postgres (2.6.0-r5)
+(29/29) Installing .makedepends-acf-postgresql (20250523.033150)
+Executing postgresql-common-1.2-r1.trigger
+* Setting postgresql17 as the default version
+Executing busybox-1.37.0-r12.trigger
+OK: 343 MiB in 143 packages
+>>> acf-postgresql: Cleaning up srcdir
+>>> acf-postgresql: Cleaning up pkgdir
+>>> acf-postgresql: Cleaning up tmpdir
+>>> acf-postgresql: Fetching https://gitlab.alpinelinux.org/acf/acf-postgresql/-/archive/v0.12.0/acf-postgresql-v0.12.0.tar.gz
+Connecting to gitlab.alpinelinux.org (172.105.69.85:443)
+saving to '/var/cache/distfiles/acf-postgresql-v0.12.0.tar.gz.part'
+acf-postgresql-v0.12 100% |********************************|  3964  0:00:00 ETA
+'/var/cache/distfiles/acf-postgresql-v0.12.0.tar.gz.part' saved
+>>> acf-postgresql: Fetching https://gitlab.alpinelinux.org/acf/acf-postgresql/-/archive/v0.12.0/acf-postgresql-v0.12.0.tar.gz
+>>> acf-postgresql: Checking sha512sums...
+acf-postgresql-v0.12.0.tar.gz: OK
+>>> acf-postgresql: Unpacking /var/cache/distfiles/acf-postgresql-v0.12.0.tar.gz...
+>>> acf-postgresql: Entering fakeroot...
+mkdir -p "/home/packager/aports/main/acf-postgresql/pkg/acf-postgresql//usr/share/acf/app/postgresql"
+cp -a postgresql*  "/home/packager/aports/main/acf-postgresql/pkg/acf-postgresql//usr/share/acf/app/postgresql"
+for i in $(ls -1 /usr/share/acf/lib/db-*.lsp); do\
+	ln -sf ../../lib/$(basename $i) /home/packager/aports/main/acf-postgresql/pkg/acf-postgresql//usr/share/acf/app/postgresql/$(echo "$(basename $i)" | sed "s/db/postgresql/");\
+done
+>>> acf-postgresql*: Running postcheck for acf-postgresql
+>>> acf-postgresql*: Preparing package acf-postgresql...
+>>> acf-postgresql*: Tracing dependencies...
+	acf-core
+	postgresql
+	acf-db-lib
+	lua-sql-postgres
+>>> acf-postgresql*: Package size: 9.1 KB
+>>> acf-postgresql*: Compressing data...
+>>> acf-postgresql*: Create checksum...
+pigz: not found
+>>> acf-postgresql*: Create acf-postgresql-0.12.0-r0.apk
+>>> acf-postgresql: Build complete at Fri, 23 May 2025 03:31:57 +0000 elapsed time 0h 0m 10s
+>>> acf-postgresql: Cleaning up srcdir
+>>> acf-postgresql: Cleaning up pkgdir
+>>> acf-postgresql: Uninstalling dependencies...
+(1/29) Purging .makedepends-acf-postgresql (20250523.033150)
+(2/29) Purging acf-db-lib (0.2.1-r4)
+(3/29) Purging acf-core (0.24.1-r0)
+(4/29) Purging acf-jquery (0.4.3-r2)
+(5/29) Purging acf-skins (0.6.0-r3)
+(6/29) Purging haserl-lua5.4 (0.9.36-r4)
+(7/29) Purging lua5.4-posix (36.3-r0)
+(8/29) Purging lua5.4-bit32 (5.3.0-r6)
+(9/29) Purging lua5.4-md5 (1.3-r2)
+(10/29) Purging lua-json4 (1.0.1-r0)
+(11/29) Purging lua5.4-subprocess (0_git20230625-r1)
+(12/29) Purging acf-lib-lua5.4 (0.11.1-r0)
+(13/29) Purging acf-lib (0.11.1-r0)
+(14/29) Purging lua-subprocess (0_git20230625-r1)
+(15/29) Purging lua5.4-sql-postgres (2.6.0-r5)
+(16/29) Purging lua-sql-postgres (2.6.0-r5)
+(17/29) Purging postgresql17 (17.5-r0)
+Executing postgresql17-17.5-r0.pre-deinstall
+(18/29) Purging postgresql17-client (17.5-r0)
+(19/29) Purging postgresql-common (1.2-r1)
+Executing postgresql-common-1.2-r1.pre-deinstall
+(20/29) Purging tzdata (2025b-r0)
+(21/29) Purging libldap (2.6.8-r0)
+(22/29) Purging libsasl (2.1.28-r8)
+(23/29) Purging gdbm (1.24-r0)
+(24/29) Purging icu-libs (74.2-r0)
+(25/29) Purging icu-data-en (74.2-r0)
+(26/29) Purging libpq (17.5-r0)
+(27/29) Purging libxml2 (2.13.4-r6)
+(28/29) Purging lz4-libs (1.10.0-r0)
+(29/29) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> acf-postgresql: Updating the main/x86_64 repository index...
+>>> acf-postgresql: Signing the index...
+pigz: not found

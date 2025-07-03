@@ -1,0 +1,212 @@
+pigz: not found
+>>> pgpool: Building main/pgpool 4.6.0-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:35:40 +0000
+>>> pgpool: Validating /home/packager/aports/main/pgpool/APKBUILD...
+>>> pgpool: Analyzing dependencies...
+>>> pgpool: Installing for build: build-base autoconf automake bison flex libpq-dev libtool linux-headers openssl-dev postgresql-dev
+(1/26) Installing libpq (17.5-r0)
+(2/26) Installing openssl-dev (3.5.0-r0)
+(3/26) Installing libpq-dev (17.5-r0)
+(4/26) Installing libltdl (2.4.7-r3)
+(5/26) Installing libtool (2.4.7-r3)
+(6/26) Installing libecpg (17.5-r0)
+(7/26) Installing libecpg-dev (17.5-r0)
+(8/26) Installing clang18-headers (18.1.8-r2)
+(9/26) Installing libffi (3.4.7-r0)
+(10/26) Installing xz-libs (5.6.3-r1)
+(11/26) Installing libxml2 (2.13.4-r6)
+(12/26) Installing llvm18-libs (18.1.8-r2)
+(13/26) Installing clang18-libs (18.1.8-r2)
+(14/26) Installing llvm18-linker-tools (18.1.8-r2)
+(15/26) Installing clang18 (18.1.8-r2)
+(16/26) Installing icu-data-en (76.1-r0)
+Executing icu-data-en-76.1-r0.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(17/26) Installing icu-libs (76.1-r0)
+(18/26) Installing icu (76.1-r0)
+(19/26) Installing icu-dev (76.1-r0)
+(20/26) Installing llvm18 (18.1.8-r2)
+(21/26) Installing lz4-libs (1.10.0-r0)
+(22/26) Installing lz4-dev (1.10.0-r0)
+(23/26) Installing zstd (1.5.7-r0)
+(24/26) Installing zstd-dev (1.5.7-r0)
+(25/26) Installing postgresql17-dev (17.5-r0)
+(26/26) Installing .makedepends-pgpool (20250523.183542)
+Executing busybox-1.37.0-r12.trigger
+OK: 980 MiB in 158 packages
+>>> pgpool: Cleaning up srcdir
+>>> pgpool: Cleaning up pkgdir
+>>> pgpool: Cleaning up tmpdir
+>>> pgpool: Fetching https://github.com/pgpool/pgpool2/archive/V4_6_0/pgpool2-4_6_0.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/pgpool2-4_6_0.tar.gz.part'
+pgpool2-4_6_0.tar.gz 100% |********************************| 3378k  0:00:00 ETA
+'/var/cache/distfiles/pgpool2-4_6_0.tar.gz.part' saved
+>>> pgpool: Fetching https://github.com/pgpool/pgpool2/archive/V4_6_0/pgpool2-4_6_0.tar.gz
+>>> pgpool: Checking sha512sums...
+pgpool2-4_6_0.tar.gz: OK
+missing-include.patch: OK
+pgpool.initd: OK
+pgpool.confd: OK
+pgpool.logrotated: OK
+fix-snprintf.patch: OK
+fix-time_t.patch: OK
+>>> pgpool: Unpacking /var/cache/distfiles/pgpool2-4_6_0.tar.gz...
+>>> pgpool: missing-include.patch
+patching file src/parser/snprintf.c
+>>> pgpool: fix-snprintf.patch
+patching file src/parser/snprintf.c
+Hunk #1 succeeded at 404 (offset 1 line).
+Hunk #2 succeeded at 415 (offset 1 line).
+Hunk #3 succeeded at 756 (offset 1 line).
+>>> pgpool: fix-time_t.patch
+patching file src/include/utils/json.h
+patching file src/include/watchdog/wd_json_data.h
+patching file src/utils/json.c
+patching file src/watchdog/watchdog.c
+Hunk #1 succeeded at 6656 (offset 127 lines).
+patching file src/watchdog/wd_commands.c
+patching file src/watchdog/wd_heartbeat.c
+Hunk #1 succeeded at 847 (offset 194 lines).
+patching file src/watchdog/wd_json_data.c
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:6: warning: The macro 'AC_PROG_CC_C99' is obsolete.
+configure.ac:6: You should run autoupdate.
+./lib/autoconf/c.m4:1662: AC_PROG_CC_C99 is expanded from...
+configure.ac:6: the top level
+configure.ac:22: warning: The macro 'AC_PROG_LIBTOOL' is obsolete.
+configure.ac:22: You should run autoupdate.
+m4/libtool.m4:100: AC_PROG_LIBTOOL is expanded from...
+configure.ac:22: the top level
+configure.ac:24: warning: AC_PROG_LEX without either yywrap or noyywrap is obsolete
+./lib/autoconf/programs.m4:743: _AC_PROG_LEX is expanded from...
+./lib/autoconf/programs.m4:736: AC_PROG_LEX is expanded from...
+aclocal.m4:373: AM_PROG_LEX is expanded from...
+configure.ac:24: the top level
+configure.ac:53: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:53: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:53: the top level
+configure.ac:64: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:64: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:64: the top level
+configure.ac:77: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:77: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:77: the top level
+configure.ac:100: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:100: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:100: the top level
+configure.ac:107: warning: The macro 'AC_HEADER_TIME' is obsolete.
+configure.ac:107: You should run autoupdate.
+./lib/autoconf/headers.m4:702: AC_HEADER_TIME is expanded from...
+configure.ac:107: the top level
+configure.ac:144: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:144: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:144: the top level
+configure.ac:160: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:160: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+c-library.m4:228: PGAC_FUNC_SNPRINTF_LONG_LONG_INT_FORMAT is expanded from...
+configure.ac:160: the top level
+configure.ac:277: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.ac:277: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.ac:277: the top level
+configure.ac:279: warning: AC_FUNC_WAIT3: 'wait3' has been removed from POSIX.
+configure.ac:279: Remove this 'AC_FUNC_WAIT3' and adjust your code to use 'waitpid' instead.
+./lib/autoconf/functions.m4:2072: AC_FUNC_WAIT3 is expanded from...
+configure.ac:279: the top level
+configure.ac:280: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:280: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+ac_func_accept_argtypes.m4:43: AC_FUNC_ACCEPT_ARGTYPES is expanded from...
+configure.ac:280: the top level
+configure.ac:490: warning: 'AM_CONFIG_HEADER': this macro is obsolete.
+configure.ac:490: You should use the 'AC_CONFIG_HEADERS' macro instead.
+aclocal.m4:462: AM_CONFIG_HEADER is expanded from...
+configure.ac:490: the top level
+configure.ac:492: warning: AC_OUTPUT should be used without arguments.
+configure.ac:492: You should run autoupdate.
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:5: installing './compile'
+configure.ac:22: installing './config.guess'
+configure.ac:22: installing './config.sub'
+configure.ac:14: installing './install-sh'
+configure.ac:14: installing './missing'
+configure.ac: installing './ylwrap'
+autoreconf: Leaving directory '.'
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... no
+configure: error: in '/home/packager/aports/main/pgpool/src/pgpool2-4_6_0':
+configure: error: C compiler cannot create executables
+See 'config.log' for more details
+>>> ERROR: pgpool: build failed
+>>> pgpool: Uninstalling dependencies...
+(1/26) Purging .makedepends-pgpool (20250523.183542)
+(2/26) Purging libtool (2.4.7-r3)
+(3/26) Purging libltdl (2.4.7-r3)
+(4/26) Purging postgresql17-dev (17.5-r0)
+(5/26) Purging libecpg-dev (17.5-r0)
+(6/26) Purging libecpg (17.5-r0)
+(7/26) Purging clang18 (18.1.8-r2)
+(8/26) Purging clang18-headers (18.1.8-r2)
+(9/26) Purging icu-dev (76.1-r0)
+(10/26) Purging llvm18 (18.1.8-r2)
+(11/26) Purging llvm18-linker-tools (18.1.8-r2)
+(12/26) Purging lz4-dev (1.10.0-r0)
+(13/26) Purging lz4-libs (1.10.0-r0)
+(14/26) Purging zstd-dev (1.5.7-r0)
+(15/26) Purging zstd (1.5.7-r0)
+(16/26) Purging clang18-libs (18.1.8-r2)
+(17/26) Purging icu (76.1-r0)
+(18/26) Purging icu-libs (76.1-r0)
+(19/26) Purging icu-data-en (76.1-r0)
+(20/26) Purging llvm18-libs (18.1.8-r2)
+(21/26) Purging libffi (3.4.7-r0)
+(22/26) Purging libpq-dev (17.5-r0)
+(23/26) Purging libpq (17.5-r0)
+(24/26) Purging libxml2 (2.13.4-r6)
+(25/26) Purging openssl-dev (3.5.0-r0)
+(26/26) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,226 @@
+pigz: not found
+>>> ez-ipupdate: Building main/ez-ipupdate 3.0.10-r13 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:40:53 +0000
+>>> ez-ipupdate: Validating /home/packager/aports/main/ez-ipupdate/APKBUILD...
+>>> ez-ipupdate: Analyzing dependencies...
+>>> ez-ipupdate: Installing for build: build-base autoconf
+(1/8) Installing m4 (1.4.19-r3)
+(2/8) Installing libbz2 (1.0.8-r6)
+(3/8) Installing perl (5.40.2-r0)
+(4/8) Installing autoconf (2.72-r0)
+(5/8) Installing .makedepends-ez-ipupdate (20250518.104054)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 299 MiB in 89 packages
+>>> ez-ipupdate: Cleaning up srcdir
+>>> ez-ipupdate: Cleaning up pkgdir
+>>> ez-ipupdate: Cleaning up tmpdir
+>>> ez-ipupdate: Fetching https://dev.alpinelinux.org/archive/ez-ipupdate/ez-ipupdate-3.0.10.tar.gz
+Connecting to dev.alpinelinux.org (185.15.220.34:443)
+saving to '/var/cache/distfiles/ez-ipupdate-3.0.10.tar.gz.part'
+ez-ipupdate-3.0.10.t 100% |********************************| 80678  0:00:00 ETA
+'/var/cache/distfiles/ez-ipupdate-3.0.10.tar.gz.part' saved
+>>> ez-ipupdate: Fetching https://dev.alpinelinux.org/archive/ez-ipupdate/ez-ipupdate-3.0.10.tar.gz
+>>> ez-ipupdate: Checking sha512sums...
+ez-ipupdate-3.0.10.tar.gz: OK
+ez-ipupdate.confd: OK
+ez-ipupdate.initd: OK
+errno.patch: OK
+implicit.patch: OK
+>>> ez-ipupdate: Unpacking /var/cache/distfiles/ez-ipupdate-3.0.10.tar.gz...
+>>> ez-ipupdate: errno.patch
+patching file conf_file.c
+>>> ez-ipupdate: implicit.patch
+patching file ez-ipupdate.c
+patching file md5.c
+configure.in:4: warning: The macro 'AC_CONFIG_HEADER' is obsolete.
+configure.in:4: You should run autoupdate.
+./lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
+aclocal.m4:15: AM_CONFIG_HEADER is expanded from...
+configure.in:4: the top level
+configure.in:4: warning: The macro 'AC_OUTPUT_COMMANDS' is obsolete.
+configure.in:4: You should run autoupdate.
+./lib/autoconf/status.m4:1025: AC_OUTPUT_COMMANDS is expanded from...
+aclocal.m4:15: AM_CONFIG_HEADER is expanded from...
+configure.in:4: the top level
+configure.in:15: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.in:15: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.in:15: the top level
+configure.in:144: warning: AC_OUTPUT should be used without arguments.
+configure.in:144: You should run autoupdate.
+>>> ez-ipupdate: Updating ./config.sub
+>>> ez-ipupdate: Creating group ipupdate
+>>> ez-ipupdate: Creating user ipupdate
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking whether make sets $(MAKE)... yes
+checking for working aclocal... missing
+checking for working autoconf... found
+checking for working automake... missing
+checking for working autoheader... found
+checking for working makeinfo... missing
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking how to run the C preprocessor... gcc -E
+checking return type of signal handlers... void
+checking for gethostbyname... yes
+checking for connect... yes
+checking for socket... yes
+checking for strdup... yes
+checking for getopt_long... yes
+checking for gethostbyaddr... yes
+checking for getservbyname... yes
+checking for inet_addr... yes
+checking for inet_ntoa... yes
+checking for snprintf... yes
+checking for vfprintf... yes
+checking for stat... yes
+checking for vsprintf... yes
+checking for vsnprintf... yes
+checking for strerror... yes
+checking for strftime... yes
+checking for wait... yes
+checking for waitpid... yes
+checking for getpid... yes
+checking for fork... yes
+checking for vfork... yes
+checking for inet_aton... yes
+checking for herror... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for arpa/inet.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/time.h... yes
+checking for sys/stat.h... (cached) yes
+checking for fcntl.h... yes
+checking for signal.h... yes
+checking for syslog.h... yes
+checking for pwd.h... yes
+checking for stdarg.h... yes
+checking for grp.h... yes
+checking for errno.h... yes
+checking for sys/sockio.h... no
+checking for sys/wait.h... yes
+checking for getopt.h... yes
+checking for unistd.h... (cached) yes
+checking for netinet/in.h... yes
+checking for netdb.h... yes
+checking for sys/socket.h... yes
+checking for sys_errlist in -lc... no
+checking for getopt... yes
+checking for getpass... yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for user supplied default service... no
+configure: WARNING: not setting default service
+checking whether user wants debugging support... no
+checking whether user wants to dissable MD5 support... no
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: creating config.h
+config.status: executing default-1 commands
+gcc -DHAVE_CONFIG_H -I. -I. -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c ez-ipupdate.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c conf_file.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c md5.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c cache_file.c
+gcc -DHAVE_CONFIG_H -I. -I. -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c pid_file.c
+ez-ipupdate.c: In function 'DHS_update_entry':
+ez-ipupdate.c:2404:30: warning: format '%d' expects argument of type 'int', but argument 4 has type 'size_t' {aka 'long unsigned int'} [-Wformat=]
+ 2404 |   snprintf(buf, BUFFER_SIZE, "Content-length: %d\015\012", strlen(putbuf));
+      |                              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~
+      |                                                            |
+      |                                                            size_t {aka long unsigned int}
+ez-ipupdate.c:189:53: note: in definition of macro 'snprintf'
+  189 | #    define  snprintf(x, y, z...) snprintf(x, y, ## z)
+      |                                                     ^
+ez-ipupdate.c:2404:48: note: format string is defined here
+ 2404 |   snprintf(buf, BUFFER_SIZE, "Content-length: %d\015\012", strlen(putbuf));
+      |                                               ~^
+      |                                                |
+      |                                                int
+      |                                               %ld
+ez-ipupdate.c:2541:32: warning: format '%d' expects argument of type 'int', but argument 4 has type 'size_t' {aka 'long unsigned int'} [-Wformat=]
+ 2541 |     snprintf(buf, BUFFER_SIZE, "Content-length: %d\015\012", strlen(putbuf));
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~  ~~~~~~~~~~~~~~
+      |                                                              |
+      |                                                              size_t {aka long unsigned int}
+ez-ipupdate.c:189:53: note: in definition of macro 'snprintf'
+  189 | #    define  snprintf(x, y, z...) snprintf(x, y, ## z)
+      |                                                     ^
+ez-ipupdate.c:2541:50: note: format string is defined here
+ 2541 |     snprintf(buf, BUFFER_SIZE, "Content-length: %d\015\012", strlen(putbuf));
+      |                                                 ~^
+      |                                                  |
+      |                                                  int
+      |                                                 %ld
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ez-ipupdate  ez-ipupdate.o conf_file.o md5.o cache_file.o pid_file.o  
+>>> ez-ipupdate: Entering fakeroot...
+make[1]: Entering directory '/home/packager/aports/main/ez-ipupdate/src/ez-ipupdate-3.0.10'
+make[1]: Nothing to be done for 'install-data-am'.
+/bin/sh ./mkinstalldirs /home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate/usr/bin
+mkdir /home/packager/aports/main/ez-ipupdate/pkg
+mkdir /home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate
+mkdir /home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate/usr
+mkdir /home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate/usr/bin
+  /usr/bin/install -c  ez-ipupdate /home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate/usr/bin/ez-ipupdate
+make[1]: Leaving directory '/home/packager/aports/main/ez-ipupdate/src/ez-ipupdate-3.0.10'
+>>> ez-ipupdate-openrc*: Running split function openrc...
+'etc/conf.d' -> '/home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate-openrc/etc/conf.d'
+'etc/init.d' -> '/home/packager/aports/main/ez-ipupdate/pkg/ez-ipupdate-openrc/etc/init.d'
+>>> ez-ipupdate-openrc*: Preparing subpackage ez-ipupdate-openrc...
+>>> ez-ipupdate-openrc*: Running postcheck for ez-ipupdate-openrc
+>>> ez-ipupdate*: Running postcheck for ez-ipupdate
+>>> ez-ipupdate*: Preparing package ez-ipupdate...
+>>> ez-ipupdate*: Stripping binaries
+>>> ez-ipupdate*: Script found. /bin/sh added as a dependency for ez-ipupdate-3.0.10-r13.apk
+>>> ez-ipupdate*: Adding .pre-install
+>>> ez-ipupdate-openrc*: Scanning shared objects
+>>> ez-ipupdate*: Scanning shared objects
+>>> ez-ipupdate-openrc*: Tracing dependencies...
+>>> ez-ipupdate-openrc*: Package size: 2.1 KB
+>>> ez-ipupdate-openrc*: Compressing data...
+>>> ez-ipupdate-openrc*: Create checksum...
+pigz: not found
+>>> ez-ipupdate-openrc*: Create ez-ipupdate-openrc-3.0.10-r13.apk
+>>> ez-ipupdate*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+>>> ez-ipupdate*: Package size: 62.0 KB
+>>> ez-ipupdate*: Compressing data...
+>>> ez-ipupdate*: Create checksum...
+pigz: not found
+>>> ez-ipupdate*: Create ez-ipupdate-3.0.10-r13.apk
+>>> ez-ipupdate: Build complete at Sun, 18 May 2025 10:41:03 +0000 elapsed time 0h 0m 10s
+>>> ez-ipupdate: Cleaning up srcdir
+>>> ez-ipupdate: Cleaning up pkgdir
+>>> ez-ipupdate: Uninstalling dependencies...
+(1/8) Purging .makedepends-ez-ipupdate (20250518.104054)
+(2/8) Purging autoconf (2.72-r0)
+(3/8) Purging m4 (1.4.19-r3)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> ez-ipupdate: Updating the main/x86_64 repository index...
+>>> ez-ipupdate: Signing the index...
+pigz: not found

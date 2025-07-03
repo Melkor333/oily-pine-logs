@@ -1,0 +1,247 @@
+pigz: not found
+>>> perl-dbd-odbc: Building main/perl-dbd-odbc 1.61-r6 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:39:12 +0000
+>>> perl-dbd-odbc: Validating /home/packager/aports/main/perl-dbd-odbc/APKBUILD...
+>>> perl-dbd-odbc: Analyzing dependencies...
+>>> perl-dbd-odbc: Installing for build: build-base perl perl-dbi perl-dev unixodbc-dev
+(1/11) Installing libbz2 (1.0.8-r6)
+(2/11) Installing perl (5.40.2-r0)
+(3/11) Installing perl-dbi (1.647-r0)
+(4/11) Installing perl-utils (5.40.2-r0)
+(5/11) Installing perl-dev (5.40.2-r0)
+(6/11) Installing unixodbc (2.3.12-r0)
+(7/11) Installing unixodbc-dev (2.3.12-r0)
+(8/11) Installing .makedepends-perl-dbd-odbc (20250518.103913)
+(9/11) Installing perl-error (0.17030-r0)
+(10/11) Installing perl-git (2.47.2-r0)
+(11/11) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 309 MiB in 92 packages
+>>> perl-dbd-odbc: Cleaning up srcdir
+>>> perl-dbd-odbc: Cleaning up pkgdir
+>>> perl-dbd-odbc: Cleaning up tmpdir
+>>> perl-dbd-odbc: Fetching https://cpan.metacpan.org/authors/id/M/MJ/MJEVANS/DBD-ODBC-1.61.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/DBD-ODBC-1.61.tar.gz.part'
+DBD-ODBC-1.61.tar.gz 100% |********************************|  276k  0:00:00 ETA
+'/var/cache/distfiles/DBD-ODBC-1.61.tar.gz.part' saved
+>>> perl-dbd-odbc: Fetching https://cpan.metacpan.org/authors/id/M/MJ/MJEVANS/DBD-ODBC-1.61.tar.gz
+>>> perl-dbd-odbc: Checking sha512sums...
+DBD-ODBC-1.61.tar.gz: OK
+>>> perl-dbd-odbc: Unpacking /var/cache/distfiles/DBD-ODBC-1.61.tar.gz...
+
+**********
+	Remember to actually *READ* the README file!
+	And re-read it if you have any problems.
+
+**********
+
+OSNAME: linux
+LANG: 
+ODBCHOME: 
+LD_LIBRARY_PATH: 
+DBROOT: 
+WINDIR: 
+II_SYSTEM: 
+DBD_ODBC_UNICODE: 
+Perl: 5.040002
+ExtUtils::MakeMaker: 7.70
+Command line options:
+  g! = 0
+  x! = undef
+  o=s = 
+  e! = undef
+  u! = undef
+  w! = undef
+
+You are using a Perl configured with threading enabled.
+Please read the warnings in DBI about this.
+
+You should also be aware that on non-Windows platforms ODBC drivers come
+in two forms, thread-safe and non-thread-safe drivers and you may need
+to make sure you are using the right one.
+
+Press return to continue...  
+Looking for odbc_config in : nowhere
+Looking for odbc_config in (PATH) /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+  Found odbc_config (via odbc_config) version 2.3.12
+
+  odbc_config reports --prefix=/usr
+  odbc_config reports --include-prefix=/usr/include
+  odbc_config reports --lib-prefix=/usr/lib
+  ODBC INC dir set to /usr/include via odbc_config
+  ODBC LIB dir set to /usr/lib via odbc_config
+Using ODBCHOME /usr
+
+This looks like a unixodbc type of driver manager.
+Looking for odbcinst
+  Found odbcinst in /usr/bin
+  odbcinst -j reports:
+
+unixODBC 2.3.12
+DRIVERS............: /etc/odbcinst.ini
+SYSTEM DATA SOURCES: /etc/odbc.ini
+FILE DATA SOURCES..: /etc/ODBCDataSources
+USER DATA SOURCES..: /home/packager/.odbc.ini
+SQLULEN Size.......: 8
+SQLLEN Size........: 8
+SQLSETPOSIROW Size.: 8
+
+Please note these files as they are where you define your ODBC drivers and data sources.
+
+Looking for odbc_config to get cflags
+Adding odbc_config --cflags "-DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include " to CC line
+Warning: LD_LIBRARY_PATH= doesn't include /usr/lib
+
+Checking if your kit is complete...
+Looks good
+Warning: prerequisite Test::Output 1.031 not found.
+Using DBI 1.647 (for perl 5.040002 on x86_64-linux-thread-multi) installed in /usr/lib/perl5/vendor_perl/auto/DBI/
+Using DBI 1.647 (for perl 5.040002 on x86_64-linux-thread-multi) installed in /usr/lib/perl5/vendor_perl/auto/DBI/
+Generating a Unix-style Makefile
+Writing Makefile for DBD::ODBC
+Writing MYMETA.yml and MYMETA.json
+Warning: not all required environment variables are set.
+
+Warning: Will not be able to run tests as you have not defined
+all of DBI_DSN, DBI_USER and DBI_PASS environment variables.
+cc -c -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include  -I. -I/usr/lib/perl5/vendor_perl/auto/DBI -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.61\" -DXS_VERSION=\"1.61\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include ConvertUTF.c
+Running Mkbootstrap for ODBC ()
+"/usr/bin/perl" -p -e "s/~DRIVER~/ODBC/g" /usr/lib/perl5/vendor_perl/auto/DBI/Driver.xst > ODBC.xsi
+cc -c -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include  -I. -I/usr/lib/perl5/vendor_perl/auto/DBI -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.61\" -DXS_VERSION=\"1.61\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include dbdimp.c
+cc -c -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include  -I. -I/usr/lib/perl5/vendor_perl/auto/DBI -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.61\" -DXS_VERSION=\"1.61\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include unicode_helper.c
+chmod 644 "ODBC.bs"
+cp TO_DO blib/lib/DBD/ODBC/TO_DO.pm
+cp Changes blib/lib/DBD/ODBC/Changes.pm
+cp FAQ blib/lib/DBD/ODBC/FAQ.pm
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  ODBC.xs > ODBC.xsc
+cp ODBC.pm blib/lib/DBD/ODBC.pm
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- ODBC.bs blib/arch/auto/DBD/ODBC/ODBC.bs 644
+mv ODBC.xsc ODBC.c
+cc -c -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include  -I. -I/usr/lib/perl5/vendor_perl/auto/DBI -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.61\" -DXS_VERSION=\"1.61\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DHAVE_UNISTD_H -DHAVE_PWD_H -DHAVE_SYS_TYPES_H -DHAVE_LONG_LONG -DSIZEOF_LONG_INT=8 -I/usr/include  -I/usr/include ODBC.c
+dbdimp.c: In function 'odbc_db_STORE_attrib':
+dbdimp.c:4778:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ 4778 |             vParam = (SQLPOINTER)pars->atrue;
+      |                      ^
+dbdimp.c:4780:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ 4780 |             vParam = (SQLPOINTER)pars->afalse;
+      |                      ^
+dbdimp.c:5033:18: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ 5033 |         vParam = (SQLPOINTER)(on ? pars->atrue : pars->afalse);
+      |                  ^
+dbdimp.c:5038:18: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ 5038 |         vParam = (SQLPOINTER)(on ? pars->atrue : pars->afalse);
+      |                  ^
+dbdimp.c:5058:27: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+ 5058 |             if (vParam == (SQLPOINTER)pars->atrue) {
+      |                           ^
+rm -f blib/arch/auto/DBD/ODBC/ODBC.so
+LD_RUN_PATH="/usr/lib" cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  ConvertUTF.o ODBC.o dbdimp.o unicode_helper.o  -o blib/arch/auto/DBD/ODBC/ODBC.so  \
+   -L/usr/lib -lodbc   \
+  
+chmod 755 blib/arch/auto/DBD/ODBC/ODBC.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- ODBC.bs blib/arch/auto/DBD/ODBC/ODBC.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/01base.t ................... ok
+t/02simple.t ................. skipped: DBI_DSN is undefined
+t/03dbatt.t .................. skipped: DBI_DSN is undefined
+t/05meth.t ................... skipped: DBI_DSN is undefined
+t/07bind.t ................... skipped: DBI_DSN is undefined
+t/08bind2.t .................. skipped: DBI_DSN is undefined
+t/09multi.t .................. skipped: DBI_DSN is undefined
+t/10handler.t ................ skipped: DBI_DSN is undefined
+t/12blob.t ................... skipped: DBI_DSN is undefined
+t/20SqlServer.t .............. skipped: DBI_DSN is undefined
+t/30Oracle.t ................. skipped: DBI_DSN is undefined
+t/40UnicodeRoundTrip.t ....... skipped: DBI_DSN is undefined
+t/41Unicode.t ................ skipped: DBI_DSN is undefined
+t/45_unicode_varchar.t ....... skipped: DBI_DSN is undefined
+t/50_odbc_utf8_on.t .......... skipped: DBI_DSN is undefined
+t/70execute_array_dbi.t ...... skipped: DBI_DSN is undefined
+t/70execute_array_native.t ... skipped: DBI_DSN is undefined
+t/80_odbc_diags.t ............ skipped: DBI_DSN is undefined
+t/82_table_info.t ............ skipped: DBI_DSN is undefined
+t/87_odbc_lob_read.t ......... skipped: DBI_DSN is undefined
+t/90_trace_flags.t ........... skipped: DBI_DSN is undefined
+t/odbc_describe_parameter.t .. skipped: DBI_DSN is undefined
+# Test::Pod::Coverage 1.04 required for testing POD coverage
+t/pod-coverage.t ............. ok
+t/pod.t ...................... ok
+t/rt_101579.t ................ skipped: DBI_DSN is undefined
+t/rt_38977.t ................. skipped: DBI_DSN is undefined
+t/rt_39841.t ................. skipped: DBI_DSN is undefined
+t/rt_39897.t ................. skipped: DBI_DSN is undefined
+t/rt_43384.t ................. skipped: DBI_DSN is undefined
+t/rt_46597.t ................. skipped: DBI_DSN is undefined
+t/rt_50852.t ................. skipped: DBI_DSN is undefined
+t/rt_57957.t ................. skipped: DBI_DSN is undefined
+t/rt_59621.t ................. skipped: DBI_DSN is undefined
+t/rt_61370.t ................. skipped: DBI_DSN is undefined
+t/rt_62033.t ................. skipped: DBI_DSN is undefined
+t/rt_63550.t ................. skipped: DBI_DSN is undefined
+t/rt_78838.t ................. skipped: DBI_DSN is undefined
+t/rt_79190.t ................. skipped: DBI_DSN is undefined
+t/rt_79397.t ................. skipped: DBI_DSN is undefined
+t/rt_81911.t ................. skipped: DBI_DSN is undefined
+t/rt_null_nvarchar.t ......... skipped: DBI_DSN is undefined
+t/sql_type_cast.t ............ skipped: DBI_DSN is undefined
+All tests successful.
+Files=42, Tests=11,  4 wallclock secs ( 0.10 usr  0.05 sys +  2.92 cusr  0.55 csys =  3.62 CPU)
+Result: PASS
+>>> perl-dbd-odbc: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- ODBC.bs blib/arch/auto/DBD/ODBC/ODBC.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/lib/perl5/vendor_perl/auto/DBD/ODBC/ODBC.so
+Installing /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/lib/perl5/vendor_perl/DBD/ODBC.pm
+Installing /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/lib/perl5/vendor_perl/DBD/ODBC/FAQ.pm
+Installing /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/lib/perl5/vendor_perl/DBD/ODBC/Changes.pm
+Installing /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/lib/perl5/vendor_perl/DBD/ODBC/TO_DO.pm
+Installing /home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc/usr/share/man/man3/DBD::ODBC.3pm
+>>> perl-dbd-odbc-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-dbd-odbc/pkg/perl-dbd-odbc-doc/usr/share/man'
+>>> perl-dbd-odbc-doc*: Preparing subpackage perl-dbd-odbc-doc...
+>>> perl-dbd-odbc-doc*: Running postcheck for perl-dbd-odbc-doc
+>>> perl-dbd-odbc*: Running postcheck for perl-dbd-odbc
+>>> perl-dbd-odbc*: Preparing package perl-dbd-odbc...
+>>> perl-dbd-odbc*: Stripping binaries
+>>> WARNING: perl-dbd-odbc*: Redundant /usr/lib in rpath found
+>>> perl-dbd-odbc-doc*: Scanning shared objects
+>>> perl-dbd-odbc*: Scanning shared objects
+>>> perl-dbd-odbc-doc*: Tracing dependencies...
+>>> perl-dbd-odbc-doc*: Package size: 29.8 KB
+>>> perl-dbd-odbc-doc*: Compressing data...
+>>> perl-dbd-odbc-doc*: Create checksum...
+pigz: not found
+>>> perl-dbd-odbc-doc*: Create perl-dbd-odbc-doc-1.61-r6.apk
+>>> perl-dbd-odbc*: Tracing dependencies...
+	perl
+	perl-dbi
+	so:libc.musl-x86_64.so.1
+	so:libodbc.so.2
+>>> perl-dbd-odbc*: Package size: 410.4 KB
+>>> perl-dbd-odbc*: Compressing data...
+>>> perl-dbd-odbc*: Create checksum...
+pigz: not found
+>>> perl-dbd-odbc*: Create perl-dbd-odbc-1.61-r6.apk
+>>> perl-dbd-odbc: Build complete at Sun, 18 May 2025 10:39:22 +0000 elapsed time 0h 0m 10s
+>>> perl-dbd-odbc: Cleaning up srcdir
+>>> perl-dbd-odbc: Cleaning up pkgdir
+>>> perl-dbd-odbc: Uninstalling dependencies...
+(1/11) Purging .makedepends-perl-dbd-odbc (20250518.103913)
+(2/11) Purging perl-dbi (1.647-r0)
+(3/11) Purging perl-dev (5.40.2-r0)
+(4/11) Purging perl-utils (5.40.2-r0)
+(5/11) Purging unixodbc-dev (2.3.12-r0)
+(6/11) Purging unixodbc (2.3.12-r0)
+(7/11) Purging git-perl (2.47.2-r0)
+(8/11) Purging perl-git (2.47.2-r0)
+(9/11) Purging perl-error (0.17030-r0)
+(10/11) Purging perl (5.40.2-r0)
+(11/11) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-dbd-odbc: Updating the main/x86_64 repository index...
+>>> perl-dbd-odbc: Signing the index...
+pigz: not found

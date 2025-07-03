@@ -1,0 +1,71 @@
+pigz: not found
+>>> sircbot: Building main/sircbot 0.4-r7 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:19:33 +0000
+>>> sircbot: Validating /home/packager/aports/main/sircbot/APKBUILD...
+>>> sircbot: Analyzing dependencies...
+>>> sircbot: Installing for build: build-base lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/12) Installing lua5.1-libs (5.1.5-r13)
+(2/12) Installing lua5.1 (5.1.5-r13)
+(3/12) Installing lua5.1-dev (5.1.5-r13)
+(4/12) Installing lua5.2-libs (5.2.4-r13)
+(5/12) Installing lua5.2 (5.2.4-r13)
+(6/12) Installing lua5.2-dev (5.2.4-r13)
+(7/12) Installing linenoise (1.0-r5)
+(8/12) Installing lua5.3-libs (5.3.6-r6)
+(9/12) Installing lua5.3 (5.3.6-r6)
+(10/12) Installing lua5.3-dev (5.3.6-r6)
+(11/12) Installing lua5.4-dev (5.4.7-r0)
+(12/12) Installing .makedepends-sircbot (20250523.171936)
+Executing busybox-1.37.0-r12.trigger
+OK: 570 MiB in 144 packages
+>>> sircbot: Cleaning up srcdir
+>>> sircbot: Cleaning up pkgdir
+>>> sircbot: Cleaning up tmpdir
+>>> sircbot: Fetching https://dev.alpinelinux.org/archive/sircbot/sircbot-0.4.tar.xz
+Connecting to dev.alpinelinux.org (185.15.220.34:443)
+saving to '/var/cache/distfiles/sircbot-0.4.tar.xz.part'
+sircbot-0.4.tar.xz.p 100% |********************************|  7052  0:00:00 ETA
+'/var/cache/distfiles/sircbot-0.4.tar.xz.part' saved
+>>> sircbot: Fetching https://dev.alpinelinux.org/archive/sircbot/sircbot-0.4.tar.xz
+>>> sircbot: Checking sha512sums...
+sircbot-0.4.tar.xz: OK
+0001-add-simple-hack-to-allow-nickserv-identification.patch: OK
+fix-missing-assert-header.patch: OK
+sircbot.initd: OK
+sircbot.confd: OK
+>>> sircbot: Unpacking /var/cache/distfiles/sircbot-0.4.tar.xz...
+>>> sircbot: 0001-add-simple-hack-to-allow-nickserv-identification.patch
+patching file sircbot.c
+>>> sircbot: fix-missing-assert-header.patch
+patching file lua/lsircbot.c
+>>> sircbot: Creating group sircbot
+>>> sircbot: Creating user sircbot
+gcc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION=\"0.4\" -c sircbot.c
+gcc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION=\"0.4\" -c irc.c
+gcc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION=\"0.4\" -c sircbot-send.c
+mkdir -p "lua/5.3/"
+gcc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION=\"0.4\" -I/usr/include/lua5.3 -o lua/5.3/lsircbot.o -c lua/lsircbot.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o sircbot-send sircbot-send.o
+ln -sf lua/5.3/sircbot.so sircbot.so
+gcc -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o lua/5.3/sircbot.so lua/5.3/lsircbot.o 
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: sircbot-send: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: sircbot-send has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:32: sircbot-send] Error 1
+make: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lua/5.3/sircbot.so has a LOAD segment with RWX permissions
+>>> ERROR: sircbot: build failed
+>>> sircbot: Uninstalling dependencies...
+(1/12) Purging .makedepends-sircbot (20250523.171936)
+(2/12) Purging lua5.1-dev (5.1.5-r13)
+(3/12) Purging lua5.1 (5.1.5-r13)
+(4/12) Purging lua5.1-libs (5.1.5-r13)
+(5/12) Purging lua5.2-dev (5.2.4-r13)
+(6/12) Purging lua5.2 (5.2.4-r13)
+(7/12) Purging lua5.2-libs (5.2.4-r13)
+(8/12) Purging lua5.3-dev (5.3.6-r6)
+(9/12) Purging lua5.3 (5.3.6-r6)
+(10/12) Purging lua5.3-libs (5.3.6-r6)
+(11/12) Purging lua5.4-dev (5.4.7-r0)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

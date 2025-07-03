@@ -1,0 +1,97 @@
+pigz: not found
+>>> jitterentropy-library: Building main/jitterentropy-library 3.4.1-r2 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:25:36 +0000
+>>> jitterentropy-library: Validating /home/packager/aports/main/jitterentropy-library/APKBUILD...
+>>> jitterentropy-library: Analyzing dependencies...
+>>> jitterentropy-library: Installing for build: build-base
+(1/1) Installing .makedepends-jitterentropy-library (20250518.092538)
+OK: 261 MiB in 82 packages
+>>> jitterentropy-library: Cleaning up srcdir
+>>> jitterentropy-library: Cleaning up pkgdir
+>>> jitterentropy-library: Cleaning up tmpdir
+>>> jitterentropy-library: Fetching jitterentropy-library-3.4.1.tar.gz::https://github.com/smuellerDD/jitterentropy-library/archive/v3.4.1.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/jitterentropy-library-3.4.1.tar.gz.part'
+jitterentropy-librar 100% |********************************| 86110  0:00:00 ETA
+'/var/cache/distfiles/jitterentropy-library-3.4.1.tar.gz.part' saved
+>>> jitterentropy-library: Fetching jitterentropy-library-3.4.1.tar.gz::https://github.com/smuellerDD/jitterentropy-library/archive/v3.4.1.tar.gz
+>>> jitterentropy-library: Checking sha512sums...
+jitterentropy-library-3.4.1.tar.gz: OK
+01-disable-gcc-optimisation.patch: OK
+02-fix-s390x-stack-corruption.patch: OK
+03-fix-dangling-pointer.patch: OK
+04-fix-memory-leak.patch: OK
+>>> jitterentropy-library: Unpacking /var/cache/distfiles/jitterentropy-library-3.4.1.tar.gz...
+>>> jitterentropy-library: 01-disable-gcc-optimisation.patch
+patching file Makefile
+>>> jitterentropy-library: 02-fix-s390x-stack-corruption.patch
+patching file jitterentropy-base-user.h
+>>> jitterentropy-library: 03-fix-dangling-pointer.patch
+patching file src/jitterentropy-base.c
+>>> jitterentropy-library: 04-fix-memory-leak.patch
+patching file src/jitterentropy-base.c
+gcc -Wextra -Wall -pedantic -fPIC -O0 -fwrapv -Wconversion -DJENT_CONF_ENABLE_INTERNAL_TIMER -fstack-protector-strong -I. -Isrc   -c -o src/jitterentropy-base.o src/jitterentropy-base.c
+gcc -Wextra -Wall -pedantic -fPIC -O0 -fwrapv -Wconversion -DJENT_CONF_ENABLE_INTERNAL_TIMER -fstack-protector-strong -I. -Isrc   -c -o src/jitterentropy-gcd.o src/jitterentropy-gcd.c
+gcc -Wextra -Wall -pedantic -fPIC -O0 -fwrapv -Wconversion -DJENT_CONF_ENABLE_INTERNAL_TIMER -fstack-protector-strong -I. -Isrc   -c -o src/jitterentropy-health.o src/jitterentropy-health.c
+gcc -Wextra -Wall -pedantic -fPIC -O0 -fwrapv -Wconversion -DJENT_CONF_ENABLE_INTERNAL_TIMER -fstack-protector-strong -I. -Isrc   -c -o src/jitterentropy-noise.o src/jitterentropy-noise.c
+gcc -Wextra -Wall -pedantic -fPIC -O0 -fwrapv -Wconversion -DJENT_CONF_ENABLE_INTERNAL_TIMER -fstack-protector-strong -I. -Isrc   -c -o src/jitterentropy-sha3.o src/jitterentropy-sha3.c
+gcc -Wextra -Wall -pedantic -fPIC -O0 -fwrapv -Wconversion -DJENT_CONF_ENABLE_INTERNAL_TIMER -fstack-protector-strong -I. -Isrc   -c -o src/jitterentropy-timer.o src/jitterentropy-timer.c
+gcc -shared -Wl,-soname,libjitterentropy.so.3 -o libjitterentropy.so.3.4.1 src/jitterentropy-base.o src/jitterentropy-gcd.o src/jitterentropy-health.o src/jitterentropy-noise.o src/jitterentropy-sha3.o src/jitterentropy-timer.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-z,relro,-z,now -lpthread  -lrt
+ar rcs libjitterentropy.a src/jitterentropy-base.o src/jitterentropy-gcd.o src/jitterentropy-health.o src/jitterentropy-noise.o src/jitterentropy-sha3.o src/jitterentropy-timer.o
+>>> jitterentropy-library: Entering fakeroot...
+install -d -m 0755 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/share/man/man3
+install -m 644 doc/jitterentropy.3 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/share/man/man3/
+gzip -n -f -9 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/share/man/man3/jitterentropy.3
+install -d -m 0755 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/lib
+install -d -m 0755 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/include
+install -s -m 0755 libjitterentropy.so.3.4.1 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/lib/
+install -m 0644 jitterentropy.h /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/include/
+install -m 0644 jitterentropy-base-user.h /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/include/
+rm -f /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/lib/libjitterentropy.so.3
+ln -sf libjitterentropy.so.3.4.1 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/lib/libjitterentropy.so.3
+ln -sf libjitterentropy.so.3 /home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library/usr/lib/libjitterentropy.so
+>>> jitterentropy-library-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library-dev/usr/include'
+'usr/lib/libjitterentropy.so' -> '/home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library-dev/usr/lib/libjitterentropy.so'
+>>> jitterentropy-library-dev*: Preparing subpackage jitterentropy-library-dev...
+>>> jitterentropy-library-dev*: Stripping binaries
+>>> jitterentropy-library-dev*: Running postcheck for jitterentropy-library-dev
+>>> jitterentropy-library-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/jitterentropy-library/pkg/jitterentropy-library-doc/usr/share/man'
+>>> jitterentropy-library-doc*: Preparing subpackage jitterentropy-library-doc...
+>>> jitterentropy-library-doc*: Running postcheck for jitterentropy-library-doc
+>>> jitterentropy-library*: Running postcheck for jitterentropy-library
+>>> jitterentropy-library*: Preparing package jitterentropy-library...
+>>> jitterentropy-library*: Stripping binaries
+>>> jitterentropy-library-dev*: Scanning shared objects
+>>> jitterentropy-library-doc*: Scanning shared objects
+>>> jitterentropy-library*: Scanning shared objects
+>>> jitterentropy-library-dev*: Tracing dependencies...
+	jitterentropy-library=3.4.1-r2
+>>> jitterentropy-library-dev*: Package size: 29.5 KB
+>>> jitterentropy-library-dev*: Compressing data...
+>>> jitterentropy-library-dev*: Create checksum...
+pigz: not found
+>>> jitterentropy-library-dev*: Create jitterentropy-library-dev-3.4.1-r2.apk
+>>> jitterentropy-library-doc*: Tracing dependencies...
+>>> jitterentropy-library-doc*: Package size: 4.1 KB
+>>> jitterentropy-library-doc*: Compressing data...
+>>> jitterentropy-library-doc*: Create checksum...
+pigz: not found
+>>> jitterentropy-library-doc*: Create jitterentropy-library-doc-3.4.1-r2.apk
+>>> jitterentropy-library*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> jitterentropy-library*: Package size: 37.8 KB
+>>> jitterentropy-library*: Compressing data...
+>>> jitterentropy-library*: Create checksum...
+pigz: not found
+>>> jitterentropy-library*: Create jitterentropy-library-3.4.1-r2.apk
+>>> jitterentropy-library: Build complete at Sun, 18 May 2025 09:25:40 +0000 elapsed time 0h 0m 4s
+>>> jitterentropy-library: Cleaning up srcdir
+>>> jitterentropy-library: Cleaning up pkgdir
+>>> jitterentropy-library: Uninstalling dependencies...
+(1/1) Purging .makedepends-jitterentropy-library (20250518.092538)
+OK: 261 MiB in 81 packages
+>>> jitterentropy-library: Updating the main/x86_64 repository index...
+>>> jitterentropy-library: Signing the index...
+pigz: not found

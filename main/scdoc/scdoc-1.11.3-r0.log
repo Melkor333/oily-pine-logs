@@ -1,0 +1,127 @@
+pigz: not found
+>>> scdoc: Building main/scdoc 1.11.3-r0 (using abuild 3.14.1-r4) started Sat, 17 May 2025 20:54:47 +0000
+>>> scdoc: Validating /home/packager/aports/main/scdoc/APKBUILD...
+>>> scdoc: Analyzing dependencies...
+>>> scdoc: Installing for build: build-base
+(1/1) Installing .makedepends-scdoc (20250517.205448)
+OK: 260 MiB in 82 packages
+>>> scdoc: Cleaning up srcdir
+>>> scdoc: Cleaning up pkgdir
+>>> scdoc: Cleaning up tmpdir
+>>> scdoc: Fetching scdoc-1.11.3.tar.gz::https://git.sr.ht/~sircmpwn/scdoc/archive/1.11.3.tar.gz
+Connecting to git.sr.ht (46.23.81.155:443)
+saving to '/var/cache/distfiles/scdoc-1.11.3.tar.gz.part'
+scdoc-1.11.3.tar.gz. 100% |********************************| 12768  0:00:00 ETA
+'/var/cache/distfiles/scdoc-1.11.3.tar.gz.part' saved
+>>> scdoc: Fetching scdoc-1.11.3.tar.gz::https://git.sr.ht/~sircmpwn/scdoc/archive/1.11.3.tar.gz
+>>> scdoc: Checking sha512sums...
+scdoc-1.11.3.tar.gz: OK
+>>> scdoc: Unpacking /var/cache/distfiles/scdoc-1.11.3.tar.gz...
+gcc -std=c99 -pedantic -c -o .build/main.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/main.c
+gcc -std=c99 -pedantic -c -o .build/string.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/string.c
+gcc -std=c99 -pedantic -c -o .build/utf8_chsize.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/utf8_chsize.c
+gcc -std=c99 -pedantic -c -o .build/utf8_decode.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/utf8_decode.c
+gcc -std=c99 -pedantic -c -o .build/utf8_encode.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/utf8_encode.c
+gcc -std=c99 -pedantic -c -o .build/utf8_fgetch.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/utf8_fgetch.c
+gcc -std=c99 -pedantic -c -o .build/utf8_fputch.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/utf8_fputch.c
+gcc -std=c99 -pedantic -c -o .build/utf8_size.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/utf8_size.c
+gcc -std=c99 -pedantic -c -o .build/util.o -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DVERSION='"1.11.3"' -Wall -Wextra -Werror -Wno-unused-parameter -Iinclude src/util.c
+sed -e 's:@prefix@:/usr:g' -e 's:@version@:1.11.3:g' < scdoc.pc.in > scdoc.pc
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -static -o scdoc .build/main.o .build/string.o .build/utf8_chsize.o .build/utf8_decode.o .build/utf8_encode.o .build/utf8_fgetch.o .build/utf8_fputch.o .build/utf8_size.o .build/util.o
+./scdoc < scdoc.1.scd > scdoc.1
+./scdoc < scdoc.5.scd > scdoc.5
+== test/line-breaks
+Handles line break                                OK
+Disallows empty line after line break             OK
+Leave single +                                    OK
+Leave double + without newline                    OK
+Handles underlined text following line break      OK
+Suppresses sentence spacing                       OK
+
+== test/heading
+Fail on ###                                       OK
+Expects a space after #                           OK
+Emits a new section                               OK
+Emits a new subsection                            OK
+
+== test/comments
+Ignore comments                                   OK
+Fail on invalid comments                          OK
+
+== test/tables
+Handles empty table cells                         OK
+Disallows differing row lengths                   OK
+
+== test/inline-formatting
+Disallows nested formatting                       OK
+Ignores underscores in words                      OK
+Ignores underscores in underlined words           OK
+Ignores underscores in bolded words               OK
+Emits bold text                                   OK
+Emits underlined text                             OK
+Handles escaped characters                        OK
+
+== test/preamble
+Expects a name                                    OK
+Expects a section                                 OK
+Expects a section within the parentheses          OK
+Expects name to alphanumeric                      OK
+Expects section to start with a number            OK
+Expects section to be legit                       OK
+Expects section to be legit with subsection       OK
+Expects section not to contain a space            OK
+Accepts a valid preamble                          OK
+Accepts a valid preamble with subsection          OK
+Writes the appropriate header                     OK
+Preserves dashes                                  OK
+Handles extra footer field                        OK
+Handles both extra fields                         OK
+Emits empty footer correctly                      OK
+Supports $SOURCE_DATE_EPOCH                       OK
+
+== test/indent
+Indents indented text                             OK
+Deindents following indented text                 OK
+Disallows multi-step indents                      OK
+Allows indentation changes > 1 in literal blocks  OK
+Allows multi-step dedents                         OK
+Allows indented literal blocks                    OK
+Disallows dedenting in literal blocks             OK
+
+>>> scdoc: Entering fakeroot...
+mkdir -p /home/packager/aports/main/scdoc/pkg/scdoc//usr/bin /home/packager/aports/main/scdoc/pkg/scdoc//usr/share/man/man1 /home/packager/aports/main/scdoc/pkg/scdoc//usr/share/man/man5 /home/packager/aports/main/scdoc/pkg/scdoc//usr/share/pkgconfig
+install -m755 scdoc /home/packager/aports/main/scdoc/pkg/scdoc//usr/bin/scdoc
+install -m644 scdoc.1 /home/packager/aports/main/scdoc/pkg/scdoc//usr/share/man/man1/scdoc.1
+install -m644 scdoc.5 /home/packager/aports/main/scdoc/pkg/scdoc//usr/share/man/man5/scdoc.5
+install -m644 scdoc.pc /home/packager/aports/main/scdoc/pkg/scdoc//usr/share/pkgconfig/scdoc.pc
+>>> scdoc-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/scdoc/pkg/scdoc-doc/usr/share/man'
+>>> scdoc-doc*: Preparing subpackage scdoc-doc...
+>>> scdoc-doc*: Running postcheck for scdoc-doc
+>>> scdoc*: Running postcheck for scdoc
+>>> scdoc*: Preparing package scdoc...
+>>> scdoc*: Stripping binaries
+>>> scdoc-doc*: Scanning shared objects
+>>> scdoc*: Scanning shared objects
+>>> scdoc-doc*: Tracing dependencies...
+>>> scdoc-doc*: Package size: 3.0 KB
+>>> scdoc-doc*: Compressing data...
+>>> scdoc-doc*: Create checksum...
+pigz: not found
+>>> scdoc-doc*: Create scdoc-doc-1.11.3-r0.apk
+>>> scdoc*: Tracing dependencies...
+	pkgconfig
+>>> scdoc*: Package size: 62.1 KB
+>>> scdoc*: Compressing data...
+>>> scdoc*: Create checksum...
+pigz: not found
+>>> scdoc*: Create scdoc-1.11.3-r0.apk
+>>> scdoc: Build complete at Sat, 17 May 2025 20:54:50 +0000 elapsed time 0h 0m 3s
+>>> scdoc: Cleaning up srcdir
+>>> scdoc: Cleaning up pkgdir
+>>> scdoc: Uninstalling dependencies...
+(1/1) Purging .makedepends-scdoc (20250517.205448)
+OK: 260 MiB in 81 packages
+>>> scdoc: Updating the main/x86_64 repository index...
+>>> scdoc: Signing the index...
+pigz: not found

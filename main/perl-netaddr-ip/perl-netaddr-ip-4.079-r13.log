@@ -1,0 +1,547 @@
+pigz: not found
+>>> perl-netaddr-ip: Building main/perl-netaddr-ip 4.079-r13 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:14:27 +0000
+>>> perl-netaddr-ip: Validating /home/packager/aports/main/perl-netaddr-ip/APKBUILD...
+>>> perl-netaddr-ip: Analyzing dependencies...
+>>> perl-netaddr-ip: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-netaddr-ip (20250518.071429)
+(6/8) Installing perl-error (0.17029-r2)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 306 MiB in 89 packages
+>>> perl-netaddr-ip: Cleaning up srcdir
+>>> perl-netaddr-ip: Cleaning up pkgdir
+>>> perl-netaddr-ip: Cleaning up tmpdir
+>>> perl-netaddr-ip: Fetching https://cpan.metacpan.org/authors/id/M/MI/MIKER/NetAddr-IP-4.079.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/NetAddr-IP-4.079.tar.gz.part'
+NetAddr-IP-4.079.tar 100% |********************************|  208k  0:00:00 ETA
+'/var/cache/distfiles/NetAddr-IP-4.079.tar.gz.part' saved
+>>> perl-netaddr-ip: Fetching https://cpan.metacpan.org/authors/id/M/MI/MIKER/NetAddr-IP-4.079.tar.gz
+>>> perl-netaddr-ip: Checking sha512sums...
+NetAddr-IP-4.079.tar.gz: OK
+>>> perl-netaddr-ip: Unpacking /var/cache/distfiles/NetAddr-IP-4.079.tar.gz...
+
+This build requires a C compiler by default except on Windows where
+the Pure Perl version is mandatory. The Pure Perl version, which does
+not require compilation of XS code, can be used by invoking this as:
+
+  perl Makefile.PL -noxs
+
+
+======================================================================
+W A R N I N G - Please do read below if you have legacy code
+======================================================================
+
+Versions 3.21 and above of NetAddr::IP, include hooks for the Storable
+class that are incompatible with the old (automatic) method of storing
+data. To regain backwards compatibility, the module must be use()d as
+
+    use NetAddr::IP ':old_storable';
+
+which will disable the new hooks and revert back to the old ways.
+
+If you do not use Storable along with NetAddr::IP, or just don't know
+what this all means, most likely you're safe to go ahead.
+
+Versions before 3.25 recognized by default IP addresses as returned by
+inet_aton. This is no longer the default. To enable this behavior
+again, the module must be use()d as
+
+    use NetAddr::IP ':aton';
+
+Versions before 4.008 recognized the above syntax. This behavior is
+fundamentally broken, is DEPRECATED and WILL BE REMOVED in version 5.0
+Use this method to create new objects from 'aton's
+
+    $ip = new_from_aton NetAddr::IP(inet_aton('1.2.3.4'))
+
+Checking if your kit is complete...
+Looks good
+Checking if your kit is complete...
+Looks good
+Testing if you have a C compiler and the needed header files....
+building for linux
+gcc compile.c -o compile.output
+You have a working compiler.
+checking for gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking for an ANSI C-conforming const... yes
+checking for int32_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint8_t... yes
+checking whether gcc needs -traditional... no
+checking for library containing gethostbyname... none required
+checking for library containing inet_aton... none required
+checking for library containing inet_pton... none required
+checking for library containing inet_addr... none required
+checking whether byte ordering is bigendian... no
+checking for uint8_t... yes
+checking size of uint8_t... 1
+checking for uint16_t... yes
+checking size of uint16_t... 2
+checking for uint32_t... yes
+checking size of uint32_t... 4
+checking for u_int8_t... yes
+checking size of u_int8_t... 1
+checking for u_int16_t... yes
+checking size of u_int16_t... 2
+checking for u_int32_t... yes
+checking size of u_int32_t... 4
+configure.gcc: creating ./config.status
+config.status: creating config.h
+Checking if your kit is complete...
+Looks good
+Writing MYMETA.yml and MYMETA.json
+Writing MYMETA.yml and MYMETA.json
+Generating a Unix-style Makefile
+Writing Makefile for NetAddr::IP
+Writing MYMETA.yml and MYMETA.json
+make[1]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+make[2]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+Running Mkbootstrap for Util ()
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util/typemap'  Util.xs > Util.xsc
+cp IP.pm blib/lib/NetAddr/IP.pm
+AutoSplitting blib/lib/NetAddr/IP.pm (blib/lib/auto/NetAddr/IP)
+cp Lite.pm ../blib/lib/NetAddr/IP/Lite.pm
+chmod 644 "Util.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Util.bs ../../blib/arch/auto/NetAddr/IP/Util/Util.bs 644
+cp Util_IS.pm ../../blib/lib/NetAddr/IP/Util_IS.pm
+cp lib/NetAddr/IP/UtilPP.pm ../../blib/lib/NetAddr/IP/UtilPP.pm
+AutoSplitting ../../blib/lib/NetAddr/IP/UtilPP.pm (../../blib/lib/auto/NetAddr/IP/UtilPP)
+cp lib/NetAddr/IP/InetBase.pm ../../blib/lib/NetAddr/IP/InetBase.pm
+AutoSplitting ../../blib/lib/NetAddr/IP/InetBase.pm (../../blib/lib/auto/NetAddr/IP/InetBase)
+cp Util.pm ../../blib/lib/NetAddr/IP/Util.pm
+AutoSplitting ../../blib/lib/NetAddr/IP/Util.pm (../../blib/lib/auto/NetAddr/IP/Util)
+mv Util.xsc Util.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.53\" -DXS_VERSION=\"1.53\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Util.c
+Util.xs: In function 'XS_NetAddr__IP__Util_comp128':
+Util.xs:501:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  501 |           croak("Bad arg length for %s%s, length is %d, should be %d",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  502 |                 "NetAddr::IP::Util::",subname,len *8,128);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_add128':
+Util.xs:555:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  555 |           croak("Bad arg length for %s%s, length is %d, should be %d",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  556 |                 "NetAddr::IP::Util::",subname,len *8,128);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_addconst':
+Util.xs:591:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  591 |           croak("Bad arg length for %s, length is %d, should be %d",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  592 |                 "NetAddr::IP::Util::addconst",len *8,128);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_hasbits':
+Util.xs:615:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  615 |           croak("Bad arg length for %s%s, length is %d, should be %d",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  616 |                 "NetAddr::IP::Util::",subname,len *8,128);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_bin2bcd':
+Util.xs:636:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  636 |             croak("Bad arg length for %s, length is %d, should be %d",
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  637 |                 "NetAddr::IP::Util::bin2bcd",len *8,128);
+      |                                              ~~~~~~
+      |                                                  |
+      |                                                  STRLEN {aka long unsigned int}
+Util.xs:644:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  644 |             croak("Bad arg length for %s, length is %d, should be %d",
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  645 |                 "NetAddr::IP::Util::bin2bcdn",len *8,128);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs:651:19: warning: format '%d' expects argument of type 'int', but argument 3 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  651 |             croak("Bad arg length for %s, length is %d, should %d digits or less",
+      |                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  652 |                 "NetAddr::IP::Util::bcdn2txt",len *2,40);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_bcd2bin':
+Util.xs:684:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  684 |           croak("Bad arg length for %s%s, length is %d, should be %d digits or less",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  685 |                 "NetAddr::IP::Util::",subname,len,40);
+      |                                               ~~~
+      |                                               |
+      |                                               STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_notcontiguous':
+Util.xs:732:17: warning: format '%d' expects argument of type 'int', but argument 3 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  732 |           croak("Bad arg length for %s, length is %d, should be %d",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  733 |                 "NetAddr::IP::Util::countbits",len *8,128);
+      |                                                ~~~~~~
+      |                                                    |
+      |                                                    STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_ipv4to6':
+Util.xs:761:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  761 |           croak("Bad arg length for %s%s, length is %d, should be 32",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  762 |                 "NetAddr::IP::Util::",subname,len *8);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+Util.xs: In function 'XS_NetAddr__IP__Util_ipanyto6':
+Util.xs:797:17: warning: format '%d' expects argument of type 'int', but argument 4 has type 'STRLEN' {aka 'long unsigned int'} [-Wformat=]
+  797 |           croak("Bad arg length for %s%s, length is %d, should be 32 or 128",
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  798 |                 "NetAddr::IP::Util::",subname,len *8);
+      |                                               ~~~~~~
+      |                                                   |
+      |                                                   STRLEN {aka long unsigned int}
+rm -f ../../blib/arch/auto/NetAddr/IP/Util/Util.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Util.o  -o ../../blib/arch/auto/NetAddr/IP/Util/Util.so  \
+      \
+  
+chmod 755 ../../blib/arch/auto/NetAddr/IP/Util/Util.so
+Manifying 3 pod documents
+make[2]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+Manifying 1 pod document
+make[1]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+Manifying 1 pod document
+make[1]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+make[2]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Util.bs ../../blib/arch/auto/NetAddr/IP/Util/Util.bs 644
+Manifying 3 pod documents
+make[2]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+Manifying 1 pod document
+make[1]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+make[1]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+make[2]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Util.bs ../../blib/arch/auto/NetAddr/IP/Util/Util.bs 644
+Manifying 3 pod documents
+make[2]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+make[2]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Util.bs ../../blib/arch/auto/NetAddr/IP/Util/Util.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, '../../blib/lib', '../../blib/arch')" t/*.t
+t/4to6.t .................... ok
+t/add128.t .................. ok
+t/addconst.t ................ ok
+
+	Socket does not have AF_INET6, Socket6 not present
+	guessed AF_INET6 for 'linux' = 10
+t/af_inet6.t ................ ok
+t/anyto6.t .................. ok
+t/badd.t .................... ok
+t/bcd2bin.t ................. ok
+t/bcdn2bin.t ................ ok
+t/bin.t ..................... ok
+t/binet_n2ad.t .............. ok
+t/binet_n2dx.t .............. ok
+t/binet_ntoa.t .............. ok
+t/binet_pton.t .............. ok
+t/bipv4_inet.t .............. ok
+t/bipv6_any2n.t ............. ok
+t/bipv6func.t ............... ok
+t/bisIPv4.t ................. ok
+t/bpackzeros.t .............. ok
+t/comp128.t ................. ok
+t/croak.t ................... ok
+t/hasbits.t ................. ok
+t/inet_4map6.t .............. ok
+t/inet_n2ad.t ............... ok
+t/inet_n2dx.t ............... ok
+t/inet_pton.t ............... ok
+t/ipv4_inet.t ............... ok
+t/ipv6_any2n.t .............. ok
+t/ipv6_ntoa.t ............... ok
+t/ipv6func.t ................ ok
+t/ipv6to4.t ................. ok
+t/isIPv4.t .................. ok
+t/leftshift.t ............... ok
+	mode CC XS
+t/mode.t .................... ok
+t/naip_gethostbyname.t ...... ok
+t/no6_naip_gethostbyname.t .. ok
+t/notcontiguous.t ........... ok
+t/packzeros.t ............... ok
+t/simple_pack.t ............. ok
+t/sub128.t .................. ok
+All tests successful.
+Files=39, Tests=1528,  2 wallclock secs ( 0.16 usr  0.04 sys +  0.87 cusr  0.17 csys =  1.24 CPU)
+Result: PASS
+make[2]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, '../blib/lib', '../blib/arch')" t/*.t
+t/addr.t .............. ok
+t/aton.t .............. ok
+t/bigint.t ............ ok
+t/bignums.t ........... ok
+t/bin_ips.t ........... ok
+t/bits.t .............. ok
+t/broadcast.t ......... ok
+t/bug62521.t .......... ok
+t/bug75976.t .......... ok
+t/cidr.t .............. ok
+t/constants.t ......... ok
+t/contains.t .......... ok
+t/copy.t .............. ok
+t/firstlast.t ......... ok
+t/ipv4FFFF.t .......... ok
+t/is_local.t .......... ok
+t/lemasklen.t ......... ok
+t/loops.t ............. ok
+t/lower.t ............. ok
+t/mask.t .............. ok
+t/masklen.t ........... ok
+t/netaddr.t ........... ok
+t/network.t ........... ok
+t/new-nth.t ........... ok
+t/new-num.t ........... ok
+t/nofqdn.t ............ ok
+t/numeric.t ........... ok
+t/old-nth.t ........... ok
+t/old-num.t ........... ok
+t/over-qq.t ........... ok
+t/over_comp.t ......... ok
+t/over_copy.t ......... ok
+t/over_equal.t ........ ok
+t/over_math.t ......... ok
+t/overminus.t ......... ok
+t/pathological.t ...... ok
+t/range.t ............. ok
+t/relops.t ............ ok
+t/rfc_1918.t .......... ok
+t/v4-aton.t ........... ok
+t/v4-badnm.t .......... ok
+t/v4-base.t ........... ok
+t/v4-basem.t .......... ok
+t/v4-cidr.t ........... ok
+t/v4-cnew.t ........... ok
+t/v4-contains.t ....... ok
+t/v4-last.t ........... ok
+t/v4-new-first.t ...... ok
+t/v4-new.t ............ ok
+t/v4-new_from_aton.t .. ok
+t/v4-no_octal.t ....... ok
+t/v4-num.t ............ ok
+t/v4-numeric.t ........ ok
+t/v4-old-first.t ...... ok
+t/v4-range.t .......... ok
+t/v4-snew.t ........... ok
+# 
+# 	The following 8 tests involve resolving (hopefully)
+# 	non-existant names. This may take a while.
+t/v4-wnew.t ........... ok
+t/v4_new_cis.t ........ ok
+t/v6-cnew-uri.t ....... ok
+t/v6-cnew.t ........... ok
+t/v6-contains.t ....... ok
+t/v6-inc.t ............ ok
+t/v6-new-base-uri.t ... ok
+t/v6-new-base.t ....... ok
+t/v6-new_cis6_base.t .. ok
+t/v6-new_cis_base.t ... ok
+t/v6-num.t ............ ok
+t/v6-numeric-uri.t .... ok
+t/v6-numeric.t ........ ok
+t/v6-old-base-uri.t ... ok
+t/v6-old-base.t ....... ok
+t/version.t ........... ok
+t/within.t ............ ok
+All tests successful.
+Files=73, Tests=3651,  4 wallclock secs ( 0.36 usr  0.09 sys +  3.70 cusr  0.55 csys =  4.70 CPU)
+Result: PASS
+make[1]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/canon.t .......... ok
+t/constants.t ...... ok
+t/full.t ........... ok
+t/full6-uri.t ...... ok
+t/full6.t .......... ok
+t/imhoff.t ......... ok
+t/loops.t .......... ok
+t/lower.t .......... ok
+t/masklen.t ........ ok
+t/new-store.t ...... ok
+t/nofqdn.t ......... ok
+t/old-store.t ...... ok
+t/over-arr.t ....... ok
+t/over-qq.t ........ ok
+t/relops.t ......... ok
+t/rfc3021.t ........ ok
+t/short.t .......... ok
+t/splitref.t ....... ok
+t/v4-coalesce.t .... ok
+t/v4-compact.t ..... ok
+t/v4-compplus.t .... ok
+t/v4-hostenum.t .... ok
+t/v4-re.t .......... ok
+t/v4-split-bulk.t .. ok
+t/v4-split-list.t .. ok
+t/v4-splitplan.t ... ok
+t/v4-sprefix.t ..... ok
+t/v4-xprefix.t ..... ok
+t/v6-re.t .......... ok
+t/v6-split-bulk.t .. ok
+t/v6-splitplan.t ... ok
+t/wildcard.t ....... ok
+All tests successful.
+Files=32, Tests=9538,  6 wallclock secs ( 0.55 usr  0.10 sys +  4.81 cusr  0.38 csys =  5.84 CPU)
+Result: PASS
+>>> perl-netaddr-ip: Entering fakeroot...
+make[1]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+make[2]: Entering directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Util.bs ../../blib/arch/auto/NetAddr/IP/Util/Util.bs 644
+Manifying 3 pod documents
+make[2]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite/Util'
+Manifying 1 pod document
+make[1]: Leaving directory '/home/packager/aports/main/perl-netaddr-ip/src/NetAddr-IP-4.079/Lite'
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/Util/Util.so
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/_compV6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/wildcard.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/re6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/_compact_v6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/_splitref.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/canon.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/do_prefix.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/prefix.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/short.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/nprefix.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/re.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/hostenum.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/mod_version.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/autosplit.ix
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/compactref.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/coalesce.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/_splitplan.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/sub128.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/ipv6to4.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/bcdn2txt.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/comp128.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/add128.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/simple_pack.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_sa128.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_128x2.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_128x10.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/addconst.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/bin2bcd.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_bcd2bin.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/maskanyto6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/notcontiguous.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/hasbits.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/autosplit.ix
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/mask4to6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/ipv4to6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_bcdcheck.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/bcd2bin.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/shiftleft.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/bin2bcdn.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/bcdn2bin.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_bin2bcdn.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/ipanyto6.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/_deadlen.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/UtilPP/slowadd128.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/_packzeros.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/inet_ntoa.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/inet_n2dx.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/_inet_pton.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/ipv6_ntoa.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/autosplit.ix
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/inet_any2n.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/ipv6_aton.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/_inet_ntop.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/InetBase/inet_n2ad.al
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/auto/NetAddr/IP/Util/autosplit.ix
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/NetAddr/IP.pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/NetAddr/IP/Util_IS.pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/NetAddr/IP/InetBase.pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/NetAddr/IP/Util.pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/NetAddr/IP/Lite.pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/lib/perl5/vendor_perl/NetAddr/IP/UtilPP.pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/share/man/man3/NetAddr::IP::InetBase.3pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/share/man/man3/NetAddr::IP::UtilPP.3pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/share/man/man3/NetAddr::IP::Util.3pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/share/man/man3/NetAddr::IP.3pm
+Installing /home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip/usr/share/man/man3/NetAddr::IP::Lite.3pm
+>>> perl-netaddr-ip-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-netaddr-ip/pkg/perl-netaddr-ip-doc/usr/share/man'
+>>> perl-netaddr-ip-doc*: Preparing subpackage perl-netaddr-ip-doc...
+>>> perl-netaddr-ip-doc*: Running postcheck for perl-netaddr-ip-doc
+>>> perl-netaddr-ip*: Running postcheck for perl-netaddr-ip
+>>> perl-netaddr-ip*: Preparing package perl-netaddr-ip...
+>>> perl-netaddr-ip*: Stripping binaries
+>>> perl-netaddr-ip-doc*: Scanning shared objects
+>>> perl-netaddr-ip*: Scanning shared objects
+>>> perl-netaddr-ip-doc*: Tracing dependencies...
+>>> perl-netaddr-ip-doc*: Package size: 31.1 KB
+>>> perl-netaddr-ip-doc*: Compressing data...
+>>> perl-netaddr-ip-doc*: Create checksum...
+pigz: not found
+>>> perl-netaddr-ip-doc*: Create perl-netaddr-ip-doc-4.079-r13.apk
+>>> perl-netaddr-ip*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-netaddr-ip*: Package size: 217.4 KB
+>>> perl-netaddr-ip*: Compressing data...
+>>> perl-netaddr-ip*: Create checksum...
+pigz: not found
+>>> perl-netaddr-ip*: Create perl-netaddr-ip-4.079-r13.apk
+>>> perl-netaddr-ip: Build complete at Sun, 18 May 2025 07:14:58 +0000 elapsed time 0h 0m 31s
+>>> perl-netaddr-ip: Cleaning up srcdir
+>>> perl-netaddr-ip: Cleaning up pkgdir
+>>> perl-netaddr-ip: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-netaddr-ip (20250518.071429)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17029-r2)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-netaddr-ip: Updating the main/x86_64 repository index...
+>>> perl-netaddr-ip: Signing the index...
+pigz: not found

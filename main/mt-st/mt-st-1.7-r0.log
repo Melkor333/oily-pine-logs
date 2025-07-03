@@ -1,0 +1,80 @@
+pigz: not found
+>>> mt-st: Building main/mt-st 1.7-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:05:58 +0000
+>>> mt-st: Validating /home/packager/aports/main/mt-st/APKBUILD...
+>>> mt-st: Analyzing dependencies...
+>>> mt-st: Installing for build: build-base linux-headers
+(1/2) Installing linux-headers (6.14.2-r0)
+(2/2) Installing .makedepends-mt-st (20250518.090600)
+OK: 267 MiB in 83 packages
+>>> mt-st: Cleaning up srcdir
+>>> mt-st: Cleaning up pkgdir
+>>> mt-st: Cleaning up tmpdir
+>>> mt-st: Fetching mt-st-1.7.tar.gz::https://github.com/iustin/mt-st/archive/v1.7.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/mt-st-1.7.tar.gz.part'
+mt-st-1.7.tar.gz.par 100% |********************************| 41165  0:00:00 ETA
+'/var/cache/distfiles/mt-st-1.7.tar.gz.part' saved
+>>> mt-st: Fetching mt-st-1.7.tar.gz::https://github.com/iustin/mt-st/archive/v1.7.tar.gz
+>>> mt-st: Checking sha512sums...
+mt-st-1.7.tar.gz: OK
+>>> mt-st: Unpacking /var/cache/distfiles/mt-st-1.7.tar.gz...
+echo '#define VERSION "1.7"' > version.h
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -DDEFTAPE='"/dev/tape"' -o mt mt.c
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -DDEFTAPE='"/dev/tape"' -o stinit stinit.c
+>>> mt-st: Entering fakeroot...
+install -d /home/packager/aports/main/mt-st/pkg/mt-st/bin  /home/packager/aports/main/mt-st/pkg/mt-st/sbin /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man1 /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man8 /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/bash-completion/completions
+install mt /home/packager/aports/main/mt-st/pkg/mt-st/bin
+install -m 444 mt.1 /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man1
+install -m 644 mt-st.bash_completion /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/bash-completion/completions/mt-st
+(if [ -f /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man1/mt.1.gz ] ; then \
+  rm -f /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man1/mt.1.gz; gzip /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man1/mt.1; fi)
+install stinit /home/packager/aports/main/mt-st/pkg/mt-st/sbin
+install -m 444 stinit.8 /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man8
+(if [ -f /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man8/stinit.8.gz ] ; then \
+  rm -f /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man8/stinit.8.gz; gzip /home/packager/aports/main/mt-st/pkg/mt-st/usr/share/man/man8/stinit.8; fi)
+>>> mt-st-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/mt-st/pkg/mt-st-doc/usr/share/man'
+>>> mt-st-doc*: Preparing subpackage mt-st-doc...
+>>> mt-st-doc*: Running postcheck for mt-st-doc
+>>> mt-st-bash-completion*: Running split function bashcomp...
+'usr/share/bash-completion/completions' -> '/home/packager/aports/main/mt-st/pkg/mt-st-bash-completion/usr/share/bash-completion/completions'
+>>> mt-st-bash-completion*: Preparing subpackage mt-st-bash-completion...
+>>> mt-st-bash-completion*: Running postcheck for mt-st-bash-completion
+>>> mt-st*: Running postcheck for mt-st
+>>> WARNING: mt-st*: Packages must not put anything under /bin, use /usr/bin instead
+>>> WARNING: mt-st*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> mt-st*: Preparing package mt-st...
+>>> mt-st*: Stripping binaries
+>>> mt-st-bash-completion*: Scanning shared objects
+>>> mt-st-doc*: Scanning shared objects
+>>> mt-st*: Scanning shared objects
+>>> mt-st-bash-completion*: Tracing dependencies...
+>>> mt-st-bash-completion*: Package size: 1.0 KB
+>>> mt-st-bash-completion*: Compressing data...
+>>> mt-st-bash-completion*: Create checksum...
+pigz: not found
+>>> mt-st-bash-completion*: Create mt-st-bash-completion-1.7-r0.apk
+>>> mt-st-doc*: Tracing dependencies...
+>>> mt-st-doc*: Package size: 7.2 KB
+>>> mt-st-doc*: Compressing data...
+>>> mt-st-doc*: Create checksum...
+pigz: not found
+>>> mt-st-doc*: Create mt-st-doc-1.7-r0.apk
+>>> mt-st*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> mt-st*: Package size: 57.7 KB
+>>> mt-st*: Compressing data...
+>>> mt-st*: Create checksum...
+pigz: not found
+>>> mt-st*: Create mt-st-1.7-r0.apk
+>>> mt-st: Build complete at Sun, 18 May 2025 09:06:03 +0000 elapsed time 0h 0m 5s
+>>> mt-st: Cleaning up srcdir
+>>> mt-st: Cleaning up pkgdir
+>>> mt-st: Uninstalling dependencies...
+(1/2) Purging .makedepends-mt-st (20250518.090600)
+(2/2) Purging linux-headers (6.14.2-r0)
+OK: 261 MiB in 81 packages
+>>> mt-st: Updating the main/x86_64 repository index...
+>>> mt-st: Signing the index...
+pigz: not found

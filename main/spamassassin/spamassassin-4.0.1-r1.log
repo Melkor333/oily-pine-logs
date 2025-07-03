@@ -1,0 +1,567 @@
+pigz: not found
+>>> spamassassin: Building main/spamassassin 4.0.1-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:04:18 +0000
+>>> spamassassin: Validating /home/packager/aports/main/spamassassin/APKBUILD...
+>>> spamassassin: Analyzing dependencies...
+>>> spamassassin: Installing for build: build-base curl perl-dev perl-html-parser perl-digest-sha1 perl-netaddr-ip perl-net-dns perl-mail-dkim perl-mime-base64 perl-time-hires perl-libwww perl gpg re2c
+(1/54) Installing curl (8.13.0-r1)
+(2/54) Installing perl-utils (5.40.2-r0)
+(3/54) Installing perl-dev (5.40.2-r0)
+(4/54) Installing perl-html-tagset (3.24-r0)
+(5/54) Installing perl-clone (0.47-r0)
+(6/54) Installing perl-http-date (6.06-r0)
+(7/54) Installing perl-uri (5.28-r0)
+(8/54) Installing perl-io-html (1.004-r1)
+(9/54) Installing perl-encode-locale (1.05-r5)
+(10/54) Installing perl-lwp-mediatypes (6.04-r3)
+(11/54) Installing perl-http-message (7.00-r0)
+(12/54) Installing perl-html-parser (3.83-r0)
+(13/54) Installing perl-digest-sha1 (2.13-r19)
+(14/54) Installing perl-netaddr-ip (4.079-r13)
+(15/54) Installing perl-digest-md5 (2.59-r2)
+(16/54) Installing perl-digest-hmac (1.05-r0)
+(17/54) Installing perl-net-dns (1.49-r0)
+(18/54) Installing perl-timedate (2.33-r4)
+(19/54) Installing perl-mailtools (2.22-r0)
+(20/54) Installing perl-crypt-openssl-random (0.17-r0)
+(21/54) Installing perl-crypt-openssl-rsa (0.33-r4)
+(22/54) Installing perl-json (4.10-r1)
+(23/54) Installing perl-mail-authenticationresults (2.20231031-r0)
+(24/54) Installing perl-cryptx (0.084-r0)
+(25/54) Installing perl-mail-dkim (1.20240923-r0)
+(26/54) Installing perl-mime-base64 (3.16-r6)
+(27/54) Installing perl-time-hires (1.9764-r8)
+(28/54) Installing perl-http-cookies (6.11-r0)
+(29/54) Installing perl-net-http (6.23-r1)
+(30/54) Installing perl-file-listing (6.16-r0)
+(31/54) Installing perl-www-robotrules (6.02-r5)
+(32/54) Installing perl-http-negotiate (6.01-r5)
+(33/54) Installing perl-try-tiny (0.32-r0)
+(34/54) Installing perl-libwww (6.77-r0)
+(35/54) Installing libassuan (2.5.7-r0)
+(36/54) Installing pinentry (1.3.1-r0)
+Executing pinentry-1.3.1-r0.post-install
+(37/54) Installing libgcrypt (1.10.3-r1)
+(38/54) Installing gnupg-gpgconf (2.4.7-r0)
+(39/54) Installing nettle (3.10-r1)
+(40/54) Installing libffi (3.4.7-r0)
+(41/54) Installing libtasn1 (4.20.0-r0)
+(42/54) Installing p11-kit (0.25.5-r2)
+(43/54) Installing gnutls (3.8.8-r0)
+(44/54) Installing libksba (1.6.7-r0)
+(45/54) Installing gdbm (1.24-r0)
+(46/54) Installing libsasl (2.1.28-r8)
+(47/54) Installing libldap (2.6.8-r0)
+(48/54) Installing npth (1.8-r0)
+(49/54) Installing gnupg-dirmngr (2.4.7-r0)
+(50/54) Installing sqlite-libs (3.49.2-r0)
+(51/54) Installing gnupg-keyboxd (2.4.7-r0)
+(52/54) Installing gpg (2.4.7-r0)
+(53/54) Installing re2c (3.1-r0)
+(54/54) Installing .makedepends-spamassassin (20250523.180422)
+Executing busybox-1.37.0-r12.trigger
+OK: 589 MiB in 186 packages
+>>> spamassassin: Cleaning up srcdir
+>>> spamassassin: Cleaning up pkgdir
+>>> spamassassin: Cleaning up tmpdir
+>>> spamassassin: Fetching https://cpan.metacpan.org/authors/id/S/SI/SIDNEY/Mail-SpamAssassin-4.0.1.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6630k  100 6630k    0     0  39.9M      0 --:--:-- --:--:-- --:--:-- 40.2M
+>>> spamassassin: Fetching https://cpan.metacpan.org/authors/id/S/SI/SIDNEY/Mail-SpamAssassin-4.0.1.tar.gz
+>>> spamassassin: Checking sha512sums...
+Mail-SpamAssassin-4.0.1.tar.gz: OK
+spamd.initd: OK
+spamd.confd: OK
+spamd.crond: OK
+Mail-SpamAssassin.patch: OK
+fix-test.patch: OK
+taint.patch: OK
+>>> spamassassin: Unpacking /var/cache/distfiles/Mail-SpamAssassin-4.0.1.tar.gz...
+>>> spamassassin: Mail-SpamAssassin.patch
+patching file Makefile.PL
+Hunk #1 succeeded at 1108 (offset 58 lines).
+>>> spamassassin: fix-test.patch
+patching file t/sa_txrep.t
+>>> spamassassin: taint.patch
+patching file t/SATest.pm
+patching file t/config_tree_recurse.t
+patching file t/spamd_utf8.t
+What email address or URL should be used in the suspected-spam report
+text for users who want more information on your filter installation?
+(In particular, ISPs should change this to a local Postmaster contact)
+default text: [the administrator of that system] the administrator of that system
+
+NOTE: settings for "make test" are now controlled using "t/config.dist". 
+See that file if you wish to customize what tests are run, and how.
+
+checking module dependencies and their versions...
+
+***************************************************************************
+NOTE: the optional DB_File module is not installed.
+
+  Used to store data on-disk, for the Bayes-style logic and
+  auto-welcomelist.  *Much* more efficient than the other standard Perl
+  database packages.  Strongly recommended.
+
+
+***************************************************************************
+NOTE: the optional Net::LibIDN2 module is not installed.
+
+  Newer version of the optional Net::LibIDN module.
+  Provides mapping between Internationalized Domain Names (IDN) in
+  Unicode and ASCII-compatible encoding (ACE) for use in DNS and comparisions.
+  The module is optional, but without it Unicode IDN names found in mail will
+  not be suitable for DNS queries and welcome/blocklisting.
+
+
+***************************************************************************
+NOTE: the optional Net::LibIDN module is not installed.
+
+  Provides mapping between Internationalized Domain Names (IDN) in
+  Unicode and ASCII-compatible encoding (ACE) for use in DNS and comparisions.
+  The module is optional, but without it Unicode IDN names found in mail will
+  not be suitable for DNS queries and welcome/blocklisting.
+
+
+***************************************************************************
+NOTE: the optional Mail::SPF module is not installed.
+
+  Used to check DNS Sender Policy Framework (SPF) records to fight email
+  address forgery and make it easier to identify spams.
+
+
+***************************************************************************
+NOTE: the optional MaxMind::DB::Reader module is not installed.
+
+  Used by the RelayCountry plugin (not enabled by default) to
+  determine the domain country codes of each relay in the path of an email. 
+  Also used by the URILocalBL plugin (not enabled by default) to provide ISP
+  and Country code based filtering.
+
+
+***************************************************************************
+NOTE: the optional MaxMind::DB::Reader::XS module is not installed.
+
+  Recommended much faster version of the optional MaxMind::DB::Reader module,
+  used by RelayCountry / URILocalBL plugins.
+
+
+***************************************************************************
+NOTE: the optional Geo::IP module is not installed.
+
+  Used by the RelayCountry plugin (not enabled by default) to
+  determine the domain country codes of each relay in the path of an email. 
+  Also used by the URILocalBL plugin (not enabled by default) to provide ISP
+  and Country code based filtering.
+
+
+***************************************************************************
+NOTE: the optional IP::Country::DB_File module is not installed.
+
+  Used by the RelayCountry plugin (not enabled by default) to
+  determine the domain country codes of each relay in the path of an email. 
+  Also used by the URILocalBL plugin (not enabled by default) to provide
+  Country code based filtering.
+
+
+***************************************************************************
+NOTE: the optional IP::Country::Fast module is not installed.
+
+  Used by the RelayCountry plugin (not enabled by default) to
+  determine the domain country codes of each relay in the path of an email. 
+  Also used by the URILocalBL plugin (not enabled by default) to provide
+  Country code based filtering.
+
+
+***************************************************************************
+NOTE: the optional Razor2 module is not installed,
+minimum required version is 2.61.
+
+  Used to check message signatures against Vipul's Razor collaborative
+  filtering network. Razor has a large number of dependencies on CPAN
+  modules. Feel free to skip installing it, if this makes you nervous;
+  SpamAssassin will still work well without it.
+
+  More info on installing and using Razor can be found
+  at http://wiki.apache.org/spamassassin/InstallingRazor .
+
+
+***************************************************************************
+NOTE: the optional IO::Socket::INET6 module is not installed.
+
+  This module is a deprecated alternative to IO::Socket::IP.
+  Spamd, as well some underlying modules, will fall back to using
+  IO::Socket::INET6 if IO::Socket::IP is unavailable. One or the other
+  module is required to support IPv6 (e.g. in spamd/spamc protocol,
+  for DNS lookups or in plugins like DCC). Some plugins or underlying
+  modules may still require IO::Socket::INET6 for IPv6 support even
+  if IO::Socket::IP is available.
+
+
+***************************************************************************
+NOTE: the optional IO::Socket::SSL module is not installed,
+minimum required version is 1.76.
+
+  If you wish to use SSL encryption to communicate between spamc and
+  spamd (the --ssl option to spamd), you need to install this
+  module. (You will need the OpenSSL libraries and use the
+  ENABLE_SSL="yes" argument to Makefile.PL to build and run an SSL
+  compatible spamc.)
+
+
+***************************************************************************
+NOTE: the optional DBI module is not installed.
+
+  If you intend to use SpamAssassin with an SQL database backend for
+  user configuration data, Bayes storage, or other storage, you will need
+  to have these installed; both the basic DBI module and the DBD driver for
+  your database.
+
+
+***************************************************************************
+NOTE: the optional DBD::SQLite module is not installed,
+minimum required version is 1.59.
+
+  If you intend to use SpamAssassin with SQLite as the SQL database
+  backend for the DBI module, this is the DBD driver required. Version 1.59_01
+  or later is needed to provide SQLite 3.25.0 or later.
+
+
+***************************************************************************
+NOTE: the optional LWP::Protocol::https module is not installed.
+
+  The "sa-update" program can use this module to make HTTPS requests.
+  Also used by DecodeShortURLs plugin.
+
+
+***************************************************************************
+NOTE: the optional Encode::Detect::Detector module is not installed.
+
+  If normalize_charset decoding of message parts from their
+  declared character set into Unicode fails, the Encode::Detect::Detector
+  module (when available) may be consulted to provide an alternative guess
+  on a character set of a problematic message part.
+
+
+***************************************************************************
+NOTE: the optional Net::Patricia module is not installed,
+minimum required version is 1.16.
+
+  If this module is available, it will be used for IP address
+  lookups in tables internal_networks, trusted_networks, msa_networks and
+  uri_local_cidr.  Recommended when a number of entries in these tables is
+  large, i.e.  in hundreds or thousands.  However, in case of overlapping
+  (or conflicting) networks in these tables, lookup results may differ as
+  Net::Patricia finds a tightest-matching entry, while a sequential
+  NetAddr::IP search finds a first-matching entry.  So when overlapping
+  network ranges are given, specifying more specific subnets (longest
+  netmask) first, followed by wider subnets ensures predictable results.
+
+
+***************************************************************************
+NOTE: the optional Net::CIDR::Lite module is not installed.
+
+  If this module is available, then dash separated IP range format
+  "192.168.1.1-192.168.255.255" can be used for internal_networks,
+  trusted_networks, msa_networks and uri_local_cidr.
+
+
+***************************************************************************
+NOTE: the optional BSD::Resource module is not installed.
+
+  BSD::Resource provides BSD process resource limit and priority 
+  functions.  It is used by the optional ResourceLimits Plugin.
+
+
+***************************************************************************
+NOTE: the optional Archive::Zip module is not installed.
+
+  Archive::Zip provides an interface to ZIP archive files.
+  It is used by the optional OLEVBMacro Plugin.
+
+
+***************************************************************************
+NOTE: the optional IO::String module is not installed.
+
+  IO::String emulates file interface for in-core strings.
+  It is used by the optional OLEVBMacro Plugin.
+
+
+***************************************************************************
+NOTE: the optional Email::Address::XS module is not installed.
+
+  Email::Address::XS is used to parse email addresses from header
+  fields like To/From/cc, per RFC 5322. If installed, it may additionally
+  be used by internal parser to process complex lists.
+
+
+***************************************************************************
+NOTE: the optional Mail::DMARC module is not installed.
+
+  Mail::DMARC is used by the optional DMARC plugin.
+
+
+***************************************************************************
+NOTE: the optional Devel::Cycle module is not installed.
+
+  Devel::Cycle is used in make test in tests that will be harmelessly
+  skipped if it is not available
+
+
+***************************************************************************
+NOTE: the optional Text::Diff module is not installed.
+
+  Text::Diff is used in make test in tests that will be harmelessly
+  skipped if it is not available
+
+checking binary dependencies and their versions...
+Warning: prerequisite Perl::Critic::Policy::Perlsecret 0 not found.
+Warning: prerequisite Perl::Critic::Policy::TestingAndDebugging::ProhibitNoStrict 0 not found.
+dependency check complete...
+
+optional module missing: DB_File
+optional module missing: Net::LibIDN2
+optional module missing: Net::LibIDN
+optional module missing: Mail::SPF
+optional module missing: MaxMind::DB::Reader
+optional module missing: MaxMind::DB::Reader::XS
+optional module missing: Geo::IP
+optional module missing: IP::Country::DB_File
+optional module missing: IP::Country::Fast
+optional module missing: Razor2
+optional module missing: IO::Socket::INET6
+optional module missing: IO::Socket::SSL
+optional module missing: DBI
+optional module missing: DBD::SQLite
+optional module missing: LWP::Protocol::https
+optional module missing: Encode::Detect::Detector
+optional module missing: Net::Patricia
+optional module missing: Net::CIDR::Lite
+optional module missing: BSD::Resource
+optional module missing: Archive::Zip
+optional module missing: IO::String
+optional module missing: Email::Address::XS
+optional module missing: Mail::DMARC
+optional module missing: Devel::Cycle
+optional module missing: Text::Diff
+
+warning: some functionality may not be available,
+please read the above report before continuing!
+
+Checking if your kit is complete...
+Warning: the following files are missing in your kit:
+	t/dnsbl_subtests.t
+Please inform the author.
+Generating a Unix-style Makefile
+Writing Makefile for Mail::SpamAssassin
+Writing MYMETA.yml and MYMETA.json
+Makefile written by ExtUtils::MakeMaker 7.70
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -isa-awl.raw -osa-awl
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -isa-check_spamd.raw -osa-check_spamd
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -isa-compile.raw -osa-compile
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -isa-learn.raw -osa-learn
+"/usr/bin/perl" build/mkrules --exit_on_no_src --src rulesrc --out rules --manifest MANIFEST --manifestskip MANIFEST.SKIP
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -ispamassassin.raw -ospamassassin
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -ispamd/spamd.raw -ospamd/spamd
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Bayes.pm >blib/lib/Mail/SpamAssassin/Plugin/Bayes.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/AsyncLoop.pm >blib/lib/Mail/SpamAssassin/AsyncLoop.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/MIMEEval.pm >blib/lib/Mail/SpamAssassin/Plugin/MIMEEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/RelayCountry.pm >blib/lib/Mail/SpamAssassin/Plugin/RelayCountry.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/FreeMail.pm >blib/lib/Mail/SpamAssassin/Plugin/FreeMail.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/PgSQL.pm >blib/lib/Mail/SpamAssassin/BayesStore/PgSQL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Locker.pm >blib/lib/Mail/SpamAssassin/Locker.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Util/Progress.pm >blib/lib/Mail/SpamAssassin/Util/Progress.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Logger/Syslog.pm >blib/lib/Mail/SpamAssassin/Logger/Syslog.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/SDBM.pm >blib/lib/Mail/SpamAssassin/BayesStore/SDBM.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/PhishTag.pm >blib/lib/Mail/SpamAssassin/Plugin/PhishTag.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/AccessDB.pm >blib/lib/Mail/SpamAssassin/Plugin/AccessDB.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Message/Metadata.pm >blib/lib/Mail/SpamAssassin/Message/Metadata.pm
+no source directory found: exiting
+"/usr/bin/perl" build/preprocessor  -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" -DINSTALLSITELIB="/usr/share/perl5/vendor_perl" -DCONTACT_ADDRESS="the administrator of that system" -DRE2C_BIN="re2c" -Msharpbang -Mconditional -DPERL_BIN=""/usr/bin/perl"" -DPERL_WARN="" -DPERL_TAINT="" -m755 -isa-update.raw -osa-update
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/URIDNSBL.pm >blib/lib/Mail/SpamAssassin/Plugin/URIDNSBL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/ReplaceTags.pm >blib/lib/Mail/SpamAssassin/Plugin/ReplaceTags.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/PDFInfo.pm >blib/lib/Mail/SpamAssassin/Plugin/PDFInfo.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/TxRep.pm >blib/lib/Mail/SpamAssassin/Plugin/TxRep.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Util.pm >blib/lib/Mail/SpamAssassin/Util.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Logger/Stderr.pm >blib/lib/Mail/SpamAssassin/Logger/Stderr.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Conf.pm >blib/lib/Mail/SpamAssassin/Conf.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/SQLBasedAddrList.pm >blib/lib/Mail/SpamAssassin/SQLBasedAddrList.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/RelayEval.pm >blib/lib/Mail/SpamAssassin/Plugin/RelayEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/URIDetail.pm >blib/lib/Mail/SpamAssassin/Plugin/URIDetail.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Constants.pm >blib/lib/Mail/SpamAssassin/Constants.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/DnsResolver.pm >blib/lib/Mail/SpamAssassin/DnsResolver.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/Redis.pm >blib/lib/Mail/SpamAssassin/BayesStore/Redis.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Pyzor/Digest.pm >blib/lib/Mail/SpamAssassin/Pyzor/Digest.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Util/DependencyInfo.pm >blib/lib/Mail/SpamAssassin/Util/DependencyInfo.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/WelcomeListSubject.pm >blib/lib/Mail/SpamAssassin/Plugin/WelcomeListSubject.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/DNSEval.pm >blib/lib/Mail/SpamAssassin/Plugin/DNSEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Locales.pm >blib/lib/Mail/SpamAssassin/Locales.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/OneLineBodyRuleType.pm >blib/lib/Mail/SpamAssassin/Plugin/OneLineBodyRuleType.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/NetSet.pm >blib/lib/Mail/SpamAssassin/NetSet.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Logger/File.pm >blib/lib/Mail/SpamAssassin/Logger/File.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/GeoDB.pm >blib/lib/Mail/SpamAssassin/GeoDB.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/SpamCop.pm >blib/lib/Mail/SpamAssassin/Plugin/SpamCop.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/AntiVirus.pm >blib/lib/Mail/SpamAssassin/Plugin/AntiVirus.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Bayes/CombineNaiveBayes.pm >blib/lib/Mail/SpamAssassin/Bayes/CombineNaiveBayes.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/OLEVBMacro.pm >blib/lib/Mail/SpamAssassin/Plugin/OLEVBMacro.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/ResourceLimits.pm >blib/lib/Mail/SpamAssassin/Plugin/ResourceLimits.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Client.pm >blib/lib/Mail/SpamAssassin/Client.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore.pm >blib/lib/Mail/SpamAssassin/BayesStore.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Locker/Win32.pm >blib/lib/Mail/SpamAssassin/Locker/Win32.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Locker/Flock.pm >blib/lib/Mail/SpamAssassin/Locker/Flock.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/PluginHandler.pm >blib/lib/Mail/SpamAssassin/PluginHandler.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Pyzor/Client.pm >blib/lib/Mail/SpamAssassin/Pyzor/Client.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Reuse.pm >blib/lib/Mail/SpamAssassin/Plugin/Reuse.pm
+cp lib/spamassassin-run.pod blib/lib/spamassassin-run.pod
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/AICache.pm >blib/lib/Mail/SpamAssassin/AICache.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/MailingList.pm >blib/lib/Mail/SpamAssassin/MailingList.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/ExtractText.pm >blib/lib/Mail/SpamAssassin/Plugin/ExtractText.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/WLBLEval.pm >blib/lib/Mail/SpamAssassin/Plugin/WLBLEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/PerMsgStatus.pm >blib/lib/Mail/SpamAssassin/PerMsgStatus.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Timeout.pm >blib/lib/Mail/SpamAssassin/Timeout.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Test.pm >blib/lib/Mail/SpamAssassin/Plugin/Test.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/HTTPSMismatch.pm >blib/lib/Mail/SpamAssassin/Plugin/HTTPSMismatch.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/DBM.pm >blib/lib/Mail/SpamAssassin/BayesStore/DBM.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/FromNameSpoof.pm >blib/lib/Mail/SpamAssassin/Plugin/FromNameSpoof.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Pyzor/Digest/Pieces.pm >blib/lib/Mail/SpamAssassin/Pyzor/Digest/Pieces.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Conf/Parser.pm >blib/lib/Mail/SpamAssassin/Conf/Parser.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/SQL.pm >blib/lib/Mail/SpamAssassin/BayesStore/SQL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/AutoWelcomelist.pm >blib/lib/Mail/SpamAssassin/AutoWelcomelist.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/RegistryBoundaries.pm >blib/lib/Mail/SpamAssassin/RegistryBoundaries.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Pyzor/Digest/StripHtml.pm >blib/lib/Mail/SpamAssassin/Pyzor/Digest/StripHtml.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Pyzor.pm >blib/lib/Mail/SpamAssassin/Pyzor.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/HTMLEval.pm >blib/lib/Mail/SpamAssassin/Plugin/HTMLEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/SubProcBackChannel.pm >blib/lib/Mail/SpamAssassin/SubProcBackChannel.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/HTML.pm >blib/lib/Mail/SpamAssassin/HTML.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/BodyRuleBaseExtractor.pm >blib/lib/Mail/SpamAssassin/Plugin/BodyRuleBaseExtractor.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Razor2.pm >blib/lib/Mail/SpamAssassin/Plugin/Razor2.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/URIEval.pm >blib/lib/Mail/SpamAssassin/Plugin/URIEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Bayes.pm >blib/lib/Mail/SpamAssassin/Bayes.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin.pm >blib/lib/Mail/SpamAssassin/Plugin.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Conf/SQL.pm >blib/lib/Mail/SpamAssassin/Conf/SQL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/BodyEval.pm >blib/lib/Mail/SpamAssassin/Plugin/BodyEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Bayes/CombineChi.pm >blib/lib/Mail/SpamAssassin/Bayes/CombineChi.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Util/ScopedTimer.pm >blib/lib/Mail/SpamAssassin/Util/ScopedTimer.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/DCC.pm >blib/lib/Mail/SpamAssassin/Plugin/DCC.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Util/TieOneStringHash.pm >blib/lib/Mail/SpamAssassin/Util/TieOneStringHash.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Shortcircuit.pm >blib/lib/Mail/SpamAssassin/Plugin/Shortcircuit.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/ArchiveIterator.pm >blib/lib/Mail/SpamAssassin/ArchiveIterator.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/ASN.pm >blib/lib/Mail/SpamAssassin/Plugin/ASN.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/MIMEHeader.pm >blib/lib/Mail/SpamAssassin/Plugin/MIMEHeader.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/DBBasedAddrList.pm >blib/lib/Mail/SpamAssassin/DBBasedAddrList.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Conf/LDAP.pm >blib/lib/Mail/SpamAssassin/Conf/LDAP.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/ImageInfo.pm >blib/lib/Mail/SpamAssassin/Plugin/ImageInfo.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/PerMsgLearner.pm >blib/lib/Mail/SpamAssassin/PerMsgLearner.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Dns.pm >blib/lib/Mail/SpamAssassin/Dns.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/URILocalBL.pm >blib/lib/Mail/SpamAssassin/Plugin/URILocalBL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/HeaderEval.pm >blib/lib/Mail/SpamAssassin/Plugin/HeaderEval.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Pyzor.pm >blib/lib/Mail/SpamAssassin/Plugin/Pyzor.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/BDB.pm >blib/lib/Mail/SpamAssassin/BayesStore/BDB.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/VBounce.pm >blib/lib/Mail/SpamAssassin/Plugin/VBounce.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/BayesStore/MySQL.pm >blib/lib/Mail/SpamAssassin/BayesStore/MySQL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Phishing.pm >blib/lib/Mail/SpamAssassin/Plugin/Phishing.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/PersistentAddrList.pm >blib/lib/Mail/SpamAssassin/PersistentAddrList.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/DecodeShortURLs.pm >blib/lib/Mail/SpamAssassin/Plugin/DecodeShortURLs.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/AskDNS.pm >blib/lib/Mail/SpamAssassin/Plugin/AskDNS.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Message/Metadata/Received.pm >blib/lib/Mail/SpamAssassin/Message/Metadata/Received.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/AuthRes.pm >blib/lib/Mail/SpamAssassin/Plugin/AuthRes.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/SpamdForkScaling.pm >blib/lib/Mail/SpamAssassin/SpamdForkScaling.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/AWL.pm >blib/lib/Mail/SpamAssassin/Plugin/AWL.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Message/Node.pm >blib/lib/Mail/SpamAssassin/Message/Node.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Logger.pm >blib/lib/Mail/SpamAssassin/Logger.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Util/TinyRedis.pm >blib/lib/Mail/SpamAssassin/Util/TinyRedis.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Reporter.pm >blib/lib/Mail/SpamAssassin/Reporter.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/DMARC.pm >blib/lib/Mail/SpamAssassin/Plugin/DMARC.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Locker/UnixNFSSafe.pm >blib/lib/Mail/SpamAssassin/Locker/UnixNFSSafe.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/AutoLearnThreshold.pm >blib/lib/Mail/SpamAssassin/Plugin/AutoLearnThreshold.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/SPF.pm >blib/lib/Mail/SpamAssassin/Plugin/SPF.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/TextCat.pm >blib/lib/Mail/SpamAssassin/Plugin/TextCat.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin.pm >blib/lib/Mail/SpamAssassin.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Message.pm >blib/lib/Mail/SpamAssassin/Message.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Rule2XSBody.pm >blib/lib/Mail/SpamAssassin/Plugin/Rule2XSBody.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/DKIM.pm >blib/lib/Mail/SpamAssassin/Plugin/DKIM.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/Check.pm >blib/lib/Mail/SpamAssassin/Plugin/Check.pm
+"/usr/bin/perl" build/preprocessor -Mconditional -Mvars -DVERSION="4.000001" -DPREFIX="/usr" -DDEF_RULES_DIR="/usr/share/spamassassin" -DLOCAL_RULES_DIR="/etc/mail/spamassassin" -DLOCAL_STATE_DIR="/var/lib/spamassassin" <lib/Mail/SpamAssassin/Plugin/HashBL.pm >blib/lib/Mail/SpamAssassin/Plugin/HashBL.pm
+cp sa-awl blib/script/sa-awl
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/sa-awl
+cp sa-check_spamd blib/script/sa-check_spamd
+cp sa-compile blib/script/sa-compile
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/sa-check_spamd
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/sa-compile
+cp sa-learn blib/script/sa-learn
+cp sa-update blib/script/sa-update
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/sa-learn
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/sa-update
+cp spamassassin blib/script/spamassassin
+PERL_USE_UNSAFE_INC=1 "/usr/bin/perl" spamc/configure.pl --prefix="/usr" --sysconfdir="/etc/mail/spamassassin" --datadir="/usr/share/spamassassin" --enable-ssl="no"
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/spamassassin
+cp spamd/spamd blib/script/spamd
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/spamd
+cd spamc
+/usr/bin/perl version.h.pl
+version.h.pl: creating version.h
+./configure --prefix=/usr --sysconfdir=/etc/mail/spamassassin --datadir=/usr/share/spamassassin --enable-ssl=no
+checking for gcc... cc
+checking whether the C compiler works... no
+configure: error: in `/home/packager/aports/main/spamassassin/src/Mail-SpamAssassin-4.0.1/spamc':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+make: *** [Makefile:1710: spamc/Makefile] Error 77
+>>> ERROR: spamassassin: build failed
+>>> spamassassin: Uninstalling dependencies...
+(1/54) Purging .makedepends-spamassassin (20250523.180422)
+(2/54) Purging curl (8.13.0-r1)
+(3/54) Purging perl-dev (5.40.2-r0)
+(4/54) Purging perl-utils (5.40.2-r0)
+(5/54) Purging perl-netaddr-ip (4.079-r13)
+(6/54) Purging perl-mail-dkim (1.20240923-r0)
+(7/54) Purging perl-net-dns (1.49-r0)
+(8/54) Purging perl-digest-hmac (1.05-r0)
+(9/54) Purging perl-digest-sha1 (2.13-r19)
+(10/54) Purging perl-digest-md5 (2.59-r2)
+(11/54) Purging perl-mailtools (2.22-r0)
+(12/54) Purging perl-timedate (2.33-r4)
+(13/54) Purging perl-crypt-openssl-rsa (0.33-r4)
+(14/54) Purging perl-crypt-openssl-random (0.17-r0)
+(15/54) Purging perl-mail-authenticationresults (2.20231031-r0)
+(16/54) Purging perl-json (4.10-r1)
+(17/54) Purging perl-cryptx (0.084-r0)
+(18/54) Purging perl-mime-base64 (3.16-r6)
+(19/54) Purging perl-time-hires (1.9764-r8)
+(20/54) Purging perl-libwww (6.77-r0)
+(21/54) Purging perl-http-cookies (6.11-r0)
+(22/54) Purging perl-net-http (6.23-r1)
+(23/54) Purging perl-html-parser (3.83-r0)
+(24/54) Purging perl-html-tagset (3.24-r0)
+(25/54) Purging perl-file-listing (6.16-r0)
+(26/54) Purging perl-www-robotrules (6.02-r5)
+(27/54) Purging perl-http-negotiate (6.01-r5)
+(28/54) Purging perl-http-message (7.00-r0)
+(29/54) Purging perl-clone (0.47-r0)
+(30/54) Purging perl-http-date (6.06-r0)
+(31/54) Purging perl-uri (5.28-r0)
+(32/54) Purging perl-io-html (1.004-r1)
+(33/54) Purging perl-lwp-mediatypes (6.04-r3)
+(34/54) Purging perl-encode-locale (1.05-r5)
+(35/54) Purging perl-try-tiny (0.32-r0)
+(36/54) Purging gpg (2.4.7-r0)
+(37/54) Purging gnupg-dirmngr (2.4.7-r0)
+(38/54) Purging gnupg-gpgconf (2.4.7-r0)
+(39/54) Purging pinentry (1.3.1-r0)
+(40/54) Purging gnupg-keyboxd (2.4.7-r0)
+(41/54) Purging re2c (3.1-r0)
+(42/54) Purging gnutls (3.8.8-r0)
+(43/54) Purging libassuan (2.5.7-r0)
+(44/54) Purging libgcrypt (1.10.3-r1)
+(45/54) Purging libksba (1.6.7-r0)
+(46/54) Purging libldap (2.6.8-r0)
+(47/54) Purging libsasl (2.1.28-r8)
+(48/54) Purging nettle (3.10-r1)
+(49/54) Purging npth (1.8-r0)
+(50/54) Purging p11-kit (0.25.5-r2)
+(51/54) Purging sqlite-libs (3.49.2-r0)
+(52/54) Purging gdbm (1.24-r0)
+(53/54) Purging libffi (3.4.7-r0)
+(54/54) Purging libtasn1 (4.20.0-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

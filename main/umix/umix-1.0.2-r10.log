@@ -1,0 +1,198 @@
+pigz: not found
+>>> umix: Building main/umix 1.0.2-r10 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:02:11 +0000
+>>> umix: Validating /home/packager/aports/main/umix/APKBUILD...
+>>> umix: Analyzing dependencies...
+>>> umix: Installing for build: build-base linux-headers ncurses-dev
+(1/2) Installing linux-headers (6.14.2-r0)
+(2/2) Installing .makedepends-umix (20250518.100214)
+OK: 267 MiB in 83 packages
+>>> umix: Cleaning up srcdir
+>>> umix: Cleaning up pkgdir
+>>> umix: Cleaning up tmpdir
+>>> umix: Fetching https://downloads.sourceforge.net/umix/umix-1.0.2.tar.gz
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to downloads.sourceforge.net (104.18.13.149:443)
+Connecting to master.dl.sourceforge.net (216.105.38.12:443)
+saving to '/var/cache/distfiles/umix-1.0.2.tar.gz.part'
+umix-1.0.2.tar.gz.pa  92% |*****************************   |  205k  0:00:00 ETA
+umix-1.0.2.tar.gz.pa 100% |********************************|  220k  0:00:00 ETA
+'/var/cache/distfiles/umix-1.0.2.tar.gz.part' saved
+>>> umix: Fetching https://downloads.sourceforge.net/umix/umix-1.0.2.tar.gz
+>>> umix: Checking sha512sums...
+umix-1.0.2.tar.gz: OK
+>>> umix: Unpacking /var/cache/distfiles/umix-1.0.2.tar.gz...
+>>> umix: Updating ./config.sub
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking whether make sets $(MAKE)... yes
+checking for working aclocal-1.4... missing
+checking for working autoconf... missing
+checking for working automake-1.4... missing
+checking for working autoheader... missing
+checking for working makeinfo... missing
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking for C compiler default output... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ANSI C... none needed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for ld used by GCC... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for BSD-compatible nm... nm
+checking for a sed that does not truncate output... /bin/sed
+checking whether ln -s works... yes
+checking how to recognise dependent libraries... unknown
+checking command to parse nm output... ok
+checking how to run the C preprocessor... gcc -E
+checking for egrep... grep -E
+checking for ANSI C header files... no
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for objdir... .libs
+checking for gcc option to produce PIC... -fPIC
+checking if gcc PIC flag -fPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.lo... yes
+checking if gcc supports -fno-rtti -fno-exceptions... yes
+checking whether the linker (/usr/x86_64-alpine-linux-musl/bin/ld) supports shared libraries... yes
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking dynamic linker characteristics... no
+checking if libtool supports shared libraries... no
+checking whether to build shared libraries... no
+checking whether to build static libraries... yes
+creating libtool
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for getopt_long... yes
+checking sys/soundcard.h usability... yes
+checking sys/soundcard.h presence... yes
+checking for sys/soundcard.h... yes
+checking for initscr in -lncurses... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating src/Makefile
+config.status: creating config.h
+config.status: executing default-1 commands
+
+Configuration:
+  Install path:                   /usr
+  Build OSS support:              yes
+  Build Dummy mixer driver:       no
+  Build Ncurses UI:               yes
+  Enable debug information:       no
+  Default config path:            /etc
+  Default mixer device:           /dev/mixer
+make  all-recursive
+make[1]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+Making all in doc
+make[2]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+Making all in src
+make[2]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/src'
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c umix_common.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c umix.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c mixer.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c error.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c ui.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c driver_oss.c
+gcc -DHAVE_CONFIG_H -I. -I. -I..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -c ui_ncurses.c
+/bin/sh ../libtool --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o umix  umix_common.o umix.o mixer.o error.o ui.o driver_oss.o ui_ncurses.o -lncurses
+mkdir .libs
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o umix umix_common.o umix.o mixer.o error.o ui.o driver_oss.o ui_ncurses.o  -lncurses
+make[2]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/src'
+make[2]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+make[2]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+make[1]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+>>> umix: Entering fakeroot...
+Making install in doc
+make[1]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+make[2]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+make  install-man1
+make[3]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+/bin/sh ../mkinstalldirs /home/packager/aports/main/umix/pkg/umix/usr/share/man/man1
+mkdir /home/packager/aports/main/umix/pkg
+mkdir /home/packager/aports/main/umix/pkg/umix
+mkdir /home/packager/aports/main/umix/pkg/umix/usr
+mkdir /home/packager/aports/main/umix/pkg/umix/usr/share
+mkdir /home/packager/aports/main/umix/pkg/umix/usr/share/man
+mkdir /home/packager/aports/main/umix/pkg/umix/usr/share/man/man1
+ /usr/bin/install -c -m 644 ./umix.1 /home/packager/aports/main/umix/pkg/umix/usr/share/man/man1/umix.1
+make[3]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+make[2]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+make[1]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/doc'
+Making install in src
+make[1]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/src'
+make[2]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2/src'
+/bin/sh ../mkinstalldirs /home/packager/aports/main/umix/pkg/umix/usr/bin
+make[2]: Nothing to be done for 'install-data-am'.
+mkdir /home/packager/aports/main/umix/pkg/umix/usr/bin
+ /bin/sh ../libtool  --mode=install /usr/bin/install -c  umix /home/packager/aports/main/umix/pkg/umix/usr/bin/umix
+/usr/bin/install -c umix /home/packager/aports/main/umix/pkg/umix/usr/bin/umix
+make[2]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/src'
+make[1]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2/src'
+make[1]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+make[2]: Entering directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+make[1]: Leaving directory '/home/packager/aports/main/umix/src/umix-1.0.2'
+>>> umix-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/umix/pkg/umix-doc/usr/share/man'
+>>> umix-doc*: Preparing subpackage umix-doc...
+>>> umix-doc*: Running postcheck for umix-doc
+>>> umix*: Running postcheck for umix
+>>> umix*: Preparing package umix...
+>>> umix*: Stripping binaries
+>>> umix-doc*: Scanning shared objects
+>>> umix*: Scanning shared objects
+>>> umix-doc*: Tracing dependencies...
+>>> umix-doc*: Package size: 3.4 KB
+>>> umix-doc*: Compressing data...
+>>> umix-doc*: Create checksum...
+pigz: not found
+>>> umix-doc*: Create umix-doc-1.0.2-r10.apk
+>>> umix*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libncursesw.so.6
+>>> umix*: Package size: 38.7 KB
+>>> umix*: Compressing data...
+>>> umix*: Create checksum...
+pigz: not found
+>>> umix*: Create umix-1.0.2-r10.apk
+>>> umix: Build complete at Sun, 18 May 2025 10:02:21 +0000 elapsed time 0h 0m 10s
+>>> umix: Cleaning up srcdir
+>>> umix: Cleaning up pkgdir
+>>> umix: Uninstalling dependencies...
+(1/2) Purging .makedepends-umix (20250518.100214)
+(2/2) Purging linux-headers (6.14.2-r0)
+OK: 261 MiB in 81 packages
+>>> umix: Updating the main/x86_64 repository index...
+>>> umix: Signing the index...
+pigz: not found

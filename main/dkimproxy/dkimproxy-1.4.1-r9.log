@@ -1,0 +1,211 @@
+pigz: not found
+>>> dkimproxy: Building main/dkimproxy 1.4.1-r9 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:43:16 +0000
+>>> dkimproxy: Validating /home/packager/aports/main/dkimproxy/APKBUILD...
+>>> dkimproxy: Analyzing dependencies...
+>>> dkimproxy: Installing for build: build-base perl-mail-dkim perl-net-server perl-error
+(1/20) Installing libbz2 (1.0.8-r6)
+(2/20) Installing perl (5.40.2-r0)
+(3/20) Installing perl-digest-sha1 (2.13-r19)
+(4/20) Installing perl-digest-md5 (2.59-r2)
+(5/20) Installing perl-digest-hmac (1.05-r0)
+(6/20) Installing perl-net-dns (1.49-r0)
+(7/20) Installing perl-timedate (2.33-r4)
+(8/20) Installing perl-mailtools (2.22-r0)
+(9/20) Installing perl-crypt-openssl-random (0.17-r0)
+(10/20) Installing perl-crypt-openssl-rsa (0.33-r4)
+(11/20) Installing perl-json (4.10-r1)
+(12/20) Installing perl-clone (0.47-r0)
+(13/20) Installing perl-mail-authenticationresults (2.20231031-r0)
+(14/20) Installing perl-cryptx (0.084-r0)
+(15/20) Installing perl-mail-dkim (1.20240923-r0)
+(16/20) Installing perl-net-server (2.014-r2)
+(17/20) Installing perl-error (0.17030-r0)
+(18/20) Installing .makedepends-dkimproxy (20250518.104317)
+(19/20) Installing perl-git (2.47.2-r0)
+(20/20) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 301 MiB in 101 packages
+>>> dkimproxy: Cleaning up srcdir
+>>> dkimproxy: Cleaning up pkgdir
+>>> dkimproxy: Cleaning up tmpdir
+>>> dkimproxy: Fetching https://downloads.sourceforge.net/dkimproxy/dkimproxy-1.4.1.tar.gz
+Connecting to downloads.sourceforge.net (104.18.13.149:443)
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to altushost-swe.dl.sourceforge.net (79.142.76.130:443)
+saving to '/var/cache/distfiles/dkimproxy-1.4.1.tar.gz.part'
+dkimproxy-1.4.1.tar. 100% |********************************|  106k  0:00:00 ETA
+'/var/cache/distfiles/dkimproxy-1.4.1.tar.gz.part' saved
+>>> dkimproxy: Fetching https://downloads.sourceforge.net/dkimproxy/dkimproxy-1.4.1.tar.gz
+>>> dkimproxy: Checking sha512sums...
+dkimproxy-1.4.1.tar.gz: OK
+dkimproxy_out.conf.patch: OK
+dkimproxy.in.initd: OK
+dkimproxy.out.initd: OK
+dkimproxy.in.confd: OK
+dkimproxy.out.confd: OK
+>>> dkimproxy: Unpacking /var/cache/distfiles/dkimproxy-1.4.1.tar.gz...
+>>> dkimproxy: dkimproxy_out.conf.patch
+patching file scripts/dkimproxy_out.conf.example
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking for perl... /usr/bin/perl
+checking for Perl module 'Mail::DKIM 0.34'... found
+checking for Perl module 'Net::Server 0.91'... found
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/MSDW/Makefile
+config.status: creating lib/MSDW/SMTP/Makefile
+config.status: creating scripts/Makefile
+config.status: creating dkimproxy.spec
+Making all in lib
+make[1]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+Making all in MSDW
+make[2]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+Making all in SMTP
+make[3]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW/SMTP'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW/SMTP'
+make[3]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[2]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[2]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+make[1]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+Making all in scripts
+make[1]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+make[1]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1'
+rm -f sample-dkim-init-script.sh sample-dkim-init-script.sh.tmp
+sed -e 's|@localstatedir[@]|/usr/var|g' \
+    -e 's|@sysconfdir[@]|/etc/dkimproxy|g' \
+    -e 's|@bindir[@]|/usr/bin|g' \
+    './sample-dkim-init-script.sh.in' >sample-dkim-init-script.sh.tmp
+mv sample-dkim-init-script.sh.tmp sample-dkim-init-script.sh
+make[1]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1'
+>>> dkimproxy: Entering fakeroot...
+Making install in lib
+make[1]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+Making install in MSDW
+make[2]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+Making install in SMTP
+make[3]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW/SMTP'
+make[4]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW/SMTP'
+make[4]: Nothing to be done for 'install-exec-am'.
+test -z "/usr/share/perl5/vendor_perl/MSDW/SMTP" || ../../.././install-sh -c -d "/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/share/perl5/vendor_perl/MSDW/SMTP"
+ /usr/bin/install -c Client.pm Server.pm '/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/share/perl5/vendor_perl/MSDW/SMTP'
+make[4]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW/SMTP'
+make[3]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW/SMTP'
+make[3]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[4]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[3]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[2]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib/MSDW'
+make[2]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+make[3]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+test -z "/usr/share/perl5/vendor_perl" || .././install-sh -c -d "/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/share/perl5/vendor_perl"
+ /usr/bin/install -c MySmtpProxyServer.pm MySmtpServer.pm LookupMap.pm '/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/share/perl5/vendor_perl'
+make[3]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+make[2]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+make[1]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/lib'
+Making install in scripts
+make[1]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+make[2]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+test -z "/etc/dkimproxy" || .././install-sh -c -d "/home/packager/aports/main/dkimproxy/pkg/dkimproxy/etc/dkimproxy"
+test -z "/usr/share/man/man8" || .././install-sh -c -d "/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/share/man/man8"
+ /usr/bin/install -c -m 644 dkimproxy_in.conf.example dkimproxy_out.conf.example '/home/packager/aports/main/dkimproxy/pkg/dkimproxy/etc/dkimproxy'
+make  install-exec-hook
+ /usr/bin/install -c -m 644 dkimproxy_in.8 dkimproxy_out.8 '/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/share/man/man8'
+make[3]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+/bin/sh /home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/install-sh -d '/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/bin';
+for f in dkim_responder.pl dkimproxy.in dkimproxy.out; do \
+	PERL="/usr/bin/perl" PERL_INCLUDE="/usr/share/perl5/vendor_perl" \
+	"/usr/bin/perl" "../install-perl-script.pl" "./$f" \
+			"/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/bin/$f" || exit $?; \
+	chmod +x "/home/packager/aports/main/dkimproxy/pkg/dkimproxy/usr/bin/$f"; \
+done
+make[3]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+make[2]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+make[1]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1/scripts'
+make[1]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1'
+make[2]: Entering directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1'
+make[1]: Leaving directory '/home/packager/aports/main/dkimproxy/src/dkimproxy-1.4.1'
+>>> dkimproxy-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/dkimproxy/pkg/dkimproxy-doc/usr/share/man'
+>>> dkimproxy-doc*: Preparing subpackage dkimproxy-doc...
+>>> dkimproxy-doc*: Running postcheck for dkimproxy-doc
+>>> dkimproxy-openrc*: Running split function openrc...
+'etc/conf.d' -> '/home/packager/aports/main/dkimproxy/pkg/dkimproxy-openrc/etc/conf.d'
+'etc/init.d' -> '/home/packager/aports/main/dkimproxy/pkg/dkimproxy-openrc/etc/init.d'
+>>> dkimproxy-openrc*: Preparing subpackage dkimproxy-openrc...
+>>> dkimproxy-openrc*: Running postcheck for dkimproxy-openrc
+>>> dkimproxy*: Running postcheck for dkimproxy
+>>> dkimproxy*: Preparing package dkimproxy...
+>>> dkimproxy*: Script found. /bin/sh added as a dependency for dkimproxy-1.4.1-r9.apk
+>>> dkimproxy*: Adding .pre-install
+>>> dkimproxy-doc*: Tracing dependencies...
+>>> dkimproxy-doc*: Package size: 8.8 KB
+>>> dkimproxy-doc*: Compressing data...
+>>> dkimproxy-doc*: Create checksum...
+pigz: not found
+>>> dkimproxy-doc*: Create dkimproxy-doc-1.4.1-r9.apk
+>>> dkimproxy-openrc*: Tracing dependencies...
+>>> dkimproxy-openrc*: Package size: 1.8 KB
+>>> dkimproxy-openrc*: Compressing data...
+>>> dkimproxy-openrc*: Create checksum...
+pigz: not found
+>>> dkimproxy-openrc*: Create dkimproxy-openrc-1.4.1-r9.apk
+>>> dkimproxy*: Tracing dependencies...
+	perl-mail-dkim
+	perl-net-server
+	perl-error
+	/bin/sh
+>>> dkimproxy*: Package size: 66.7 KB
+>>> dkimproxy*: Compressing data...
+>>> dkimproxy*: Create checksum...
+pigz: not found
+>>> dkimproxy*: Create dkimproxy-1.4.1-r9.apk
+>>> dkimproxy: Build complete at Sun, 18 May 2025 10:43:34 +0000 elapsed time 0h 0m 18s
+>>> dkimproxy: Cleaning up srcdir
+>>> dkimproxy: Cleaning up pkgdir
+>>> dkimproxy: Uninstalling dependencies...
+(1/20) Purging .makedepends-dkimproxy (20250518.104317)
+(2/20) Purging perl-mail-dkim (1.20240923-r0)
+(3/20) Purging perl-net-dns (1.49-r0)
+(4/20) Purging perl-digest-hmac (1.05-r0)
+(5/20) Purging perl-digest-sha1 (2.13-r19)
+(6/20) Purging perl-digest-md5 (2.59-r2)
+(7/20) Purging perl-mailtools (2.22-r0)
+(8/20) Purging perl-timedate (2.33-r4)
+(9/20) Purging perl-crypt-openssl-rsa (0.33-r4)
+(10/20) Purging perl-crypt-openssl-random (0.17-r0)
+(11/20) Purging perl-mail-authenticationresults (2.20231031-r0)
+(12/20) Purging perl-json (4.10-r1)
+(13/20) Purging perl-clone (0.47-r0)
+(14/20) Purging perl-cryptx (0.084-r0)
+(15/20) Purging perl-net-server (2.014-r2)
+(16/20) Purging git-perl (2.47.2-r0)
+(17/20) Purging perl-git (2.47.2-r0)
+(18/20) Purging perl-error (0.17030-r0)
+(19/20) Purging perl (5.40.2-r0)
+(20/20) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> dkimproxy: Updating the main/x86_64 repository index...
+>>> dkimproxy: Signing the index...
+pigz: not found

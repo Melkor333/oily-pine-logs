@@ -1,0 +1,60 @@
+pigz: not found
+>>> v86d: Building main/v86d 0.1.10-r5 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:12:21 +0000
+>>> v86d: Validating /home/packager/aports/main/v86d/APKBUILD...
+>>> v86d: Analyzing dependencies...
+>>> v86d: Installing for build: build-base cmd:bash linux-headers
+(1/1) Installing .makedepends-v86d (20250523.181222)
+OK: 564 MiB in 133 packages
+>>> v86d: Cleaning up srcdir
+>>> v86d: Cleaning up pkgdir
+>>> v86d: Cleaning up tmpdir
+>>> v86d: Fetching v86d-0.1.10.tar.gz::https://github.com/mjanusz/v86d/archive/v86d-0.1.10.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/v86d-0.1.10.tar.gz.part'
+v86d-0.1.10.tar.gz.p 100% |********************************| 88520  0:00:00 ETA
+'/var/cache/distfiles/v86d-0.1.10.tar.gz.part' saved
+>>> v86d: Fetching v86d-0.1.10.tar.gz::https://github.com/mjanusz/v86d/archive/v86d-0.1.10.tar.gz
+>>> v86d: Checking sha512sums...
+v86d-0.1.10.tar.gz: OK
+modprobe.uvesafb: OK
+gcc14.patch: OK
+>>> v86d: Unpacking /var/cache/distfiles/v86d-0.1.10.tar.gz...
+>>> v86d: gcc14.patch
+patching file libs/x86emu/ops2.c
+config.h successfully created.
+You can run `make` now.
+make -w -C libs/x86emu
+make[1]: Entering directory '/home/packager/aports/main/v86d/src/v86d-86d-0.1.10/libs/x86emu'
+gcc -c -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -I. -I../../include -I../../include/x86emu -o decode.o decode.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -c -o v86_x86emu.o v86_x86emu.c
+gcc -c -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -I. -I../../include -I../../include/x86emu -o fpu.o fpu.c
+gcc -c -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -I. -I../../include -I../../include/x86emu -o ops.o ops.c
+gcc -c -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -I. -I../../include -I../../include/x86emu -o ops2.o ops2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -c -o v86_mem.o v86_mem.c
+gcc -c -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -I. -I../../include -I../../include/x86emu -o prim_ops.o prim_ops.c
+gcc -c -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -I. -I../../include -I../../include/x86emu -o sys.o sys.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -c -o v86_common.o v86_common.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fpermissive -I/lib/modules/4.19.0-26-amd64/source/include -Ilibs/x86emu -c -o v86.o v86.c
+In file included from v86.c:10:
+/usr/include/sys/poll.h:1:2: warning: #warning redirecting incorrect #include <sys/poll.h> to <poll.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/poll.h> to <poll.h>
+      |  ^~~~~~~
+ar rv libx86emu.a decode.o fpu.o ops.o ops2.o prim_ops.o sys.o
+ar: creating libx86emu.a
+a - decode.o
+a - fpu.o
+a - ops.o
+a - ops2.o
+a - prim_ops.o
+a - sys.o
+make[1]: Leaving directory '/home/packager/aports/main/v86d/src/v86d-86d-0.1.10/libs/x86emu'
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Llibs/x86emu v86_x86emu.o v86_mem.o v86_common.o  v86.o -lx86emu -o v86d
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: v86d: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: v86d has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:43: v86d] Error 1
+>>> ERROR: v86d: build failed
+>>> v86d: Uninstalling dependencies...
+(1/1) Purging .makedepends-v86d (20250523.181222)
+OK: 564 MiB in 132 packages

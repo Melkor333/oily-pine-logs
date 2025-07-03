@@ -1,0 +1,128 @@
+pigz: not found
+>>> perl-crypt-des: Building main/perl-crypt-des 2.07-r16 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:42:55 +0000
+>>> perl-crypt-des: Validating /home/packager/aports/main/perl-crypt-des/APKBUILD...
+>>> perl-crypt-des: Analyzing dependencies...
+>>> perl-crypt-des: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-crypt-des (20250518.074256)
+(6/8) Installing perl-error (0.17029-r2)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-crypt-des: Cleaning up srcdir
+>>> perl-crypt-des: Cleaning up pkgdir
+>>> perl-crypt-des: Cleaning up tmpdir
+>>> perl-crypt-des: Fetching https://cpan.metacpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Crypt-DES-2.07.tar.gz.part'
+Crypt-DES-2.07.tar.g 100% |********************************| 16720  0:00:00 ETA
+'/var/cache/distfiles/Crypt-DES-2.07.tar.gz.part' saved
+>>> perl-crypt-des: Fetching https://cpan.metacpan.org/authors/id/D/DP/DPARIS/Crypt-DES-2.07.tar.gz
+>>> perl-crypt-des: Checking sha512sums...
+Crypt-DES-2.07.tar.gz: OK
+01_declaration.patch: OK
+>>> perl-crypt-des: Unpacking /var/cache/distfiles/Crypt-DES-2.07.tar.gz...
+>>> perl-crypt-des: 01_declaration.patch
+patching file _des.h
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Crypt::DES
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-crypt-des/src/Crypt-DES-2.07/typemap'  DES.xs > DES.xsc
+Running Mkbootstrap for DES ()
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"2.07\" -DXS_VERSION=\"2.07\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   _des.c
+chmod 644 "DES.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- DES.bs blib/arch/auto/Crypt/DES/DES.bs 644
+cp DES.pm blib/lib/Crypt/DES.pm
+mv DES.xsc DES.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"2.07\" -DXS_VERSION=\"2.07\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   DES.c
+rm -f blib/arch/auto/Crypt/DES/DES.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  DES.o _des.o  -o blib/arch/auto/Crypt/DES/DES.so  \
+      \
+  
+chmod 755 blib/arch/auto/Crypt/DES/DES.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- DES.bs blib/arch/auto/Crypt/DES/DES.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-Iblib/lib" "-Iblib/arch" test.pl
+1..342
+342 basic tests ran in  0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU)
+342 of 342 tests passed (100.00%)
+
+Running speed tests...
+
+non-cached cipher speed test.  5000 encrypt iterations
+ 0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU)
+ok 343
+
+non-cached cipher speed test.  5000 decrypt iterations
+ 0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU)
+ok 344
+
+cached cipher speed test.  10000 encrypt iterations
+ 0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU)
+ok 345
+
+cached cipher speed test.  10000 decrypt iterations
+ 0 wallclock secs ( 0.01 usr +  0.00 sys =  0.01 CPU)
+ok 346
+
+Testing Cipher Block Chaining..
+Error (probably harmless):
+Can't locate Crypt/CBC.pm in @INC (you may need to install the Crypt::CBC module) (@INC entries checked: blib/lib blib/arch /usr/local/lib/perl5/site_perl /usr/local/share/perl5/site_perl /usr/lib/perl5/vendor_perl /usr/share/perl5/vendor_perl /usr/lib/perl5/core_perl /usr/share/perl5/core_perl . .. ../lib ../../lib ../../../lib) at (eval 7) line 1.
+BEGIN failed--compilation aborted at (eval 7) line 1.
+
+
+Finished with tests
+
+>>> perl-crypt-des: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- DES.bs blib/arch/auto/Crypt/DES/DES.bs 644
+Manifying 1 pod document
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-crypt-des/pkg/perl-crypt-des/usr/lib/perl5/vendor_perl/auto/Crypt/DES/DES.so
+Installing /home/packager/aports/main/perl-crypt-des/pkg/perl-crypt-des/usr/lib/perl5/vendor_perl/Crypt/DES.pm
+Installing /home/packager/aports/main/perl-crypt-des/pkg/perl-crypt-des/usr/share/man/man3/Crypt::DES.3pm
+>>> perl-crypt-des-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-crypt-des/pkg/perl-crypt-des-doc/usr/share/man'
+>>> perl-crypt-des-doc*: Preparing subpackage perl-crypt-des-doc...
+>>> perl-crypt-des-doc*: Running postcheck for perl-crypt-des-doc
+>>> perl-crypt-des*: Running postcheck for perl-crypt-des
+>>> perl-crypt-des*: Preparing package perl-crypt-des...
+>>> perl-crypt-des*: Stripping binaries
+>>> perl-crypt-des-doc*: Scanning shared objects
+>>> perl-crypt-des*: Scanning shared objects
+>>> perl-crypt-des-doc*: Tracing dependencies...
+>>> perl-crypt-des-doc*: Package size: 1.9 KB
+>>> perl-crypt-des-doc*: Compressing data...
+>>> perl-crypt-des-doc*: Create checksum...
+pigz: not found
+>>> perl-crypt-des-doc*: Create perl-crypt-des-doc-2.07-r16.apk
+>>> perl-crypt-des*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-crypt-des*: Package size: 25.0 KB
+>>> perl-crypt-des*: Compressing data...
+>>> perl-crypt-des*: Create checksum...
+pigz: not found
+>>> perl-crypt-des*: Create perl-crypt-des-2.07-r16.apk
+>>> perl-crypt-des: Build complete at Sun, 18 May 2025 07:42:59 +0000 elapsed time 0h 0m 4s
+>>> perl-crypt-des: Cleaning up srcdir
+>>> perl-crypt-des: Cleaning up pkgdir
+>>> perl-crypt-des: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-crypt-des (20250518.074256)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17029-r2)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-crypt-des: Updating the main/x86_64 repository index...
+>>> perl-crypt-des: Signing the index...
+pigz: not found

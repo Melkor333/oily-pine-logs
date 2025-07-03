@@ -1,0 +1,200 @@
+pigz: not found
+>>> perl-list-moreutils-xs: Building main/perl-list-moreutils-xs 0.430-r5 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:04:31 +0000
+>>> perl-list-moreutils-xs: Validating /home/packager/aports/main/perl-list-moreutils-xs/APKBUILD...
+>>> perl-list-moreutils-xs: Analyzing dependencies...
+>>> perl-list-moreutils-xs: Installing for build: build-base perl perl-dev perl-config-autoconf perl-inc-latest perl-test-leaktrace
+(1/12) Installing libbz2 (1.0.8-r6)
+(2/12) Installing perl (5.40.2-r0)
+(3/12) Installing perl-utils (5.40.2-r0)
+(4/12) Installing perl-dev (5.40.2-r0)
+(5/12) Installing perl-capture-tiny (0.50-r0)
+(6/12) Installing perl-config-autoconf (0.320-r2)
+(7/12) Installing perl-inc-latest (0.500-r3)
+(8/12) Installing perl-test-leaktrace (0.17-r5)
+(9/12) Installing .makedepends-perl-list-moreutils-xs (20250518.090433)
+(10/12) Installing perl-error (0.17030-r0)
+(11/12) Installing perl-git (2.47.2-r0)
+(12/12) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 93 packages
+>>> perl-list-moreutils-xs: Cleaning up srcdir
+>>> perl-list-moreutils-xs: Cleaning up pkgdir
+>>> perl-list-moreutils-xs: Cleaning up tmpdir
+>>> perl-list-moreutils-xs: Fetching https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-XS-0.430.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/List-MoreUtils-XS-0.430.tar.gz.part'
+List-MoreUtils-XS-0. 100% |********************************|  159k  0:00:00 ETA
+'/var/cache/distfiles/List-MoreUtils-XS-0.430.tar.gz.part' saved
+>>> perl-list-moreutils-xs: Fetching https://cpan.metacpan.org/authors/id/R/RE/REHSACK/List-MoreUtils-XS-0.430.tar.gz
+>>> perl-list-moreutils-xs: Checking sha512sums...
+List-MoreUtils-XS-0.430.tar.gz: OK
+>>> perl-list-moreutils-xs: Unpacking /var/cache/distfiles/List-MoreUtils-XS-0.430.tar.gz...
+Checking whether pureperl is required... no
+Checking for cc... gcc
+Checking for cc... (cached) gcc
+Checking whether perlapi is accessible... yes
+Checking for stdlib.h... yes
+Checking for stdarg.h... yes
+Checking for string.h... yes
+Checking for float.h... yes
+Checking for assert.h... yes
+Checking for ctype.h... yes
+Checking for errno.h... yes
+Checking for limits.h... yes
+Checking for locale.h... yes
+Checking for math.h... yes
+Checking for setjmp.h... yes
+Checking for signal.h... yes
+Checking for stddef.h... yes
+Checking for stdio.h... yes
+Checking for time.h... yes
+Checking for sys/types.h... yes
+Checking for sys/stat.h... yes
+Checking for memory.h... yes
+Checking for strings.h... yes
+Checking for inttypes.h... yes
+Checking for stdint.h... yes
+Checking for unistd.h... yes
+Checking for time.h... (cached) yes
+Checking for sys/time.h... yes
+Checking for time... yes
+Checking for size_t... yes
+Checking for ssize_t... yes
+Checking for builtin expect... yes
+Checking for statement expression feature... no
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for List::MoreUtils::XS
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  XS.xs > XS.xsc
+Running Mkbootstrap for XS ()
+chmod 644 "XS.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/List/MoreUtils/XS/XS.bs 644
+cp lib/List/MoreUtils/XS.pm blib/lib/List/MoreUtils/XS.pm
+mv XS.xsc XS.c
+cc -c  -I. -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.430\" -DXS_VERSION=\"0.430\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   XS.c
+rm -f blib/arch/auto/List/MoreUtils/XS/XS.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  XS.o  -o blib/arch/auto/List/MoreUtils/XS/XS.so  \
+      \
+  
+chmod 755 blib/arch/auto/List/MoreUtils/XS/XS.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/List/MoreUtils/XS/XS.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t t/xs/*.t xt/*.t
+t/xs/after.t ................ ok
+t/xs/after_incl.t ........... ok
+t/xs/all.t .................. ok
+t/xs/all_u.t ................ ok
+t/xs/any.t .................. ok
+t/xs/any_u.t ................ ok
+t/xs/apply.t ................ ok
+t/xs/arrayify.t ............. ok
+t/xs/before.t ............... ok
+t/xs/before_incl.t .......... ok
+t/xs/binsert.t .............. ok
+t/xs/bremove.t .............. ok
+t/xs/bsearch.t .............. ok
+t/xs/bsearchidx.t ........... ok
+t/xs/duplicates.t ........... ok
+t/xs/each_array.t ........... ok
+t/xs/equal_range.t .......... ok
+t/xs/false.t ................ ok
+t/xs/firstidx.t ............. ok
+t/xs/firstres.t ............. ok
+t/xs/firstval.t ............. ok
+t/xs/frequency.t ............ ok
+t/xs/Import.t ............... ok
+t/xs/indexes.t .............. ok
+t/xs/insert_after.t ......... ok
+t/xs/insert_after_string.t .. ok
+t/xs/lastidx.t .............. ok
+t/xs/lastres.t .............. ok
+t/xs/lastval.t .............. ok
+t/xs/listcmp.t .............. ok
+t/xs/lower_bound.t .......... ok
+t/xs/mesh.t ................. ok
+t/xs/minmax.t ............... ok
+t/xs/minmaxstr.t ............ ok
+t/xs/mode.t ................. ok
+t/xs/natatime.t ............. ok
+t/xs/none.t ................. ok
+t/xs/none_u.t ............... ok
+t/xs/notall.t ............... ok
+t/xs/notall_u.t ............. ok
+t/xs/occurrences.t .......... ok
+t/xs/one.t .................. ok
+t/xs/one_u.t ................ ok
+t/xs/onlyidx.t .............. ok
+t/xs/onlyres.t .............. ok
+t/xs/onlyval.t .............. ok
+t/xs/pairwise.t ............. ok
+t/xs/part.t ................. ok
+t/xs/qsort.t ................ ok
+t/xs/reduce_0.t ............. ok
+t/xs/reduce_1.t ............. ok
+t/xs/reduce_u.t ............. ok
+t/xs/samples.t .............. ok
+t/xs/singleton.t ............ ok
+t/xs/slide.t ................ ok
+t/xs/slideatatime.t ......... ok
+t/xs/true.t ................. ok
+t/xs/uniq.t ................. ok
+t/xs/upper_bound.t .......... ok
+t/xs/XS.t ................... skipped: Unreasonable unless loaded via List::MoreUtils
+t/xs/zip6.t ................. ok
+All tests successful.
+Files=61, Tests=4519, 10 wallclock secs ( 0.39 usr  0.08 sys +  9.25 cusr  0.82 csys = 10.54 CPU)
+Result: PASS
+>>> perl-list-moreutils-xs: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/List/MoreUtils/XS/XS.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-list-moreutils-xs/pkg/perl-list-moreutils-xs/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-list-moreutils-xs/pkg/perl-list-moreutils-xs/usr/lib/perl5/vendor_perl/auto/List/MoreUtils/XS/XS.so
+Installing /home/packager/aports/main/perl-list-moreutils-xs/pkg/perl-list-moreutils-xs/usr/lib/perl5/vendor_perl/List/MoreUtils/XS.pm
+Installing /home/packager/aports/main/perl-list-moreutils-xs/pkg/perl-list-moreutils-xs/usr/share/man/man3/List::MoreUtils::XS.3pm
+>>> perl-list-moreutils-xs-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-list-moreutils-xs/pkg/perl-list-moreutils-xs-doc/usr/share/man'
+>>> perl-list-moreutils-xs-doc*: Preparing subpackage perl-list-moreutils-xs-doc...
+>>> perl-list-moreutils-xs-doc*: Running postcheck for perl-list-moreutils-xs-doc
+>>> perl-list-moreutils-xs*: Running postcheck for perl-list-moreutils-xs
+>>> perl-list-moreutils-xs*: Preparing package perl-list-moreutils-xs...
+>>> perl-list-moreutils-xs*: Stripping binaries
+>>> perl-list-moreutils-xs-doc*: Scanning shared objects
+>>> perl-list-moreutils-xs*: Scanning shared objects
+>>> perl-list-moreutils-xs-doc*: Tracing dependencies...
+>>> perl-list-moreutils-xs-doc*: Package size: 1.9 KB
+>>> perl-list-moreutils-xs-doc*: Compressing data...
+>>> perl-list-moreutils-xs-doc*: Create checksum...
+pigz: not found
+>>> perl-list-moreutils-xs-doc*: Create perl-list-moreutils-xs-doc-0.430-r5.apk
+>>> perl-list-moreutils-xs*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-list-moreutils-xs*: Package size: 120.9 KB
+>>> perl-list-moreutils-xs*: Compressing data...
+>>> perl-list-moreutils-xs*: Create checksum...
+pigz: not found
+>>> perl-list-moreutils-xs*: Create perl-list-moreutils-xs-0.430-r5.apk
+>>> perl-list-moreutils-xs: Build complete at Sun, 18 May 2025 09:04:51 +0000 elapsed time 0h 0m 20s
+>>> perl-list-moreutils-xs: Cleaning up srcdir
+>>> perl-list-moreutils-xs: Cleaning up pkgdir
+>>> perl-list-moreutils-xs: Uninstalling dependencies...
+(1/12) Purging .makedepends-perl-list-moreutils-xs (20250518.090433)
+(2/12) Purging perl-dev (5.40.2-r0)
+(3/12) Purging perl-utils (5.40.2-r0)
+(4/12) Purging perl-config-autoconf (0.320-r2)
+(5/12) Purging perl-capture-tiny (0.50-r0)
+(6/12) Purging perl-inc-latest (0.500-r3)
+(7/12) Purging perl-test-leaktrace (0.17-r5)
+(8/12) Purging git-perl (2.47.2-r0)
+(9/12) Purging perl-git (2.47.2-r0)
+(10/12) Purging perl-error (0.17030-r0)
+(11/12) Purging perl (5.40.2-r0)
+(12/12) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-list-moreutils-xs: Updating the main/x86_64 repository index...
+>>> perl-list-moreutils-xs: Signing the index...
+pigz: not found

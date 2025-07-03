@@ -1,0 +1,3081 @@
+pigz: not found
+>>> tiny-cloud: Building main/tiny-cloud 3.1.1-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:00:15 +0000
+>>> tiny-cloud: Validating /home/packager/aports/main/tiny-cloud/APKBUILD...
+>>> tiny-cloud: Analyzing dependencies...
+>>> tiny-cloud: Installing for build: build-base e2fsprogs-extra partx sfdisk yx openssh-server kyua xz lz4 zstd
+(1/25) Installing libeconf (0.6.3-r0)
+(2/25) Installing libblkid (2.40.4-r1)
+(3/25) Installing libcom_err (1.47.1-r1)
+(4/25) Installing e2fsprogs-libs (1.47.1-r1)
+(5/25) Installing libuuid (2.40.4-r1)
+(6/25) Installing e2fsprogs (1.47.1-r1)
+(7/25) Installing e2fsprogs-extra (1.47.1-r1)
+(8/25) Installing libsmartcols (2.40.4-r1)
+(9/25) Installing partx (2.40.4-r1)
+(10/25) Installing libfdisk (2.40.4-r1)
+(11/25) Installing sfdisk (2.40.4-r1)
+(12/25) Installing yaml (0.2.5-r2)
+(13/25) Installing yx (1.0.2-r0)
+(14/25) Installing openssh-keygen (9.9_p2-r0)
+(15/25) Installing openssh-server-common (9.9_p2-r0)
+(16/25) Installing openssh-server (9.9_p2-r0)
+(17/25) Installing atf (0.21-r7)
+(18/25) Installing lutok (0.4-r6)
+(19/25) Installing sqlite-libs (3.49.2-r0)
+(20/25) Installing kyua (0.13-r8)
+(21/25) Installing xz-libs (5.6.3-r1)
+(22/25) Installing xz (5.6.3-r1)
+(23/25) Installing lz4 (1.10.0-r0)
+(24/25) Installing zstd (1.5.7-r0)
+(25/25) Installing .makedepends-tiny-cloud (20250523.180017)
+Executing busybox-1.37.0-r12.trigger
+OK: 594 MiB in 157 packages
+>>> tiny-cloud: Cleaning up srcdir
+>>> tiny-cloud: Cleaning up pkgdir
+>>> tiny-cloud: Cleaning up tmpdir
+>>> tiny-cloud: Fetching https://gitlab.alpinelinux.org/alpine/cloud/tiny-cloud/-/archive/3.1.1/tiny-cloud-3.1.1.tar.gz
+Connecting to gitlab.alpinelinux.org (172.105.69.85:443)
+saving to '/var/cache/distfiles/tiny-cloud-3.1.1.tar.gz.part'
+tiny-cloud-3.1.1.tar 100% |********************************| 29570  0:00:00 ETA
+'/var/cache/distfiles/tiny-cloud-3.1.1.tar.gz.part' saved
+>>> tiny-cloud: Fetching https://gitlab.alpinelinux.org/alpine/cloud/tiny-cloud/-/archive/3.1.1/tiny-cloud-3.1.1.tar.gz
+>>> tiny-cloud: Checking sha512sums...
+tiny-cloud-3.1.1.tar.gz: OK
+tiny-cloud.pre-upgrade: OK
+tiny-cloud-openrc.pre-upgrade: OK
+tiny-cloud-aws.post-install: OK
+tiny-cloud-azure.post-install: OK
+tiny-cloud-gcp.post-install: OK
+tiny-cloud-hetzner.post-install: OK
+tiny-cloud-incus.post-install: OK
+tiny-cloud-nocloud.post-install: OK
+tiny-cloud-oci.post-install: OK
+tiny-cloud-scaleway.post-install: OK
+>>> tiny-cloud: Unpacking /var/cache/distfiles/tiny-cloud-3.1.1.tar.gz...
+echo "syntax(2)" > tests/Kyuafile.tmp
+echo "syntax(2)" > Kyuafile.tmp
+echo "test_suite('tiny-cloud')" >> tests/Kyuafile.tmp
+echo "test_suite('tiny-cloud')" >> Kyuafile.tmp
+for i in fake-wget.test imds.test init.test tiny-cloud-alpine.test tiny-cloud.test; do \
+	echo "atf_test_program{name='$i',timeout=5}" >> tests/Kyuafile.tmp ; \
+done
+echo "include('tests/Kyuafile')" >> Kyuafile.tmp
+mv tests/Kyuafile.tmp tests/Kyuafile
+mv Kyuafile.tmp Kyuafile
+kyua --variable parallelism=8 test || (kyua report --verbose && exit 1)
+tests/fake-wget.test:fake_wget_content_from_path_strip_prefix  ->  broken: Premature exit; test case exited with code 1  [0.042s]
+tests/fake-wget.test:fake_wget  ->  broken: Premature exit; test case exited with code 1  [0.050s]
+tests/fake-wget.test:fake_wget_header  ->  broken: Premature exit; test case exited with code 1  [0.051s]
+tests/fake-wget.test:fake_wget_404  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/fake-wget.test:fake_wget_missing_url  ->  broken: Premature exit; test case exited with code 1  [0.073s]
+tests/fake-wget.test:fake_wget_content_from_path  ->  broken: Premature exit; test case exited with code 1  [0.082s]
+tests/fake-wget.test:fake_wget_empty_url  ->  broken: Premature exit; test case exited with code 1  [1.173s]
+tests/fake-wget.test:fake_wget_fail  ->  broken: Premature exit; test case exited with code 1  [1.175s]
+tests/fake-wget.test:fake_wget_outfile  ->  broken: Premature exit; test case exited with code 1  [1.135s]
+tests/fake-wget.test:fake_wget_quiet  ->  broken: Premature exit; test case exited with code 1  [1.132s]
+tests/fake-wget.test:fake_wget_spider  ->  broken: Premature exit; test case exited with code 1  [1.120s]
+tests/fake-wget.test:fake_wget_stdout  ->  broken: Premature exit; test case exited with code 1  [1.109s]
+tests/fake-wget.test:fake_wget_usage  ->  broken: Premature exit; test case exited with code 1  [1.117s]
+tests/imds.test:imds_hostname_aws  ->  broken: Premature exit; test case exited with code 1  [0.056s]
+tests/imds.test:imds_hostname_incus  ->  broken: Premature exit; test case exited with code 1  [0.057s]
+tests/imds.test:imds_hostname_gcp  ->  broken: Premature exit; test case exited with code 1  [0.064s]
+tests/imds.test:imds_hostname_hetzner  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/imds.test:imds_hostname_azure  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/imds.test:imds_hostname_oci  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/imds.test:imds_hostname_nocloud  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/imds.test:imds_help  ->  broken: Premature exit; test case exited with code 1  [0.113s]
+tests/imds.test:imds_hostname_scaleway  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/imds.test:imds_local_hostname_aws  ->  broken: Premature exit; test case exited with code 1  [0.070s]
+tests/imds.test:imds_local_hostname_azure  ->  broken: Premature exit; test case exited with code 1  [0.074s]
+tests/imds.test:imds_local_hostname_hetzner  ->  broken: Premature exit; test case exited with code 1  [0.065s]
+tests/imds.test:imds_local_hostname_incus  ->  broken: Premature exit; test case exited with code 1  [0.049s]
+tests/imds.test:imds_local_hostname_gcp  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/imds.test:imds_local_hostname_nocloud  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/imds.test:imds_local_hostname_scaleway  ->  broken: Premature exit; test case exited with code 1  [0.061s]
+tests/imds.test:imds_local_hostname_oci  ->  broken: Premature exit; test case exited with code 1  [0.088s]
+tests/imds.test:imds_nocloud_cmdline_local_hostname  ->  broken: Premature exit; test case exited with code 1  [0.074s]
+tests/imds.test:imds_space  ->  broken: Premature exit; test case exited with code 1  [0.067s]
+tests/imds.test:imds_nocloud_smbios_local_hostname  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/imds.test:imds_ssh_keys_azure  ->  broken: Premature exit; test case exited with code 1  [0.068s]
+tests/imds.test:imds_ssh_keys_aws  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/imds.test:imds_ssh_keys_gcp  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/imds.test:imds_ssh_keys_hetzner  ->  broken: Premature exit; test case exited with code 1  [1.040s]
+tests/imds.test:imds_ssh_keys_incus  ->  broken: Premature exit; test case exited with code 1  [1.033s]
+tests/imds.test:imds_ssh_keys_nocloud  ->  broken: Premature exit; test case exited with code 1  [1.025s]
+tests/imds.test:imds_ssh_keys_oci  ->  broken: Premature exit; test case exited with code 1  [1.023s]
+tests/imds.test:imds_ssh_keys_scaleway  ->  broken: Premature exit; test case exited with code 1  [1.017s]
+tests/imds.test:imds_userdata_incus  ->  broken: Premature exit; test case exited with code 1  [1.018s]
+tests/imds.test:imds_userdata_scaleway  ->  broken: Premature exit; test case exited with code 1  [1.021s]
+tests/init.test:autodetect_aws_nitro  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/init.test:autodetect_gcp  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/init.test:autodetect_hetzner  ->  broken: Premature exit; test case exited with code 1  [0.061s]
+tests/init.test:auto_detect_ethernet_interface  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/init.test:autodetect_aws_xen  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/init.test:autodetect_azure  ->  broken: Premature exit; test case exited with code 1  [0.089s]
+tests/init.test:autodetect_incus  ->  broken: Premature exit; test case exited with code 1  [0.079s]
+tests/init.test:autodetect_aws_cmdline  ->  broken: Premature exit; test case exited with code 1  [0.106s]
+tests/init.test:autodetect_nocloud_cmdline  ->  broken: Premature exit; test case exited with code 1  [0.064s]
+tests/init.test:autodetect_oci  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/init.test:autodetect_nocloud_volume  ->  broken: Premature exit; test case exited with code 1  [0.071s]
+tests/init.test:autodetect_nocloud_dmi  ->  broken: Premature exit; test case exited with code 1  [0.087s]
+tests/init.test:autodetect_scaleway  ->  broken: Premature exit; test case exited with code 1  [0.083s]
+tests/init.test:create_default_user  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/init.test:autodetect_unknown  ->  broken: Premature exit; test case exited with code 1  [0.086s]
+tests/init.test:enable_sshd  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/init.test:expand_root  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/init.test:expand_root_partition  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/init.test:find_first_interface_up  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/init.test:ethernets  ->  broken: Premature exit; test case exited with code 1  [0.106s]
+tests/init.test:run_userdata  ->  broken: Premature exit; test case exited with code 1  [1.599s]
+tests/init.test:save_userdata_compressed  ->  broken: Premature exit; test case exited with code 1  [1.595s]
+tests/init.test:save_userdata_plain  ->  broken: Premature exit; test case exited with code 1  [1.586s]
+tests/init.test:set_default_interfaces  ->  broken: Premature exit; test case exited with code 1  [1.593s]
+tests/init.test:set_hostname  ->  broken: Premature exit; test case exited with code 1  [1.562s]
+tests/init.test:set_ssh_keys  ->  broken: Premature exit; test case exited with code 1  [1.548s]
+tests/init.test:userdata_type  ->  broken: Premature exit; test case exited with code 1  [1.548s]
+tests/tiny-cloud-alpine.test:set_ephemeral_network_cmdline  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/tiny-cloud-alpine.test:set_network_config_auto  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/tiny-cloud-alpine.test:set_network_config_network_interfaces  ->  broken: Premature exit; test case exited with code 1  [0.073s]
+tests/tiny-cloud-alpine.test:userdata_apk_repositories  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/tiny-cloud-alpine.test:userdata_apk_empty  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/tiny-cloud-alpine.test:userdata_apk_repositories_version  ->  broken: Premature exit; test case exited with code 1  [0.084s]
+tests/tiny-cloud-alpine.test:userdata_apk_cache  ->  broken: Premature exit; test case exited with code 1  [0.092s]
+tests/tiny-cloud-alpine.test:userdata_apk_repositories_version_auto_edge  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/tiny-cloud-alpine.test:userdata_autoinstall  ->  broken: Premature exit; test case exited with code 1  [0.098s]
+tests/tiny-cloud-alpine.test:userdata_ntp  ->  broken: Premature exit; test case exited with code 1  [0.057s]
+tests/tiny-cloud-alpine.test:userdata_bootcmd  ->  broken: Premature exit; test case exited with code 1  [0.103s]
+tests/tiny-cloud-alpine.test:userdata_groups  ->  broken: Premature exit; test case exited with code 1  [0.079s]
+tests/tiny-cloud-alpine.test:userdata_create_default_user  ->  broken: Premature exit; test case exited with code 1  [0.106s]
+tests/tiny-cloud-alpine.test:userdata_ntp_openntpd  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/tiny-cloud-alpine.test:userdata_no_default_user  ->  broken: Premature exit; test case exited with code 1  [0.089s]
+tests/tiny-cloud-alpine.test:userdata_ntp_busybox  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/tiny-cloud-alpine.test:userdata_packages  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/tiny-cloud-alpine.test:userdata_runcmd  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/tiny-cloud-alpine.test:userdata_package_update  ->  broken: Premature exit; test case exited with code 1  [0.098s]
+tests/tiny-cloud-alpine.test:userdata_package_upgrade  ->  broken: Premature exit; test case exited with code 1  [0.098s]
+tests/tiny-cloud-alpine.test:userdata_ssh_authorized_keys  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/tiny-cloud-alpine.test:userdata_user_gecos  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/tiny-cloud-alpine.test:userdata_user_name  ->  broken: Premature exit; test case exited with code 1  [0.058s]
+tests/tiny-cloud-alpine.test:userdata_user_homedir  ->  broken: Premature exit; test case exited with code 1  [0.126s]
+tests/tiny-cloud-alpine.test:userdata_user_missing_name  ->  broken: Premature exit; test case exited with code 1  [0.126s]
+tests/tiny-cloud-alpine.test:userdata_user_primary_group  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/tiny-cloud-alpine.test:userdata_user_shell  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/tiny-cloud-alpine.test:userdata_users_default_name_only  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/tiny-cloud-alpine.test:userdata_users_default_user  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/tiny-cloud-alpine.test:userdata_users_doas  ->  broken: Premature exit; test case exited with code 1  [0.122s]
+tests/tiny-cloud-alpine.test:userdata_users_gecos  ->  broken: Premature exit; test case exited with code 1  [0.087s]
+tests/tiny-cloud-alpine.test:userdata_users_homedir  ->  broken: Premature exit; test case exited with code 1  [0.084s]
+tests/tiny-cloud-alpine.test:userdata_users_name_only  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/tiny-cloud-alpine.test:userdata_users_primary_group  ->  broken: Premature exit; test case exited with code 1  [0.070s]
+tests/tiny-cloud-alpine.test:userdata_users_groups  ->  broken: Premature exit; test case exited with code 1  [0.369s]
+tests/tiny-cloud-alpine.test:userdata_users_lock_passwd  ->  broken: Premature exit; test case exited with code 1  [0.362s]
+tests/tiny-cloud-alpine.test:userdata_users_no_create_home  ->  broken: Premature exit; test case exited with code 1  [0.359s]
+tests/tiny-cloud-alpine.test:userdata_users_shell  ->  broken: Premature exit; test case exited with code 1  [0.307s]
+tests/tiny-cloud-alpine.test:userdata_users_ssh_authorized_keys  ->  broken: Premature exit; test case exited with code 1  [0.305s]
+tests/tiny-cloud-alpine.test:userdata_users_system  ->  broken: Premature exit; test case exited with code 1  [0.302s]
+tests/tiny-cloud-alpine.test:userdata_write_files  ->  broken: Premature exit; test case exited with code 1  [0.301s]
+tests/tiny-cloud.test:no_userdata_early  ->  broken: Premature exit; test case exited with code 1  [0.052s]
+tests/tiny-cloud.test:no_userdata_final  ->  broken: Premature exit; test case exited with code 1  [0.054s]
+tests/tiny-cloud.test:no_userdata_main  ->  broken: Premature exit; test case exited with code 1  [0.052s]
+tests/tiny-cloud.test:no_metadata_boot  ->  broken: Premature exit; test case exited with code 1  [0.069s]
+tests/tiny-cloud.test:tiny_cloud_help  ->  broken: Premature exit; test case exited with code 1  [0.055s]
+tests/tiny-cloud.test:tiny_cloud_disabled  ->  broken: Premature exit; test case exited with code 1  [0.066s]
+
+Results file id is home_packager_aports_main_tiny-cloud_src_tiny-cloud-3.1.1.20250523-180020-147399
+Results saved to /home/packager/.kyua/store/results.home_packager_aports_main_tiny-cloud_src_tiny-cloud-3.1.1.20250523-180020-147399.db
+
+0/117 passed (117 failed)
+===> Execution context
+Current directory: /home/packager/aports/main/tiny-cloud/src/tiny-cloud-3.1.1
+Environment variables:
+    ABUILD_LAST_COMMIT=bb241594e9b293c34dc0c201bcfbad58a6696fee
+    APORTSDIR=/home/packager/aports
+    BUILDCC=gcc
+    BUILDCFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt
+    BUILDCPPFLAGS=
+    BUILDCXX=g++
+    BUILDCXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt
+    BUILDLD=ld
+    BUILDLDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+    CARGO_BUILD_JOBS=8
+    CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
+    CARGO_PROFILE_RELEASE_LTO=true
+    CARGO_PROFILE_RELEASE_OPT_LEVEL=s
+    CARGO_PROFILE_RELEASE_PANIC=abort
+    CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+    CC=gcc
+    CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt
+    CMAKE_BUILD_PARALLEL_LEVEL=8
+    COLUMNS=80
+    CTEST_NO_TESTS_ACTION=error
+    CTEST_OUTPUT_ON_FAILURE=ON
+    CTEST_PARALLEL_LEVEL=8
+    CXX=g++
+    CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt
+    DFLAGS=-Os
+    GIT_CEILING_DIRECTORIES=/home/packager/aports/main/tiny-cloud
+    GOFLAGS=-buildmode=pie -modcacherw -trimpath -buildvcs=false
+    HOME=/home/packager
+    HOSTNAME=c0f350f9bdf0
+    JOBS=8
+    LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+    LINES=24
+    MAKEFLAGS= -j8 --jobserver-auth=fifo:/tmp/GMfifo3199
+    MAKELEVEL=1
+    MFLAGS=-j8 --jobserver-auth=fifo:/tmp/GMfifo3199
+    OLDPWD=/home/packager/aports/main/tiny-cloud/src/tiny-cloud-3.1.1
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    PERL_MM_USE_DEFAULT=1
+    PWD=/home/packager/aports/main/tiny-cloud/src/tiny-cloud-3.1.1
+    REPODEST=/home/packager/packages/
+    RUSTFLAGS= -Clink-arg=-Wl,-z,pack-relative-relocs
+    SAMUFLAGS=-j8
+    SHLVL=1
+    SOURCE_DATE_EPOCH=1739654100
+    SRCDEST=/var/cache/distfiles
+    git=/usr/bin/git
+===> tests/fake-wget.test:fake_wget
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.721973Z
+End time:   2025-05-23T18:00:20.771620Z
+Duration:   0.050s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_404
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.722896Z
+End time:   2025-05-23T18:00:20.798559Z
+Duration:   0.076s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_content_from_path
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.723986Z
+End time:   2025-05-23T18:00:20.806254Z
+Duration:   0.082s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_content_from_path_strip_prefix
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.724883Z
+End time:   2025-05-23T18:00:20.766610Z
+Duration:   0.042s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_empty_url
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.725812Z
+End time:   2025-05-23T18:00:21.899310Z
+Duration:   1.173s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_fail
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.726840Z
+End time:   2025-05-23T18:00:21.901621Z
+Duration:   1.175s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_header
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.727654Z
+End time:   2025-05-23T18:00:20.778556Z
+Duration:   0.051s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_missing_url
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.728660Z
+End time:   2025-05-23T18:00:20.801468Z
+Duration:   0.073s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_outfile
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.768516Z
+End time:   2025-05-23T18:00:21.903934Z
+Duration:   1.135s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_quiet
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.773408Z
+End time:   2025-05-23T18:00:21.905868Z
+Duration:   1.132s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_spider
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.787731Z
+End time:   2025-05-23T18:00:21.907698Z
+Duration:   1.120s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_stdout
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.800175Z
+End time:   2025-05-23T18:00:21.909440Z
+Duration:   1.109s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/fake-wget.test:fake_wget_usage
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:20.803334Z
+End time:   2025-05-23T18:00:21.919892Z
+Duration:   1.117s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+fake-wget.test: ERROR: Cannot provide test case names with -l
+fake-wget.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_help
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.899027Z
+End time:   2025-05-23T18:00:22.011751Z
+Duration:   0.113s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_aws
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.901330Z
+End time:   2025-05-23T18:00:21.957230Z
+Duration:   0.056s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_azure
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.903667Z
+End time:   2025-05-23T18:00:21.981693Z
+Duration:   0.078s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_gcp
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.905600Z
+End time:   2025-05-23T18:00:21.969861Z
+Duration:   0.064s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_hetzner
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.907457Z
+End time:   2025-05-23T18:00:21.979172Z
+Duration:   0.072s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_incus
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.909171Z
+End time:   2025-05-23T18:00:21.966518Z
+Duration:   0.057s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_nocloud
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.919621Z
+End time:   2025-05-23T18:00:22.004121Z
+Duration:   0.085s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_oci
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.921560Z
+End time:   2025-05-23T18:00:22.001380Z
+Duration:   0.080s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_hostname_scaleway
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.959033Z
+End time:   2025-05-23T18:00:22.021517Z
+Duration:   0.062s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_aws
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.968269Z
+End time:   2025-05-23T18:00:22.038439Z
+Duration:   0.070s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_azure
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.971593Z
+End time:   2025-05-23T18:00:22.045994Z
+Duration:   0.074s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_gcp
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.981431Z
+End time:   2025-05-23T18:00:22.061658Z
+Duration:   0.080s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_hetzner
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:21.985666Z
+End time:   2025-05-23T18:00:22.050598Z
+Duration:   0.065s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_incus
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.003858Z
+End time:   2025-05-23T18:00:22.052408Z
+Duration:   0.049s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_nocloud
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.011480Z
+End time:   2025-05-23T18:00:22.073169Z
+Duration:   0.062s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_oci
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.016978Z
+End time:   2025-05-23T18:00:22.104920Z
+Duration:   0.088s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_local_hostname_scaleway
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.035350Z
+End time:   2025-05-23T18:00:22.096149Z
+Duration:   0.061s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_nocloud_cmdline_local_hostname
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.040190Z
+End time:   2025-05-23T18:00:22.114543Z
+Duration:   0.074s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_nocloud_smbios_local_hostname
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.050310Z
+End time:   2025-05-23T18:00:22.126698Z
+Duration:   0.076s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_space
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.052146Z
+End time:   2025-05-23T18:00:22.118993Z
+Duration:   0.067s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_aws
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.053987Z
+End time:   2025-05-23T18:00:22.133564Z
+Duration:   0.080s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_azure
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.063544Z
+End time:   2025-05-23T18:00:22.131766Z
+Duration:   0.068s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_gcp
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.074840Z
+End time:   2025-05-23T18:00:22.150125Z
+Duration:   0.075s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_hetzner
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.097855Z
+End time:   2025-05-23T18:00:23.137406Z
+Duration:   1.040s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_incus
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.106617Z
+End time:   2025-05-23T18:00:23.139519Z
+Duration:   1.033s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_nocloud
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.116324Z
+End time:   2025-05-23T18:00:23.141641Z
+Duration:   1.025s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_oci
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.120773Z
+End time:   2025-05-23T18:00:23.143587Z
+Duration:   1.023s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_ssh_keys_scaleway
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.128189Z
+End time:   2025-05-23T18:00:23.145415Z
+Duration:   1.017s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_userdata_incus
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.133299Z
+End time:   2025-05-23T18:00:23.151492Z
+Duration:   1.018s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/imds.test:imds_userdata_scaleway
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:22.135176Z
+End time:   2025-05-23T18:00:23.155679Z
+Duration:   1.021s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+imds.test: ERROR: Cannot provide test case names with -l
+imds.test: See atf-test-program(1) for usage details.
+===> tests/init.test:auto_detect_ethernet_interface
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.137133Z
+End time:   2025-05-23T18:00:23.217659Z
+Duration:   0.081s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_aws_cmdline
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.139236Z
+End time:   2025-05-23T18:00:23.245282Z
+Duration:   0.106s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_aws_nitro
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.141367Z
+End time:   2025-05-23T18:00:23.204835Z
+Duration:   0.063s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_aws_xen
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.143334Z
+End time:   2025-05-23T18:00:23.219498Z
+Duration:   0.076s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_azure
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.145176Z
+End time:   2025-05-23T18:00:23.234515Z
+Duration:   0.089s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_gcp
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.151217Z
+End time:   2025-05-23T18:00:23.214069Z
+Duration:   0.063s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_hetzner
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.155411Z
+End time:   2025-05-23T18:00:23.215922Z
+Duration:   0.061s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_incus
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.157403Z
+End time:   2025-05-23T18:00:23.236386Z
+Duration:   0.079s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_nocloud_cmdline
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.206739Z
+End time:   2025-05-23T18:00:23.270540Z
+Duration:   0.064s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_nocloud_dmi
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.215663Z
+End time:   2025-05-23T18:00:23.302533Z
+Duration:   0.087s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_nocloud_volume
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.217405Z
+End time:   2025-05-23T18:00:23.288083Z
+Duration:   0.071s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_oci
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.219236Z
+End time:   2025-05-23T18:00:23.281489Z
+Duration:   0.062s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_scaleway
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.221751Z
+End time:   2025-05-23T18:00:23.304499Z
+Duration:   0.083s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:autodetect_unknown
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.236132Z
+End time:   2025-05-23T18:00:23.322532Z
+Duration:   0.086s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:create_default_user
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.238731Z
+End time:   2025-05-23T18:00:23.310530Z
+Duration:   0.072s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:enable_sshd
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.246956Z
+End time:   2025-05-23T18:00:23.324752Z
+Duration:   0.078s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:ethernets
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.272189Z
+End time:   2025-05-23T18:00:23.378360Z
+Duration:   0.106s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:expand_root
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.283184Z
+End time:   2025-05-23T18:00:23.358529Z
+Duration:   0.075s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:expand_root_partition
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.289830Z
+End time:   2025-05-23T18:00:23.374538Z
+Duration:   0.085s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:find_first_interface_up
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.304218Z
+End time:   2025-05-23T18:00:23.376480Z
+Duration:   0.072s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:run_userdata
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.306253Z
+End time:   2025-05-23T18:00:24.905268Z
+Duration:   1.599s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:save_userdata_compressed
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.312013Z
+End time:   2025-05-23T18:00:24.907433Z
+Duration:   1.595s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:save_userdata_plain
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.324091Z
+End time:   2025-05-23T18:00:24.909671Z
+Duration:   1.586s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:set_default_interfaces
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.327042Z
+End time:   2025-05-23T18:00:24.919929Z
+Duration:   1.593s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:set_hostname
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.360317Z
+End time:   2025-05-23T18:00:24.922047Z
+Duration:   1.562s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:set_ssh_keys
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.376199Z
+End time:   2025-05-23T18:00:24.924158Z
+Duration:   1.548s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/init.test:userdata_type
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:23.378075Z
+End time:   2025-05-23T18:00:24.926160Z
+Duration:   1.548s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+init.test: ERROR: Cannot provide test case names with -l
+init.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:set_ephemeral_network_cmdline
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.904897Z
+End time:   2025-05-23T18:00:24.966543Z
+Duration:   0.062s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:set_network_config_auto
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.907098Z
+End time:   2025-05-23T18:00:24.968767Z
+Duration:   0.062s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:set_network_config_network_interfaces
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.909321Z
+End time:   2025-05-23T18:00:24.982545Z
+Duration:   0.073s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_apk_cache
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.919593Z
+End time:   2025-05-23T18:00:25.012091Z
+Duration:   0.092s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_apk_empty
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.921725Z
+End time:   2025-05-23T18:00:25.006558Z
+Duration:   0.085s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_apk_repositories
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.923815Z
+End time:   2025-05-23T18:00:24.998525Z
+Duration:   0.075s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_apk_repositories_version
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.925833Z
+End time:   2025-05-23T18:00:25.010044Z
+Duration:   0.084s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_apk_repositories_version_auto_edge
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.940157Z
+End time:   2025-05-23T18:00:25.016288Z
+Duration:   0.076s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_autoinstall
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.968294Z
+End time:   2025-05-23T18:00:25.066525Z
+Duration:   0.098s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_bootcmd
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.971490Z
+End time:   2025-05-23T18:00:25.074679Z
+Duration:   0.103s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_create_default_user
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:24.984294Z
+End time:   2025-05-23T18:00:25.090542Z
+Duration:   0.106s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_groups
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.000558Z
+End time:   2025-05-23T18:00:25.079247Z
+Duration:   0.079s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_no_default_user
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.009725Z
+End time:   2025-05-23T18:00:25.098765Z
+Duration:   0.089s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_ntp
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.011772Z
+End time:   2025-05-23T18:00:25.068559Z
+Duration:   0.057s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_ntp_busybox
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.015951Z
+End time:   2025-05-23T18:00:25.100926Z
+Duration:   0.085s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_ntp_openntpd
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.017998Z
+End time:   2025-05-23T18:00:25.092612Z
+Duration:   0.075s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_package_update
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.068215Z
+End time:   2025-05-23T18:00:25.166201Z
+Duration:   0.098s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_package_upgrade
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.070188Z
+End time:   2025-05-23T18:00:25.168635Z
+Duration:   0.098s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_packages
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.078702Z
+End time:   2025-05-23T18:00:25.154575Z
+Duration:   0.076s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_runcmd
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.081124Z
+End time:   2025-05-23T18:00:25.156573Z
+Duration:   0.075s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_ssh_authorized_keys
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.092291Z
+End time:   2025-05-23T18:00:25.173230Z
+Duration:   0.081s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_user_gecos
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.094308Z
+End time:   2025-05-23T18:00:25.175197Z
+Duration:   0.081s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_user_homedir
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.100605Z
+End time:   2025-05-23T18:00:25.226196Z
+Duration:   0.126s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_user_missing_name
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.106847Z
+End time:   2025-05-23T18:00:25.232385Z
+Duration:   0.126s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_user_name
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.156269Z
+End time:   2025-05-23T18:00:25.214622Z
+Duration:   0.058s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_user_primary_group
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.158092Z
+End time:   2025-05-23T18:00:25.238594Z
+Duration:   0.081s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_user_shell
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.168315Z
+End time:   2025-05-23T18:00:25.240631Z
+Duration:   0.072s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_default_name_only
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.170338Z
+End time:   2025-05-23T18:00:25.248654Z
+Duration:   0.078s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_default_user
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.174911Z
+End time:   2025-05-23T18:00:25.250711Z
+Duration:   0.076s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_doas
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.180193Z
+End time:   2025-05-23T18:00:25.302555Z
+Duration:   0.122s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_gecos
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.225901Z
+End time:   2025-05-23T18:00:25.312431Z
+Duration:   0.087s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_groups
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.232076Z
+End time:   2025-05-23T18:00:25.600751Z
+Duration:   0.369s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_homedir
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.234191Z
+End time:   2025-05-23T18:00:25.318479Z
+Duration:   0.084s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_lock_passwd
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.240335Z
+End time:   2025-05-23T18:00:25.602755Z
+Duration:   0.362s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_name_only
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.242228Z
+End time:   2025-05-23T18:00:25.320413Z
+Duration:   0.078s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_no_create_home
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.250422Z
+End time:   2025-05-23T18:00:25.609339Z
+Duration:   0.359s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_primary_group
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.252501Z
+End time:   2025-05-23T18:00:25.322336Z
+Duration:   0.070s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_shell
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.304318Z
+End time:   2025-05-23T18:00:25.611365Z
+Duration:   0.307s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_ssh_authorized_keys
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.314267Z
+End time:   2025-05-23T18:00:25.619613Z
+Duration:   0.305s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_users_system
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.320107Z
+End time:   2025-05-23T18:00:25.621635Z
+Duration:   0.302s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud-alpine.test:userdata_write_files
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.322025Z
+End time:   2025-05-23T18:00:25.622572Z
+Duration:   0.301s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud-alpine.test: ERROR: Cannot provide test case names with -l
+tiny-cloud-alpine.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud.test:no_metadata_boot
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.600480Z
+End time:   2025-05-23T18:00:25.669621Z
+Duration:   0.069s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud.test: ERROR: Cannot provide test case names with -l
+tiny-cloud.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud.test:no_userdata_early
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.602479Z
+End time:   2025-05-23T18:00:25.654564Z
+Duration:   0.052s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud.test: ERROR: Cannot provide test case names with -l
+tiny-cloud.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud.test:no_userdata_final
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.609058Z
+End time:   2025-05-23T18:00:25.662562Z
+Duration:   0.054s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud.test: ERROR: Cannot provide test case names with -l
+tiny-cloud.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud.test:no_userdata_main
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.611138Z
+End time:   2025-05-23T18:00:25.663485Z
+Duration:   0.052s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud.test: ERROR: Cannot provide test case names with -l
+tiny-cloud.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud.test:tiny_cloud_disabled
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.619341Z
+End time:   2025-05-23T18:00:25.684981Z
+Duration:   0.066s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud.test: ERROR: Cannot provide test case names with -l
+tiny-cloud.test: See atf-test-program(1) for usage details.
+===> tests/tiny-cloud.test:tiny_cloud_help
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T18:00:25.621371Z
+End time:   2025-05-23T18:00:25.676864Z
+Duration:   0.055s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+tiny-cloud.test: ERROR: Cannot provide test case names with -l
+tiny-cloud.test: See atf-test-program(1) for usage details.
+===> Broken tests
+tests/fake-wget.test:fake_wget  ->  broken: Premature exit; test case exited with code 1  [0.050s]
+tests/fake-wget.test:fake_wget_404  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/fake-wget.test:fake_wget_content_from_path  ->  broken: Premature exit; test case exited with code 1  [0.082s]
+tests/fake-wget.test:fake_wget_content_from_path_strip_prefix  ->  broken: Premature exit; test case exited with code 1  [0.042s]
+tests/fake-wget.test:fake_wget_empty_url  ->  broken: Premature exit; test case exited with code 1  [1.173s]
+tests/fake-wget.test:fake_wget_fail  ->  broken: Premature exit; test case exited with code 1  [1.175s]
+tests/fake-wget.test:fake_wget_header  ->  broken: Premature exit; test case exited with code 1  [0.051s]
+tests/fake-wget.test:fake_wget_missing_url  ->  broken: Premature exit; test case exited with code 1  [0.073s]
+tests/fake-wget.test:fake_wget_outfile  ->  broken: Premature exit; test case exited with code 1  [1.135s]
+tests/fake-wget.test:fake_wget_quiet  ->  broken: Premature exit; test case exited with code 1  [1.132s]
+tests/fake-wget.test:fake_wget_spider  ->  broken: Premature exit; test case exited with code 1  [1.120s]
+tests/fake-wget.test:fake_wget_stdout  ->  broken: Premature exit; test case exited with code 1  [1.109s]
+tests/fake-wget.test:fake_wget_usage  ->  broken: Premature exit; test case exited with code 1  [1.117s]
+tests/imds.test:imds_help  ->  broken: Premature exit; test case exited with code 1  [0.113s]
+tests/imds.test:imds_hostname_aws  ->  broken: Premature exit; test case exited with code 1  [0.056s]
+tests/imds.test:imds_hostname_azure  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/imds.test:imds_hostname_gcp  ->  broken: Premature exit; test case exited with code 1  [0.064s]
+tests/imds.test:imds_hostname_hetzner  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/imds.test:imds_hostname_incus  ->  broken: Premature exit; test case exited with code 1  [0.057s]
+tests/imds.test:imds_hostname_nocloud  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/imds.test:imds_hostname_oci  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/imds.test:imds_hostname_scaleway  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/imds.test:imds_local_hostname_aws  ->  broken: Premature exit; test case exited with code 1  [0.070s]
+tests/imds.test:imds_local_hostname_azure  ->  broken: Premature exit; test case exited with code 1  [0.074s]
+tests/imds.test:imds_local_hostname_gcp  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/imds.test:imds_local_hostname_hetzner  ->  broken: Premature exit; test case exited with code 1  [0.065s]
+tests/imds.test:imds_local_hostname_incus  ->  broken: Premature exit; test case exited with code 1  [0.049s]
+tests/imds.test:imds_local_hostname_nocloud  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/imds.test:imds_local_hostname_oci  ->  broken: Premature exit; test case exited with code 1  [0.088s]
+tests/imds.test:imds_local_hostname_scaleway  ->  broken: Premature exit; test case exited with code 1  [0.061s]
+tests/imds.test:imds_nocloud_cmdline_local_hostname  ->  broken: Premature exit; test case exited with code 1  [0.074s]
+tests/imds.test:imds_nocloud_smbios_local_hostname  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/imds.test:imds_space  ->  broken: Premature exit; test case exited with code 1  [0.067s]
+tests/imds.test:imds_ssh_keys_aws  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/imds.test:imds_ssh_keys_azure  ->  broken: Premature exit; test case exited with code 1  [0.068s]
+tests/imds.test:imds_ssh_keys_gcp  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/imds.test:imds_ssh_keys_hetzner  ->  broken: Premature exit; test case exited with code 1  [1.040s]
+tests/imds.test:imds_ssh_keys_incus  ->  broken: Premature exit; test case exited with code 1  [1.033s]
+tests/imds.test:imds_ssh_keys_nocloud  ->  broken: Premature exit; test case exited with code 1  [1.025s]
+tests/imds.test:imds_ssh_keys_oci  ->  broken: Premature exit; test case exited with code 1  [1.023s]
+tests/imds.test:imds_ssh_keys_scaleway  ->  broken: Premature exit; test case exited with code 1  [1.017s]
+tests/imds.test:imds_userdata_incus  ->  broken: Premature exit; test case exited with code 1  [1.018s]
+tests/imds.test:imds_userdata_scaleway  ->  broken: Premature exit; test case exited with code 1  [1.021s]
+tests/init.test:auto_detect_ethernet_interface  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/init.test:autodetect_aws_cmdline  ->  broken: Premature exit; test case exited with code 1  [0.106s]
+tests/init.test:autodetect_aws_nitro  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/init.test:autodetect_aws_xen  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/init.test:autodetect_azure  ->  broken: Premature exit; test case exited with code 1  [0.089s]
+tests/init.test:autodetect_gcp  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/init.test:autodetect_hetzner  ->  broken: Premature exit; test case exited with code 1  [0.061s]
+tests/init.test:autodetect_incus  ->  broken: Premature exit; test case exited with code 1  [0.079s]
+tests/init.test:autodetect_nocloud_cmdline  ->  broken: Premature exit; test case exited with code 1  [0.064s]
+tests/init.test:autodetect_nocloud_dmi  ->  broken: Premature exit; test case exited with code 1  [0.087s]
+tests/init.test:autodetect_nocloud_volume  ->  broken: Premature exit; test case exited with code 1  [0.071s]
+tests/init.test:autodetect_oci  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/init.test:autodetect_scaleway  ->  broken: Premature exit; test case exited with code 1  [0.083s]
+tests/init.test:autodetect_unknown  ->  broken: Premature exit; test case exited with code 1  [0.086s]
+tests/init.test:create_default_user  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/init.test:enable_sshd  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/init.test:ethernets  ->  broken: Premature exit; test case exited with code 1  [0.106s]
+tests/init.test:expand_root  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/init.test:expand_root_partition  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/init.test:find_first_interface_up  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/init.test:run_userdata  ->  broken: Premature exit; test case exited with code 1  [1.599s]
+tests/init.test:save_userdata_compressed  ->  broken: Premature exit; test case exited with code 1  [1.595s]
+tests/init.test:save_userdata_plain  ->  broken: Premature exit; test case exited with code 1  [1.586s]
+tests/init.test:set_default_interfaces  ->  broken: Premature exit; test case exited with code 1  [1.593s]
+tests/init.test:set_hostname  ->  broken: Premature exit; test case exited with code 1  [1.562s]
+tests/init.test:set_ssh_keys  ->  broken: Premature exit; test case exited with code 1  [1.548s]
+tests/init.test:userdata_type  ->  broken: Premature exit; test case exited with code 1  [1.548s]
+tests/tiny-cloud-alpine.test:set_ephemeral_network_cmdline  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/tiny-cloud-alpine.test:set_network_config_auto  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/tiny-cloud-alpine.test:set_network_config_network_interfaces  ->  broken: Premature exit; test case exited with code 1  [0.073s]
+tests/tiny-cloud-alpine.test:userdata_apk_cache  ->  broken: Premature exit; test case exited with code 1  [0.092s]
+tests/tiny-cloud-alpine.test:userdata_apk_empty  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/tiny-cloud-alpine.test:userdata_apk_repositories  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/tiny-cloud-alpine.test:userdata_apk_repositories_version  ->  broken: Premature exit; test case exited with code 1  [0.084s]
+tests/tiny-cloud-alpine.test:userdata_apk_repositories_version_auto_edge  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/tiny-cloud-alpine.test:userdata_autoinstall  ->  broken: Premature exit; test case exited with code 1  [0.098s]
+tests/tiny-cloud-alpine.test:userdata_bootcmd  ->  broken: Premature exit; test case exited with code 1  [0.103s]
+tests/tiny-cloud-alpine.test:userdata_create_default_user  ->  broken: Premature exit; test case exited with code 1  [0.106s]
+tests/tiny-cloud-alpine.test:userdata_groups  ->  broken: Premature exit; test case exited with code 1  [0.079s]
+tests/tiny-cloud-alpine.test:userdata_no_default_user  ->  broken: Premature exit; test case exited with code 1  [0.089s]
+tests/tiny-cloud-alpine.test:userdata_ntp  ->  broken: Premature exit; test case exited with code 1  [0.057s]
+tests/tiny-cloud-alpine.test:userdata_ntp_busybox  ->  broken: Premature exit; test case exited with code 1  [0.085s]
+tests/tiny-cloud-alpine.test:userdata_ntp_openntpd  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/tiny-cloud-alpine.test:userdata_package_update  ->  broken: Premature exit; test case exited with code 1  [0.098s]
+tests/tiny-cloud-alpine.test:userdata_package_upgrade  ->  broken: Premature exit; test case exited with code 1  [0.098s]
+tests/tiny-cloud-alpine.test:userdata_packages  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/tiny-cloud-alpine.test:userdata_runcmd  ->  broken: Premature exit; test case exited with code 1  [0.075s]
+tests/tiny-cloud-alpine.test:userdata_ssh_authorized_keys  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/tiny-cloud-alpine.test:userdata_user_gecos  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/tiny-cloud-alpine.test:userdata_user_homedir  ->  broken: Premature exit; test case exited with code 1  [0.126s]
+tests/tiny-cloud-alpine.test:userdata_user_missing_name  ->  broken: Premature exit; test case exited with code 1  [0.126s]
+tests/tiny-cloud-alpine.test:userdata_user_name  ->  broken: Premature exit; test case exited with code 1  [0.058s]
+tests/tiny-cloud-alpine.test:userdata_user_primary_group  ->  broken: Premature exit; test case exited with code 1  [0.081s]
+tests/tiny-cloud-alpine.test:userdata_user_shell  ->  broken: Premature exit; test case exited with code 1  [0.072s]
+tests/tiny-cloud-alpine.test:userdata_users_default_name_only  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/tiny-cloud-alpine.test:userdata_users_default_user  ->  broken: Premature exit; test case exited with code 1  [0.076s]
+tests/tiny-cloud-alpine.test:userdata_users_doas  ->  broken: Premature exit; test case exited with code 1  [0.122s]
+tests/tiny-cloud-alpine.test:userdata_users_gecos  ->  broken: Premature exit; test case exited with code 1  [0.087s]
+tests/tiny-cloud-alpine.test:userdata_users_groups  ->  broken: Premature exit; test case exited with code 1  [0.369s]
+tests/tiny-cloud-alpine.test:userdata_users_homedir  ->  broken: Premature exit; test case exited with code 1  [0.084s]
+tests/tiny-cloud-alpine.test:userdata_users_lock_passwd  ->  broken: Premature exit; test case exited with code 1  [0.362s]
+tests/tiny-cloud-alpine.test:userdata_users_name_only  ->  broken: Premature exit; test case exited with code 1  [0.078s]
+tests/tiny-cloud-alpine.test:userdata_users_no_create_home  ->  broken: Premature exit; test case exited with code 1  [0.359s]
+tests/tiny-cloud-alpine.test:userdata_users_primary_group  ->  broken: Premature exit; test case exited with code 1  [0.070s]
+tests/tiny-cloud-alpine.test:userdata_users_shell  ->  broken: Premature exit; test case exited with code 1  [0.307s]
+tests/tiny-cloud-alpine.test:userdata_users_ssh_authorized_keys  ->  broken: Premature exit; test case exited with code 1  [0.305s]
+tests/tiny-cloud-alpine.test:userdata_users_system  ->  broken: Premature exit; test case exited with code 1  [0.302s]
+tests/tiny-cloud-alpine.test:userdata_write_files  ->  broken: Premature exit; test case exited with code 1  [0.301s]
+tests/tiny-cloud.test:no_metadata_boot  ->  broken: Premature exit; test case exited with code 1  [0.069s]
+tests/tiny-cloud.test:no_userdata_early  ->  broken: Premature exit; test case exited with code 1  [0.052s]
+tests/tiny-cloud.test:no_userdata_final  ->  broken: Premature exit; test case exited with code 1  [0.054s]
+tests/tiny-cloud.test:no_userdata_main  ->  broken: Premature exit; test case exited with code 1  [0.052s]
+tests/tiny-cloud.test:tiny_cloud_disabled  ->  broken: Premature exit; test case exited with code 1  [0.066s]
+tests/tiny-cloud.test:tiny_cloud_help  ->  broken: Premature exit; test case exited with code 1  [0.055s]
+===> Summary
+Results read from /home/packager/.kyua/store/results.home_packager_aports_main_tiny-cloud_src_tiny-cloud-3.1.1.20250523-180020-147399.db
+Test cases: 117 total, 0 skipped, 0 expected failures, 117 broken, 0 failed
+Start time: 2025-05-23T18:00:20.721973Z
+End time:   2025-05-23T18:00:25.684981Z
+Total time: 35.278s
+make: *** [Makefile:36: check] Error 1
+>>> ERROR: tiny-cloud: check failed
+>>> tiny-cloud: Uninstalling dependencies...
+(1/25) Purging .makedepends-tiny-cloud (20250523.180017)
+(2/25) Purging e2fsprogs-extra (1.47.1-r1)
+(3/25) Purging e2fsprogs (1.47.1-r1)
+(4/25) Purging partx (2.40.4-r1)
+(5/25) Purging sfdisk (2.40.4-r1)
+(6/25) Purging yx (1.0.2-r0)
+(7/25) Purging openssh-server (9.9_p2-r0)
+(8/25) Purging openssh-keygen (9.9_p2-r0)
+(9/25) Purging openssh-server-common (9.9_p2-r0)
+(10/25) Purging kyua (0.13-r8)
+(11/25) Purging xz (5.6.3-r1)
+(12/25) Purging lz4 (1.10.0-r0)
+(13/25) Purging zstd (1.5.7-r0)
+(14/25) Purging atf (0.21-r7)
+(15/25) Purging e2fsprogs-libs (1.47.1-r1)
+(16/25) Purging libcom_err (1.47.1-r1)
+(17/25) Purging libfdisk (2.40.4-r1)
+(18/25) Purging libsmartcols (2.40.4-r1)
+(19/25) Purging libuuid (2.40.4-r1)
+(20/25) Purging lutok (0.4-r6)
+(21/25) Purging sqlite-libs (3.49.2-r0)
+(22/25) Purging xz-libs (5.6.3-r1)
+(23/25) Purging yaml (0.2.5-r2)
+(24/25) Purging libblkid (2.40.4-r1)
+(25/25) Purging libeconf (0.6.3-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

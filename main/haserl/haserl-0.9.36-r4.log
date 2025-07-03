@@ -1,0 +1,655 @@
+pigz: not found
+>>> haserl: Building main/haserl 0.9.36-r4 (using abuild 3.14.1-r4) started Thu, 22 May 2025 22:15:08 +0000
+>>> haserl: Validating /home/packager/aports/main/haserl/APKBUILD...
+>>> haserl: Analyzing dependencies...
+>>> haserl: Installing for build: build-base automake autoconf lua5.4-dev lua5.3-dev lua5.2-dev lua5.1-dev
+(1/12) Installing lua5.4-dev (5.4.7-r0)
+(2/12) Installing linenoise (1.0-r5)
+(3/12) Installing lua5.3-libs (5.3.6-r6)
+(4/12) Installing lua5.3 (5.3.6-r6)
+(5/12) Installing lua5.3-dev (5.3.6-r6)
+(6/12) Installing lua5.2-libs (5.2.4-r13)
+(7/12) Installing lua5.2 (5.2.4-r13)
+(8/12) Installing lua5.2-dev (5.2.4-r13)
+(9/12) Installing lua5.1-libs (5.1.5-r13)
+(10/12) Installing lua5.1 (5.1.5-r13)
+(11/12) Installing lua5.1-dev (5.1.5-r13)
+(12/12) Installing .makedepends-haserl (20250522.221510)
+Executing busybox-1.37.0-r12.trigger
+OK: 320 MiB in 126 packages
+>>> haserl: Cleaning up srcdir
+>>> haserl: Cleaning up pkgdir
+>>> haserl: Cleaning up tmpdir
+>>> haserl: Fetching https://downloads.sourceforge.net/haserl/haserl-0.9.36.tar.gz
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to downloads.sourceforge.net (104.18.13.149:443)
+Connecting to netcologne.dl.sourceforge.net (78.35.24.122:443)
+saving to '/var/cache/distfiles/haserl-0.9.36.tar.gz.part'
+haserl-0.9.36.tar.gz 100% |********************************|  150k  0:00:00 ETA
+'/var/cache/distfiles/haserl-0.9.36.tar.gz.part' saved
+>>> haserl: Fetching https://downloads.sourceforge.net/haserl/haserl-0.9.36.tar.gz
+>>> haserl: Checking sha512sums...
+haserl-0.9.36.tar.gz: OK
+>>> haserl: Unpacking /var/cache/distfiles/haserl-0.9.36.tar.gz...
+configure.ac:27: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:27: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:27: the top level
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking whether ln -s works... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for signal.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for working memcmp... yes
+checking for memset... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for strstr... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for lua5.4... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+
+** Configuration summary for haserl 0.9.36:
+
+	Building haserl with with lua enabled
+	Building haserl with with bash-extensions disabled
+	libs: 
+
+Making all in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+(CDPATH="${ZSH_VERSION+.}:" && cd .. && /bin/sh '/home/packager/aports/main/haserl/src/build-5.4/missing' autoheader)
+rm -f stamp-h1
+touch config.h.in
+rm -f stamp-h1
+cd .. && /bin/sh ./config.status src/config.h
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+make  all-am
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-common.o -MD -MP -MF .deps/haserl-common.Tpo -c -o haserl-common.o `test -f 'common.c' || echo './'`common.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-sliding_buffer.o -MD -MP -MF .deps/haserl-sliding_buffer.Tpo -c -o haserl-sliding_buffer.o `test -f 'sliding_buffer.c' || echo './'`sliding_buffer.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_error.o -MD -MP -MF .deps/haserl-h_error.Tpo -c -o haserl-h_error.o `test -f 'h_error.c' || echo './'`h_error.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_script.o -MD -MP -MF .deps/haserl-h_script.Tpo -c -o haserl-h_script.o `test -f 'h_script.c' || echo './'`h_script.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-rfc2388.o -MD -MP -MF .deps/haserl-rfc2388.Tpo -c -o haserl-rfc2388.o `test -f 'rfc2388.c' || echo './'`rfc2388.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_bash.o -MD -MP -MF .deps/haserl-h_bash.Tpo -c -o haserl-h_bash.o `test -f 'h_bash.c' || echo './'`h_bash.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -I/usr/include/lua5.4 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-E \
+	-o lua2c lua2c.c  -L/usr/lib/lua5.4 -llua -lm
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua.o -MD -MP -MF .deps/haserl-h_lua.Tpo -c -o haserl-h_lua.o `test -f 'h_lua.c' || echo './'`h_lua.c
+mv -f .deps/haserl-h_error.Tpo .deps/haserl-h_error.Po
+mv -f .deps/haserl-sliding_buffer.Tpo .deps/haserl-sliding_buffer.Po
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_luac.o -MD -MP -MF .deps/haserl-h_luac.Tpo -c -o haserl-h_luac.o `test -f 'h_luac.c' || echo './'`h_luac.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-haserl.o -MD -MP -MF .deps/haserl-haserl.Tpo -c -o haserl-haserl.o `test -f 'haserl.c' || echo './'`haserl.c
+if ! ./lua2c haserl_lualib haserl_lualib.lua >haserl_lualib.inc; then \
+	rm haserl_lualib.inc; \
+	exit 1 ;\
+fi
+mv -f .deps/haserl-common.Tpo .deps/haserl-common.Po
+mv -f .deps/haserl-h_lua.Tpo .deps/haserl-h_lua.Po
+mv -f .deps/haserl-h_bash.Tpo .deps/haserl-h_bash.Po
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua_common.o -MD -MP -MF .deps/haserl-h_lua_common.Tpo -c -o haserl-h_lua_common.o `test -f 'h_lua_common.c' || echo './'`h_lua_common.c
+mv -f .deps/haserl-h_luac.Tpo .deps/haserl-h_luac.Po
+mv -f .deps/haserl-h_script.Tpo .deps/haserl-h_script.Po
+mv -f .deps/haserl-h_lua_common.Tpo .deps/haserl-h_lua_common.Po
+mv -f .deps/haserl-rfc2388.Tpo .deps/haserl-rfc2388.Po
+mv -f .deps/haserl-haserl.Tpo .deps/haserl-haserl.Po
+gcc -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o haserl haserl-common.o haserl-sliding_buffer.o haserl-h_error.o haserl-h_script.o haserl-rfc2388.o haserl-h_bash.o haserl-h_lua_common.o haserl-h_lua.o haserl-h_luac.o haserl-haserl.o  -L/usr/lib/lua5.4 -llua -lm 
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+Making all in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/doc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking whether ln -s works... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for signal.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for working memcmp... yes
+checking for memset... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for strstr... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for lua5.3... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+
+** Configuration summary for haserl 0.9.36:
+
+	Building haserl with with lua enabled
+	Building haserl with with bash-extensions disabled
+	libs: 
+
+Making all in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+make  all-am
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-common.o -MD -MP -MF .deps/haserl-common.Tpo -c -o haserl-common.o `test -f 'common.c' || echo './'`common.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-sliding_buffer.o -MD -MP -MF .deps/haserl-sliding_buffer.Tpo -c -o haserl-sliding_buffer.o `test -f 'sliding_buffer.c' || echo './'`sliding_buffer.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_error.o -MD -MP -MF .deps/haserl-h_error.Tpo -c -o haserl-h_error.o `test -f 'h_error.c' || echo './'`h_error.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_script.o -MD -MP -MF .deps/haserl-h_script.Tpo -c -o haserl-h_script.o `test -f 'h_script.c' || echo './'`h_script.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-rfc2388.o -MD -MP -MF .deps/haserl-rfc2388.Tpo -c -o haserl-rfc2388.o `test -f 'rfc2388.c' || echo './'`rfc2388.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_bash.o -MD -MP -MF .deps/haserl-h_bash.Tpo -c -o haserl-h_bash.o `test -f 'h_bash.c' || echo './'`h_bash.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -I/usr/include/lua5.3 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-E \
+	-o lua2c lua2c.c  -L/usr/lib/lua5.3 -llua -lm
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua.o -MD -MP -MF .deps/haserl-h_lua.Tpo -c -o haserl-h_lua.o `test -f 'h_lua.c' || echo './'`h_lua.c
+mv -f .deps/haserl-h_error.Tpo .deps/haserl-h_error.Po
+mv -f .deps/haserl-sliding_buffer.Tpo .deps/haserl-sliding_buffer.Po
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_luac.o -MD -MP -MF .deps/haserl-h_luac.Tpo -c -o haserl-h_luac.o `test -f 'h_luac.c' || echo './'`h_luac.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-haserl.o -MD -MP -MF .deps/haserl-haserl.Tpo -c -o haserl-haserl.o `test -f 'haserl.c' || echo './'`haserl.c
+mv -f .deps/haserl-h_bash.Tpo .deps/haserl-h_bash.Po
+mv -f .deps/haserl-h_lua.Tpo .deps/haserl-h_lua.Po
+if ! ./lua2c haserl_lualib haserl_lualib.lua >haserl_lualib.inc; then \
+	rm haserl_lualib.inc; \
+	exit 1 ;\
+fi
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua_common.o -MD -MP -MF .deps/haserl-h_lua_common.Tpo -c -o haserl-h_lua_common.o `test -f 'h_lua_common.c' || echo './'`h_lua_common.c
+mv -f .deps/haserl-h_luac.Tpo .deps/haserl-h_luac.Po
+mv -f .deps/haserl-common.Tpo .deps/haserl-common.Po
+mv -f .deps/haserl-h_script.Tpo .deps/haserl-h_script.Po
+mv -f .deps/haserl-h_lua_common.Tpo .deps/haserl-h_lua_common.Po
+mv -f .deps/haserl-rfc2388.Tpo .deps/haserl-rfc2388.Po
+mv -f .deps/haserl-haserl.Tpo .deps/haserl-haserl.Po
+gcc -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o haserl haserl-common.o haserl-sliding_buffer.o haserl-h_error.o haserl-h_script.o haserl-rfc2388.o haserl-h_bash.o haserl-h_lua_common.o haserl-h_lua.o haserl-h_luac.o haserl-haserl.o  -L/usr/lib/lua5.3 -llua -lm 
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+Making all in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/doc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking whether ln -s works... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for signal.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for working memcmp... yes
+checking for memset... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for strstr... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for lua5.2... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+
+** Configuration summary for haserl 0.9.36:
+
+	Building haserl with with lua enabled
+	Building haserl with with bash-extensions disabled
+	libs: 
+
+Making all in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+make  all-am
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-common.o -MD -MP -MF .deps/haserl-common.Tpo -c -o haserl-common.o `test -f 'common.c' || echo './'`common.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-sliding_buffer.o -MD -MP -MF .deps/haserl-sliding_buffer.Tpo -c -o haserl-sliding_buffer.o `test -f 'sliding_buffer.c' || echo './'`sliding_buffer.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_error.o -MD -MP -MF .deps/haserl-h_error.Tpo -c -o haserl-h_error.o `test -f 'h_error.c' || echo './'`h_error.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_script.o -MD -MP -MF .deps/haserl-h_script.Tpo -c -o haserl-h_script.o `test -f 'h_script.c' || echo './'`h_script.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-rfc2388.o -MD -MP -MF .deps/haserl-rfc2388.Tpo -c -o haserl-rfc2388.o `test -f 'rfc2388.c' || echo './'`rfc2388.c
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_bash.o -MD -MP -MF .deps/haserl-h_bash.Tpo -c -o haserl-h_bash.o `test -f 'h_bash.c' || echo './'`h_bash.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -I/usr/include/lua5.2 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-E \
+	-o lua2c lua2c.c  -L/usr/lib/lua5.2 -llua -lm
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua.o -MD -MP -MF .deps/haserl-h_lua.Tpo -c -o haserl-h_lua.o `test -f 'h_lua.c' || echo './'`h_lua.c
+mv -f .deps/haserl-h_error.Tpo .deps/haserl-h_error.Po
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_luac.o -MD -MP -MF .deps/haserl-h_luac.Tpo -c -o haserl-h_luac.o `test -f 'h_luac.c' || echo './'`h_luac.c
+mv -f .deps/haserl-sliding_buffer.Tpo .deps/haserl-sliding_buffer.Po
+mv -f .deps/haserl-h_bash.Tpo .deps/haserl-h_bash.Po
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-haserl.o -MD -MP -MF .deps/haserl-haserl.Tpo -c -o haserl-haserl.o `test -f 'haserl.c' || echo './'`haserl.c
+if ! ./lua2c haserl_lualib haserl_lualib.lua >haserl_lualib.inc; then \
+	rm haserl_lualib.inc; \
+	exit 1 ;\
+fi
+gcc -DHAVE_CONFIG_H -I.    -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua_common.o -MD -MP -MF .deps/haserl-h_lua_common.Tpo -c -o haserl-h_lua_common.o `test -f 'h_lua_common.c' || echo './'`h_lua_common.c
+mv -f .deps/haserl-h_luac.Tpo .deps/haserl-h_luac.Po
+mv -f .deps/haserl-common.Tpo .deps/haserl-common.Po
+mv -f .deps/haserl-h_lua_common.Tpo .deps/haserl-h_lua_common.Po
+mv -f .deps/haserl-h_lua.Tpo .deps/haserl-h_lua.Po
+mv -f .deps/haserl-h_script.Tpo .deps/haserl-h_script.Po
+mv -f .deps/haserl-rfc2388.Tpo .deps/haserl-rfc2388.Po
+mv -f .deps/haserl-haserl.Tpo .deps/haserl-haserl.Po
+gcc -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o haserl haserl-common.o haserl-sliding_buffer.o haserl-h_error.o haserl-h_script.o haserl-rfc2388.o haserl-h_bash.o haserl-h_lua_common.o haserl-h_lua.o haserl-h_luac.o haserl-haserl.o  -L/usr/lib/lua5.2 -llua -lm 
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+Making all in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/doc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking whether ln -s works... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for signal.h... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for working memcmp... yes
+checking for memset... yes
+checking for putenv... yes
+checking for strcasecmp... yes
+checking for strdup... yes
+checking for strncasecmp... yes
+checking for strstr... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for lua5.1... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating src/config.h
+config.status: executing depfiles commands
+
+** Configuration summary for haserl 0.9.36:
+
+	Building haserl with with lua enabled
+	Building haserl with with bash-extensions disabled
+	libs: 
+
+Making all in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+make  all-am
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-common.o -MD -MP -MF .deps/haserl-common.Tpo -c -o haserl-common.o `test -f 'common.c' || echo './'`common.c
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-sliding_buffer.o -MD -MP -MF .deps/haserl-sliding_buffer.Tpo -c -o haserl-sliding_buffer.o `test -f 'sliding_buffer.c' || echo './'`sliding_buffer.c
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_error.o -MD -MP -MF .deps/haserl-h_error.Tpo -c -o haserl-h_error.o `test -f 'h_error.c' || echo './'`h_error.c
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_script.o -MD -MP -MF .deps/haserl-h_script.Tpo -c -o haserl-h_script.o `test -f 'h_script.c' || echo './'`h_script.c
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-rfc2388.o -MD -MP -MF .deps/haserl-rfc2388.Tpo -c -o haserl-rfc2388.o `test -f 'rfc2388.c' || echo './'`rfc2388.c
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_bash.o -MD -MP -MF .deps/haserl-h_bash.Tpo -c -o haserl-h_bash.o `test -f 'h_bash.c' || echo './'`h_bash.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-E \
+	-o lua2c lua2c.c  -llua -lm
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua.o -MD -MP -MF .deps/haserl-h_lua.Tpo -c -o haserl-h_lua.o `test -f 'h_lua.c' || echo './'`h_lua.c
+mv -f .deps/haserl-h_error.Tpo .deps/haserl-h_error.Po
+mv -f .deps/haserl-sliding_buffer.Tpo .deps/haserl-sliding_buffer.Po
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_luac.o -MD -MP -MF .deps/haserl-h_luac.Tpo -c -o haserl-h_luac.o `test -f 'h_luac.c' || echo './'`h_luac.c
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-haserl.o -MD -MP -MF .deps/haserl-haserl.Tpo -c -o haserl-haserl.o `test -f 'haserl.c' || echo './'`haserl.c
+if ! ./lua2c haserl_lualib haserl_lualib.lua >haserl_lualib.inc; then \
+	rm haserl_lualib.inc; \
+	exit 1 ;\
+fi
+mv -f .deps/haserl-h_lua.Tpo .deps/haserl-h_lua.Po
+mv -f .deps/haserl-h_bash.Tpo .deps/haserl-h_bash.Po
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT haserl-h_lua_common.o -MD -MP -MF .deps/haserl-h_lua_common.Tpo -c -o haserl-h_lua_common.o `test -f 'h_lua_common.c' || echo './'`h_lua_common.c
+mv -f .deps/haserl-common.Tpo .deps/haserl-common.Po
+mv -f .deps/haserl-h_luac.Tpo .deps/haserl-h_luac.Po
+mv -f .deps/haserl-h_script.Tpo .deps/haserl-h_script.Po
+mv -f .deps/haserl-h_lua_common.Tpo .deps/haserl-h_lua_common.Po
+mv -f .deps/haserl-rfc2388.Tpo .deps/haserl-rfc2388.Po
+mv -f .deps/haserl-haserl.Tpo .deps/haserl-haserl.Po
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o haserl haserl-common.o haserl-sliding_buffer.o haserl-h_error.o haserl-h_script.o haserl-rfc2388.o haserl-h_bash.o haserl-h_lua_common.o haserl-h_lua.o haserl-h_luac.o haserl-haserl.o  -llua -lm 
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+Making all in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/doc'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1'
+>>> haserl: Entering fakeroot...
+Making install in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+  /usr/bin/install -c haserl '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/src'
+Making install in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/doc'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+ /usr/bin/install -c -m 644 haserl.1 '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/doc'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.4'
+Making install in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+  /usr/bin/install -c haserl '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/src'
+Making install in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/doc'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+ /usr/bin/install -c -m 644 haserl.1 '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/doc'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.3'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.3'
+Making install in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+  /usr/bin/install -c haserl '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/src'
+Making install in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/doc'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+ /usr/bin/install -c -m 644 haserl.1 '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/doc'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.2'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.2'
+Making install in src
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+  /usr/bin/install -c haserl '/home/packager/aports/main/haserl/pkg/haserl//usr/bin'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/src'
+Making install in doc
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/doc'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+ /usr/bin/install -c -m 644 haserl.1 '/home/packager/aports/main/haserl/pkg/haserl//usr/share/man/man1'
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/doc'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1/doc'
+make[1]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1'
+make[2]: Entering directory '/home/packager/aports/main/haserl/src/build-5.1'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1'
+make[1]: Leaving directory '/home/packager/aports/main/haserl/src/build-5.1'
+>>> haserl-doc*: Running split function doc...
+renamed 'usr/share/man' -> '/home/packager/aports/main/haserl/pkg/haserl-doc/usr/share/man'
+>>> haserl-doc*: Preparing subpackage haserl-doc...
+>>> haserl-doc*: Running postcheck for haserl-doc
+>>> haserl-lua5.4*: Running split function _split...
+renamed 'usr/bin/haserl-lua5.4' -> '/home/packager/aports/main/haserl/pkg/haserl-lua5.4/usr/bin/haserl-lua5.4'
+>>> haserl-lua5.4*: Preparing subpackage haserl-lua5.4...
+>>> haserl-lua5.4*: Stripping binaries
+>>> haserl-lua5.4*: Running postcheck for haserl-lua5.4
+>>> haserl-lua5.3*: Running split function _split...
+renamed 'usr/bin/haserl-lua5.3' -> '/home/packager/aports/main/haserl/pkg/haserl-lua5.3/usr/bin/haserl-lua5.3'
+>>> haserl-lua5.3*: Preparing subpackage haserl-lua5.3...
+>>> haserl-lua5.3*: Stripping binaries
+>>> haserl-lua5.3*: Running postcheck for haserl-lua5.3
+>>> haserl-lua5.2*: Running split function _split...
+renamed 'usr/bin/haserl-lua5.2' -> '/home/packager/aports/main/haserl/pkg/haserl-lua5.2/usr/bin/haserl-lua5.2'
+>>> haserl-lua5.2*: Preparing subpackage haserl-lua5.2...
+>>> haserl-lua5.2*: Stripping binaries
+>>> haserl-lua5.2*: Running postcheck for haserl-lua5.2
+>>> haserl-lua5.1*: Running split function _split...
+renamed 'usr/bin/haserl-lua5.1' -> '/home/packager/aports/main/haserl/pkg/haserl-lua5.1/usr/bin/haserl-lua5.1'
+>>> haserl-lua5.1*: Preparing subpackage haserl-lua5.1...
+>>> haserl-lua5.1*: Stripping binaries
+>>> haserl-lua5.1*: Running postcheck for haserl-lua5.1
+>>> haserl*: Running postcheck for haserl
+>>> haserl*: Preparing package haserl...
+>>> haserl*: Stripping binaries
+>>> WARNING: haserl*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> haserl-doc*: Scanning shared objects
+>>> haserl-lua5.1*: Scanning shared objects
+>>> haserl-lua5.2*: Scanning shared objects
+>>> haserl-lua5.3*: Scanning shared objects
+>>> haserl-lua5.4*: Scanning shared objects
+>>> haserl*: Scanning shared objects
+>>> haserl-doc*: Tracing dependencies...
+>>> haserl-doc*: Package size: 7.9 KB
+>>> haserl-doc*: Compressing data...
+>>> haserl-doc*: Create checksum...
+pigz: not found
+>>> haserl-doc*: Create haserl-doc-0.9.36-r4.apk
+>>> haserl-lua5.1*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:liblua.so.5
+>>> haserl-lua5.1*: Package size: 38.6 KB
+>>> haserl-lua5.1*: Compressing data...
+>>> haserl-lua5.1*: Create checksum...
+pigz: not found
+>>> haserl-lua5.1*: Create haserl-lua5.1-0.9.36-r4.apk
+>>> haserl-lua5.2*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:liblua-5.2.so.0
+>>> haserl-lua5.2*: Package size: 38.6 KB
+>>> haserl-lua5.2*: Compressing data...
+>>> haserl-lua5.2*: Create checksum...
+pigz: not found
+>>> haserl-lua5.2*: Create haserl-lua5.2-0.9.36-r4.apk
+>>> haserl-lua5.3*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:liblua-5.3.so.0
+>>> haserl-lua5.3*: Package size: 34.6 KB
+>>> haserl-lua5.3*: Compressing data...
+>>> haserl-lua5.3*: Create checksum...
+pigz: not found
+>>> haserl-lua5.3*: Create haserl-lua5.3-0.9.36-r4.apk
+>>> haserl-lua5.4*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:liblua-5.4.so.0
+>>> haserl-lua5.4*: Package size: 34.6 KB
+>>> haserl-lua5.4*: Compressing data...
+>>> haserl-lua5.4*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> haserl-lua5.4*: Create haserl-lua5.4-0.9.36-r4.apk
+>>> haserl*: Tracing dependencies...
+	haserl-lua5.4
+	haserl-lua5.3
+	haserl-lua5.2
+	haserl-lua5.1
+	haserl-lua5.4=0.9.36-r4
+>>> haserl*: Package size: 1.0 B
+>>> haserl*: Compressing data...
+>>> haserl*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> haserl*: Create haserl-0.9.36-r4.apk
+>>> haserl: Build complete at Thu, 22 May 2025 22:16:05 +0000 elapsed time 0h 0m 57s
+>>> haserl: Cleaning up srcdir
+>>> haserl: Cleaning up pkgdir
+>>> haserl: Uninstalling dependencies...
+(1/12) Purging .makedepends-haserl (20250522.221510)
+(2/12) Purging lua5.4-dev (5.4.7-r0)
+(3/12) Purging lua5.3-dev (5.3.6-r6)
+(4/12) Purging lua5.3 (5.3.6-r6)
+(5/12) Purging lua5.3-libs (5.3.6-r6)
+(6/12) Purging lua5.2-dev (5.2.4-r13)
+(7/12) Purging lua5.2 (5.2.4-r13)
+(8/12) Purging lua5.2-libs (5.2.4-r13)
+(9/12) Purging lua5.1-dev (5.1.5-r13)
+(10/12) Purging lua5.1 (5.1.5-r13)
+(11/12) Purging lua5.1-libs (5.1.5-r13)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 314 MiB in 114 packages
+>>> haserl: Updating the main/x86_64 repository index...
+>>> haserl: Signing the index...
+pigz: not found

@@ -1,0 +1,193 @@
+pigz: not found
+>>> razor: Building main/razor 2.86-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:30:11 +0000
+>>> razor: Validating /home/packager/aports/main/razor/APKBUILD...
+>>> razor: Analyzing dependencies...
+>>> razor: Installing for build: build-base perl perl-digest-sha1 perl-getopt-long perl-uri perl-dev
+(1/11) Installing libbz2 (1.0.8-r6)
+(2/11) Installing perl (5.40.2-r0)
+(3/11) Installing perl-digest-sha1 (2.13-r19)
+(4/11) Installing perl-getopt-long (2.58-r0)
+(5/11) Installing perl-uri (5.28-r0)
+(6/11) Installing perl-utils (5.40.2-r0)
+(7/11) Installing perl-dev (5.40.2-r0)
+(8/11) Installing .makedepends-razor (20250518.093012)
+(9/11) Installing perl-error (0.17030-r0)
+(10/11) Installing perl-git (2.47.2-r0)
+(11/11) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 92 packages
+>>> razor: Cleaning up srcdir
+>>> razor: Cleaning up pkgdir
+>>> razor: Cleaning up tmpdir
+>>> razor: Fetching https://cpan.metacpan.org/authors/id/T/TO/TODDR/Razor2-Client-Agent-2.86.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Razor2-Client-Agent-2.86.tar.gz.part'
+Razor2-Client-Agent- 100% |********************************| 92637  0:00:00 ETA
+'/var/cache/distfiles/Razor2-Client-Agent-2.86.tar.gz.part' saved
+>>> razor: Fetching https://cpan.metacpan.org/authors/id/T/TO/TODDR/Razor2-Client-Agent-2.86.tar.gz
+>>> razor: Checking sha512sums...
+Razor2-Client-Agent-2.86.tar.gz: OK
+>>> razor: Unpacking /var/cache/distfiles/Razor2-Client-Agent-2.86.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Razor2::Preproc::deHTMLxs
+Writing MYMETA.yml and MYMETA.json
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"2.86\" -DXS_VERSION=\"2.86\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   _deHTMLxs.c
+Running Mkbootstrap for deHTMLxs ()
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/razor/src/Razor2-Client-Agent-2.86/typemap'  deHTMLxs.xs > deHTMLxs.xsc
+"/usr/bin/perl" "-MExtUtils::Command::MM" -e pod2man "--" \
+docs/razor-agent.conf.pod \
+blib/man5/razor-agent.conf.5 \
+docs/razor-agents.pod \
+blib/man5/razor-agents.5 \
+docs/razor-whitelist.pod \
+blib/man5/razor-whitelist.5
+chmod 644 "deHTMLxs.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- deHTMLxs.bs blib/arch/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.bs 644
+cp lib/Razor2/Preproc/deQP.pm blib/lib/Razor2/Preproc/deQP.pm
+cp lib/Razor2/Syslog.pm blib/lib/Razor2/Syslog.pm
+AutoSplitting blib/lib/Razor2/Syslog.pm (blib/lib/auto/Razor2/Syslog)
+cp lib/Razor2/Client/Version.pm blib/lib/Razor2/Client/Version.pm
+cp lib/Razor2/Client/Core.pm blib/lib/Razor2/Client/Core.pm
+cp lib/Razor2/Client/Config.pm blib/lib/Razor2/Client/Config.pm
+cp lib/Razor2/Engine/VR8.pm blib/lib/Razor2/Engine/VR8.pm
+cp lib/Razor2/Preproc/enBase64.pm blib/lib/Razor2/Preproc/enBase64.pm
+cp lib/Razor2/String.pm blib/lib/Razor2/String.pm
+cp lib/Razor2/Logger.pm blib/lib/Razor2/Logger.pm
+cp lib/Razor2/Client/Engine.pm blib/lib/Razor2/Client/Engine.pm
+cp lib/Razor2/Preproc/deNewline.pm blib/lib/Razor2/Preproc/deNewline.pm
+cp lib/Razor2/Signature/Whiplash.pm blib/lib/Razor2/Signature/Whiplash.pm
+cp lib/Razor2/Errorhandler.pm blib/lib/Razor2/Errorhandler.pm
+cp lib/Razor2/Preproc/deHTMLxs.pm blib/lib/Razor2/Preproc/deHTMLxs.pm
+AutoSplitting blib/lib/Razor2/Preproc/deHTMLxs.pm (blib/lib/auto/Razor2/Preproc/deHTMLxs)
+cp lib/Razor2/Client/Agent.pm blib/lib/Razor2/Client/Agent.pm
+cp lib/Razor2/Preproc/deHTML_comment.pm blib/lib/Razor2/Preproc/deHTML_comment.pm
+cp lib/Razor2/Preproc/Manager.pm blib/lib/Razor2/Preproc/Manager.pm
+cp lib/Razor2/Signature/Ephemeral.pm blib/lib/Razor2/Signature/Ephemeral.pm
+cp lib/Razor2/Preproc/deHTML.pm blib/lib/Razor2/Preproc/deHTML.pm
+cp lib/Razor2/Preproc/deBase64.pm blib/lib/Razor2/Preproc/deBase64.pm
+mv deHTMLxs.xsc deHTMLxs.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"2.86\" -DXS_VERSION=\"2.86\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   deHTMLxs.c
+Manifying 3 pod documents
+rm -f blib/arch/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  _deHTMLxs.o deHTMLxs.o  -o blib/arch/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.so  \
+      \
+  
+chmod 755 blib/arch/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.so
+cp bin/razor-admin blib/script/razor-admin
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/razor-admin
+cp bin/razor-check blib/script/razor-check
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/razor-check
+cp bin/razor-client blib/script/razor-client
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/razor-client
+cp bin/razor-report blib/script/razor-report
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/razor-report
+cp bin/razor-revoke blib/script/razor-revoke
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/razor-revoke
+Manifying 4 pod documents
+Manifying 3 pod documents
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- deHTMLxs.bs blib/arch/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/basic.t .. ok
+All tests successful.
+Files=1, Tests=9,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.06 cusr  0.01 csys =  0.09 CPU)
+Result: PASS
+>>> razor: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- deHTMLxs.bs blib/arch/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.bs 644
+"/usr/bin/perl" "-MExtUtils::Command::MM" -e pod2man "--" \
+docs/razor-agent.conf.pod \
+blib/man5/razor-agent.conf.5 \
+docs/razor-agents.pod \
+blib/man5/razor-agents.5 \
+docs/razor-whitelist.pod \
+blib/man5/razor-whitelist.5
+Manifying 3 pod documents
+Manifying 4 pod documents
+Manifying 3 pod documents
+Appending installation info to /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/auto/Razor2/Preproc/deHTMLxs/deHTMLxs.so
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/auto/Razor2/Preproc/deHTMLxs/autosplit.ix
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/auto/Razor2/Syslog/autosplit.ix
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Errorhandler.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Logger.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/String.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Syslog.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/deHTML.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/deHTML_comment.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/enBase64.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/Manager.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/deBase64.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/deNewline.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/deHTMLxs.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Preproc/deQP.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Signature/Whiplash.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Signature/Ephemeral.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Client/Engine.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Client/Version.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Client/Config.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Client/Core.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Client/Agent.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/lib/perl5/vendor_perl/Razor2/Engine/VR8.pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man1/razor-admin.1
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man1/razor-revoke.1
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man1/razor-check.1
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man1/razor-report.1
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man3/Razor2::Errorhandler.3pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man3/Razor2::Preproc::deHTMLxs.3pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man3/Razor2::Syslog.3pm
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man5/razor-agents.5
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man5/razor-agent.conf.5
+Installing /home/packager/aports/main/razor/pkg/razor/usr/share/man/man5/razor-whitelist.5
+Installing /home/packager/aports/main/razor/pkg/razor/usr/bin/razor-revoke
+Installing /home/packager/aports/main/razor/pkg/razor/usr/bin/razor-report
+Installing /home/packager/aports/main/razor/pkg/razor/usr/bin/razor-admin
+Installing /home/packager/aports/main/razor/pkg/razor/usr/bin/razor-check
+Installing /home/packager/aports/main/razor/pkg/razor/usr/bin/razor-client
+>>> razor-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/razor/pkg/razor-doc/usr/share/man'
+>>> razor-doc*: Preparing subpackage razor-doc...
+>>> razor-doc*: Running postcheck for razor-doc
+>>> razor*: Running postcheck for razor
+>>> razor*: Preparing package razor...
+>>> razor*: Stripping binaries
+>>> razor-doc*: Scanning shared objects
+>>> razor*: Scanning shared objects
+>>> razor-doc*: Tracing dependencies...
+>>> razor-doc*: Package size: 22.8 KB
+>>> razor-doc*: Compressing data...
+>>> razor-doc*: Create checksum...
+pigz: not found
+>>> razor-doc*: Create razor-doc-2.86-r0.apk
+>>> razor*: Tracing dependencies...
+	perl
+	perl-digest-sha1
+	perl-getopt-long
+	perl-uri
+	so:libc.musl-x86_64.so.1
+>>> razor*: Package size: 218.2 KB
+>>> razor*: Compressing data...
+>>> razor*: Create checksum...
+pigz: not found
+>>> razor*: Create razor-2.86-r0.apk
+>>> razor: Build complete at Sun, 18 May 2025 09:30:16 +0000 elapsed time 0h 0m 5s
+>>> razor: Cleaning up srcdir
+>>> razor: Cleaning up pkgdir
+>>> razor: Uninstalling dependencies...
+(1/11) Purging .makedepends-razor (20250518.093012)
+(2/11) Purging perl-digest-sha1 (2.13-r19)
+(3/11) Purging perl-getopt-long (2.58-r0)
+(4/11) Purging perl-uri (5.28-r0)
+(5/11) Purging perl-dev (5.40.2-r0)
+(6/11) Purging perl-utils (5.40.2-r0)
+(7/11) Purging git-perl (2.47.2-r0)
+(8/11) Purging perl-git (2.47.2-r0)
+(9/11) Purging perl-error (0.17030-r0)
+(10/11) Purging perl (5.40.2-r0)
+(11/11) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> razor: Updating the main/x86_64 repository index...
+>>> razor: Signing the index...
+pigz: not found

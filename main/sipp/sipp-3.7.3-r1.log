@@ -1,0 +1,91 @@
+pigz: not found
+>>> sipp: Building main/sipp 3.7.3-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:28:56 +0000
+>>> sipp: Validating /home/packager/aports/main/sipp/APKBUILD...
+>>> sipp: Analyzing dependencies...
+>>> sipp: Installing for build: build-base cmake libpcap-dev linux-headers lksctp-tools-dev ncurses-dev openssl-dev>3 samurai
+(1/13) Installing lz4-libs (1.10.0-r0)
+(2/13) Installing xz-libs (5.6.3-r1)
+(3/13) Installing libarchive (3.7.9-r0)
+(4/13) Installing rhash-libs (1.4.5-r0)
+(5/13) Installing libuv (1.49.2-r0)
+(6/13) Installing cmake (3.31.7-r0)
+(7/13) Installing libpcap (1.10.5-r0)
+(8/13) Installing libpcap-dev (1.10.5-r0)
+(9/13) Installing liblksctp (1.0.19-r5)
+(10/13) Installing lksctp-tools-dev (1.0.19-r5)
+(11/13) Installing openssl-dev (3.5.0-r0)
+(12/13) Installing samurai (1.2-r6)
+(13/13) Installing .makedepends-sipp (20250523.182859)
+Executing busybox-1.37.0-r12.trigger
+OK: 621 MiB in 145 packages
+>>> sipp: Cleaning up srcdir
+>>> sipp: Cleaning up pkgdir
+>>> sipp: Cleaning up tmpdir
+>>> sipp: Fetching https://github.com/SIPp/sipp/releases/download/v3.7.3/sipp-3.7.3.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to objects.githubusercontent.com (185.199.109.133:443)
+saving to '/var/cache/distfiles/sipp-3.7.3.tar.gz.part'
+sipp-3.7.3.tar.gz.pa 100% |********************************|  910k  0:00:00 ETA
+'/var/cache/distfiles/sipp-3.7.3.tar.gz.part' saved
+>>> sipp: Fetching https://github.com/SIPp/sipp/releases/download/v3.7.3/sipp-3.7.3.tar.gz
+>>> sipp: Checking sha512sums...
+sipp-3.7.3.tar.gz: OK
+32bit.patch: OK
+>>> sipp: Unpacking /var/cache/distfiles/sipp-3.7.3.tar.gz...
+>>> sipp: 32bit.patch
+patching file src/call.cpp
+patching file src/rtpstream.cpp
+patching file src/sip_parser.cpp
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/sipp/src/sipp-3.7.3/build/CMakeFiles/CMakeScratch/TryCompile-KNGdFa'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_4ec04
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o CMakeFiles/cmTC_4ec04.dir/testCCompiler.c.o -c /home/packager/aports/main/sipp/src/sipp-3.7.3/build/CMakeFiles/CMakeScratch/TryCompile-KNGdFa/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_4ec04.dir/testCCompiler.c.o -o cmTC_4ec04   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_4ec04.dir/testCCompiler.c.o -o cmTC_4ec04   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_4ec04: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_4ec04 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:4 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: sipp: build failed
+>>> sipp: Uninstalling dependencies...
+(1/13) Purging .makedepends-sipp (20250523.182859)
+(2/13) Purging cmake (3.31.7-r0)
+(3/13) Purging libpcap-dev (1.10.5-r0)
+(4/13) Purging libpcap (1.10.5-r0)
+(5/13) Purging lksctp-tools-dev (1.0.19-r5)
+(6/13) Purging liblksctp (1.0.19-r5)
+(7/13) Purging openssl-dev (3.5.0-r0)
+(8/13) Purging samurai (1.2-r6)
+(9/13) Purging libarchive (3.7.9-r0)
+(10/13) Purging libuv (1.49.2-r0)
+(11/13) Purging lz4-libs (1.10.0-r0)
+(12/13) Purging rhash-libs (1.4.5-r0)
+(13/13) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,221 @@
+pigz: not found
+>>> ssmtp: Building main/ssmtp 2.64-r22 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:04:24 +0000
+>>> ssmtp: Validating /home/packager/aports/main/ssmtp/APKBUILD...
+>>> ssmtp: Analyzing dependencies...
+>>> ssmtp: Installing for build: build-base openssl-dev>3 autoconf
+(1/9) Installing openssl-dev (3.5.0-r0)
+(2/9) Installing m4 (1.4.19-r3)
+(3/9) Installing libbz2 (1.0.8-r6)
+(4/9) Installing perl (5.40.2-r0)
+(5/9) Installing autoconf (2.72-r0)
+(6/9) Installing .makedepends-ssmtp (20250518.100426)
+(7/9) Installing perl-error (0.17030-r0)
+(8/9) Installing perl-git (2.47.2-r0)
+(9/9) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 302 MiB in 90 packages
+>>> ssmtp: Cleaning up srcdir
+>>> ssmtp: Cleaning up pkgdir
+>>> ssmtp: Cleaning up tmpdir
+>>> ssmtp: Fetching https://deb.debian.org/debian/pool/main/s/ssmtp/ssmtp_2.64.orig.tar.bz2
+Connecting to deb.debian.org (146.75.122.132:443)
+saving to '/var/cache/distfiles/ssmtp_2.64.orig.tar.bz2.part'
+ssmtp_2.64.orig.tar. 100% |********************************| 52501  0:00:00 ETA
+'/var/cache/distfiles/ssmtp_2.64.orig.tar.bz2.part' saved
+>>> ssmtp: Fetching https://deb.debian.org/debian/pool/main/s/ssmtp/ssmtp_2.64.orig.tar.bz2
+>>> ssmtp: Checking sha512sums...
+ssmtp_2.64.orig.tar.bz2: OK
+cast.patch: OK
+generate_config.patch: OK
+libcrypto-underlinking.patch: OK
+inet6-getaddrinfo.patch: OK
+basename.patch: OK
+>>> ssmtp: Unpacking /var/cache/distfiles/ssmtp_2.64.orig.tar.bz2...
+>>> ssmtp: cast.patch
+patching file ssmtp.c
+>>> ssmtp: generate_config.patch
+patching file generate_config
+>>> ssmtp: libcrypto-underlinking.patch
+patching file configure.in
+>>> ssmtp: inet6-getaddrinfo.patch
+patching file ssmtp.c
+>>> ssmtp: basename.patch
+patching file ssmtp.c
+configure.in:12: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.in:12: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.in:12: the top level
+configure.in:16: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:16: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+configure.in:16: the top level
+configure.in:31: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.in:31: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.in:31: the top level
+configure.in:75: warning: AC_OUTPUT should be used without arguments.
+configure.in:75: You should run autoupdate.
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for limits.h... yes
+checking for strings.h... (cached) yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking for obsolete openlog... no
+checking for an ANSI C-conforming const... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for library containing gethostname... none required
+checking for library containing socket... none required
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for gethostname... yes
+checking for socket... yes
+checking for strdup... yes
+checking for strstr... yes
+configure: creating ./config.status
+config.status: creating Makefile
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_UNISTD_H=1 -DRETSIGTYPE=void -DHAVE_VPRINTF=1 -DHAVE_GETHOSTNAME=1 -DHAVE_SOCKET=1 -DHAVE_STRDUP=1 -DHAVE_STRSTR=1 -DREWRITE_DOMAIN=1 -DHAVE_SSL=1 -DINET6=1 -DSSMTPCONFDIR=\"/etc/ssmtp\" -DCONFIGURATION_FILE=\"/etc/ssmtp/ssmtp.conf\" -DREVALIASES_FILE=\"/etc/ssmtp/revaliases\"  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o ssmtp.o ssmtp.c
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_UNISTD_H=1 -DRETSIGTYPE=void -DHAVE_VPRINTF=1 -DHAVE_GETHOSTNAME=1 -DHAVE_SOCKET=1 -DHAVE_STRDUP=1 -DHAVE_STRSTR=1 -DREWRITE_DOMAIN=1 -DHAVE_SSL=1 -DINET6=1 -DSSMTPCONFDIR=\"/etc/ssmtp\" -DCONFIGURATION_FILE=\"/etc/ssmtp/ssmtp.conf\" -DREVALIASES_FILE=\"/etc/ssmtp/revaliases\"  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o arpadate.o arpadate.c
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_UNISTD_H=1 -DRETSIGTYPE=void -DHAVE_VPRINTF=1 -DHAVE_GETHOSTNAME=1 -DHAVE_SOCKET=1 -DHAVE_STRDUP=1 -DHAVE_STRSTR=1 -DREWRITE_DOMAIN=1 -DHAVE_SSL=1 -DINET6=1 -DSSMTPCONFDIR=\"/etc/ssmtp\" -DCONFIGURATION_FILE=\"/etc/ssmtp/ssmtp.conf\" -DREVALIASES_FILE=\"/etc/ssmtp/revaliases\"  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o base64.o base64.c
+gcc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_UNISTD_H=1 -DRETSIGTYPE=void -DHAVE_VPRINTF=1 -DHAVE_GETHOSTNAME=1 -DHAVE_SOCKET=1 -DHAVE_STRDUP=1 -DHAVE_STRSTR=1 -DREWRITE_DOMAIN=1 -DHAVE_SSL=1 -DINET6=1 -DSSMTPCONFDIR=\"/etc/ssmtp\" -DCONFIGURATION_FILE=\"/etc/ssmtp/ssmtp.conf\" -DREVALIASES_FILE=\"/etc/ssmtp/revaliases\"  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o xgethostname.o xgethostname.c
+ssmtp.c: In function 'strip_post_ws':
+ssmtp.c:265:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  265 |                 *p = (char)NULL;
+      |                      ^
+ssmtp.c: In function 'addr_parse':
+ssmtp.c:291:30: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  291 |                         *p = (char)NULL;
+      |                              ^
+ssmtp.c:314:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  314 |                 *q = (char)NULL;
+      |                      ^
+ssmtp.c: In function 'standardise':
+ssmtp.c:367:22: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  367 |                 *p = (char)NULL;
+      |                      ^
+ssmtp.c: In function 'revaliases':
+ssmtp.c:388:38: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  388 |                                 *p = (char)NULL;
+      |                                      ^
+ssmtp.c: In function 'rcpt_save':
+ssmtp.c:523:20: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  523 |         if(*str == (char)NULL) {
+      |                    ^
+ssmtp.c: In function 'rcpt_parse':
+ssmtp.c:580:32: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  580 |                 if(*(q + 1) == (char)NULL) {
+      |                                ^
+ssmtp.c:588:30: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  588 |                         *q = (char)NULL;
+      |                              ^
+ssmtp.c: In function 'header_save':
+ssmtp.c:680:32: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  680 |                 if(*(p + 6) == (char)NULL) {
+      |                                ^
+ssmtp.c: In function 'header_parse':
+ssmtp.c:745:18: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  745 |         char l = (char)NULL;
+      |                  ^
+ssmtp.c:780:54: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  780 |                                                 *q = (char)NULL;
+      |                                                      ^
+ssmtp.c:782:62: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  782 |                                                         *q = (char)NULL;
+      |                                                              ^
+ssmtp.c:813:54: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  813 |                                                 *q = (char)NULL;
+      |                                                      ^
+ssmtp.c:815:62: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  815 |                                                         *q = (char)NULL;
+      |                                                              ^
+ssmtp.c: In function 'read_config':
+ssmtp.c:880:30: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  880 |                         *p = (char)NULL;
+      |                              ^
+ssmtp.c: In function 'smtp_open':
+ssmtp.c:1129:13: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1129 |         meth=SSLv23_client_method();
+      |             ^
+ssmtp.c: In function 'fd_gets':
+ssmtp.c:1314:18: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 1314 |         buf[i] = (char)NULL;
+      |                  ^
+ssmtp.c: In function 'parse_options':
+ssmtp.c:1741:39: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+ 1741 |                 while(argv[i][++j] != (char)NULL) {
+      |                                       ^
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ssmtp ssmtp.o arpadate.o base64.o xgethostname.o  -lssl -lcrypto -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_UNISTD_H=1 -DRETSIGTYPE=void -DHAVE_VPRINTF=1 -DHAVE_GETHOSTNAME=1 -DHAVE_SOCKET=1 -DHAVE_STRDUP=1 -DHAVE_STRSTR=1 -DREWRITE_DOMAIN=1 -DHAVE_SSL=1 -DINET6=1 -DSSMTPCONFDIR=\"/etc/ssmtp\" -DCONFIGURATION_FILE=\"/etc/ssmtp/ssmtp.conf\" -DREVALIASES_FILE=\"/etc/ssmtp/revaliases\"  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt
+>>> ssmtp: Entering fakeroot...
+/usr/bin/install -c -d -m 755 /home/packager/aports/main/ssmtp/pkg/ssmtp/usr/sbin
+/usr/bin/install -c -s -m 755 ssmtp /home/packager/aports/main/ssmtp/pkg/ssmtp/usr/sbin/ssmtp
+/usr/bin/install -c -d -m 755 /home/packager/aports/main/ssmtp/pkg/ssmtp/usr/share/man/man8
+/usr/bin/install -c -m 644 ./ssmtp.8 /home/packager/aports/main/ssmtp/pkg/ssmtp/usr/share/man/man8/ssmtp.8
+/usr/bin/install -c -d -m 755 /home/packager/aports/main/ssmtp/pkg/ssmtp/etc/ssmtp
+/usr/bin/install -c -m 644 ./revaliases /home/packager/aports/main/ssmtp/pkg/ssmtp/etc/ssmtp/revaliases
+./generate_config /home/packager/aports/main/ssmtp/pkg/ssmtp/etc/ssmtp/ssmtp.conf
+>>> ssmtp-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/ssmtp/pkg/ssmtp-doc/usr/share/man'
+>>> ssmtp-doc*: Preparing subpackage ssmtp-doc...
+>>> ssmtp-doc*: Running postcheck for ssmtp-doc
+>>> ssmtp*: Running postcheck for ssmtp
+>>> ssmtp*: Preparing package ssmtp...
+>>> ssmtp*: Stripping binaries
+>>> ssmtp-doc*: Scanning shared objects
+>>> ssmtp*: Scanning shared objects
+>>> ssmtp-doc*: Tracing dependencies...
+>>> ssmtp-doc*: Package size: 2.6 KB
+>>> ssmtp-doc*: Compressing data...
+>>> ssmtp-doc*: Create checksum...
+pigz: not found
+>>> ssmtp-doc*: Create ssmtp-doc-2.64-r22.apk
+>>> ssmtp*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libssl.so.3
+>>> ssmtp*: Package size: 30.8 KB
+>>> ssmtp*: Compressing data...
+>>> ssmtp*: Create checksum...
+pigz: not found
+>>> ssmtp*: Create ssmtp-2.64-r22.apk
+>>> ssmtp: Build complete at Sun, 18 May 2025 10:04:31 +0000 elapsed time 0h 0m 7s
+>>> ssmtp: Cleaning up srcdir
+>>> ssmtp: Cleaning up pkgdir
+>>> ssmtp: Uninstalling dependencies...
+(1/9) Purging .makedepends-ssmtp (20250518.100426)
+(2/9) Purging openssl-dev (3.5.0-r0)
+(3/9) Purging autoconf (2.72-r0)
+(4/9) Purging m4 (1.4.19-r3)
+(5/9) Purging git-perl (2.47.2-r0)
+(6/9) Purging perl-git (2.47.2-r0)
+(7/9) Purging perl-error (0.17030-r0)
+(8/9) Purging perl (5.40.2-r0)
+(9/9) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> ssmtp: Updating the main/x86_64 repository index...
+>>> ssmtp: Signing the index...
+pigz: not found

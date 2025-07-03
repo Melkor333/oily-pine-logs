@@ -1,0 +1,143 @@
+pigz: not found
+>>> opennhrp: Building main/opennhrp 0.14.1-r12 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:20:44 +0000
+>>> opennhrp: Validating /home/packager/aports/main/opennhrp/APKBUILD...
+>>> opennhrp: Analyzing dependencies...
+>>> opennhrp: Installing for build: build-base c-ares-dev linux-headers
+(1/3) Installing c-ares-dev (1.34.5-r0)
+(2/3) Installing linux-headers (6.14.2-r0)
+(3/3) Installing .makedepends-opennhrp (20250518.082046)
+OK: 269 MiB in 84 packages
+>>> opennhrp: Cleaning up srcdir
+>>> opennhrp: Cleaning up pkgdir
+>>> opennhrp: Cleaning up tmpdir
+>>> opennhrp: Fetching https://downloads.sourceforge.net/opennhrp/opennhrp-0.14.1.tar.bz2
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to master.dl.sourceforge.net (216.105.38.12:443)
+saving to '/var/cache/distfiles/opennhrp-0.14.1.tar.bz2.part'
+opennhrp-0.14.1.tar.   8% |**                              | 12064  0:00:10 ETA
+opennhrp-0.14.1.tar. 100% |********************************|  131k  0:00:00 ETA
+'/var/cache/distfiles/opennhrp-0.14.1.tar.bz2.part' saved
+>>> opennhrp: Fetching https://downloads.sourceforge.net/opennhrp/opennhrp-0.14.1.tar.bz2
+>>> opennhrp: Checking sha512sums...
+opennhrp-0.14.1.tar.bz2: OK
+0001-peer-reset-interface-nat-cie-when-server-does-not-de.patch: OK
+0002-all-fix-includes-and-types-to-honor-standards.patch: OK
+0003-netlink-honor-configured-route-table-for-shortcut-de.patch: OK
+0004-netlink-additional-fixes-to-route-table-matching-fix.patch: OK
+0005-do-not-establish-shortcut-entry-if-cie-code-indicate.patch: OK
+0006-modify-packet-destination-only-for-registration-requ.patch: OK
+0007-fix-race-condition-to-stop-processing-dns-requests.patch: OK
+0008-fix-builds-with-gcc10.patch: OK
+opennhrp-0.9.3-peer-up-bgp.patch: OK
+opennhrp.initd: OK
+opennhrp.confd: OK
+>>> opennhrp: Unpacking /var/cache/distfiles/opennhrp-0.14.1.tar.bz2...
+>>> opennhrp: 0001-peer-reset-interface-nat-cie-when-server-does-not-de.patch
+patching file nhrp/nhrp_peer.c
+>>> opennhrp: 0002-all-fix-includes-and-types-to-honor-standards.patch
+patching file nhrp/nhrp_common.h
+patching file nhrp/opennhrp.c
+patching file nhrp/sysdep_netlink.c
+>>> opennhrp: 0003-netlink-honor-configured-route-table-for-shortcut-de.patch
+patching file nhrp/sysdep_netlink.c
+>>> opennhrp: 0004-netlink-additional-fixes-to-route-table-matching-fix.patch
+patching file nhrp/sysdep_netlink.c
+>>> opennhrp: 0005-do-not-establish-shortcut-entry-if-cie-code-indicate.patch
+patching file nhrp/nhrp_peer.c
+Hunk #1 succeeded at 1208 (offset -2 lines).
+>>> opennhrp: 0006-modify-packet-destination-only-for-registration-requ.patch
+patching file nhrp/nhrp_packet.c
+>>> opennhrp: 0007-fix-race-condition-to-stop-processing-dns-requests.patch
+patching file nhrp/nhrp_address.c
+>>> opennhrp: 0008-fix-builds-with-gcc10.patch
+patching file nhrp/nhrp_peer.h
+Hunk #1 succeeded at 136 (offset -2 lines).
+>>> opennhrp: opennhrp-0.9.3-peer-up-bgp.patch
+patching file etc/opennhrp-script
+  CC      nhrp/admin.o
+  CC      nhrp/libev.o
+  CC      nhrp/nhrp_address.o
+  CC      nhrp/nhrp_interface.o
+  CC      nhrp/nhrp_packet.o
+  CC      nhrp/nhrp_peer.o
+  CC      nhrp/nhrp_server.o
+  CC      nhrp/opennhrp.o
+nhrp/nhrp_address.c: In function 'ares_timeout_cb':
+nhrp/nhrp_address.c:39:9: warning: 'ares_process' is deprecated: Use ares_process_fds instead [-Wdeprecated-declarations]
+   39 |         ares_process(r->channel, NULL, NULL);
+      |         ^~~~~~~~~~~~
+In file included from nhrp/nhrp_address.c:17:
+/usr/include/ares.h:910:58: note: declared here
+  910 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_process_fds) void ares_process(
+      |                                                          ^~~~~~~~~~~~
+nhrp/nhrp_address.c: In function 'nhrp_address_resolve':
+nhrp/nhrp_address.c:246:9: warning: 'ares_gethostbyname' is deprecated: Use ares_getaddrinfo instead [-Wdeprecated-declarations]
+  246 |         ares_gethostbyname(resolver.channel, hostname, AF_INET,
+      |         ^~~~~~~~~~~~~~~~~~
+/usr/include/ares.h:879:58: note: declared here
+  879 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_getaddrinfo) void ares_gethostbyname(
+      |                                                          ^~~~~~~~~~~~~~~~~~
+  CC      nhrp/opennhrpctl.o
+  CC      nhrp/sysdep_netlink.o
+  CC      nhrp/sysdep_pfpacket.o
+  CC      nhrp/sysdep_syslog.o
+  LD      nhrp/opennhrp
+  LD      nhrp/opennhrpctl
+>>> opennhrp: Entering fakeroot...
+install -d /home/packager/aports/main/opennhrp/pkg/opennhrp/etc/opennhrp
+install -d /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/share/man/man5 /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/share/man/man8
+install etc/opennhrp.conf etc/opennhrp-script etc/racoon-ph1down.sh etc/racoon-ph1dead.sh /home/packager/aports/main/opennhrp/pkg/opennhrp/etc/opennhrp
+install man/opennhrp.conf.5 /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/share/man/man5
+install man/opennhrp.8 man/opennhrpctl.8 man/opennhrp-script.8 /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/share/man/man8
+install -d /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/sbin
+install nhrp/opennhrp nhrp/opennhrpctl /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/sbin
+install -d /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/share/doc/opennhrp
+install README /home/packager/aports/main/opennhrp/pkg/opennhrp/usr/share/doc/opennhrp
+>>> opennhrp-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/opennhrp/pkg/opennhrp-doc/usr/share/doc'
+'usr/share/man' -> '/home/packager/aports/main/opennhrp/pkg/opennhrp-doc/usr/share/man'
+>>> opennhrp-doc*: Preparing subpackage opennhrp-doc...
+>>> opennhrp-doc*: Running postcheck for opennhrp-doc
+>>> opennhrp-openrc*: Running split function openrc...
+'etc/conf.d' -> '/home/packager/aports/main/opennhrp/pkg/opennhrp-openrc/etc/conf.d'
+'etc/init.d' -> '/home/packager/aports/main/opennhrp/pkg/opennhrp-openrc/etc/init.d'
+>>> opennhrp-openrc*: Preparing subpackage opennhrp-openrc...
+>>> opennhrp-openrc*: Running postcheck for opennhrp-openrc
+>>> opennhrp*: Running postcheck for opennhrp
+>>> opennhrp*: Preparing package opennhrp...
+>>> opennhrp*: Stripping binaries
+>>> opennhrp-doc*: Scanning shared objects
+>>> opennhrp-openrc*: Scanning shared objects
+>>> opennhrp*: Scanning shared objects
+>>> opennhrp-doc*: Tracing dependencies...
+>>> opennhrp-doc*: Package size: 10.8 KB
+>>> opennhrp-doc*: Compressing data...
+>>> opennhrp-doc*: Create checksum...
+pigz: not found
+>>> opennhrp-doc*: Create opennhrp-doc-0.14.1-r12.apk
+>>> opennhrp-openrc*: Tracing dependencies...
+>>> opennhrp-openrc*: Package size: 853.0 B
+>>> opennhrp-openrc*: Compressing data...
+>>> opennhrp-openrc*: Create checksum...
+pigz: not found
+>>> opennhrp-openrc*: Create opennhrp-openrc-0.14.1-r12.apk
+>>> opennhrp*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcares.so.2
+>>> opennhrp*: Package size: 109.7 KB
+>>> opennhrp*: Compressing data...
+>>> opennhrp*: Create checksum...
+pigz: not found
+>>> opennhrp*: Create opennhrp-0.14.1-r12.apk
+>>> opennhrp: Build complete at Sun, 18 May 2025 08:20:51 +0000 elapsed time 0h 0m 7s
+>>> opennhrp: Cleaning up srcdir
+>>> opennhrp: Cleaning up pkgdir
+>>> opennhrp: Uninstalling dependencies...
+(1/3) Purging .makedepends-opennhrp (20250518.082046)
+(2/3) Purging c-ares-dev (1.34.5-r0)
+(3/3) Purging linux-headers (6.14.2-r0)
+OK: 261 MiB in 81 packages
+>>> opennhrp: Updating the main/x86_64 repository index...
+>>> opennhrp: Signing the index...
+pigz: not found

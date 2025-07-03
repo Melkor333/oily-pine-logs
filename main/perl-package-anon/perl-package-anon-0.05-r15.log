@@ -1,0 +1,115 @@
+pigz: not found
+>>> perl-package-anon: Building main/perl-package-anon 0.05-r15 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:46:42 +0000
+>>> perl-package-anon: Validating /home/packager/aports/main/perl-package-anon/APKBUILD...
+>>> perl-package-anon: Analyzing dependencies...
+>>> perl-package-anon: Installing for build: build-base perl perl-dev perl-sub-exporter
+(1/12) Installing libbz2 (1.0.8-r6)
+(2/12) Installing perl (5.40.2-r0)
+(3/12) Installing perl-utils (5.40.2-r0)
+(4/12) Installing perl-dev (5.40.2-r0)
+(5/12) Installing perl-params-util (1.102-r5)
+(6/12) Installing perl-sub-install (0.929-r2)
+(7/12) Installing perl-data-optlist (0.114-r1)
+(8/12) Installing perl-sub-exporter (0.991-r0)
+(9/12) Installing .makedepends-perl-package-anon (20250518.104643)
+(10/12) Installing perl-error (0.17030-r0)
+(11/12) Installing perl-git (2.47.2-r0)
+(12/12) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 93 packages
+>>> perl-package-anon: Cleaning up srcdir
+>>> perl-package-anon: Cleaning up pkgdir
+>>> perl-package-anon: Cleaning up tmpdir
+>>> perl-package-anon: Fetching https://cpan.metacpan.org/authors/id/A/AU/AUGGY/Package-Anon-0.05.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Package-Anon-0.05.tar.gz.part'
+Package-Anon-0.05.ta 100% |********************************| 13867  0:00:00 ETA
+'/var/cache/distfiles/Package-Anon-0.05.tar.gz.part' saved
+>>> perl-package-anon: Fetching https://cpan.metacpan.org/authors/id/A/AU/AUGGY/Package-Anon-0.05.tar.gz
+>>> perl-package-anon: Checking sha512sums...
+Package-Anon-0.05.tar.gz: OK
+>>> perl-package-anon: Unpacking /var/cache/distfiles/Package-Anon-0.05.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Package::Anon
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Anon.xs > Anon.xsc
+Running Mkbootstrap for Anon ()
+chmod 644 "Anon.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Anon.bs blib/arch/auto/Package/Anon/Anon.bs 644
+cp lib/Package/Anon.pm blib/lib/Package/Anon.pm
+mv Anon.xsc Anon.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.05\" -DXS_VERSION=\"0.05\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Anon.c
+rm -f blib/arch/auto/Package/Anon/Anon.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Anon.o  -o blib/arch/auto/Package/Anon/Anon.so  \
+      \
+  
+chmod 755 blib/arch/auto/Package/Anon/Anon.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Anon.bs blib/arch/auto/Package/Anon/Anon.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/basic.t ................. ok
+t/gc.t .................... ok
+t/name.t .................. ok
+t/overload.t .............. ok
+t/proto.t ................. ok
+t/release-eol.t ........... skipped: these tests are for release candidate testing
+t/release-no-tabs.t ....... skipped: these tests are for release candidate testing
+t/release-pod-coverage.t .. skipped: these tests are for release candidate testing
+t/release-pod-syntax.t .... skipped: these tests are for release candidate testing
+All tests successful.
+Files=9, Tests=38,  1 wallclock secs ( 0.04 usr  0.01 sys +  0.58 cusr  0.08 csys =  0.71 CPU)
+Result: PASS
+>>> perl-package-anon: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Anon.bs blib/arch/auto/Package/Anon/Anon.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-package-anon/pkg/perl-package-anon/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-package-anon/pkg/perl-package-anon/usr/lib/perl5/vendor_perl/auto/Package/Anon/Anon.so
+Installing /home/packager/aports/main/perl-package-anon/pkg/perl-package-anon/usr/lib/perl5/vendor_perl/Package/Anon.pm
+Installing /home/packager/aports/main/perl-package-anon/pkg/perl-package-anon/usr/share/man/man3/Package::Anon.3pm
+>>> perl-package-anon-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-package-anon/pkg/perl-package-anon-doc/usr/share/man'
+>>> perl-package-anon-doc*: Preparing subpackage perl-package-anon-doc...
+>>> perl-package-anon-doc*: Running postcheck for perl-package-anon-doc
+>>> perl-package-anon*: Running postcheck for perl-package-anon
+>>> perl-package-anon*: Preparing package perl-package-anon...
+>>> perl-package-anon*: Stripping binaries
+>>> perl-package-anon-doc*: Scanning shared objects
+>>> perl-package-anon*: Scanning shared objects
+>>> perl-package-anon-doc*: Tracing dependencies...
+>>> perl-package-anon-doc*: Package size: 2.6 KB
+>>> perl-package-anon-doc*: Compressing data...
+>>> perl-package-anon-doc*: Create checksum...
+pigz: not found
+>>> perl-package-anon-doc*: Create perl-package-anon-doc-0.05-r15.apk
+>>> perl-package-anon*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-package-anon*: Package size: 18.3 KB
+>>> perl-package-anon*: Compressing data...
+>>> perl-package-anon*: Create checksum...
+pigz: not found
+>>> perl-package-anon*: Create perl-package-anon-0.05-r15.apk
+>>> perl-package-anon: Build complete at Sun, 18 May 2025 10:46:47 +0000 elapsed time 0h 0m 5s
+>>> perl-package-anon: Cleaning up srcdir
+>>> perl-package-anon: Cleaning up pkgdir
+>>> perl-package-anon: Uninstalling dependencies...
+(1/12) Purging .makedepends-perl-package-anon (20250518.104643)
+(2/12) Purging perl-dev (5.40.2-r0)
+(3/12) Purging perl-utils (5.40.2-r0)
+(4/12) Purging perl-sub-exporter (0.991-r0)
+(5/12) Purging perl-data-optlist (0.114-r1)
+(6/12) Purging perl-sub-install (0.929-r2)
+(7/12) Purging perl-params-util (1.102-r5)
+(8/12) Purging git-perl (2.47.2-r0)
+(9/12) Purging perl-git (2.47.2-r0)
+(10/12) Purging perl-error (0.17030-r0)
+(11/12) Purging perl (5.40.2-r0)
+(12/12) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-package-anon: Updating the main/x86_64 repository index...
+>>> perl-package-anon: Signing the index...
+pigz: not found

@@ -1,0 +1,117 @@
+pigz: not found
+>>> pahole: Building main/pahole 1.28-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:04:44 +0000
+>>> pahole: Validating /home/packager/aports/main/pahole/APKBUILD...
+>>> pahole: Analyzing dependencies...
+>>> pahole: Installing for build: build-base cmake elfutils-dev libdwarf-dev zlib-dev libbpf-dev linux-headers musl-obstack-dev argp-standalone samurai
+(1/25) Installing lz4-libs (1.10.0-r0)
+(2/25) Installing xz-libs (5.6.3-r1)
+(3/25) Installing libarchive (3.7.9-r0)
+(4/25) Installing rhash-libs (1.4.5-r0)
+(5/25) Installing libuv (1.49.2-r0)
+(6/25) Installing cmake (3.31.7-r0)
+(7/25) Installing libelf (0.191-r0)
+(8/25) Installing musl-fts (1.2.7-r6)
+(9/25) Installing libdw (0.191-r0)
+(10/25) Installing libasm (0.191-r0)
+(11/25) Installing xz (5.6.3-r1)
+(12/25) Installing xz-dev (5.6.3-r1)
+(13/25) Installing zstd (1.5.7-r0)
+(14/25) Installing zstd-dev (1.5.7-r0)
+(15/25) Installing elfutils-dev (0.191-r0)
+(16/25) Installing libdwarf (0.9.2-r0)
+(17/25) Installing liblibdwarfp (0.9.2-r0)
+(18/25) Installing libdwarf-dev (0.9.2-r0)
+(19/25) Installing libbpf (1.5.0-r0)
+(20/25) Installing libbpf-dev (1.5.0-r0)
+(21/25) Installing musl-obstack (1.2.3-r2)
+(22/25) Installing musl-obstack-dev (1.2.3-r2)
+(23/25) Installing argp-standalone (1.5.0-r1)
+(24/25) Installing samurai (1.2-r6)
+(25/25) Installing .makedepends-pahole (20250523.170447)
+Executing busybox-1.37.0-r12.trigger
+OK: 624 MiB in 157 packages
+>>> pahole: Cleaning up srcdir
+>>> pahole: Cleaning up pkgdir
+>>> pahole: Cleaning up tmpdir
+>>> pahole: Fetching https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-v1.28.tar.gz
+Connecting to git.kernel.org (172.105.64.184:443)
+saving to '/var/cache/distfiles/pahole-v1.28.tar.gz.part'
+pahole-v1.28.tar.gz. 100% |********************************|  280k  0:00:00 ETA
+'/var/cache/distfiles/pahole-v1.28.tar.gz.part' saved
+>>> pahole: Fetching https://git.kernel.org/pub/scm/devel/pahole/pahole.git/snapshot/pahole-v1.28.tar.gz
+>>> pahole: Checking sha512sums...
+pahole-v1.28.tar.gz: OK
+>>> pahole: Unpacking /var/cache/distfiles/pahole-v1.28.tar.gz...
+CMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/pahole/src/pahole-v1.28/build/CMakeFiles/CMakeScratch/TryCompile-pmOjfd'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_ac038
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/bpf/uapi -o CMakeFiles/cmTC_ac038.dir/testCCompiler.c.o -c /home/packager/aports/main/pahole/src/pahole-v1.28/build/CMakeFiles/CMakeScratch/TryCompile-pmOjfd/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/bpf/uapi -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_ac038.dir/testCCompiler.c.o -o cmTC_ac038   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/bpf/uapi -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_ac038.dir/testCCompiler.c.o -o cmTC_ac038   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_ac038: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_ac038 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: pahole: build failed
+>>> pahole: Uninstalling dependencies...
+(1/25) Purging .makedepends-pahole (20250523.170447)
+(2/25) Purging cmake (3.31.7-r0)
+(3/25) Purging libdwarf-dev (0.9.2-r0)
+(4/25) Purging liblibdwarfp (0.9.2-r0)
+(5/25) Purging libbpf-dev (1.5.0-r0)
+(6/25) Purging libbpf (1.5.0-r0)
+(7/25) Purging musl-obstack-dev (1.2.3-r2)
+(8/25) Purging musl-obstack (1.2.3-r2)
+(9/25) Purging argp-standalone (1.5.0-r1)
+(10/25) Purging samurai (1.2-r6)
+(11/25) Purging elfutils-dev (0.191-r0)
+(12/25) Purging libasm (0.191-r0)
+(13/25) Purging libdw (0.191-r0)
+(14/25) Purging libelf (0.191-r0)
+(15/25) Purging libarchive (3.7.9-r0)
+(16/25) Purging libdwarf (0.9.2-r0)
+(17/25) Purging libuv (1.49.2-r0)
+(18/25) Purging lz4-libs (1.10.0-r0)
+(19/25) Purging musl-fts (1.2.7-r6)
+(20/25) Purging rhash-libs (1.4.5-r0)
+(21/25) Purging xz-dev (5.6.3-r1)
+(22/25) Purging xz (5.6.3-r1)
+(23/25) Purging xz-libs (5.6.3-r1)
+(24/25) Purging zstd-dev (1.5.7-r0)
+(25/25) Purging zstd (1.5.7-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

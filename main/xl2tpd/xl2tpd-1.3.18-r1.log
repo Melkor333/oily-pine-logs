@@ -1,0 +1,83 @@
+pigz: not found
+>>> xl2tpd: Building main/xl2tpd 1.3.18-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:07:44 +0000
+>>> xl2tpd: Validating /home/packager/aports/main/xl2tpd/APKBUILD...
+>>> xl2tpd: Analyzing dependencies...
+>>> xl2tpd: Installing for build: build-base ppp-l2tp libpcap-dev linux-headers
+(1/5) Installing libpcap (1.10.5-r0)
+(2/5) Installing ppp-daemon (2.5.1-r0)
+(3/5) Installing ppp-l2tp (2.5.1-r0)
+(4/5) Installing libpcap-dev (1.10.5-r0)
+(5/5) Installing .makedepends-xl2tpd (20250523.180749)
+Executing busybox-1.37.0-r12.trigger
+OK: 566 MiB in 137 packages
+>>> xl2tpd: Cleaning up srcdir
+>>> xl2tpd: Cleaning up pkgdir
+>>> xl2tpd: Cleaning up tmpdir
+>>> xl2tpd: Fetching xl2tpd-1.3.18.tar.gz::https://github.com/xelerance/xl2tpd/archive/v1.3.18.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/xl2tpd-1.3.18.tar.gz.part'
+xl2tpd-1.3.18.tar.gz 100% |********************************|  522k  0:00:00 ETA
+'/var/cache/distfiles/xl2tpd-1.3.18.tar.gz.part' saved
+>>> xl2tpd: Fetching xl2tpd-1.3.18.tar.gz::https://github.com/xelerance/xl2tpd/archive/v1.3.18.tar.gz
+>>> xl2tpd: Checking sha512sums...
+xl2tpd-1.3.18.tar.gz: OK
+xl2tpd.confd: OK
+xl2tpd.initd: OK
+options.xl2tpd: OK
+>>> xl2tpd: Unpacking /var/cache/distfiles/xl2tpd-1.3.18.tar.gz...
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o xl2tpd.o xl2tpd.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o pty.o pty.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o misc.o misc.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o control.o control.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o avp.o avp.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o call.o call.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o network.o network.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o avpsend.o avpsend.c
+control.c: In function 'control_finish':
+control.c:253:24: warning: the comparison will always evaluate as 'true' for the address of 'hostname' will never be NULL [-Waddress]
+  253 |             if (t->lac && t->lac->hostname && t->lac->hostname[0])
+      |                        ^~
+In file included from l2tp.h:34,
+                 from control.c:23:
+file.h:122:10: note: 'hostname' declared here
+  122 |     char hostname[STRLEN];      /* Hostname to report */
+      |          ^~~~~~~~
+control.c:255:29: warning: the comparison will always evaluate as 'true' for the address of 'hostname' will never be NULL [-Waddress]
+  255 |             else if (t->lns && t->lns->hostname && t->lns->hostname[0])
+      |                             ^~
+file.h:80:10: note: 'hostname' declared here
+   80 |     char hostname[STRLEN];      /* Hostname to report */
+      |          ^~~~~~~~
+control.c:471:20: warning: the comparison will always evaluate as 'true' for the address of 'hostname' will never be NULL [-Waddress]
+  471 |         if (t->lac && t->lac->hostname && t->lac->hostname[0])
+      |                    ^~
+file.h:122:10: note: 'hostname' declared here
+  122 |     char hostname[STRLEN];      /* Hostname to report */
+      |          ^~~~~~~~
+control.c:473:25: warning: the comparison will always evaluate as 'true' for the address of 'hostname' will never be NULL [-Waddress]
+  473 |         else if (t->lns && t->lns->hostname && t->lns->hostname[0])
+      |                         ^~
+file.h:80:10: note: 'hostname' declared here
+   80 |     char hostname[STRLEN];      /* Hostname to report */
+      |          ^~~~~~~~
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o scheduler.o scheduler.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o file.o file.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o aaa.o aaa.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION   -c -o md5.o md5.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Os -Os -Wall -Wextra -DSANITY -DLINUX -I./linux/include/ -DUSE_KERNEL -DIP_ALLOCATION -c contrib/pfc.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pfc pfc.o -lpcap 
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: pfc: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: pfc has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:131: pfc] Error 1
+make: *** Waiting for unfinished jobs....
+>>> ERROR: xl2tpd: build failed
+>>> xl2tpd: Uninstalling dependencies...
+(1/5) Purging .makedepends-xl2tpd (20250523.180749)
+(2/5) Purging ppp-l2tp (2.5.1-r0)
+(3/5) Purging ppp-daemon (2.5.1-r0)
+(4/5) Purging libpcap-dev (1.10.5-r0)
+(5/5) Purging libpcap (1.10.5-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

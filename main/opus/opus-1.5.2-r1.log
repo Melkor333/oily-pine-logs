@@ -1,0 +1,468 @@
+pigz: not found
+>>> opus: Building main/opus 1.5.2-r1 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:48:44 +0000
+>>> opus: Validating /home/packager/aports/main/opus/APKBUILD...
+>>> opus: Analyzing dependencies...
+>>> opus: Installing for build: build-base meson
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/main/x86_64/APKINDEX.tar.gz
+fetch https://dl-cdn.alpinelinux.org/alpine/v3.21/community/x86_64/APKINDEX.tar.gz
+(1/15) Installing samurai (1.2-r6)
+(2/15) Installing libbz2 (1.0.8-r6)
+(3/15) Installing libffi (3.4.7-r0)
+(4/15) Installing gdbm (1.24-r0)
+(5/15) Installing xz-libs (5.6.3-r1)
+(6/15) Installing mpdecimal (4.0.0-r0)
+(7/15) Installing sqlite-libs (3.49.2-r0)
+(8/15) Installing python3 (3.12.10-r0)
+(9/15) Installing python3-pycache-pyc0 (3.12.10-r0)
+(10/15) Installing pyc (3.12.10-r0)
+(11/15) Installing meson-pyc (1.6.1-r4)
+(12/15) Installing python3-pyc (3.12.10-r0)
+(13/15) Installing meson (1.6.1-r4)
+(14/15) Installing .makedepends-opus (20250518.084846)
+(15/15) Installing abuild-meson (1.6.1-r4)
+Executing busybox-1.37.0-r12.trigger
+OK: 304 MiB in 96 packages
+>>> opus: Cleaning up srcdir
+>>> opus: Cleaning up pkgdir
+>>> opus: Cleaning up tmpdir
+>>> opus: Fetching https://downloads.xiph.org/releases/opus/opus-1.5.2.tar.gz
+Connecting to downloads.xiph.org (140.211.166.31:443)
+Connecting to ftp.osuosl.org (140.211.166.134:443)
+saving to '/var/cache/distfiles/opus-1.5.2.tar.gz.part'
+opus-1.5.2.tar.gz.pa   0% |                                |  7944  0:16:26 ETA
+opus-1.5.2.tar.gz.pa   3% |*                               |  289k  0:00:50 ETA
+opus-1.5.2.tar.gz.pa   9% |**                              |  710k  0:00:29 ETA
+opus-1.5.2.tar.gz.pa  14% |****                            | 1132k  0:00:23 ETA
+opus-1.5.2.tar.gz.pa  20% |******                          | 1554k  0:00:19 ETA
+opus-1.5.2.tar.gz.pa  24% |*******                         | 1906k  0:00:18 ETA
+opus-1.5.2.tar.gz.pa  30% |*********                       | 2328k  0:00:16 ETA
+opus-1.5.2.tar.gz.pa  35% |***********                     | 2749k  0:00:14 ETA
+opus-1.5.2.tar.gz.pa  40% |************                    | 3101k  0:00:13 ETA
+opus-1.5.2.tar.gz.pa  46% |**************                  | 3523k  0:00:11 ETA
+opus-1.5.2.tar.gz.pa  51% |****************                | 3945k  0:00:10 ETA
+opus-1.5.2.tar.gz.pa  56% |*****************               | 4296k  0:00:09 ETA
+opus-1.5.2.tar.gz.pa  61% |*******************             | 4718k  0:00:08 ETA
+opus-1.5.2.tar.gz.pa  67% |*********************           | 5140k  0:00:06 ETA
+opus-1.5.2.tar.gz.pa  72% |***********************         | 5562k  0:00:05 ETA
+opus-1.5.2.tar.gz.pa  77% |************************        | 5914k  0:00:04 ETA
+opus-1.5.2.tar.gz.pa  82% |**************************      | 6335k  0:00:03 ETA
+opus-1.5.2.tar.gz.pa  88% |****************************    | 6757k  0:00:02 ETA
+opus-1.5.2.tar.gz.pa  92% |*****************************   | 7109k  0:00:01 ETA
+opus-1.5.2.tar.gz.pa  98% |******************************* | 7531k  0:00:00 ETA
+opus-1.5.2.tar.gz.pa 100% |********************************| 7655k  0:00:00 ETA
+'/var/cache/distfiles/opus-1.5.2.tar.gz.part' saved
+>>> opus: Fetching https://downloads.xiph.org/releases/opus/opus-1.5.2.tar.gz
+>>> opus: Checking sha512sums...
+opus-1.5.2.tar.gz: OK
+arm32.patch: OK
+fix-test.patch: OK
+>>> opus: Unpacking /var/cache/distfiles/opus-1.5.2.tar.gz...
+>>> opus: arm32.patch
+patching file silk/meson.build
+Hunk #1 succeeded at 31 (offset 6 lines).
+>>> opus: fix-test.patch
+patching file tests/meson.build
+The Meson build system
+Version: 1.6.1
+Source dir: /home/packager/aports/main/opus/src/opus-1.5.2
+Build dir: /home/packager/aports/main/opus/src/opus-1.5.2/output
+Build type: native build
+Project name: opus
+Project version: 1.5.2
+C compiler for the host machine: gcc (gcc 14.2.0 "gcc (Alpine 14.2.0) 14.2.0")
+C linker for the host machine: gcc ld.bfd 2.43.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -fstack-protector-strong: YES 
+Library m found: YES
+Checking for function "lrintf" with dependency -lm: YES 
+Checking for function "lrint" with dependency -lm: YES 
+Checking for function "__malloc_hook" : NO 
+Check usable header "stdint.h" : YES 
+Checking if "restrict keyword" compiles: YES 
+Checking if "C99 variable-size arrays" compiles: YES 
+Checking if "compiler supports SSE intrinsics" : links: YES 
+Checking if "compiler supports SSE2 intrinsics" : links: YES 
+Checking if "compiler supports SSE4.1 intrinsics" : links: NO 
+Checking if "compiler supports SSE4.1 intrinsics with -msse4.1" : links: YES 
+Checking if "compiler supports AVX2 intrinsics" : links: NO 
+Checking if "compiler supports AVX2 intrinsics with -mavx -mfma -mavx2" : links: YES 
+Checking if "Get X86 CPU info via inline assembly" : links: YES 
+Configuring config.h using configuration
+WARNING: extract_all_objects called without setting recursive
+keyword argument. Meson currently defaults to
+non-recursive to maintain backward compatibility but
+the default will be changed in meson 2.0.
+
+WARNING: extract_all_objects called without setting recursive
+keyword argument. Meson currently defaults to
+non-recursive to maintain backward compatibility but
+the default will be changed in meson 2.0.
+
+Found pkg-config: YES (/usr/bin/pkg-config) 2.3.0
+Program doxygen found: NO
+Build targets in project: 30
+
+opus 1.5.2
+
+  Compiler support
+    C99 var arrays                 : YES
+    C99 lrintf                     : YES
+    Use alloca                     : NO (using C99 variable-size arrays instead)
+
+  Optimizations
+    Floating point support         : YES
+    Fast float approximations      : NO
+    Fixed point debugging          : NO
+    Inline assembly optimizations  : none
+    External assembly optimizations: none
+    Intrinsics optimizations       : SSE, SSE2, SSE4.1, AVX2
+    Run-time CPU detection         : SSE4.1, AVX2
+
+  General configuration
+    Custom modes                   : YES
+    Assertions                     : NO
+    Hardening                      : YES
+    Fuzzing                        : NO
+    Check ASM                      : NO
+    API documentation              : NO
+    Extra programs                 : YES
+    Tests                          : YES
+
+  User defined options
+    auto_features                  : auto
+    b_lto                          : true
+    b_pie                          : true
+    b_staticpic                    : true
+    bindir                         : /usr/bin
+    buildtype                      : plain
+    custom-modes                   : true
+    datadir                        : /usr/share
+    extra-programs                 : enabled
+    includedir                     : /usr/include
+    infodir                        : /usr/share/info
+    libdir                         : /usr/lib
+    libexecdir                     : /usr/libexec
+    localedir                      : /usr/share/locale
+    localstatedir                  : /var
+    mandir                         : /usr/share/man
+    prefix                         : /usr
+    python.bytecompile             : 0
+    sbindir                        : /usr/sbin
+    sharedstatedir                 : /var/lib
+    sysconfdir                     : /etc
+    tests                          : enabled
+    werror                         : false
+    wrap_mode                      : nodownload
+
+Found ninja-1.9 at /usr/bin/ninja
+ninja: entering directory '/home/packager/aports/main/opus/src/opus-1.5.2/output'
+[1/206] Compiling C object src/opus_custom_demo.p/.._celt_opus_custom_demo.c.o
+[2/206] Compiling C object src/repacketizer_demo.p/repacketizer_demo.c.o
+[3/206] Compiling C object src/opus_demo.p/opus_demo.c.o
+[4/206] Compiling C object src/opus_compare.p/opus_compare.c.o
+[5/206] Compiling C object dnn/libdnn_avx2.a.p/x86_nnet_avx2.c.o
+[6/206] Compiling C object dnn/libdnn_sse4_1.a.p/x86_nnet_sse4_1.c.o
+[7/206] Compiling C object dnn/libdnn_sse2.a.p/x86_nnet_sse2.c.o
+[8/206] Compiling C object tests/test_opus_projection.p/test_opus_projection.c.o
+[9/206] Compiling C object tests/test_opus_padding.p/test_opus_padding.c.o
+[10/206] Compiling C object tests/test_opus_extensions.p/test_opus_extensions.c.o
+[11/206] Compiling C object tests/test_opus_encode.p/opus_encode_regressions.c.o
+[12/206] Compiling C object tests/test_opus_encode.p/test_opus_encode.c.o
+[13/206] Compiling C object src/libopus.so.0.10.1.p/mlp_data.c.o
+[14/206] Compiling C object src/libopus.so.0.10.1.p/mlp.c.o
+[15/206] Compiling C object src/libopus.so.0.10.1.p/analysis.c.o
+[16/206] Compiling C object src/libopus.so.0.10.1.p/mapping_matrix.c.o
+[17/206] Compiling C object src/libopus.so.0.10.1.p/opus_projection_decoder.c.o
+[18/206] Compiling C object src/libopus.so.0.10.1.p/opus_projection_encoder.c.o
+[19/206] Compiling C object src/libopus.so.0.10.1.p/repacketizer.c.o
+[20/206] Compiling C object src/libopus.so.0.10.1.p/opus_multistream_decoder.c.o
+[21/206] Compiling C object src/libopus.so.0.10.1.p/opus_multistream_encoder.c.o
+[22/206] Compiling C object src/libopus.so.0.10.1.p/opus_multistream.c.o
+[23/206] Compiling C object src/libopus.so.0.10.1.p/extensions.c.o
+[24/206] Compiling C object src/libopus.so.0.10.1.p/opus_encoder.c.o
+[25/206] Compiling C object src/libopus.so.0.10.1.p/opus_decoder.c.o
+[26/206] Compiling C object src/libopus.so.0.10.1.p/opus.c.o
+[27/206] Compiling C object tests/test_opus_decode.p/test_opus_decode.c.o
+[28/206] Compiling C object silk/libopus-silk.a.p/x86_x86_silk_map.c.o
+[29/206] Compiling C object silk/libopus-silk.a.p/float_sort_FLP.c.o
+[30/206] Compiling C object silk/libopus-silk.a.p/float_schur_FLP.c.o
+[31/206] Compiling C object silk/libopus-silk.a.p/float_scale_vector_FLP.c.o
+[32/206] Compiling C object silk/libopus-silk.a.p/float_scale_copy_vector_FLP.c.o
+[33/206] Compiling C object silk/libopus-silk.a.p/float_pitch_analysis_core_FLP.c.o
+[34/206] Compiling C object silk/libopus-silk.a.p/float_LPC_inv_pred_gain_FLP.c.o
+[35/206] Compiling C object silk/libopus-silk.a.p/float_k2a_FLP.c.o
+[36/206] Compiling C object silk/libopus-silk.a.p/float_inner_product_FLP.c.o
+[37/206] Compiling C object silk/libopus-silk.a.p/float_energy_FLP.c.o
+[38/206] Compiling C object silk/libopus-silk.a.p/float_bwexpander_FLP.c.o
+[39/206] Compiling C object silk/libopus-silk.a.p/float_burg_modified_FLP.c.o
+[40/206] Compiling C object silk/libopus-silk.a.p/float_autocorrelation_FLP.c.o
+[41/206] Compiling C object silk/libopus-silk.a.p/float_wrappers_FLP.c.o
+[42/206] Compiling C object silk/libopus-silk.a.p/float_warped_autocorrelation_FLP.c.o
+[43/206] Compiling C object silk/libopus-silk.a.p/float_residual_energy_FLP.c.o
+[44/206] Linking static target dnn/libdnn_avx2.a
+[45/206] Compiling C object silk/libopus-silk.a.p/float_regularize_correlations_FLP.c.o
+[46/206] Compiling C object silk/libopus-silk.a.p/float_process_gains_FLP.c.o
+[47/206] Compiling C object silk/libopus-silk.a.p/float_noise_shape_analysis_FLP.c.o
+[48/206] Compiling C object silk/libopus-silk.a.p/float_LTP_scale_ctrl_FLP.c.o
+[49/206] Compiling C object silk/libopus-silk.a.p/float_LTP_analysis_filter_FLP.c.o
+[50/206] Linking static target dnn/libdnn_sse2.a
+[51/206] Linking static target dnn/libdnn_sse4_1.a
+[52/206] Compiling C object silk/libopus-silk.a.p/float_LPC_analysis_filter_FLP.c.o
+[53/206] Compiling C object silk/libopus-silk.a.p/float_find_pred_coefs_FLP.c.o
+[54/206] Compiling C object silk/libopus-silk.a.p/float_find_pitch_lags_FLP.c.o
+[55/206] Compiling C object silk/libopus-silk.a.p/float_find_LTP_FLP.c.o
+[56/206] Compiling C object silk/libopus-silk.a.p/float_find_LPC_FLP.c.o
+[57/206] Compiling C object silk/libopus-silk.a.p/float_encode_frame_FLP.c.o
+[58/206] Compiling C object silk/libopus-silk.a.p/float_corrMatrix_FLP.c.o
+[59/206] Compiling C object silk/libopus-silk.a.p/float_apply_sine_window_FLP.c.o
+[60/206] Compiling C object silk/libopus-silk.a.p/LPC_fit.c.o
+[61/206] Compiling C object silk/libopus-silk.a.p/stereo_quant_pred.c.o
+[62/206] Compiling C object silk/libopus-silk.a.p/stereo_find_predictor.c.o
+[63/206] Compiling C object silk/libopus-silk.a.p/stereo_encode_pred.c.o
+[64/206] Compiling C object silk/libopus-silk.a.p/stereo_decode_pred.c.o
+[65/206] Compiling C object silk/libopus-silk.a.p/sum_sqr_shift.c.o
+[66/206] Compiling C object silk/libopus-silk.a.p/sort.c.o
+[67/206] Compiling C object silk/libopus-silk.a.p/sigm_Q15.c.o
+[68/206] Compiling C object silk/libopus-silk.a.p/resampler_rom.c.o
+[69/206] Compiling C object silk/libopus-silk.a.p/resampler_private_up2_HQ.c.o
+[70/206] Compiling C object silk/libopus-silk.a.p/resampler_private_IIR_FIR.c.o
+[71/206] Compiling C object silk/libopus-silk.a.p/resampler_private_down_FIR.c.o
+[72/206] Compiling C object silk/libopus-silk.a.p/resampler_private_AR2.c.o
+[73/206] Compiling C object silk/libopus-silk.a.p/resampler_down2.c.o
+[74/206] Compiling C object silk/libopus-silk.a.p/resampler_down2_3.c.o
+[75/206] Compiling C object silk/libopus-silk.a.p/resampler.c.o
+[76/206] Compiling C object silk/libopus-silk.a.p/pitch_est_tables.c.o
+[77/206] Compiling C object silk/libopus-silk.a.p/NLSF_VQ_weights_laroia.c.o
+[78/206] Compiling C object silk/libopus-silk.a.p/NLSF_stabilize.c.o
+[79/206] Compiling C object silk/libopus-silk.a.p/NLSF2A.c.o
+[80/206] Compiling C object silk/libopus-silk.a.p/table_LSF_cos.c.o
+[81/206] Compiling C object silk/libopus-silk.a.p/LPC_inv_pred_gain.c.o
+[82/206] Compiling C object silk/libopus-silk.a.p/LPC_analysis_filter.c.o
+[83/206] Compiling C object silk/libopus-silk.a.p/log2lin.c.o
+[84/206] Compiling C object silk/libopus-silk.a.p/lin2log.c.o
+[85/206] Compiling C object silk/libopus-silk.a.p/inner_prod_aligned.c.o
+[86/206] Compiling C object silk/libopus-silk.a.p/decode_pitch.c.o
+[87/206] Compiling C object silk/libopus-silk.a.p/debug.c.o
+[88/206] Compiling C object silk/libopus-silk.a.p/bwexpander.c.o
+[89/206] Compiling C object silk/libopus-silk.a.p/bwexpander_32.c.o
+[90/206] Compiling C object silk/libopus-silk.a.p/biquad_alt.c.o
+[91/206] Compiling C object silk/libopus-silk.a.p/ana_filt_bank_1.c.o
+[92/206] Compiling C object silk/libopus-silk.a.p/A2NLSF.c.o
+[93/206] Compiling C object silk/libopus-silk.a.p/control_codec.c.o
+[94/206] Compiling C object silk/libopus-silk.a.p/init_encoder.c.o
+[95/206] Compiling C object silk/libopus-silk.a.p/control_SNR.c.o
+[96/206] Compiling C object silk/libopus-silk.a.p/check_control_input.c.o
+[97/206] Compiling C object silk/libopus-silk.a.p/stereo_MS_to_LR.c.o
+[98/206] Compiling C object silk/libopus-silk.a.p/stereo_LR_to_MS.c.o
+[99/206] Compiling C object silk/libopus-silk.a.p/process_NLSFs.c.o
+[100/206] Compiling C object silk/libopus-silk.a.p/NLSF_del_dec_quant.c.o
+[101/206] Compiling C object silk/libopus-silk.a.p/NLSF_unpack.c.o
+[102/206] Compiling C object silk/libopus-silk.a.p/NLSF_VQ.c.o
+[103/206] Compiling C object silk/libopus-silk.a.p/NLSF_encode.c.o
+[104/206] Compiling C object silk/libopus-silk.a.p/HP_variable_cutoff.c.o
+[105/206] Compiling C object silk/libopus-silk.a.p/VQ_WMat_EC.c.o
+[106/206] Compiling C object silk/libopus-silk.a.p/quant_LTP_gains.c.o
+[107/206] Compiling C object silk/libopus-silk.a.p/control_audio_bandwidth.c.o
+[108/206] Compiling C object silk/libopus-silk.a.p/VAD.c.o
+[109/206] Compiling C object silk/libopus-silk.a.p/tables_pulses_per_block.c.o
+[110/206] Compiling C object silk/libopus-silk.a.p/tables_pitch_lag.c.o
+[111/206] Compiling C object silk/libopus-silk.a.p/tables_other.c.o
+[112/206] Compiling C object silk/libopus-silk.a.p/tables_NLSF_CB_WB.c.o
+[113/206] Compiling C object silk/libopus-silk.a.p/tables_NLSF_CB_NB_MB.c.o
+[114/206] Compiling C object silk/libopus-silk.a.p/tables_LTP.c.o
+[115/206] Compiling C object silk/libopus-silk.a.p/tables_gain.c.o
+[116/206] Compiling C object silk/libopus-silk.a.p/shell_coder.c.o
+[117/206] Compiling C object silk/libopus-silk.a.p/PLC.c.o
+[118/206] Compiling C object silk/libopus-silk.a.p/NSQ_del_dec.c.o
+[119/206] Compiling C object silk/libopus-silk.a.p/NSQ.c.o
+[120/206] Compiling C object silk/libopus-silk.a.p/NLSF_decode.c.o
+[121/206] Compiling C object silk/libopus-silk.a.p/LP_variable_cutoff.c.o
+[122/206] Compiling C object silk/libopus-silk.a.p/interpolate.c.o
+[123/206] Compiling C object silk/libopus-silk.a.p/gain_quant.c.o
+[124/206] Compiling C object silk/libopus-silk.a.p/encode_pulses.c.o
+[125/206] Compiling C object silk/libopus-silk.a.p/encode_indices.c.o
+[126/206] Compiling C object silk/libopus-silk.a.p/enc_API.c.o
+[127/206] Compiling C object silk/libopus-silk.a.p/dec_API.c.o
+[128/206] Compiling C object silk/libopus-silk.a.p/decoder_set_fs.c.o
+[129/206] Compiling C object silk/libopus-silk.a.p/decode_pulses.c.o
+[130/206] Compiling C object silk/libopus-silk.a.p/decode_indices.c.o
+[131/206] Compiling C object silk/libopus-silk.a.p/decode_parameters.c.o
+[132/206] Compiling C object silk/libopus-silk.a.p/decode_frame.c.o
+[133/206] Compiling C object silk/libopus-silk.a.p/decode_core.c.o
+[134/206] Compiling C object silk/libopus-silk.a.p/init_decoder.c.o
+[135/206] Compiling C object silk/libopus-silk.a.p/code_signs.c.o
+[136/206] Compiling C object silk/libopus-silk.a.p/CNG.c.o
+[137/206] Compiling C object silk/libsilk_avx2.a.p/float_x86_inner_product_FLP_avx2.c.o
+[138/206] Compiling C object silk/libsilk_avx2.a.p/x86_NSQ_del_dec_avx2.c.o
+[139/206] Compiling C object silk/libsilk_sse4_1.a.p/x86_VQ_WMat_EC_sse4_1.c.o
+[140/206] Compiling C object silk/libsilk_sse4_1.a.p/x86_VAD_sse4_1.c.o
+[141/206] Compiling C object silk/libsilk_sse4_1.a.p/x86_NSQ_del_dec_sse4_1.c.o
+[142/206] Compiling C object silk/libsilk_sse4_1.a.p/x86_NSQ_sse4_1.c.o
+[143/206] Compiling C object silk/tests/test_unit_LPC_inv_pred_gain.p/.._LPC_inv_pred_gain.c.o
+[144/206] Compiling C object silk/tests/test_unit_LPC_inv_pred_gain.p/test_unit_LPC_inv_pred_gain.c.o
+[145/206] Compiling C object celt/tests/test_unit_cwrs32.p/test_unit_cwrs32.c.o
+[146/206] Compiling C object celt/tests/test_unit_rotation.p/test_unit_rotation.c.o
+[147/206] Compiling C object celt/tests/test_unit_mdct.p/test_unit_mdct.c.o
+[148/206] Compiling C object celt/tests/test_unit_dft.p/test_unit_dft.c.o
+[149/206] Compiling C object celt/tests/test_unit_laplace.p/test_unit_laplace.c.o
+[150/206] Compiling C object celt/tests/test_unit_entropy.p/test_unit_entropy.c.o
+[151/206] Compiling C object celt/tests/test_unit_mathops.p/test_unit_mathops.c.o
+[152/206] Compiling C object celt/libopus-celt.a.p/x86_x86_celt_map.c.o
+[153/206] Linking static target silk/libsilk_sse4_1.a
+[154/206] Compiling C object celt/libopus-celt.a.p/x86_x86cpu.c.o
+[155/206] Compiling C object celt/libopus-celt.a.p/vq.c.o
+[156/206] Compiling C object celt/libopus-celt.a.p/rate.c.o
+[157/206] Compiling C object celt/libopus-celt.a.p/quant_bands.c.o
+[158/206] Compiling C object celt/libopus-celt.a.p/celt_lpc.c.o
+[159/206] Compiling C object celt/libopus-celt.a.p/pitch.c.o
+[160/206] Compiling C object celt/libopus-celt.a.p/modes.c.o
+[161/206] Compiling C object celt/libopus-celt.a.p/mdct.c.o
+[162/206] Compiling C object celt/libopus-celt.a.p/mathops.c.o
+[163/206] Compiling C object celt/libopus-celt.a.p/laplace.c.o
+[164/206] Compiling C object celt/libopus-celt.a.p/kiss_fft.c.o
+[165/206] Compiling C object celt/libopus-celt.a.p/entenc.c.o
+[166/206] Compiling C object celt/libopus-celt.a.p/entdec.c.o
+[167/206] Compiling C object celt/libopus-celt.a.p/entcode.c.o
+[168/206] Compiling C object celt/libopus-celt.a.p/cwrs.c.o
+[169/206] Compiling C object celt/libopus-celt.a.p/celt_decoder.c.o
+[170/206] Compiling C object celt/libopus-celt.a.p/celt_encoder.c.o
+[171/206] Compiling C object celt/libopus-celt.a.p/celt.c.o
+[172/206] Compiling C object celt/libopus-celt.a.p/bands.c.o
+[173/206] Compiling C object celt/libcelt_sse4_1.a.p/x86_pitch_sse4_1.c.o
+[174/206] Compiling C object celt/libcelt_sse4_1.a.p/x86_celt_lpc_sse4_1.c.o
+[175/206] Compiling C object celt/libcelt_sse2.a.p/x86_vq_sse2.c.o
+[176/206] Compiling C object celt/libcelt_sse2.a.p/x86_pitch_sse2.c.o
+[177/206] Linking static target celt/libcelt_sse4_1.a
+[178/206] Compiling C object celt/libcelt_sse.a.p/x86_pitch_sse.c.o
+[179/206] Linking static target celt/libcelt_sse2.a
+[180/206] Compiling C object celt/libcelt_avx2.a.p/x86_pitch_avx.c.o
+[181/206] Compiling C object celt/tests/test_unit_types.p/test_unit_types.c.o
+[182/206] Linking static target celt/libcelt_sse.a
+[183/206] Linking static target silk/libopus-silk.a
+[184/206] Linking static target silk/libsilk_avx2.a
+[185/206] Linking static target celt/libopus-celt.a
+[186/206] Linking static target celt/libcelt_avx2.a
+[187/206] Linking target silk/tests/test_unit_LPC_inv_pred_gain
+[188/206] Linking target celt/tests/test_unit_cwrs32
+[189/206] Linking target celt/tests/test_unit_rotation
+[190/206] Linking target celt/tests/test_unit_mdct
+[191/206] Linking target celt/tests/test_unit_dft
+[192/206] Linking target celt/tests/test_unit_laplace
+[193/206] Linking target celt/tests/test_unit_entropy
+[194/206] Linking target celt/tests/test_unit_mathops
+[195/206] Linking target celt/tests/test_unit_types
+[196/206] Linking target src/libopus.so.0.10.1
+[197/206] Generating symbol file src/libopus.so.0.10.1.p/libopus.so.0.10.1.symbols
+[198/206] Linking target tests/test_opus_projection
+[199/206] Linking target tests/test_opus_padding
+[200/206] Linking target tests/test_opus_extensions
+[201/206] Linking target tests/test_opus_encode
+[202/206] Linking target tests/test_opus_decode
+[203/206] Linking target src/opus_custom_demo
+[204/206] Linking target src/repacketizer_demo
+[205/206] Linking target src/opus_demo
+[206/206] Linking target src/opus_compare
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/packager/aports/main/opus/src/opus-1.5.2/output
+ 1/14 test_unit_types      OK                0.03s
+ 2/14 test_unit_mathops    OK                0.02s
+ 3/14 test_unit_laplace    OK                0.02s
+ 4/14 test_unit_rotation   OK                0.01s
+ 5/14 test_unit_dft        OK                0.04s
+ 6/14 test_opus_padding    OK                0.01s
+ 7/14 test_opus_projection OK                0.02s
+ 8/14 test_unit_mdct       OK                0.34s
+ 9/14 test_unit_cwrs32     OK                1.52s
+10/14 test_unit_entropy    OK                1.92s
+11/14 test_unit_cwrs32     OK               12.29s
+12/14 test_opus_decode     OK               16.57s
+13/14 test_opus_extensions OK               18.45s
+14/14 test_opus_encode     OK               44.70s
+
+Ok:                 14  
+Expected Fail:      0   
+Fail:               0   
+Unexpected Pass:    0   
+Skipped:            0   
+Timeout:            0   
+
+Full log written to /home/packager/aports/main/opus/src/opus-1.5.2/output/meson-logs/testlog.txt
+>>> opus: Entering fakeroot...
+Installing src/libopus.so.0.10.1 to /home/packager/aports/main/opus/pkg/opus/usr/lib
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/include/opus.h to /home/packager/aports/main/opus/pkg/opus/usr/include/opus
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/include/opus_multistream.h to /home/packager/aports/main/opus/pkg/opus/usr/include/opus
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/include/opus_projection.h to /home/packager/aports/main/opus/pkg/opus/usr/include/opus
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/include/opus_types.h to /home/packager/aports/main/opus/pkg/opus/usr/include/opus
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/include/opus_defines.h to /home/packager/aports/main/opus/pkg/opus/usr/include/opus
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/include/opus_custom.h to /home/packager/aports/main/opus/pkg/opus/usr/include/opus
+Installing /home/packager/aports/main/opus/src/opus-1.5.2/output/meson-private/opus.pc to /home/packager/aports/main/opus/pkg/opus/usr/lib/pkgconfig
+Installing symlink pointing to libopus.so.0.10.1 to /home/packager/aports/main/opus/pkg/opus/usr/lib/libopus.so.0
+Installing symlink pointing to libopus.so.0 to /home/packager/aports/main/opus/pkg/opus/usr/lib/libopus.so
+>>> opus-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/opus/pkg/opus-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/opus/pkg/opus-dev/usr/lib/pkgconfig'
+'usr/lib/libopus.so' -> '/home/packager/aports/main/opus/pkg/opus-dev/usr/lib/libopus.so'
+>>> opus-dev*: Preparing subpackage opus-dev...
+>>> opus-dev*: Stripping binaries
+>>> opus-dev*: Running postcheck for opus-dev
+>>> opus-doc*: Running split function doc...
+'usr/share/licenses' -> '/home/packager/aports/main/opus/pkg/opus-doc/usr/share/licenses'
+>>> opus-doc*: Preparing subpackage opus-doc...
+>>> opus-doc*: Running postcheck for opus-doc
+>>> opus*: Running postcheck for opus
+>>> opus*: Preparing package opus...
+>>> opus*: Stripping binaries
+>>> opus-dev*: Scanning shared objects
+>>> opus-doc*: Scanning shared objects
+>>> opus*: Scanning shared objects
+>>> opus-dev*: Tracing dependencies...
+	opus=1.5.2-r1
+	pkgconfig
+>>> opus-dev*: Package size: 169.2 KB
+>>> opus-dev*: Compressing data...
+>>> opus-dev*: Create checksum...
+pigz: not found
+>>> opus-dev*: Create opus-dev-1.5.2-r1.apk
+>>> opus-doc*: Tracing dependencies...
+>>> opus-doc*: Package size: 1.9 KB
+>>> opus-doc*: Compressing data...
+>>> opus-doc*: Create checksum...
+pigz: not found
+>>> opus-doc*: Create opus-doc-1.5.2-r1.apk
+>>> opus*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> opus*: Package size: 417.7 KB
+>>> opus*: Compressing data...
+>>> opus*: Create checksum...
+pigz: not found
+>>> opus*: Create opus-1.5.2-r1.apk
+>>> opus: Build complete at Sun, 18 May 2025 08:50:16 +0000 elapsed time 0h 1m 32s
+>>> opus: Cleaning up srcdir
+>>> opus: Cleaning up pkgdir
+>>> opus: Uninstalling dependencies...
+(1/15) Purging .makedepends-opus (20250518.084846)
+(2/15) Purging abuild-meson (1.6.1-r4)
+(3/15) Purging meson-pyc (1.6.1-r4)
+(4/15) Purging meson (1.6.1-r4)
+(5/15) Purging samurai (1.2-r6)
+(6/15) Purging python3-pyc (3.12.10-r0)
+(7/15) Purging python3-pycache-pyc0 (3.12.10-r0)
+(8/15) Purging pyc (3.12.10-r0)
+(9/15) Purging python3 (3.12.10-r0)
+(10/15) Purging gdbm (1.24-r0)
+(11/15) Purging libbz2 (1.0.8-r6)
+(12/15) Purging libffi (3.4.7-r0)
+(13/15) Purging mpdecimal (4.0.0-r0)
+(14/15) Purging sqlite-libs (3.49.2-r0)
+(15/15) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> opus: Updating the main/x86_64 repository index...
+>>> opus: Signing the index...
+pigz: not found

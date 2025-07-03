@@ -1,0 +1,100 @@
+pigz: not found
+>>> perl-text-soundex: Building main/perl-text-soundex 3.05-r10 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:11:08 +0000
+>>> perl-text-soundex: Validating /home/packager/aports/main/perl-text-soundex/APKBUILD...
+>>> perl-text-soundex: Analyzing dependencies...
+>>> perl-text-soundex: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-text-soundex (20250518.101109)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-text-soundex: Cleaning up srcdir
+>>> perl-text-soundex: Cleaning up pkgdir
+>>> perl-text-soundex: Cleaning up tmpdir
+>>> perl-text-soundex: Fetching https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Text-Soundex-3.05.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Text-Soundex-3.05.tar.gz.part'
+Text-Soundex-3.05.ta 100% |********************************| 15527  0:00:00 ETA
+'/var/cache/distfiles/Text-Soundex-3.05.tar.gz.part' saved
+>>> perl-text-soundex: Fetching https://cpan.metacpan.org/authors/id/R/RJ/RJBS/Text-Soundex-3.05.tar.gz
+>>> perl-text-soundex: Checking sha512sums...
+Text-Soundex-3.05.tar.gz: OK
+>>> perl-text-soundex: Unpacking /var/cache/distfiles/Text-Soundex-3.05.tar.gz...
+WARNING: Option INSTALLDIRS=vendor was not recognized. (ignoring)
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Text::Soundex
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Soundex.xs > Soundex.xsc
+Running Mkbootstrap for Soundex ()
+chmod 644 "Soundex.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Soundex.bs blib/arch/auto/Text/Soundex/Soundex.bs 644
+cp Soundex.pm blib/lib/Text/Soundex.pm
+mv Soundex.xsc Soundex.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"3.05\" -DXS_VERSION=\"3.05\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Soundex.c
+rm -f blib/arch/auto/Text/Soundex/Soundex.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Soundex.o  -o blib/arch/auto/Text/Soundex/Soundex.so  \
+      \
+  
+chmod 755 blib/arch/auto/Text/Soundex/Soundex.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Soundex.bs blib/arch/auto/Text/Soundex/Soundex.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/basic.t .. ok
+All tests successful.
+Files=1, Tests=18,  0 wallclock secs ( 0.02 usr  0.00 sys +  0.02 cusr  0.00 csys =  0.04 CPU)
+Result: PASS
+>>> perl-text-soundex: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Soundex.bs blib/arch/auto/Text/Soundex/Soundex.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-text-soundex/pkg/perl-text-soundex/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-text-soundex/pkg/perl-text-soundex/usr/lib/perl5/vendor_perl/auto/Text/Soundex/Soundex.so
+Installing /home/packager/aports/main/perl-text-soundex/pkg/perl-text-soundex/usr/lib/perl5/vendor_perl/Text/Soundex.pm
+Installing /home/packager/aports/main/perl-text-soundex/pkg/perl-text-soundex/usr/share/man/man3/Text::Soundex.3pm
+>>> perl-text-soundex-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-text-soundex/pkg/perl-text-soundex-doc/usr/share/man'
+>>> perl-text-soundex-doc*: Preparing subpackage perl-text-soundex-doc...
+>>> perl-text-soundex-doc*: Running postcheck for perl-text-soundex-doc
+>>> perl-text-soundex*: Running postcheck for perl-text-soundex
+>>> perl-text-soundex*: Preparing package perl-text-soundex...
+>>> perl-text-soundex*: Stripping binaries
+>>> perl-text-soundex-doc*: Scanning shared objects
+>>> perl-text-soundex*: Scanning shared objects
+>>> perl-text-soundex-doc*: Tracing dependencies...
+>>> perl-text-soundex-doc*: Package size: 3.2 KB
+>>> perl-text-soundex-doc*: Compressing data...
+>>> perl-text-soundex-doc*: Create checksum...
+pigz: not found
+>>> perl-text-soundex-doc*: Create perl-text-soundex-doc-3.05-r10.apk
+>>> perl-text-soundex*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-text-soundex*: Package size: 21.7 KB
+>>> perl-text-soundex*: Compressing data...
+>>> perl-text-soundex*: Create checksum...
+pigz: not found
+>>> perl-text-soundex*: Create perl-text-soundex-3.05-r10.apk
+>>> perl-text-soundex: Build complete at Sun, 18 May 2025 10:11:12 +0000 elapsed time 0h 0m 4s
+>>> perl-text-soundex: Cleaning up srcdir
+>>> perl-text-soundex: Cleaning up pkgdir
+>>> perl-text-soundex: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-text-soundex (20250518.101109)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-text-soundex: Updating the main/x86_64 repository index...
+>>> perl-text-soundex: Signing the index...
+pigz: not found

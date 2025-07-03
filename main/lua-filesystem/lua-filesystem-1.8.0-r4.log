@@ -1,0 +1,172 @@
+pigz: not found
+>>> lua-filesystem: Building main/lua-filesystem 1.8.0-r4 (using abuild 3.14.1-r4) started Thu, 22 May 2025 23:37:42 +0000
+>>> lua-filesystem: Validating /home/packager/aports/main/lua-filesystem/APKBUILD...
+>>> lua-filesystem: Analyzing dependencies...
+>>> lua-filesystem: Installing for build: build-base lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/12) Installing lua5.1-libs (5.1.5-r13)
+(2/12) Installing lua5.1 (5.1.5-r13)
+(3/12) Installing lua5.1-dev (5.1.5-r13)
+(4/12) Installing lua5.2-libs (5.2.4-r13)
+(5/12) Installing lua5.2 (5.2.4-r13)
+(6/12) Installing lua5.2-dev (5.2.4-r13)
+(7/12) Installing linenoise (1.0-r5)
+(8/12) Installing lua5.3-libs (5.3.6-r6)
+(9/12) Installing lua5.3 (5.3.6-r6)
+(10/12) Installing lua5.3-dev (5.3.6-r6)
+(11/12) Installing lua5.4-dev (5.4.7-r0)
+(12/12) Installing .makedepends-lua-filesystem (20250522.233747)
+Executing busybox-1.37.0-r12.trigger
+OK: 319 MiB in 126 packages
+>>> lua-filesystem: Cleaning up srcdir
+>>> lua-filesystem: Cleaning up pkgdir
+>>> lua-filesystem: Cleaning up tmpdir
+>>> lua-filesystem: Fetching luafilesystem-1.8.0.tar.gz::https://github.com/lunarmodules/luafilesystem/archive/v1_8_0.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/luafilesystem-1.8.0.tar.gz.part'
+luafilesystem-1.8.0. 100% |********************************| 30374  0:00:00 ETA
+'/var/cache/distfiles/luafilesystem-1.8.0.tar.gz.part' saved
+>>> lua-filesystem: Fetching luafilesystem-1.8.0.tar.gz::https://github.com/lunarmodules/luafilesystem/archive/v1_8_0.tar.gz
+>>> lua-filesystem: Checking sha512sums...
+luafilesystem-1.8.0.tar.gz: OK
+>>> lua-filesystem: Unpacking /var/cache/distfiles/luafilesystem-1.8.0.tar.gz...
+>>> lua-filesystem: Building for Lua 5.1...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.1'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -fPIC   -c -o src/lfs.o src/lfs.c
+MACOSX_DEPLOYMENT_TARGET=10.5; export MACOSX_DEPLOYMENT_TARGET; gcc -shared  -o src/lfs.so src/lfs.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: src/lfs.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.1'
+>>> lua-filesystem: Building for Lua 5.2...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.2'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2 -fPIC   -c -o src/lfs.o src/lfs.c
+MACOSX_DEPLOYMENT_TARGET=10.5; export MACOSX_DEPLOYMENT_TARGET; gcc -shared  -o src/lfs.so src/lfs.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: src/lfs.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.2'
+>>> lua-filesystem: Building for Lua 5.3...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.3'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3 -fPIC   -c -o src/lfs.o src/lfs.c
+MACOSX_DEPLOYMENT_TARGET=10.5; export MACOSX_DEPLOYMENT_TARGET; gcc -shared  -o src/lfs.so src/lfs.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: src/lfs.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.3'
+>>> lua-filesystem: Building for Lua 5.4...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.4'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4 -fPIC   -c -o src/lfs.o src/lfs.c
+MACOSX_DEPLOYMENT_TARGET=10.5; export MACOSX_DEPLOYMENT_TARGET; gcc -shared  -o src/lfs.so src/lfs.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: src/lfs.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.4'
+>>> lua-filesystem: Testing on lua5.1
+LuaFileSystem 1.8.0
+.............Ok!
+>>> lua-filesystem: Testing on lua5.2
+LuaFileSystem 1.8.0
+.............Ok!
+>>> lua-filesystem: Testing on lua5.3
+LuaFileSystem 1.8.0
+.............Ok!
+>>> lua-filesystem: Testing on lua5.4
+LuaFileSystem 1.8.0
+.............Ok!
+>>> lua-filesystem: Entering fakeroot...
+>>> lua5.1-filesystem*: Running split function _subpackage...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.1'
+mkdir -p /home/packager/aports/main/lua-filesystem/pkg/lua5.1-filesystem//usr/lib/lua/5.1
+cp src/lfs.so /home/packager/aports/main/lua-filesystem/pkg/lua5.1-filesystem//usr/lib/lua/5.1
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.1'
+>>> lua5.1-filesystem*: Preparing subpackage lua5.1-filesystem...
+>>> lua5.1-filesystem*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> lua5.1-filesystem*: Running postcheck for lua5.1-filesystem
+>>> lua5.2-filesystem*: Running split function _subpackage...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.2'
+mkdir -p /home/packager/aports/main/lua-filesystem/pkg/lua5.2-filesystem//usr/lib/lua/5.2
+cp src/lfs.so /home/packager/aports/main/lua-filesystem/pkg/lua5.2-filesystem//usr/lib/lua/5.2
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.2'
+>>> lua5.2-filesystem*: Preparing subpackage lua5.2-filesystem...
+>>> lua5.2-filesystem*: Stripping binaries
+>>> lua5.2-filesystem*: Running postcheck for lua5.2-filesystem
+>>> lua5.3-filesystem*: Running split function _subpackage...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.3'
+mkdir -p /home/packager/aports/main/lua-filesystem/pkg/lua5.3-filesystem//usr/lib/lua/5.3
+cp src/lfs.so /home/packager/aports/main/lua-filesystem/pkg/lua5.3-filesystem//usr/lib/lua/5.3
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.3'
+>>> lua5.3-filesystem*: Preparing subpackage lua5.3-filesystem...
+>>> lua5.3-filesystem*: Stripping binaries
+>>> lua5.3-filesystem*: Running postcheck for lua5.3-filesystem
+>>> lua5.4-filesystem*: Running split function _subpackage...
+make: Entering directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.4'
+mkdir -p /home/packager/aports/main/lua-filesystem/pkg/lua5.4-filesystem//usr/lib/lua/5.4
+cp src/lfs.so /home/packager/aports/main/lua-filesystem/pkg/lua5.4-filesystem//usr/lib/lua/5.4
+make: Leaving directory '/home/packager/aports/main/lua-filesystem/src/luafilesystem-1_8_0-5.4'
+>>> lua5.4-filesystem*: Preparing subpackage lua5.4-filesystem...
+>>> lua5.4-filesystem*: Stripping binaries
+>>> lua5.4-filesystem*: Running postcheck for lua5.4-filesystem
+>>> lua-filesystem*: Running postcheck for lua-filesystem
+>>> lua-filesystem*: Preparing package lua-filesystem...
+>>> lua-filesystem*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> WARNING: lua-filesystem*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-filesystem*: Scanning shared objects
+>>> lua5.1-filesystem*: Scanning shared objects
+>>> lua5.2-filesystem*: Scanning shared objects
+>>> lua5.3-filesystem*: Scanning shared objects
+>>> lua5.4-filesystem*: Scanning shared objects
+>>> lua-filesystem*: Tracing dependencies...
+>>> lua-filesystem*: Package size: 0.0 
+>>> lua-filesystem*: Compressing data...
+>>> lua-filesystem*: Create checksum...
+pigz: not found
+>>> lua-filesystem*: Create lua-filesystem-1.8.0-r4.apk
+>>> lua5.1-filesystem*: Tracing dependencies...
+	lua5.1
+	so:libc.musl-x86_64.so.1
+>>> lua5.1-filesystem*: Package size: 18.2 KB
+>>> lua5.1-filesystem*: Compressing data...
+>>> lua5.1-filesystem*: Create checksum...
+pigz: not found
+>>> lua5.1-filesystem*: Create lua5.1-filesystem-1.8.0-r4.apk
+>>> lua5.2-filesystem*: Tracing dependencies...
+	lua5.2
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-filesystem*: Package size: 18.3 KB
+>>> lua5.2-filesystem*: Compressing data...
+>>> lua5.2-filesystem*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.2-filesystem*: Create lua5.2-filesystem-1.8.0-r4.apk
+>>> lua5.3-filesystem*: Tracing dependencies...
+	lua5.3
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-filesystem*: Package size: 18.5 KB
+>>> lua5.3-filesystem*: Compressing data...
+>>> lua5.3-filesystem*: Create checksum...
+pigz: not found
+>>> lua5.3-filesystem*: Create lua5.3-filesystem-1.8.0-r4.apk
+>>> lua5.4-filesystem*: Tracing dependencies...
+	lua5.4
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-filesystem*: Package size: 18.5 KB
+>>> lua5.4-filesystem*: Compressing data...
+>>> lua5.4-filesystem*: Create checksum...
+pigz: not found
+>>> lua5.4-filesystem*: Create lua5.4-filesystem-1.8.0-r4.apk
+>>> lua-filesystem: Build complete at Thu, 22 May 2025 23:38:01 +0000 elapsed time 0h 0m 19s
+>>> lua-filesystem: Cleaning up srcdir
+>>> lua-filesystem: Cleaning up pkgdir
+>>> lua-filesystem: Uninstalling dependencies...
+(1/12) Purging .makedepends-lua-filesystem (20250522.233747)
+(2/12) Purging lua5.1-dev (5.1.5-r13)
+(3/12) Purging lua5.1 (5.1.5-r13)
+(4/12) Purging lua5.1-libs (5.1.5-r13)
+(5/12) Purging lua5.2-dev (5.2.4-r13)
+(6/12) Purging lua5.2 (5.2.4-r13)
+(7/12) Purging lua5.2-libs (5.2.4-r13)
+(8/12) Purging lua5.3-dev (5.3.6-r6)
+(9/12) Purging lua5.3 (5.3.6-r6)
+(10/12) Purging lua5.3-libs (5.3.6-r6)
+(11/12) Purging lua5.4-dev (5.4.7-r0)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-filesystem: Updating the main/x86_64 repository index...
+>>> lua-filesystem: Signing the index...
+pigz: not found

@@ -1,0 +1,143 @@
+pigz: not found
+>>> perl-mime-base64: Building main/perl-mime-base64 3.16-r6 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:14:59 +0000
+>>> perl-mime-base64: Validating /home/packager/aports/main/perl-mime-base64/APKBUILD...
+>>> perl-mime-base64: Analyzing dependencies...
+>>> perl-mime-base64: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-mime-base64 (20250518.071501)
+(6/8) Installing perl-error (0.17029-r2)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 306 MiB in 89 packages
+>>> perl-mime-base64: Cleaning up srcdir
+>>> perl-mime-base64: Cleaning up pkgdir
+>>> perl-mime-base64: Cleaning up tmpdir
+>>> perl-mime-base64: Fetching https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/MIME-Base64-3.16.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/MIME-Base64-3.16.tar.gz.part'
+MIME-Base64-3.16.tar 100% |********************************| 32767  0:00:00 ETA
+'/var/cache/distfiles/MIME-Base64-3.16.tar.gz.part' saved
+>>> perl-mime-base64: Fetching https://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/MIME-Base64-3.16.tar.gz
+>>> perl-mime-base64: Checking sha512sums...
+MIME-Base64-3.16.tar.gz: OK
+>>> perl-mime-base64: Unpacking /var/cache/distfiles/MIME-Base64-3.16.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for MIME::Base64
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Base64.xs > Base64.xsc
+Running Mkbootstrap for Base64 ()
+chmod 644 "Base64.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Base64.bs blib/arch/auto/MIME/Base64/Base64.bs 644
+cp lib/MIME/Base64.pm blib/lib/MIME/Base64.pm
+cp lib/MIME/QuotedPrint.pm blib/lib/MIME/QuotedPrint.pm
+mv Base64.xsc Base64.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"3.16\" -DXS_VERSION=\"3.16\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Base64.c
+rm -f blib/arch/auto/MIME/Base64/Base64.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Base64.o  -o blib/arch/auto/MIME/Base64/Base64.so  \
+      \
+  
+chmod 755 blib/arch/auto/MIME/Base64/Base64.so
+Manifying 2 pod documents
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Base64.bs blib/arch/auto/MIME/Base64/Base64.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Configure Suggests ===
+# 
+#     Module      Want Have
+#     -------- ------- ----
+#     JSON::PP 2.27300 4.16
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module              Want     Have
+#     ------------------- ---- --------
+#     ExtUtils::MakeMaker  any     7.70
+#     File::Spec           any     3.91
+#     Test                 any     1.31
+#     Test::More           any 1.302199
+#     strict               any     1.13
+#     warnings             any     1.70
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Runtime Requires ===
+# 
+#     Module   Want Have
+#     -------- ---- ----
+#     Exporter  any 5.78
+#     XSLoader  any 0.32
+#     strict    any 1.13
+#     warnings  any 1.70
+# 
+t/00-report-prereqs.t .. ok
+t/base64.t ............. ok
+t/base64url.t .......... ok
+t/length.t ............. ok
+t/quoted-print.t ....... ok
+t/unicode.t ............ ok
+All tests successful.
+Files=6, Tests=496,  1 wallclock secs ( 0.06 usr  0.01 sys +  0.27 cusr  0.04 csys =  0.38 CPU)
+Result: PASS
+>>> perl-mime-base64: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Base64.bs blib/arch/auto/MIME/Base64/Base64.bs 644
+Manifying 2 pod documents
+Appending installation info to /home/packager/aports/main/perl-mime-base64/pkg/perl-mime-base64/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-mime-base64/pkg/perl-mime-base64/usr/lib/perl5/vendor_perl/auto/MIME/Base64/Base64.so
+Installing /home/packager/aports/main/perl-mime-base64/pkg/perl-mime-base64/usr/lib/perl5/vendor_perl/MIME/Base64.pm
+Installing /home/packager/aports/main/perl-mime-base64/pkg/perl-mime-base64/usr/lib/perl5/vendor_perl/MIME/QuotedPrint.pm
+Installing /home/packager/aports/main/perl-mime-base64/pkg/perl-mime-base64/usr/share/man/man3/MIME::Base64.3pm
+Installing /home/packager/aports/main/perl-mime-base64/pkg/perl-mime-base64/usr/share/man/man3/MIME::QuotedPrint.3pm
+>>> perl-mime-base64*: Running postcheck for perl-mime-base64
+>>> perl-mime-base64*: Preparing package perl-mime-base64...
+>>> perl-mime-base64*: Stripping binaries
+>>> perl-mime-base64*: Scanning shared objects
+>>> perl-mime-base64*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-mime-base64*: Package size: 26.0 KB
+>>> perl-mime-base64*: Compressing data...
+>>> perl-mime-base64*: Create checksum...
+pigz: not found
+>>> perl-mime-base64*: Create perl-mime-base64-3.16-r6.apk
+>>> perl-mime-base64: Build complete at Sun, 18 May 2025 07:15:04 +0000 elapsed time 0h 0m 5s
+>>> perl-mime-base64: Cleaning up srcdir
+>>> perl-mime-base64: Cleaning up pkgdir
+>>> perl-mime-base64: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-mime-base64 (20250518.071501)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17029-r2)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-mime-base64: Updating the main/x86_64 repository index...
+>>> perl-mime-base64: Signing the index...
+pigz: not found

@@ -1,0 +1,106 @@
+pigz: not found
+>>> perl-ipc-sharelite: Building main/perl-ipc-sharelite 0.17-r13 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:18:09 +0000
+>>> perl-ipc-sharelite: Validating /home/packager/aports/main/perl-ipc-sharelite/APKBUILD...
+>>> perl-ipc-sharelite: Analyzing dependencies...
+>>> perl-ipc-sharelite: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-ipc-sharelite (20250518.081810)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-ipc-sharelite: Cleaning up srcdir
+>>> perl-ipc-sharelite: Cleaning up pkgdir
+>>> perl-ipc-sharelite: Cleaning up tmpdir
+>>> perl-ipc-sharelite: Fetching https://cpan.metacpan.org/authors/id/A/AN/ANDYA/IPC-ShareLite-0.17.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/IPC-ShareLite-0.17.tar.gz.part'
+IPC-ShareLite-0.17.t 100% |********************************| 22875  0:00:00 ETA
+'/var/cache/distfiles/IPC-ShareLite-0.17.tar.gz.part' saved
+>>> perl-ipc-sharelite: Fetching https://cpan.metacpan.org/authors/id/A/AN/ANDYA/IPC-ShareLite-0.17.tar.gz
+>>> perl-ipc-sharelite: Checking sha512sums...
+IPC-ShareLite-0.17.tar.gz: OK
+>>> perl-ipc-sharelite: Unpacking /var/cache/distfiles/IPC-ShareLite-0.17.tar.gz...
+Checking if your kit is complete...
+Looks good
+CPAN::Meta::YAML found a duplicate key 'no_index' in line '' at /usr/share/perl5/core_perl/CPAN/Meta/YAML.pm line 515.
+Generating a Unix-style Makefile
+Writing Makefile for IPC::ShareLite
+Writing MYMETA.yml and MYMETA.json
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.17\" -DXS_VERSION=\"0.17\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   sharestuff.c
+Running Mkbootstrap for ShareLite ()
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-ipc-sharelite/src/IPC-ShareLite-0.17/typemap'  ShareLite.xs > ShareLite.xsc
+chmod 644 "ShareLite.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- ShareLite.bs blib/arch/auto/IPC/ShareLite/ShareLite.bs 644
+cp lib/IPC/ShareLite.pm blib/lib/IPC/ShareLite.pm
+AutoSplitting blib/lib/IPC/ShareLite.pm (blib/lib/auto/IPC/ShareLite)
+mv ShareLite.xsc ShareLite.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.17\" -DXS_VERSION=\"0.17\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   ShareLite.c
+rm -f blib/arch/auto/IPC/ShareLite/ShareLite.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  sharestuff.o ShareLite.o  -o blib/arch/auto/IPC/ShareLite/ShareLite.so  \
+      \
+  
+chmod 755 blib/arch/auto/IPC/ShareLite/ShareLite.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- ShareLite.bs blib/arch/auto/IPC/ShareLite/ShareLite.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# Testing IPC::ShareLite 0.17
+t/00-load.t ...... ok
+t/pod.t .......... skipped: Test::Pod 1.14 required for testing POD
+t/sharelite.t .... ok
+t/unicode-key.t .. ok
+All tests successful.
+Files=4, Tests=18,  0 wallclock secs ( 0.02 usr  0.01 sys +  0.27 cusr  0.06 csys =  0.36 CPU)
+Result: PASS
+>>> perl-ipc-sharelite: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- ShareLite.bs blib/arch/auto/IPC/ShareLite/ShareLite.bs 644
+Manifying 1 pod document
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-ipc-sharelite/pkg/perl-ipc-sharelite/usr/lib/perl5/vendor_perl/auto/IPC/ShareLite/ShareLite.so
+Installing /home/packager/aports/main/perl-ipc-sharelite/pkg/perl-ipc-sharelite/usr/lib/perl5/vendor_perl/auto/IPC/ShareLite/autosplit.ix
+Installing /home/packager/aports/main/perl-ipc-sharelite/pkg/perl-ipc-sharelite/usr/lib/perl5/vendor_perl/IPC/ShareLite.pm
+Installing /home/packager/aports/main/perl-ipc-sharelite/pkg/perl-ipc-sharelite/usr/share/man/man3/IPC::ShareLite.3pm
+>>> perl-ipc-sharelite-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-ipc-sharelite/pkg/perl-ipc-sharelite-doc/usr/share/man'
+>>> perl-ipc-sharelite-doc*: Preparing subpackage perl-ipc-sharelite-doc...
+>>> perl-ipc-sharelite-doc*: Running postcheck for perl-ipc-sharelite-doc
+>>> perl-ipc-sharelite*: Running postcheck for perl-ipc-sharelite
+>>> perl-ipc-sharelite*: Preparing package perl-ipc-sharelite...
+>>> perl-ipc-sharelite*: Stripping binaries
+>>> perl-ipc-sharelite-doc*: Scanning shared objects
+>>> perl-ipc-sharelite*: Scanning shared objects
+>>> perl-ipc-sharelite-doc*: Tracing dependencies...
+>>> perl-ipc-sharelite-doc*: Package size: 4.7 KB
+>>> perl-ipc-sharelite-doc*: Compressing data...
+>>> perl-ipc-sharelite-doc*: Create checksum...
+pigz: not found
+>>> perl-ipc-sharelite-doc*: Create perl-ipc-sharelite-doc-0.17-r13.apk
+>>> perl-ipc-sharelite*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-ipc-sharelite*: Package size: 39.8 KB
+>>> perl-ipc-sharelite*: Compressing data...
+>>> perl-ipc-sharelite*: Create checksum...
+pigz: not found
+>>> perl-ipc-sharelite*: Create perl-ipc-sharelite-0.17-r13.apk
+>>> perl-ipc-sharelite: Build complete at Sun, 18 May 2025 08:18:14 +0000 elapsed time 0h 0m 5s
+>>> perl-ipc-sharelite: Cleaning up srcdir
+>>> perl-ipc-sharelite: Cleaning up pkgdir
+>>> perl-ipc-sharelite: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-ipc-sharelite (20250518.081810)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-ipc-sharelite: Updating the main/x86_64 repository index...
+>>> perl-ipc-sharelite: Signing the index...
+pigz: not found

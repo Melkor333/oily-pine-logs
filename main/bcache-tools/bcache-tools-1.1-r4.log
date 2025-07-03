@@ -1,0 +1,74 @@
+pigz: not found
+>>> bcache-tools: Building main/bcache-tools 1.1-r4 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:04:34 +0000
+>>> bcache-tools: Validating /home/packager/aports/main/bcache-tools/APKBUILD...
+>>> WARNING: bcache-tools: No maintainer
+>>> bcache-tools: Analyzing dependencies...
+>>> bcache-tools: Installing for build: build-base eudev-dev util-linux-dev linux-headers coreutils
+(1/14) Installing eudev-libs (3.2.14-r5)
+(2/14) Installing eudev-dev (3.2.14-r5)
+(3/14) Installing libeconf (0.6.3-r0)
+(4/14) Installing libblkid (2.40.4-r1)
+(5/14) Installing libuuid (2.40.4-r1)
+(6/14) Installing libfdisk (2.40.4-r1)
+(7/14) Installing sqlite-libs (3.49.2-r0)
+(8/14) Installing liblastlog2 (2.40.4-r1)
+(9/14) Installing libmount (2.40.4-r1)
+(10/14) Installing libsmartcols (2.40.4-r1)
+(11/14) Installing sqlite (3.49.2-r0)
+(12/14) Installing sqlite-dev (3.49.2-r0)
+(13/14) Installing util-linux-dev (2.40.4-r1)
+(14/14) Installing .makedepends-bcache-tools (20250523.180436)
+Executing busybox-1.37.0-r12.trigger
+OK: 570 MiB in 146 packages
+>>> bcache-tools: Cleaning up srcdir
+>>> bcache-tools: Cleaning up pkgdir
+>>> bcache-tools: Cleaning up tmpdir
+>>> bcache-tools: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/colyli/bcache-tools.git/snapshot/bcache-tools-1.1.tar.gz
+Connecting to git.kernel.org (172.105.64.184:443)
+saving to '/var/cache/distfiles/bcache-tools-1.1.tar.gz.part'
+bcache-tools-1.1.tar 100% |********************************| 34548  0:00:00 ETA
+'/var/cache/distfiles/bcache-tools-1.1.tar.gz.part' saved
+>>> bcache-tools: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/colyli/bcache-tools.git/snapshot/bcache-tools-1.1.tar.gz
+>>> bcache-tools: Checking sha512sums...
+bcache-tools-1.1.tar.gz: OK
+>>> bcache-tools: Unpacking /var/cache/distfiles/bcache-tools-1.1.tar.gz...
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -Wall -g `pkg-config --cflags uuid blkid smartcols`   -c -o make.o make.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -Wall -g `pkg-config --cflags uuid blkid smartcols`   -c -o crc64.o crc64.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -Wall -g `pkg-config --cflags uuid blkid smartcols`   -c -o lib.o lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -Wall -g `pkg-config --cflags uuid blkid`  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  probe-bcache.c  `pkg-config --libs uuid blkid` -o probe-bcache
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -O2 -Wall -g   -c -o bcache-register.o bcache-register.c
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  bcache-register.o   -o bcache-register
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: bcache-register: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: bcache-register has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: bcache-register] Error 1
+make: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libeconf.so.0, needed by /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so, not found (try using -rpath or -rpath-link)
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: probe-bcache: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: probe-bcache has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so: undefined reference to `econf_errString@LIBECONF_0.2'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so: undefined reference to `econf_readFile@LIBECONF_0.2'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so: undefined reference to `econf_freeFile@LIBECONF_0.2'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so: undefined reference to `econf_readDirs@LIBECONF_0.2'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so: undefined reference to `econf_getBoolValue@LIBECONF_0.2'
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libblkid.so: undefined reference to `econf_getStringValue@LIBECONF_0.2'
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: probe-bcache] Error 1
+>>> ERROR: bcache-tools: build failed
+>>> bcache-tools: Uninstalling dependencies...
+(1/14) Purging .makedepends-bcache-tools (20250523.180436)
+(2/14) Purging eudev-dev (3.2.14-r5)
+(3/14) Purging eudev-libs (3.2.14-r5)
+(4/14) Purging util-linux-dev (2.40.4-r1)
+(5/14) Purging libfdisk (2.40.4-r1)
+(6/14) Purging liblastlog2 (2.40.4-r1)
+(7/14) Purging libmount (2.40.4-r1)
+(8/14) Purging libsmartcols (2.40.4-r1)
+(9/14) Purging libuuid (2.40.4-r1)
+(10/14) Purging libblkid (2.40.4-r1)
+(11/14) Purging libeconf (0.6.3-r0)
+(12/14) Purging sqlite-dev (3.49.2-r0)
+(13/14) Purging sqlite (3.49.2-r0)
+(14/14) Purging sqlite-libs (3.49.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

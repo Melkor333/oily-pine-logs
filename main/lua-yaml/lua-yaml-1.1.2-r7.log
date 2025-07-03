@@ -1,0 +1,125 @@
+pigz: not found
+>>> lua-yaml: Building main/lua-yaml 1.1.2-r7 (using abuild 3.14.1-r4) started Fri, 23 May 2025 19:08:48 +0000
+>>> lua-yaml: Validating /home/packager/aports/main/lua-yaml/APKBUILD...
+>>> lua-yaml: Analyzing dependencies...
+>>> lua-yaml: Installing for build: build-base cmake samurai yaml-dev lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/21) Installing lz4-libs (1.10.0-r0)
+(2/21) Installing xz-libs (5.6.3-r1)
+(3/21) Installing libarchive (3.7.9-r0)
+(4/21) Installing rhash-libs (1.4.5-r0)
+(5/21) Installing libuv (1.49.2-r0)
+(6/21) Installing cmake (3.31.7-r0)
+(7/21) Installing samurai (1.2-r6)
+(8/21) Installing yaml (0.2.5-r2)
+(9/21) Installing yaml-dev (0.2.5-r2)
+(10/21) Installing lua5.1-libs (5.1.5-r13)
+(11/21) Installing lua5.1 (5.1.5-r13)
+(12/21) Installing lua5.1-dev (5.1.5-r13)
+(13/21) Installing lua5.2-libs (5.2.4-r13)
+(14/21) Installing lua5.2 (5.2.4-r13)
+(15/21) Installing lua5.2-dev (5.2.4-r13)
+(16/21) Installing linenoise (1.0-r5)
+(17/21) Installing lua5.3-libs (5.3.6-r6)
+(18/21) Installing lua5.3 (5.3.6-r6)
+(19/21) Installing lua5.3-dev (5.3.6-r6)
+(20/21) Installing lua5.4-dev (5.4.7-r0)
+(21/21) Installing .makedepends-lua-yaml (20250523.190850)
+Executing busybox-1.37.0-r12.trigger
+OK: 623 MiB in 153 packages
+>>> lua-yaml: Cleaning up srcdir
+>>> lua-yaml: Cleaning up pkgdir
+>>> lua-yaml: Cleaning up tmpdir
+>>> lua-yaml: Fetching lua-yaml-1.1.2.tar.gz::https://github.com/lubyk/yaml/archive/REL-1.1.2.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lua-yaml-1.1.2.tar.gz.part'
+lua-yaml-1.1.2.tar.g 100% |********************************| 71236  0:00:00 ETA
+'/var/cache/distfiles/lua-yaml-1.1.2.tar.gz.part' saved
+>>> lua-yaml: Fetching lua-yaml-1.1.2.tar.gz::https://github.com/lubyk/yaml/archive/REL-1.1.2.tar.gz
+>>> lua-yaml: Checking sha512sums...
+lua-yaml-1.1.2.tar.gz: OK
+cmake.patch: OK
+>>> lua-yaml: Unpacking /var/cache/distfiles/lua-yaml-1.1.2.tar.gz...
+>>> lua-yaml: cmake.patch
+patching file CMakeLists.txt
+>>> lua-yaml: Building for Lua 5.1...
+CMake Warning (dev) in CMakeLists.txt:
+  No project() command is present.  The top-level CMakeLists.txt file must
+  contain a literal, direct call to the project() command.  Add a line of
+  code such as
+
+    project(ProjectName)
+
+  near the top of the file, but after cmake_minimum_required().
+
+  CMake is pretending there is a "project(Project)" command on the first
+  line.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) in CMakeLists.txt:
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/lua-yaml/src/yaml-REL-1.1.2/build/5.1/CMakeFiles/CMakeScratch/TryCompile-bigjbe'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_be23d
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -DNDEBUG -o CMakeFiles/cmTC_be23d.dir/testCCompiler.c.o -c /home/packager/aports/main/lua-yaml/src/yaml-REL-1.1.2/build/5.1/CMakeFiles/CMakeScratch/TryCompile-bigjbe/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -DNDEBUG -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_be23d.dir/testCCompiler.c.o -o cmTC_be23d   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -DNDEBUG -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_be23d.dir/testCCompiler.c.o -o cmTC_be23d   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_be23d: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_be23d has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: lua-yaml: build failed
+>>> lua-yaml: Uninstalling dependencies...
+(1/21) Purging .makedepends-lua-yaml (20250523.190850)
+(2/21) Purging cmake (3.31.7-r0)
+(3/21) Purging samurai (1.2-r6)
+(4/21) Purging yaml-dev (0.2.5-r2)
+(5/21) Purging yaml (0.2.5-r2)
+(6/21) Purging lua5.1-dev (5.1.5-r13)
+(7/21) Purging lua5.1 (5.1.5-r13)
+(8/21) Purging lua5.1-libs (5.1.5-r13)
+(9/21) Purging lua5.2-dev (5.2.4-r13)
+(10/21) Purging lua5.2 (5.2.4-r13)
+(11/21) Purging lua5.2-libs (5.2.4-r13)
+(12/21) Purging lua5.3-dev (5.3.6-r6)
+(13/21) Purging lua5.3 (5.3.6-r6)
+(14/21) Purging lua5.3-libs (5.3.6-r6)
+(15/21) Purging lua5.4-dev (5.4.7-r0)
+(16/21) Purging libarchive (3.7.9-r0)
+(17/21) Purging libuv (1.49.2-r0)
+(18/21) Purging linenoise (1.0-r5)
+(19/21) Purging lz4-libs (1.10.0-r0)
+(20/21) Purging rhash-libs (1.4.5-r0)
+(21/21) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

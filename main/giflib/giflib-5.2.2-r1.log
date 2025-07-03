@@ -1,0 +1,126 @@
+pigz: not found
+>>> giflib: Building main/giflib 5.2.2-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:06:35 +0000
+>>> giflib: Validating /home/packager/aports/main/giflib/APKBUILD...
+>>> giflib: Analyzing dependencies...
+>>> giflib: Installing for build: build-base xmlto coreutils
+(1/13) Installing libgcrypt (1.10.3-r1)
+(2/13) Installing xz-libs (5.6.3-r1)
+(3/13) Installing libxml2 (2.13.4-r6)
+(4/13) Installing libxslt (1.1.42-r2)
+(5/13) Installing perl-yaml-syck (1.34-r5)
+(6/13) Installing perl-test-pod (1.52-r4)
+(7/13) Installing libxml2-utils (2.13.4-r6)
+(8/13) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(9/13) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(10/13) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(11/13) Installing docbook-xsl (1.79.2-r11)
+(12/13) Installing xmlto (0.0.29-r0)
+(13/13) Installing .makedepends-giflib (20250523.160637)
+Executing busybox-1.37.0-r12.trigger
+OK: 596 MiB in 145 packages
+>>> giflib: Cleaning up srcdir
+>>> giflib: Cleaning up pkgdir
+>>> giflib: Cleaning up tmpdir
+>>> giflib: Fetching https://downloads.sourceforge.net/sourceforge/giflib/giflib-5.2.2.tar.gz
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to deac-fra.dl.sourceforge.net (37.203.33.33:443)
+saving to '/var/cache/distfiles/giflib-5.2.2.tar.gz.part'
+giflib-5.2.2.tar.gz. 100% |********************************|  436k  0:00:00 ETA
+'/var/cache/distfiles/giflib-5.2.2.tar.gz.part' saved
+>>> giflib: Fetching https://downloads.sourceforge.net/sourceforge/giflib/giflib-5.2.2.tar.gz
+>>> giflib: Checking sha512sums...
+giflib-5.2.2.tar.gz: OK
+CVE-2021-40633.patch: OK
+CVE-2025-31344.patch: OK
+correct-document-page-install.patch: OK
+dont-build-html-pages-images.patch: OK
+>>> giflib: Unpacking /var/cache/distfiles/giflib-5.2.2.tar.gz...
+>>> giflib: CVE-2021-40633.patch
+patching file gif2rgb.c
+>>> giflib: CVE-2025-31344.patch
+patching file gif2rgb.c
+>>> giflib: correct-document-page-install.patch
+patching file Makefile
+>>> giflib: dont-build-html-pages-images.patch
+patching file doc/Makefile
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o dgif_lib.o dgif_lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o egif_lib.o egif_lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o gifalloc.o gifalloc.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o gif_err.o gif_err.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o gif_font.o gif_font.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o gif_hash.o gif_hash.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o openbsd-reallocarray.o openbsd-reallocarray.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o qprintf.o qprintf.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o quantize.o quantize.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC   -c -o getarg.o getarg.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-soname -Wl, -o libutil.so qprintf.o quantize.o getarg.o
+ar rcs libutil.a qprintf.o quantize.o getarg.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: SONAME must not be empty string; ignored
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libutil.so has a LOAD segment with RWX permissions
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-soname -Wl,libgif.so.7 -o libgif.so dgif_lib.o egif_lib.o gifalloc.o gif_err.o gif_font.o gif_hash.o openbsd-reallocarray.o
+ar rcs libgif.a dgif_lib.o egif_lib.o gifalloc.o gif_err.o gif_font.o gif_hash.o openbsd-reallocarray.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  gif2rgb.c libgif.a libutil.a  libgif.a -lm -o gif2rgb
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libgif.so has a LOAD segment with RWX permissions
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  gifbuild.c libgif.a libutil.a  libgif.a -lm -o gifbuild
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  giffix.c libgif.a libutil.a  libgif.a -lm -o giffix
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  giftext.c libgif.a libutil.a  libgif.a -lm -o giftext
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  giftool.c libgif.a libutil.a  libgif.a -lm -o giftool
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  gifclrmp.c libgif.a libutil.a  libgif.a -lm -o gifclrmp
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  gifbg.c libgif.a libutil.a  libgif.a -lm -o gifbg
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  gifcolor.c libgif.a libutil.a  libgif.a -lm -o gifcolor
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: giffix: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: giffix has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: giffix] Error 1
+make: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: gifcolor: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: gifcolor has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: gifcolor] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: gifbg: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: gifbg has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: gifbg] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: gifclrmp: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: gifclrmp has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: gifclrmp] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: giftext: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: giftext has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: giftext] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: gif2rgb: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: gif2rgb has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: giftool: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: giftool has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: giftool] Error 1
+make: *** [<builtin>: gif2rgb] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: gifbuild: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: gifbuild has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: gifbuild] Error 1
+>>> ERROR: giflib: build failed
+>>> giflib: Uninstalling dependencies...
+(1/13) Purging .makedepends-giflib (20250523.160637)
+(2/13) Purging xmlto (0.0.29-r0)
+(3/13) Purging perl-yaml-syck (1.34-r5)
+(4/13) Purging perl-test-pod (1.52-r4)
+(5/13) Purging docbook-xsl (1.79.2-r11)
+(6/13) Purging docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.pre-deinstall
+(7/13) Purging docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.pre-deinstall
+(8/13) Purging docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.pre-deinstall
+(9/13) Purging libxml2-utils (2.13.4-r6)
+(10/13) Purging libxslt (1.1.42-r2)
+(11/13) Purging libgcrypt (1.10.3-r1)
+(12/13) Purging libxml2 (2.13.4-r6)
+(13/13) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

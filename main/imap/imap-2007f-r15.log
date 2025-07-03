@@ -1,0 +1,176 @@
+pigz: not found
+>>> imap: Building main/imap 2007f-r15 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:54:28 +0000
+>>> imap: Validating /home/packager/aports/main/imap/APKBUILD...
+>>> imap: Analyzing dependencies...
+>>> imap: Installing for build: build-base openssl-dev>3
+(1/2) Installing openssl-dev (3.5.0-r0)
+(2/2) Installing .makedepends-imap (20250523.175430)
+OK: 566 MiB in 134 packages
+>>> imap: Cleaning up srcdir
+>>> imap: Cleaning up pkgdir
+>>> imap: Cleaning up tmpdir
+>>> imap: Fetching http://ftp.ntua.gr/pub/net/mail/imap/imap-2007f.tar.gz
+Connecting to ftp.ntua.gr (147.102.222.211:80)
+saving to '/var/cache/distfiles/imap-2007f.tar.gz.part'
+imap-2007f.tar.gz.pa   1% |                                | 24357  0:01:20 ETA
+imap-2007f.tar.gz.pa  47% |***************                 |  925k  0:00:02 ETA
+imap-2007f.tar.gz.pa 100% |********************************| 1943k  0:00:00 ETA
+'/var/cache/distfiles/imap-2007f.tar.gz.part' saved
+>>> imap: Fetching http://ftp.ntua.gr/pub/net/mail/imap/imap-2007f.tar.gz
+>>> imap: Checking sha512sums...
+imap-2007f.tar.gz: OK
+fix-linking.patch: OK
+c-client-2006k_KOLAB_Annotations.patch: OK
+1006_openssl1.1_autoverify.patch: OK
+2014_openssl1.1.1_sni.patch: OK
+>>> imap: Unpacking /var/cache/distfiles/imap-2007f.tar.gz...
+>>> imap: fix-linking.patch
+patching file src/osdep/unix/Makefile
+>>> imap: c-client-2006k_KOLAB_Annotations.patch
+patching file src/c-client/imap4r1.c
+Hunk #1 succeeded at 133 (offset -2 lines).
+Hunk #2 succeeded at 204 (offset -2 lines).
+Hunk #3 succeeded at 2767 (offset 10 lines).
+Hunk #4 succeeded at 2897 (offset 10 lines).
+Hunk #5 succeeded at 3039 (offset 10 lines).
+Hunk #6 succeeded at 3054 (offset 10 lines).
+Hunk #7 succeeded at 3238 (offset 10 lines).
+Hunk #8 succeeded at 4194 (offset 10 lines).
+patching file src/c-client/imap4r1.h
+patching file src/c-client/mail.c
+Hunk #1 succeeded at 67 (offset -2 lines).
+Hunk #2 succeeded at 597 (offset -2 lines).
+Hunk #3 succeeded at 5720 (offset 13 lines).
+Hunk #4 succeeded at 6051 (offset 13 lines).
+patching file src/c-client/mail.h
+Hunk #1 succeeded at 353 (offset 2 lines).
+Hunk #2 succeeded at 1048 (offset 3 lines).
+Hunk #3 succeeded at 1376 (offset 3 lines).
+Hunk #4 succeeded at 1795 (offset 3 lines).
+patching file src/mtest/mtest.c
+>>> imap: 1006_openssl1.1_autoverify.patch
+patching file src/osdep/unix/ssl_unix.c
+>>> imap: 2014_openssl1.1.1_sni.patch
+patching file src/osdep/unix/ssl_unix.c
+make[1]: Entering directory '/home/packager/aports/main/imap/src/imap-2007f'
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Building in PARTIAL compliance with RFC 3501 security
++ requirements:
++ Compliant:
+++ TLS/SSL encryption is supported
++ Non-compliant:
+++ Unencrypted plaintext passwords are permitted
++
++ In order to rectify this problem, you MUST build with:
+++ SSLTYPE=unix.nopwd
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Do you want to continue this build anyway? Type y or n please:
+make[1]: Leaving directory '/home/packager/aports/main/imap/src/imap-2007f'
+Applying an process to sources...
+tools/an "ln -s" src/c-client c-client
+tools/an "ln -s" src/ansilib c-client
+tools/an "ln -s" src/charset c-client
+tools/an "ln -s" src/osdep/unix c-client
+tools/an "ln -s" src/mtest mtest
+tools/an "ln -s" src/ipopd ipopd
+tools/an "ln -s" src/imapd imapd
+tools/an "ln -s" src/mailutil mailutil
+tools/an "ln -s" src/mlock mlock
+tools/an "ln -s" src/dmail dmail
+tools/an "ln -s" src/tmail tmail
+ln -s tools/an .
+make build EXTRACFLAGS='-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fpermissive' EXTRALDFLAGS='-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' EXTRADRIVERS='mbox' EXTRAAUTHENTICATORS='' PASSWDTYPE=std SSLTYPE=unix IP=4 EXTRASPECIALS='' BUILDTYPE=slx
+make[1]: Entering directory '/home/packager/aports/main/imap/src/imap-2007f'
+make[2]: Entering directory '/home/packager/aports/main/imap/src/imap-2007f'
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
++ Building with IPv4 support
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+make[2]: Leaving directory '/home/packager/aports/main/imap/src/imap-2007f'
+Building c-client for slx...
+echo `cat SPECIALS`  > c-client/SPECIALS
+cd c-client;make slx EXTRACFLAGS='-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fpermissive'\
+ EXTRALDFLAGS='-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs'\
+ EXTRADRIVERS='mbox'\
+ EXTRAAUTHENTICATORS=''\
+ PASSWDTYPE=std SSLTYPE=unix IP=4\
+  
+make[2]: Entering directory '/home/packager/aports/main/imap/src/imap-2007f/c-client'
+You are building for libc6/glibc versions of Secure Linux
+If you want libc5 versions you must use sl5 instead!
+If you want libc4 versions you must use sl4 instead!
+make build EXTRACFLAGS='-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fpermissive' EXTRALDFLAGS='-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' EXTRADRIVERS='mbox' EXTRAAUTHENTICATORS='' PASSWDTYPE=std SSLTYPE=unix IP=4 `cat SPECIALS` OS=slx \
+ SIGTYPE=psx CHECKPW=psx CRXTYPE=nfs \
+ SPOOLDIR=/var/spool \
+ ACTIVEFILE=/var/lib/news/active \
+ RSHPATH=/usr/bin/rsh \
+ BASECFLAGS="-g -O2 -pipe -fno-omit-frame-pointer" \
+ BASELDFLAGS="-lcrypt"
+make[3]: Entering directory '/home/packager/aports/main/imap/src/imap-2007f/c-client'
+sh -c 'rm -rf auths.c crexcl.c ip_unix.c linkage.[ch] siglocal.c osdep*.[ch] *.o ARCHIVE *FLAGS *TYPE c-client.a || true'
+Building with SSL
+ln -s ssl_unix.c osdepssl.c
+echo -I/usr/include -I/usr/include/openssl -DSSL_CERT_DIRECTORY=\"/etc/ssl/certs\" -DSSL_KEY_DIRECTORY=\"/etc/ssl/certs\" >> OSCFLAGS
+echo "  ssl_onceonlyinit ();" >> linkage.c
+echo -L/usr/lib -lssl -lcrypto  >> LDFLAGS
+Once-only environment setup...
+echo gcc > CCTYPE
+echo `cat CFLAGS` -g -O2 -pipe -fno-omit-frame-pointer '-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fpermissive' -DCHUNKSIZE=65536 > CFLAGS
+echo `cat OSCFLAGS` -DCREATEPROTO=unixproto -DEMPTYPROTO=unixproto \
+ -DMD5ENABLE=\"/etc/cram-md5.pwd\" -DMAILSPOOL=\"/var/spool/mail\" \
+ -DANONYMOUSHOME=\"/var/spool/mail/anonymous\" \
+ -DACTIVEFILE=\"/var/lib/news/active\" -DNEWSSPOOL=\"/var/spool/news\" \
+ -DRSHPATH=\"/usr/bin/rsh\" -DLOCKPGM=\"\" \
+ -DLOCKPGM1=\"/usr/libexec/mlock\" -DLOCKPGM2=\"/usr/sbin/mlock\" \
+ -DLOCKPGM3=\"/etc/mlock\" > OSCFLAGS
+echo `cat LDFLAGS` -lcrypt -lcrypt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs > LDFLAGS
+echo "ar rc c-client.a osdep.o mail.o misc.o newsrc.o smanager.o utf8.o utf8aux.o siglocal.o dummy.o pseudo.o netmsg.o flstring.o fdstring.o rfc822.o nntp.o smtp.o imap4r1.o pop3.o unix.o mbx.o mmdf.o tenex.o mtx.o news.o phile.o mh.o mx.o mix.o;ranlib c-client.a" > ARCHIVE
+echo "`cat CCTYPE` `cat CFLAGS` `cat OSFLAGS` -shared \
+ -Wl,-soname,libc-client.so.1 -o libc-client.so.1.0.0 osdep.o mail.o misc.o newsrc.o smanager.o utf8.o utf8aux.o siglocal.o dummy.o pseudo.o netmsg.o flstring.o fdstring.o rfc822.o nntp.o smtp.o imap4r1.o pop3.o unix.o mbx.o mmdf.o tenex.o mtx.o news.o phile.o mh.o mx.o mix.o `cat LDFLAGS`" \
+ >> ARCHIVE
+cat: OSFLAGS: No such file or directory
+echo slx > OSTYPE
+./drivers mbox imap nntp pop3 mix mx mbx tenex mtx mh mmdf unix news phile dummy
+./mkauths  ext md5 pla log
+echo "  mail_versioncheck (CCLIENTVERSION);" >> linkage.c
+ln -s os_slx.h osdep.h
+ln -s os_slx.c osdepbas.c
+ln -s log_std.c osdeplog.c
+ln -s sig_psx.c siglocal.c
+ln -s crx_nfs.c crexcl.c
+ln -s ip4_unix.c ip_unix.c
+sh -c '(test slx = sc5 -o slx = sco -o ! -f /usr/include/sys/statvfs.h) && echo -DNOFSTATVFS >> OSCFLAGS || fgrep statvfs64 /usr/include/sys/statvfs.h > /dev/null || echo -DNOFSTATVFS64 >> OSCFLAGS'
+Standard password authentication
+ln -s ckp_psx.c osdepckp.c
+cat osdepbas.c osdepckp.c osdeplog.c osdepssl.c > osdep.c
+Building OS-dependent module
+If you get No such file error messages for files x509.h, ssl.h,
+pem.h, buffer.h, bio.h, and crypto.h, that means that OpenSSL
+is not installed on your system. Either install OpenSSL first
+or build with command: make slx SSLTYPE=none
+`cat CCTYPE` -c `cat CFLAGS` `cat OSCFLAGS` -c osdep.c
+In file included from osdep.c:31:
+env_unix.c: In function 'lock_work':
+osdep.h:60:15: warning: implicit declaration of function 'safe_flock' [-Wimplicit-function-declaration]
+   60 | #define flock safe_flock
+      |               ^~~~~~~~~~
+env_unix.c:1374:27: note: in expansion of macro 'flock'
+ 1374 |     if (op & LOCK_NB) i = flock (fd,op);
+      |                           ^~~~~
+osdep.c: At top level:
+osdep.c:231:10: fatal error: x509v3.h: No such file or directory
+  231 | #include <x509v3.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[3]: *** [Makefile:926: osdep.o] Error 1
+make[3]: Leaving directory '/home/packager/aports/main/imap/src/imap-2007f/c-client'
+make[2]: *** [Makefile:677: slx] Error 2
+make[2]: Leaving directory '/home/packager/aports/main/imap/src/imap-2007f/c-client'
+make[1]: *** [Makefile:688: OSTYPE] Error 2
+make[1]: Leaving directory '/home/packager/aports/main/imap/src/imap-2007f'
+make: *** [Makefile:311: slx] Error 2
+>>> ERROR: imap: build failed
+>>> imap: Uninstalling dependencies...
+(1/2) Purging .makedepends-imap (20250523.175430)
+(2/2) Purging openssl-dev (3.5.0-r0)
+OK: 564 MiB in 132 packages

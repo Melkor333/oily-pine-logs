@@ -1,0 +1,173 @@
+pigz: not found
+>>> lua-md5: Building main/lua-md5 1.3-r2 (using abuild 3.14.1-r4) started Thu, 22 May 2025 22:16:07 +0000
+>>> lua-md5: Validating /home/packager/aports/main/lua-md5/APKBUILD...
+>>> lua-md5: Analyzing dependencies...
+>>> lua-md5: Installing for build: build-base lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/12) Installing lua5.1-libs (5.1.5-r13)
+(2/12) Installing lua5.1 (5.1.5-r13)
+(3/12) Installing lua5.1-dev (5.1.5-r13)
+(4/12) Installing lua5.2-libs (5.2.4-r13)
+(5/12) Installing lua5.2 (5.2.4-r13)
+(6/12) Installing lua5.2-dev (5.2.4-r13)
+(7/12) Installing linenoise (1.0-r5)
+(8/12) Installing lua5.3-libs (5.3.6-r6)
+(9/12) Installing lua5.3 (5.3.6-r6)
+(10/12) Installing lua5.3-dev (5.3.6-r6)
+(11/12) Installing lua5.4-dev (5.4.7-r0)
+(12/12) Installing .makedepends-lua-md5 (20250522.221610)
+Executing busybox-1.37.0-r12.trigger
+OK: 320 MiB in 126 packages
+>>> lua-md5: Cleaning up srcdir
+>>> lua-md5: Cleaning up pkgdir
+>>> lua-md5: Cleaning up tmpdir
+>>> lua-md5: Fetching lua-md5-1.3.tar.gz::https://github.com/keplerproject/md5/archive/1.3.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/lua-md5-1.3.tar.gz.part'
+lua-md5-1.3.tar.gz.p 100% |********************************| 31377  0:00:00 ETA
+'/var/cache/distfiles/lua-md5-1.3.tar.gz.part' saved
+>>> lua-md5: Fetching lua-md5-1.3.tar.gz::https://github.com/keplerproject/md5/archive/1.3.tar.gz
+>>> lua-md5: Checking sha512sums...
+lua-md5-1.3.tar.gz: OK
+create-libdir.patch: OK
+>>> lua-md5: Unpacking /var/cache/distfiles/lua-md5-1.3.tar.gz...
+>>> lua-md5: create-libdir.patch
+patching file Makefile
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -c -o src/md5.o src/md5.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -c -o src/md5lib.o src/md5lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -c -o src/compat-5.2.o src/compat-5.2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -c -o src/des56.o src/des56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -c -o src/ldes56.o src/ldes56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -shared  -o src/des56.so src/des56.o src/ldes56.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -shared  -o src/core.so src/md5.o src/md5lib.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2   -c -o src/md5.o src/md5.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2   -c -o src/md5lib.o src/md5lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2   -c -o src/compat-5.2.o src/compat-5.2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2   -c -o src/des56.o src/des56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2   -c -o src/ldes56.o src/ldes56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2 -shared  -o src/core.so src/md5.o src/md5lib.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.2 -shared  -o src/des56.so src/des56.o src/ldes56.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3   -c -o src/md5.o src/md5.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3   -c -o src/md5lib.o src/md5lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3   -c -o src/compat-5.2.o src/compat-5.2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3   -c -o src/des56.o src/des56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3   -c -o src/ldes56.o src/ldes56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3 -shared  -o src/core.so src/md5.o src/md5lib.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.3 -shared  -o src/des56.so src/des56.o src/ldes56.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4   -c -o src/md5.o src/md5.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4   -c -o src/md5lib.o src/md5lib.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4   -c -o src/compat-5.2.o src/compat-5.2.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4   -c -o src/des56.o src/des56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4   -c -o src/ldes56.o src/ldes56.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4 -shared  -o src/core.so src/md5.o src/md5lib.o src/compat-5.2.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I/usr/include/lua5.4 -shared  -o src/des56.so src/des56.o src/ldes56.o src/compat-5.2.o
+>>> lua-md5: Entering fakeroot...
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.1
+cp src/des56.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.1
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.1/md5
+cp src/core.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.1/md5/
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.1
+cp src/md5.lua /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.1
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.2
+cp src/des56.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.2
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.2/md5
+cp src/core.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.2/md5/
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.2
+cp src/md5.lua /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.2
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.3
+cp src/des56.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.3
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.3/md5
+cp src/core.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.3/md5/
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.3
+cp src/md5.lua /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.3
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.4
+cp src/des56.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.4
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.4/md5
+cp src/core.so /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/lib/lua/5.4/md5/
+mkdir -p /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.4
+cp src/md5.lua /home/packager/aports/main/lua-md5/pkg/lua-md5/usr/share/lua/5.4
+>>> lua5.1-md5*: Running split function _split...
+>>> lua5.1-md5*: Preparing subpackage lua5.1-md5...
+>>> lua5.1-md5*: Stripping binaries
+>>> lua5.1-md5*: Running postcheck for lua5.1-md5
+>>> lua5.2-md5*: Running split function _split...
+>>> lua5.2-md5*: Preparing subpackage lua5.2-md5...
+>>> lua5.2-md5*: Stripping binaries
+>>> lua5.2-md5*: Running postcheck for lua5.2-md5
+>>> lua5.3-md5*: Running split function _split...
+>>> lua5.3-md5*: Preparing subpackage lua5.3-md5...
+>>> lua5.3-md5*: Stripping binaries
+>>> lua5.3-md5*: Running postcheck for lua5.3-md5
+>>> lua5.4-md5*: Running split function _split...
+>>> lua5.4-md5*: Preparing subpackage lua5.4-md5...
+>>> lua5.4-md5*: Stripping binaries
+>>> lua5.4-md5*: Running postcheck for lua5.4-md5
+>>> lua-md5*: Running postcheck for lua-md5
+>>> lua-md5*: Preparing package lua-md5...
+>>> lua-md5*: Stripping binaries
+>>> WARNING: lua-md5*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-md5*: Scanning shared objects
+>>> lua5.1-md5*: Scanning shared objects
+>>> lua5.2-md5*: Scanning shared objects
+>>> lua5.3-md5*: Scanning shared objects
+libfakeroot internal error: payload not recognized!
+>>> lua5.4-md5*: Scanning shared objects
+libfakeroot internal error: payload not recognized!
+>>> lua-md5*: Tracing dependencies...
+>>> lua-md5*: Package size: 1.0 B
+>>> lua-md5*: Compressing data...
+>>> lua-md5*: Create checksum...
+pigz: not found
+>>> lua-md5*: Create lua-md5-1.3-r2.apk
+>>> lua5.1-md5*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.1-md5*: Package size: 28.1 KB
+>>> lua5.1-md5*: Compressing data...
+>>> lua5.1-md5*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.1-md5*: Create lua5.1-md5-1.3-r2.apk
+>>> lua5.2-md5*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-md5*: Package size: 28.1 KB
+>>> lua5.2-md5*: Compressing data...
+>>> lua5.2-md5*: Create checksum...
+pigz: not found
+>>> lua5.2-md5*: Create lua5.2-md5-1.3-r2.apk
+>>> lua5.3-md5*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-md5*: Package size: 28.1 KB
+>>> lua5.3-md5*: Compressing data...
+>>> lua5.3-md5*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.3-md5*: Create lua5.3-md5-1.3-r2.apk
+>>> lua5.4-md5*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-md5*: Package size: 28.1 KB
+>>> lua5.4-md5*: Compressing data...
+>>> lua5.4-md5*: Create checksum...
+pigz: not found
+>>> lua5.4-md5*: Create lua5.4-md5-1.3-r2.apk
+>>> lua-md5: Build complete at Thu, 22 May 2025 22:16:25 +0000 elapsed time 0h 0m 18s
+>>> lua-md5: Cleaning up srcdir
+>>> lua-md5: Cleaning up pkgdir
+>>> lua-md5: Uninstalling dependencies...
+(1/12) Purging .makedepends-lua-md5 (20250522.221610)
+(2/12) Purging lua5.1-dev (5.1.5-r13)
+(3/12) Purging lua5.1 (5.1.5-r13)
+(4/12) Purging lua5.1-libs (5.1.5-r13)
+(5/12) Purging lua5.2-dev (5.2.4-r13)
+(6/12) Purging lua5.2 (5.2.4-r13)
+(7/12) Purging lua5.2-libs (5.2.4-r13)
+(8/12) Purging lua5.3-dev (5.3.6-r6)
+(9/12) Purging lua5.3 (5.3.6-r6)
+(10/12) Purging lua5.3-libs (5.3.6-r6)
+(11/12) Purging lua5.4-dev (5.4.7-r0)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 314 MiB in 114 packages
+>>> lua-md5: Updating the main/x86_64 repository index...
+>>> lua-md5: Signing the index...
+pigz: not found

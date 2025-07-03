@@ -1,0 +1,167 @@
+pigz: not found
+>>> lua-term: Building main/lua-term 0.07-r2 (using abuild 3.14.1-r4) started Fri, 23 May 2025 00:57:18 +0000
+>>> lua-term: Validating /home/packager/aports/main/lua-term/APKBUILD...
+>>> lua-term: Analyzing dependencies...
+>>> lua-term: Installing for build: build-base lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/12) Installing lua5.1-libs (5.1.5-r13)
+(2/12) Installing lua5.1 (5.1.5-r13)
+(3/12) Installing lua5.1-dev (5.1.5-r13)
+(4/12) Installing lua5.2-libs (5.2.4-r13)
+(5/12) Installing lua5.2 (5.2.4-r13)
+(6/12) Installing lua5.2-dev (5.2.4-r13)
+(7/12) Installing linenoise (1.0-r5)
+(8/12) Installing lua5.3-libs (5.3.6-r6)
+(9/12) Installing lua5.3 (5.3.6-r6)
+(10/12) Installing lua5.3-dev (5.3.6-r6)
+(11/12) Installing lua5.4-dev (5.4.7-r0)
+(12/12) Installing .makedepends-lua-term (20250523.005722)
+Executing busybox-1.37.0-r12.trigger
+OK: 319 MiB in 126 packages
+>>> lua-term: Cleaning up srcdir
+>>> lua-term: Cleaning up pkgdir
+>>> lua-term: Cleaning up tmpdir
+>>> lua-term: Fetching lua-term-0.07.tar.gz::https://github.com/hoelzro/lua-term/archive/0.07.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lua-term-0.07.tar.gz.part'
+lua-term-0.07.tar.gz 100% |********************************|  4365  0:00:00 ETA
+'/var/cache/distfiles/lua-term-0.07.tar.gz.part' saved
+>>> lua-term: Fetching lua-term-0.07.tar.gz::https://github.com/hoelzro/lua-term/archive/0.07.tar.gz
+>>> lua-term: Checking sha512sums...
+lua-term-0.07.tar.gz: OK
+>>> lua-term: Unpacking /var/cache/distfiles/lua-term-0.07.tar.gz...
+>>> lua-term: Building for Lua 5.1...
+make: Entering directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.1'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o core.o core.c
+ln -s core.so.1.0.1 core.so.1
+ln -s core.so.1 core.so
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -shared -o core.so.1.0.1  core.o -lc
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: core.so.1.0.1 has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.1'
+>>> lua-term: Building for Lua 5.2...
+make: Entering directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.2'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o core.o core.c
+ln -s core.so.1.0.1 core.so.1
+ln -s core.so.1 core.so
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -shared -o core.so.1.0.1  core.o -lc
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: core.so.1.0.1 has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.2'
+>>> lua-term: Building for Lua 5.3...
+make: Entering directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.3'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o core.o core.c
+ln -s core.so.1.0.1 core.so.1
+ln -s core.so.1 core.so
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -shared -o core.so.1.0.1  core.o -lc
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: core.so.1.0.1 has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.3'
+>>> lua-term: Building for Lua 5.4...
+make: Entering directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.4'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o core.o core.c
+ln -s core.so.1.0.1 core.so.1
+ln -s core.so.1 core.so
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -shared -o core.so.1.0.1  core.o -lc
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: core.so.1.0.1 has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-term/src/lua-term-0.07-5.4'
+>>> lua-term: Entering fakeroot...
+>>> lua5.1-term*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.1-term/usr/lib/lua/5.1/term
+cp core.so /home/packager/aports/main/lua-term/pkg/lua5.1-term/usr/lib/lua/5.1/term
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.1-term/usr/share/lua/5.1/term
+cp term/init.lua term/cursor.lua term/colors.lua /home/packager/aports/main/lua-term/pkg/lua5.1-term/usr/share/lua/5.1/term
+>>> lua5.1-term*: Preparing subpackage lua5.1-term...
+>>> lua5.1-term*: Stripping binaries
+>>> lua5.1-term*: Running postcheck for lua5.1-term
+>>> lua5.2-term*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.2-term/usr/lib/lua/5.2/term
+cp core.so /home/packager/aports/main/lua-term/pkg/lua5.2-term/usr/lib/lua/5.2/term
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.2-term/usr/share/lua/5.2/term
+cp term/init.lua term/cursor.lua term/colors.lua /home/packager/aports/main/lua-term/pkg/lua5.2-term/usr/share/lua/5.2/term
+>>> lua5.2-term*: Preparing subpackage lua5.2-term...
+>>> lua5.2-term*: Stripping binaries
+>>> lua5.2-term*: Running postcheck for lua5.2-term
+>>> lua5.3-term*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.3-term/usr/lib/lua/5.3/term
+cp core.so /home/packager/aports/main/lua-term/pkg/lua5.3-term/usr/lib/lua/5.3/term
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.3-term/usr/share/lua/5.3/term
+cp term/init.lua term/cursor.lua term/colors.lua /home/packager/aports/main/lua-term/pkg/lua5.3-term/usr/share/lua/5.3/term
+>>> lua5.3-term*: Preparing subpackage lua5.3-term...
+>>> lua5.3-term*: Stripping binaries
+>>> lua5.3-term*: Running postcheck for lua5.3-term
+>>> lua5.4-term*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.4-term/usr/lib/lua/5.4/term
+cp core.so /home/packager/aports/main/lua-term/pkg/lua5.4-term/usr/lib/lua/5.4/term
+mkdir -p /home/packager/aports/main/lua-term/pkg/lua5.4-term/usr/share/lua/5.4/term
+cp term/init.lua term/cursor.lua term/colors.lua /home/packager/aports/main/lua-term/pkg/lua5.4-term/usr/share/lua/5.4/term
+>>> lua5.4-term*: Preparing subpackage lua5.4-term...
+>>> lua5.4-term*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> lua5.4-term*: Running postcheck for lua5.4-term
+>>> lua-term*: Running postcheck for lua-term
+>>> lua-term*: Preparing package lua-term...
+>>> lua-term*: Stripping binaries
+>>> WARNING: lua-term*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-term*: Scanning shared objects
+>>> lua5.1-term*: Scanning shared objects
+>>> lua5.2-term*: Scanning shared objects
+>>> lua5.3-term*: Scanning shared objects
+>>> lua5.4-term*: Scanning shared objects
+>>> lua-term*: Tracing dependencies...
+>>> lua-term*: Package size: 0.0 
+>>> lua-term*: Compressing data...
+>>> lua-term*: Create checksum...
+pigz: not found
+>>> lua-term*: Create lua-term-0.07-r2.apk
+>>> lua5.1-term*: Tracing dependencies...
+	lua5.1
+	so:libc.musl-x86_64.so.1
+>>> lua5.1-term*: Package size: 13.0 KB
+>>> lua5.1-term*: Compressing data...
+>>> lua5.1-term*: Create checksum...
+pigz: not found
+>>> lua5.1-term*: Create lua5.1-term-0.07-r2.apk
+>>> lua5.2-term*: Tracing dependencies...
+	lua5.2
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-term*: Package size: 13.0 KB
+>>> lua5.2-term*: Compressing data...
+>>> lua5.2-term*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.2-term*: Create lua5.2-term-0.07-r2.apk
+>>> lua5.3-term*: Tracing dependencies...
+	lua5.3
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-term*: Package size: 13.0 KB
+>>> lua5.3-term*: Compressing data...
+>>> lua5.3-term*: Create checksum...
+pigz: not found
+>>> lua5.3-term*: Create lua5.3-term-0.07-r2.apk
+>>> lua5.4-term*: Tracing dependencies...
+	lua5.4
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-term*: Package size: 13.0 KB
+>>> lua5.4-term*: Compressing data...
+>>> lua5.4-term*: Create checksum...
+pigz: not found
+>>> lua5.4-term*: Create lua5.4-term-0.07-r2.apk
+>>> lua-term: Build complete at Fri, 23 May 2025 00:57:34 +0000 elapsed time 0h 0m 16s
+>>> lua-term: Cleaning up srcdir
+>>> lua-term: Cleaning up pkgdir
+>>> lua-term: Uninstalling dependencies...
+(1/12) Purging .makedepends-lua-term (20250523.005722)
+(2/12) Purging lua5.1-dev (5.1.5-r13)
+(3/12) Purging lua5.1 (5.1.5-r13)
+(4/12) Purging lua5.1-libs (5.1.5-r13)
+(5/12) Purging lua5.2-dev (5.2.4-r13)
+(6/12) Purging lua5.2 (5.2.4-r13)
+(7/12) Purging lua5.2-libs (5.2.4-r13)
+(8/12) Purging lua5.3-dev (5.3.6-r6)
+(9/12) Purging lua5.3 (5.3.6-r6)
+(10/12) Purging lua5.3-libs (5.3.6-r6)
+(11/12) Purging lua5.4-dev (5.4.7-r0)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-term: Updating the main/x86_64 repository index...
+>>> lua-term: Signing the index...
+pigz: not found

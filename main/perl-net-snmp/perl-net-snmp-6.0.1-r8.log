@@ -1,0 +1,123 @@
+pigz: not found
+>>> perl-net-snmp: Building main/perl-net-snmp 6.0.1-r8 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:00:21 +0000
+>>> perl-net-snmp: Validating /home/packager/aports/main/perl-net-snmp/APKBUILD...
+>>> perl-net-snmp: Analyzing dependencies...
+>>> perl-net-snmp: Installing for build: build-base perl perl-dev perl-module-build
+(1/9) Installing libbz2 (1.0.8-r6)
+(2/9) Installing perl (5.40.2-r0)
+(3/9) Installing perl-utils (5.40.2-r0)
+(4/9) Installing perl-dev (5.40.2-r0)
+(5/9) Installing perl-module-build (0.4234-r1)
+(6/9) Installing .makedepends-perl-net-snmp (20250518.090024)
+(7/9) Installing perl-error (0.17030-r0)
+(8/9) Installing perl-git (2.47.2-r0)
+(9/9) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 90 packages
+>>> perl-net-snmp: Cleaning up srcdir
+>>> perl-net-snmp: Cleaning up pkgdir
+>>> perl-net-snmp: Cleaning up tmpdir
+>>> perl-net-snmp: Fetching https://cpan.metacpan.org/authors/id/D/DT/DTOWN/Net-SNMP-v6.0.1.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Net-SNMP-v6.0.1.tar.gz.part'
+Net-SNMP-v6.0.1.tar. 100% |********************************| 94664  0:00:00 ETA
+'/var/cache/distfiles/Net-SNMP-v6.0.1.tar.gz.part' saved
+>>> perl-net-snmp: Fetching https://cpan.metacpan.org/authors/id/D/DT/DTOWN/Net-SNMP-v6.0.1.tar.gz
+>>> perl-net-snmp: Checking sha512sums...
+Net-SNMP-v6.0.1.tar.gz: OK
+>>> perl-net-snmp: Unpacking /var/cache/distfiles/Net-SNMP-v6.0.1.tar.gz...
+Warning: prerequisite Crypt::DES 2.03 not found.
+Warning: prerequisite Digest::HMAC 1.00 not found.
+Warning: prerequisite Digest::SHA1 1.02 not found.
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Net::SNMP
+Writing MYMETA.yml and MYMETA.json
+cp lib/Net/SNMP.pm blib/lib/Net/SNMP.pm
+cp lib/Net/SNMP/Transport/IPv4/UDP.pm blib/lib/Net/SNMP/Transport/IPv4/UDP.pm
+cp lib/Net/SNMP/Security/USM.pm blib/lib/Net/SNMP/Security/USM.pm
+cp lib/Net/SNMP/Security/Community.pm blib/lib/Net/SNMP/Security/Community.pm
+cp lib/Net/SNMP/Transport.pm blib/lib/Net/SNMP/Transport.pm
+cp lib/Net/SNMP/Dispatcher.pm blib/lib/Net/SNMP/Dispatcher.pm
+cp lib/Net/SNMP/Transport/IPv6.pm blib/lib/Net/SNMP/Transport/IPv6.pm
+cp lib/Net/SNMP/Transport/IPv4/TCP.pm blib/lib/Net/SNMP/Transport/IPv4/TCP.pm
+cp lib/Net/SNMP/PDU.pm blib/lib/Net/SNMP/PDU.pm
+cp lib/Net/SNMP/Message.pm blib/lib/Net/SNMP/Message.pm
+cp lib/Net/SNMP/Security.pm blib/lib/Net/SNMP/Security.pm
+cp lib/Net/SNMP/Transport/IPv6/UDP.pm blib/lib/Net/SNMP/Transport/IPv6/UDP.pm
+cp lib/Net/SNMP/Transport/IPv4.pm blib/lib/Net/SNMP/Transport/IPv4.pm
+cp lib/Net/SNMP/MessageProcessing.pm blib/lib/Net/SNMP/MessageProcessing.pm
+cp lib/Net/SNMP/Transport/IPv6/TCP.pm blib/lib/Net/SNMP/Transport/IPv6/TCP.pm
+"/usr/bin/perl" "-Iblib/arch" "-Iblib/lib" snmpkey.PL snmpkey 
+cp snmpkey blib/script/snmpkey
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/snmpkey
+Manifying 1 pod document
+Manifying 1 pod document
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/ber.t .. ok
+t/dsp.t .. ok
+t/mp.t ... ok
+t/usm.t .. ok
+All tests successful.
+Files=4, Tests=43,  5 wallclock secs ( 0.04 usr  0.00 sys +  0.26 cusr  0.03 csys =  0.33 CPU)
+Result: PASS
+>>> perl-net-snmp: Entering fakeroot...
+Manifying 1 pod document
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/lib/perl5/core_perl/perllocal.pod
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Dispatcher.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/MessageProcessing.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Security.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/PDU.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Message.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Security/Community.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Security/USM.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport/IPv4.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport/IPv6.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport/IPv6/TCP.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport/IPv6/UDP.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport/IPv4/TCP.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/perl5/vendor_perl/Net/SNMP/Transport/IPv4/UDP.pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/man/man1/snmpkey.1
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/share/man/man3/Net::SNMP.3pm
+Installing /home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp/usr/bin/snmpkey
+>>> perl-net-snmp-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-net-snmp/pkg/perl-net-snmp-doc/usr/share/man'
+>>> perl-net-snmp-doc*: Preparing subpackage perl-net-snmp-doc...
+>>> perl-net-snmp-doc*: Running postcheck for perl-net-snmp-doc
+>>> perl-net-snmp*: Running postcheck for perl-net-snmp
+>>> perl-net-snmp*: Preparing package perl-net-snmp...
+>>> perl-net-snmp-doc*: Tracing dependencies...
+>>> perl-net-snmp-doc*: Package size: 17.9 KB
+>>> perl-net-snmp-doc*: Compressing data...
+>>> perl-net-snmp-doc*: Create checksum...
+pigz: not found
+>>> perl-net-snmp-doc*: Create perl-net-snmp-doc-6.0.1-r8.apk
+>>> perl-net-snmp*: Tracing dependencies...
+	perl
+>>> perl-net-snmp*: Package size: 328.0 KB
+>>> perl-net-snmp*: Compressing data...
+>>> perl-net-snmp*: Create checksum...
+pigz: not found
+>>> perl-net-snmp*: Create perl-net-snmp-6.0.1-r8.apk
+>>> perl-net-snmp: Build complete at Sun, 18 May 2025 09:00:31 +0000 elapsed time 0h 0m 10s
+>>> perl-net-snmp: Cleaning up srcdir
+>>> perl-net-snmp: Cleaning up pkgdir
+>>> perl-net-snmp: Uninstalling dependencies...
+(1/9) Purging .makedepends-perl-net-snmp (20250518.090024)
+(2/9) Purging perl-dev (5.40.2-r0)
+(3/9) Purging perl-utils (5.40.2-r0)
+(4/9) Purging perl-module-build (0.4234-r1)
+(5/9) Purging git-perl (2.47.2-r0)
+(6/9) Purging perl-git (2.47.2-r0)
+(7/9) Purging perl-error (0.17030-r0)
+(8/9) Purging perl (5.40.2-r0)
+(9/9) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-net-snmp: Updating the main/x86_64 repository index...
+>>> perl-net-snmp: Signing the index...
+pigz: not found

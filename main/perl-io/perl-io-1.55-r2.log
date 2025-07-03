@@ -1,0 +1,145 @@
+pigz: not found
+>>> perl-io: Building main/perl-io 1.55-r2 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:04:11 +0000
+>>> perl-io: Validating /home/packager/aports/main/perl-io/APKBUILD...
+>>> perl-io: Analyzing dependencies...
+>>> perl-io: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-io (20250518.070413)
+(6/8) Installing perl-error (0.17029-r2)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 306 MiB in 89 packages
+>>> perl-io: Cleaning up srcdir
+>>> perl-io: Cleaning up pkgdir
+>>> perl-io: Cleaning up tmpdir
+>>> perl-io: Fetching https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-1.55.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/IO-1.55.tar.gz.part'
+IO-1.55.tar.gz.part  100% |********************************|  185k  0:00:00 ETA
+'/var/cache/distfiles/IO-1.55.tar.gz.part' saved
+>>> perl-io: Fetching https://cpan.metacpan.org/authors/id/T/TO/TODDR/IO-1.55.tar.gz
+>>> perl-io: Checking sha512sums...
+IO-1.55.tar.gz: OK
+>>> perl-io: Unpacking /var/cache/distfiles/IO-1.55.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for IO
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  IO.xs > IO.xsc
+Running Mkbootstrap for IO ()
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.55\" -DXS_VERSION=\"1.55\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   poll.c
+chmod 644 "IO.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- IO.bs blib/arch/auto/IO/IO.bs 644
+cp lib/IO/Seekable.pm blib/lib/IO/Seekable.pm
+cp lib/IO/Socket.pm blib/lib/IO/Socket.pm
+cp lib/IO/Socket/UNIX.pm blib/lib/IO/Socket/UNIX.pm
+cp lib/IO/Socket/INET.pm blib/lib/IO/Socket/INET.pm
+cp lib/IO/Pipe.pm blib/lib/IO/Pipe.pm
+cp lib/IO/Select.pm blib/lib/IO/Select.pm
+cp lib/IO/Handle.pm blib/lib/IO/Handle.pm
+cp lib/IO/Dir.pm blib/lib/IO/Dir.pm
+cp lib/IO/File.pm blib/lib/IO/File.pm
+cp IO.pm blib/lib/IO.pm
+cp lib/IO/Poll.pm blib/lib/IO/Poll.pm
+mv IO.xsc IO.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.55\" -DXS_VERSION=\"1.55\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   IO.c
+rm -f blib/arch/auto/IO/IO.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  IO.o poll.o  -o blib/arch/auto/IO/IO.so  \
+      \
+  
+chmod 755 blib/arch/auto/IO/IO.so
+Manifying 11 pod documents
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- IO.bs blib/arch/auto/IO/IO.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/cachepropagate-tcp.t ... ok
+t/cachepropagate-udp.t ... ok
+t/cachepropagate-unix.t .. ok
+t/gh17447.t .............. ok
+t/IO.t ................... ok
+t/io_const.t ............. ok
+t/io_dir.t ............... ok
+t/io_dup.t ............... ok
+t/io_file.t .............. ok
+t/io_file_export.t ....... ok
+t/io_getline.t ........... ok
+t/io_handle.t ............ ok
+t/io_leak.t .............. skipped: No XS::APItest::sv_count() available
+t/io_linenum.t ........... ok
+t/io_multihomed.t ........ ok
+t/io_pipe.t .............. ok
+t/io_poll.t .............. ok
+t/io_sel.t ............... ok
+t/io_sock.t .............. ok
+t/io_sock_errstr.t ....... ok
+t/io_taint.t ............. ok
+t/io_tell.t .............. ok
+t/io_udp.t ............... ok
+t/io_unix.t .............. ok
+t/io_utf8.t .............. ok
+t/io_utf8argv.t .......... ok
+t/io_xs.t ................ ok
+All tests successful.
+Files=27, Tests=16685, 27 wallclock secs ( 0.67 usr  0.04 sys +  1.30 cusr  0.23 csys =  2.24 CPU)
+Result: PASS
+>>> perl-io: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- IO.bs blib/arch/auto/IO/IO.bs 644
+Manifying 11 pod documents
+Appending installation info to /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/auto/IO/IO.so
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/File.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Handle.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Select.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Dir.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Socket.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Poll.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Pipe.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Seekable.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Socket/UNIX.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/lib/perl5/vendor_perl/IO/Socket/INET.pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Select.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Seekable.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Socket.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Handle.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Dir.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Socket::UNIX.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Poll.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Socket::INET.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::File.3pm
+Installing /home/packager/aports/main/perl-io/pkg/perl-io/usr/share/man/man3/IO::Pipe.3pm
+>>> perl-io*: Running postcheck for perl-io
+>>> perl-io*: Preparing package perl-io...
+>>> perl-io*: Stripping binaries
+>>> perl-io*: Scanning shared objects
+>>> perl-io*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-io*: Package size: 115.0 KB
+>>> perl-io*: Compressing data...
+>>> perl-io*: Create checksum...
+pigz: not found
+>>> perl-io*: Create perl-io-1.55-r2.apk
+>>> perl-io: Build complete at Sun, 18 May 2025 07:04:44 +0000 elapsed time 0h 0m 33s
+>>> perl-io: Cleaning up srcdir
+>>> perl-io: Cleaning up pkgdir
+>>> perl-io: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-io (20250518.070413)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17029-r2)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-io: Updating the main/x86_64 repository index...
+>>> perl-io: Signing the index...
+pigz: not found

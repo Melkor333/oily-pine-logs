@@ -1,0 +1,43 @@
+pigz: not found
+>>> keyutils: Building main/keyutils 1.6.3-r4 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:03:36 +0000
+>>> keyutils: Validating /home/packager/aports/main/keyutils/APKBUILD...
+>>> keyutils: Analyzing dependencies...
+>>> keyutils: Installing for build: build-base file linux-headers
+(1/1) Installing .makedepends-keyutils (20250523.160338)
+OK: 564 MiB in 133 packages
+>>> keyutils: Cleaning up srcdir
+>>> keyutils: Cleaning up pkgdir
+>>> keyutils: Cleaning up tmpdir
+>>> keyutils: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/keyutils-1.6.3.tar.gz
+Connecting to git.kernel.org (172.105.64.184:443)
+saving to '/var/cache/distfiles/keyutils-1.6.3.tar.gz.part'
+keyutils-1.6.3.tar.g 100% |********************************|  133k  0:00:00 ETA
+'/var/cache/distfiles/keyutils-1.6.3.tar.gz.part' saved
+>>> keyutils: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/dhowells/keyutils.git/snapshot/keyutils-1.6.3.tar.gz
+>>> keyutils: Checking sha512sums...
+keyutils-1.6.3.tar.gz: OK
+symlink.patch: OK
+>>> keyutils: Unpacking /var/cache/distfiles/keyutils-1.6.3.tar.gz...
+>>> keyutils: symlink.patch
+patching file Makefile
+  rpmspec -q ./keyutils.spec --define "buildid .local"
+  ^~~~~~~
+[ -c flag ]:1: Command 'rpmspec' not found (OILS-ERR-100)
+gcc -I. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o keyctl.o -c keyctl.c
+gcc -I. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o keyctl_testing.o -c keyctl_testing.c
+gcc -I. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o keyctl_watch.o -c keyctl_watch.c
+gcc -I. -DPKGBUILD="\"2025-05-23\"" -DPKGVERSION="\"keyutils-1.6.3\"" -DAPIVERSION="\"libkeyutils-1.10\"" -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -o keyutils.os -c keyutils.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -Wl,-soname,libkeyutils.so.1 -Wl,--version-script,version.lds -o libkeyutils.so.1.10 keyutils.os 
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libkeyutils.so.1.10 has a LOAD segment with RWX permissions
+ln -sf libkeyutils.so.1.10 libkeyutils.so.1
+ln -sf libkeyutils.so.1 libkeyutils.so
+gcc -L. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -o keyctl \
+	keyctl.o keyctl_testing.o keyctl_watch.o -lkeyutils
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: keyctl: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: keyctl has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:154: keyctl] Error 1
+>>> ERROR: keyutils: build failed
+>>> keyutils: Uninstalling dependencies...
+(1/1) Purging .makedepends-keyutils (20250523.160338)
+OK: 564 MiB in 132 packages

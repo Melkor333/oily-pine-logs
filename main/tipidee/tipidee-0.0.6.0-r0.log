@@ -1,0 +1,295 @@
+pigz: not found
+>>> tipidee: Building main/tipidee 0.0.6.0-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:03:29 +0000
+>>> tipidee: Validating /home/packager/aports/main/tipidee/APKBUILD...
+>>> tipidee: Analyzing dependencies...
+>>> tipidee: Installing for build: build-base execline s6 s6-networking skalibs-dev>=2.14.4
+(1/12) Installing skalibs-libs (2.14.4.0-r0)
+(2/12) Installing execline-libs (2.9.7.0-r0)
+(3/12) Installing execline (2.9.7.0-r0)
+Executing execline-2.9.7.0-r0.post-install
+(4/12) Installing s6-ipcserver (2.13.2.0-r0)
+(5/12) Installing s6-libs (2.13.2.0-r0)
+(6/12) Installing s6 (2.13.2.0-r0)
+Executing s6-2.13.2.0-r0.pre-install
+(7/12) Installing s6-dns-libs (2.4.1.0-r0)
+(8/12) Installing bearssl-libs (0.6_git20241009-r0)
+(9/12) Installing s6-networking-libs (2.7.1.0-r0)
+(10/12) Installing s6-networking (2.7.1.0-r0)
+(11/12) Installing skalibs-dev (2.14.4.0-r0)
+(12/12) Installing .makedepends-tipidee (20250518.100329)
+Executing busybox-1.37.0-r12.trigger
+OK: 263 MiB in 93 packages
+>>> tipidee: Cleaning up srcdir
+>>> tipidee: Cleaning up pkgdir
+>>> tipidee: Cleaning up tmpdir
+>>> tipidee: Fetching https://skarnet.org/software/tipidee/tipidee-0.0.6.0.tar.gz
+Connecting to skarnet.org (95.142.172.232:443)
+saving to '/var/cache/distfiles/tipidee-0.0.6.0.tar.gz.part'
+tipidee-0.0.6.0.tar. 100% |********************************| 91879  0:00:00 ETA
+'/var/cache/distfiles/tipidee-0.0.6.0.tar.gz.part' saved
+>>> tipidee: Fetching https://skarnet.org/software/tipidee/tipidee-0.0.6.0.tar.gz
+>>> tipidee: Checking sha512sums...
+tipidee-0.0.6.0.tar.gz: OK
+httpd.run: OK
+httpsd.run: OK
+logger.run: OK
+tipidee.conf: OK
+tipidee.confd: OK
+tipidee.initd: OK
+>>> tipidee: Unpacking /var/cache/distfiles/tipidee-0.0.6.0.tar.gz...
+>>> tipidee: Creating group tipidee
+>>> tipidee: Creating user tipideelog
+>>> tipidee: Creating user tipideed
+Checking for C compiler...
+  ... gcc
+Checking whether C compiler works... 
+  ... yes
+Checking target system type...
+  ... x86_64-alpine-linux-musl
+Checking whether compiler accepts -fPIC ...
+  ... yes
+Checking whether compiler accepts -std=c99 ...
+  ... yes
+Checking whether compiler accepts -fomit-frame-pointer ...
+  ... yes
+Checking whether compiler accepts -fno-exceptions ...
+  ... yes
+Checking whether compiler accepts -fno-unwind-tables ...
+  ... yes
+Checking whether compiler accepts -fno-asynchronous-unwind-tables ...
+  ... yes
+Checking whether compiler accepts -Werror=implicit-function-declaration ...
+  ... yes
+Checking whether compiler accepts -Werror=implicit-int ...
+  ... yes
+Checking whether compiler accepts -Werror=pointer-sign ...
+  ... yes
+Checking whether compiler accepts -Werror=pointer-arith ...
+  ... yes
+Checking whether compiler accepts -ffunction-sections ...
+  ... yes
+Checking whether compiler accepts -fdata-sections ...
+  ... yes
+Checking whether linker accepts -Wl,--sort-section=alignment ...
+  ... yes
+Checking whether linker accepts -Wl,--sort-common ...
+  ... yes
+Checking whether linker accepts -Wl,--hash-style=both ...
+  ... yes
+Creating config.mak...
+  ... done.
+Creating src/include/tipidee/config.h...
+  ... done.
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_free.lo src/libtipidee/tipidee_conf_free.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get.lo src/libtipidee/tipidee_conf_get.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_argv.lo src/libtipidee/tipidee_conf_get_argv.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_content_type.lo src/libtipidee/tipidee_conf_get_content_type.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_errorfile.lo src/libtipidee/tipidee_conf_get_errorfile.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_redirection.lo src/libtipidee/tipidee_conf_get_redirection.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_resattr.lo src/libtipidee/tipidee_conf_get_resattr.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_resattr1.lo src/libtipidee/tipidee_conf_get_resattr1.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_responseheaders.lo src/libtipidee/tipidee_conf_get_responseheaders.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_string.lo src/libtipidee/tipidee_conf_get_string.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_get_uint32.lo src/libtipidee/tipidee_conf_get_uint32.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_conf_init.lo src/libtipidee/tipidee_conf_init.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_headers_get_content_length.lo src/libtipidee/tipidee_headers_get_content_length.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_headers_init.lo src/libtipidee/tipidee_headers_init.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_headers_parse.lo src/libtipidee/tipidee_headers_parse.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_headers_search.lo src/libtipidee/tipidee_headers_search.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_log_answer.lo src/libtipidee/tipidee_log_answer.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_log_exit.lo src/libtipidee/tipidee_log_exit.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_log_request.lo src/libtipidee/tipidee_log_request.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_log_resource.lo src/libtipidee/tipidee_log_resource.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_log_start.lo src/libtipidee/tipidee_log_start.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_method.lo src/libtipidee/tipidee_method.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_error_nofile.lo src/libtipidee/tipidee_response_error_nofile.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_error_nofile_G.lo src/libtipidee/tipidee_response_error_nofile_G.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_file.lo src/libtipidee/tipidee_response_file.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_file_G.lo src/libtipidee/tipidee_response_file_G.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_date.lo src/libtipidee/tipidee_response_header_date.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_date_G.lo src/libtipidee/tipidee_response_header_date_G.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_date_fmt.lo src/libtipidee/tipidee_response_header_date_fmt.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_end.lo src/libtipidee/tipidee_response_header_end.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_lastmodified.lo src/libtipidee/tipidee_response_header_lastmodified.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_preparebuiltin.lo src/libtipidee/tipidee_response_header_preparebuiltin.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_write.lo src/libtipidee/tipidee_response_header_write.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_writeall.lo src/libtipidee/tipidee_response_header_writeall.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_writeall_G.lo src/libtipidee/tipidee_response_header_writeall_G.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_writemerge.lo src/libtipidee/tipidee_response_header_writemerge.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_header_writemerge_G.lo src/libtipidee/tipidee_response_header_writemerge_G.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_partial.lo src/libtipidee/tipidee_response_partial.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_partial_G.lo src/libtipidee/tipidee_response_partial_G.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_response_status.lo src/libtipidee/tipidee_response_status.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_rql_read.lo src/libtipidee/tipidee_rql_read.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_uri_parse.lo src/libtipidee/tipidee_uri_parse.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_util_chunked_read.lo src/libtipidee/tipidee_util_chunked_read.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_util_defaulttext.lo src/libtipidee/tipidee_util_defaulttext.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_util_htmlescape.lo src/libtipidee/tipidee_util_htmlescape.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_util_httpdate.lo src/libtipidee/tipidee_util_httpdate.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -c -o src/libtipidee/tipidee_util_parse_range.lo src/libtipidee/tipidee_util_parse_range.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/tipidee-config-preprocess.o src/config/tipidee-config-preprocess.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/misc/ls.cgi.o src/misc/ls.cgi.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/tipideed.o src/tipideed/tipideed.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/cgi.o src/tipideed/cgi.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/errors.o src/tipideed/errors.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/harden.o src/tipideed/harden.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/options.o src/tipideed/options.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/regular.o src/tipideed/regular.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/redirection.o src/tipideed/redirection.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/send_file.o src/tipideed/send_file.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/stream.o src/tipideed/stream.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/trace.o src/tipideed/trace.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/tipideed/util.o src/tipideed/util.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/tipidee-config.o src/config/tipidee-config.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/util.o src/config/util.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/node.o src/config/node.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/repo.o src/config/repo.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/conftree.o src/config/conftree.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/headers.o src/config/headers.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/defaults.o src/config/defaults.c
+exec gcc -D_POSIX_C_SOURCE=200809L -D_XOPEN_SOURCE=700 -iquote src/include-local -Isrc/include -fPIC -Werror=implicit-function-declaration -Werror=implicit-int -Werror=pointer-sign -Werror=pointer-arith  -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c -o src/config/lexparse.o src/config/lexparse.c
+exec env library="tipidee" includedir="/usr/include" dynlibdir="/usr/lib" libdir="/usr/lib" extra_includedirs="" extra_libdirs="" extra_libs="-lskarnet" description="A library containing helpers to write an HTTP server" url="" ldlibs="" ./tools/gen-dotpc.sh > libtipidee.pc.tmp
+exec gcc -o libtipidee.so.xyzzy -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--sort-section=alignment -Wl,--sort-common -Wl,--hash-style=both -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -Wl,-soname,libtipidee.so.0.0 -Wl,-rpath=/usr/lib src/libtipidee/tipidee_conf_free.lo src/libtipidee/tipidee_conf_get.lo src/libtipidee/tipidee_conf_get_argv.lo src/libtipidee/tipidee_conf_get_content_type.lo src/libtipidee/tipidee_conf_get_errorfile.lo src/libtipidee/tipidee_conf_get_redirection.lo src/libtipidee/tipidee_conf_get_resattr.lo src/libtipidee/tipidee_conf_get_resattr1.lo src/libtipidee/tipidee_conf_get_responseheaders.lo src/libtipidee/tipidee_conf_get_string.lo src/libtipidee/tipidee_conf_get_uint32.lo src/libtipidee/tipidee_conf_init.lo src/libtipidee/tipidee_headers_get_content_length.lo src/libtipidee/tipidee_headers_init.lo src/libtipidee/tipidee_headers_parse.lo src/libtipidee/tipidee_headers_search.lo src/libtipidee/tipidee_log_answer.lo src/libtipidee/tipidee_log_exit.lo src/libtipidee/tipidee_log_request.lo src/libtipidee/tipidee_log_resource.lo src/libtipidee/tipidee_log_start.lo src/libtipidee/tipidee_method.lo src/libtipidee/tipidee_response_error_nofile.lo src/libtipidee/tipidee_response_error_nofile_G.lo src/libtipidee/tipidee_response_file.lo src/libtipidee/tipidee_response_file_G.lo src/libtipidee/tipidee_response_header_date.lo src/libtipidee/tipidee_response_header_date_G.lo src/libtipidee/tipidee_response_header_date_fmt.lo src/libtipidee/tipidee_response_header_end.lo src/libtipidee/tipidee_response_header_lastmodified.lo src/libtipidee/tipidee_response_header_preparebuiltin.lo src/libtipidee/tipidee_response_header_write.lo src/libtipidee/tipidee_response_header_writeall.lo src/libtipidee/tipidee_response_header_writeall_G.lo src/libtipidee/tipidee_response_header_writemerge.lo src/libtipidee/tipidee_response_header_writemerge_G.lo src/libtipidee/tipidee_response_partial.lo src/libtipidee/tipidee_response_partial_G.lo src/libtipidee/tipidee_response_status.lo src/libtipidee/tipidee_rql_read.lo src/libtipidee/tipidee_uri_parse.lo src/libtipidee/tipidee_util_chunked_read.lo src/libtipidee/tipidee_util_defaulttext.lo src/libtipidee/tipidee_util_htmlescape.lo src/libtipidee/tipidee_util_httpdate.lo src/libtipidee/tipidee_util_parse_range.lo -lskarnet 
+exec ar rc libtipidee.a.xyzzy src/libtipidee/tipidee_conf_free.lo src/libtipidee/tipidee_conf_get.lo src/libtipidee/tipidee_conf_get_argv.lo src/libtipidee/tipidee_conf_get_content_type.lo src/libtipidee/tipidee_conf_get_errorfile.lo src/libtipidee/tipidee_conf_get_redirection.lo src/libtipidee/tipidee_conf_get_resattr.lo src/libtipidee/tipidee_conf_get_resattr1.lo src/libtipidee/tipidee_conf_get_responseheaders.lo src/libtipidee/tipidee_conf_get_string.lo src/libtipidee/tipidee_conf_get_uint32.lo src/libtipidee/tipidee_conf_init.lo src/libtipidee/tipidee_headers_get_content_length.lo src/libtipidee/tipidee_headers_init.lo src/libtipidee/tipidee_headers_parse.lo src/libtipidee/tipidee_headers_search.lo src/libtipidee/tipidee_log_answer.lo src/libtipidee/tipidee_log_exit.lo src/libtipidee/tipidee_log_request.lo src/libtipidee/tipidee_log_resource.lo src/libtipidee/tipidee_log_start.lo src/libtipidee/tipidee_method.lo src/libtipidee/tipidee_response_error_nofile.lo src/libtipidee/tipidee_response_error_nofile_G.lo src/libtipidee/tipidee_response_file.lo src/libtipidee/tipidee_response_file_G.lo src/libtipidee/tipidee_response_header_date.lo src/libtipidee/tipidee_response_header_date_G.lo src/libtipidee/tipidee_response_header_date_fmt.lo src/libtipidee/tipidee_response_header_end.lo src/libtipidee/tipidee_response_header_lastmodified.lo src/libtipidee/tipidee_response_header_preparebuiltin.lo src/libtipidee/tipidee_response_header_write.lo src/libtipidee/tipidee_response_header_writeall.lo src/libtipidee/tipidee_response_header_writeall_G.lo src/libtipidee/tipidee_response_header_writemerge.lo src/libtipidee/tipidee_response_header_writemerge_G.lo src/libtipidee/tipidee_response_partial.lo src/libtipidee/tipidee_response_partial_G.lo src/libtipidee/tipidee_response_status.lo src/libtipidee/tipidee_rql_read.lo src/libtipidee/tipidee_uri_parse.lo src/libtipidee/tipidee_util_chunked_read.lo src/libtipidee/tipidee_util_defaulttext.lo src/libtipidee/tipidee_util_htmlescape.lo src/libtipidee/tipidee_util_httpdate.lo src/libtipidee/tipidee_util_parse_range.lo
+exec gcc -o tipidee-config-preprocess -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--sort-section=alignment -Wl,--sort-common -Wl,--hash-style=both -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  src/config/tipidee-config-preprocess.o /usr/lib/libskarnet.so  
+exec mv -f libtipidee.pc.tmp libtipidee.pc
+exec ranlib libtipidee.a.xyzzy
+exec gcc -o ls.cgi -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--sort-section=alignment -Wl,--sort-common -Wl,--hash-style=both -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  src/misc/ls.cgi.o libtipidee.a.xyzzy /usr/lib/libskarnet.so  
+exec gcc -o tipideed -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--sort-section=alignment -Wl,--sort-common -Wl,--hash-style=both -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  src/tipideed/tipideed.o src/tipideed/cgi.o src/tipideed/errors.o src/tipideed/harden.o src/tipideed/options.o src/tipideed/regular.o src/tipideed/redirection.o src/tipideed/send_file.o src/tipideed/stream.o src/tipideed/trace.o src/tipideed/util.o libtipidee.a.xyzzy /usr/lib/libskarnet.so  
+exec gcc -o tipidee-config -pipe -Wall -std=c99 -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -O2 -fomit-frame-pointer -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--sort-section=alignment -Wl,--sort-common -Wl,--hash-style=both -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  src/config/tipidee-config.o src/config/util.o src/config/node.o src/config/repo.o src/config/conftree.o src/config/headers.o src/config/defaults.o src/config/lexparse.o /usr/lib/libskarnet.so  
+>>> tipidee: Entering fakeroot...
+./tools/install.sh -D -m 755 libtipidee.so.xyzzy /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/libtipidee.so.0.0.6.0 && \
+./tools/install.sh -l libtipidee.so.0.0.6.0 /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/libtipidee.so.0.0 && \
+exec ./tools/install.sh -l libtipidee.so.0.0 /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/libtipidee.so
+exec ./tools/install.sh -D -m 600 tipidee-config-preprocess /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/tipidee/tipidee-config-preprocess
+exec ./tools/install.sh -D -m 600 ls.cgi /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/tipidee/ls.cgi
+exec ./tools/install.sh -D -m 600 tipideed /home/packager/aports/main/tipidee/pkg/tipidee/usr/bin/tipideed
+exec ./tools/install.sh -D -m 600 tipidee-config /home/packager/aports/main/tipidee/pkg/tipidee/usr/bin/tipidee-config
+exec ./tools/install.sh -D -m 644 libtipidee.a.xyzzy /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/libtipidee.a
+exec ./tools/install.sh -D -m 644 src/include/tipidee/conf.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/conf.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/config.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/config.h
+grep -- ^tipidee-config-preprocess < package/modes | { read name mode owner && if [ x$owner != x ] ; then chown -- $owner /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/tipidee/tipidee-config-preprocess ; fi && chmod $mode /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/tipidee/tipidee-config-preprocess ; }
+grep -- ^ls.cgi < package/modes | { read name mode owner && if [ x$owner != x ] ; then chown -- $owner /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/tipidee/ls.cgi ; fi && chmod $mode /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/tipidee/ls.cgi ; }
+exec ./tools/install.sh -D -m 644 src/include/tipidee/headers.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/headers.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/log.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/log.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/method.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/method.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/resattr.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/resattr.h
+grep -- ^tipideed < package/modes | { read name mode owner && if [ x$owner != x ] ; then chown -- $owner /home/packager/aports/main/tipidee/pkg/tipidee/usr/bin/tipideed ; fi && chmod $mode /home/packager/aports/main/tipidee/pkg/tipidee/usr/bin/tipideed ; }
+exec ./tools/install.sh -D -m 644 src/include/tipidee/response.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/response.h
+grep -- ^tipidee-config < package/modes | { read name mode owner && if [ x$owner != x ] ; then chown -- $owner /home/packager/aports/main/tipidee/pkg/tipidee/usr/bin/tipidee-config ; fi && chmod $mode /home/packager/aports/main/tipidee/pkg/tipidee/usr/bin/tipidee-config ; }
+exec ./tools/install.sh -D -m 644 src/include/tipidee/rql.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/rql.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/tipidee.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/tipidee.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/uri.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/uri.h
+exec ./tools/install.sh -D -m 644 src/include/tipidee/util.h /home/packager/aports/main/tipidee/pkg/tipidee/usr/include/tipidee/util.h
+exec ./tools/install.sh -D -m 644 libtipidee.pc /home/packager/aports/main/tipidee/pkg/tipidee/usr/lib/pkgconfig/libtipidee.pc
+>>> tipidee-static*: Running split function static...
+'./usr/lib/libtipidee.a' -> '/home/packager/aports/main/tipidee/pkg/tipidee-static/./usr/lib/libtipidee.a'
+>>> tipidee-static*: Preparing subpackage tipidee-static...
+>>> tipidee-static*: Stripping binaries
+>>> tipidee-static*: Running postcheck for tipidee-static
+>>> tipidee-libs*: Running split function libs...
+'usr/lib/libtipidee.so.0.0' -> '/home/packager/aports/main/tipidee/pkg/tipidee-libs/usr/lib/libtipidee.so.0.0'
+'usr/lib/libtipidee.so.0.0.6.0' -> '/home/packager/aports/main/tipidee/pkg/tipidee-libs/usr/lib/libtipidee.so.0.0.6.0'
+>>> tipidee-libs*: Preparing subpackage tipidee-libs...
+>>> tipidee-libs*: Stripping binaries
+>>> WARNING: tipidee-libs*: Redundant /usr/lib in rpath found
+>>> tipidee-libs*: Running postcheck for tipidee-libs
+>>> tipidee-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/tipidee/pkg/tipidee-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/tipidee/pkg/tipidee-dev/usr/lib/pkgconfig'
+'usr/bin/tipidee-config' -> '/home/packager/aports/main/tipidee/pkg/tipidee-dev/usr/bin/tipidee-config'
+'usr/lib/libtipidee.so' -> '/home/packager/aports/main/tipidee/pkg/tipidee-dev/usr/lib/libtipidee.so'
+>>> tipidee-dev*: Preparing subpackage tipidee-dev...
+>>> tipidee-dev*: Stripping binaries
+>>> tipidee-dev*: Running postcheck for tipidee-dev
+>>> tipidee-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/tipidee/pkg/tipidee-doc/usr/share/doc'
+>>> tipidee-doc*: Preparing subpackage tipidee-doc...
+>>> tipidee-doc*: Running postcheck for tipidee-doc
+>>> tipidee-openrc*: Running split function openrc...
+'etc/conf.d' -> '/home/packager/aports/main/tipidee/pkg/tipidee-openrc/etc/conf.d'
+'etc/init.d' -> '/home/packager/aports/main/tipidee/pkg/tipidee-openrc/etc/init.d'
+>>> tipidee-openrc*: Preparing subpackage tipidee-openrc...
+>>> tipidee-openrc*: Running postcheck for tipidee-openrc
+>>> tipidee*: Running postcheck for tipidee
+>>> tipidee*: Preparing package tipidee...
+>>> tipidee*: Stripping binaries
+>>> tipidee*: Script found. /bin/sh added as a dependency for tipidee-0.0.6.0-r0.apk
+>>> tipidee*: Adding .pre-install
+>>> tipidee*: Adding .post-install
+>>> tipidee*: Adding .post-deinstall
+>>> tipidee-dev*: Scanning shared objects
+>>> tipidee-doc*: Scanning shared objects
+>>> tipidee-libs*: Scanning shared objects
+>>> tipidee-openrc*: Scanning shared objects
+>>> tipidee-static*: Scanning shared objects
+>>> tipidee*: Scanning shared objects
+>>> tipidee-dev*: Tracing dependencies...
+	pc:libskarnet>=2.14.4.0
+	pkgconfig
+	tipidee-libs=0.0.6.0-r0
+>>> tipidee-dev*: Package size: 11.9 KB
+>>> tipidee-dev*: Compressing data...
+>>> tipidee-dev*: Create checksum...
+pigz: not found
+>>> tipidee-dev*: Create tipidee-dev-0.0.6.0-r0.apk
+>>> tipidee-doc*: Tracing dependencies...
+>>> tipidee-doc*: Package size: 95.8 KB
+>>> tipidee-doc*: Compressing data...
+>>> tipidee-doc*: Create checksum...
+pigz: not found
+>>> tipidee-doc*: Create tipidee-doc-0.0.6.0-r0.apk
+>>> tipidee-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libskarnet.so.2.14
+>>> tipidee-libs*: Package size: 37.7 KB
+>>> tipidee-libs*: Compressing data...
+>>> tipidee-libs*: Create checksum...
+pigz: not found
+>>> tipidee-libs*: Create tipidee-libs-0.0.6.0-r0.apk
+>>> tipidee-openrc*: Tracing dependencies...
+>>> tipidee-openrc*: Package size: 1.9 KB
+>>> tipidee-openrc*: Compressing data...
+>>> tipidee-openrc*: Create checksum...
+pigz: not found
+>>> tipidee-openrc*: Create tipidee-openrc-0.0.6.0-r0.apk
+>>> tipidee-static*: Tracing dependencies...
+>>> tipidee-static*: Package size: 103.5 KB
+>>> tipidee-static*: Compressing data...
+>>> tipidee-static*: Create checksum...
+pigz: not found
+>>> tipidee-static*: Create tipidee-static-0.0.6.0-r0.apk
+>>> tipidee*: Tracing dependencies...
+	execline
+	s6
+	s6-networking
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libskarnet.so.2.14
+>>> tipidee*: Package size: 139.0 KB
+>>> tipidee*: Compressing data...
+>>> tipidee*: Create checksum...
+pigz: not found
+>>> tipidee*: Create tipidee-0.0.6.0-r0.apk
+>>> tipidee: Build complete at Sun, 18 May 2025 10:03:35 +0000 elapsed time 0h 0m 6s
+>>> tipidee: Cleaning up srcdir
+>>> tipidee: Cleaning up pkgdir
+>>> tipidee: Uninstalling dependencies...
+(1/12) Purging .makedepends-tipidee (20250518.100329)
+(2/12) Purging s6 (2.13.2.0-r0)
+(3/12) Purging s6-ipcserver (2.13.2.0-r0)
+(4/12) Purging execline (2.9.7.0-r0)
+Executing execline-2.9.7.0-r0.pre-deinstall
+(5/12) Purging s6-networking (2.7.1.0-r0)
+(6/12) Purging skalibs-dev (2.14.4.0-r0)
+(7/12) Purging execline-libs (2.9.7.0-r0)
+(8/12) Purging s6-dns-libs (2.4.1.0-r0)
+(9/12) Purging s6-libs (2.13.2.0-r0)
+(10/12) Purging s6-networking-libs (2.7.1.0-r0)
+(11/12) Purging skalibs-libs (2.14.4.0-r0)
+(12/12) Purging bearssl-libs (0.6_git20241009-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> tipidee: Updating the main/x86_64 repository index...
+>>> tipidee: Signing the index...
+pigz: not found

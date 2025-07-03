@@ -1,0 +1,251 @@
+pigz: not found
+>>> perl-html-parser: Building main/perl-html-parser 3.83-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:14:16 +0000
+>>> perl-html-parser: Validating /home/packager/aports/main/perl-html-parser/APKBUILD...
+>>> perl-html-parser: Analyzing dependencies...
+>>> perl-html-parser: Installing for build: build-base perl perl-html-tagset perl-http-message perl-uri perl-dev
+(1/16) Installing libbz2 (1.0.8-r6)
+(2/16) Installing perl (5.40.2-r0)
+(3/16) Installing perl-html-tagset (3.24-r0)
+(4/16) Installing perl-clone (0.47-r0)
+(5/16) Installing perl-http-date (6.06-r0)
+(6/16) Installing perl-uri (5.28-r0)
+(7/16) Installing perl-io-html (1.004-r1)
+(8/16) Installing perl-encode-locale (1.05-r5)
+(9/16) Installing perl-lwp-mediatypes (6.04-r3)
+(10/16) Installing perl-http-message (7.00-r0)
+(11/16) Installing perl-utils (5.40.2-r0)
+(12/16) Installing perl-dev (5.40.2-r0)
+(13/16) Installing .makedepends-perl-html-parser (20250518.071418)
+(14/16) Installing perl-error (0.17029-r2)
+(15/16) Installing perl-git (2.47.2-r0)
+(16/16) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 306 MiB in 97 packages
+>>> perl-html-parser: Cleaning up srcdir
+>>> perl-html-parser: Cleaning up pkgdir
+>>> perl-html-parser: Cleaning up tmpdir
+>>> perl-html-parser: Fetching https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.83.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/HTML-Parser-3.83.tar.gz.part'
+HTML-Parser-3.83.tar 100% |********************************|  147k  0:00:00 ETA
+'/var/cache/distfiles/HTML-Parser-3.83.tar.gz.part' saved
+>>> perl-html-parser: Fetching https://cpan.metacpan.org/authors/id/O/OA/OALDERS/HTML-Parser-3.83.tar.gz
+>>> perl-html-parser: Checking sha512sums...
+HTML-Parser-3.83.tar.gz: OK
+>>> perl-html-parser: Unpacking /var/cache/distfiles/HTML-Parser-3.83.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for HTML::Parser
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-html-parser/src/HTML-Parser-3.83/typemap'  Parser.xs > Parser.xsc
+Running Mkbootstrap for Parser ()
+chmod 644 "Parser.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Parser.bs blib/arch/auto/HTML/Parser/Parser.bs 644
+cp lib/HTML/Entities.pm blib/lib/HTML/Entities.pm
+cp lib/HTML/Parser.pm blib/lib/HTML/Parser.pm
+cp lib/HTML/LinkExtor.pm blib/lib/HTML/LinkExtor.pm
+cp lib/HTML/TokeParser.pm blib/lib/HTML/TokeParser.pm
+cp lib/HTML/Filter.pm blib/lib/HTML/Filter.pm
+cp lib/HTML/PullParser.pm blib/lib/HTML/PullParser.pm
+cp lib/HTML/HeadParser.pm blib/lib/HTML/HeadParser.pm
+mv Parser.xsc Parser.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"3.83\" -DXS_VERSION=\"3.83\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DMARKED_SECTION Parser.c
+In file included from Parser.xs:30:
+util.c: In function 'decode_entities':
+util.c:162:21: warning: 'Perl_uvuni_to_utf8' is deprecated [-Wdeprecated-declarations]
+  162 |                     tmp = (char*)uvuni_to_utf8((U8*)buf, num);
+      |                     ^~~
+In file included from /usr/lib/perl5/core_perl/CORE/perl.h:6186,
+                 from Parser.xs:11:
+/usr/lib/perl5/core_perl/CORE/proto.h:6043:1: note: declared here
+ 6043 | Perl_uvuni_to_utf8(pTHX_ U8 *d, UV uv)
+      | ^~~~~~~~~~~~~~~~~~
+rm -f blib/arch/auto/HTML/Parser/Parser.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Parser.o  -o blib/arch/auto/HTML/Parser/Parser.so  \
+      \
+  
+chmod 755 blib/arch/auto/HTML/Parser/Parser.so
+Manifying 7 pod documents
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Parser.bs blib/arch/auto/HTML/Parser/Parser.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module               Want     Have
+#     ------------------- ----- --------
+#     ExtUtils::MakeMaker  6.52     7.70
+#     perl                5.008 5.040002
+# 
+# === Configure Suggests ===
+# 
+#     Module      Want Have
+#     -------- ------- ----
+#     JSON::PP 2.27300 4.16
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module               Want     Have
+#     ------------------- ----- --------
+#     Config                any 5.040002
+#     ExtUtils::MakeMaker   any     7.70
+#     File::Spec            any     3.91
+#     IO::File              any     1.55
+#     SelectSaver           any     1.02
+#     Test::More            any 1.302199
+#     URI                   any     5.28
+#     perl                5.008 5.040002
+#     strict                any     1.13
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Runtime Requires ===
+# 
+#     Module         Want     Have
+#     ------------- ----- --------
+#     Carp            any     1.54
+#     Exporter        any     5.78
+#     HTML::Tagset    any     3.24
+#     HTTP::Headers   any     7.00
+#     IO::File        any     1.55
+#     URI             any     5.28
+#     URI::URL        any     5.28
+#     XSLoader        any     0.32
+#     perl          5.008 5.040002
+#     strict          any     1.13
+# 
+t/00-report-prereqs.t .. ok
+t/api_version.t ........ ok
+t/argspec-bad.t ........ ok
+t/argspec.t ............ ok
+t/argspec2.t ........... ok
+t/attr-encoded.t ....... ok
+t/callback.t ........... ok
+t/case-sensitive.t ..... ok
+t/cases.t .............. ok
+t/comment.t ............ ok
+t/crashme.t ............ ok
+t/declaration.t ........ ok
+t/default.t ............ ok
+t/document.t ........... ok
+t/dtext.t .............. ok
+t/entities.t ........... ok
+t/entities2.t .......... ok
+t/filter-methods.t ..... ok
+t/filter.t ............. ok
+t/free.t ............... ok
+t/handler-eof.t ........ ok
+t/handler.t ............ ok
+t/headparser-http.t .... ok
+t/headparser.t ......... ok
+t/ignore.t ............. ok
+t/largetags.t .......... ok
+t/linkextor-base.t ..... ok
+t/linkextor-rel.t ...... ok
+t/magic.t .............. ok
+t/marked-sect.t ........ ok
+t/msie-compat.t ........ ok
+t/offset.t ............. ok
+t/options.t ............ ok
+t/parsefile.t .......... ok
+t/parser.t ............. ok
+t/plaintext.t .......... ok
+t/process.t ............ ok
+t/pullparser.t ......... ok
+t/script.t ............. ok
+t/skipped-text.t ....... ok
+t/stack-realloc-eof.t .. ok
+t/stack-realloc.t ...... ok
+t/textarea.t ........... ok
+t/threads.t ............ ok
+t/tokeparser.t ......... ok
+t/uentities.t .......... ok
+t/unbroken-text.t ...... ok
+t/unicode-bom.t ........ ok
+t/unicode.t ............ ok
+t/xml-mode.t ........... ok
+All tests successful.
+Files=50, Tests=464,  4 wallclock secs ( 0.12 usr  0.08 sys +  3.60 cusr  0.68 csys =  4.48 CPU)
+Result: PASS
+>>> perl-html-parser: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Parser.bs blib/arch/auto/HTML/Parser/Parser.bs 644
+Manifying 7 pod documents
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/auto/HTML/Parser/Parser.so
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/Parser.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/PullParser.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/Filter.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/LinkExtor.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/HeadParser.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/Entities.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/lib/perl5/vendor_perl/HTML/TokeParser.pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::TokeParser.3pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::LinkExtor.3pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::HeadParser.3pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::Entities.3pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::PullParser.3pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::Filter.3pm
+Installing /home/packager/aports/main/perl-html-parser/pkg/perl-html-parser/usr/share/man/man3/HTML::Parser.3pm
+>>> perl-html-parser-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-html-parser/pkg/perl-html-parser-doc/usr/share/man'
+>>> perl-html-parser-doc*: Preparing subpackage perl-html-parser-doc...
+>>> perl-html-parser-doc*: Running postcheck for perl-html-parser-doc
+>>> perl-html-parser*: Running postcheck for perl-html-parser
+>>> perl-html-parser*: Preparing package perl-html-parser...
+>>> perl-html-parser*: Stripping binaries
+>>> perl-html-parser-doc*: Scanning shared objects
+>>> perl-html-parser*: Scanning shared objects
+>>> perl-html-parser-doc*: Tracing dependencies...
+>>> perl-html-parser-doc*: Package size: 29.5 KB
+>>> perl-html-parser-doc*: Compressing data...
+>>> perl-html-parser-doc*: Create checksum...
+pigz: not found
+>>> perl-html-parser-doc*: Create perl-html-parser-doc-3.83-r0.apk
+>>> perl-html-parser*: Tracing dependencies...
+	perl
+	perl-html-tagset
+	perl-http-message
+	perl-uri
+	so:libc.musl-x86_64.so.1
+>>> perl-html-parser*: Package size: 134.5 KB
+>>> perl-html-parser*: Compressing data...
+>>> perl-html-parser*: Create checksum...
+pigz: not found
+>>> perl-html-parser*: Create perl-html-parser-3.83-r0.apk
+>>> perl-html-parser: Build complete at Sun, 18 May 2025 07:14:27 +0000 elapsed time 0h 0m 11s
+>>> perl-html-parser: Cleaning up srcdir
+>>> perl-html-parser: Cleaning up pkgdir
+>>> perl-html-parser: Uninstalling dependencies...
+(1/16) Purging .makedepends-perl-html-parser (20250518.071418)
+(2/16) Purging perl-html-tagset (3.24-r0)
+(3/16) Purging perl-http-message (7.00-r0)
+(4/16) Purging perl-clone (0.47-r0)
+(5/16) Purging perl-http-date (6.06-r0)
+(6/16) Purging perl-io-html (1.004-r1)
+(7/16) Purging perl-encode-locale (1.05-r5)
+(8/16) Purging perl-lwp-mediatypes (6.04-r3)
+(9/16) Purging perl-uri (5.28-r0)
+(10/16) Purging perl-dev (5.40.2-r0)
+(11/16) Purging perl-utils (5.40.2-r0)
+(12/16) Purging git-perl (2.47.2-r0)
+(13/16) Purging perl-git (2.47.2-r0)
+(14/16) Purging perl-error (0.17029-r2)
+(15/16) Purging perl (5.40.2-r0)
+(16/16) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-html-parser: Updating the main/x86_64 repository index...
+>>> perl-html-parser: Signing the index...
+pigz: not found

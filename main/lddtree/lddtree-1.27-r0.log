@@ -1,0 +1,432 @@
+pigz: not found
+>>> lddtree: Building main/lddtree 1.27-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:00:18 +0000
+>>> lddtree: Validating /home/packager/aports/main/lddtree/APKBUILD...
+>>> lddtree: Analyzing dependencies...
+>>> lddtree: Installing for build: build-base scanelf kyua
+(1/5) Installing atf (0.21-r7)
+(2/5) Installing lutok (0.4-r6)
+(3/5) Installing sqlite-libs (3.49.2-r0)
+(4/5) Installing kyua (0.13-r8)
+(5/5) Installing .makedepends-lddtree (20250523.160023)
+Executing busybox-1.37.0-r12.trigger
+OK: 589 MiB in 137 packages
+>>> lddtree: Cleaning up srcdir
+>>> lddtree: Cleaning up pkgdir
+>>> lddtree: Cleaning up tmpdir
+>>> lddtree: Fetching lddtree-1.27.tar.gz::https://github.com/ncopa/lddtree/archive/v1.27.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lddtree-1.27.tar.gz.part'
+lddtree-1.27.tar.gz. 100% |********************************| 2127k  0:00:00 ETA
+'/var/cache/distfiles/lddtree-1.27.tar.gz.part' saved
+>>> lddtree: Fetching lddtree-1.27.tar.gz::https://github.com/ncopa/lddtree/archive/v1.27.tar.gz
+>>> lddtree: Checking sha512sums...
+lddtree-1.27.tar.gz: OK
+>>> lddtree: Unpacking /var/cache/distfiles/lddtree-1.27.tar.gz...
+echo "syntax(2)" > tests/Kyuafile.tmp
+echo "syntax(2)" > Kyuafile.tmp
+echo 'test_suite("lddtree")' >> tests/Kyuafile.tmp
+echo "test_suite('alpine-conf')" >> Kyuafile.tmp
+for i in lddtree_test; do \
+	echo "atf_test_program{name='$i',timeout=5}" >> tests/Kyuafile.tmp ; \
+done
+echo "include('tests/Kyuafile')" >> Kyuafile.tmp
+mv tests/Kyuafile.tmp tests/Kyuafile
+mv Kyuafile.tmp Kyuafile
+kyua test || (kyua report --verbose && exit 1)
+tests/lddtree_test:lddtree_ld_musl_path_conf  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/lddtree_test:lddtree_ldso_conf  ->  broken: Premature exit; test case exited with code 1  [0.051s]
+tests/lddtree_test:lddtree_no_auto_root  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/lddtree_test:lddtree_no_auto_root_list  ->  broken: Premature exit; test case exited with code 1  [0.066s]
+tests/lddtree_test:lddtree_root  ->  broken: Premature exit; test case exited with code 1  [0.049s]
+tests/lddtree_test:lddtree_rpath_origin_lib  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/lddtree_test:lddtree_sh  ->  broken: Premature exit; test case exited with code 1  [0.053s]
+tests/lddtree_test:lddtree_sh_all  ->  broken: Premature exit; test case exited with code 1  [0.050s]
+tests/lddtree_test:lddtree_sh_debug  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/lddtree_test:lddtree_sh_list  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/lddtree_test:lddtree_sh_missing_scanelf  ->  broken: Premature exit; test case exited with code 1  [0.057s]
+tests/lddtree_test:lddtree_usage  ->  broken: Premature exit; test case exited with code 1  [0.070s]
+tests/lddtree_test:lddtree_version  ->  broken: Premature exit; test case exited with code 1  [0.068s]
+
+Results file id is home_packager_aports_main_lddtree_src_lddtree-1.27.20250523-160026-280396
+Results saved to /home/packager/.kyua/store/results.home_packager_aports_main_lddtree_src_lddtree-1.27.20250523-160026-280396.db
+
+0/13 passed (13 failed)
+===> Execution context
+Current directory: /home/packager/aports/main/lddtree/src/lddtree-1.27
+Environment variables:
+    ABUILD_LAST_COMMIT=007305e7880a70d5c804019aa3da115da732776b
+    APORTSDIR=/home/packager/aports
+    BUILDCC=gcc
+    BUILDCFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt
+    BUILDCPPFLAGS=
+    BUILDCXX=g++
+    BUILDCXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt
+    BUILDLD=ld
+    BUILDLDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+    CARGO_BUILD_JOBS=8
+    CARGO_PROFILE_RELEASE_CODEGEN_UNITS=1
+    CARGO_PROFILE_RELEASE_LTO=true
+    CARGO_PROFILE_RELEASE_OPT_LEVEL=s
+    CARGO_PROFILE_RELEASE_PANIC=abort
+    CARGO_REGISTRIES_CRATES_IO_PROTOCOL=sparse
+    CC=gcc
+    CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt
+    CMAKE_BUILD_PARALLEL_LEVEL=8
+    COLUMNS=80
+    CTEST_NO_TESTS_ACTION=error
+    CTEST_OUTPUT_ON_FAILURE=ON
+    CTEST_PARALLEL_LEVEL=8
+    CXX=g++
+    CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt
+    DFLAGS=-Os
+    GIT_CEILING_DIRECTORIES=/home/packager/aports/main/lddtree
+    GOFLAGS=-buildmode=pie -modcacherw -trimpath -buildvcs=false
+    HOME=/home/packager
+    HOSTNAME=c0f350f9bdf0
+    JOBS=8
+    LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+    LINES=24
+    MAKEFLAGS= -j8 --jobserver-auth=fifo:/tmp/GMfifo20377
+    MAKELEVEL=1
+    MFLAGS=-j8 --jobserver-auth=fifo:/tmp/GMfifo20377
+    OLDPWD=/home/packager/aports/main/lddtree/src/lddtree-1.27
+    PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    PERL_MM_USE_DEFAULT=1
+    PWD=/home/packager/aports/main/lddtree/src/lddtree-1.27
+    REPODEST=/home/packager/packages/
+    RUSTFLAGS= -Clink-arg=-Wl,-z,pack-relative-relocs
+    SAMUFLAGS=-j8
+    SHLVL=1
+    SOURCE_DATE_EPOCH=1674481194
+    SRCDEST=/var/cache/distfiles
+    git=/usr/bin/git
+===> tests/lddtree_test:lddtree_ld_musl_path_conf
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:26.793907Z
+End time:   2025-05-23T16:00:26.857280Z
+Duration:   0.063s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_ldso_conf
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:26.858981Z
+End time:   2025-05-23T16:00:26.909674Z
+Duration:   0.051s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_no_auto_root
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:26.911321Z
+End time:   2025-05-23T16:00:26.974600Z
+Duration:   0.063s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_no_auto_root_list
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:26.976270Z
+End time:   2025-05-23T16:00:27.042563Z
+Duration:   0.066s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_root
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.044096Z
+End time:   2025-05-23T16:00:27.093042Z
+Duration:   0.049s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_rpath_origin_lib
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.094569Z
+End time:   2025-05-23T16:00:27.174566Z
+Duration:   0.080s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_sh
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.176242Z
+End time:   2025-05-23T16:00:27.229739Z
+Duration:   0.053s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_sh_all
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.231344Z
+End time:   2025-05-23T16:00:27.281562Z
+Duration:   0.050s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_sh_debug
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.283189Z
+End time:   2025-05-23T16:00:27.346561Z
+Duration:   0.063s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_sh_list
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.348169Z
+End time:   2025-05-23T16:00:27.410627Z
+Duration:   0.062s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_sh_missing_scanelf
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.412260Z
+End time:   2025-05-23T16:00:27.468817Z
+Duration:   0.057s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_usage
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.470706Z
+End time:   2025-05-23T16:00:27.540865Z
+Duration:   0.070s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> tests/lddtree_test:lddtree_version
+Result:     broken: Premature exit; test case exited with code 1
+Start time: 2025-05-23T16:00:27.542627Z
+End time:   2025-05-23T16:00:27.610572Z
+Duration:   0.068s
+
+Metadata:
+    allowed_architectures is empty
+    allowed_platforms is empty
+    description is empty
+    has_cleanup = false
+    is_exclusive = false
+    required_configs is empty
+    required_disk_space = 0
+    required_files is empty
+    required_memory = 0
+    required_programs is empty
+    required_user is empty
+    timeout = 300
+
+Standard error:
+lddtree_test: ERROR: Cannot provide test case names with -l
+lddtree_test: See atf-test-program(1) for usage details.
+===> Broken tests
+tests/lddtree_test:lddtree_ld_musl_path_conf  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/lddtree_test:lddtree_ldso_conf  ->  broken: Premature exit; test case exited with code 1  [0.051s]
+tests/lddtree_test:lddtree_no_auto_root  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/lddtree_test:lddtree_no_auto_root_list  ->  broken: Premature exit; test case exited with code 1  [0.066s]
+tests/lddtree_test:lddtree_root  ->  broken: Premature exit; test case exited with code 1  [0.049s]
+tests/lddtree_test:lddtree_rpath_origin_lib  ->  broken: Premature exit; test case exited with code 1  [0.080s]
+tests/lddtree_test:lddtree_sh  ->  broken: Premature exit; test case exited with code 1  [0.053s]
+tests/lddtree_test:lddtree_sh_all  ->  broken: Premature exit; test case exited with code 1  [0.050s]
+tests/lddtree_test:lddtree_sh_debug  ->  broken: Premature exit; test case exited with code 1  [0.063s]
+tests/lddtree_test:lddtree_sh_list  ->  broken: Premature exit; test case exited with code 1  [0.062s]
+tests/lddtree_test:lddtree_sh_missing_scanelf  ->  broken: Premature exit; test case exited with code 1  [0.057s]
+tests/lddtree_test:lddtree_usage  ->  broken: Premature exit; test case exited with code 1  [0.070s]
+tests/lddtree_test:lddtree_version  ->  broken: Premature exit; test case exited with code 1  [0.068s]
+===> Summary
+Results read from /home/packager/.kyua/store/results.home_packager_aports_main_lddtree_src_lddtree-1.27.20250523-160026-280396.db
+Test cases: 13 total, 0 skipped, 0 expected failures, 13 broken, 0 failed
+Start time: 2025-05-23T16:00:26.793907Z
+End time:   2025-05-23T16:00:27.610572Z
+Total time: 0.797s
+make: *** [Makefile:3: check] Error 1
+>>> ERROR: lddtree: check failed
+>>> lddtree: Uninstalling dependencies...
+(1/5) Purging .makedepends-lddtree (20250523.160023)
+(2/5) Purging kyua (0.13-r8)
+(3/5) Purging atf (0.21-r7)
+(4/5) Purging lutok (0.4-r6)
+(5/5) Purging sqlite-libs (3.49.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,222 @@
+pigz: not found
+>>> xmlto: Building main/xmlto 0.0.29-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 06:42:34 +0000
+>>> xmlto: Validating /home/packager/aports/main/xmlto/APKBUILD...
+>>> xmlto: Analyzing dependencies...
+>>> xmlto: Installing for build: build-base libxslt perl-yaml-syck perl-test-pod cmd:bash docbook-xsl autoconf automake
+(1/12) Installing libgcrypt (1.10.3-r1)
+(2/12) Installing xz-libs (5.6.3-r1)
+(3/12) Installing libxml2 (2.13.4-r6)
+(4/12) Installing libxslt (1.1.42-r2)
+(5/12) Installing perl-yaml-syck (1.34-r5)
+(6/12) Installing perl-test-pod (1.52-r4)
+(7/12) Installing libxml2-utils (2.13.4-r6)
+(8/12) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(9/12) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(10/12) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(11/12) Installing docbook-xsl (1.79.2-r11)
+(12/12) Installing .makedepends-xmlto (20250523.064236)
+Executing busybox-1.37.0-r12.trigger
+OK: 344 MiB in 121 packages
+>>> xmlto: Cleaning up srcdir
+>>> xmlto: Cleaning up pkgdir
+>>> xmlto: Cleaning up tmpdir
+>>> xmlto: Fetching https://www.pagure.io/xmlto/archive/0.0.29/xmlto-0.0.29.tar.gz
+Connecting to www.pagure.io (8.43.85.76:443)
+saving to '/var/cache/distfiles/xmlto-0.0.29.tar.gz.part'
+xmlto-0.0.29.tar.gz. 100% |********************************| 64619  0:00:00 ETA
+'/var/cache/distfiles/xmlto-0.0.29.tar.gz.part' saved
+>>> xmlto: Fetching https://www.pagure.io/xmlto/archive/0.0.29/xmlto-0.0.29.tar.gz
+>>> xmlto: Checking sha512sums...
+xmlto-0.0.29.tar.gz: OK
+>>> xmlto: Unpacking /var/cache/distfiles/xmlto-0.0.29.tar.gz...
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force 
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:8: warning: AC_PROG_LEX without either yywrap or noyywrap is obsolete
+./lib/autoconf/programs.m4:743: _AC_PROG_LEX is expanded from...
+./lib/autoconf/programs.m4:736: AC_PROG_LEX is expanded from...
+aclocal.m4:630: AM_PROG_LEX is expanded from...
+configure.ac:8: the top level
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:6: installing './compile'
+configure.ac:3: installing './install-sh'
+configure.ac:3: installing './missing'
+Makefile.am: installing './depcomp'
+configure.ac: installing './ylwrap'
+parallel-tests: installing './test-driver'
+autoreconf: Leaving directory '.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for flex... no
+checking for lex... no
+checking for mktemp... mktemp
+checking for find... find 
+checking for bash... /bin/bash
+checking for getopt... getopt
+checking for long options support in getopt... yes
+checking for paperconf... paperconf
+checking for locale... locale
+checking for xmllint... /usr/bin/xmllint
+checking for xsltproc... /usr/bin/xsltproc
+checking for dblatex... dblatex
+checking for fop... fop
+checking for xmltex... xmltex
+checking for pdfxmltex... pdfxmltex
+checking for default backend... DEFAULT
+checking for lynx... lynx
+checking for elinks... elinks
+checking for w3m... w3m
+checking for tail... /usr/bin/tail
+checking for grep... /bin/grep
+checking for sed... /bin/sed
+checking for cp... /bin/cp
+checking for zip... zip
+checking for default web browser... w3m
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating xmlto
+config.status: creating xmlto.spec
+config.status: creating config.h
+config.status: executing depfiles commands
+make  all-am
+make[1]: Entering directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+depbase=`echo xmlif/xmlif.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+gcc -DHAVE_CONFIG_H -I.     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT xmlif/xmlif.o -MD -MP -MF $depbase.Tpo -c -o xmlif/xmlif.o xmlif/xmlif.c &&\
+mv -f $depbase.Tpo $depbase.Po
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o xmlif/xmlif xmlif/xmlif.o  
+FORMAT_DIR=./format /bin/bash ./xmlto --skip-validation -o man/man1 man doc/xmlto.xml
+elinks: not found
+links: not found
+w3m: not found
+lynx: not found
+zip: not found
+cygpath: not found
+Note: Writing xmlto.1
+FORMAT_DIR=./format /bin/bash ./xmlto --skip-validation -o man/man1 man doc/xmlif.xml
+elinks: not found
+links: not found
+w3m: not found
+lynx: not found
+zip: not found
+cygpath: not found
+Note: Writing xmlif.1
+make[1]: Leaving directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+make  check-TESTS
+make[1]: Entering directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+make[2]: Entering directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+PASS: xmlif/test/run-test
+============================================================================
+Testsuite summary for xmlto 0.0.29
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[2]: Leaving directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+make[1]: Leaving directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+>>> xmlto: Entering fakeroot...
+make[1]: Entering directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/bin'
+  /usr/bin/install -c xmlif/xmlif '/home/packager/aports/main/xmlto/pkg/xmlto/usr/bin'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/bin'
+ /usr/bin/install -c xmlto '/home/packager/aports/main/xmlto/pkg/xmlto/usr/bin'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/man/man1'
+ /usr/bin/install -c -m 644 man/man1/xmlto.1 man/man1/xmlif.1 '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/man/man1'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/format/docbook'
+ /usr/bin/install -c -m 644  format/docbook/dvi format/docbook/epub format/docbook/fo format/docbook/html format/docbook/html-nochunks format/docbook/xhtml format/docbook/xhtml-nochunks format/docbook/man format/docbook/pdf format/docbook/ps format/docbook/txt format/docbook/htmlhelp format/docbook/javahelp format/docbook/mif format/docbook/pcl format/docbook/svg format/docbook/awt '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/format/docbook'
+ /usr/bin/install -c -m 644  xmlto.mak '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/.'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/format/fo'
+ /usr/bin/install -c -m 644  format/fo/ps format/fo/awt format/fo/mif format/fo/pcl format/fo/svg format/fo/txt format/fo/dvi format/fo/pdf '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/format/fo'
+ /bin/mkdir -p '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/format/xhtml1'
+ /usr/bin/install -c -m 644  format/xhtml1/dvi format/xhtml1/fo format/xhtml1/pdf format/xhtml1/ps format/xhtml1/txt format/xhtml1/awt format/xhtml1/mif format/xhtml1/pcl format/xhtml1/svg '/home/packager/aports/main/xmlto/pkg/xmlto/usr/share/xmlto/format/xhtml1'
+make[1]: Leaving directory '/home/packager/aports/main/xmlto/src/xmlto-0.0.29'
+>>> xmlto-doc*: Running split function doc...
+renamed 'usr/share/man' -> '/home/packager/aports/main/xmlto/pkg/xmlto-doc/usr/share/man'
+>>> xmlto-doc*: Preparing subpackage xmlto-doc...
+libfakeroot internal error: payload not recognized!
+>>> xmlto-doc*: Running postcheck for xmlto-doc
+>>> xmlto*: Running postcheck for xmlto
+>>> xmlto*: Preparing package xmlto...
+>>> xmlto*: Stripping binaries
+>>> xmlto-doc*: Scanning shared objects
+>>> xmlto*: Scanning shared objects
+>>> xmlto-doc*: Tracing dependencies...
+>>> xmlto-doc*: Package size: 4.9 KB
+>>> xmlto-doc*: Compressing data...
+>>> xmlto-doc*: Create checksum...
+pigz: not found
+>>> xmlto-doc*: Create xmlto-doc-0.0.29-r0.apk
+>>> xmlto*: Tracing dependencies...
+	libxslt
+	perl-yaml-syck
+	perl-test-pod
+	cmd:bash
+	docbook-xsl
+	so:libc.musl-x86_64.so.1
+>>> xmlto*: Package size: 73.9 KB
+>>> xmlto*: Compressing data...
+>>> xmlto*: Create checksum...
+pigz: not found
+>>> xmlto*: Create xmlto-0.0.29-r0.apk
+>>> xmlto: Build complete at Fri, 23 May 2025 06:42:52 +0000 elapsed time 0h 0m 18s
+>>> xmlto: Cleaning up srcdir
+>>> xmlto: Cleaning up pkgdir
+>>> xmlto: Uninstalling dependencies...
+(1/12) Purging .makedepends-xmlto (20250523.064236)
+(2/12) Purging perl-yaml-syck (1.34-r5)
+(3/12) Purging perl-test-pod (1.52-r4)
+(4/12) Purging docbook-xsl (1.79.2-r11)
+(5/12) Purging docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.pre-deinstall
+(6/12) Purging docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.pre-deinstall
+(7/12) Purging docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.pre-deinstall
+(8/12) Purging libxml2-utils (2.13.4-r6)
+(9/12) Purging libxslt (1.1.42-r2)
+(10/12) Purging libgcrypt (1.10.3-r1)
+(11/12) Purging libxml2 (2.13.4-r6)
+(12/12) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 109 packages
+>>> xmlto: Updating the main/x86_64 repository index...
+>>> xmlto: Signing the index...
+pigz: not found

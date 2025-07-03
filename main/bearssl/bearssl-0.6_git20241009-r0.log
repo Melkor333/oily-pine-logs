@@ -1,0 +1,565 @@
+pigz: not found
+>>> bearssl: Building main/bearssl 0.6_git20241009-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:52:02 +0000
+>>> bearssl: Validating /home/packager/aports/main/bearssl/APKBUILD...
+>>> bearssl: Analyzing dependencies...
+>>> bearssl: Installing for build: build-base
+(1/1) Installing .makedepends-bearssl (20250518.085202)
+OK: 261 MiB in 82 packages
+>>> bearssl: Cleaning up srcdir
+>>> bearssl: Cleaning up pkgdir
+>>> bearssl: Cleaning up tmpdir
+>>> bearssl: Fetching bearssl-0.6_git20241009.tar.gz::https://bearssl.org/gitweb/?p=BearSSL;a=snapshot;h=3c040368f6791553610e362401db1efff4b4c5b8;sf=tgz
+Connecting to bearssl.org (158.69.204.153:443)
+saving to '/var/cache/distfiles/bearssl-0.6_git20241009.tar.gz.part'
+bearssl-0.6_git20241 97790 --:--:-- ETA
+bearssl-0.6_git20241 100% |********************************|  845k  0:00:00 ETA
+'/var/cache/distfiles/bearssl-0.6_git20241009.tar.gz.part' saved
+>>> bearssl: Fetching bearssl-0.6_git20241009.tar.gz::https://bearssl.org/gitweb/?p=BearSSL;a=snapshot;h=3c040368f6791553610e362401db1efff4b4c5b8;sf=tgz
+>>> bearssl: Checking sha512sums...
+bearssl-0.6_git20241009.tar.gz: OK
+bearssl-brssl-dynamic.patch: OK
+bearssl.pc: OK
+>>> bearssl: Unpacking /var/cache/distfiles/bearssl-0.6_git20241009.tar.gz...
+>>> bearssl: bearssl-brssl-dynamic.patch
+patching file mk/Rules.mk
+Hunk #1 succeeded at 363 (offset 314 lines).
+mkdir -p build/obj
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/settings.o src/settings.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ccm.o src/aead/ccm.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/eax.o src/aead/eax.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/gcm.o src/aead/gcm.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ccopy.o src/codec/ccopy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dec16be.o src/codec/dec16be.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dec16le.o src/codec/dec16le.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dec32be.o src/codec/dec32be.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dec32le.o src/codec/dec32le.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dec64be.o src/codec/dec64be.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dec64le.o src/codec/dec64le.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/enc16be.o src/codec/enc16be.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/enc16le.o src/codec/enc16le.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/enc32be.o src/codec/enc32be.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/enc32le.o src/codec/enc32le.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/enc64be.o src/codec/enc64be.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/enc64le.o src/codec/enc64le.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/pemdec.o src/codec/pemdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/pemenc.o src/codec/pemenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_all_m15.o src/ec/ec_all_m15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_all_m31.o src/ec/ec_all_m31.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_c25519_i15.o src/ec/ec_c25519_i15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_c25519_i31.o src/ec/ec_c25519_i31.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_c25519_m15.o src/ec/ec_c25519_m15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_c25519_m31.o src/ec/ec_c25519_m31.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_c25519_m62.o src/ec/ec_c25519_m62.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_c25519_m64.o src/ec/ec_c25519_m64.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_curve25519.o src/ec/ec_curve25519.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_default.o src/ec/ec_default.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_keygen.o src/ec/ec_keygen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_p256_m15.o src/ec/ec_p256_m15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_p256_m31.o src/ec/ec_p256_m31.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_p256_m62.o src/ec/ec_p256_m62.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_p256_m64.o src/ec/ec_p256_m64.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_prime_i15.o src/ec/ec_prime_i15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_prime_i31.o src/ec/ec_prime_i31.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_pubkey.o src/ec/ec_pubkey.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_secp256r1.o src/ec/ec_secp256r1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_secp384r1.o src/ec/ec_secp384r1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ec_secp521r1.o src/ec/ec_secp521r1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_atr.o src/ec/ecdsa_atr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_default_sign_asn1.o src/ec/ecdsa_default_sign_asn1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_default_sign_raw.o src/ec/ecdsa_default_sign_raw.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_default_vrfy_asn1.o src/ec/ecdsa_default_vrfy_asn1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_default_vrfy_raw.o src/ec/ecdsa_default_vrfy_raw.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i15_bits.o src/ec/ecdsa_i15_bits.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i15_sign_asn1.o src/ec/ecdsa_i15_sign_asn1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i15_sign_raw.o src/ec/ecdsa_i15_sign_raw.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i15_vrfy_asn1.o src/ec/ecdsa_i15_vrfy_asn1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i15_vrfy_raw.o src/ec/ecdsa_i15_vrfy_raw.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i31_bits.o src/ec/ecdsa_i31_bits.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i31_sign_asn1.o src/ec/ecdsa_i31_sign_asn1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i31_sign_raw.o src/ec/ecdsa_i31_sign_raw.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i31_vrfy_asn1.o src/ec/ecdsa_i31_vrfy_asn1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_i31_vrfy_raw.o src/ec/ecdsa_i31_vrfy_raw.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ecdsa_rta.o src/ec/ecdsa_rta.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dig_oid.o src/hash/dig_oid.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/dig_size.o src/hash/dig_size.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ghash_ctmul.o src/hash/ghash_ctmul.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ghash_ctmul32.o src/hash/ghash_ctmul32.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ghash_ctmul64.o src/hash/ghash_ctmul64.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ghash_pclmul.o src/hash/ghash_pclmul.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ghash_pwr8.o src/hash/ghash_pwr8.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/md5.o src/hash/md5.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/md5sha1.o src/hash/md5sha1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/mgf1.o src/hash/mgf1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/multihash.o src/hash/multihash.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/sha1.o src/hash/sha1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/sha2big.o src/hash/sha2big.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/sha2small.o src/hash/sha2small.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_add.o src/int/i15_add.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_bitlen.o src/int/i15_bitlen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_decmod.o src/int/i15_decmod.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_decode.o src/int/i15_decode.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_decred.o src/int/i15_decred.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_encode.o src/int/i15_encode.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_fmont.o src/int/i15_fmont.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_iszero.o src/int/i15_iszero.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_moddiv.o src/int/i15_moddiv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_modpow.o src/int/i15_modpow.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_modpow2.o src/int/i15_modpow2.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_montmul.o src/int/i15_montmul.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_mulacc.o src/int/i15_mulacc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_muladd.o src/int/i15_muladd.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_ninv15.o src/int/i15_ninv15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_reduce.o src/int/i15_reduce.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_rshift.o src/int/i15_rshift.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_sub.o src/int/i15_sub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i15_tmont.o src/int/i15_tmont.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_add.o src/int/i31_add.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_bitlen.o src/int/i31_bitlen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_decmod.o src/int/i31_decmod.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_decode.o src/int/i31_decode.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_decred.o src/int/i31_decred.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_encode.o src/int/i31_encode.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_fmont.o src/int/i31_fmont.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_iszero.o src/int/i31_iszero.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_moddiv.o src/int/i31_moddiv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_modpow.o src/int/i31_modpow.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_modpow2.o src/int/i31_modpow2.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_montmul.o src/int/i31_montmul.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_mulacc.o src/int/i31_mulacc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_muladd.o src/int/i31_muladd.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_ninv31.o src/int/i31_ninv31.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_reduce.o src/int/i31_reduce.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_rshift.o src/int/i31_rshift.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_sub.o src/int/i31_sub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i31_tmont.o src/int/i31_tmont.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_add.o src/int/i32_add.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_bitlen.o src/int/i32_bitlen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_decmod.o src/int/i32_decmod.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_decode.o src/int/i32_decode.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_decred.o src/int/i32_decred.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_div32.o src/int/i32_div32.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_encode.o src/int/i32_encode.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_fmont.o src/int/i32_fmont.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_iszero.o src/int/i32_iszero.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_modpow.o src/int/i32_modpow.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_montmul.o src/int/i32_montmul.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_mulacc.o src/int/i32_mulacc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_muladd.o src/int/i32_muladd.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_ninv32.o src/int/i32_ninv32.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_reduce.o src/int/i32_reduce.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_sub.o src/int/i32_sub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i32_tmont.o src/int/i32_tmont.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/i62_modpow2.o src/int/i62_modpow2.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/hkdf.o src/kdf/hkdf.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/shake.o src/kdf/shake.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/hmac.o src/mac/hmac.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/hmac_ct.o src/mac/hmac_ct.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aesctr_drbg.o src/rand/aesctr_drbg.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/hmac_drbg.o src/rand/hmac_drbg.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/sysrng.o src/rand/sysrng.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_keygen.o src/rsa/rsa_default_keygen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_modulus.o src/rsa/rsa_default_modulus.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_oaep_decrypt.o src/rsa/rsa_default_oaep_decrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_oaep_encrypt.o src/rsa/rsa_default_oaep_encrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_pkcs1_sign.o src/rsa/rsa_default_pkcs1_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_pkcs1_vrfy.o src/rsa/rsa_default_pkcs1_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_priv.o src/rsa/rsa_default_priv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_privexp.o src/rsa/rsa_default_privexp.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_pss_sign.o src/rsa/rsa_default_pss_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_pss_vrfy.o src/rsa/rsa_default_pss_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_pub.o src/rsa/rsa_default_pub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_default_pubexp.o src/rsa/rsa_default_pubexp.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_keygen.o src/rsa/rsa_i15_keygen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_modulus.o src/rsa/rsa_i15_modulus.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_oaep_decrypt.o src/rsa/rsa_i15_oaep_decrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_oaep_encrypt.o src/rsa/rsa_i15_oaep_encrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_pkcs1_sign.o src/rsa/rsa_i15_pkcs1_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_pkcs1_vrfy.o src/rsa/rsa_i15_pkcs1_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_priv.o src/rsa/rsa_i15_priv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_privexp.o src/rsa/rsa_i15_privexp.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_pss_sign.o src/rsa/rsa_i15_pss_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_pss_vrfy.o src/rsa/rsa_i15_pss_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_pub.o src/rsa/rsa_i15_pub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i15_pubexp.o src/rsa/rsa_i15_pubexp.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_keygen.o src/rsa/rsa_i31_keygen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_keygen_inner.o src/rsa/rsa_i31_keygen_inner.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_modulus.o src/rsa/rsa_i31_modulus.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_oaep_decrypt.o src/rsa/rsa_i31_oaep_decrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_oaep_encrypt.o src/rsa/rsa_i31_oaep_encrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_pkcs1_sign.o src/rsa/rsa_i31_pkcs1_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_pkcs1_vrfy.o src/rsa/rsa_i31_pkcs1_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_priv.o src/rsa/rsa_i31_priv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_privexp.o src/rsa/rsa_i31_privexp.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_pss_sign.o src/rsa/rsa_i31_pss_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_pss_vrfy.o src/rsa/rsa_i31_pss_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_pub.o src/rsa/rsa_i31_pub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i31_pubexp.o src/rsa/rsa_i31_pubexp.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_oaep_decrypt.o src/rsa/rsa_i32_oaep_decrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_oaep_encrypt.o src/rsa/rsa_i32_oaep_encrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_pkcs1_sign.o src/rsa/rsa_i32_pkcs1_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_pkcs1_vrfy.o src/rsa/rsa_i32_pkcs1_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_priv.o src/rsa/rsa_i32_priv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_pss_sign.o src/rsa/rsa_i32_pss_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_pss_vrfy.o src/rsa/rsa_i32_pss_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i32_pub.o src/rsa/rsa_i32_pub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_keygen.o src/rsa/rsa_i62_keygen.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_oaep_decrypt.o src/rsa/rsa_i62_oaep_decrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_oaep_encrypt.o src/rsa/rsa_i62_oaep_encrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_pkcs1_sign.o src/rsa/rsa_i62_pkcs1_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_pkcs1_vrfy.o src/rsa/rsa_i62_pkcs1_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_priv.o src/rsa/rsa_i62_priv.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_pss_sign.o src/rsa/rsa_i62_pss_sign.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_pss_vrfy.o src/rsa/rsa_i62_pss_vrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_i62_pub.o src/rsa/rsa_i62_pub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_oaep_pad.o src/rsa/rsa_oaep_pad.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_oaep_unpad.o src/rsa/rsa_oaep_unpad.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_pkcs1_sig_pad.o src/rsa/rsa_pkcs1_sig_pad.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_pkcs1_sig_unpad.o src/rsa/rsa_pkcs1_sig_unpad.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_pss_sig_pad.o src/rsa/rsa_pss_sig_pad.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_pss_sig_unpad.o src/rsa/rsa_pss_sig_unpad.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/rsa_ssl_decrypt.o src/rsa/rsa_ssl_decrypt.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/prf.o src/ssl/prf.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/prf_md5sha1.o src/ssl/prf_md5sha1.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/prf_sha256.o src/ssl/prf_sha256.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/prf_sha384.o src/ssl/prf_sha384.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_ccert_single_ec.o src/ssl/ssl_ccert_single_ec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_ccert_single_rsa.o src/ssl/ssl_ccert_single_rsa.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_client.o src/ssl/ssl_client.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_client_default_rsapub.o src/ssl/ssl_client_default_rsapub.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_client_full.o src/ssl/ssl_client_full.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine.o src/ssl/ssl_engine.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_aescbc.o src/ssl/ssl_engine_default_aescbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_aesccm.o src/ssl/ssl_engine_default_aesccm.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_aesgcm.o src/ssl/ssl_engine_default_aesgcm.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_chapol.o src/ssl/ssl_engine_default_chapol.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_descbc.o src/ssl/ssl_engine_default_descbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_ec.o src/ssl/ssl_engine_default_ec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_ecdsa.o src/ssl/ssl_engine_default_ecdsa.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_engine_default_rsavrfy.o src/ssl/ssl_engine_default_rsavrfy.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_hashes.o src/ssl/ssl_hashes.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_hs_client.o src/ssl/ssl_hs_client.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_hs_server.o src/ssl/ssl_hs_server.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_io.o src/ssl/ssl_io.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_keyexport.o src/ssl/ssl_keyexport.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_lru.o src/ssl/ssl_lru.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_rec_cbc.o src/ssl/ssl_rec_cbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_rec_ccm.o src/ssl/ssl_rec_ccm.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_rec_chapol.o src/ssl/ssl_rec_chapol.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_rec_gcm.o src/ssl/ssl_rec_gcm.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_scert_single_ec.o src/ssl/ssl_scert_single_ec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_scert_single_rsa.o src/ssl/ssl_scert_single_rsa.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server.o src/ssl/ssl_server.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_full_ec.o src/ssl/ssl_server_full_ec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_full_rsa.o src/ssl/ssl_server_full_rsa.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_mine2c.o src/ssl/ssl_server_mine2c.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_mine2g.o src/ssl/ssl_server_mine2g.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_minf2c.o src/ssl/ssl_server_minf2c.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_minf2g.o src/ssl/ssl_server_minf2g.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_minr2g.o src/ssl/ssl_server_minr2g.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_minu2g.o src/ssl/ssl_server_minu2g.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ssl_server_minv2g.o src/ssl/ssl_server_minv2g.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_big_cbcdec.o src/symcipher/aes_big_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_big_cbcenc.o src/symcipher/aes_big_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_big_ctr.o src/symcipher/aes_big_ctr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_big_ctrcbc.o src/symcipher/aes_big_ctrcbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_big_dec.o src/symcipher/aes_big_dec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_big_enc.o src/symcipher/aes_big_enc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_common.o src/symcipher/aes_common.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct.o src/symcipher/aes_ct.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64.o src/symcipher/aes_ct64.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64_cbcdec.o src/symcipher/aes_ct64_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64_cbcenc.o src/symcipher/aes_ct64_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64_ctr.o src/symcipher/aes_ct64_ctr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64_ctrcbc.o src/symcipher/aes_ct64_ctrcbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64_dec.o src/symcipher/aes_ct64_dec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct64_enc.o src/symcipher/aes_ct64_enc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct_cbcdec.o src/symcipher/aes_ct_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct_cbcenc.o src/symcipher/aes_ct_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct_ctr.o src/symcipher/aes_ct_ctr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct_ctrcbc.o src/symcipher/aes_ct_ctrcbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct_dec.o src/symcipher/aes_ct_dec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_ct_enc.o src/symcipher/aes_ct_enc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_pwr8.o src/symcipher/aes_pwr8.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_pwr8_cbcdec.o src/symcipher/aes_pwr8_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_pwr8_cbcenc.o src/symcipher/aes_pwr8_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_pwr8_ctr.o src/symcipher/aes_pwr8_ctr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_pwr8_ctrcbc.o src/symcipher/aes_pwr8_ctrcbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_small_cbcdec.o src/symcipher/aes_small_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_small_cbcenc.o src/symcipher/aes_small_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_small_ctr.o src/symcipher/aes_small_ctr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_small_ctrcbc.o src/symcipher/aes_small_ctrcbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_small_dec.o src/symcipher/aes_small_dec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_small_enc.o src/symcipher/aes_small_enc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_x86ni.o src/symcipher/aes_x86ni.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_x86ni_cbcdec.o src/symcipher/aes_x86ni_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_x86ni_cbcenc.o src/symcipher/aes_x86ni_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_x86ni_ctr.o src/symcipher/aes_x86ni_ctr.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/aes_x86ni_ctrcbc.o src/symcipher/aes_x86ni_ctrcbc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/chacha20_ct.o src/symcipher/chacha20_ct.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/chacha20_sse2.o src/symcipher/chacha20_sse2.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_ct.o src/symcipher/des_ct.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_ct_cbcdec.o src/symcipher/des_ct_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_ct_cbcenc.o src/symcipher/des_ct_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_support.o src/symcipher/des_support.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_tab.o src/symcipher/des_tab.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_tab_cbcdec.o src/symcipher/des_tab_cbcdec.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/des_tab_cbcenc.o src/symcipher/des_tab_cbcenc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/poly1305_ctmul.o src/symcipher/poly1305_ctmul.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/poly1305_ctmul32.o src/symcipher/poly1305_ctmul32.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/poly1305_ctmulq.o src/symcipher/poly1305_ctmulq.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/poly1305_i15.o src/symcipher/poly1305_i15.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/asn1enc.o src/x509/asn1enc.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/encode_ec_pk8der.o src/x509/encode_ec_pk8der.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/encode_ec_rawder.o src/x509/encode_ec_rawder.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/encode_rsa_pk8der.o src/x509/encode_rsa_pk8der.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/encode_rsa_rawder.o src/x509/encode_rsa_rawder.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/skey_decoder.o src/x509/skey_decoder.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/x509_decoder.o src/x509/x509_decoder.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/x509_knownkey.o src/x509/x509_knownkey.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/x509_minimal.o src/x509/x509_minimal.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/x509_minimal_full.o src/x509/x509_minimal_full.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/brssl.o tools/brssl.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/certs.o tools/certs.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/chain.o tools/chain.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/client.o tools/client.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/errors.o tools/errors.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/files.o tools/files.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/impl.o tools/impl.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/keys.o tools/keys.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/names.o tools/names.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/server.o tools/server.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/skey.o tools/skey.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/sslio.o tools/sslio.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/ta.o tools/ta.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/twrch.o tools/twrch.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/vector.o tools/vector.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/verify.o tools/verify.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/xmem.o tools/xmem.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/test_crypto.o test/test_crypto.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -c -o build/obj/test_speed.o test/test_speed.c
+gcc -W -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Isrc -Iinc -DSRCDIRNAME=".." -c -o build/obj/test_x509.o test/test_x509.c
+ar -rcs build/libbearssl.a build/obj/settings.o  build/obj/ccm.o  build/obj/eax.o  build/obj/gcm.o  build/obj/ccopy.o  build/obj/dec16be.o  build/obj/dec16le.o  build/obj/dec32be.o  build/obj/dec32le.o  build/obj/dec64be.o  build/obj/dec64le.o  build/obj/enc16be.o  build/obj/enc16le.o  build/obj/enc32be.o  build/obj/enc32le.o  build/obj/enc64be.o  build/obj/enc64le.o  build/obj/pemdec.o  build/obj/pemenc.o  build/obj/ec_all_m15.o  build/obj/ec_all_m31.o  build/obj/ec_c25519_i15.o  build/obj/ec_c25519_i31.o  build/obj/ec_c25519_m15.o  build/obj/ec_c25519_m31.o  build/obj/ec_c25519_m62.o  build/obj/ec_c25519_m64.o  build/obj/ec_curve25519.o  build/obj/ec_default.o  build/obj/ec_keygen.o  build/obj/ec_p256_m15.o  build/obj/ec_p256_m31.o  build/obj/ec_p256_m62.o  build/obj/ec_p256_m64.o  build/obj/ec_prime_i15.o  build/obj/ec_prime_i31.o  build/obj/ec_pubkey.o  build/obj/ec_secp256r1.o  build/obj/ec_secp384r1.o  build/obj/ec_secp521r1.o  build/obj/ecdsa_atr.o  build/obj/ecdsa_default_sign_asn1.o  build/obj/ecdsa_default_sign_raw.o  build/obj/ecdsa_default_vrfy_asn1.o  build/obj/ecdsa_default_vrfy_raw.o  build/obj/ecdsa_i15_bits.o  build/obj/ecdsa_i15_sign_asn1.o  build/obj/ecdsa_i15_sign_raw.o  build/obj/ecdsa_i15_vrfy_asn1.o  build/obj/ecdsa_i15_vrfy_raw.o  build/obj/ecdsa_i31_bits.o  build/obj/ecdsa_i31_sign_asn1.o  build/obj/ecdsa_i31_sign_raw.o  build/obj/ecdsa_i31_vrfy_asn1.o  build/obj/ecdsa_i31_vrfy_raw.o  build/obj/ecdsa_rta.o  build/obj/dig_oid.o  build/obj/dig_size.o  build/obj/ghash_ctmul.o  build/obj/ghash_ctmul32.o  build/obj/ghash_ctmul64.o  build/obj/ghash_pclmul.o  build/obj/ghash_pwr8.o  build/obj/md5.o  build/obj/md5sha1.o  build/obj/mgf1.o  build/obj/multihash.o  build/obj/sha1.o  build/obj/sha2big.o  build/obj/sha2small.o  build/obj/i15_add.o  build/obj/i15_bitlen.o  build/obj/i15_decmod.o  build/obj/i15_decode.o  build/obj/i15_decred.o  build/obj/i15_encode.o  build/obj/i15_fmont.o  build/obj/i15_iszero.o  build/obj/i15_moddiv.o  build/obj/i15_modpow.o  build/obj/i15_modpow2.o  build/obj/i15_montmul.o  build/obj/i15_mulacc.o  build/obj/i15_muladd.o  build/obj/i15_ninv15.o  build/obj/i15_reduce.o  build/obj/i15_rshift.o  build/obj/i15_sub.o  build/obj/i15_tmont.o  build/obj/i31_add.o  build/obj/i31_bitlen.o  build/obj/i31_decmod.o  build/obj/i31_decode.o  build/obj/i31_decred.o  build/obj/i31_encode.o  build/obj/i31_fmont.o  build/obj/i31_iszero.o  build/obj/i31_moddiv.o  build/obj/i31_modpow.o  build/obj/i31_modpow2.o  build/obj/i31_montmul.o  build/obj/i31_mulacc.o  build/obj/i31_muladd.o  build/obj/i31_ninv31.o  build/obj/i31_reduce.o  build/obj/i31_rshift.o  build/obj/i31_sub.o  build/obj/i31_tmont.o  build/obj/i32_add.o  build/obj/i32_bitlen.o  build/obj/i32_decmod.o  build/obj/i32_decode.o  build/obj/i32_decred.o  build/obj/i32_div32.o  build/obj/i32_encode.o  build/obj/i32_fmont.o  build/obj/i32_iszero.o  build/obj/i32_modpow.o  build/obj/i32_montmul.o  build/obj/i32_mulacc.o  build/obj/i32_muladd.o  build/obj/i32_ninv32.o  build/obj/i32_reduce.o  build/obj/i32_sub.o  build/obj/i32_tmont.o  build/obj/i62_modpow2.o  build/obj/hkdf.o  build/obj/shake.o  build/obj/hmac.o  build/obj/hmac_ct.o  build/obj/aesctr_drbg.o  build/obj/hmac_drbg.o  build/obj/sysrng.o  build/obj/rsa_default_keygen.o  build/obj/rsa_default_modulus.o  build/obj/rsa_default_oaep_decrypt.o  build/obj/rsa_default_oaep_encrypt.o  build/obj/rsa_default_pkcs1_sign.o  build/obj/rsa_default_pkcs1_vrfy.o  build/obj/rsa_default_priv.o  build/obj/rsa_default_privexp.o  build/obj/rsa_default_pss_sign.o  build/obj/rsa_default_pss_vrfy.o  build/obj/rsa_default_pub.o  build/obj/rsa_default_pubexp.o  build/obj/rsa_i15_keygen.o  build/obj/rsa_i15_modulus.o  build/obj/rsa_i15_oaep_decrypt.o  build/obj/rsa_i15_oaep_encrypt.o  build/obj/rsa_i15_pkcs1_sign.o  build/obj/rsa_i15_pkcs1_vrfy.o  build/obj/rsa_i15_priv.o  build/obj/rsa_i15_privexp.o  build/obj/rsa_i15_pss_sign.o  build/obj/rsa_i15_pss_vrfy.o  build/obj/rsa_i15_pub.o  build/obj/rsa_i15_pubexp.o  build/obj/rsa_i31_keygen.o  build/obj/rsa_i31_keygen_inner.o  build/obj/rsa_i31_modulus.o  build/obj/rsa_i31_oaep_decrypt.o  build/obj/rsa_i31_oaep_encrypt.o  build/obj/rsa_i31_pkcs1_sign.o  build/obj/rsa_i31_pkcs1_vrfy.o  build/obj/rsa_i31_priv.o  build/obj/rsa_i31_privexp.o  build/obj/rsa_i31_pss_sign.o  build/obj/rsa_i31_pss_vrfy.o  build/obj/rsa_i31_pub.o  build/obj/rsa_i31_pubexp.o  build/obj/rsa_i32_oaep_decrypt.o  build/obj/rsa_i32_oaep_encrypt.o  build/obj/rsa_i32_pkcs1_sign.o  build/obj/rsa_i32_pkcs1_vrfy.o  build/obj/rsa_i32_priv.o  build/obj/rsa_i32_pss_sign.o  build/obj/rsa_i32_pss_vrfy.o  build/obj/rsa_i32_pub.o  build/obj/rsa_i62_keygen.o  build/obj/rsa_i62_oaep_decrypt.o  build/obj/rsa_i62_oaep_encrypt.o  build/obj/rsa_i62_pkcs1_sign.o  build/obj/rsa_i62_pkcs1_vrfy.o  build/obj/rsa_i62_priv.o  build/obj/rsa_i62_pss_sign.o  build/obj/rsa_i62_pss_vrfy.o  build/obj/rsa_i62_pub.o  build/obj/rsa_oaep_pad.o  build/obj/rsa_oaep_unpad.o  build/obj/rsa_pkcs1_sig_pad.o  build/obj/rsa_pkcs1_sig_unpad.o  build/obj/rsa_pss_sig_pad.o  build/obj/rsa_pss_sig_unpad.o  build/obj/rsa_ssl_decrypt.o  build/obj/prf.o  build/obj/prf_md5sha1.o  build/obj/prf_sha256.o  build/obj/prf_sha384.o  build/obj/ssl_ccert_single_ec.o  build/obj/ssl_ccert_single_rsa.o  build/obj/ssl_client.o  build/obj/ssl_client_default_rsapub.o  build/obj/ssl_client_full.o  build/obj/ssl_engine.o  build/obj/ssl_engine_default_aescbc.o  build/obj/ssl_engine_default_aesccm.o  build/obj/ssl_engine_default_aesgcm.o  build/obj/ssl_engine_default_chapol.o  build/obj/ssl_engine_default_descbc.o  build/obj/ssl_engine_default_ec.o  build/obj/ssl_engine_default_ecdsa.o  build/obj/ssl_engine_default_rsavrfy.o  build/obj/ssl_hashes.o  build/obj/ssl_hs_client.o  build/obj/ssl_hs_server.o  build/obj/ssl_io.o  build/obj/ssl_keyexport.o  build/obj/ssl_lru.o  build/obj/ssl_rec_cbc.o  build/obj/ssl_rec_ccm.o  build/obj/ssl_rec_chapol.o  build/obj/ssl_rec_gcm.o  build/obj/ssl_scert_single_ec.o  build/obj/ssl_scert_single_rsa.o  build/obj/ssl_server.o  build/obj/ssl_server_full_ec.o  build/obj/ssl_server_full_rsa.o  build/obj/ssl_server_mine2c.o  build/obj/ssl_server_mine2g.o  build/obj/ssl_server_minf2c.o  build/obj/ssl_server_minf2g.o  build/obj/ssl_server_minr2g.o  build/obj/ssl_server_minu2g.o  build/obj/ssl_server_minv2g.o  build/obj/aes_big_cbcdec.o  build/obj/aes_big_cbcenc.o  build/obj/aes_big_ctr.o  build/obj/aes_big_ctrcbc.o  build/obj/aes_big_dec.o  build/obj/aes_big_enc.o  build/obj/aes_common.o  build/obj/aes_ct.o  build/obj/aes_ct64.o  build/obj/aes_ct64_cbcdec.o  build/obj/aes_ct64_cbcenc.o  build/obj/aes_ct64_ctr.o  build/obj/aes_ct64_ctrcbc.o  build/obj/aes_ct64_dec.o  build/obj/aes_ct64_enc.o  build/obj/aes_ct_cbcdec.o  build/obj/aes_ct_cbcenc.o  build/obj/aes_ct_ctr.o  build/obj/aes_ct_ctrcbc.o  build/obj/aes_ct_dec.o  build/obj/aes_ct_enc.o  build/obj/aes_pwr8.o  build/obj/aes_pwr8_cbcdec.o  build/obj/aes_pwr8_cbcenc.o  build/obj/aes_pwr8_ctr.o  build/obj/aes_pwr8_ctrcbc.o  build/obj/aes_small_cbcdec.o  build/obj/aes_small_cbcenc.o  build/obj/aes_small_ctr.o  build/obj/aes_small_ctrcbc.o  build/obj/aes_small_dec.o  build/obj/aes_small_enc.o  build/obj/aes_x86ni.o  build/obj/aes_x86ni_cbcdec.o  build/obj/aes_x86ni_cbcenc.o  build/obj/aes_x86ni_ctr.o  build/obj/aes_x86ni_ctrcbc.o  build/obj/chacha20_ct.o  build/obj/chacha20_sse2.o  build/obj/des_ct.o  build/obj/des_ct_cbcdec.o  build/obj/des_ct_cbcenc.o  build/obj/des_support.o  build/obj/des_tab.o  build/obj/des_tab_cbcdec.o  build/obj/des_tab_cbcenc.o  build/obj/poly1305_ctmul.o  build/obj/poly1305_ctmul32.o  build/obj/poly1305_ctmulq.o  build/obj/poly1305_i15.o  build/obj/asn1enc.o  build/obj/encode_ec_pk8der.o  build/obj/encode_ec_rawder.o  build/obj/encode_rsa_pk8der.o  build/obj/encode_rsa_rawder.o  build/obj/skey_decoder.o  build/obj/x509_decoder.o  build/obj/x509_knownkey.o  build/obj/x509_minimal.o  build/obj/x509_minimal_full.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -Wl,-soname,libbearssl.so.0 -o build/libbearssl.so.0.6_git20241009 build/obj/settings.o  build/obj/ccm.o  build/obj/eax.o  build/obj/gcm.o  build/obj/ccopy.o  build/obj/dec16be.o  build/obj/dec16le.o  build/obj/dec32be.o  build/obj/dec32le.o  build/obj/dec64be.o  build/obj/dec64le.o  build/obj/enc16be.o  build/obj/enc16le.o  build/obj/enc32be.o  build/obj/enc32le.o  build/obj/enc64be.o  build/obj/enc64le.o  build/obj/pemdec.o  build/obj/pemenc.o  build/obj/ec_all_m15.o  build/obj/ec_all_m31.o  build/obj/ec_c25519_i15.o  build/obj/ec_c25519_i31.o  build/obj/ec_c25519_m15.o  build/obj/ec_c25519_m31.o  build/obj/ec_c25519_m62.o  build/obj/ec_c25519_m64.o  build/obj/ec_curve25519.o  build/obj/ec_default.o  build/obj/ec_keygen.o  build/obj/ec_p256_m15.o  build/obj/ec_p256_m31.o  build/obj/ec_p256_m62.o  build/obj/ec_p256_m64.o  build/obj/ec_prime_i15.o  build/obj/ec_prime_i31.o  build/obj/ec_pubkey.o  build/obj/ec_secp256r1.o  build/obj/ec_secp384r1.o  build/obj/ec_secp521r1.o  build/obj/ecdsa_atr.o  build/obj/ecdsa_default_sign_asn1.o  build/obj/ecdsa_default_sign_raw.o  build/obj/ecdsa_default_vrfy_asn1.o  build/obj/ecdsa_default_vrfy_raw.o  build/obj/ecdsa_i15_bits.o  build/obj/ecdsa_i15_sign_asn1.o  build/obj/ecdsa_i15_sign_raw.o  build/obj/ecdsa_i15_vrfy_asn1.o  build/obj/ecdsa_i15_vrfy_raw.o  build/obj/ecdsa_i31_bits.o  build/obj/ecdsa_i31_sign_asn1.o  build/obj/ecdsa_i31_sign_raw.o  build/obj/ecdsa_i31_vrfy_asn1.o  build/obj/ecdsa_i31_vrfy_raw.o  build/obj/ecdsa_rta.o  build/obj/dig_oid.o  build/obj/dig_size.o  build/obj/ghash_ctmul.o  build/obj/ghash_ctmul32.o  build/obj/ghash_ctmul64.o  build/obj/ghash_pclmul.o  build/obj/ghash_pwr8.o  build/obj/md5.o  build/obj/md5sha1.o  build/obj/mgf1.o  build/obj/multihash.o  build/obj/sha1.o  build/obj/sha2big.o  build/obj/sha2small.o  build/obj/i15_add.o  build/obj/i15_bitlen.o  build/obj/i15_decmod.o  build/obj/i15_decode.o  build/obj/i15_decred.o  build/obj/i15_encode.o  build/obj/i15_fmont.o  build/obj/i15_iszero.o  build/obj/i15_moddiv.o  build/obj/i15_modpow.o  build/obj/i15_modpow2.o  build/obj/i15_montmul.o  build/obj/i15_mulacc.o  build/obj/i15_muladd.o  build/obj/i15_ninv15.o  build/obj/i15_reduce.o  build/obj/i15_rshift.o  build/obj/i15_sub.o  build/obj/i15_tmont.o  build/obj/i31_add.o  build/obj/i31_bitlen.o  build/obj/i31_decmod.o  build/obj/i31_decode.o  build/obj/i31_decred.o  build/obj/i31_encode.o  build/obj/i31_fmont.o  build/obj/i31_iszero.o  build/obj/i31_moddiv.o  build/obj/i31_modpow.o  build/obj/i31_modpow2.o  build/obj/i31_montmul.o  build/obj/i31_mulacc.o  build/obj/i31_muladd.o  build/obj/i31_ninv31.o  build/obj/i31_reduce.o  build/obj/i31_rshift.o  build/obj/i31_sub.o  build/obj/i31_tmont.o  build/obj/i32_add.o  build/obj/i32_bitlen.o  build/obj/i32_decmod.o  build/obj/i32_decode.o  build/obj/i32_decred.o  build/obj/i32_div32.o  build/obj/i32_encode.o  build/obj/i32_fmont.o  build/obj/i32_iszero.o  build/obj/i32_modpow.o  build/obj/i32_montmul.o  build/obj/i32_mulacc.o  build/obj/i32_muladd.o  build/obj/i32_ninv32.o  build/obj/i32_reduce.o  build/obj/i32_sub.o  build/obj/i32_tmont.o  build/obj/i62_modpow2.o  build/obj/hkdf.o  build/obj/shake.o  build/obj/hmac.o  build/obj/hmac_ct.o  build/obj/aesctr_drbg.o  build/obj/hmac_drbg.o  build/obj/sysrng.o  build/obj/rsa_default_keygen.o  build/obj/rsa_default_modulus.o  build/obj/rsa_default_oaep_decrypt.o  build/obj/rsa_default_oaep_encrypt.o  build/obj/rsa_default_pkcs1_sign.o  build/obj/rsa_default_pkcs1_vrfy.o  build/obj/rsa_default_priv.o  build/obj/rsa_default_privexp.o  build/obj/rsa_default_pss_sign.o  build/obj/rsa_default_pss_vrfy.o  build/obj/rsa_default_pub.o  build/obj/rsa_default_pubexp.o  build/obj/rsa_i15_keygen.o  build/obj/rsa_i15_modulus.o  build/obj/rsa_i15_oaep_decrypt.o  build/obj/rsa_i15_oaep_encrypt.o  build/obj/rsa_i15_pkcs1_sign.o  build/obj/rsa_i15_pkcs1_vrfy.o  build/obj/rsa_i15_priv.o  build/obj/rsa_i15_privexp.o  build/obj/rsa_i15_pss_sign.o  build/obj/rsa_i15_pss_vrfy.o  build/obj/rsa_i15_pub.o  build/obj/rsa_i15_pubexp.o  build/obj/rsa_i31_keygen.o  build/obj/rsa_i31_keygen_inner.o  build/obj/rsa_i31_modulus.o  build/obj/rsa_i31_oaep_decrypt.o  build/obj/rsa_i31_oaep_encrypt.o  build/obj/rsa_i31_pkcs1_sign.o  build/obj/rsa_i31_pkcs1_vrfy.o  build/obj/rsa_i31_priv.o  build/obj/rsa_i31_privexp.o  build/obj/rsa_i31_pss_sign.o  build/obj/rsa_i31_pss_vrfy.o  build/obj/rsa_i31_pub.o  build/obj/rsa_i31_pubexp.o  build/obj/rsa_i32_oaep_decrypt.o  build/obj/rsa_i32_oaep_encrypt.o  build/obj/rsa_i32_pkcs1_sign.o  build/obj/rsa_i32_pkcs1_vrfy.o  build/obj/rsa_i32_priv.o  build/obj/rsa_i32_pss_sign.o  build/obj/rsa_i32_pss_vrfy.o  build/obj/rsa_i32_pub.o  build/obj/rsa_i62_keygen.o  build/obj/rsa_i62_oaep_decrypt.o  build/obj/rsa_i62_oaep_encrypt.o  build/obj/rsa_i62_pkcs1_sign.o  build/obj/rsa_i62_pkcs1_vrfy.o  build/obj/rsa_i62_priv.o  build/obj/rsa_i62_pss_sign.o  build/obj/rsa_i62_pss_vrfy.o  build/obj/rsa_i62_pub.o  build/obj/rsa_oaep_pad.o  build/obj/rsa_oaep_unpad.o  build/obj/rsa_pkcs1_sig_pad.o  build/obj/rsa_pkcs1_sig_unpad.o  build/obj/rsa_pss_sig_pad.o  build/obj/rsa_pss_sig_unpad.o  build/obj/rsa_ssl_decrypt.o  build/obj/prf.o  build/obj/prf_md5sha1.o  build/obj/prf_sha256.o  build/obj/prf_sha384.o  build/obj/ssl_ccert_single_ec.o  build/obj/ssl_ccert_single_rsa.o  build/obj/ssl_client.o  build/obj/ssl_client_default_rsapub.o  build/obj/ssl_client_full.o  build/obj/ssl_engine.o  build/obj/ssl_engine_default_aescbc.o  build/obj/ssl_engine_default_aesccm.o  build/obj/ssl_engine_default_aesgcm.o  build/obj/ssl_engine_default_chapol.o  build/obj/ssl_engine_default_descbc.o  build/obj/ssl_engine_default_ec.o  build/obj/ssl_engine_default_ecdsa.o  build/obj/ssl_engine_default_rsavrfy.o  build/obj/ssl_hashes.o  build/obj/ssl_hs_client.o  build/obj/ssl_hs_server.o  build/obj/ssl_io.o  build/obj/ssl_keyexport.o  build/obj/ssl_lru.o  build/obj/ssl_rec_cbc.o  build/obj/ssl_rec_ccm.o  build/obj/ssl_rec_chapol.o  build/obj/ssl_rec_gcm.o  build/obj/ssl_scert_single_ec.o  build/obj/ssl_scert_single_rsa.o  build/obj/ssl_server.o  build/obj/ssl_server_full_ec.o  build/obj/ssl_server_full_rsa.o  build/obj/ssl_server_mine2c.o  build/obj/ssl_server_mine2g.o  build/obj/ssl_server_minf2c.o  build/obj/ssl_server_minf2g.o  build/obj/ssl_server_minr2g.o  build/obj/ssl_server_minu2g.o  build/obj/ssl_server_minv2g.o  build/obj/aes_big_cbcdec.o  build/obj/aes_big_cbcenc.o  build/obj/aes_big_ctr.o  build/obj/aes_big_ctrcbc.o  build/obj/aes_big_dec.o  build/obj/aes_big_enc.o  build/obj/aes_common.o  build/obj/aes_ct.o  build/obj/aes_ct64.o  build/obj/aes_ct64_cbcdec.o  build/obj/aes_ct64_cbcenc.o  build/obj/aes_ct64_ctr.o  build/obj/aes_ct64_ctrcbc.o  build/obj/aes_ct64_dec.o  build/obj/aes_ct64_enc.o  build/obj/aes_ct_cbcdec.o  build/obj/aes_ct_cbcenc.o  build/obj/aes_ct_ctr.o  build/obj/aes_ct_ctrcbc.o  build/obj/aes_ct_dec.o  build/obj/aes_ct_enc.o  build/obj/aes_pwr8.o  build/obj/aes_pwr8_cbcdec.o  build/obj/aes_pwr8_cbcenc.o  build/obj/aes_pwr8_ctr.o  build/obj/aes_pwr8_ctrcbc.o  build/obj/aes_small_cbcdec.o  build/obj/aes_small_cbcenc.o  build/obj/aes_small_ctr.o  build/obj/aes_small_ctrcbc.o  build/obj/aes_small_dec.o  build/obj/aes_small_enc.o  build/obj/aes_x86ni.o  build/obj/aes_x86ni_cbcdec.o  build/obj/aes_x86ni_cbcenc.o  build/obj/aes_x86ni_ctr.o  build/obj/aes_x86ni_ctrcbc.o  build/obj/chacha20_ct.o  build/obj/chacha20_sse2.o  build/obj/des_ct.o  build/obj/des_ct_cbcdec.o  build/obj/des_ct_cbcenc.o  build/obj/des_support.o  build/obj/des_tab.o  build/obj/des_tab_cbcdec.o  build/obj/des_tab_cbcenc.o  build/obj/poly1305_ctmul.o  build/obj/poly1305_ctmul32.o  build/obj/poly1305_ctmulq.o  build/obj/poly1305_i15.o  build/obj/asn1enc.o  build/obj/encode_ec_pk8der.o  build/obj/encode_ec_rawder.o  build/obj/encode_rsa_pk8der.o  build/obj/encode_rsa_rawder.o  build/obj/skey_decoder.o  build/obj/x509_decoder.o  build/obj/x509_knownkey.o  build/obj/x509_minimal.o  build/obj/x509_minimal_full.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o build/brssl build/obj/brssl.o  build/obj/certs.o  build/obj/chain.o  build/obj/client.o  build/obj/errors.o  build/obj/files.o  build/obj/impl.o  build/obj/keys.o  build/obj/names.o  build/obj/server.o  build/obj/skey.o  build/obj/sslio.o  build/obj/ta.o  build/obj/twrch.o  build/obj/vector.o  build/obj/verify.o  build/obj/xmem.o build/libbearssl.so.0.6_git20241009
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o build/testx509 build/obj/test_x509.o build/libbearssl.a
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o build/testspeed build/obj/test_speed.o build/libbearssl.a
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o build/testcrypto build/obj/test_crypto.o build/libbearssl.a
+base: OK
+noTA: OK
+anchorICA1: OK
+anchorICA2: OK
+directTrust: OK
+wrongName1: OK
+wrongName2: OK
+goodName1: OK
+goodName2: OK
+goodName3: OK
+wrongName3: OK
+wrongName4: OK
+ignoreName1: OK
+wildcard1: OK
+wildcard2: OK
+wildcard3: OK
+wildcard4: OK
+wildcard5: OK
+wildcard6: OK
+wildcard7: OK
+hashSHA256Only: OK
+hashSHA256Unsupported: OK
+hashSHA1: OK
+hashSHA224: OK
+hashSHA384: OK
+hashSHA512: OK
+hashMD5: OK
+trailingGarbage: OK
+badSignature1: OK
+badSignature2: OK
+ignoredSignature1: OK
+ignoredSignature2: OK
+rsa1016: OK
+rsa1017: OK
+rsa4096: OK
+date1: OK
+date2: OK
+date3: OK
+date4: OK
+notCA: OK
+secp256r1: OK
+secp384r1: OK
+secp521r1: OK
+secp256r1-sha1: OK
+secp256r1-sha224: OK
+secp256r1-sha256: OK
+secp256r1-sha384: OK
+secp256r1-sha512: OK
+certpol-noncrit: OK
+certpol-noqual: OK
+certpol-qualcps: OK
+certpol-qualother: OK
+Name extraction: OK
+Maximum data stack usage:    17
+Maximum return stack usage:  27
+Test MD5: done.
+Test SHA-1: done.
+Test SHA-224: done.
+Test SHA-256: done.
+Test SHA-384: done.
+Test SHA-512: done.
+Test MD5+SHA-1: done.
+Test MultiHash: .......done.
+Test HMAC: (MD5) .. (SHA-1) .. (SHA-224) .. (SHA-256) .. (SHA-384) .. (SHA-512) .. done.
+Test HKDF: ....... done.
+Test SHAKE: ..................................... .................................................................................................... ...................................................................... .................................................................................................... done.
+Test HMAC_DRBG: done.
+Test AESCTR_DRBG: done.
+Test TLS PRF: done.
+Test AES_big: .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... done.
+Test AES_small: .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... done.
+Test AES_ct: .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... done.
+Test AES_ct64: .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... done.
+Test AES_pwr8: UNAVAILABLE
+Test AES_x86ni: .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... .................................................................................................... done.
+Test AES CTR/CBC-MAC big: ................................. ................................. ................................. done.
+Test AES CTR/CBC-MAC small: ................................. ................................. ................................. done.
+Test AES CTR/CBC-MAC ct: ................................. ................................. ................................. done.
+Test AES CTR/CBC-MAC ct64: ................................. ................................. ................................. done.
+Test AES CTR/CBC-MAC x86ni: ................................. ................................. ................................. done.
+Test AES CTR/CBC-MAC pwr8: UNAVAILABLE
+Test DES_tab: ................................................................................................................................................................................................................................................................................................................................................................................................................ ................................................................................................................................................................................................................................................................................................................................................................................................................ done.
+Test DES_ct: ................................................................................................................................................................................................................................................................................................................................................................................................................ ................................................................................................................................................................................................................................................................................................................................................................................................................ done.
+Test ChaCha20_ct: ... done.
+Test ChaCha20_sse2: ... done.
+Test Poly1305_ctmul: . .................................................................................................... done.
+Test Poly1305_ctmul32: . .................................................................................................... done.
+Test Poly1305_ctmulq: . .................................................................................................... done.
+Test Poly1305_i15: . .................................................................................................... done.
+Test RSA i15 core: done.
+Test RSA i15 sign: ............................................................................................................ done.
+Test RSA i15 OAEP: ........................ done.
+Test RSA i15 PSS: ............................................................ done.
+Test RSA i15 keygen: ........................................... done.
+Test RSA i31 core: done.
+Test RSA i31 sign: ............................................................................................................ done.
+Test RSA i31 OAEP: ........................ done.
+Test RSA i31 PSS: ............................................................ done.
+Test RSA i31 keygen: ........................................... done.
+Test RSA i32 core: done.
+Test RSA i32 sign: ............................................................................................................ done.
+Test RSA i32 OAEP: ........................ done.
+Test RSA i32 PSS: ............................................................ done.
+Test RSA i62 core: done.
+Test RSA i62 sign: ............................................................................................................ done.
+Test RSA i62 OAEP: ........................ done.
+Test RSA i62 PSS: ............................................................ done.
+Test RSA i62 keygen: ........................................... done.
+Test GHASH_ctmul: .................................done.
+Test GHASH_ctmul32: .................................done.
+Test GHASH_ctmul64: .................................done.
+Test GHASH_pclmul: .................................done.
+Test GHASH_pwr8: UNAVAILABLE
+Test CCM aes_big: .... done.
+Test CCM aes_small: .... done.
+Test CCM aes_ct: .... done.
+Test CCM aes_ct64: .... done.
+Test CCM aes_x86ni: .... done.
+Test CCM aes_pwr8: UNAVAILABLE
+Test EAX aes_big: ................... done.
+Test EAX aes_small: ................... done.
+Test EAX aes_ct: ................... done.
+Test EAX aes_ct64: ................... done.
+Test EAX aes_x86ni: ................... done.
+Test EAX aes_pwr8: UNAVAILABLE
+Test GCM: .................. done.
+Test EC_prime_i15: ..... done.
+Test EC_prime_i15 keygen: ..................................... done.
+Test EC_prime_i31: ..... done.
+Test EC_prime_i31 keygen: ..................................... done.
+Test EC_p256_m15: ... done.
+Test EC_p256_m15 keygen: ..................................... done.
+Test EC_p256_m31: ... done.
+Test EC_p256_m31 keygen: ..................................... done.
+Test EC_p256_m62: ... done.
+Test EC_p256_m62 keygen: ..................................... done.
+Test EC_p256_m64: ... done.
+Test EC_p256_m64 keygen: ..................................... done.
+Test EC_c25519_i15: .. .......... done.
+Test EC_c25519_i15 keygen: ..................................... done.
+Test EC_c25519_i31: .. .......... done.
+Test EC_c25519_i31 keygen: ..................................... done.
+Test EC_c25519_m15: .. .......... done.
+Test EC_c25519_m15 keygen: ..................................... done.
+Test EC_c25519_m31: .. .......... done.
+Test EC_c25519_m31 keygen: ..................................... done.
+Test EC_c25519_m62: .. .......... done.
+Test EC_c25519_m62 keygen: ..................................... done.
+Test EC_c25519_m64: .. .......... done.
+Test EC_c25519_m64 keygen: ..................................... done.
+Test ECDSA/i15: [raw].............................. [asn1].............................. done.
+Test ECDSA/i31: [raw].............................. [asn1].............................. done.
+Test ModPow/i31: ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... done.
+Test ModPow/i62: ........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................... done.
+>>> bearssl: Entering fakeroot...
+>>> bearssl-static*: Running split function static...
+'./usr/lib/libbearssl.a' -> '/home/packager/aports/main/bearssl/pkg/bearssl-static/./usr/lib/libbearssl.a'
+>>> bearssl-static*: Preparing subpackage bearssl-static...
+>>> bearssl-static*: Stripping binaries
+>>> bearssl-static*: Running postcheck for bearssl-static
+>>> bearssl-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/bearssl/pkg/bearssl-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/bearssl/pkg/bearssl-dev/usr/lib/pkgconfig'
+'usr/lib/libbearssl.so' -> '/home/packager/aports/main/bearssl/pkg/bearssl-dev/usr/lib/libbearssl.so'
+>>> bearssl-dev*: Preparing subpackage bearssl-dev...
+>>> bearssl-dev*: Stripping binaries
+>>> bearssl-dev*: Running postcheck for bearssl-dev
+>>> bearssl-libs*: Running split function libs...
+'usr/lib/libbearssl.so.0' -> '/home/packager/aports/main/bearssl/pkg/bearssl-libs/usr/lib/libbearssl.so.0'
+'usr/lib/libbearssl.so.0.6_git20241009' -> '/home/packager/aports/main/bearssl/pkg/bearssl-libs/usr/lib/libbearssl.so.0.6_git20241009'
+>>> bearssl-libs*: Preparing subpackage bearssl-libs...
+>>> bearssl-libs*: Stripping binaries
+>>> bearssl-libs*: Running postcheck for bearssl-libs
+>>> bearssl*: Running postcheck for bearssl
+>>> WARNING: bearssl*: Packages must not put anything under /bin, use /usr/bin instead
+>>> bearssl*: Preparing package bearssl...
+>>> bearssl*: Stripping binaries
+>>> bearssl-dev*: Scanning shared objects
+>>> bearssl-libs*: Scanning shared objects
+>>> bearssl-static*: Scanning shared objects
+>>> bearssl*: Scanning shared objects
+>>> bearssl-dev*: Tracing dependencies...
+	bearssl-libs=0.6_git20241009-r0
+	pkgconfig
+>>> bearssl-dev*: Package size: 512.1 KB
+>>> bearssl-dev*: Compressing data...
+>>> bearssl-dev*: Create checksum...
+pigz: not found
+>>> bearssl-dev*: Create bearssl-dev-0.6_git20241009-r0.apk
+>>> bearssl-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> bearssl-libs*: Package size: 349.7 KB
+>>> bearssl-libs*: Compressing data...
+>>> bearssl-libs*: Create checksum...
+pigz: not found
+>>> bearssl-libs*: Create bearssl-libs-0.6_git20241009-r0.apk
+>>> bearssl-static*: Tracing dependencies...
+>>> bearssl-static*: Package size: 855.2 KB
+>>> bearssl-static*: Compressing data...
+>>> bearssl-static*: Create checksum...
+pigz: not found
+>>> bearssl-static*: Create bearssl-static-0.6_git20241009-r0.apk
+>>> bearssl*: Tracing dependencies...
+	so:libbearssl.so.0
+	so:libc.musl-x86_64.so.1
+>>> bearssl*: Package size: 97.9 KB
+>>> bearssl*: Compressing data...
+>>> bearssl*: Create checksum...
+pigz: not found
+>>> bearssl*: Create bearssl-0.6_git20241009-r0.apk
+>>> bearssl: Build complete at Sun, 18 May 2025 08:53:15 +0000 elapsed time 0h 1m 13s
+>>> bearssl: Cleaning up srcdir
+>>> bearssl: Cleaning up pkgdir
+>>> bearssl: Uninstalling dependencies...
+(1/1) Purging .makedepends-bearssl (20250518.085202)
+OK: 261 MiB in 81 packages
+>>> bearssl: Updating the main/x86_64 repository index...
+>>> bearssl: Signing the index...
+pigz: not found

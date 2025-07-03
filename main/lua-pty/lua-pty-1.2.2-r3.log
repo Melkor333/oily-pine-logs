@@ -1,0 +1,146 @@
+pigz: not found
+>>> lua-pty: Building main/lua-pty 1.2.2-r3 (using abuild 3.14.1-r4) started Fri, 23 May 2025 01:28:26 +0000
+>>> lua-pty: Validating /home/packager/aports/main/lua-pty/APKBUILD...
+>>> lua-pty: Analyzing dependencies...
+>>> lua-pty: Installing for build: build-base lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/12) Installing lua5.1-libs (5.1.5-r13)
+(2/12) Installing lua5.1 (5.1.5-r13)
+(3/12) Installing lua5.1-dev (5.1.5-r13)
+(4/12) Installing lua5.2-libs (5.2.4-r13)
+(5/12) Installing lua5.2 (5.2.4-r13)
+(6/12) Installing lua5.2-dev (5.2.4-r13)
+(7/12) Installing linenoise (1.0-r5)
+(8/12) Installing lua5.3-libs (5.3.6-r6)
+(9/12) Installing lua5.3 (5.3.6-r6)
+(10/12) Installing lua5.3-dev (5.3.6-r6)
+(11/12) Installing lua5.4-dev (5.4.7-r0)
+(12/12) Installing .makedepends-lua-pty (20250523.012830)
+Executing busybox-1.37.0-r12.trigger
+OK: 319 MiB in 126 packages
+>>> lua-pty: Cleaning up srcdir
+>>> lua-pty: Cleaning up pkgdir
+>>> lua-pty: Cleaning up tmpdir
+>>> lua-pty: Fetching lua-pty-1.2.2-1.tar.gz::https://codeberg.org/gnarz/lpty/archive/version_1.2.2.tar.gz
+Connecting to codeberg.org (217.197.84.140:443)
+saving to '/var/cache/distfiles/lua-pty-1.2.2-1.tar.gz.part'
+lua-pty-1.2.2-1.tar. 100% |********************************| 23259  0:00:00 ETA
+'/var/cache/distfiles/lua-pty-1.2.2-1.tar.gz.part' saved
+>>> lua-pty: Fetching lua-pty-1.2.2-1.tar.gz::https://codeberg.org/gnarz/lpty/archive/version_1.2.2.tar.gz
+>>> lua-pty: Checking sha512sums...
+lua-pty-1.2.2-1.tar.gz: OK
+>>> lua-pty: Unpacking /var/cache/distfiles/lua-pty-1.2.2-1.tar.gz...
+>>> lua-pty: Building for Lua 5.1...
+lua5.1 mkinc.lua `basename expectsrc.inc .inc`
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include -c lpty.c -o lpty.o
+gcc -shared  -o lpty.so -L/usr/lib lpty.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpty.so has a LOAD segment with RWX permissions
+>>> lua-pty: Building for Lua 5.2...
+lua5.2 mkinc.lua `basename expectsrc.inc .inc`
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.2 -c lpty.c -o lpty.o
+gcc -shared  -o lpty.so -L/usr/lib/lua5.2 lpty.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpty.so has a LOAD segment with RWX permissions
+>>> lua-pty: Building for Lua 5.3...
+lua5.3 mkinc.lua `basename expectsrc.inc .inc`
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.3 -c lpty.c -o lpty.o
+gcc -shared  -o lpty.so -L/usr/lib/lua5.3 lpty.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpty.so has a LOAD segment with RWX permissions
+>>> lua-pty: Building for Lua 5.4...
+lua5.4 mkinc.lua `basename expectsrc.inc .inc`
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.4 -c lpty.c -o lpty.o
+gcc -shared  -o lpty.so -L/usr/lib/lua5.4 lpty.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpty.so has a LOAD segment with RWX permissions
+>>> lua-pty: Entering fakeroot...
+>>> lua5.1-pty*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-pty/pkg/lua5.1-pty/usr/lib/lua/5.1
+cp lpty.so /home/packager/aports/main/lua-pty/pkg/lua5.1-pty/usr/lib/lua/5.1
+>>> lua5.1-pty*: Preparing subpackage lua5.1-pty...
+>>> lua5.1-pty*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> lua5.1-pty*: Running postcheck for lua5.1-pty
+>>> lua5.2-pty*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-pty/pkg/lua5.2-pty/usr/lib/lua/5.2
+cp lpty.so /home/packager/aports/main/lua-pty/pkg/lua5.2-pty/usr/lib/lua/5.2
+>>> lua5.2-pty*: Preparing subpackage lua5.2-pty...
+>>> lua5.2-pty*: Stripping binaries
+>>> lua5.2-pty*: Running postcheck for lua5.2-pty
+>>> lua5.3-pty*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-pty/pkg/lua5.3-pty/usr/lib/lua/5.3
+cp lpty.so /home/packager/aports/main/lua-pty/pkg/lua5.3-pty/usr/lib/lua/5.3
+>>> lua5.3-pty*: Preparing subpackage lua5.3-pty...
+>>> lua5.3-pty*: Stripping binaries
+>>> lua5.3-pty*: Running postcheck for lua5.3-pty
+>>> lua5.4-pty*: Running split function _subpackage...
+mkdir -p /home/packager/aports/main/lua-pty/pkg/lua5.4-pty/usr/lib/lua/5.4
+cp lpty.so /home/packager/aports/main/lua-pty/pkg/lua5.4-pty/usr/lib/lua/5.4
+>>> lua5.4-pty*: Preparing subpackage lua5.4-pty...
+>>> lua5.4-pty*: Stripping binaries
+>>> lua5.4-pty*: Running postcheck for lua5.4-pty
+>>> lua-pty*: Running postcheck for lua-pty
+>>> lua-pty*: Preparing package lua-pty...
+>>> lua-pty*: Stripping binaries
+>>> WARNING: lua-pty*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-pty*: Scanning shared objects
+>>> lua5.1-pty*: Scanning shared objects
+>>> lua5.2-pty*: Scanning shared objects
+>>> lua5.3-pty*: Scanning shared objects
+>>> lua5.4-pty*: Scanning shared objects
+>>> lua-pty*: Tracing dependencies...
+>>> lua-pty*: Package size: 0.0 
+>>> lua-pty*: Compressing data...
+>>> lua-pty*: Create checksum...
+pigz: not found
+>>> lua-pty*: Create lua-pty-1.2.2-r3.apk
+>>> lua5.1-pty*: Tracing dependencies...
+	lua5.1
+	so:libc.musl-x86_64.so.1
+>>> lua5.1-pty*: Package size: 25.5 KB
+>>> lua5.1-pty*: Compressing data...
+>>> lua5.1-pty*: Create checksum...
+pigz: not found
+>>> lua5.1-pty*: Create lua5.1-pty-1.2.2-r3.apk
+>>> lua5.2-pty*: Tracing dependencies...
+	lua5.2
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-pty*: Package size: 25.5 KB
+>>> lua5.2-pty*: Compressing data...
+>>> lua5.2-pty*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.2-pty*: Create lua5.2-pty-1.2.2-r3.apk
+>>> lua5.3-pty*: Tracing dependencies...
+	lua5.3
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-pty*: Package size: 25.6 KB
+>>> lua5.3-pty*: Compressing data...
+>>> lua5.3-pty*: Create checksum...
+pigz: not found
+>>> lua5.3-pty*: Create lua5.3-pty-1.2.2-r3.apk
+>>> lua5.4-pty*: Tracing dependencies...
+	lua5.4
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-pty*: Package size: 25.7 KB
+>>> lua5.4-pty*: Compressing data...
+>>> lua5.4-pty*: Create checksum...
+pigz: not found
+>>> lua5.4-pty*: Create lua5.4-pty-1.2.2-r3.apk
+>>> lua-pty: Build complete at Fri, 23 May 2025 01:28:47 +0000 elapsed time 0h 0m 21s
+>>> lua-pty: Cleaning up srcdir
+>>> lua-pty: Cleaning up pkgdir
+>>> lua-pty: Uninstalling dependencies...
+(1/12) Purging .makedepends-lua-pty (20250523.012830)
+(2/12) Purging lua5.1-dev (5.1.5-r13)
+(3/12) Purging lua5.1 (5.1.5-r13)
+(4/12) Purging lua5.1-libs (5.1.5-r13)
+(5/12) Purging lua5.2-dev (5.2.4-r13)
+(6/12) Purging lua5.2 (5.2.4-r13)
+(7/12) Purging lua5.2-libs (5.2.4-r13)
+(8/12) Purging lua5.3-dev (5.3.6-r6)
+(9/12) Purging lua5.3 (5.3.6-r6)
+(10/12) Purging lua5.3-libs (5.3.6-r6)
+(11/12) Purging lua5.4-dev (5.4.7-r0)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-pty: Updating the main/x86_64 repository index...
+>>> lua-pty: Signing the index...
+pigz: not found

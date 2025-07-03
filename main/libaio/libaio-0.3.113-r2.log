@@ -1,0 +1,115 @@
+pigz: not found
+>>> libaio: Building main/libaio 0.3.113-r2 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:00:36 +0000
+>>> libaio: Validating /home/packager/aports/main/libaio/APKBUILD...
+>>> libaio: Analyzing dependencies...
+>>> libaio: Installing for build: build-base cmd:bash
+(1/1) Installing .makedepends-libaio (20250523.160037)
+OK: 564 MiB in 133 packages
+>>> libaio: Cleaning up srcdir
+>>> libaio: Cleaning up pkgdir
+>>> libaio: Cleaning up tmpdir
+>>> libaio: Fetching https://pagure.io/libaio/archive/libaio-0.3.113/libaio-libaio-0.3.113.tar.gz
+Connecting to pagure.io (8.43.85.76:443)
+saving to '/var/cache/distfiles/libaio-libaio-0.3.113.tar.gz.part'
+libaio-libaio-0.3.11 100% |********************************| 49061  0:00:00 ETA
+'/var/cache/distfiles/libaio-libaio-0.3.113.tar.gz.part' saved
+>>> libaio: Fetching https://pagure.io/libaio/archive/libaio-0.3.113/libaio-libaio-0.3.113.tar.gz
+>>> libaio: Checking sha512sums...
+libaio-libaio-0.3.113.tar.gz: OK
+libaio-cppflags.patch: OK
+libaio-errno.patch: OK
+test.patch: OK
+test-poll.patch: OK
+>>> libaio: Unpacking /var/cache/distfiles/libaio-libaio-0.3.113.tar.gz...
+>>> libaio: libaio-cppflags.patch
+patching file src/Makefile
+>>> libaio: libaio-errno.patch
+patching file src/compat-0_1.c
+>>> libaio: test.patch
+patching file harness/cases/3.t
+>>> libaio: test-poll.patch
+patching file harness/cases/22.t
+make[1]: Entering directory '/home/packager/aports/main/libaio/src/libaio-libaio-0.3.113/src'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_init.ol io_queue_init.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_release.ol io_queue_release.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_wait.ol io_queue_wait.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_run.ol io_queue_run.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_getevents.ol io_getevents.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_submit.ol io_submit.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_cancel.ol io_cancel.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_setup.ol io_setup.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_destroy.ol io_destroy.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_pgetevents.ol io_pgetevents.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o raw_syscall.ol raw_syscall.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o compat-0_1.ol compat-0_1.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_init.os io_queue_init.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_release.os io_queue_release.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_wait.os io_queue_wait.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_queue_run.os io_queue_run.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_getevents.os io_getevents.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_submit.os io_submit.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_cancel.os io_cancel.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_setup.os io_setup.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_destroy.os io_destroy.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o io_pgetevents.os io_pgetevents.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o raw_syscall.os raw_syscall.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c -o compat-0_1.os compat-0_1.c
+rm -f libaio.a
+ar r libaio.a io_queue_init.ol io_queue_release.ol io_queue_wait.ol io_queue_run.ol io_getevents.ol io_submit.ol io_cancel.ol io_setup.ol io_destroy.ol io_pgetevents.ol raw_syscall.ol compat-0_1.ol
+ar: creating libaio.a
+ranlib libaio.a
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -c struct_offsets.c
+gcc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -I. -fPIC  -Wl,--version-script=libaio.map -Wl,-soname=libaio.so.1 -o libaio.so.1.0.2 io_queue_init.os io_queue_release.os io_queue_wait.os io_queue_run.os io_getevents.os io_submit.os io_cancel.os io_setup.os io_destroy.os io_pgetevents.os raw_syscall.os compat-0_1.os -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libaio.so.1.0.2 has a LOAD segment with RWX permissions
+make[1]: Leaving directory '/home/packager/aports/main/libaio/src/libaio-libaio-0.3.113/src'
+make[1]: Entering directory '/home/packager/aports/main/libaio/src/libaio-libaio-0.3.113/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/libaio/src/libaio-libaio-0.3.113/src'
+make[1]: Entering directory '/home/packager/aports/main/libaio/src/libaio-libaio-0.3.113/harness'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/2.t\" -o cases/2.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -Wno-stringop-overflow -DTEST_NAME=\"cases/3.t\" -o cases/3.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/4.t\" -o cases/4.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/5.t\" -o cases/5.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/6.t\" -o cases/6.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/7.t\" -o cases/7.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/11.t\" -o cases/11.p main.c ../src/libaio.a -lpthread
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Werror -I../src -g -O2 -DTEST_NAME=\"cases/12.t\" -o cases/12.p main.c ../src/libaio.a -lpthread
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/2.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/2.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/2.p] Error 1
+make[1]: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/6.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/6.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/6.p] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/3.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/3.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/3.p] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/5.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/5.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/5.p] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/4.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/4.p has a LOAD segment with RWX permissions
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/7.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/7.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/7.p] Error 1
+make[1]: *** [Makefile:24: cases/4.p] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/11.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/11.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/11.p] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cases/12.p: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cases/12.p has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:24: cases/12.p] Error 1
+make[1]: Leaving directory '/home/packager/aports/main/libaio/src/libaio-libaio-0.3.113/harness'
+make: *** [Makefile:23: partcheck] Error 2
+>>> ERROR: libaio: check failed
+>>> libaio: Uninstalling dependencies...
+(1/1) Purging .makedepends-libaio (20250523.160037)
+OK: 564 MiB in 132 packages

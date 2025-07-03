@@ -1,0 +1,115 @@
+pigz: not found
+>>> czmq: Building main/czmq 4.2.1-r4 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:58:17 +0000
+>>> czmq: Validating /home/packager/aports/main/czmq/APKBUILD...
+>>> czmq: Analyzing dependencies...
+>>> czmq: Installing for build: build-base util-linux-dev zeromq-dev cmake samurai
+(1/23) Installing libeconf (0.6.3-r0)
+(2/23) Installing libblkid (2.40.4-r1)
+(3/23) Installing libuuid (2.40.4-r1)
+(4/23) Installing libfdisk (2.40.4-r1)
+(5/23) Installing sqlite-libs (3.49.2-r0)
+(6/23) Installing liblastlog2 (2.40.4-r1)
+(7/23) Installing libmount (2.40.4-r1)
+(8/23) Installing libsmartcols (2.40.4-r1)
+(9/23) Installing sqlite (3.49.2-r0)
+(10/23) Installing sqlite-dev (3.49.2-r0)
+(11/23) Installing util-linux-dev (2.40.4-r1)
+(12/23) Installing libsodium (1.0.20-r0)
+(13/23) Installing libzmq (4.3.5-r2)
+(14/23) Installing libsodium-dev (1.0.20-r0)
+(15/23) Installing zeromq-dev (4.3.5-r2)
+(16/23) Installing lz4-libs (1.10.0-r0)
+(17/23) Installing xz-libs (5.6.3-r1)
+(18/23) Installing libarchive (3.7.9-r0)
+(19/23) Installing rhash-libs (1.4.5-r0)
+(20/23) Installing libuv (1.49.2-r0)
+(21/23) Installing cmake (3.31.7-r0)
+(22/23) Installing samurai (1.2-r6)
+(23/23) Installing .makedepends-czmq (20250523.175819)
+Executing busybox-1.37.0-r12.trigger
+OK: 624 MiB in 155 packages
+>>> czmq: Cleaning up srcdir
+>>> czmq: Cleaning up pkgdir
+>>> czmq: Cleaning up tmpdir
+>>> czmq: Fetching czmq-4.2.1.tar.gz::https://github.com/zeromq/czmq/archive/v4.2.1.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/czmq-4.2.1.tar.gz.part'
+czmq-4.2.1.tar.gz.pa 100% |********************************| 1309k  0:00:00 ETA
+'/var/cache/distfiles/czmq-4.2.1.tar.gz.part' saved
+>>> czmq: Fetching czmq-4.2.1.tar.gz::https://github.com/zeromq/czmq/archive/v4.2.1.tar.gz
+>>> czmq: Checking sha512sums...
+czmq-4.2.1.tar.gz: OK
+>>> czmq: Unpacking /var/cache/distfiles/czmq-4.2.1.tar.gz...
+CMake Deprecation Warning at CMakeLists.txt:9 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/czmq/src/czmq-4.2.1/build/CMakeFiles/CMakeScratch/TryCompile-mcaKml'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_25ed3
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o CMakeFiles/cmTC_25ed3.dir/testCCompiler.c.o -c /home/packager/aports/main/czmq/src/czmq-4.2.1/build/CMakeFiles/CMakeScratch/TryCompile-mcaKml/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_25ed3.dir/testCCompiler.c.o -o cmTC_25ed3   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_25ed3.dir/testCCompiler.c.o -o cmTC_25ed3   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_25ed3: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_25ed3 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:10 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: czmq: build failed
+>>> czmq: Uninstalling dependencies...
+(1/23) Purging .makedepends-czmq (20250523.175819)
+(2/23) Purging util-linux-dev (2.40.4-r1)
+(3/23) Purging libfdisk (2.40.4-r1)
+(4/23) Purging liblastlog2 (2.40.4-r1)
+(5/23) Purging libmount (2.40.4-r1)
+(6/23) Purging libsmartcols (2.40.4-r1)
+(7/23) Purging libuuid (2.40.4-r1)
+(8/23) Purging zeromq-dev (4.3.5-r2)
+(9/23) Purging libzmq (4.3.5-r2)
+(10/23) Purging cmake (3.31.7-r0)
+(11/23) Purging samurai (1.2-r6)
+(12/23) Purging libarchive (3.7.9-r0)
+(13/23) Purging libblkid (2.40.4-r1)
+(14/23) Purging libeconf (0.6.3-r0)
+(15/23) Purging libsodium-dev (1.0.20-r0)
+(16/23) Purging libsodium (1.0.20-r0)
+(17/23) Purging libuv (1.49.2-r0)
+(18/23) Purging lz4-libs (1.10.0-r0)
+(19/23) Purging rhash-libs (1.4.5-r0)
+(20/23) Purging sqlite-dev (3.49.2-r0)
+(21/23) Purging sqlite (3.49.2-r0)
+(22/23) Purging sqlite-libs (3.49.2-r0)
+(23/23) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

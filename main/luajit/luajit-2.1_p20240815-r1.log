@@ -1,0 +1,424 @@
+pigz: not found
+>>> luajit: Building main/luajit 2.1_p20240815-r1 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:37:08 +0000
+>>> luajit: Validating /home/packager/aports/main/luajit/APKBUILD...
+>>> luajit: Analyzing dependencies...
+>>> luajit: Installing for build: build-base perl perl-parallel-forkmanager sqlite-dev zlib-dev
+(1/15) Installing libbz2 (1.0.8-r6)
+(2/15) Installing perl (5.40.2-r0)
+(3/15) Installing perl-class-method-modifiers (2.15-r1)
+(4/15) Installing perl-sub-quote (2.006008-r1)
+(5/15) Installing perl-role-tiny (2.002004-r2)
+(6/15) Installing perl-moo (2.005005-r1)
+(7/15) Installing perl-parallel-forkmanager (2.03-r0)
+(8/15) Installing sqlite (3.49.2-r0)
+(9/15) Installing sqlite-libs (3.49.2-r0)
+(10/15) Installing sqlite-dev (3.49.2-r0)
+(11/15) Installing zlib-dev (1.3.1-r2)
+(12/15) Installing .makedepends-luajit (20250518.073709)
+(13/15) Installing perl-error (0.17029-r2)
+(14/15) Installing perl-git (2.47.2-r0)
+(15/15) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 301 MiB in 96 packages
+>>> luajit: Cleaning up srcdir
+>>> luajit: Cleaning up pkgdir
+>>> luajit: Cleaning up tmpdir
+>>> luajit: Fetching https://github.com/openresty/luajit2/archive/v2.1-20240815/luajit2-2.1-20240815.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/luajit2-2.1-20240815.tar.gz.part'
+luajit2-2.1-20240815 100% |********************************| 1136k  0:00:00 ETA
+'/var/cache/distfiles/luajit2-2.1-20240815.tar.gz.part' saved
+>>> luajit: Fetching https://github.com/openresty/luajit2-test-suite/archive/9ad3724b1a02855a3cad638bba2e564f825954ce/luajit2-test-suite-9ad3724b1a02855a3cad638bba2e564f825954ce.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/luajit2-test-suite-9ad3724b1a02855a3cad638bba2e564f825954ce.tar.gz.part'
+luajit2-test-suite-9 100% |********************************|  101k  0:00:00 ETA
+'/var/cache/distfiles/luajit2-test-suite-9ad3724b1a02855a3cad638bba2e564f825954ce.tar.gz.part' saved
+>>> luajit: Fetching luajit-2.1_p20240815-loongarch64-support.patch::https://github.com/loongson/luajit2/releases/download/v2.1-20240815-loongarch64/0001-Add-loongarch64-support-of-all.patch
+Connecting to github.com (140.82.121.3:443)
+Connecting to objects.githubusercontent.com (185.199.111.133:443)
+saving to '/var/cache/distfiles/luajit-2.1_p20240815-loongarch64-support.patch.part'
+luajit-2.1_p20240815 100% |********************************|  312k  0:00:00 ETA
+'/var/cache/distfiles/luajit-2.1_p20240815-loongarch64-support.patch.part' saved
+>>> luajit: Fetching https://github.com/openresty/luajit2/archive/v2.1-20240815/luajit2-2.1-20240815.tar.gz
+>>> luajit: Fetching https://github.com/openresty/luajit2-test-suite/archive/9ad3724b1a02855a3cad638bba2e564f825954ce/luajit2-test-suite-9ad3724b1a02855a3cad638bba2e564f825954ce.tar.gz
+>>> luajit: Fetching luajit-2.1_p20240815-loongarch64-support.patch::https://github.com/loongson/luajit2/releases/download/v2.1-20240815-loongarch64/0001-Add-loongarch64-support-of-all.patch
+>>> luajit: Checking sha512sums...
+luajit2-2.1-20240815.tar.gz: OK
+luajit2-test-suite-9ad3724b1a02855a3cad638bba2e564f825954ce.tar.gz: OK
+luajit-2.1_p20240815-loongarch64-support.patch: OK
+fix-tests-alpine.patch: OK
+module-paths.patch: OK
+>>> luajit: Unpacking /var/cache/distfiles/luajit2-2.1-20240815.tar.gz...
+>>> luajit: Unpacking /var/cache/distfiles/luajit2-test-suite-9ad3724b1a02855a3cad638bba2e564f825954ce.tar.gz...
+>>> luajit: luajit-2.1_p20240815-loongarch64-support.patch
+patching file Makefile
+patching file dynasm/dasm_loongarch64.h
+patching file dynasm/dasm_loongarch64.lua
+patching file src/Makefile
+patching file src/host/buildvm.c
+patching file src/host/buildvm_asm.c
+patching file src/jit/bcsave.lua
+patching file src/jit/dis_loongarch64.lua
+patching file src/lib_jit.c
+patching file src/lj_arch.h
+patching file src/lj_asm.c
+patching file src/lj_asm_loongarch64.h
+patching file src/lj_ccall.c
+patching file src/lj_ccall.h
+patching file src/lj_ccallback.c
+patching file src/lj_emit_loongarch64.h
+patching file src/lj_frame.h
+patching file src/lj_gdbjit.c
+patching file src/lj_jit.h
+patching file src/lj_target.h
+patching file src/lj_target_loongarch64.h
+patching file src/lj_trace.c
+patching file src/lj_vmmath.c
+patching file src/vm_loongarch64.dasc
+>>> luajit: fix-tests-alpine.patch
+patching file test-suite/run-tests
+patching file test-suite/test/ffi/ffi_redir.lua
+patching file test-suite/test/sysdep/ffi_include_gtk.lua
+patching file test-suite/test/sysdep/ffi_include_std.lua
+Hunk #1 succeeded at 15 (offset 1 line).
+patching file test-suite/test/sysdep/ffi_lib_c.lua
+>>> luajit: module-paths.patch
+patching file src/luaconf.h
+Hunk #1 succeeded at 41 (offset -1 lines).
+Hunk #2 succeeded at 63 (offset 3 lines).
+==== Building LuaJIT 2.1 (amalgamation) ====
+make -C src amalg
+make[1]: Entering directory '/home/packager/aports/main/luajit/src/luajit2-2.1-20240815/src'
+make all "LJCORE_O=ljamalg.o lj_str_hash.o"
+make[2]: Entering directory '/home/packager/aports/main/luajit/src/luajit2-2.1-20240815/src'
+CC        lj_init.o
+HOSTCC    host/minilua.o
+HOSTCC    host/buildvm_asm.o
+HOSTCC    host/buildvm_lib.o
+HOSTCC    host/buildvm_peobj.o
+HOSTCC    host/buildvm_fold.o
+CC        lj_str_hash.o
+HOSTLINK  host/minilua
+VERSION   luajit.h
+DYNASM    host/buildvm_arch.h
+CC        luajit.o
+HOSTCC    host/buildvm.o
+HOSTLINK  host/buildvm
+BUILDVM   lj_vm.S
+BUILDVM   lj_ffdef.h
+BUILDVM   lj_bcdef.h
+BUILDVM   lj_folddef.h
+BUILDVM   lj_recdef.h
+BUILDVM   lj_libdef.h
+BUILDVM   jit/vmdef.lua
+ASM       lj_vm.o
+CC        ljamalg.o
+In file included from ljamalg.c:33:
+lj_debug.c:116:15: warning: 'lj_debug_framepc' defined but not used [-Wunused-function]
+  116 | LJ_FUNC BCPos lj_debug_framepc(lua_State *L, GCfunc *fn, cTValue *nextframe)
+      |               ^~~~~~~~~~~~~~~~
+In file included from ljamalg.c:33:
+lj_debug.c:116:15: warning: 'lj_debug_framepc' defined but not used [-Wunused-function]
+  116 | LJ_FUNC BCPos lj_debug_framepc(lua_State *L, GCfunc *fn, cTValue *nextframe)
+      |               ^~~~~~~~~~~~~~~~
+AR        libluajit.a
+DYNLINK   libluajit.so
+LINK      luajit
+OK        Successfully built LuaJIT
+make[2]: Leaving directory '/home/packager/aports/main/luajit/src/luajit2-2.1-20240815/src'
+make[1]: Leaving directory '/home/packager/aports/main/luajit/src/luajit2-2.1-20240815/src'
+==== Successfully built LuaJIT 2.1 (amalgamation) ====
+==== Installing LuaJIT 2.1.1723681758 to /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target ====
+mkdir -p /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/bin /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/include/luajit-2.1 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/share/man/man1 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/pkgconfig /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/share/luajit-2.1/jit /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/share/lua/5.1 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/lua/5.1
+cd src && install -m 0755 luajit /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/bin/luajit-2.1.1723681758
+cd src && test -f libluajit.a && install -m 0644 libluajit.a /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.a || :
+rm -f /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.so.2.1.1723681758 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.so /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.so.2
+cd src && test -f libluajit.so && \
+  install -m 0755 libluajit.so /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.so.2.1.1723681758 && \
+  ( ldconfig -n 2>/dev/null /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib || : ) && \
+  ln -sf libluajit-5.1.so.2.1.1723681758 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.so && \
+  ln -sf libluajit-5.1.so.2.1.1723681758 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/libluajit-5.1.so.2 || :
+cd etc && install -m 0644 luajit.1 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/share/man/man1
+cd etc && sed -e "s|^prefix=.*|prefix=/home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target|" -e "s|^multilib=.*|multilib=lib|" -e "s|^relver=.*|relver=1723681758|" luajit.pc > luajit.pc.tmp && \
+  install -m 0644 luajit.pc.tmp /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/lib/pkgconfig/luajit.pc && \
+  rm -f luajit.pc.tmp
+cd src && install -m 0644 lua.h lualib.h lauxlib.h luaconf.h lua.hpp luajit.h /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/include/luajit-2.1
+cd src/jit && install -m 0644 bc.lua bcsave.lua dump.lua p.lua v.lua zone.lua dis_x86.lua dis_x64.lua dis_arm.lua dis_arm64.lua dis_arm64be.lua dis_ppc.lua dis_mips.lua dis_mipsel.lua dis_mips64.lua dis_mips64el.lua dis_mips64r6.lua dis_mips64r6el.lua dis_loongarch64.lua vmdef.lua /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/share/luajit-2.1/jit
+ln -sf luajit-2.1.1723681758 /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target/bin/luajit
+==== Successfully installed LuaJIT 2.1.1723681758 to /home/packager/aports/main/luajit/src/luajit2-2.1-20240815/test-suite/target ====
+=== test/unportable/math_special.lua
+=== test/ffi/ffi_jit_misc.lua
+=== test/ffi/ffi_parse_basic.lua
+=== test/ffi/ffi_tabov.lua
+=== test/ffi/ffi_call.lua
+=== test/ffi/ffi_callback.lua
+=== test/ffi/ffi_err.lua
+=== test/ffi/ffi_redir.lua
+=== test/ffi/ffi_const.lua
+=== test/ffi/ffi_copy_fill.lua
+=== test/ffi/ffi_arith_ptr.lua
+=== test/ffi/ffi_type_punning.lua
+=== test/ffi/ffi_nosink.lua
+=== test/ffi/ffi_sink.lua
+=== test/ffi/ffi_bitfield.lua
+=== test/ffi/ffi_parse_array.lua
+=== test/ffi/ffi_enum.lua
+=== test/ffi/ffi_new.lua
+=== test/ffi/ffi_gcstep_recursive.lua
+=== test/ffi/ffi_meta_tostring.lua
+=== test/ffi/ffi_parse_struct.lua
+=== test/ffi/ffi_parse_cdef.lua
+=== test/ffi/ffi_jit_array.lua
+=== test/ffi/ffi_jit_call.lua
+=== test/ffi/ffi_jit_arith.lua
+=== test/ffi/ffi_jit_complex.lua
+=== test/ffi/unsink_64_kptr.lua
+=== test/ffi/ffi_jit_struct.lua
+=== test/ffi/ffi_bit64.lua
+=== test/ffi/ffi_metatype.lua
+=== test/ffi/ffi_jit_conv.lua
+=== test/ffi/ffi_convert.lua
+=== test/ffi/ffi_istype.lua
+=== test/ffi/ffi_lex_number.lua
+=== test/misc/table_misc.lua
+=== test/misc/stitch.lua
+=== test/misc/exit_growstack.lua
+=== test/misc/hstore_elimination.lua
+=== test/misc/meta_getset.lua
+=== test/misc/compare.lua
+=== test/misc/string_char.lua
+=== test/misc/fac.lua
+1
+=== test/misc/iter.lua
+=== test/misc/bit_op.lua
+=== test/misc/meta_tset.lua
+=== test/misc/meta_eq_jit.lua
+=== test/misc/stack_purge.lua
+=== test/misc/meta_tget.lua
+=== test/misc/xpcall_jit.lua
+=== test/misc/fori_coerce.lua
+=== test/misc/iter-bug.lua
+=== test/misc/fuse.lua
+=== test/misc/pcall_jit.lua
+=== test/misc/phi_copyspill.lua
+=== test/misc/sink_nosink.lua
+=== test/misc/meta_arith.lua
+=== test/misc/phi_ref.lua
+=== test/misc/sort.lua
+=== test/misc/ack_notail.lua
+Ack(3,1): 13
+=== test/misc/stack_gc.lua
+=== test/misc/fastfib.lua
+Fib(1): 1
+=== test/misc/dse_field.lua
+=== test/misc/meta_comp_jit.lua
+=== test/misc/stackov.lua
+[[stackov.lua:2: stack overflow]]
+=== test/misc/gc_rechain.lua
+=== test/misc/snap_top.lua
+=== test/misc/meta_cat.lua
+=== test/misc/dualnum.lua
+=== test/misc/hook_top.lua
+=== test/misc/meta_tset_nilget.lua
+=== test/misc/fwd_hrefk_rollback.lua
+=== test/misc/parse_andor.lua
+=== test/misc/string_dump.lua
+=== test/misc/table_alias.lua
+=== test/misc/phi_rot8.lua
+=== test/misc/api_call.lua
+=== test/misc/coro_yield.lua
+=== test/misc/modulo.lua
+=== test/misc/hook_active.lua
+=== test/misc/sink_alloc.lua
+=== test/misc/meta_pairs.lua
+=== test/misc/hook_line.lua
+=== test/misc/table_chain_bug_LuaJIT_494.lua
+=== test/misc/meta_framegap.lua
+=== test/misc/unordered.lua
+=== test/misc/gcstep.lua
+=== test/misc/kfold.lua
+=== test/misc/assign_tset_tmp.lua
+=== test/misc/debug_gc.lua
+=== test/misc/tlen_loop.lua
+=== test/misc/uclo.lua
+=== test/misc/loop_unroll.lua
+=== test/misc/self.lua
+=== test/misc/pairs_bug.lua
+=== test/misc/tonumber_scan.lua
+=== test/misc/libfuncs.lua
+=== test/misc/hook_record.lua
+=== test/misc/tcall_loop.lua
+=== test/misc/phi_rot18.lua
+=== test/misc/fib.lua
+Fib(1): 1
+=== test/misc/jloop-itern-stack-check-fix.lua
+=== test/misc/phi_rot9.lua
+=== test/misc/stackovc.lua
+=== test/misc/wbarrier.lua
+=== test/misc/meta_comp.lua
+=== test/misc/strcmp.lua
+=== test/misc/goto.lua
+=== test/misc/hook_norecord.lua
+=== test/misc/tak.lua
+2
+=== test/misc/getfenv.lua
+=== test/misc/tcall_base.lua
+=== test/misc/fwd_tnew_tdup.lua
+=== test/misc/table_remove.lua
+=== test/misc/multi_result_call_next.lua
+=== test/misc/tnew_tdup.lua
+=== test/misc/string_sub.lua
+=== test/misc/meta_tset_str.lua
+=== test/misc/meta_tset_resize.lua
+=== test/misc/fwd_upval.lua
+=== test/misc/coro_traceback.lua
+=== test/misc/exit_jfuncf.lua
+=== test/misc/recsump.lua
+=== test/misc/nsieve.lua
+Primes up to        1        0
+=== test/misc/dse_array.lua
+=== test/misc/alias_alloc.lua
+=== test/misc/parse_esc.lua
+=== test/misc/jit_record.lua
+10
+63
+=== test/misc/lightud.lua
+=== test/misc/string_sub_opt.lua
+=== test/misc/jit_flush.lua
+=== test/misc/string_op.lua
+=== test/misc/meta_len.lua
+=== test/misc/ack.lua
+Ack(3,1): 13
+=== test/misc/parse_misc.lua
+=== test/misc/parse_comp.lua
+=== test/misc/meta_eq.lua
+=== test/misc/recsum.lua
+=== test/misc/string_byte.lua
+=== test/misc/unordered_jit.lua
+=== test/misc/tonumber_tostring.lua
+=== test/misc/exit_frame.lua
+=== test/misc/meta_call.lua
+=== test/misc/parse_hex.lua
+=== test/misc/snap_gcexit.lua
+=== test/misc/snap_top2.lua
+=== test/misc/assign_tset_prevnil.lua
+=== test/misc/recurse_tail.lua
+=== test/misc/phi_conv.lua
+=== test/misc/meta_nomm.lua
+=== test/misc/cat_jit.lua
+=== test/misc/table_insert.lua
+=== test/misc/gc_trace.lua
+=== test/misc/for_dir.lua
+=== test/misc/catch_wrap.lua
+=== test/misc/recurse_deep.lua
+=== test/misc/select.lua
+=== test/misc/meta_arith_jit.lua
+=== test/misc/constov.lua
+=== test/misc/meta_tget_nontab.lua
+=== test/misc/phi_rotx.lua
+=== test/misc/vararg_jit.lua
+=== test/misc/wbarrier_jit.lua
+=== test/misc/wbarrier_obar.lua
+=== test/misc/math_random.lua
+=== test/misc/argcheck.lua
+=== test/misc/debug_meta.lua
+=== test/sysdep/ffi_include_gtk.lua
+=== test/sysdep/ffi_include_std.lua
+=== test/sysdep/ffi_lib_c.lua
+=== test/sysdep/catch_cpp.lua
+=== test/sysdep/ffi_lib_z.lua
+[32mAll tests successful.[0m
+>>> luajit: Entering fakeroot...
+==== Installing LuaJIT 2.1.1723681758 to /usr ====
+mkdir -p /home/packager/aports/main/luajit/pkg/luajit/usr/bin /home/packager/aports/main/luajit/pkg/luajit/usr/lib /home/packager/aports/main/luajit/pkg/luajit/usr/include/luajit-2.1 /home/packager/aports/main/luajit/pkg/luajit/usr/share/man/man1 /home/packager/aports/main/luajit/pkg/luajit/usr/lib/pkgconfig /home/packager/aports/main/luajit/pkg/luajit/usr/share/luajit-2.1/jit /home/packager/aports/main/luajit/pkg/luajit/usr/share/lua/5.1 /home/packager/aports/main/luajit/pkg/luajit/usr/lib/lua/5.1
+cd src && install -m 0755 luajit /home/packager/aports/main/luajit/pkg/luajit/usr/bin/luajit-2.1.1723681758
+cd src && test -f libluajit.a && install -m 0644 libluajit.a /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.a || :
+rm -f /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.so.2.1.1723681758 /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.so /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.so.2
+cd src && test -f libluajit.so && \
+  install -m 0755 libluajit.so /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.so.2.1.1723681758 && \
+  ( ldconfig -n 2>/dev/null /home/packager/aports/main/luajit/pkg/luajit/usr/lib || : ) && \
+  ln -sf libluajit-5.1.so.2.1.1723681758 /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.so && \
+  ln -sf libluajit-5.1.so.2.1.1723681758 /home/packager/aports/main/luajit/pkg/luajit/usr/lib/libluajit-5.1.so.2 || :
+cd etc && install -m 0644 luajit.1 /home/packager/aports/main/luajit/pkg/luajit/usr/share/man/man1
+cd etc && sed -e "s|^prefix=.*|prefix=/usr|" -e "s|^multilib=.*|multilib=lib|" -e "s|^relver=.*|relver=1723681758|" luajit.pc > luajit.pc.tmp && \
+  install -m 0644 luajit.pc.tmp /home/packager/aports/main/luajit/pkg/luajit/usr/lib/pkgconfig/luajit.pc && \
+  rm -f luajit.pc.tmp
+cd src && install -m 0644 lua.h lualib.h lauxlib.h luaconf.h lua.hpp luajit.h /home/packager/aports/main/luajit/pkg/luajit/usr/include/luajit-2.1
+cd src/jit && install -m 0644 bc.lua bcsave.lua dump.lua p.lua v.lua zone.lua dis_x86.lua dis_x64.lua dis_arm.lua dis_arm64.lua dis_arm64be.lua dis_ppc.lua dis_mips.lua dis_mipsel.lua dis_mips64.lua dis_mips64el.lua dis_mips64r6.lua dis_mips64r6el.lua dis_loongarch64.lua vmdef.lua /home/packager/aports/main/luajit/pkg/luajit/usr/share/luajit-2.1/jit
+ln -sf luajit-2.1.1723681758 /home/packager/aports/main/luajit/pkg/luajit/usr/bin/luajit
+==== Successfully installed LuaJIT 2.1.1723681758 to /usr ====
+>>> luajit-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/luajit/pkg/luajit-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/luajit/pkg/luajit-dev/usr/lib/pkgconfig'
+'usr/lib/libluajit-5.1.a' -> '/home/packager/aports/main/luajit/pkg/luajit-dev/usr/lib/libluajit-5.1.a'
+'usr/lib/libluajit-5.1.so' -> '/home/packager/aports/main/luajit/pkg/luajit-dev/usr/lib/libluajit-5.1.so'
+>>> luajit-dev*: Preparing subpackage luajit-dev...
+>>> luajit-dev*: Running postcheck for luajit-dev
+>>> luajit-dbg*: Running split function dbg...
+>>> luajit-dbg*: Preparing subpackage luajit-dbg...
+>>> luajit-dbg*: Running postcheck for luajit-dbg
+>>> luajit-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/luajit/pkg/luajit-doc/usr/share/man'
+'usr/share/licenses' -> '/home/packager/aports/main/luajit/pkg/luajit-doc/usr/share/licenses'
+>>> luajit-doc*: Preparing subpackage luajit-doc...
+>>> luajit-doc*: Running postcheck for luajit-doc
+>>> luajit*: Running postcheck for luajit
+>>> luajit*: Preparing package luajit...
+>>> luajit-dbg*: Scanning shared objects
+>>> luajit-dev*: Scanning shared objects
+>>> luajit-doc*: Scanning shared objects
+>>> luajit*: Scanning shared objects
+>>> luajit-dbg*: Tracing dependencies...
+>>> luajit-dbg*: Package size: 4.4 MB
+>>> luajit-dbg*: Compressing data...
+>>> luajit-dbg*: Create checksum...
+pigz: not found
+>>> luajit-dbg*: Create luajit-dbg-2.1_p20240815-r1.apk
+>>> luajit-dev*: Tracing dependencies...
+	luajit=2.1_p20240815-r1
+	pkgconfig
+>>> luajit-dev*: Package size: 3.8 MB
+>>> luajit-dev*: Compressing data...
+>>> luajit-dev*: Create checksum...
+pigz: not found
+>>> luajit-dev*: Create luajit-dev-2.1_p20240815-r1.apk
+>>> luajit-doc*: Tracing dependencies...
+>>> luajit-doc*: Package size: 4.2 KB
+>>> luajit-doc*: Compressing data...
+>>> luajit-doc*: Create checksum...
+pigz: not found
+>>> luajit-doc*: Create luajit-doc-2.1_p20240815-r1.apk
+>>> luajit*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libgcc_s.so.1
+>>> luajit*: Package size: 1.3 MB
+>>> luajit*: Compressing data...
+>>> luajit*: Create checksum...
+pigz: not found
+>>> luajit*: Create luajit-2.1_p20240815-r1.apk
+>>> luajit: Build complete at Sun, 18 May 2025 07:38:20 +0000 elapsed time 0h 1m 12s
+>>> luajit: Cleaning up srcdir
+>>> luajit: Cleaning up pkgdir
+>>> luajit: Uninstalling dependencies...
+(1/15) Purging .makedepends-luajit (20250518.073709)
+(2/15) Purging perl-parallel-forkmanager (2.03-r0)
+(3/15) Purging perl-moo (2.005005-r1)
+(4/15) Purging perl-class-method-modifiers (2.15-r1)
+(5/15) Purging perl-sub-quote (2.006008-r1)
+(6/15) Purging perl-role-tiny (2.002004-r2)
+(7/15) Purging sqlite-dev (3.49.2-r0)
+(8/15) Purging sqlite (3.49.2-r0)
+(9/15) Purging sqlite-libs (3.49.2-r0)
+(10/15) Purging zlib-dev (1.3.1-r2)
+(11/15) Purging git-perl (2.47.2-r0)
+(12/15) Purging perl-git (2.47.2-r0)
+(13/15) Purging perl-error (0.17029-r2)
+(14/15) Purging perl (5.40.2-r0)
+(15/15) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> luajit: Updating the main/x86_64 repository index...
+>>> luajit: Signing the index...
+pigz: not found

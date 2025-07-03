@@ -1,0 +1,93 @@
+pigz: not found
+>>> netcat-openbsd: Building main/netcat-openbsd 1.229.1-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:11:48 +0000
+>>> netcat-openbsd: Validating /home/packager/aports/main/netcat-openbsd/APKBUILD...
+>>> netcat-openbsd: Analyzing dependencies...
+>>> netcat-openbsd: Installing for build: build-base libbsd-dev
+(1/5) Installing libmd (1.1.0-r0)
+(2/5) Installing libmd-dev (1.1.0-r0)
+(3/5) Installing libbsd (0.12.2-r0)
+(4/5) Installing libbsd-dev (0.12.2-r0)
+(5/5) Installing .makedepends-netcat-openbsd (20250523.171149)
+OK: 565 MiB in 137 packages
+>>> netcat-openbsd: Cleaning up srcdir
+>>> netcat-openbsd: Cleaning up pkgdir
+>>> netcat-openbsd: Cleaning up tmpdir
+>>> netcat-openbsd: Fetching https://salsa.debian.org/debian/netcat-openbsd/-/archive/debian/1.229-1/netcat-openbsd-debian-1.229-1.tar.gz
+Connecting to salsa.debian.org (209.87.16.44:443)
+saving to '/var/cache/distfiles/netcat-openbsd-debian-1.229-1.tar.gz.part'
+netcat-openbsd-debia 100% |********************************| 86491  0:00:00 ETA
+'/var/cache/distfiles/netcat-openbsd-debian-1.229-1.tar.gz.part' saved
+>>> netcat-openbsd: Fetching https://salsa.debian.org/debian/netcat-openbsd/-/archive/debian/1.229-1/netcat-openbsd-debian-1.229-1.tar.gz
+>>> netcat-openbsd: Checking sha512sums...
+netcat-openbsd-debian-1.229-1.tar.gz: OK
+b64.patch: OK
+base64.c: OK
+>>> netcat-openbsd: Unpacking /var/cache/distfiles/netcat-openbsd-debian-1.229-1.tar.gz...
+>>> netcat-openbsd: b64.patch
+patching file socks.c
+patching file Makefile
+patching file nc.1
+patching file netcat.c
+patching file socks.c
+Hunk #2 succeeded at 219 (offset 2 lines).
+Hunk #3 succeeded at 272 (offset 2 lines).
+Hunk #4 succeeded at 285 (offset 2 lines).
+Hunk #5 succeeded at 310 (offset 2 lines).
+Hunk #6 succeeded at 328 (offset 2 lines).
+Hunk #7 succeeded at 350 (offset 2 lines).
+Hunk #8 succeeded at 373 (offset 2 lines).
+patching file Makefile
+patching file nc.1
+patching file netcat.c
+patching file netcat.c
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file netcat.c
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+patching file nc.1
+patching file netcat.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DDEBIAN_VERSION="\"1.229-1\"" -c netcat.c -o netcat.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DDEBIAN_VERSION="\"1.229-1\"" -c atomicio.c -o atomicio.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DDEBIAN_VERSION="\"1.229-1\"" -c socks.c -o socks.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DDEBIAN_VERSION="\"1.229-1\"" -c base64.c -o base64.o
+In file included from /usr/include/bsd/sys/cdefs.h:54,
+                 from /usr/include/bsd/readpassphrase.h:37,
+                 from netcat.c:50:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+In file included from /usr/include/bsd/sys/cdefs.h:54,
+                 from /usr/include/bsd/readpassphrase.h:37,
+                 from socks.c:41:
+/usr/include/sys/cdefs.h:4:2: warning: #warning usage of non-standard #include <sys/cdefs.h> is deprecated [-Wcpp]
+    4 | #warning usage of non-standard #include <sys/cdefs.h> is deprecated
+      |  ^~~~~~~
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DDEBIAN_VERSION="\"1.229-1\"" -Wl,--no-add-needed netcat.o atomicio.o socks.o base64.o `pkg-config --libs libbsd` -lresolv -o nc
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../lib/libc.so: warning: The fgetln() function cannot be safely ported, use getline(3) instead, as it is supported by GNU and POSIX.1-2008.
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: nc: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: nc has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:14: nc] Error 1
+>>> ERROR: netcat-openbsd: build failed
+>>> netcat-openbsd: Uninstalling dependencies...
+(1/5) Purging .makedepends-netcat-openbsd (20250523.171149)
+(2/5) Purging libbsd-dev (0.12.2-r0)
+(3/5) Purging libmd-dev (1.1.0-r0)
+(4/5) Purging libbsd (0.12.2-r0)
+(5/5) Purging libmd (1.1.0-r0)
+OK: 564 MiB in 132 packages

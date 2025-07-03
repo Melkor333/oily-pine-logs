@@ -1,0 +1,169 @@
+pigz: not found
+>>> perl-cpanel-json-xs: Building main/perl-cpanel-json-xs 4.39-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:12:25 +0000
+>>> perl-cpanel-json-xs: Validating /home/packager/aports/main/perl-cpanel-json-xs/APKBUILD...
+>>> perl-cpanel-json-xs: Analyzing dependencies...
+>>> perl-cpanel-json-xs: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-cpanel-json-xs (20250518.091226)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-cpanel-json-xs: Cleaning up srcdir
+>>> perl-cpanel-json-xs: Cleaning up pkgdir
+>>> perl-cpanel-json-xs: Cleaning up tmpdir
+>>> perl-cpanel-json-xs: Fetching https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Cpanel-JSON-XS-4.39.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Cpanel-JSON-XS-4.39.tar.gz.part'
+Cpanel-JSON-XS-4.39. 100% |********************************|  254k  0:00:00 ETA
+'/var/cache/distfiles/Cpanel-JSON-XS-4.39.tar.gz.part' saved
+>>> perl-cpanel-json-xs: Fetching https://cpan.metacpan.org/authors/id/R/RU/RURBAN/Cpanel-JSON-XS-4.39.tar.gz
+>>> perl-cpanel-json-xs: Checking sha512sums...
+Cpanel-JSON-XS-4.39.tar.gz: OK
+>>> perl-cpanel-json-xs: Unpacking /var/cache/distfiles/Cpanel-JSON-XS-4.39.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Cpanel::JSON::XS
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-cpanel-json-xs/src/Cpanel-JSON-XS-4.39/typemap'  XS.xs > XS.xsc
+Running Mkbootstrap for XS ()
+chmod 644 "XS.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/Cpanel/JSON/XS/XS.bs 644
+cp XS/Type.pm blib/lib/Cpanel/JSON/XS/Type.pm
+cp XS.pm blib/lib/Cpanel/JSON/XS.pm
+cp XS/Boolean.pm blib/lib/Cpanel/JSON/XS/Boolean.pm
+mv XS.xsc XS.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"4.39\" -DXS_VERSION=\"4.39\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -Wall -Wextra -W XS.c
+rm -f blib/arch/auto/Cpanel/JSON/XS/XS.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  XS.o  -o blib/arch/auto/Cpanel/JSON/XS/XS.so  \
+      \
+  
+chmod 755 blib/arch/auto/Cpanel/JSON/XS/XS.so
+cp bin/cpanel_json_xs blib/script/cpanel_json_xs
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/cpanel_json_xs
+Manifying 1 pod document
+Manifying 3 pod documents
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/Cpanel/JSON/XS/XS.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/00_load.t ................ ok
+t/01_utf8.t ................ ok
+t/02_error.t ............... ok
+t/03_types.t ............... ok
+t/04_dwiw_encode.t ......... ok
+t/05_dwiw_decode.t ......... ok
+t/06_pc_pretty.t ........... ok
+t/07_pc_esc.t .............. ok
+t/08_pc_base.t ............. ok
+t/08_pc_base_nv.t .......... ok
+t/09_pc_extra_number.t ..... ok
+t/104_sortby.t ............. ok
+t/105_esc_slash.t .......... ok
+t/106_allow_barekey.t ...... ok
+t/107_allow_singlequote.t .. ok
+t/108_decode.t ............. ok
+t/109_encode.t ............. ok
+t/10_pc_keysort.t .......... ok
+t/110_bignum.t ............. ok
+t/112_upgrade.t ............ ok
+t/113_overloaded_eq.t ...... ok
+t/114_decode_prefix.t ...... ok
+t/115_tie_ixhash.t ......... ok
+t/116_incr_parse_fixed.t ... ok
+t/117_numbers.t ............ ok
+t/118_type.t ............... ok
+t/119_type_decode.t ........ ok
+t/11_pc_expo.t ............. ok
+t/120_type_all_string.t .... ok
+t/121_memleak.t ............ ok
+t/125_shared_boolean.t ..... ok
+t/12_blessed.t ............. ok
+t/13_limit.t ............... ok
+t/14_latin1.t .............. ok
+t/15_prefix.t .............. ok
+t/16_tied.t ................ ok
+t/17_relaxed.t ............. ok
+t/18_json_checker.t ........ ok
+t/19_incr.t ................ ok
+t/20_faihu.t ............... ok
+t/20_unknown.t ............. ok
+t/21_evans.t ............... ok
+t/22_comment_at_eof.t ...... ok
+t/23_array_ctx.t ........... ok
+t/24_freeze_recursion.t .... ok
+t/25_boolean.t ............. ok
+t/26_duplicate.t ........... ok
+t/30_jsonspec.t ............ ok
+t/31_bom.t ................. ok
+t/52_object.t .............. ok
+t/53_readonly.t ............ ok
+t/54_stringify.t ........... skipped: JSON 2.09 required for cross testing
+t/55_modifiable.t .......... ok
+t/96_interop.t ............. skipped: JSON required for testing interop
+t/96_interop_pp.t .......... ok
+t/96_mojo.t ................ skipped: Mojo::JSON required for testing interop
+t/97_unshare_hek.t ......... ok
+t/98_56only.t .............. ok
+t/99_binary.t .............. ok
+t/zero-mojibake.t .......... ok
+All tests successful.
+Files=60, Tests=2851,  4 wallclock secs ( 0.28 usr  0.10 sys +  3.96 cusr  0.72 csys =  5.06 CPU)
+Result: PASS
+>>> perl-cpanel-json-xs: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/Cpanel/JSON/XS/XS.bs 644
+Manifying 1 pod document
+Manifying 3 pod documents
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/lib/perl5/vendor_perl/auto/Cpanel/JSON/XS/XS.so
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/lib/perl5/vendor_perl/Cpanel/JSON/XS.pm
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/lib/perl5/vendor_perl/Cpanel/JSON/XS/Type.pm
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/lib/perl5/vendor_perl/Cpanel/JSON/XS/Boolean.pm
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/share/man/man1/cpanel_json_xs.1
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/share/man/man3/Cpanel::JSON::XS::Type.3pm
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/share/man/man3/Cpanel::JSON::XS.3pm
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/share/man/man3/Cpanel::JSON::XS::Boolean.3pm
+Installing /home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs/usr/bin/cpanel_json_xs
+>>> perl-cpanel-json-xs-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-cpanel-json-xs/pkg/perl-cpanel-json-xs-doc/usr/share/man'
+>>> perl-cpanel-json-xs-doc*: Preparing subpackage perl-cpanel-json-xs-doc...
+>>> perl-cpanel-json-xs-doc*: Running postcheck for perl-cpanel-json-xs-doc
+>>> perl-cpanel-json-xs*: Running postcheck for perl-cpanel-json-xs
+>>> perl-cpanel-json-xs*: Preparing package perl-cpanel-json-xs...
+>>> perl-cpanel-json-xs*: Stripping binaries
+>>> perl-cpanel-json-xs-doc*: Scanning shared objects
+>>> perl-cpanel-json-xs*: Scanning shared objects
+>>> perl-cpanel-json-xs-doc*: Tracing dependencies...
+>>> perl-cpanel-json-xs-doc*: Package size: 40.5 KB
+>>> perl-cpanel-json-xs-doc*: Compressing data...
+>>> perl-cpanel-json-xs-doc*: Create checksum...
+pigz: not found
+>>> perl-cpanel-json-xs-doc*: Create perl-cpanel-json-xs-doc-4.39-r0.apk
+>>> perl-cpanel-json-xs*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-cpanel-json-xs*: Package size: 200.8 KB
+>>> perl-cpanel-json-xs*: Compressing data...
+>>> perl-cpanel-json-xs*: Create checksum...
+pigz: not found
+>>> perl-cpanel-json-xs*: Create perl-cpanel-json-xs-4.39-r0.apk
+>>> perl-cpanel-json-xs: Build complete at Sun, 18 May 2025 09:12:37 +0000 elapsed time 0h 0m 12s
+>>> perl-cpanel-json-xs: Cleaning up srcdir
+>>> perl-cpanel-json-xs: Cleaning up pkgdir
+>>> perl-cpanel-json-xs: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-cpanel-json-xs (20250518.091226)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-cpanel-json-xs: Updating the main/x86_64 repository index...
+>>> perl-cpanel-json-xs: Signing the index...
+pigz: not found

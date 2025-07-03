@@ -1,0 +1,165 @@
+pigz: not found
+>>> cramfs: Building main/cramfs 1.1-r7 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:24:09 +0000
+>>> cramfs: Validating /home/packager/aports/main/cramfs/APKBUILD...
+>>> cramfs: Analyzing dependencies...
+>>> cramfs: Installing for build: build-base zlib-dev linux-headers
+(1/3) Installing zlib-dev (1.3.1-r2)
+(2/3) Installing linux-headers (6.14.2-r0)
+(3/3) Installing .makedepends-cramfs (20250518.092410)
+OK: 267 MiB in 84 packages
+>>> cramfs: Cleaning up srcdir
+>>> cramfs: Cleaning up pkgdir
+>>> cramfs: Cleaning up tmpdir
+>>> cramfs: Fetching https://downloads.sourceforge.net/cramfs/cramfs-1.1.tar.gz
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to liquidtelecom.dl.sourceforge.net (197.155.77.8:443)
+saving to '/var/cache/distfiles/cramfs-1.1.tar.gz.part'
+cramfs-1.1.tar.gz.pa 100% |********************************| 24179  0:00:00 ETA
+'/var/cache/distfiles/cramfs-1.1.tar.gz.part' saved
+>>> cramfs: Fetching https://downloads.sourceforge.net/cramfs/cramfs-1.1.tar.gz
+>>> cramfs: Checking sha512sums...
+cramfs-1.1.tar.gz: OK
+mkcramfs-include-sysmacros.patch: OK
+gcc14.patch: OK
+>>> cramfs: Unpacking /var/cache/distfiles/cramfs-1.1.tar.gz...
+>>> cramfs: mkcramfs-include-sysmacros.patch
+patching file mkcramfs.c
+>>> cramfs: gcc14.patch
+patching file mkcramfs.c
+gcc -W -Wall -O2 -g -I. -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  mkcramfs.c  -lz -o mkcramfs
+gcc -W -Wall -O2 -g -I. -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  cramfsck.c  -lz -o cramfsck
+mkcramfs.c: In function 'parse_directory':
+mkcramfs.c:288:29: warning: pointer targets in assignment from 'char *' to 'unsigned char *' differ in signedness [-Wpointer-sign]
+  288 |                 entry->name = strdup(dirent->d_name);
+      |                             ^
+mkcramfs.c: In function 'write_superblock':
+mkcramfs.c:400:30: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  400 |                 strncpy(super->name, opt_name, sizeof(super->name));
+      |                         ~~~~~^~~~~~
+      |                              |
+      |                              u8 * {aka unsigned char *}
+In file included from mkcramfs.c:36:
+/usr/include/fortify/string.h:138:57: note: expected 'char *' but argument is of type 'u8 *' {aka 'unsigned char *'}
+  138 | _FORTIFY_FN(strncpy) char *strncpy(char * _FORTIFY_POS0 __d,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~^~~
+mkcramfs.c:402:30: warning: pointer targets in passing argument 1 of 'strncpy' differ in signedness [-Wpointer-sign]
+  402 |                 strncpy(super->name, "Compressed", sizeof(super->name));
+      |                         ~~~~~^~~~~~
+      |                              |
+      |                              u8 * {aka unsigned char *}
+/usr/include/fortify/string.h:138:57: note: expected 'char *' but argument is of type 'u8 *' {aka 'unsigned char *'}
+  138 | _FORTIFY_FN(strncpy) char *strncpy(char * _FORTIFY_POS0 __d,
+      |                                    ~~~~~~~~~~~~~~~~~~~~~^~~
+mkcramfs.c: In function 'write_directory_structure':
+mkcramfs.c:481:50: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  481 |                         size_t len = strlen(entry->name);
+      |                                             ~~~~~^~~~~~
+      |                                                  |
+      |                                                  unsigned char *
+In file included from /usr/include/fortify/string.h:23:
+/usr/include/string.h:54:16: note: expected 'const char *' but argument is of type 'unsigned char *'
+   54 | size_t strlen (const char *);
+      |                ^~~~~~~~~~~~
+mkcramfs.c: In function 'do_compress':
+mkcramfs.c:599:46: warning: pointer targets in passing argument 1 of 'compress2' differ in signedness [-Wpointer-sign]
+  599 |                         err = compress2(base + curr, &len, uncompressed, input, Z_BEST_COMPRESSION);
+      |                                         ~~~~~^~~~~~
+      |                                              |
+      |                                              char *
+In file included from mkcramfs.c:39:
+/usr/include/zlib.h:1247:38: note: expected 'Bytef *' {aka 'unsigned char *'} but argument is of type 'char *'
+ 1247 | ZEXTERN int ZEXPORT compress2(Bytef *dest,   uLongf *destLen,
+      |                               ~~~~~~~^~~~
+mkcramfs.c:599:60: warning: pointer targets in passing argument 3 of 'compress2' differ in signedness [-Wpointer-sign]
+  599 |                         err = compress2(base + curr, &len, uncompressed, input, Z_BEST_COMPRESSION);
+      |                                                            ^~~~~~~~~~~~
+      |                                                            |
+      |                                                            char *
+/usr/include/zlib.h:1248:44: note: expected 'const Bytef *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1248 |                               const Bytef *source, uLong sourceLen,
+      |                               ~~~~~~~~~~~~~^~~~~~
+mkcramfs.c: In function 'write_data':
+mkcramfs.c:648:73: warning: pointer targets in passing argument 3 of 'do_compress' differ in signedness [-Wpointer-sign]
+  648 |                                 offset = do_compress(base, offset, entry->name, entry->uncompressed, entry->size);
+      |                                                                    ~~~~~^~~~~~
+      |                                                                         |
+      |                                                                         unsigned char *
+mkcramfs.c:579:78: note: expected 'const char *' but argument is of type 'unsigned char *'
+  579 | static unsigned int do_compress(char *base, unsigned int offset, char const *name, char *uncompressed, unsigned int size)
+      |                                                                  ~~~~~~~~~~~~^~~~
+mkcramfs.c: In function 'main':
+mkcramfs.c:772:80: warning: format '%Ld' expects argument of type 'long long int', but argument 3 has type 'off_t' {aka 'long int'} [-Wformat=]
+  772 |                         "warning: estimate of required size (upper bound) is %LdMB, but maximum image size is %uMB, we might die prematurely\n",
+      |                                                                              ~~^
+      |                                                                                |
+      |                                                                                long long int
+      |                                                                              %ld
+  773 |                         fslen_ub >> 20,
+      |                         ~~~~~~~~~~~~~~                                          
+      |                                  |
+      |                                  off_t {aka long int}
+cramfsck.c: In function 'main':
+cramfsck.c:671:25: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  671 |                         usage(FSCK_OK);
+      |                         ^~~~~~~~~~~~~~
+cramfsck.c:672:17: note: here
+  672 |                 case 'x':
+      |                 ^~~~
+mkcramfs.c:811:34: warning: format '%d' expects argument of type 'int', but argument 2 has type 'ssize_t' {aka 'long int'} [-Wformat=]
+  811 |         printf("Directory data: %d bytes\n", offset);
+      |                                 ~^           ~~~~~~
+      |                                  |           |
+      |                                  int         ssize_t {aka long int}
+      |                                 %ld
+mkcramfs.c:818:30: warning: format '%d' expects argument of type 'int', but argument 2 has type 'ssize_t' {aka 'long int'} [-Wformat=]
+  818 |         printf("Everything: %d kilobytes\n", offset >> 10);
+      |                             ~^               ~~~~~~~~~~~~
+      |                              |                      |
+      |                              int                    ssize_t {aka long int}
+      |                             %ld
+mkcramfs.c:822:31: warning: format '%d' expects argument of type 'int', but argument 2 has type 'long unsigned int' [-Wformat=]
+  822 |         printf("Super block: %d bytes\n", sizeof(struct cramfs_super));
+      |                              ~^           ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |                               |           |
+      |                               int         long unsigned int
+      |                              %ld
+mkcramfs.c:826:36: warning: pointer targets in passing argument 2 of 'crc32' differ in signedness [-Wpointer-sign]
+  826 |         crc = crc32(crc, (rom_image+opt_pad), (offset-opt_pad));
+      |                          ~~~~~~~~~~^~~~~~~~~
+      |                                    |
+      |                                    char *
+/usr/include/zlib.h:1730:53: note: expected 'const Bytef *' {aka 'const unsigned char *'} but argument is of type 'char *'
+ 1730 | ZEXTERN uLong ZEXPORT crc32(uLong crc, const Bytef *buf, uInt len);
+      |                                        ~~~~~~~~~~~~~^~~
+mkcramfs.c:706:25: warning: this statement may fall through [-Wimplicit-fallthrough=]
+  706 |                         usage(MKFS_OK);
+      |                         ^~~~~~~~~~~~~~
+mkcramfs.c:707:17: note: here
+  707 |                 case 'E':
+      |                 ^~~~
+>>> cramfs: Entering fakeroot...
+>>> cramfs*: Running postcheck for cramfs
+>>> WARNING: cramfs*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> cramfs*: Preparing package cramfs...
+>>> cramfs*: Stripping binaries
+>>> cramfs*: Scanning shared objects
+>>> cramfs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libz.so.1
+>>> cramfs*: Package size: 35.8 KB
+>>> cramfs*: Compressing data...
+>>> cramfs*: Create checksum...
+pigz: not found
+>>> cramfs*: Create cramfs-1.1-r7.apk
+>>> cramfs: Build complete at Sun, 18 May 2025 09:24:13 +0000 elapsed time 0h 0m 4s
+>>> cramfs: Cleaning up srcdir
+>>> cramfs: Cleaning up pkgdir
+>>> cramfs: Uninstalling dependencies...
+(1/3) Purging .makedepends-cramfs (20250518.092410)
+(2/3) Purging zlib-dev (1.3.1-r2)
+(3/3) Purging linux-headers (6.14.2-r0)
+OK: 261 MiB in 81 packages
+>>> cramfs: Updating the main/x86_64 repository index...
+>>> cramfs: Signing the index...
+pigz: not found

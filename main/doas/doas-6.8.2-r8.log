@@ -1,0 +1,154 @@
+pigz: not found
+>>> doas: Building main/doas 6.8.2-r8 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:25:32 +0000
+>>> doas: Validating /home/packager/aports/main/doas/APKBUILD...
+>>> WARNING: doas: doas.post-upgrade: found chmod
+             Permissions should be fixed in APKBUILD package()
+>>> doas: Analyzing dependencies...
+>>> doas: Installing for build: build-base bison
+(1/3) Installing m4 (1.4.19-r3)
+(2/3) Installing bison (3.8.2-r1)
+(3/3) Installing .makedepends-doas (20250518.092533)
+Executing busybox-1.37.0-r12.trigger
+OK: 262 MiB in 84 packages
+>>> doas: Cleaning up srcdir
+>>> doas: Cleaning up pkgdir
+>>> doas: Cleaning up tmpdir
+>>> doas: Fetching doas-6.8.2.tar.gz::https://github.com/Duncaen/OpenDoas/archive/v6.8.2.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/doas-6.8.2.tar.gz.part'
+doas-6.8.2.tar.gz.pa 100% |********************************| 32430  0:00:00 ETA
+'/var/cache/distfiles/doas-6.8.2.tar.gz.part' saved
+>>> doas: Fetching doas-6.8.2.tar.gz::https://github.com/Duncaen/OpenDoas/archive/v6.8.2.tar.gz
+>>> doas: Checking sha512sums...
+doas-6.8.2.tar.gz: OK
+configuration-directory.patch: OK
+manpage-example-path.patch: OK
+change-PATH.patch: OK
+rowhammer.patch: OK
+doas.conf: OK
+>>> doas: Unpacking /var/cache/distfiles/doas-6.8.2.tar.gz...
+>>> doas: configuration-directory.patch
+patching file GNUmakefile
+patching file README.md
+patching file configure
+patching file doas.c
+Hunk #6 succeeded at 415 (offset 5 lines).
+patching file doas.conf.5
+patching file doas.d.5
+patching file parse.y
+patching file README.md
+patching file doas.c
+Hunk #4 succeeded at 405 (offset 5 lines).
+patching file doas.d.5
+>>> doas: manpage-example-path.patch
+patching file doas.conf.5
+>>> doas: change-PATH.patch
+patching file doas.c
+Hunk #1 succeeded at 308 (offset 70 lines).
+>>> doas: rowhammer.patch
+patching file doas.c
+Hunk #1 succeeded at 149 (offset 1 line).
+Hunk #2 succeeded at 252 (offset 66 lines).
+Hunk #3 succeeded at 264 with fuzz 1 (offset 70 lines).
+Hunk #4 succeeded at 423 (offset 78 lines).
+patching file doas.h
+Setting UID_MAX				65535.
+Setting GID_MAX				65535.
+Checking for explicit_bzero ...		yes.
+Checking for strlcat ...   		yes.
+Checking for strlcpy ...   		yes.
+Checking for errc ...      		no.
+Checking for verrc ...     		no.
+Checking for setprogname ...		no.
+Checking for readpassphrase ...		no.
+Checking for strtonum ...  		no.
+Checking for reallocarray ...		yes.
+Checking for execvpe ...   		no.
+Checking for setresuid ... 		yes.
+Checking for setresgid ... 		yes.
+Checking for setreuid ...  		yes.
+Checking for setregid ...  		yes.
+Checking for closefrom ... 		no.
+Checking for sysconf ...   		yes.
+Checking for dirfd ...     		yes.
+Checking for fcntl_h ...   		yes.
+Checking for F_CLOSEM ...  		no.
+Checking for dirent_h ...  		yes.
+Checking for sys_ndir_h ...		no.
+Checking for sys_dir_h ... 		yes.
+Checking for ndir_h ...    		no.
+Checking for login_cap_h ...		no.
+Checking for __attribute__ ...		yes.
+Checking for shadow_h ...  		yes.
+Using auth method			shadow.
+Using persist method			timestamp.
+yacc  parse.y 
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o doas.o doas.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o env.o env.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/errc.o libopenbsd/errc.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/verrc.o libopenbsd/verrc.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/progname.o libopenbsd/progname.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/readpassphrase.o libopenbsd/readpassphrase.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/strtonum.o libopenbsd/strtonum.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/execvpe.o libopenbsd/execvpe.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o libopenbsd/closefrom.o libopenbsd/closefrom.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o shadow.o shadow.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o timestamp.o timestamp.c
+mv -f y.tab.c parse.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt   -c -o parse.o parse.c
+gcc -I. -Ilibopenbsd -O2 -Wall -Wextra -D__linux__ -D_DEFAULT_SOURCE -D_GNU_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt parse.o doas.o env.o libopenbsd/errc.o libopenbsd/verrc.o libopenbsd/progname.o libopenbsd/readpassphrase.o libopenbsd/strtonum.o libopenbsd/execvpe.o libopenbsd/closefrom.o shadow.o timestamp.o -o doas -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lcrypt
+rm parse.c
+./doas: unrecognized option: v
+usage: doas [-Lns] [-C config] [-u user] command [args]
+>>> doas: Entering fakeroot...
+mkdir -p -m 0755 /home/packager/aports/main/doas/pkg/doas/usr/bin
+[ -n "" ] && mkdir -p -m 0755 /home/packager/aports/main/doas/pkg/doas/etc/pam.d || true
+mkdir -p -m 0755 /home/packager/aports/main/doas/pkg/doas/usr/share/man/man1
+mkdir -p -m 0755 /home/packager/aports/main/doas/pkg/doas/usr/share/man/man5
+cp -f doas /home/packager/aports/main/doas/pkg/doas/usr/bin
+chown root:root /home/packager/aports/main/doas/pkg/doas/usr/bin/doas
+chmod 4755 /home/packager/aports/main/doas/pkg/doas/usr/bin/doas
+[ -n "" ] && cp  /home/packager/aports/main/doas/pkg/doas/etc/pam.d/doas || true
+[ -n "" ] && chmod 0644 /home/packager/aports/main/doas/pkg/doas/etc/pam.d/doas || true
+cp -f doas.1 /home/packager/aports/main/doas/pkg/doas/usr/share/man/man1
+cp -f doas.conf.5 /home/packager/aports/main/doas/pkg/doas/usr/share/man/man5
+cp -f doas.d.5 /home/packager/aports/main/doas/pkg/doas/usr/share/man/man5
+>>> doas-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/doas/pkg/doas-doc/usr/share/doc'
+'usr/share/man' -> '/home/packager/aports/main/doas/pkg/doas-doc/usr/share/man'
+>>> doas-doc*: Preparing subpackage doas-doc...
+>>> doas-doc*: Running postcheck for doas-doc
+>>> doas*: Running postcheck for doas
+>>> doas*: Preparing package doas...
+>>> doas*: Stripping binaries
+>>> doas*: Script found. /bin/sh added as a dependency for doas-6.8.2-r8.apk
+>>> doas*: Adding .post-upgrade
+>>> doas-doc*: Scanning shared objects
+>>> doas*: Scanning shared objects
+>>> doas-doc*: Tracing dependencies...
+>>> doas-doc*: Package size: 4.8 KB
+>>> doas-doc*: Compressing data...
+>>> doas-doc*: Create checksum...
+pigz: not found
+>>> doas-doc*: Create doas-doc-6.8.2-r8.apk
+>>> doas*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+>>> doas*: Package size: 34.2 KB
+>>> doas*: Compressing data...
+>>> doas*: Create checksum...
+pigz: not found
+>>> doas*: Create doas-6.8.2-r8.apk
+>>> doas: Build complete at Sun, 18 May 2025 09:25:36 +0000 elapsed time 0h 0m 4s
+>>> doas: Cleaning up srcdir
+>>> doas: Cleaning up pkgdir
+>>> doas: Uninstalling dependencies...
+(1/3) Purging .makedepends-doas (20250518.092533)
+(2/3) Purging bison (3.8.2-r1)
+(3/3) Purging m4 (1.4.19-r3)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> doas: Updating the main/x86_64 repository index...
+>>> doas: Signing the index...
+pigz: not found

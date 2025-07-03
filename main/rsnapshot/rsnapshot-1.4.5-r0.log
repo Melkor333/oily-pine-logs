@@ -1,0 +1,148 @@
+pigz: not found
+>>> rsnapshot: Building main/rsnapshot 1.4.5-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 01:00:39 +0000
+>>> rsnapshot: Validating /home/packager/aports/main/rsnapshot/APKBUILD...
+>>> rsnapshot: Analyzing dependencies...
+>>> rsnapshot: Installing for build: build-base perl rsync openssh-client
+(1/8) Installing lz4-libs (1.10.0-r0)
+(2/8) Installing popt (1.19-r4)
+(3/8) Installing libxxhash (0.8.3-r0)
+(4/8) Installing rsync (3.4.0-r0)
+(5/8) Installing openssh-keygen (9.9_p2-r0)
+(6/8) Installing openssh-client-common (9.9_p2-r0)
+(7/8) Installing openssh-client-default (9.9_p2-r0)
+(8/8) Installing .makedepends-rsnapshot (20250523.010046)
+Executing busybox-1.37.0-r12.trigger
+OK: 317 MiB in 122 packages
+>>> rsnapshot: Cleaning up srcdir
+>>> rsnapshot: Cleaning up pkgdir
+>>> rsnapshot: Cleaning up tmpdir
+>>> rsnapshot: Fetching https://rsnapshot.org/downloads/rsnapshot-1.4.5.tar.gz
+Connecting to rsnapshot.org (185.199.108.153:443)
+saving to '/var/cache/distfiles/rsnapshot-1.4.5.tar.gz.part'
+rsnapshot-1.4.5.tar. 100% |********************************|  280k  0:00:00 ETA
+'/var/cache/distfiles/rsnapshot-1.4.5.tar.gz.part' saved
+>>> rsnapshot: Fetching https://rsnapshot.org/downloads/rsnapshot-1.4.5.tar.gz
+>>> rsnapshot: Checking sha512sums...
+rsnapshot-1.4.5.tar.gz: OK
+>>> rsnapshot: Unpacking /var/cache/distfiles/rsnapshot-1.4.5.tar.gz...
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for perl... /usr/bin/perl
+checking for rsync... /usr/bin/rsync
+checking for cp... /bin/cp
+checking for rm... /bin/rm
+checking for ssh... /usr/bin/ssh
+checking for lvcreate... no
+checking for lvremove... no
+checking for mount... /bin/mount
+checking for umount... /bin/umount
+checking for logger... /usr/bin/logger
+checking for du... /usr/bin/du
+checking for true... /bin/true
+checking for false... /bin/false
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating rsnapshot
+config.status: creating rsnapshot-diff
+config.status: creating rsnapshot.conf.default
+config.status: creating t/rsync/conf/rsync.conf
+config.status: creating t/rsync/rsync.t
+config.status: creating t/ssh_args/ssh_args.t
+config.status: creating t/ssh_args/conf/ssh_args.conf
+config.status: creating t/ssh_args/conf/ssh_args_inline.conf
+config.status: creating t/native_cp_al/conf/native_cp_al.conf
+config.status: creating t/native_cp_al/native_cp_al.t
+config.status: creating t/rsnapshot_meta/rsnapshot_meta.t
+config.status: creating t/link-dest_-t_when_only_one_snapshot/link-dest_-t_when_only_one_snapshot.t
+config.status: creating t/link-dest_-t_when_only_one_snapshot/conf/link-dest_-t_when_only_one_snapshot.conf
+config.status: creating t/backup_script/backup_script.t
+config.status: creating t/backup_script/conf/backup_script.conf
+config.status: creating t/backup_script/conf/backup_script_duplicate_dest_1.conf
+config.status: creating t/backup_script/conf/backup_script_duplicate_dest_2.conf
+config.status: creating t/relative_delete_bugfix/relative_delete_bugfix.t
+config.status: creating t/relative_delete_bugfix/conf/relative_delete_bugfix.conf
+config.status: creating t/rsync-exitcode/rsync-exitcode.t
+config.status: creating t/rsync-exitcode/conf/rsync-exitcode-good.conf
+config.status: creating t/rsync-exitcode/conf/rsync-exitcode-bad.conf
+config.status: creating t/backup_exec/backup_exec.t
+config.status: creating t/backup_exec/conf/backup_exec_fail.conf
+config.status: creating t/backup_exec/conf/backup_exec.conf
+config.status: creating t/gnu_cp/conf/gnu_cp.conf
+config.status: creating t/gnu_cp/gnu_cp.t
+config.status: creating t/configtest/configtest.t
+config.status: creating t/configtest/conf/configtest.conf
+config.status: creating t/snapshot_root_with_space/conf/snapshot_root_with_space.conf
+config.status: creating t/snapshot_root_with_space/snapshot_root_with_space.t
+config.status: creating t/cmd-post_pre-exec/cmd-post_pre-exec.t
+config.status: creating t/cmd-post_pre-exec/conf/pre-true-post-true.conf
+config.status: creating t/cmd-post_pre-exec/conf/pre-false-post-false.conf
+config.status: creating t/cmd-post_pre-exec/conf/pre-true-post-false.conf
+config.status: creating t/cmd-post_pre-exec/conf/pre-false-post-true.conf
+config.status: creating t/SysWrap.pm
+config.status: creating t/long_and_short_args/long_and_short_args.t
+config.status: creating t/long_and_short_args/conf/long_and_short_args.conf
+config.status: creating t/long_and_short_args/conf/long_and_short_args_inline.conf
+
+Now type  "make test"    to run the regression test suite.
+Then type "make install" to install the program.
+
+After rsnapshot is installed, don't forget to copy
+/rsnapshot.conf.default to /rsnapshot.conf
+
+pod2man -c 'rsnapshot-tools' -n 'rsnapshot' -r 'rsnapshot-tools' rsnapshot > rsnapshot.1
+pod2man -c 'rsnapshot-tools' -n 'rsnapshot-diff' -r 'rsnapshot-tools' rsnapshot-diff > rsnapshot-diff.1
+>>> rsnapshot: Entering fakeroot...
+make[1]: Entering directory '/home/packager/aports/main/rsnapshot/src/rsnapshot-1.4.5'
+ /bin/mkdir -p '/home/packager/aports/main/rsnapshot/pkg/rsnapshot/usr/bin'
+ /bin/mkdir -p '/home/packager/aports/main/rsnapshot/pkg/rsnapshot/etc'
+ /usr/bin/install -c -m 644 rsnapshot.conf.default '/home/packager/aports/main/rsnapshot/pkg/rsnapshot/etc'
+ /bin/mkdir -p '/home/packager/aports/main/rsnapshot/pkg/rsnapshot/usr/share/man/man1'
+ /usr/bin/install -c rsnapshot rsnapshot-diff '/home/packager/aports/main/rsnapshot/pkg/rsnapshot/usr/bin'
+ /usr/bin/install -c -m 644 rsnapshot.1 rsnapshot-diff.1 '/home/packager/aports/main/rsnapshot/pkg/rsnapshot/usr/share/man/man1'
+make[1]: Leaving directory '/home/packager/aports/main/rsnapshot/src/rsnapshot-1.4.5'
+>>> rsnapshot-doc*: Running split function doc...
+renamed 'usr/share/man' -> '/home/packager/aports/main/rsnapshot/pkg/rsnapshot-doc/usr/share/man'
+>>> rsnapshot-doc*: Preparing subpackage rsnapshot-doc...
+libfakeroot internal error: payload not recognized!
+>>> rsnapshot-doc*: Running postcheck for rsnapshot-doc
+>>> rsnapshot*: Running postcheck for rsnapshot
+>>> rsnapshot*: Preparing package rsnapshot...
+libfakeroot internal error: payload not recognized!
+>>> rsnapshot-doc*: Tracing dependencies...
+>>> rsnapshot-doc*: Package size: 14.9 KB
+>>> rsnapshot-doc*: Compressing data...
+>>> rsnapshot-doc*: Create checksum...
+pigz: not found
+>>> rsnapshot-doc*: Create rsnapshot-doc-1.4.5-r0.apk
+>>> rsnapshot*: Tracing dependencies...
+	perl
+	rsync
+	openssh-client
+>>> rsnapshot*: Package size: 230.8 KB
+>>> rsnapshot*: Compressing data...
+>>> rsnapshot*: Create checksum...
+pigz: not found
+>>> rsnapshot*: Create rsnapshot-1.4.5-r0.apk
+>>> rsnapshot: Build complete at Fri, 23 May 2025 01:00:58 +0000 elapsed time 0h 0m 19s
+>>> rsnapshot: Cleaning up srcdir
+>>> rsnapshot: Cleaning up pkgdir
+>>> rsnapshot: Uninstalling dependencies...
+(1/8) Purging .makedepends-rsnapshot (20250523.010046)
+(2/8) Purging rsync (3.4.0-r0)
+(3/8) Purging libxxhash (0.8.3-r0)
+(4/8) Purging lz4-libs (1.10.0-r0)
+(5/8) Purging openssh-client-default (9.9_p2-r0)
+(6/8) Purging openssh-keygen (9.9_p2-r0)
+(7/8) Purging openssh-client-common (9.9_p2-r0)
+(8/8) Purging popt (1.19-r4)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> rsnapshot: Updating the main/x86_64 repository index...
+>>> rsnapshot: Signing the index...
+pigz: not found

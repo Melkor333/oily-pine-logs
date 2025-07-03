@@ -1,0 +1,155 @@
+pigz: not found
+>>> liblockfile: Building main/liblockfile 1.17-r4 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:16:15 +0000
+>>> liblockfile: Validating /home/packager/aports/main/liblockfile/APKBUILD...
+>>> liblockfile: Analyzing dependencies...
+>>> liblockfile: Installing for build: build-base
+(1/1) Installing .makedepends-liblockfile (20250518.081617)
+OK: 261 MiB in 82 packages
+>>> liblockfile: Cleaning up srcdir
+>>> liblockfile: Cleaning up pkgdir
+>>> liblockfile: Cleaning up tmpdir
+>>> liblockfile: Fetching liblockfile-1.17.tar.gz::https://github.com/miquels/liblockfile/archive/v1.17.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/liblockfile-1.17.tar.gz.part'
+liblockfile-1.17.tar 100% |********************************| 69834  0:00:00 ETA
+'/var/cache/distfiles/liblockfile-1.17.tar.gz.part' saved
+>>> liblockfile: Fetching liblockfile-1.17.tar.gz::https://github.com/miquels/liblockfile/archive/v1.17.tar.gz
+>>> liblockfile: Checking sha512sums...
+liblockfile-1.17.tar.gz: OK
+>>> liblockfile: Unpacking /var/cache/distfiles/liblockfile-1.17.tar.gz...
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking build shared libs... yes
+checking build libnfslock... no
+checking for ldconfig... /bin/true
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for utime... yes
+checking for utimes... yes
+configure: creating ./config.status
+config.status: creating ./Makefile
+config.status: creating ./maillock.h
+config.status: creating autoconf.h
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -D_GNU_SOURCE -fPIC -D_REENTRANT -I. -DLIB -DLOCKPROG=\"/usr/bin/dotlockfile\" \
+		-c lockfile.c -o solockfile.o
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared -Wl,-soname,liblockfile.so.1 \
+		-o liblockfile.so solockfile.o -lc
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -D_GNU_SOURCE -fPIC -D_REENTRANT -I. -DLIB -DLOCKPROG=\"/usr/bin/dotlockfile\" \
+		-DSTATIC -c lockfile.c
+ar rv liblockfile.a lockfile.o
+ar: creating liblockfile.a
+a - lockfile.o
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -D_GNU_SOURCE -fPIC -D_REENTRANT -I. -DLOCKPROG=\"/usr/bin/dotlockfile\" \
+		-c dotlockfile.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -D_GNU_SOURCE -fPIC -D_REENTRANT -I. -DLOCKPROG=\"/usr/bin/dotlockfile\" \
+		-c lockfile.c -o dlockfile.o
+gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o dotlockfile dotlockfile.o dlockfile.o
+./run-tests.sh
+tests OK
+touch test-stamp
+>>> liblockfile: Entering fakeroot...
+install -d -m 755 -g root -p /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/include
+install -d -m 755 -g root -p /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/bin
+install -d -m 755 -g root -p /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/share/man/man1
+install -d -m 755 -g root -p /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/share/man/man3
+install -m 644 lockfile.h maillock.h /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/include
+if [ "" != "" ]; then\
+	  install -g  -m 2755 dotlockfile /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/bin;\
+	else \
+	  install -g root -m 755 dotlockfile /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/bin; \
+	fi
+install -m 644 *.1 /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/share/man/man1
+install -m 644 *.3 /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/share/man/man3
+install -d -m 755 -g root -p /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/lib
+install -m 644 liblockfile.a /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/lib
+install -d -m 755 -g root -p /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/lib
+install -m 755 liblockfile.so \
+		/home/packager/aports/main/liblockfile/pkg/liblockfile/usr/lib/liblockfile.so.1.0
+ln -s liblockfile.so.1.0 /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/lib/liblockfile.so.1
+ln -s liblockfile.so.1.0 /home/packager/aports/main/liblockfile/pkg/liblockfile/usr/lib/liblockfile.so
+if test "/home/packager/aports/main/liblockfile/pkg/liblockfile" = ""; then /bin/true; fi
+>>> liblockfile-static*: Running split function static...
+'./usr/lib/liblockfile.a' -> '/home/packager/aports/main/liblockfile/pkg/liblockfile-static/./usr/lib/liblockfile.a'
+>>> liblockfile-static*: Preparing subpackage liblockfile-static...
+>>> liblockfile-static*: Stripping binaries
+>>> liblockfile-static*: Running postcheck for liblockfile-static
+>>> liblockfile-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/liblockfile/pkg/liblockfile-dev/usr/include'
+'usr/lib/liblockfile.so' -> '/home/packager/aports/main/liblockfile/pkg/liblockfile-dev/usr/lib/liblockfile.so'
+>>> liblockfile-dev*: Preparing subpackage liblockfile-dev...
+>>> liblockfile-dev*: Stripping binaries
+>>> liblockfile-dev*: Running postcheck for liblockfile-dev
+>>> liblockfile-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/liblockfile/pkg/liblockfile-doc/usr/share/man'
+>>> liblockfile-doc*: Preparing subpackage liblockfile-doc...
+>>> liblockfile-doc*: Running postcheck for liblockfile-doc
+>>> liblockfile*: Running postcheck for liblockfile
+>>> liblockfile*: Preparing package liblockfile...
+>>> liblockfile*: Stripping binaries
+>>> liblockfile-dev*: Scanning shared objects
+>>> liblockfile-doc*: Scanning shared objects
+>>> liblockfile-static*: Scanning shared objects
+>>> liblockfile*: Scanning shared objects
+>>> liblockfile-dev*: Tracing dependencies...
+	liblockfile=1.17-r4
+>>> liblockfile-dev*: Package size: 2.8 KB
+>>> liblockfile-dev*: Compressing data...
+>>> liblockfile-dev*: Create checksum...
+pigz: not found
+>>> liblockfile-dev*: Create liblockfile-dev-1.17-r4.apk
+>>> liblockfile-doc*: Tracing dependencies...
+>>> liblockfile-doc*: Package size: 6.4 KB
+>>> liblockfile-doc*: Compressing data...
+>>> liblockfile-doc*: Create checksum...
+pigz: not found
+>>> liblockfile-doc*: Create liblockfile-doc-1.17-r4.apk
+>>> liblockfile-static*: Tracing dependencies...
+>>> liblockfile-static*: Package size: 7.8 KB
+>>> liblockfile-static*: Compressing data...
+>>> liblockfile-static*: Create checksum...
+pigz: not found
+>>> liblockfile-static*: Create liblockfile-static-1.17-r4.apk
+>>> liblockfile*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> liblockfile*: Package size: 35.4 KB
+>>> liblockfile*: Compressing data...
+>>> liblockfile*: Create checksum...
+pigz: not found
+>>> liblockfile*: Create liblockfile-1.17-r4.apk
+>>> liblockfile: Build complete at Sun, 18 May 2025 08:16:33 +0000 elapsed time 0h 0m 18s
+>>> liblockfile: Cleaning up srcdir
+>>> liblockfile: Cleaning up pkgdir
+>>> liblockfile: Uninstalling dependencies...
+(1/1) Purging .makedepends-liblockfile (20250518.081617)
+OK: 261 MiB in 81 packages
+>>> liblockfile: Updating the main/x86_64 repository index...
+>>> liblockfile: Signing the index...
+pigz: not found

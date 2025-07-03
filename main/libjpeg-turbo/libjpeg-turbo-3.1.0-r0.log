@@ -1,0 +1,1765 @@
+pigz: not found
+>>> libjpeg-turbo: Building main/libjpeg-turbo 3.1.0-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:25:21 +0000
+>>> libjpeg-turbo: Validating /home/packager/aports/main/libjpeg-turbo/APKBUILD...
+>>> libjpeg-turbo: Analyzing dependencies...
+>>> libjpeg-turbo: Installing for build: build-base cmake nasm samurai
+(1/10) Installing libbz2 (1.0.8-r6)
+(2/10) Installing lz4-libs (1.10.0-r0)
+(3/10) Installing xz-libs (5.6.3-r1)
+(4/10) Installing libarchive (3.7.9-r0)
+(5/10) Installing rhash-libs (1.4.5-r0)
+(6/10) Installing libuv (1.49.2-r0)
+(7/10) Installing cmake (3.31.7-r0)
+(8/10) Installing nasm (2.16.03-r0)
+(9/10) Installing samurai (1.2-r6)
+(10/10) Installing .makedepends-libjpeg-turbo (20250518.072522)
+Executing busybox-1.37.0-r12.trigger
+OK: 316 MiB in 91 packages
+>>> libjpeg-turbo: Cleaning up srcdir
+>>> libjpeg-turbo: Cleaning up pkgdir
+>>> libjpeg-turbo: Cleaning up tmpdir
+>>> libjpeg-turbo: Fetching https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.0/libjpeg-turbo-3.1.0.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to objects.githubusercontent.com (185.199.110.133:443)
+saving to '/var/cache/distfiles/libjpeg-turbo-3.1.0.tar.gz.part'
+libjpeg-turbo-3.1.0.   2% |                                | 56498  0:00:43 ETA
+libjpeg-turbo-3.1.0. 100% |********************************| 2448k  0:00:00 ETA
+'/var/cache/distfiles/libjpeg-turbo-3.1.0.tar.gz.part' saved
+>>> libjpeg-turbo: Fetching https://github.com/libjpeg-turbo/libjpeg-turbo/releases/download/3.1.0/libjpeg-turbo-3.1.0.tar.gz
+>>> libjpeg-turbo: Checking sha512sums...
+libjpeg-turbo-3.1.0.tar.gz: OK
+>>> libjpeg-turbo: Unpacking /var/cache/distfiles/libjpeg-turbo-3.1.0.tar.gz...
+-- The C compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_BUILD_TYPE = None
+-- VERSION = 3.1.0, BUILD = 20250106
+-- 64-bit build (x86_64)
+-- CMAKE_INSTALL_PREFIX = /usr
+-- CMAKE_INSTALL_BINDIR = bin (/usr/bin)
+-- CMAKE_INSTALL_DATAROOTDIR = share (/usr/share)
+-- CMAKE_INSTALL_DOCDIR = share/doc/libjpeg-turbo (/usr/share/doc/libjpeg-turbo)
+-- CMAKE_INSTALL_INCLUDEDIR = include (/usr/include)
+-- CMAKE_INSTALL_LIBDIR = /usr/lib
+-- CMAKE_INSTALL_MANDIR = share/man (/usr/share/man)
+-- Shared libraries enabled (ENABLE_SHARED = 1)
+-- Static libraries disabled (ENABLE_STATIC = 0)
+-- Arithmetic decoding support enabled (WITH_ARITH_DEC = 1)
+-- Arithmetic encoding support enabled (WITH_ARITH_ENC = 1)
+-- TurboJPEG API library enabled (WITH_TURBOJPEG = 1)
+-- TurboJPEG Java wrapper disabled (WITH_JAVA = 0)
+-- Emulating libjpeg API/ABI v8.0 (WITH_JPEG7 = 0, WITH_JPEG8 = 1)
+-- libjpeg API shared library version = 8.3.2
+-- Compiler flags = -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -DNDEBUG -flto=auto 
+-- Linker flags = -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs 
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Performing Test HAVE_BUILTIN_CTZL
+-- Performing Test HAVE_BUILTIN_CTZL - Success
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED - Failed
+-- Performing Test HIDDEN_WORKS
+-- Performing Test HIDDEN_WORKS - Success
+-- HIDDEN = __attribute__((visibility("hidden")))
+-- Performing Test INLINE_WORKS
+-- Performing Test INLINE_WORKS - Success
+-- INLINE = __inline__ __attribute__((always_inline)) (FORCE_INLINE = 1)
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- THREAD_LOCAL = __thread
+-- Performing Test HAVE_VERSION_SCRIPT
+-- Performing Test HAVE_VERSION_SCRIPT - Success
+-- Linker supports GNU-style version scripts
+-- CMAKE_EXECUTABLE_SUFFIX = 
+-- Looking for a ASM_NASM compiler
+-- Looking for a ASM_NASM compiler - /usr/bin/nasm
+-- The ASM_NASM compiler identification is NASM
+-- Found assembler: /usr/bin/nasm
+-- CMAKE_ASM_NASM_COMPILER = /usr/bin/nasm
+-- CMAKE_ASM_NASM_OBJECT_FORMAT = elf64
+-- Performing Test HAVE_CET
+-- Performing Test HAVE_CET - Failed
+-- CMAKE_ASM_NASM_FLAGS =  -DELF -D__x86_64__ -DPIC 
+-- SIMD extensions: x86_64 (WITH_SIMD = 1)
+-- FLOATTEST8 = sse
+-- FLOATTEST12 = no-fp-contract
+-- RPM architecture = x86_64, DEB architecture = amd64
+-- Configuring done (2.0s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/packager/aports/main/libjpeg-turbo/src/libjpeg-turbo-3.1.0/build-shared
+[1/263] Building C object src/md5/CMakeFiles/md5sum.dir/md5hl.c.o
+[2/263] Building C object src/md5/CMakeFiles/md5sum.dir/md5.c.o
+[3/263] Building C object src/md5/CMakeFiles/md5sum.dir/md5sum.c.o
+[4/263] Building C object src/md5/CMakeFiles/md5cmp.dir/md5hl.c.o
+[5/263] Building C object src/md5/CMakeFiles/md5cmp.dir/md5.c.o
+[6/263] Building C object src/md5/CMakeFiles/md5cmp.dir/md5cmp.c.o
+[7/263] Building C object sharedlib/CMakeFiles/jcstest.dir/__/src/jcstest.c.o
+[8/263] Building C object sharedlib/CMakeFiles/example.dir/__/src/example.c.o
+[9/263] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/transupp.c.o
+[10/263] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/rdswitch.c.o
+[11/263] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/cdjpeg.c.o
+[12/263] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/jpegtran.c.o
+[13/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrtarga.c.o
+[14/263] Linking C executable test/md5sum
+[15/263] Linking C executable test/md5cmp
+[16/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrppm.c.o
+[17/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrgif.c.o
+[18/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrbmp.c.o
+[19/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/rdswitch.c.o
+[20/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/rdcolmap.c.o
+[21/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/cdjpeg.c.o
+[22/263] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/djpeg.c.o
+[23/263] Building C object sharedlib/CMakeFiles/djpeg16.dir/__/src/wrppm.c.o
+[24/263] Building C object sharedlib/CMakeFiles/djpeg12.dir/__/src/wrppm.c.o
+[25/263] Building C object sharedlib/CMakeFiles/djpeg12.dir/__/src/wrgif.c.o
+[26/263] Building C object sharedlib/CMakeFiles/djpeg12.dir/__/src/rdcolmap.c.o
+[27/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdtarga.c.o
+[28/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdswitch.c.o
+[29/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdppm.c.o
+[30/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdgif.c.o
+[31/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdbmp.c.o
+[32/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/cdjpeg.c.o
+[33/263] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/cjpeg.c.o
+[34/263] Building C object sharedlib/CMakeFiles/cjpeg16.dir/__/src/rdppm.c.o
+[35/263] Building C object sharedlib/CMakeFiles/cjpeg12.dir/__/src/rdppm.c.o
+[36/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdarith.c.o
+[37/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcarith.c.o
+[38/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jaricom.c.o
+[39/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jpeg_nbits.c.o
+[40/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jmemnobs.c.o
+[41/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jmemmgr.c.o
+[42/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jfdctflt.c.o
+[43/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jerror.c.o
+[44/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdtrans.c.o
+[45/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdphuff.c.o
+[46/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmaster.c.o
+[47/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmarker.c.o
+[48/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdlhuff.c.o
+[49/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdinput.c.o
+[50/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdicc.c.o
+[51/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdhuff.c.o
+[52/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdatasrc.c.o
+[53/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdatadst.c.o
+[54/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdapimin.c.o
+[55/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jctrans.c.o
+[56/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcphuff.c.o
+[57/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcparam.c.o
+[58/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcomapi.c.o
+[59/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcmaster.c.o
+[60/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcmarker.c.o
+[61/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jclhuff.c.o
+[62/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcinit.c.o
+[63/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcicc.c.o
+[64/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jchuff.c.o
+[65/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcapimin.c.o
+[66/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jquant2.c.o
+[67/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jquant1.c.o
+[68/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctred.c.o
+[69/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctint.c.o
+[70/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctfst.c.o
+[71/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctflt.c.o
+[72/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jfdctint.c.o
+[73/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jfdctfst.c.o
+[74/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmerge.c.o
+[75/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jddctmgr.c.o
+[76/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdcoefct.c.o
+[77/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcdctmgr.c.o
+[78/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jccoefct.c.o
+[79/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jutils.c.o
+[80/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdsample.c.o
+[81/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdpostct.c.o
+[82/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmainct.c.o
+[83/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdlossls.c.o
+[84/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jddiffct.c.o
+[85/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdcolor.c.o
+[86/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdapistd.c.o
+[87/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcsample.c.o
+[88/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcprepct.c.o
+[89/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcmainct.c.o
+[90/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jclossls.c.o
+[91/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcdiffct.c.o
+[92/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jccolor.c.o
+[93/263] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcapistd.c.o
+[94/263] Building C object CMakeFiles/strtest.dir/src/strtest.c.o
+[95/263] Building C object CMakeFiles/wrjpgcom.dir/src/wrjpgcom.c.o
+[96/263] Building C object CMakeFiles/rdjpgcom.dir/src/rdjpgcom.c.o
+[97/263] Building C object CMakeFiles/tjtran.dir/src/tjtran.c.o
+[98/263] Building C object CMakeFiles/tjdecomp.dir/src/tjdecomp.c.o
+[99/263] Linking C executable strtest
+[100/263] Linking C executable wrjpgcom
+[101/263] Linking C executable rdjpgcom
+[102/263] Building C object CMakeFiles/tjcomp.dir/src/tjcomp.c.o
+[103/263] Building C object CMakeFiles/tjbench.dir/src/tjutil.c.o
+[104/263] Building C object CMakeFiles/tjbench.dir/src/tjbench.c.o
+[105/263] Building C object CMakeFiles/tjunittest.dir/src/md5/md5hl.c.o
+[106/263] Building C object CMakeFiles/tjunittest.dir/src/md5/md5.c.o
+[107/263] Building C object CMakeFiles/tjunittest.dir/src/tjutil.c.o
+[108/263] Building C object CMakeFiles/tjunittest.dir/src/tjunittest.c.o
+[109/263] Building C object CMakeFiles/turbojpeg.dir/src/wrppm.c.o
+[110/263] Building C object CMakeFiles/turbojpeg.dir/src/wrbmp.c.o
+[111/263] Building C object CMakeFiles/turbojpeg.dir/src/rdppm.c.o
+[112/263] Building C object CMakeFiles/turbojpeg.dir/src/rdbmp.c.o
+[113/263] Building C object CMakeFiles/turbojpeg.dir/src/jdatasrc-tj.c.o
+[114/263] Building C object CMakeFiles/turbojpeg.dir/src/jdatadst-tj.c.o
+[115/263] Building C object CMakeFiles/turbojpeg.dir/src/transupp.c.o
+[116/263] Building C object CMakeFiles/turbojpeg.dir/src/turbojpeg.c.o
+[117/263] Building C object CMakeFiles/turbojpeg.dir/src/jdarith.c.o
+[118/263] Building C object CMakeFiles/turbojpeg.dir/src/jcarith.c.o
+[119/263] Building C object CMakeFiles/turbojpeg.dir/src/jaricom.c.o
+[120/263] Building C object CMakeFiles/turbojpeg.dir/src/jpeg_nbits.c.o
+[121/263] Building C object CMakeFiles/turbojpeg.dir/src/jmemnobs.c.o
+[122/263] Building C object CMakeFiles/turbojpeg.dir/src/jmemmgr.c.o
+[123/263] Building C object CMakeFiles/turbojpeg.dir/src/jfdctflt.c.o
+[124/263] Building C object CMakeFiles/turbojpeg.dir/src/jerror.c.o
+[125/263] Building C object CMakeFiles/turbojpeg.dir/src/jdtrans.c.o
+[126/263] Building C object CMakeFiles/turbojpeg.dir/src/jdphuff.c.o
+[127/263] Building C object CMakeFiles/turbojpeg.dir/src/jdmaster.c.o
+[128/263] Building C object CMakeFiles/turbojpeg.dir/src/jdmarker.c.o
+[129/263] Building C object CMakeFiles/turbojpeg.dir/src/jdlhuff.c.o
+[130/263] Building C object CMakeFiles/turbojpeg.dir/src/jdinput.c.o
+[131/263] Building C object CMakeFiles/turbojpeg.dir/src/jdicc.c.o
+[132/263] Building C object CMakeFiles/turbojpeg.dir/src/jdhuff.c.o
+[133/263] Building C object CMakeFiles/turbojpeg.dir/src/jdatasrc.c.o
+[134/263] Building C object CMakeFiles/turbojpeg.dir/src/jdatadst.c.o
+[135/263] Building C object CMakeFiles/turbojpeg.dir/src/jdapimin.c.o
+[136/263] Building C object CMakeFiles/turbojpeg.dir/src/jctrans.c.o
+[137/263] Building C object CMakeFiles/turbojpeg.dir/src/jcphuff.c.o
+[138/263] Building C object CMakeFiles/turbojpeg.dir/src/jcparam.c.o
+[139/263] Building C object CMakeFiles/turbojpeg.dir/src/jcomapi.c.o
+[140/263] Building C object CMakeFiles/turbojpeg.dir/src/jcmaster.c.o
+[141/263] Building C object CMakeFiles/turbojpeg.dir/src/jcmarker.c.o
+[142/263] Building C object CMakeFiles/turbojpeg.dir/src/jclhuff.c.o
+[143/263] Building C object CMakeFiles/turbojpeg.dir/src/jcinit.c.o
+[144/263] Building C object CMakeFiles/turbojpeg.dir/src/jcicc.c.o
+[145/263] Building C object CMakeFiles/turbojpeg.dir/src/jchuff.c.o
+[146/263] Building C object CMakeFiles/turbojpeg.dir/src/jcapimin.c.o
+[147/263] Building C object CMakeFiles/turbojpeg.dir/src/jquant2.c.o
+[148/263] Building C object CMakeFiles/turbojpeg.dir/src/jquant1.c.o
+[149/263] Building C object CMakeFiles/turbojpeg.dir/src/jidctred.c.o
+[150/263] Building C object CMakeFiles/turbojpeg.dir/src/jidctint.c.o
+[151/263] Building C object CMakeFiles/turbojpeg.dir/src/jidctfst.c.o
+[152/263] Building C object CMakeFiles/turbojpeg.dir/src/jidctflt.c.o
+[153/263] Building C object CMakeFiles/turbojpeg.dir/src/jfdctint.c.o
+[154/263] Building C object CMakeFiles/turbojpeg.dir/src/jfdctfst.c.o
+[155/263] Building C object CMakeFiles/turbojpeg.dir/src/jdmerge.c.o
+[156/263] Building C object CMakeFiles/turbojpeg.dir/src/jddctmgr.c.o
+[157/263] Building C object CMakeFiles/turbojpeg.dir/src/jdcoefct.c.o
+[158/263] Building C object CMakeFiles/turbojpeg.dir/src/jcdctmgr.c.o
+[159/263] Building C object CMakeFiles/turbojpeg.dir/src/jccoefct.c.o
+[160/263] Building C object CMakeFiles/turbojpeg.dir/src/jutils.c.o
+[161/263] Building C object CMakeFiles/turbojpeg.dir/src/jdsample.c.o
+[162/263] Building C object CMakeFiles/turbojpeg.dir/src/jdpostct.c.o
+[163/263] Building C object CMakeFiles/turbojpeg.dir/src/jdmainct.c.o
+[164/263] Building C object CMakeFiles/turbojpeg.dir/src/jdlossls.c.o
+[165/263] Building C object CMakeFiles/turbojpeg.dir/src/jddiffct.c.o
+[166/263] Building C object CMakeFiles/turbojpeg.dir/src/jdcolor.c.o
+[167/263] Building C object CMakeFiles/turbojpeg.dir/src/jdapistd.c.o
+[168/263] Building C object CMakeFiles/turbojpeg.dir/src/jcsample.c.o
+[169/263] Building C object CMakeFiles/turbojpeg.dir/src/jcprepct.c.o
+[170/263] Building C object CMakeFiles/turbojpeg.dir/src/jcmainct.c.o
+[171/263] Building C object CMakeFiles/turbojpeg.dir/src/jclossls.c.o
+[172/263] Building C object CMakeFiles/turbojpeg.dir/src/jcdiffct.c.o
+[173/263] Building C object CMakeFiles/turbojpeg.dir/src/jccolor.c.o
+[174/263] Building C object CMakeFiles/turbojpeg.dir/src/jcapistd.c.o
+[175/263] Building C object simd/CMakeFiles/simd.dir/x86_64/jsimd.c.o
+[176/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jquanti-avx2.asm.o
+[177/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctint-avx2.asm.o
+[178/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctint-avx2.asm.o
+[179/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdsample-avx2.asm.o
+[180/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdmerge-avx2.asm.o
+[181/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdcolor-avx2.asm.o
+[182/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcsample-avx2.asm.o
+[183/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcgray-avx2.asm.o
+[184/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jccolor-avx2.asm.o
+[185/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jquanti-sse2.asm.o
+[186/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jquantf-sse2.asm.o
+[187/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctred-sse2.asm.o
+[188/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctint-sse2.asm.o
+[189/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctfst-sse2.asm.o
+[190/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctflt-sse2.asm.o
+[191/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctint-sse2.asm.o
+[192/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctfst-sse2.asm.o
+[193/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdsample-sse2.asm.o
+[194/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdmerge-sse2.asm.o
+[195/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdcolor-sse2.asm.o
+[196/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcsample-sse2.asm.o
+[197/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcphuff-sse2.asm.o
+[198/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jchuff-sse2.asm.o
+[199/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcgray-sse2.asm.o
+[200/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jccolor-sse2.asm.o
+[201/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctflt-sse.asm.o
+[202/263] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jsimdcpu.asm.o
+[203/263] Building C object CMakeFiles/turbojpeg16.dir/src/wrppm.c.o
+[204/263] Building C object CMakeFiles/turbojpeg16.dir/src/rdppm.c.o
+[205/263] Building C object CMakeFiles/turbojpeg12.dir/src/wrppm.c.o
+[206/263] Building C object CMakeFiles/turbojpeg12.dir/src/rdppm.c.o
+[207/263] Building C object CMakeFiles/jpeg16.dir/src/jutils.c.o
+[208/263] Building C object CMakeFiles/jpeg16.dir/src/jdsample.c.o
+[209/263] Building C object CMakeFiles/jpeg16.dir/src/jdpostct.c.o
+[210/263] Building C object CMakeFiles/jpeg16.dir/src/jdmainct.c.o
+[211/263] Building C object CMakeFiles/jpeg16.dir/src/jdlossls.c.o
+[212/263] Building C object CMakeFiles/jpeg16.dir/src/jddiffct.c.o
+[213/263] Building C object CMakeFiles/jpeg16.dir/src/jdcolor.c.o
+[214/263] Building C object CMakeFiles/jpeg16.dir/src/jdapistd.c.o
+[215/263] Building C object CMakeFiles/jpeg16.dir/src/jcsample.c.o
+[216/263] Building C object CMakeFiles/jpeg16.dir/src/jcprepct.c.o
+[217/263] Building C object CMakeFiles/jpeg16.dir/src/jcmainct.c.o
+[218/263] Building C object CMakeFiles/jpeg16.dir/src/jclossls.c.o
+[219/263] Building C object CMakeFiles/jpeg16.dir/src/jcdiffct.c.o
+[220/263] Building C object CMakeFiles/jpeg16.dir/src/jccolor.c.o
+[221/263] Building C object CMakeFiles/jpeg16.dir/src/jcapistd.c.o
+[222/263] Building C object CMakeFiles/jpeg12.dir/src/jquant2.c.o
+[223/263] Building C object CMakeFiles/jpeg12.dir/src/jquant1.c.o
+[224/263] Building C object CMakeFiles/jpeg12.dir/src/jidctred.c.o
+[225/263] Building C object CMakeFiles/jpeg12.dir/src/jidctint.c.o
+[226/263] Building C object CMakeFiles/jpeg12.dir/src/jidctfst.c.o
+[227/263] Building C object CMakeFiles/jpeg12.dir/src/jidctflt.c.o
+[228/263] Building C object CMakeFiles/jpeg12.dir/src/jfdctint.c.o
+[229/263] Building C object CMakeFiles/jpeg12.dir/src/jfdctfst.c.o
+[230/263] Building C object CMakeFiles/jpeg12.dir/src/jdmerge.c.o
+[231/263] Building C object CMakeFiles/jpeg12.dir/src/jddctmgr.c.o
+[232/263] Building C object CMakeFiles/jpeg12.dir/src/jdcoefct.c.o
+[233/263] Building C object CMakeFiles/jpeg12.dir/src/jcdctmgr.c.o
+[234/263] Building C object CMakeFiles/jpeg12.dir/src/jccoefct.c.o
+[235/263] Building C object CMakeFiles/jpeg12.dir/src/jutils.c.o
+[236/263] Building C object CMakeFiles/jpeg12.dir/src/jdsample.c.o
+[237/263] Building C object CMakeFiles/jpeg12.dir/src/jdpostct.c.o
+[238/263] Building C object CMakeFiles/jpeg12.dir/src/jdmainct.c.o
+[239/263] Building C object CMakeFiles/jpeg12.dir/src/jdlossls.c.o
+[240/263] Building C object CMakeFiles/jpeg12.dir/src/jddiffct.c.o
+[241/263] Building C object CMakeFiles/jpeg12.dir/src/jdcolor.c.o
+[242/263] Building C object CMakeFiles/jpeg12.dir/src/jdapistd.c.o
+[243/263] Building C object CMakeFiles/jpeg12.dir/src/jcsample.c.o
+[244/263] Building C object CMakeFiles/jpeg12.dir/src/jcprepct.c.o
+[245/263] Building C object CMakeFiles/jpeg12.dir/src/jcmainct.c.o
+[246/263] Building C object CMakeFiles/jpeg12.dir/src/jclossls.c.o
+[247/263] Building C object CMakeFiles/jpeg12.dir/src/jcdiffct.c.o
+[248/263] Building C object CMakeFiles/jpeg12.dir/src/jccolor.c.o
+[249/263] Building C object CMakeFiles/jpeg12.dir/src/jcapistd.c.o
+[250/263] Linking C shared library libjpeg.so.8.3.2
+[251/263] Linking C shared library libturbojpeg.so.0.4.0
+[252/263] Creating library symlink libjpeg.so.8 libjpeg.so
+[253/263] Linking C executable jcstest
+[254/263] Linking C executable example
+[255/263] Linking C executable jpegtran
+[256/263] Linking C executable djpeg
+[257/263] Linking C executable cjpeg
+[258/263] Creating library symlink libturbojpeg.so.0 libturbojpeg.so
+[259/263] Linking C executable tjtran
+[260/263] Linking C executable tjdecomp
+[261/263] Linking C executable tjcomp
+[262/263] Linking C executable tjbench
+[263/263] Linking C executable tjunittest
+-- The C compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/gcc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- CMAKE_BUILD_TYPE = None
+-- VERSION = 3.1.0, BUILD = 20250106
+-- 64-bit build (x86_64)
+-- CMAKE_INSTALL_PREFIX = /usr
+-- CMAKE_INSTALL_BINDIR = bin (/usr/bin)
+-- CMAKE_INSTALL_DATAROOTDIR = share (/usr/share)
+-- CMAKE_INSTALL_DOCDIR = share/doc/libjpeg-turbo (/usr/share/doc/libjpeg-turbo)
+-- CMAKE_INSTALL_INCLUDEDIR = include (/usr/include)
+-- CMAKE_INSTALL_LIBDIR = /usr/lib
+-- CMAKE_INSTALL_MANDIR = share/man (/usr/share/man)
+-- Shared libraries enabled (ENABLE_SHARED = 1)
+-- Static libraries enabled (ENABLE_STATIC = 1)
+-- Arithmetic decoding support enabled (WITH_ARITH_DEC = 1)
+-- Arithmetic encoding support enabled (WITH_ARITH_ENC = 1)
+-- TurboJPEG API library enabled (WITH_TURBOJPEG = 1)
+-- TurboJPEG Java wrapper disabled (WITH_JAVA = 0)
+-- Emulating libjpeg API/ABI v8.0 (WITH_JPEG7 = 0, WITH_JPEG8 = 1)
+-- libjpeg API shared library version = 8.3.2
+-- Compiler flags = -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt 
+-- Linker flags = -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs 
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of unsigned long
+-- Check size of unsigned long - done
+-- Performing Test HAVE_BUILTIN_CTZL
+-- Performing Test HAVE_BUILTIN_CTZL - Success
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED
+-- Performing Test RIGHT_SHIFT_IS_UNSIGNED - Failed
+-- Performing Test HIDDEN_WORKS
+-- Performing Test HIDDEN_WORKS - Success
+-- HIDDEN = __attribute__((visibility("hidden")))
+-- Performing Test INLINE_WORKS
+-- Performing Test INLINE_WORKS - Success
+-- INLINE = __inline__ __attribute__((always_inline)) (FORCE_INLINE = 1)
+-- Performing Test HAVE_THREAD_LOCAL
+-- Performing Test HAVE_THREAD_LOCAL - Success
+-- THREAD_LOCAL = __thread
+-- Performing Test HAVE_VERSION_SCRIPT
+-- Performing Test HAVE_VERSION_SCRIPT - Success
+-- Linker supports GNU-style version scripts
+-- CMAKE_EXECUTABLE_SUFFIX = 
+-- Looking for a ASM_NASM compiler
+-- Looking for a ASM_NASM compiler - /usr/bin/nasm
+-- The ASM_NASM compiler identification is NASM
+-- Found assembler: /usr/bin/nasm
+-- CMAKE_ASM_NASM_COMPILER = /usr/bin/nasm
+-- CMAKE_ASM_NASM_OBJECT_FORMAT = elf64
+-- Performing Test HAVE_CET
+-- Performing Test HAVE_CET - Failed
+-- CMAKE_ASM_NASM_FLAGS =  -DELF -D__x86_64__ -DPIC 
+-- SIMD extensions: x86_64 (WITH_SIMD = 1)
+-- FLOATTEST8 = sse
+-- FLOATTEST12 = no-fp-contract
+-- RPM architecture = x86_64, DEB architecture = amd64
+-- Configuring done (1.4s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/packager/aports/main/libjpeg-turbo/src/libjpeg-turbo-3.1.0/build-static
+[1/474] Building C object src/md5/CMakeFiles/md5sum.dir/md5hl.c.o
+[2/474] Building C object src/md5/CMakeFiles/md5sum.dir/md5.c.o
+[3/474] Building C object src/md5/CMakeFiles/md5sum.dir/md5sum.c.o
+[4/474] Building C object src/md5/CMakeFiles/md5cmp.dir/md5hl.c.o
+[5/474] Building C object src/md5/CMakeFiles/md5cmp.dir/md5.c.o
+[6/474] Building C object src/md5/CMakeFiles/md5cmp.dir/md5cmp.c.o
+[7/474] Building C object sharedlib/CMakeFiles/jcstest.dir/__/src/jcstest.c.o
+[8/474] Building C object sharedlib/CMakeFiles/example.dir/__/src/example.c.o
+[9/474] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/transupp.c.o
+[10/474] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/rdswitch.c.o
+[11/474] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/cdjpeg.c.o
+[12/474] Building C object sharedlib/CMakeFiles/jpegtran.dir/__/src/jpegtran.c.o
+[13/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrtarga.c.o
+[14/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrppm.c.o
+[15/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrgif.c.o
+[16/474] Linking C executable test/md5cmp
+[17/474] Linking C executable test/md5sum
+[18/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/wrbmp.c.o
+[19/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/rdswitch.c.o
+[20/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/rdcolmap.c.o
+[21/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/cdjpeg.c.o
+[22/474] Building C object sharedlib/CMakeFiles/djpeg.dir/__/src/djpeg.c.o
+[23/474] Building C object sharedlib/CMakeFiles/djpeg16.dir/__/src/wrppm.c.o
+[24/474] Building C object sharedlib/CMakeFiles/djpeg12.dir/__/src/wrppm.c.o
+[25/474] Building C object sharedlib/CMakeFiles/djpeg12.dir/__/src/wrgif.c.o
+[26/474] Building C object sharedlib/CMakeFiles/djpeg12.dir/__/src/rdcolmap.c.o
+[27/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdtarga.c.o
+[28/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdswitch.c.o
+[29/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdppm.c.o
+[30/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdgif.c.o
+[31/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/rdbmp.c.o
+[32/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/cdjpeg.c.o
+[33/474] Building C object sharedlib/CMakeFiles/cjpeg.dir/__/src/cjpeg.c.o
+[34/474] Building C object sharedlib/CMakeFiles/cjpeg16.dir/__/src/rdppm.c.o
+[35/474] Building C object sharedlib/CMakeFiles/cjpeg12.dir/__/src/rdppm.c.o
+[36/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdarith.c.o
+[37/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcarith.c.o
+[38/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jaricom.c.o
+[39/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jpeg_nbits.c.o
+[40/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jmemnobs.c.o
+[41/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jmemmgr.c.o
+[42/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jfdctflt.c.o
+[43/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jerror.c.o
+[44/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdtrans.c.o
+[45/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdphuff.c.o
+[46/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmaster.c.o
+[47/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmarker.c.o
+[48/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdlhuff.c.o
+[49/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdinput.c.o
+[50/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdicc.c.o
+[51/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdhuff.c.o
+[52/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdatasrc.c.o
+[53/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdatadst.c.o
+[54/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdapimin.c.o
+[55/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jctrans.c.o
+[56/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcphuff.c.o
+[57/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcparam.c.o
+[58/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcomapi.c.o
+[59/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcmaster.c.o
+[60/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcmarker.c.o
+[61/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jclhuff.c.o
+[62/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcinit.c.o
+[63/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcicc.c.o
+[64/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jchuff.c.o
+[65/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcapimin.c.o
+[66/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jquant2.c.o
+[67/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jquant1.c.o
+[68/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctred.c.o
+[69/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctint.c.o
+[70/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctfst.c.o
+[71/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jidctflt.c.o
+[72/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jfdctint.c.o
+[73/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jfdctfst.c.o
+[74/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmerge.c.o
+[75/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jddctmgr.c.o
+[76/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdcoefct.c.o
+[77/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcdctmgr.c.o
+[78/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jccoefct.c.o
+[79/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jutils.c.o
+[80/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdsample.c.o
+[81/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdpostct.c.o
+[82/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdmainct.c.o
+[83/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdlossls.c.o
+[84/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jddiffct.c.o
+[85/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdcolor.c.o
+[86/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jdapistd.c.o
+[87/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcsample.c.o
+[88/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcprepct.c.o
+[89/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcmainct.c.o
+[90/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jclossls.c.o
+[91/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcdiffct.c.o
+[92/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jccolor.c.o
+[93/474] Building C object sharedlib/CMakeFiles/jpeg.dir/__/src/jcapistd.c.o
+[94/474] Building C object CMakeFiles/strtest.dir/src/strtest.c.o
+[95/474] Building C object CMakeFiles/wrjpgcom.dir/src/wrjpgcom.c.o
+[96/474] Building C object CMakeFiles/rdjpgcom.dir/src/rdjpgcom.c.o
+[97/474] Building C object CMakeFiles/example-static.dir/src/example.c.o
+[98/474] Linking C executable strtest
+[99/474] Building C object CMakeFiles/jpegtran-static.dir/src/transupp.c.o
+[100/474] Building C object CMakeFiles/jpegtran-static.dir/src/rdswitch.c.o
+[101/474] Linking C executable rdjpgcom
+[102/474] Linking C executable wrjpgcom
+[103/474] Building C object CMakeFiles/jpegtran-static.dir/src/cdjpeg.c.o
+[104/474] Building C object CMakeFiles/jpegtran-static.dir/src/jpegtran.c.o
+[105/474] Building C object CMakeFiles/djpeg-static.dir/src/wrtarga.c.o
+[106/474] Building C object CMakeFiles/djpeg-static.dir/src/wrppm.c.o
+[107/474] Building C object CMakeFiles/djpeg-static.dir/src/wrgif.c.o
+[108/474] Building C object CMakeFiles/djpeg-static.dir/src/wrbmp.c.o
+[109/474] Building C object CMakeFiles/djpeg-static.dir/src/rdswitch.c.o
+[110/474] Building C object CMakeFiles/djpeg-static.dir/src/rdcolmap.c.o
+[111/474] Building C object CMakeFiles/djpeg-static.dir/src/cdjpeg.c.o
+[112/474] Building C object CMakeFiles/djpeg-static.dir/src/djpeg.c.o
+[113/474] Building C object CMakeFiles/djpeg16-static.dir/src/wrppm.c.o
+[114/474] Building C object CMakeFiles/djpeg12-static.dir/src/wrppm.c.o
+[115/474] Building C object CMakeFiles/djpeg12-static.dir/src/wrgif.c.o
+[116/474] Building C object CMakeFiles/djpeg12-static.dir/src/rdcolmap.c.o
+[117/474] Building C object CMakeFiles/cjpeg-static.dir/src/rdtarga.c.o
+[118/474] Building C object CMakeFiles/cjpeg-static.dir/src/rdswitch.c.o
+[119/474] Building C object CMakeFiles/cjpeg-static.dir/src/rdppm.c.o
+[120/474] Building C object CMakeFiles/cjpeg-static.dir/src/rdgif.c.o
+[121/474] Building C object CMakeFiles/cjpeg-static.dir/src/rdbmp.c.o
+[122/474] Building C object CMakeFiles/cjpeg-static.dir/src/cdjpeg.c.o
+[123/474] Building C object CMakeFiles/cjpeg-static.dir/src/cjpeg.c.o
+[124/474] Building C object CMakeFiles/cjpeg16-static.dir/src/rdppm.c.o
+[125/474] Building C object CMakeFiles/cjpeg12-static.dir/src/rdppm.c.o
+[126/474] Building C object CMakeFiles/tjbench-static.dir/src/tjutil.c.o
+[127/474] Building C object CMakeFiles/tjbench-static.dir/src/tjbench.c.o
+[128/474] Building C object CMakeFiles/tjunittest-static.dir/src/md5/md5hl.c.o
+[129/474] Building C object CMakeFiles/tjunittest-static.dir/src/md5/md5.c.o
+[130/474] Building C object CMakeFiles/tjunittest-static.dir/src/tjutil.c.o
+[131/474] Building C object CMakeFiles/tjunittest-static.dir/src/tjunittest.c.o
+[132/474] Building C object CMakeFiles/turbojpeg-static.dir/src/wrppm.c.o
+[133/474] Building C object CMakeFiles/turbojpeg-static.dir/src/wrbmp.c.o
+[134/474] Building C object CMakeFiles/turbojpeg-static.dir/src/rdppm.c.o
+[135/474] Building C object CMakeFiles/turbojpeg-static.dir/src/rdbmp.c.o
+[136/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdatasrc-tj.c.o
+[137/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdatadst-tj.c.o
+[138/474] Building C object CMakeFiles/turbojpeg-static.dir/src/transupp.c.o
+[139/474] Building C object CMakeFiles/turbojpeg-static.dir/src/turbojpeg.c.o
+[140/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdarith.c.o
+[141/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcarith.c.o
+[142/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jaricom.c.o
+[143/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jpeg_nbits.c.o
+[144/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jmemnobs.c.o
+[145/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jmemmgr.c.o
+[146/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jfdctflt.c.o
+[147/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jerror.c.o
+[148/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdtrans.c.o
+[149/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdphuff.c.o
+[150/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdmaster.c.o
+[151/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdmarker.c.o
+[152/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdlhuff.c.o
+[153/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdinput.c.o
+[154/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdicc.c.o
+[155/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdhuff.c.o
+[156/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdatasrc.c.o
+[157/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdatadst.c.o
+[158/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdapimin.c.o
+[159/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jctrans.c.o
+[160/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcphuff.c.o
+[161/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcparam.c.o
+[162/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcomapi.c.o
+[163/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcmaster.c.o
+[164/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcmarker.c.o
+[165/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jclhuff.c.o
+[166/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcinit.c.o
+[167/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcicc.c.o
+[168/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jchuff.c.o
+[169/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcapimin.c.o
+[170/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jquant2.c.o
+[171/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jquant1.c.o
+[172/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jidctred.c.o
+[173/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jidctint.c.o
+[174/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jidctfst.c.o
+[175/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jidctflt.c.o
+[176/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jfdctint.c.o
+[177/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jfdctfst.c.o
+[178/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdmerge.c.o
+[179/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jddctmgr.c.o
+[180/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdcoefct.c.o
+[181/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcdctmgr.c.o
+[182/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jccoefct.c.o
+[183/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jutils.c.o
+[184/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdsample.c.o
+[185/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdpostct.c.o
+[186/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdmainct.c.o
+[187/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdlossls.c.o
+[188/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jddiffct.c.o
+[189/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdcolor.c.o
+[190/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jdapistd.c.o
+[191/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcsample.c.o
+[192/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcprepct.c.o
+[193/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcmainct.c.o
+[194/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jclossls.c.o
+[195/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcdiffct.c.o
+[196/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jccolor.c.o
+[197/474] Building C object CMakeFiles/turbojpeg-static.dir/src/jcapistd.c.o
+[198/474] Building C object CMakeFiles/turbojpeg16-static.dir/src/wrppm.c.o
+[199/474] Building C object CMakeFiles/turbojpeg16-static.dir/src/rdppm.c.o
+[200/474] Building C object CMakeFiles/turbojpeg12-static.dir/src/wrppm.c.o
+[201/474] Building C object CMakeFiles/turbojpeg12-static.dir/src/rdppm.c.o
+[202/474] Building C object CMakeFiles/tjtran.dir/src/tjtran.c.o
+[203/474] Building C object CMakeFiles/tjdecomp.dir/src/tjdecomp.c.o
+[204/474] Building C object CMakeFiles/tjcomp.dir/src/tjcomp.c.o
+[205/474] Building C object CMakeFiles/tjbench.dir/src/tjutil.c.o
+[206/474] Building C object CMakeFiles/tjbench.dir/src/tjbench.c.o
+[207/474] Building C object CMakeFiles/tjunittest.dir/src/md5/md5hl.c.o
+[208/474] Building C object CMakeFiles/tjunittest.dir/src/md5/md5.c.o
+[209/474] Building C object CMakeFiles/tjunittest.dir/src/tjutil.c.o
+[210/474] Building C object CMakeFiles/tjunittest.dir/src/tjunittest.c.o
+[211/474] Building C object CMakeFiles/turbojpeg.dir/src/wrppm.c.o
+[212/474] Building C object CMakeFiles/turbojpeg.dir/src/wrbmp.c.o
+[213/474] Building C object CMakeFiles/turbojpeg.dir/src/rdppm.c.o
+[214/474] Building C object CMakeFiles/turbojpeg.dir/src/rdbmp.c.o
+[215/474] Building C object CMakeFiles/turbojpeg.dir/src/jdatasrc-tj.c.o
+[216/474] Building C object CMakeFiles/turbojpeg.dir/src/jdatadst-tj.c.o
+[217/474] Building C object CMakeFiles/turbojpeg.dir/src/transupp.c.o
+[218/474] Building C object CMakeFiles/turbojpeg.dir/src/turbojpeg.c.o
+[219/474] Building C object CMakeFiles/turbojpeg.dir/src/jdarith.c.o
+[220/474] Building C object CMakeFiles/turbojpeg.dir/src/jcarith.c.o
+[221/474] Building C object CMakeFiles/turbojpeg.dir/src/jaricom.c.o
+[222/474] Building C object CMakeFiles/turbojpeg.dir/src/jpeg_nbits.c.o
+[223/474] Building C object CMakeFiles/turbojpeg.dir/src/jmemnobs.c.o
+[224/474] Building C object CMakeFiles/turbojpeg.dir/src/jmemmgr.c.o
+[225/474] Building C object CMakeFiles/turbojpeg.dir/src/jfdctflt.c.o
+[226/474] Building C object CMakeFiles/turbojpeg.dir/src/jerror.c.o
+[227/474] Building C object CMakeFiles/turbojpeg.dir/src/jdtrans.c.o
+[228/474] Building C object CMakeFiles/turbojpeg.dir/src/jdphuff.c.o
+[229/474] Building C object CMakeFiles/turbojpeg.dir/src/jdmaster.c.o
+[230/474] Building C object CMakeFiles/turbojpeg.dir/src/jdmarker.c.o
+[231/474] Building C object CMakeFiles/turbojpeg.dir/src/jdlhuff.c.o
+[232/474] Building C object CMakeFiles/turbojpeg.dir/src/jdinput.c.o
+[233/474] Building C object CMakeFiles/turbojpeg.dir/src/jdicc.c.o
+[234/474] Building C object CMakeFiles/turbojpeg.dir/src/jdhuff.c.o
+[235/474] Building C object CMakeFiles/turbojpeg.dir/src/jdatasrc.c.o
+[236/474] Building C object CMakeFiles/turbojpeg.dir/src/jdatadst.c.o
+[237/474] Building C object CMakeFiles/turbojpeg.dir/src/jdapimin.c.o
+[238/474] Building C object CMakeFiles/turbojpeg.dir/src/jctrans.c.o
+[239/474] Building C object CMakeFiles/turbojpeg.dir/src/jcphuff.c.o
+[240/474] Building C object CMakeFiles/turbojpeg.dir/src/jcparam.c.o
+[241/474] Building C object CMakeFiles/turbojpeg.dir/src/jcomapi.c.o
+[242/474] Building C object CMakeFiles/turbojpeg.dir/src/jcmaster.c.o
+[243/474] Building C object CMakeFiles/turbojpeg.dir/src/jcmarker.c.o
+[244/474] Building C object CMakeFiles/turbojpeg.dir/src/jclhuff.c.o
+[245/474] Building C object CMakeFiles/turbojpeg.dir/src/jcinit.c.o
+[246/474] Building C object CMakeFiles/turbojpeg.dir/src/jcicc.c.o
+[247/474] Building C object CMakeFiles/turbojpeg.dir/src/jchuff.c.o
+[248/474] Building C object CMakeFiles/turbojpeg.dir/src/jcapimin.c.o
+[249/474] Building C object CMakeFiles/turbojpeg.dir/src/jquant2.c.o
+[250/474] Building C object CMakeFiles/turbojpeg.dir/src/jquant1.c.o
+[251/474] Building C object CMakeFiles/turbojpeg.dir/src/jidctred.c.o
+[252/474] Building C object CMakeFiles/turbojpeg.dir/src/jidctint.c.o
+[253/474] Building C object CMakeFiles/turbojpeg.dir/src/jidctfst.c.o
+[254/474] Building C object CMakeFiles/turbojpeg.dir/src/jidctflt.c.o
+[255/474] Building C object CMakeFiles/turbojpeg.dir/src/jfdctint.c.o
+[256/474] Building C object CMakeFiles/turbojpeg.dir/src/jfdctfst.c.o
+[257/474] Building C object CMakeFiles/turbojpeg.dir/src/jdmerge.c.o
+[258/474] Building C object CMakeFiles/turbojpeg.dir/src/jddctmgr.c.o
+[259/474] Building C object CMakeFiles/turbojpeg.dir/src/jdcoefct.c.o
+[260/474] Building C object CMakeFiles/turbojpeg.dir/src/jcdctmgr.c.o
+[261/474] Building C object CMakeFiles/turbojpeg.dir/src/jccoefct.c.o
+[262/474] Building C object CMakeFiles/turbojpeg.dir/src/jutils.c.o
+[263/474] Building C object CMakeFiles/turbojpeg.dir/src/jdsample.c.o
+[264/474] Building C object CMakeFiles/turbojpeg.dir/src/jdpostct.c.o
+[265/474] Building C object CMakeFiles/turbojpeg.dir/src/jdmainct.c.o
+[266/474] Building C object CMakeFiles/turbojpeg.dir/src/jdlossls.c.o
+[267/474] Building C object CMakeFiles/turbojpeg.dir/src/jddiffct.c.o
+[268/474] Building C object CMakeFiles/turbojpeg.dir/src/jdcolor.c.o
+[269/474] Building C object CMakeFiles/turbojpeg.dir/src/jdapistd.c.o
+[270/474] Building C object CMakeFiles/turbojpeg.dir/src/jcsample.c.o
+[271/474] Building C object CMakeFiles/turbojpeg.dir/src/jcprepct.c.o
+[272/474] Building C object CMakeFiles/turbojpeg.dir/src/jcmainct.c.o
+[273/474] Building C object CMakeFiles/turbojpeg.dir/src/jclossls.c.o
+[274/474] Building C object CMakeFiles/turbojpeg.dir/src/jcdiffct.c.o
+[275/474] Building C object CMakeFiles/turbojpeg.dir/src/jccolor.c.o
+[276/474] Building C object CMakeFiles/turbojpeg.dir/src/jcapistd.c.o
+[277/474] Building C object CMakeFiles/turbojpeg16.dir/src/wrppm.c.o
+[278/474] Building C object CMakeFiles/turbojpeg16.dir/src/rdppm.c.o
+[279/474] Building C object CMakeFiles/turbojpeg12.dir/src/wrppm.c.o
+[280/474] Building C object CMakeFiles/turbojpeg12.dir/src/rdppm.c.o
+[281/474] Building C object CMakeFiles/jpeg-static.dir/src/jdarith.c.o
+[282/474] Building C object CMakeFiles/jpeg-static.dir/src/jcarith.c.o
+[283/474] Building C object CMakeFiles/jpeg-static.dir/src/jaricom.c.o
+[284/474] Building C object CMakeFiles/jpeg-static.dir/src/jpeg_nbits.c.o
+[285/474] Building C object CMakeFiles/jpeg-static.dir/src/jmemnobs.c.o
+[286/474] Building C object CMakeFiles/jpeg-static.dir/src/jmemmgr.c.o
+[287/474] Building C object CMakeFiles/jpeg-static.dir/src/jfdctflt.c.o
+[288/474] Building C object CMakeFiles/jpeg-static.dir/src/jerror.c.o
+[289/474] Building C object CMakeFiles/jpeg-static.dir/src/jdtrans.c.o
+[290/474] Building C object CMakeFiles/jpeg-static.dir/src/jdphuff.c.o
+[291/474] Building C object CMakeFiles/jpeg-static.dir/src/jdmaster.c.o
+[292/474] Building C object CMakeFiles/jpeg-static.dir/src/jdmarker.c.o
+[293/474] Building C object CMakeFiles/jpeg-static.dir/src/jdlhuff.c.o
+[294/474] Building C object CMakeFiles/jpeg-static.dir/src/jdinput.c.o
+[295/474] Building C object CMakeFiles/jpeg-static.dir/src/jdicc.c.o
+[296/474] Building C object CMakeFiles/jpeg-static.dir/src/jdhuff.c.o
+[297/474] Building C object CMakeFiles/jpeg-static.dir/src/jdatasrc.c.o
+[298/474] Building C object CMakeFiles/jpeg-static.dir/src/jdatadst.c.o
+[299/474] Building C object CMakeFiles/jpeg-static.dir/src/jdapimin.c.o
+[300/474] Building C object CMakeFiles/jpeg-static.dir/src/jctrans.c.o
+[301/474] Building C object CMakeFiles/jpeg-static.dir/src/jcphuff.c.o
+[302/474] Building C object CMakeFiles/jpeg-static.dir/src/jcparam.c.o
+[303/474] Building C object CMakeFiles/jpeg-static.dir/src/jcomapi.c.o
+[304/474] Building C object CMakeFiles/jpeg-static.dir/src/jcmaster.c.o
+[305/474] Building C object CMakeFiles/jpeg-static.dir/src/jcmarker.c.o
+[306/474] Building C object CMakeFiles/jpeg-static.dir/src/jclhuff.c.o
+[307/474] Building C object CMakeFiles/jpeg-static.dir/src/jcinit.c.o
+[308/474] Building C object CMakeFiles/jpeg-static.dir/src/jcicc.c.o
+[309/474] Building C object CMakeFiles/jpeg-static.dir/src/jchuff.c.o
+[310/474] Building C object CMakeFiles/jpeg-static.dir/src/jcapimin.c.o
+[311/474] Building C object CMakeFiles/jpeg-static.dir/src/jquant2.c.o
+[312/474] Building C object CMakeFiles/jpeg-static.dir/src/jquant1.c.o
+[313/474] Building C object CMakeFiles/jpeg-static.dir/src/jidctred.c.o
+[314/474] Building C object CMakeFiles/jpeg-static.dir/src/jidctint.c.o
+[315/474] Building C object CMakeFiles/jpeg-static.dir/src/jidctfst.c.o
+[316/474] Building C object CMakeFiles/jpeg-static.dir/src/jidctflt.c.o
+[317/474] Building C object CMakeFiles/jpeg-static.dir/src/jfdctint.c.o
+[318/474] Building C object CMakeFiles/jpeg-static.dir/src/jfdctfst.c.o
+[319/474] Building C object CMakeFiles/jpeg-static.dir/src/jdmerge.c.o
+[320/474] Building C object CMakeFiles/jpeg-static.dir/src/jddctmgr.c.o
+[321/474] Building C object CMakeFiles/jpeg-static.dir/src/jdcoefct.c.o
+[322/474] Building C object CMakeFiles/jpeg-static.dir/src/jcdctmgr.c.o
+[323/474] Building C object CMakeFiles/jpeg-static.dir/src/jccoefct.c.o
+[324/474] Building C object CMakeFiles/jpeg-static.dir/src/jutils.c.o
+[325/474] Building C object CMakeFiles/jpeg-static.dir/src/jdsample.c.o
+[326/474] Building C object CMakeFiles/jpeg-static.dir/src/jdpostct.c.o
+[327/474] Building C object CMakeFiles/jpeg-static.dir/src/jdmainct.c.o
+[328/474] Building C object CMakeFiles/jpeg-static.dir/src/jdlossls.c.o
+[329/474] Building C object CMakeFiles/jpeg-static.dir/src/jddiffct.c.o
+[330/474] Building C object CMakeFiles/jpeg-static.dir/src/jdcolor.c.o
+[331/474] Building C object CMakeFiles/jpeg-static.dir/src/jdapistd.c.o
+[332/474] Building C object CMakeFiles/jpeg-static.dir/src/jcsample.c.o
+[333/474] Building C object CMakeFiles/jpeg-static.dir/src/jcprepct.c.o
+[334/474] Building C object CMakeFiles/jpeg-static.dir/src/jcmainct.c.o
+[335/474] Building C object CMakeFiles/jpeg-static.dir/src/jclossls.c.o
+[336/474] Building C object CMakeFiles/jpeg-static.dir/src/jcdiffct.c.o
+[337/474] Building C object CMakeFiles/jpeg-static.dir/src/jccolor.c.o
+[338/474] Building C object CMakeFiles/jpeg-static.dir/src/jcapistd.c.o
+[339/474] Building C object simd/CMakeFiles/simd.dir/x86_64/jsimd.c.o
+[340/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jquanti-avx2.asm.o
+[341/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctint-avx2.asm.o
+[342/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctint-avx2.asm.o
+[343/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdsample-avx2.asm.o
+[344/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdmerge-avx2.asm.o
+[345/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdcolor-avx2.asm.o
+[346/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcsample-avx2.asm.o
+[347/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcgray-avx2.asm.o
+[348/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jccolor-avx2.asm.o
+[349/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jquanti-sse2.asm.o
+[350/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jquantf-sse2.asm.o
+[351/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctred-sse2.asm.o
+[352/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctint-sse2.asm.o
+[353/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctfst-sse2.asm.o
+[354/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jidctflt-sse2.asm.o
+[355/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctint-sse2.asm.o
+[356/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctfst-sse2.asm.o
+[357/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdsample-sse2.asm.o
+[358/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdmerge-sse2.asm.o
+[359/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jdcolor-sse2.asm.o
+[360/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcsample-sse2.asm.o
+[361/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcphuff-sse2.asm.o
+[362/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jchuff-sse2.asm.o
+[363/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jcgray-sse2.asm.o
+[364/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jccolor-sse2.asm.o
+[365/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jfdctflt-sse.asm.o
+[366/474] Building ASM_NASM object simd/CMakeFiles/simd.dir/x86_64/jsimdcpu.asm.o
+[367/474] Building C object CMakeFiles/jpeg16-static.dir/src/jutils.c.o
+[368/474] Building C object CMakeFiles/jpeg16-static.dir/src/jdsample.c.o
+[369/474] Building C object CMakeFiles/jpeg16-static.dir/src/jdpostct.c.o
+[370/474] Building C object CMakeFiles/jpeg16-static.dir/src/jdmainct.c.o
+[371/474] Building C object CMakeFiles/jpeg16-static.dir/src/jdlossls.c.o
+[372/474] Building C object CMakeFiles/jpeg16-static.dir/src/jddiffct.c.o
+[373/474] Building C object CMakeFiles/jpeg16-static.dir/src/jdcolor.c.o
+[374/474] Building C object CMakeFiles/jpeg16-static.dir/src/jdapistd.c.o
+[375/474] Building C object CMakeFiles/jpeg16-static.dir/src/jcsample.c.o
+[376/474] Building C object CMakeFiles/jpeg16-static.dir/src/jcprepct.c.o
+[377/474] Building C object CMakeFiles/jpeg16-static.dir/src/jcmainct.c.o
+[378/474] Building C object CMakeFiles/jpeg16-static.dir/src/jclossls.c.o
+[379/474] Building C object CMakeFiles/jpeg16-static.dir/src/jcdiffct.c.o
+[380/474] Building C object CMakeFiles/jpeg16-static.dir/src/jccolor.c.o
+[381/474] Building C object CMakeFiles/jpeg16-static.dir/src/jcapistd.c.o
+[382/474] Building C object CMakeFiles/jpeg12-static.dir/src/jquant2.c.o
+[383/474] Building C object CMakeFiles/jpeg12-static.dir/src/jquant1.c.o
+[384/474] Building C object CMakeFiles/jpeg12-static.dir/src/jidctred.c.o
+[385/474] Building C object CMakeFiles/jpeg12-static.dir/src/jidctint.c.o
+[386/474] Building C object CMakeFiles/jpeg12-static.dir/src/jidctfst.c.o
+[387/474] Building C object CMakeFiles/jpeg12-static.dir/src/jidctflt.c.o
+[388/474] Building C object CMakeFiles/jpeg12-static.dir/src/jfdctint.c.o
+[389/474] Building C object CMakeFiles/jpeg12-static.dir/src/jfdctfst.c.o
+[390/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdmerge.c.o
+[391/474] Building C object CMakeFiles/jpeg12-static.dir/src/jddctmgr.c.o
+[392/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdcoefct.c.o
+[393/474] Building C object CMakeFiles/jpeg12-static.dir/src/jcdctmgr.c.o
+[394/474] Building C object CMakeFiles/jpeg12-static.dir/src/jccoefct.c.o
+[395/474] Building C object CMakeFiles/jpeg12-static.dir/src/jutils.c.o
+[396/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdsample.c.o
+[397/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdpostct.c.o
+[398/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdmainct.c.o
+[399/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdlossls.c.o
+[400/474] Building C object CMakeFiles/jpeg12-static.dir/src/jddiffct.c.o
+[401/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdcolor.c.o
+[402/474] Building C object CMakeFiles/jpeg12-static.dir/src/jdapistd.c.o
+[403/474] Building C object CMakeFiles/jpeg12-static.dir/src/jcsample.c.o
+[404/474] Building C object CMakeFiles/jpeg12-static.dir/src/jcprepct.c.o
+[405/474] Building C object CMakeFiles/jpeg12-static.dir/src/jcmainct.c.o
+[406/474] Building C object CMakeFiles/jpeg12-static.dir/src/jclossls.c.o
+[407/474] Building C object CMakeFiles/jpeg12-static.dir/src/jcdiffct.c.o
+[408/474] Building C object CMakeFiles/jpeg12-static.dir/src/jccolor.c.o
+[409/474] Building C object CMakeFiles/jpeg12-static.dir/src/jcapistd.c.o
+[410/474] Building C object CMakeFiles/jpeg16.dir/src/jutils.c.o
+[411/474] Building C object CMakeFiles/jpeg16.dir/src/jdsample.c.o
+[412/474] Building C object CMakeFiles/jpeg16.dir/src/jdpostct.c.o
+[413/474] Building C object CMakeFiles/jpeg16.dir/src/jdmainct.c.o
+[414/474] Building C object CMakeFiles/jpeg16.dir/src/jdlossls.c.o
+[415/474] Building C object CMakeFiles/jpeg16.dir/src/jddiffct.c.o
+[416/474] Building C object CMakeFiles/jpeg16.dir/src/jdcolor.c.o
+[417/474] Building C object CMakeFiles/jpeg16.dir/src/jdapistd.c.o
+[418/474] Building C object CMakeFiles/jpeg16.dir/src/jcsample.c.o
+[419/474] Building C object CMakeFiles/jpeg16.dir/src/jcprepct.c.o
+[420/474] Building C object CMakeFiles/jpeg16.dir/src/jcmainct.c.o
+[421/474] Building C object CMakeFiles/jpeg16.dir/src/jclossls.c.o
+[422/474] Building C object CMakeFiles/jpeg16.dir/src/jcdiffct.c.o
+[423/474] Building C object CMakeFiles/jpeg16.dir/src/jccolor.c.o
+[424/474] Linking C static library libturbojpeg.a
+[425/474] Building C object CMakeFiles/jpeg16.dir/src/jcapistd.c.o
+[426/474] Linking C executable tjbench-static
+[427/474] Linking C executable tjunittest-static
+[428/474] Building C object CMakeFiles/jpeg12.dir/src/jquant2.c.o
+[429/474] Building C object CMakeFiles/jpeg12.dir/src/jquant1.c.o
+[430/474] Building C object CMakeFiles/jpeg12.dir/src/jidctred.c.o
+[431/474] Building C object CMakeFiles/jpeg12.dir/src/jidctint.c.o
+[432/474] Building C object CMakeFiles/jpeg12.dir/src/jidctfst.c.o
+[433/474] Building C object CMakeFiles/jpeg12.dir/src/jidctflt.c.o
+[434/474] Building C object CMakeFiles/jpeg12.dir/src/jfdctint.c.o
+[435/474] Building C object CMakeFiles/jpeg12.dir/src/jfdctfst.c.o
+[436/474] Building C object CMakeFiles/jpeg12.dir/src/jdmerge.c.o
+[437/474] Building C object CMakeFiles/jpeg12.dir/src/jddctmgr.c.o
+[438/474] Building C object CMakeFiles/jpeg12.dir/src/jdcoefct.c.o
+[439/474] Building C object CMakeFiles/jpeg12.dir/src/jcdctmgr.c.o
+[440/474] Building C object CMakeFiles/jpeg12.dir/src/jccoefct.c.o
+[441/474] Building C object CMakeFiles/jpeg12.dir/src/jutils.c.o
+[442/474] Building C object CMakeFiles/jpeg12.dir/src/jdsample.c.o
+[443/474] Building C object CMakeFiles/jpeg12.dir/src/jdpostct.c.o
+[444/474] Building C object CMakeFiles/jpeg12.dir/src/jdmainct.c.o
+[445/474] Building C object CMakeFiles/jpeg12.dir/src/jdlossls.c.o
+[446/474] Building C object CMakeFiles/jpeg12.dir/src/jddiffct.c.o
+[447/474] Building C object CMakeFiles/jpeg12.dir/src/jdcolor.c.o
+[448/474] Building C object CMakeFiles/jpeg12.dir/src/jdapistd.c.o
+[449/474] Building C object CMakeFiles/jpeg12.dir/src/jcsample.c.o
+[450/474] Building C object CMakeFiles/jpeg12.dir/src/jcprepct.c.o
+[451/474] Building C object CMakeFiles/jpeg12.dir/src/jcmainct.c.o
+[452/474] Building C object CMakeFiles/jpeg12.dir/src/jclossls.c.o
+[453/474] Building C object CMakeFiles/jpeg12.dir/src/jcdiffct.c.o
+[454/474] Building C object CMakeFiles/jpeg12.dir/src/jccolor.c.o
+[455/474] Building C object CMakeFiles/jpeg12.dir/src/jcapistd.c.o
+[456/474] Linking C shared library libjpeg.so.8.3.2
+[457/474] Creating library symlink libjpeg.so.8 libjpeg.so
+[458/474] Linking C executable jcstest
+[459/474] Linking C executable example
+[460/474] Linking C executable jpegtran
+[461/474] Linking C executable djpeg
+[462/474] Linking C executable cjpeg
+[463/474] Linking C shared library libturbojpeg.so.0.4.0
+[464/474] Creating library symlink libturbojpeg.so.0 libturbojpeg.so
+[465/474] Linking C executable tjtran
+[466/474] Linking C executable tjdecomp
+[467/474] Linking C executable tjcomp
+[468/474] Linking C executable tjbench
+[469/474] Linking C executable tjunittest
+[470/474] Linking C static library libjpeg.a
+[471/474] Linking C executable example-static
+[472/474] Linking C executable jpegtran-static
+[473/474] Linking C executable djpeg-static
+[474/474] Linking C executable cjpeg-static
+Test project /home/packager/aports/main/libjpeg-turbo/src/libjpeg-turbo-3.1.0/build-shared
+        Start  53: tjbench-shared-tile-cp
+        Start  75: tjbench-shared-tilem-cp
+        Start  87: tjbench12-shared-tile-cp
+        Start 109: tjbench12-shared-tilem-cp
+        Start 121: cjpeg16-shared-lossless
+        Start 125: cjpeg-shared-rgb-islow
+        Start 136: cjpeg-shared-422-ifast-opt
+        Start 140: cjpeg-shared-440-islow
+  1/329 Test #136: cjpeg-shared-422-ifast-opt ..........................   Passed    0.00 sec
+        Start 150: cjpeg-shared-420-q100-ifast-prog
+  2/329 Test  #53: tjbench-shared-tile-cp ..............................   Passed    0.01 sec
+  3/329 Test #140: cjpeg-shared-440-islow ..............................   Passed    0.00 sec
+        Start 156: cjpeg-shared-gray-islow
+        Start 171: cjpeg-shared-3x2-ifast-prog
+  4/329 Test #125: cjpeg-shared-rgb-islow ..............................   Passed    0.01 sec
+  5/329 Test  #75: tjbench-shared-tilem-cp .............................   Passed    0.01 sec
+  6/329 Test  #87: tjbench12-shared-tile-cp ............................   Passed    0.01 sec
+  7/329 Test #109: tjbench12-shared-tilem-cp ...........................   Passed    0.01 sec
+  8/329 Test #121: cjpeg16-shared-lossless .............................   Passed    0.01 sec
+  9/329 Test #150: cjpeg-shared-420-q100-ifast-prog ....................   Passed    0.01 sec
+ 10/329 Test #156: cjpeg-shared-gray-islow .............................   Passed    0.00 sec
+        Start 219: cjpeg-shared-lossless
+        Start 227: cjpeg-shared-420-islow-prog
+        Start 232: cjpeg-shared-444-islow
+        Start 235: cjpeg-shared-444-islow-prog
+        Start 238: cjpeg-shared-444-islow-ari
+        Start 247: cjpeg12-shared-rgb-islow
+        Start 254: cjpeg12-shared-422-ifast-opt
+ 11/329 Test #171: cjpeg-shared-3x2-ifast-prog .........................   Passed    0.01 sec
+ 12/329 Test #227: cjpeg-shared-420-islow-prog .........................   Passed    0.00 sec
+ 13/329 Test #232: cjpeg-shared-444-islow ..............................   Passed    0.00 sec
+ 14/329 Test #235: cjpeg-shared-444-islow-prog .........................   Passed    0.00 sec
+        Start 258: cjpeg12-shared-440-islow
+        Start 264: cjpeg12-shared-420-q100-ifast-prog
+        Start 270: cjpeg12-shared-gray-islow
+        Start 278: cjpeg12-shared-3x2-float-prog
+ 15/329 Test #238: cjpeg-shared-444-islow-ari ..........................   Passed    0.01 sec
+ 16/329 Test #219: cjpeg-shared-lossless ...............................   Passed    0.01 sec
+ 17/329 Test #254: cjpeg12-shared-422-ifast-opt ........................   Passed    0.00 sec
+        Start 282: cjpeg12-shared-3x2-ifast-prog
+        Start 310: cjpeg12-shared-lossless
+        Start 316: cjpeg12-shared-420-islow-prog
+ 18/329 Test #270: cjpeg12-shared-gray-islow ...........................   Passed    0.00 sec
+ 19/329 Test #247: cjpeg12-shared-rgb-islow ............................   Passed    0.01 sec
+ 20/329 Test #258: cjpeg12-shared-440-islow ............................   Passed    0.01 sec
+ 21/329 Test #264: cjpeg12-shared-420-q100-ifast-prog ..................   Passed    0.01 sec
+ 22/329 Test #278: cjpeg12-shared-3x2-float-prog .......................   Passed    0.00 sec
+        Start 319: cjpeg12-shared-444-islow
+        Start 322: cjpeg12-shared-444-islow-prog
+        Start  54: tjbench-shared-tile
+        Start  76: tjbench-shared-tilem
+        Start  88: tjbench12-shared-tile
+ 23/329 Test #282: cjpeg12-shared-3x2-ifast-prog .......................   Passed    0.01 sec
+ 24/329 Test #310: cjpeg12-shared-lossless .............................   Passed    0.01 sec
+ 25/329 Test #316: cjpeg12-shared-420-islow-prog .......................   Passed    0.01 sec
+        Start 110: tjbench12-shared-tilem
+        Start 123: djpeg16-shared-lossless
+        Start 127: djpeg-shared-rgb-islow
+ 26/329 Test #319: cjpeg12-shared-444-islow ............................   Passed    0.01 sec
+ 27/329 Test #322: cjpeg12-shared-444-islow-prog .......................   Passed    0.01 sec
+        Start 130: jpegtran-shared-icc
+        Start 132: djpeg-shared-rgb-islow-565
+ 28/329 Test #123: djpeg16-shared-lossless .............................   Passed    0.01 sec
+ 29/329 Test #127: djpeg-shared-rgb-islow ..............................   Passed    0.01 sec
+ 30/329 Test #130: jpegtran-shared-icc .................................   Passed    0.00 sec
+        Start 134: djpeg-shared-rgb-islow-565D
+        Start 138: djpeg-shared-422-ifast
+        Start 142: djpeg-shared-440-islow
+ 31/329 Test #132: djpeg-shared-rgb-islow-565 ..........................   Passed    0.01 sec
+ 32/329 Test #134: djpeg-shared-rgb-islow-565D .........................   Passed    0.00 sec
+ 33/329 Test #138: djpeg-shared-422-ifast ..............................   Passed    0.00 sec
+        Start 144: djpeg-shared-422m-ifast
+        Start 146: djpeg-shared-422m-ifast-565
+        Start 148: djpeg-shared-422m-ifast-565D
+ 34/329 Test #142: djpeg-shared-440-islow ..............................   Passed    0.00 sec
+ 35/329 Test #144: djpeg-shared-422m-ifast .............................   Passed    0.00 sec
+ 36/329 Test #146: djpeg-shared-422m-ifast-565 .........................   Passed    0.00 sec
+        Start 152: djpeg-shared-420-q100-ifast-prog
+        Start 154: djpeg-shared-420m-q100-ifast-prog
+        Start 158: djpeg-shared-gray-islow
+ 37/329 Test #148: djpeg-shared-422m-ifast-565D ........................   Passed    0.00 sec
+        Start 160: djpeg-shared-gray-islow-rgb
+ 38/329 Test #152: djpeg-shared-420-q100-ifast-prog ....................   Passed    0.00 sec
+ 39/329 Test #154: djpeg-shared-420m-q100-ifast-prog ...................   Passed    0.00 sec
+ 40/329 Test #158: djpeg-shared-gray-islow .............................   Passed    0.00 sec
+        Start 162: djpeg-shared-gray-islow-565
+        Start 164: djpeg-shared-gray-islow-565D
+        Start 166: cjpeg-shared-420s-ifast-opt
+ 41/329 Test #160: djpeg-shared-gray-islow-rgb .........................   Passed    0.00 sec
+ 42/329 Test #162: djpeg-shared-gray-islow-565 .........................   Passed    0.00 sec
+ 43/329 Test #164: djpeg-shared-gray-islow-565D ........................   Passed    0.00 sec
+        Start 168: cjpeg-shared-3x2-float-prog
+        Start 173: djpeg-shared-3x2-ifast-prog
+        Start 175: cjpeg-shared-420-islow-ari
+ 44/329 Test #166: cjpeg-shared-420s-ifast-opt .........................   Passed    0.00 sec
+        Start 177: jpegtran-shared-420-islow-ari
+ 45/329 Test #168: cjpeg-shared-3x2-float-prog .........................   Passed    0.00 sec
+ 46/329 Test #173: djpeg-shared-3x2-ifast-prog .........................   Passed    0.00 sec
+ 47/329 Test #175: cjpeg-shared-420-islow-ari ..........................   Passed    0.00 sec
+        Start 179: cjpeg-shared-444-islow-progari
+        Start 181: djpeg-shared-420m-ifast-ari
+        Start 183: jpegtran-shared-420-islow
+ 48/329 Test #177: jpegtran-shared-420-islow-ari .......................   Passed    0.00 sec
+        Start 185: djpeg-shared-420m-islow-2_1
+ 49/329 Test #181: djpeg-shared-420m-ifast-ari .........................   Passed    0.00 sec
+ 50/329 Test #183: jpegtran-shared-420-islow ...........................   Passed    0.00 sec
+        Start 187: djpeg-shared-420m-islow-15_8
+        Start 189: djpeg-shared-420m-islow-13_8
+ 51/329 Test #179: cjpeg-shared-444-islow-progari ......................   Passed    0.01 sec
+ 52/329 Test #185: djpeg-shared-420m-islow-2_1 .........................   Passed    0.00 sec
+ 53/329 Test #187: djpeg-shared-420m-islow-15_8 ........................   Passed    0.00 sec
+        Start 191: djpeg-shared-420m-islow-11_8
+        Start 193: djpeg-shared-420m-islow-9_8
+        Start 195: djpeg-shared-420m-islow-7_8
+ 54/329 Test #189: djpeg-shared-420m-islow-13_8 ........................   Passed    0.00 sec
+        Start 197: djpeg-shared-420m-islow-3_4
+ 55/329 Test #191: djpeg-shared-420m-islow-11_8 ........................   Passed    0.00 sec
+ 56/329 Test #193: djpeg-shared-420m-islow-9_8 .........................   Passed    0.00 sec
+ 57/329 Test #195: djpeg-shared-420m-islow-7_8 .........................   Passed    0.00 sec
+        Start 199: djpeg-shared-420m-islow-5_8
+        Start 201: djpeg-shared-420m-islow-1_2
+        Start 203: djpeg-shared-420m-islow-3_8
+ 58/329 Test #197: djpeg-shared-420m-islow-3_4 .........................   Passed    0.00 sec
+ 59/329 Test #199: djpeg-shared-420m-islow-5_8 .........................   Passed    0.00 sec
+ 60/329 Test #201: djpeg-shared-420m-islow-1_2 .........................   Passed    0.00 sec
+        Start 205: djpeg-shared-420m-islow-1_4
+        Start 207: djpeg-shared-420m-islow-1_8
+        Start 209: djpeg-shared-420-islow-256
+ 61/329 Test #203: djpeg-shared-420m-islow-3_8 .........................   Passed    0.00 sec
+ 62/329 Test #205: djpeg-shared-420m-islow-1_4 .........................   Passed    0.00 sec
+ 63/329 Test #207: djpeg-shared-420m-islow-1_8 .........................   Passed    0.00 sec
+        Start 211: djpeg-shared-420-islow-565
+        Start 213: djpeg-shared-420-islow-565D
+        Start 215: djpeg-shared-420m-islow-565
+ 64/329 Test #211: djpeg-shared-420-islow-565 ..........................   Passed    0.00 sec
+        Start 217: djpeg-shared-420m-islow-565D
+ 65/329 Test #209: djpeg-shared-420-islow-256 ..........................   Passed    0.01 sec
+ 66/329 Test #213: djpeg-shared-420-islow-565D .........................   Passed    0.00 sec
+ 67/329 Test #215: djpeg-shared-420m-islow-565 .........................   Passed    0.00 sec
+        Start 221: djpeg-shared-lossless
+        Start 223: djpeg-shared-420-islow-skip15_31
+        Start 225: djpeg-shared-420-islow-ari-skip16_139
+ 68/329 Test #217: djpeg-shared-420m-islow-565D ........................   Passed    0.00 sec
+ 69/329 Test #221: djpeg-shared-lossless ...............................   Passed    0.00 sec
+ 70/329 Test #223: djpeg-shared-420-islow-skip15_31 ....................   Passed    0.00 sec
+        Start 228: djpeg-shared-420-islow-prog-crop62x62_71_71
+        Start 230: djpeg-shared-420-islow-ari-crop53x53_4_4
+        Start 233: djpeg-shared-444-islow-skip1_6
+ 71/329 Test #225: djpeg-shared-420-islow-ari-skip16_139 ...............   Passed    0.00 sec
+ 72/329 Test #228: djpeg-shared-420-islow-prog-crop62x62_71_71 .........   Passed    0.00 sec
+ 73/329 Test #230: djpeg-shared-420-islow-ari-crop53x53_4_4 ............   Passed    0.00 sec
+        Start 236: djpeg-shared-444-islow-prog-crop98x98_13_13
+        Start 239: djpeg-shared-444-islow-ari-crop37x37_0_0
+        Start 241: jpegtran-shared-crop
+ 74/329 Test #233: djpeg-shared-444-islow-skip1_6 ......................   Passed    0.00 sec
+ 75/329 Test #236: djpeg-shared-444-islow-prog-crop98x98_13_13 .........   Passed    0.00 sec
+ 76/329 Test #239: djpeg-shared-444-islow-ari-crop37x37_0_0 ............   Passed    0.00 sec
+        Start 243: example-8bit-shared-compress
+        Start 245: example-8bit-shared-decompress
+        Start 249: djpeg12-shared-rgb-islow
+ 77/329 Test #241: jpegtran-shared-crop ................................   Passed    0.00 sec
+        Start 252: jpegtran12-shared-icc
+ 78/329 Test #245: example-8bit-shared-decompress ......................   Passed    0.00 sec
+        Start 256: djpeg12-shared-422-ifast
+ 79/329 Test #243: example-8bit-shared-compress ........................   Passed    0.01 sec
+ 80/329 Test #252: jpegtran12-shared-icc ...............................   Passed    0.00 sec
+        Start 260: djpeg12-shared-440-islow
+        Start 262: djpeg12-shared-422m-ifast
+ 81/329 Test #249: djpeg12-shared-rgb-islow ............................   Passed    0.01 sec
+ 82/329 Test #256: djpeg12-shared-422-ifast ............................   Passed    0.01 sec
+        Start 266: djpeg12-shared-420-q100-ifast-prog
+        Start 268: djpeg12-shared-420m-q100-ifast-prog
+ 83/329 Test #260: djpeg12-shared-440-islow ............................   Passed    0.01 sec
+ 84/329 Test #262: djpeg12-shared-422m-ifast ...........................   Passed    0.00 sec
+ 85/329 Test #266: djpeg12-shared-420-q100-ifast-prog ..................   Passed    0.00 sec
+        Start 272: djpeg12-shared-gray-islow
+        Start 274: djpeg12-shared-gray-islow-rgb
+        Start 276: cjpeg12-shared-420s-ifast-opt
+ 86/329 Test #268: djpeg12-shared-420m-q100-ifast-prog .................   Passed    0.01 sec
+ 87/329 Test #272: djpeg12-shared-gray-islow ...........................   Passed    0.00 sec
+        Start 280: djpeg12-shared-3x2-float-prog
+        Start 284: djpeg12-shared-3x2-ifast-prog
+ 88/329 Test #274: djpeg12-shared-gray-islow-rgb .......................   Passed    0.00 sec
+        Start 286: djpeg12-shared-420m-islow-2_1
+ 89/329 Test #276: cjpeg12-shared-420s-ifast-opt .......................   Passed    0.00 sec
+ 90/329 Test #280: djpeg12-shared-3x2-float-prog .......................   Passed    0.00 sec
+ 91/329 Test #284: djpeg12-shared-3x2-ifast-prog .......................   Passed    0.00 sec
+        Start 288: djpeg12-shared-420m-islow-15_8
+        Start 290: djpeg12-shared-420m-islow-13_8
+        Start 292: djpeg12-shared-420m-islow-11_8
+ 92/329 Test #286: djpeg12-shared-420m-islow-2_1 .......................   Passed    0.01 sec
+        Start 294: djpeg12-shared-420m-islow-9_8
+ 93/329 Test #288: djpeg12-shared-420m-islow-15_8 ......................   Passed    0.00 sec
+        Start 296: djpeg12-shared-420m-islow-7_8
+ 94/329 Test #290: djpeg12-shared-420m-islow-13_8 ......................   Passed    0.01 sec
+ 95/329 Test #292: djpeg12-shared-420m-islow-11_8 ......................   Passed    0.01 sec
+ 96/329 Test #294: djpeg12-shared-420m-islow-9_8 .......................   Passed    0.00 sec
+        Start 298: djpeg12-shared-420m-islow-3_4
+        Start 300: djpeg12-shared-420m-islow-5_8
+        Start 302: djpeg12-shared-420m-islow-1_2
+ 97/329 Test #296: djpeg12-shared-420m-islow-7_8 .......................   Passed    0.00 sec
+ 98/329 Test #298: djpeg12-shared-420m-islow-3_4 .......................   Passed    0.00 sec
+        Start 304: djpeg12-shared-420m-islow-3_8
+        Start 306: djpeg12-shared-420m-islow-1_4
+ 99/329 Test #300: djpeg12-shared-420m-islow-5_8 .......................   Passed    0.00 sec
+100/329 Test #302: djpeg12-shared-420m-islow-1_2 .......................   Passed    0.00 sec
+        Start 308: djpeg12-shared-420m-islow-1_8
+        Start 312: djpeg12-shared-lossless
+101/329 Test #304: djpeg12-shared-420m-islow-3_8 .......................   Passed    0.00 sec
+102/329 Test #306: djpeg12-shared-420m-islow-1_4 .......................   Passed    0.00 sec
+103/329 Test #308: djpeg12-shared-420m-islow-1_8 .......................   Passed    0.00 sec
+        Start 314: djpeg12-shared-420-islow-skip15_31
+        Start 317: djpeg12-shared-420-islow-prog-crop62x62_71_71
+        Start 320: djpeg12-shared-444-islow-skip1_6
+104/329 Test #312: djpeg12-shared-lossless .............................   Passed    0.00 sec
+105/329 Test #314: djpeg12-shared-420-islow-skip15_31 ..................   Passed    0.00 sec
+        Start 323: djpeg12-shared-444-islow-prog-crop98x98_13_13
+        Start 325: jpegtran12-shared-crop
+106/329 Test #317: djpeg12-shared-420-islow-prog-crop62x62_71_71 .......   Passed    0.01 sec
+107/329 Test #320: djpeg12-shared-444-islow-skip1_6 ....................   Passed    0.00 sec
+108/329 Test #323: djpeg12-shared-444-islow-prog-crop98x98_13_13 .......   Passed    0.00 sec
+        Start 327: example-12bit-shared-compress
+        Start   1: tjunittest-shared
+        Start   2: tjunittest-shared-alloc
+109/329 Test #325: jpegtran12-shared-crop ..............................   Passed    0.00 sec
+        Start   3: tjunittest-shared-yuv
+110/329 Test #327: example-12bit-shared-compress .......................   Passed    0.02 sec
+        Start   4: tjunittest-shared-yuv-alloc
+111/329 Test  #76: tjbench-shared-tilem ................................   Passed    0.62 sec
+        Start   5: tjunittest-shared-yuv-nopad
+112/329 Test  #54: tjbench-shared-tile .................................   Passed    0.65 sec
+        Start   6: tjunittest-shared-lossless
+113/329 Test #110: tjbench12-shared-tilem ..............................   Passed    2.01 sec
+        Start   7: tjunittest-shared-lossless-alloc
+114/329 Test  #88: tjbench12-shared-tile ...............................   Passed    2.05 sec
+        Start   8: tjunittest-shared-bmp
+115/329 Test   #8: tjunittest-shared-bmp ...............................   Passed    0.05 sec
+        Start   9: tjunittest12-shared
+116/329 Test   #6: tjunittest-shared-lossless ..........................   Passed    3.61 sec
+        Start  10: tjunittest12-shared-alloc
+117/329 Test   #7: tjunittest-shared-lossless-alloc ....................   Passed    3.67 sec
+        Start  11: tjunittest12-shared-lossless
+118/329 Test  #11: tjunittest12-shared-lossless ........................   Passed    3.81 sec
+        Start  12: tjunittest12-shared-lossless-alloc
+119/329 Test   #3: tjunittest-shared-yuv ...............................   Passed    9.49 sec
+        Start  13: tjunittest12-shared-bmp
+120/329 Test  #13: tjunittest12-shared-bmp .............................   Passed    0.05 sec
+        Start  14: tjunittest2-shared-lossless
+121/329 Test   #4: tjunittest-shared-yuv-alloc .........................   Passed    9.69 sec
+        Start  15: tjunittest2-shared-lossless-alloc
+122/329 Test   #5: tjunittest-shared-yuv-nopad .........................   Passed    9.60 sec
+        Start  16: tjunittest2-shared-bmp
+123/329 Test  #16: tjunittest2-shared-bmp ..............................   Passed    0.03 sec
+        Start  17: tjunittest3-shared-lossless
+124/329 Test   #2: tjunittest-shared-alloc .............................   Passed   12.08 sec
+        Start  18: tjunittest3-shared-lossless-alloc
+125/329 Test   #1: tjunittest-shared ...................................   Passed   12.51 sec
+        Start  19: tjunittest3-shared-bmp
+126/329 Test  #19: tjunittest3-shared-bmp ..............................   Passed    0.03 sec
+        Start  20: tjunittest4-shared-lossless
+127/329 Test  #14: tjunittest2-shared-lossless .........................   Passed    3.70 sec
+        Start  21: tjunittest4-shared-lossless-alloc
+128/329 Test  #15: tjunittest2-shared-lossless-alloc ...................   Passed    3.64 sec
+        Start  22: tjunittest4-shared-bmp
+129/329 Test  #12: tjunittest12-shared-lossless-alloc ..................   Passed    3.97 sec
+        Start  23: tjunittest5-shared-lossless
+130/329 Test  #22: tjunittest4-shared-bmp ..............................   Passed    0.06 sec
+        Start  24: tjunittest5-shared-lossless-alloc
+131/329 Test  #17: tjunittest3-shared-lossless .........................   Passed    3.61 sec
+        Start  25: tjunittest5-shared-bmp
+132/329 Test  #25: tjunittest5-shared-bmp ..............................   Passed    0.03 sec
+        Start  26: tjunittest6-shared-lossless
+133/329 Test  #18: tjunittest3-shared-lossless-alloc ...................   Passed    4.16 sec
+        Start  27: tjunittest6-shared-lossless-alloc
+134/329 Test  #20: tjunittest4-shared-lossless .........................   Passed    4.71 sec
+        Start  28: tjunittest6-shared-bmp
+135/329 Test  #28: tjunittest6-shared-bmp ..............................   Passed    0.06 sec
+        Start  29: tjunittest7-shared-lossless
+136/329 Test  #21: tjunittest4-shared-lossless-alloc ...................   Passed    4.31 sec
+        Start  30: tjunittest7-shared-lossless-alloc
+137/329 Test  #23: tjunittest5-shared-lossless .........................   Passed    4.55 sec
+        Start  31: tjunittest7-shared-bmp
+138/329 Test  #24: tjunittest5-shared-lossless-alloc ...................   Passed    4.57 sec
+        Start  32: tjunittest9-shared-lossless
+139/329 Test  #31: tjunittest7-shared-bmp ..............................   Passed    0.05 sec
+        Start  33: tjunittest9-shared-lossless-alloc
+140/329 Test  #26: tjunittest6-shared-lossless .........................   Passed    4.23 sec
+        Start  34: tjunittest9-shared-bmp
+141/329 Test  #34: tjunittest9-shared-bmp ..............................   Passed    0.08 sec
+        Start  35: tjunittest10-shared-lossless
+142/329 Test  #27: tjunittest6-shared-lossless-alloc ...................   Passed    3.91 sec
+        Start  36: tjunittest10-shared-lossless-alloc
+143/329 Test  #29: tjunittest7-shared-lossless .........................   Passed    3.86 sec
+        Start  37: tjunittest10-shared-bmp
+144/329 Test  #37: tjunittest10-shared-bmp .............................   Passed    0.04 sec
+        Start  38: tjunittest11-shared-lossless
+145/329 Test  #30: tjunittest7-shared-lossless-alloc ...................   Passed    3.99 sec
+        Start  39: tjunittest11-shared-lossless-alloc
+146/329 Test  #33: tjunittest9-shared-lossless-alloc ...................   Passed    3.90 sec
+        Start  40: tjunittest11-shared-bmp
+147/329 Test  #40: tjunittest11-shared-bmp .............................   Passed    0.04 sec
+        Start  41: tjunittest13-shared-lossless
+148/329 Test  #32: tjunittest9-shared-lossless .........................   Passed    4.10 sec
+        Start  42: tjunittest13-shared-lossless-alloc
+149/329 Test  #35: tjunittest10-shared-lossless ........................   Passed    4.03 sec
+        Start  43: tjunittest13-shared-bmp
+150/329 Test  #43: tjunittest13-shared-bmp .............................   Passed    0.04 sec
+        Start  44: tjunittest14-shared-lossless
+151/329 Test  #36: tjunittest10-shared-lossless-alloc ..................   Passed    3.89 sec
+        Start  45: tjunittest14-shared-lossless-alloc
+152/329 Test  #38: tjunittest11-shared-lossless ........................   Passed    3.95 sec
+        Start  46: tjunittest14-shared-bmp
+153/329 Test  #46: tjunittest14-shared-bmp .............................   Passed    0.09 sec
+        Start  47: tjunittest15-shared-lossless
+154/329 Test  #39: tjunittest11-shared-lossless-alloc ..................   Passed    3.96 sec
+        Start  48: tjunittest15-shared-lossless-alloc
+155/329 Test  #41: tjunittest13-shared-lossless ........................   Passed    4.13 sec
+        Start  49: tjunittest15-shared-bmp
+156/329 Test  #49: tjunittest15-shared-bmp .............................   Passed    0.14 sec
+        Start  50: tjunittest16-shared-lossless
+157/329 Test  #44: tjunittest14-shared-lossless ........................   Passed    4.05 sec
+        Start  51: tjunittest16-shared-lossless-alloc
+158/329 Test  #42: tjunittest13-shared-lossless-alloc ..................   Passed    4.19 sec
+        Start  52: tjunittest16-shared-bmp
+159/329 Test  #52: tjunittest16-shared-bmp .............................   Passed    0.23 sec
+        Start  55: tjbench-shared-tile-gray-8x8-cmp
+160/329 Test  #55: tjbench-shared-tile-gray-8x8-cmp ....................   Passed    0.00 sec
+        Start  56: tjbench-shared-tile-420-8x8-cmp
+161/329 Test  #56: tjbench-shared-tile-420-8x8-cmp .....................   Passed    0.00 sec
+        Start  57: tjbench-shared-tile-422-8x8-cmp
+162/329 Test  #57: tjbench-shared-tile-422-8x8-cmp .....................   Passed    0.00 sec
+        Start  58: tjbench-shared-tile-444-8x8-cmp
+163/329 Test  #58: tjbench-shared-tile-444-8x8-cmp .....................   Passed    0.00 sec
+        Start  59: tjbench-shared-tile-gray-16x16-cmp
+164/329 Test  #59: tjbench-shared-tile-gray-16x16-cmp ..................   Passed    0.00 sec
+        Start  60: tjbench-shared-tile-420-16x16-cmp
+165/329 Test  #60: tjbench-shared-tile-420-16x16-cmp ...................   Passed    0.00 sec
+        Start  61: tjbench-shared-tile-422-16x16-cmp
+166/329 Test  #61: tjbench-shared-tile-422-16x16-cmp ...................   Passed    0.00 sec
+        Start  62: tjbench-shared-tile-444-16x16-cmp
+167/329 Test  #62: tjbench-shared-tile-444-16x16-cmp ...................   Passed    0.00 sec
+        Start  63: tjbench-shared-tile-gray-32x32-cmp
+168/329 Test  #63: tjbench-shared-tile-gray-32x32-cmp ..................   Passed    0.00 sec
+        Start  64: tjbench-shared-tile-420-32x32-cmp
+169/329 Test  #64: tjbench-shared-tile-420-32x32-cmp ...................   Passed    0.00 sec
+        Start  65: tjbench-shared-tile-422-32x32-cmp
+170/329 Test  #65: tjbench-shared-tile-422-32x32-cmp ...................   Passed    0.00 sec
+        Start  66: tjbench-shared-tile-444-32x32-cmp
+171/329 Test  #66: tjbench-shared-tile-444-32x32-cmp ...................   Passed    0.00 sec
+        Start  67: tjbench-shared-tile-gray-64x64-cmp
+172/329 Test  #67: tjbench-shared-tile-gray-64x64-cmp ..................   Passed    0.00 sec
+        Start  68: tjbench-shared-tile-420-64x64-cmp
+173/329 Test  #68: tjbench-shared-tile-420-64x64-cmp ...................   Passed    0.00 sec
+        Start  69: tjbench-shared-tile-422-64x64-cmp
+174/329 Test  #69: tjbench-shared-tile-422-64x64-cmp ...................   Passed    0.00 sec
+        Start  70: tjbench-shared-tile-444-64x64-cmp
+175/329 Test  #70: tjbench-shared-tile-444-64x64-cmp ...................   Passed    0.00 sec
+        Start  71: tjbench-shared-tile-gray-128x128-cmp
+176/329 Test  #71: tjbench-shared-tile-gray-128x128-cmp ................   Passed    0.00 sec
+        Start  72: tjbench-shared-tile-420-128x128-cmp
+177/329 Test  #72: tjbench-shared-tile-420-128x128-cmp .................   Passed    0.00 sec
+        Start  73: tjbench-shared-tile-422-128x128-cmp
+178/329 Test  #73: tjbench-shared-tile-422-128x128-cmp .................   Passed    0.00 sec
+        Start  74: tjbench-shared-tile-444-128x128-cmp
+179/329 Test  #74: tjbench-shared-tile-444-128x128-cmp .................   Passed    0.00 sec
+        Start  77: tjbench-shared-tile-420m-8x8-cmp
+180/329 Test  #77: tjbench-shared-tile-420m-8x8-cmp ....................   Passed    0.00 sec
+        Start  78: tjbench-shared-tile-422m-8x8-cmp
+181/329 Test  #78: tjbench-shared-tile-422m-8x8-cmp ....................   Passed    0.00 sec
+        Start  79: tjbench-shared-tile-420m-16x16-cmp
+182/329 Test  #79: tjbench-shared-tile-420m-16x16-cmp ..................   Passed    0.00 sec
+        Start  80: tjbench-shared-tile-422m-16x16-cmp
+183/329 Test  #80: tjbench-shared-tile-422m-16x16-cmp ..................   Passed    0.00 sec
+        Start  81: tjbench-shared-tile-420m-32x32-cmp
+184/329 Test  #81: tjbench-shared-tile-420m-32x32-cmp ..................   Passed    0.00 sec
+        Start  82: tjbench-shared-tile-422m-32x32-cmp
+185/329 Test  #82: tjbench-shared-tile-422m-32x32-cmp ..................   Passed    0.00 sec
+        Start  83: tjbench-shared-tile-420m-64x64-cmp
+186/329 Test  #83: tjbench-shared-tile-420m-64x64-cmp ..................   Passed    0.00 sec
+        Start  84: tjbench-shared-tile-422m-64x64-cmp
+187/329 Test  #84: tjbench-shared-tile-422m-64x64-cmp ..................   Passed    0.00 sec
+        Start  85: tjbench-shared-tile-420m-128x128-cmp
+188/329 Test  #85: tjbench-shared-tile-420m-128x128-cmp ................   Passed    0.00 sec
+        Start  86: tjbench-shared-tile-422m-128x128-cmp
+189/329 Test  #86: tjbench-shared-tile-422m-128x128-cmp ................   Passed    0.00 sec
+        Start  89: tjbench12-shared-tile-gray-8x8-cmp
+190/329 Test  #89: tjbench12-shared-tile-gray-8x8-cmp ..................   Passed    0.00 sec
+        Start  90: tjbench12-shared-tile-420-8x8-cmp
+191/329 Test  #90: tjbench12-shared-tile-420-8x8-cmp ...................   Passed    0.00 sec
+        Start  91: tjbench12-shared-tile-422-8x8-cmp
+192/329 Test  #91: tjbench12-shared-tile-422-8x8-cmp ...................   Passed    0.00 sec
+        Start  92: tjbench12-shared-tile-444-8x8-cmp
+193/329 Test  #92: tjbench12-shared-tile-444-8x8-cmp ...................   Passed    0.00 sec
+        Start  93: tjbench12-shared-tile-gray-16x16-cmp
+194/329 Test  #93: tjbench12-shared-tile-gray-16x16-cmp ................   Passed    0.00 sec
+        Start  94: tjbench12-shared-tile-420-16x16-cmp
+195/329 Test  #94: tjbench12-shared-tile-420-16x16-cmp .................   Passed    0.00 sec
+        Start  95: tjbench12-shared-tile-422-16x16-cmp
+196/329 Test  #95: tjbench12-shared-tile-422-16x16-cmp .................   Passed    0.00 sec
+        Start  96: tjbench12-shared-tile-444-16x16-cmp
+197/329 Test  #96: tjbench12-shared-tile-444-16x16-cmp .................   Passed    0.00 sec
+        Start  97: tjbench12-shared-tile-gray-32x32-cmp
+198/329 Test  #97: tjbench12-shared-tile-gray-32x32-cmp ................   Passed    0.00 sec
+        Start  98: tjbench12-shared-tile-420-32x32-cmp
+199/329 Test  #98: tjbench12-shared-tile-420-32x32-cmp .................   Passed    0.00 sec
+        Start  99: tjbench12-shared-tile-422-32x32-cmp
+200/329 Test  #99: tjbench12-shared-tile-422-32x32-cmp .................   Passed    0.00 sec
+        Start 100: tjbench12-shared-tile-444-32x32-cmp
+201/329 Test #100: tjbench12-shared-tile-444-32x32-cmp .................   Passed    0.00 sec
+        Start 101: tjbench12-shared-tile-gray-64x64-cmp
+202/329 Test #101: tjbench12-shared-tile-gray-64x64-cmp ................   Passed    0.00 sec
+        Start 102: tjbench12-shared-tile-420-64x64-cmp
+203/329 Test #102: tjbench12-shared-tile-420-64x64-cmp .................   Passed    0.00 sec
+        Start 103: tjbench12-shared-tile-422-64x64-cmp
+204/329 Test #103: tjbench12-shared-tile-422-64x64-cmp .................   Passed    0.00 sec
+        Start 104: tjbench12-shared-tile-444-64x64-cmp
+205/329 Test #104: tjbench12-shared-tile-444-64x64-cmp .................   Passed    0.00 sec
+        Start 105: tjbench12-shared-tile-gray-128x128-cmp
+206/329 Test #105: tjbench12-shared-tile-gray-128x128-cmp ..............   Passed    0.00 sec
+        Start 106: tjbench12-shared-tile-420-128x128-cmp
+207/329 Test #106: tjbench12-shared-tile-420-128x128-cmp ...............   Passed    0.00 sec
+        Start 107: tjbench12-shared-tile-422-128x128-cmp
+208/329 Test #107: tjbench12-shared-tile-422-128x128-cmp ...............   Passed    0.00 sec
+        Start 108: tjbench12-shared-tile-444-128x128-cmp
+209/329 Test #108: tjbench12-shared-tile-444-128x128-cmp ...............   Passed    0.00 sec
+        Start 111: tjbench12-shared-tile-420m-8x8-cmp
+210/329 Test #111: tjbench12-shared-tile-420m-8x8-cmp ..................   Passed    0.00 sec
+        Start 112: tjbench12-shared-tile-422m-8x8-cmp
+211/329 Test #112: tjbench12-shared-tile-422m-8x8-cmp ..................   Passed    0.00 sec
+        Start 113: tjbench12-shared-tile-420m-16x16-cmp
+212/329 Test #113: tjbench12-shared-tile-420m-16x16-cmp ................   Passed    0.00 sec
+        Start 114: tjbench12-shared-tile-422m-16x16-cmp
+213/329 Test #114: tjbench12-shared-tile-422m-16x16-cmp ................   Passed    0.00 sec
+        Start 115: tjbench12-shared-tile-420m-32x32-cmp
+214/329 Test #115: tjbench12-shared-tile-420m-32x32-cmp ................   Passed    0.00 sec
+        Start 116: tjbench12-shared-tile-422m-32x32-cmp
+215/329 Test #116: tjbench12-shared-tile-422m-32x32-cmp ................   Passed    0.00 sec
+        Start 117: tjbench12-shared-tile-420m-64x64-cmp
+216/329 Test #117: tjbench12-shared-tile-420m-64x64-cmp ................   Passed    0.00 sec
+        Start 118: tjbench12-shared-tile-422m-64x64-cmp
+217/329 Test #118: tjbench12-shared-tile-422m-64x64-cmp ................   Passed    0.00 sec
+        Start 119: tjbench12-shared-tile-420m-128x128-cmp
+218/329 Test #119: tjbench12-shared-tile-420m-128x128-cmp ..............   Passed    0.00 sec
+        Start 120: tjbench12-shared-tile-422m-128x128-cmp
+219/329 Test #120: tjbench12-shared-tile-422m-128x128-cmp ..............   Passed    0.00 sec
+        Start 122: cjpeg16-shared-lossless-cmp
+220/329 Test #122: cjpeg16-shared-lossless-cmp .........................   Passed    0.00 sec
+        Start 124: djpeg16-shared-lossless-cmp
+221/329 Test #124: djpeg16-shared-lossless-cmp .........................   Passed    0.00 sec
+        Start 126: cjpeg-shared-rgb-islow-cmp
+222/329 Test #126: cjpeg-shared-rgb-islow-cmp ..........................   Passed    0.00 sec
+        Start 128: djpeg-shared-rgb-islow-cmp
+223/329 Test #128: djpeg-shared-rgb-islow-cmp ..........................   Passed    0.00 sec
+        Start 129: djpeg-shared-rgb-islow-icc-cmp
+224/329 Test #129: djpeg-shared-rgb-islow-icc-cmp ......................   Passed    0.00 sec
+        Start 131: jpegtran-shared-icc-cmp
+225/329 Test #131: jpegtran-shared-icc-cmp .............................   Passed    0.00 sec
+        Start 133: djpeg-shared-rgb-islow-565-cmp
+226/329 Test #133: djpeg-shared-rgb-islow-565-cmp ......................   Passed    0.00 sec
+        Start 135: djpeg-shared-rgb-islow-565D-cmp
+227/329 Test #135: djpeg-shared-rgb-islow-565D-cmp .....................   Passed    0.00 sec
+        Start 137: cjpeg-shared-422-ifast-opt-cmp
+228/329 Test #137: cjpeg-shared-422-ifast-opt-cmp ......................   Passed    0.00 sec
+        Start 139: djpeg-shared-422-ifast-cmp
+229/329 Test #139: djpeg-shared-422-ifast-cmp ..........................   Passed    0.00 sec
+        Start 141: cjpeg-shared-440-islow-cmp
+230/329 Test #141: cjpeg-shared-440-islow-cmp ..........................   Passed    0.00 sec
+        Start 143: djpeg-shared-440-islow-cmp
+231/329 Test #143: djpeg-shared-440-islow-cmp ..........................   Passed    0.00 sec
+        Start 145: djpeg-shared-422m-ifast-cmp
+232/329 Test #145: djpeg-shared-422m-ifast-cmp .........................   Passed    0.00 sec
+        Start 147: djpeg-shared-422m-ifast-565-cmp
+233/329 Test #147: djpeg-shared-422m-ifast-565-cmp .....................   Passed    0.00 sec
+        Start 149: djpeg-shared-422m-ifast-565D-cmp
+234/329 Test #149: djpeg-shared-422m-ifast-565D-cmp ....................   Passed    0.00 sec
+        Start 151: cjpeg-shared-420-q100-ifast-prog-cmp
+235/329 Test #151: cjpeg-shared-420-q100-ifast-prog-cmp ................   Passed    0.00 sec
+        Start 153: djpeg-shared-420-q100-ifast-prog-cmp
+236/329 Test #153: djpeg-shared-420-q100-ifast-prog-cmp ................   Passed    0.00 sec
+        Start 155: djpeg-shared-420m-q100-ifast-prog-cmp
+237/329 Test #155: djpeg-shared-420m-q100-ifast-prog-cmp ...............   Passed    0.00 sec
+        Start 157: cjpeg-shared-gray-islow-cmp
+238/329 Test #157: cjpeg-shared-gray-islow-cmp .........................   Passed    0.00 sec
+        Start 159: djpeg-shared-gray-islow-cmp
+239/329 Test #159: djpeg-shared-gray-islow-cmp .........................   Passed    0.00 sec
+        Start 161: djpeg-shared-gray-islow-rgb-cmp
+240/329 Test #161: djpeg-shared-gray-islow-rgb-cmp .....................   Passed    0.00 sec
+        Start 163: djpeg-shared-gray-islow-565-cmp
+241/329 Test #163: djpeg-shared-gray-islow-565-cmp .....................   Passed    0.00 sec
+        Start 165: djpeg-shared-gray-islow-565D-cmp
+242/329 Test #165: djpeg-shared-gray-islow-565D-cmp ....................   Passed    0.00 sec
+        Start 167: cjpeg-shared-420s-ifast-opt-cmp
+243/329 Test #167: cjpeg-shared-420s-ifast-opt-cmp .....................   Passed    0.00 sec
+        Start 169: cjpeg-shared-3x2-float-prog-cmp
+244/329 Test #169: cjpeg-shared-3x2-float-prog-cmp .....................   Passed    0.00 sec
+        Start 170: djpeg-shared-3x2-float-prog
+245/329 Test #170: djpeg-shared-3x2-float-prog .........................   Passed    0.00 sec
+        Start 172: cjpeg-shared-3x2-ifast-prog-cmp
+246/329 Test #172: cjpeg-shared-3x2-ifast-prog-cmp .....................   Passed    0.00 sec
+        Start 174: djpeg-shared-3x2-ifast-prog-cmp
+247/329 Test #174: djpeg-shared-3x2-ifast-prog-cmp .....................   Passed    0.00 sec
+        Start 176: cjpeg-shared-420-islow-ari-cmp
+248/329 Test #176: cjpeg-shared-420-islow-ari-cmp ......................   Passed    0.00 sec
+        Start 178: jpegtran-shared-420-islow-ari-cmp
+249/329 Test #178: jpegtran-shared-420-islow-ari-cmp ...................   Passed    0.00 sec
+        Start 180: cjpeg-shared-444-islow-progari-cmp
+250/329 Test #180: cjpeg-shared-444-islow-progari-cmp ..................   Passed    0.00 sec
+        Start 182: djpeg-shared-420m-ifast-ari-cmp
+251/329 Test #182: djpeg-shared-420m-ifast-ari-cmp .....................   Passed    0.00 sec
+        Start 184: jpegtran-shared-420-islow-cmp
+252/329 Test #184: jpegtran-shared-420-islow-cmp .......................   Passed    0.00 sec
+        Start 186: djpeg-shared-420m-islow-2_1-cmp
+253/329 Test #186: djpeg-shared-420m-islow-2_1-cmp .....................   Passed    0.00 sec
+        Start 188: djpeg-shared-420m-islow-15_8-cmp
+254/329 Test #188: djpeg-shared-420m-islow-15_8-cmp ....................   Passed    0.00 sec
+        Start 190: djpeg-shared-420m-islow-13_8-cmp
+255/329 Test #190: djpeg-shared-420m-islow-13_8-cmp ....................   Passed    0.00 sec
+        Start 192: djpeg-shared-420m-islow-11_8-cmp
+256/329 Test #192: djpeg-shared-420m-islow-11_8-cmp ....................   Passed    0.00 sec
+        Start 194: djpeg-shared-420m-islow-9_8-cmp
+257/329 Test #194: djpeg-shared-420m-islow-9_8-cmp .....................   Passed    0.00 sec
+        Start 196: djpeg-shared-420m-islow-7_8-cmp
+258/329 Test #196: djpeg-shared-420m-islow-7_8-cmp .....................   Passed    0.00 sec
+        Start 198: djpeg-shared-420m-islow-3_4-cmp
+259/329 Test #198: djpeg-shared-420m-islow-3_4-cmp .....................   Passed    0.00 sec
+        Start 200: djpeg-shared-420m-islow-5_8-cmp
+260/329 Test #200: djpeg-shared-420m-islow-5_8-cmp .....................   Passed    0.00 sec
+        Start 202: djpeg-shared-420m-islow-1_2-cmp
+261/329 Test #202: djpeg-shared-420m-islow-1_2-cmp .....................   Passed    0.00 sec
+        Start 204: djpeg-shared-420m-islow-3_8-cmp
+262/329 Test #204: djpeg-shared-420m-islow-3_8-cmp .....................   Passed    0.00 sec
+        Start 206: djpeg-shared-420m-islow-1_4-cmp
+263/329 Test #206: djpeg-shared-420m-islow-1_4-cmp .....................   Passed    0.00 sec
+        Start 208: djpeg-shared-420m-islow-1_8-cmp
+264/329 Test #208: djpeg-shared-420m-islow-1_8-cmp .....................   Passed    0.00 sec
+        Start 210: djpeg-shared-420-islow-256-cmp
+265/329 Test #210: djpeg-shared-420-islow-256-cmp ......................   Passed    0.00 sec
+        Start 212: djpeg-shared-420-islow-565-cmp
+266/329 Test #212: djpeg-shared-420-islow-565-cmp ......................   Passed    0.00 sec
+        Start 214: djpeg-shared-420-islow-565D-cmp
+267/329 Test #214: djpeg-shared-420-islow-565D-cmp .....................   Passed    0.00 sec
+        Start 216: djpeg-shared-420m-islow-565-cmp
+268/329 Test #216: djpeg-shared-420m-islow-565-cmp .....................   Passed    0.00 sec
+        Start 218: djpeg-shared-420m-islow-565D-cmp
+269/329 Test #218: djpeg-shared-420m-islow-565D-cmp ....................   Passed    0.00 sec
+        Start 220: cjpeg-shared-lossless-cmp
+270/329 Test #220: cjpeg-shared-lossless-cmp ...........................   Passed    0.00 sec
+        Start 222: djpeg-shared-lossless-cmp
+271/329 Test #222: djpeg-shared-lossless-cmp ...........................   Passed    0.00 sec
+        Start 224: djpeg-shared-420-islow-skip15_31-cmp
+272/329 Test #224: djpeg-shared-420-islow-skip15_31-cmp ................   Passed    0.00 sec
+        Start 226: djpeg-shared-420-islow-ari-skip16_139-cmp
+273/329 Test #226: djpeg-shared-420-islow-ari-skip16_139-cmp ...........   Passed    0.00 sec
+        Start 229: djpeg-shared-420-islow-prog-crop62x62_71_71-cmp
+274/329 Test #229: djpeg-shared-420-islow-prog-crop62x62_71_71-cmp .....   Passed    0.00 sec
+        Start 231: djpeg-shared-420-islow-ari-crop53x53_4_4-cmp
+275/329 Test #231: djpeg-shared-420-islow-ari-crop53x53_4_4-cmp ........   Passed    0.00 sec
+        Start 234: djpeg-shared-444-islow-skip1_6-cmp
+276/329 Test #234: djpeg-shared-444-islow-skip1_6-cmp ..................   Passed    0.00 sec
+        Start 237: djpeg-shared-444-islow-prog-crop98x98_13_13-cmp
+277/329 Test #237: djpeg-shared-444-islow-prog-crop98x98_13_13-cmp .....   Passed    0.00 sec
+        Start 240: djpeg-shared-444-islow-ari-crop37x37_0_0-cmp
+278/329 Test #240: djpeg-shared-444-islow-ari-crop37x37_0_0-cmp ........   Passed    0.00 sec
+        Start 242: jpegtran-shared-crop-cmp
+279/329 Test #242: jpegtran-shared-crop-cmp ............................   Passed    0.00 sec
+        Start 244: example-8bit-shared-compress-cmp
+280/329 Test #244: example-8bit-shared-compress-cmp ....................   Passed    0.00 sec
+        Start 246: example-8bit-shared-decompress-cmp
+281/329 Test #246: example-8bit-shared-decompress-cmp ..................   Passed    0.00 sec
+        Start 248: cjpeg12-shared-rgb-islow-cmp
+282/329 Test #248: cjpeg12-shared-rgb-islow-cmp ........................   Passed    0.00 sec
+        Start 250: djpeg12-shared-rgb-islow-cmp
+283/329 Test #250: djpeg12-shared-rgb-islow-cmp ........................   Passed    0.00 sec
+        Start 251: djpeg12-shared-rgb-islow-icc-cmp
+284/329 Test #251: djpeg12-shared-rgb-islow-icc-cmp ....................   Passed    0.00 sec
+        Start 253: jpegtran12-shared-icc-cmp
+285/329 Test #253: jpegtran12-shared-icc-cmp ...........................   Passed    0.00 sec
+        Start 255: cjpeg12-shared-422-ifast-opt-cmp
+286/329 Test #255: cjpeg12-shared-422-ifast-opt-cmp ....................   Passed    0.00 sec
+        Start 257: djpeg12-shared-422-ifast-cmp
+287/329 Test #257: djpeg12-shared-422-ifast-cmp ........................   Passed    0.00 sec
+        Start 259: cjpeg12-shared-440-islow-cmp
+288/329 Test #259: cjpeg12-shared-440-islow-cmp ........................   Passed    0.00 sec
+        Start 261: djpeg12-shared-440-islow-cmp
+289/329 Test #261: djpeg12-shared-440-islow-cmp ........................   Passed    0.00 sec
+        Start 263: djpeg12-shared-422m-ifast-cmp
+290/329 Test #263: djpeg12-shared-422m-ifast-cmp .......................   Passed    0.00 sec
+        Start 265: cjpeg12-shared-420-q100-ifast-prog-cmp
+291/329 Test #265: cjpeg12-shared-420-q100-ifast-prog-cmp ..............   Passed    0.00 sec
+        Start 267: djpeg12-shared-420-q100-ifast-prog-cmp
+292/329 Test #267: djpeg12-shared-420-q100-ifast-prog-cmp ..............   Passed    0.00 sec
+        Start 269: djpeg12-shared-420m-q100-ifast-prog-cmp
+293/329 Test #269: djpeg12-shared-420m-q100-ifast-prog-cmp .............   Passed    0.00 sec
+        Start 271: cjpeg12-shared-gray-islow-cmp
+294/329 Test #271: cjpeg12-shared-gray-islow-cmp .......................   Passed    0.00 sec
+        Start 273: djpeg12-shared-gray-islow-cmp
+295/329 Test #273: djpeg12-shared-gray-islow-cmp .......................   Passed    0.00 sec
+        Start 275: djpeg12-shared-gray-islow-rgb-cmp
+296/329 Test #275: djpeg12-shared-gray-islow-rgb-cmp ...................   Passed    0.00 sec
+        Start 277: cjpeg12-shared-420s-ifast-opt-cmp
+297/329 Test #277: cjpeg12-shared-420s-ifast-opt-cmp ...................   Passed    0.00 sec
+        Start 279: cjpeg12-shared-3x2-float-prog-cmp
+298/329 Test #279: cjpeg12-shared-3x2-float-prog-cmp ...................   Passed    0.00 sec
+        Start 281: djpeg12-shared-3x2-float-prog-cmp
+299/329 Test #281: djpeg12-shared-3x2-float-prog-cmp ...................   Passed    0.00 sec
+        Start 283: cjpeg12-shared-3x2-ifast-prog-cmp
+300/329 Test #283: cjpeg12-shared-3x2-ifast-prog-cmp ...................   Passed    0.00 sec
+        Start 285: djpeg12-shared-3x2-ifast-prog-cmp
+301/329 Test #285: djpeg12-shared-3x2-ifast-prog-cmp ...................   Passed    0.00 sec
+        Start 287: djpeg12-shared-420m-islow-2_1-cmp
+302/329 Test #287: djpeg12-shared-420m-islow-2_1-cmp ...................   Passed    0.00 sec
+        Start 289: djpeg12-shared-420m-islow-15_8-cmp
+303/329 Test #289: djpeg12-shared-420m-islow-15_8-cmp ..................   Passed    0.00 sec
+        Start 291: djpeg12-shared-420m-islow-13_8-cmp
+304/329 Test #291: djpeg12-shared-420m-islow-13_8-cmp ..................   Passed    0.00 sec
+        Start 293: djpeg12-shared-420m-islow-11_8-cmp
+305/329 Test #293: djpeg12-shared-420m-islow-11_8-cmp ..................   Passed    0.00 sec
+        Start 295: djpeg12-shared-420m-islow-9_8-cmp
+306/329 Test #295: djpeg12-shared-420m-islow-9_8-cmp ...................   Passed    0.00 sec
+        Start 297: djpeg12-shared-420m-islow-7_8-cmp
+307/329 Test #297: djpeg12-shared-420m-islow-7_8-cmp ...................   Passed    0.00 sec
+        Start 299: djpeg12-shared-420m-islow-3_4-cmp
+308/329 Test #299: djpeg12-shared-420m-islow-3_4-cmp ...................   Passed    0.00 sec
+        Start 301: djpeg12-shared-420m-islow-5_8-cmp
+309/329 Test #301: djpeg12-shared-420m-islow-5_8-cmp ...................   Passed    0.00 sec
+        Start 303: djpeg12-shared-420m-islow-1_2-cmp
+310/329 Test #303: djpeg12-shared-420m-islow-1_2-cmp ...................   Passed    0.00 sec
+        Start 305: djpeg12-shared-420m-islow-3_8-cmp
+311/329 Test #305: djpeg12-shared-420m-islow-3_8-cmp ...................   Passed    0.00 sec
+        Start 307: djpeg12-shared-420m-islow-1_4-cmp
+312/329 Test #307: djpeg12-shared-420m-islow-1_4-cmp ...................   Passed    0.00 sec
+        Start 309: djpeg12-shared-420m-islow-1_8-cmp
+313/329 Test #309: djpeg12-shared-420m-islow-1_8-cmp ...................   Passed    0.00 sec
+        Start 311: cjpeg12-shared-lossless-cmp
+314/329 Test #311: cjpeg12-shared-lossless-cmp .........................   Passed    0.00 sec
+        Start 313: djpeg12-shared-lossless-cmp
+315/329 Test #313: djpeg12-shared-lossless-cmp .........................   Passed    0.00 sec
+        Start 315: djpeg12-shared-420-islow-skip15_31-cmp
+316/329 Test #315: djpeg12-shared-420-islow-skip15_31-cmp ..............   Passed    0.00 sec
+        Start 318: djpeg12-shared-420-islow-prog-crop62x62_71_71-cmp
+317/329 Test #318: djpeg12-shared-420-islow-prog-crop62x62_71_71-cmp ...   Passed    0.00 sec
+        Start 321: djpeg12-shared-444-islow-skip1_6-cmp
+318/329 Test #321: djpeg12-shared-444-islow-skip1_6-cmp ................   Passed    0.00 sec
+        Start 324: djpeg12-shared-444-islow-prog-crop98x98_13_13-cmp
+319/329 Test #324: djpeg12-shared-444-islow-prog-crop98x98_13_13-cmp ...   Passed    0.00 sec
+        Start 326: jpegtran12-shared-crop-cmp
+320/329 Test #326: jpegtran12-shared-crop-cmp ..........................   Passed    0.00 sec
+        Start 328: example-12bit-shared-compress-cmp
+321/329 Test #328: example-12bit-shared-compress-cmp ...................   Passed    0.00 sec
+        Start 329: example-12bit-shared-decompress
+322/329 Test #329: example-12bit-shared-decompress .....................   Passed    0.00 sec
+323/329 Test  #45: tjunittest14-shared-lossless-alloc ..................   Passed    3.95 sec
+324/329 Test  #51: tjunittest16-shared-lossless-alloc ..................   Passed    2.79 sec
+325/329 Test  #47: tjunittest15-shared-lossless ........................   Passed    3.74 sec
+326/329 Test  #48: tjunittest15-shared-lossless-alloc ..................   Passed    3.80 sec
+327/329 Test  #50: tjunittest16-shared-lossless ........................   Passed    3.57 sec
+328/329 Test   #9: tjunittest12-shared .................................   Passed   29.59 sec
+329/329 Test  #10: tjunittest12-shared-alloc ...........................   Passed   28.38 sec
+
+100% tests passed, 0 tests failed out of 329
+
+Total Test time (real) =  32.69 sec
+>>> libjpeg-turbo: Entering fakeroot...
+-- Install configuration: "None"
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.so.8.3.2
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.so.8
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.so
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/cjpeg
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/cjpeg" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/djpeg
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/djpeg" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/jpegtran
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/jpegtran" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.so.0.4.0
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.so.0
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.so
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/tjbench
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/tjbench" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.a
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/turbojpeg.h
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.a
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/rdjpgcom
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/wrjpgcom
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/README.ijg
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/README.md
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/example.c
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/tjcomp.c
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/tjdecomp.c
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/tjtran.c
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/libjpeg.txt
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/structure.txt
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/usage.txt
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/wizard.txt
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/LICENSE.md
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/cjpeg.1
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/djpeg.1
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/jpegtran.1
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/rdjpgcom.1
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/wrjpgcom.1
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/pkgconfig/libjpeg.pc
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/pkgconfig/libturbojpeg.pc
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboConfig.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboConfigVersion.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets-none.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jconfig.h
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jerror.h
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jmorecfg.h
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jpeglib.h
+-- Install configuration: "None"
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.so.8.3.2
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.so.8
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libjpeg.so
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/cjpeg
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/cjpeg" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/djpeg
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/djpeg" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/jpegtran
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/jpegtran" to ""
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.so.0.4.0
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.so.0
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/libturbojpeg.so
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/tjbench
+-- Set non-toolchain portion of runtime path of "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/tjbench" to ""
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/turbojpeg.h
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/rdjpgcom
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/bin/wrjpgcom
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/README.ijg
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/README.md
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/example.c
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/tjcomp.c
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/tjdecomp.c
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/tjtran.c
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/libjpeg.txt
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/structure.txt
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/usage.txt
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/wizard.txt
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/doc/libjpeg-turbo/LICENSE.md
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/cjpeg.1
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/djpeg.1
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/jpegtran.1
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/rdjpgcom.1
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/share/man/man1/wrjpgcom.1
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/pkgconfig/libjpeg.pc
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/pkgconfig/libturbojpeg.pc
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboConfig.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboConfigVersion.cmake
+-- Old export file "/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake" will be replaced.  Removing files [/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets-none.cmake].
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/lib/cmake/libjpeg-turbo/libjpeg-turboTargets-none.cmake
+-- Installing: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jconfig.h
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jerror.h
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jmorecfg.h
+-- Up-to-date: /home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo/usr/include/jpeglib.h
+>>> libjpeg-turbo-static*: Running split function static...
+'./usr/lib/libturbojpeg.a' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-static/./usr/lib/libturbojpeg.a'
+'./usr/lib/libjpeg.a' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-static/./usr/lib/libjpeg.a'
+>>> libjpeg-turbo-static*: Preparing subpackage libjpeg-turbo-static...
+>>> libjpeg-turbo-static*: Stripping binaries
+>>> libjpeg-turbo-static*: Running postcheck for libjpeg-turbo-static
+>>> libjpeg-turbo-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-doc/usr/share/doc'
+'usr/share/man' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-doc/usr/share/man'
+'usr/share/licenses' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-doc/usr/share/licenses'
+>>> libjpeg-turbo-doc*: Preparing subpackage libjpeg-turbo-doc...
+>>> libjpeg-turbo-doc*: Running postcheck for libjpeg-turbo-doc
+>>> libjpeg-turbo-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-dev/usr/lib/pkgconfig'
+'usr/lib/cmake' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-dev/usr/lib/cmake'
+'usr/lib/libjpeg.so' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-dev/usr/lib/libjpeg.so'
+'usr/lib/libturbojpeg.so' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-dev/usr/lib/libturbojpeg.so'
+>>> libjpeg-turbo-dev*: Preparing subpackage libjpeg-turbo-dev...
+>>> libjpeg-turbo-dev*: Stripping binaries
+>>> libjpeg-turbo-dev*: Running postcheck for libjpeg-turbo-dev
+>>> libturbojpeg*: Running split function libturbojpeg...
+'usr/lib/libturbojpeg.so.0' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libturbojpeg/usr/lib/libturbojpeg.so.0'
+'usr/lib/libturbojpeg.so.0.4.0' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libturbojpeg/usr/lib/libturbojpeg.so.0.4.0'
+>>> libturbojpeg*: Preparing subpackage libturbojpeg...
+>>> libturbojpeg*: Stripping binaries
+>>> libturbojpeg*: Running postcheck for libturbojpeg
+>>> libjpeg-turbo-utils*: Running split function utils...
+'usr/bin' -> '/home/packager/aports/main/libjpeg-turbo/pkg/libjpeg-turbo-utils/usr/bin'
+>>> libjpeg-turbo-utils*: Preparing subpackage libjpeg-turbo-utils...
+>>> libjpeg-turbo-utils*: Stripping binaries
+>>> libjpeg-turbo-utils*: Running postcheck for libjpeg-turbo-utils
+>>> libjpeg-turbo*: Running postcheck for libjpeg-turbo
+>>> libjpeg-turbo*: Preparing package libjpeg-turbo...
+>>> libjpeg-turbo*: Stripping binaries
+>>> libjpeg-turbo-dev*: Scanning shared objects
+>>> libjpeg-turbo-doc*: Scanning shared objects
+>>> libjpeg-turbo-static*: Scanning shared objects
+>>> libjpeg-turbo-utils*: Scanning shared objects
+>>> libjpeg-turbo*: Scanning shared objects
+>>> libturbojpeg*: Scanning shared objects
+>>> libjpeg-turbo-dev*: Tracing dependencies...
+	libjpeg-turbo=3.1.0-r0
+	libturbojpeg=3.1.0-r0
+	pkgconfig
+>>> libjpeg-turbo-dev*: Package size: 212.4 KB
+>>> libjpeg-turbo-dev*: Compressing data...
+>>> libjpeg-turbo-dev*: Create checksum...
+pigz: not found
+>>> libjpeg-turbo-dev*: Create libjpeg-turbo-dev-3.1.0-r0.apk
+>>> libjpeg-turbo-doc*: Tracing dependencies...
+>>> libjpeg-turbo-doc*: Package size: 399.3 KB
+>>> libjpeg-turbo-doc*: Compressing data...
+>>> libjpeg-turbo-doc*: Create checksum...
+pigz: not found
+>>> libjpeg-turbo-doc*: Create libjpeg-turbo-doc-3.1.0-r0.apk
+>>> libjpeg-turbo-static*: Tracing dependencies...
+>>> libjpeg-turbo-static*: Package size: 2.0 MB
+>>> libjpeg-turbo-static*: Compressing data...
+>>> libjpeg-turbo-static*: Create checksum...
+pigz: not found
+>>> libjpeg-turbo-static*: Create libjpeg-turbo-static-3.1.0-r0.apk
+>>> libjpeg-turbo-utils*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libjpeg.so.8
+	so:libturbojpeg.so.0
+>>> libjpeg-turbo-utils*: Package size: 259.8 KB
+>>> libjpeg-turbo-utils*: Compressing data...
+>>> libjpeg-turbo-utils*: Create checksum...
+pigz: not found
+>>> libjpeg-turbo-utils*: Create libjpeg-turbo-utils-3.1.0-r0.apk
+>>> libjpeg-turbo*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> libjpeg-turbo*: Package size: 629.8 KB
+>>> libjpeg-turbo*: Compressing data...
+>>> libjpeg-turbo*: Create checksum...
+pigz: not found
+>>> libjpeg-turbo*: Create libjpeg-turbo-3.1.0-r0.apk
+>>> libturbojpeg*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> libturbojpeg*: Package size: 750.2 KB
+>>> libturbojpeg*: Compressing data...
+>>> libturbojpeg*: Create checksum...
+pigz: not found
+>>> libturbojpeg*: Create libturbojpeg-3.1.0-r0.apk
+>>> libjpeg-turbo: Build complete at Sun, 18 May 2025 07:26:48 +0000 elapsed time 0h 1m 27s
+>>> libjpeg-turbo: Cleaning up srcdir
+>>> libjpeg-turbo: Cleaning up pkgdir
+>>> libjpeg-turbo: Uninstalling dependencies...
+(1/10) Purging .makedepends-libjpeg-turbo (20250518.072522)
+(2/10) Purging cmake (3.31.7-r0)
+(3/10) Purging nasm (2.16.03-r0)
+(4/10) Purging samurai (1.2-r6)
+(5/10) Purging libarchive (3.7.9-r0)
+(6/10) Purging libbz2 (1.0.8-r6)
+(7/10) Purging libuv (1.49.2-r0)
+(8/10) Purging lz4-libs (1.10.0-r0)
+(9/10) Purging rhash-libs (1.4.5-r0)
+(10/10) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> libjpeg-turbo: Updating the main/x86_64 repository index...
+>>> libjpeg-turbo: Signing the index...
+pigz: not found

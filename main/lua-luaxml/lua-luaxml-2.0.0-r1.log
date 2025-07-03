@@ -1,0 +1,227 @@
+pigz: not found
+>>> lua-luaxml: Building main/lua-luaxml 2.0.0-r1 (using abuild 3.14.1-r4) started Thu, 22 May 2025 22:42:07 +0000
+>>> lua-luaxml: Validating /home/packager/aports/main/lua-luaxml/APKBUILD...
+>>> lua-luaxml: Analyzing dependencies...
+>>> lua-luaxml: Installing for build: build-base lua5.2-dev lua-unit lua5.3-dev lua5.4-dev lua5.2-unit lua5.3-unit lua5.4-unit
+(1/13) Installing lua5.2-libs (5.2.4-r13)
+(2/13) Installing lua5.2 (5.2.4-r13)
+(3/13) Installing lua5.2-dev (5.2.4-r13)
+(4/13) Installing lua-unit (3.4-r0)
+(5/13) Installing lua5.2-unit (3.4-r0)
+(6/13) Installing linenoise (1.0-r5)
+(7/13) Installing lua5.3-libs (5.3.6-r6)
+(8/13) Installing lua5.3 (5.3.6-r6)
+(9/13) Installing lua5.3-unit (3.4-r0)
+(10/13) Installing lua5.3-dev (5.3.6-r6)
+(11/13) Installing lua5.4-unit (3.4-r0)
+(12/13) Installing lua5.4-dev (5.4.7-r0)
+(13/13) Installing .makedepends-lua-luaxml (20250522.224212)
+Executing busybox-1.37.0-r12.trigger
+OK: 318 MiB in 127 packages
+>>> lua-luaxml: Cleaning up srcdir
+>>> lua-luaxml: Cleaning up pkgdir
+>>> lua-luaxml: Cleaning up tmpdir
+>>> lua-luaxml: Fetching lua-luaxml-2.0.0.tar.gz::https://github.com/n1tehawk/LuaXML/archive/7cd4a7ab5db85222edb4c955d53e5674afd170b6.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/lua-luaxml-2.0.0.tar.gz.part'
+lua-luaxml-2.0.0.tar 100% |********************************| 33405  0:00:00 ETA
+'/var/cache/distfiles/lua-luaxml-2.0.0.tar.gz.part' saved
+>>> lua-luaxml: Fetching lua-luaxml-2.0.0.tar.gz::https://github.com/n1tehawk/LuaXML/archive/7cd4a7ab5db85222edb4c955d53e5674afd170b6.tar.gz
+>>> lua-luaxml: Checking sha512sums...
+lua-luaxml-2.0.0.tar.gz: OK
+0001-XML-attributes.patch: OK
+>>> lua-luaxml: Unpacking /var/cache/distfiles/lua-luaxml-2.0.0.tar.gz...
+>>> lua-luaxml: 0001-XML-attributes.patch
+patching file LuaXML_lib.c
+patching file unittest.lua
+>>> lua-luaxml: Building for Lua 5.2...
+make: Entering directory '/home/packager/aports/main/lua-luaxml/src/LuaXML-7cd4a7ab5db85222edb4c955d53e5674afd170b6-5.2'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.2 -c LuaXML_lib.c
+gcc -o LuaXML_lib.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared LuaXML_lib.o  
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: LuaXML_lib.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-luaxml/src/LuaXML-7cd4a7ab5db85222edb4c955d53e5674afd170b6-5.2'
+>>> lua-luaxml: Building for Lua 5.3...
+make: Entering directory '/home/packager/aports/main/lua-luaxml/src/LuaXML-7cd4a7ab5db85222edb4c955d53e5674afd170b6-5.3'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.3 -c LuaXML_lib.c
+gcc -o LuaXML_lib.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared LuaXML_lib.o  
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: LuaXML_lib.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-luaxml/src/LuaXML-7cd4a7ab5db85222edb4c955d53e5674afd170b6-5.3'
+>>> lua-luaxml: Building for Lua 5.4...
+make: Entering directory '/home/packager/aports/main/lua-luaxml/src/LuaXML-7cd4a7ab5db85222edb4c955d53e5674afd170b6-5.4'
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -I/usr/include/lua5.4 -c LuaXML_lib.c
+gcc -o LuaXML_lib.so -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared LuaXML_lib.o  
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: LuaXML_lib.so has a LOAD segment with RWX permissions
+make: Leaving directory '/home/packager/aports/main/lua-luaxml/src/LuaXML-7cd4a7ab5db85222edb4c955d53e5674afd170b6-5.4'
+>>> lua-luaxml: Testing on Lua 5.2
+<scene id="0" script="main">
+	<object id="0" name="observer" script="camera.lua" input="window" />
+	<object surface="2" id="1" pos="0 0 0" shape="1" />
+	<object sound="20" id="3" pos="-5 5 0 225 0 0" shape="20" />
+	<object sound="21" id="5" speed="0 2 0 30 0 0" pos="2 2 2" shape="21" />
+	<object id="6" pos="0 7 5" shape="6" />
+	<object id="7" pos="-4.5 4.5 1.7" shape="7" />
+	<object id="11" pos="10 -10 0" sound="11" />
+	<light id="0" position="-.5 -.75 1.0 0.0" ambient="0.3 0.3 0.3 1.0" specular="1.0 1.0 1.0 1.0" enabled="1" diffuse="0.7 0.7 0.7 1.0" />
+</scene>
+
+scene	0	<object id="0" name="observer" script="camera.lua" input="window" />
+
+<resource mime="model/vrml" id="1" url="resources/virtualab.wrl" name="virtualab" />
+<resource mime="model/vrml" id="2" url="resources/virtualab_surface.wrl" name="surface" />
+<resource mime="model/vrml" id="3" url="resources/box.wrl" name="cube" />
+<resource mime="model/vrml" id="5" url="resources/ball01.wrl" name="ball" />
+resource	veRner	6	image/png	resources/veRner_small.png
+resource	explo	7	image/png	resources/explo.png
+floatArray	fgNormalColor	1.0 0.0 1.0 0.7
+floatArray	fgSelectColor	1.0 1.0 1.0 1.0
+float	farClipping	2000
+---
+READY.
+Started on Thu May 22 22:42:15 2025
+    TestXml.test_basics ... Ok
+    TestXml.test_malformed_attribute ... Ok
+    TestXml.test_parse ... Ok
+    TestXml.test_transform ... Ok
+=========================================================
+Ran 4 tests in 0.006 seconds, 4 successes, 0 failures
+OK
+>>> lua-luaxml: Testing on Lua 5.3
+<scene id="0" script="main">
+	<object id="0" name="observer" input="window" script="camera.lua" />
+	<object id="1" surface="2" pos="0 0 0" shape="1" />
+	<object sound="20" shape="20" pos="-5 5 0 225 0 0" id="3" />
+	<object sound="21" shape="21" speed="0 2 0 30 0 0" pos="2 2 2" id="5" />
+	<object pos="0 7 5" id="6" shape="6" />
+	<object pos="-4.5 4.5 1.7" id="7" shape="7" />
+	<object pos="10 -10 0" id="11" sound="11" />
+	<light enabled="1" id="0" specular="1.0 1.0 1.0 1.0" diffuse="0.7 0.7 0.7 1.0" ambient="0.3 0.3 0.3 1.0" position="-.5 -.75 1.0 0.0" />
+</scene>
+
+scene	0	<object id="0" name="observer" input="window" script="camera.lua" />
+
+<resource id="1" name="virtualab" url="resources/virtualab.wrl" mime="model/vrml" />
+<resource id="2" name="surface" url="resources/virtualab_surface.wrl" mime="model/vrml" />
+<resource id="3" name="cube" url="resources/box.wrl" mime="model/vrml" />
+<resource id="5" name="ball" url="resources/ball01.wrl" mime="model/vrml" />
+resource	veRner	6	image/png	resources/veRner_small.png
+resource	explo	7	image/png	resources/explo.png
+floatArray	fgNormalColor	1.0 0.0 1.0 0.7
+floatArray	fgSelectColor	1.0 1.0 1.0 1.0
+float	farClipping	2000
+---
+READY.
+Started on Thu May 22 22:42:15 2025
+    TestXml.test_basics ... Ok
+    TestXml.test_malformed_attribute ... Ok
+    TestXml.test_parse ... Ok
+    TestXml.test_transform ... Ok
+=========================================================
+Ran 4 tests in 0.006 seconds, 4 successes, 0 failures
+OK
+>>> lua-luaxml: Testing on Lua 5.4
+<scene id="0" script="main">
+	<object script="camera.lua" id="0" input="window" name="observer" />
+	<object pos="0 0 0" surface="2" id="1" shape="1" />
+	<object pos="-5 5 0 225 0 0" id="3" shape="20" sound="20" />
+	<object pos="2 2 2" id="5" shape="21" speed="0 2 0 30 0 0" sound="21" />
+	<object shape="6" pos="0 7 5" id="6" />
+	<object shape="7" pos="-4.5 4.5 1.7" id="7" />
+	<object id="11" pos="10 -10 0" sound="11" />
+	<light position="-.5 -.75 1.0 0.0" ambient="0.3 0.3 0.3 1.0" id="0" diffuse="0.7 0.7 0.7 1.0" specular="1.0 1.0 1.0 1.0" enabled="1" />
+</scene>
+
+scene	0	<object script="camera.lua" id="0" input="window" name="observer" />
+
+<resource url="resources/virtualab.wrl" name="virtualab" id="1" mime="model/vrml" />
+<resource url="resources/virtualab_surface.wrl" name="surface" id="2" mime="model/vrml" />
+<resource url="resources/box.wrl" name="cube" id="3" mime="model/vrml" />
+<resource url="resources/ball01.wrl" name="ball" id="5" mime="model/vrml" />
+resource	veRner	6	image/png	resources/veRner_small.png
+resource	explo	7	image/png	resources/explo.png
+floatArray	fgNormalColor	1.0 0.0 1.0 0.7
+floatArray	fgSelectColor	1.0 1.0 1.0 1.0
+float	farClipping	2000
+---
+READY.
+Started on Thu May 22 22:42:15 2025
+    TestXml.test_basics ... Ok
+    TestXml.test_malformed_attribute ... Ok
+    TestXml.test_parse ... Ok
+    TestXml.test_transform ... Ok
+=========================================================
+Ran 4 tests in 0.006 seconds, 4 successes, 0 failures
+OK
+>>> lua-luaxml: Entering fakeroot...
+>>> lua5.2-luaxml*: Running split function _subpackage...
+>>> lua5.2-luaxml*: Preparing subpackage lua5.2-luaxml...
+>>> lua5.2-luaxml*: Stripping binaries
+>>> lua5.2-luaxml*: Running postcheck for lua5.2-luaxml
+>>> lua5.3-luaxml*: Running split function _subpackage...
+>>> lua5.3-luaxml*: Preparing subpackage lua5.3-luaxml...
+>>> lua5.3-luaxml*: Stripping binaries
+>>> lua5.3-luaxml*: Running postcheck for lua5.3-luaxml
+>>> lua5.4-luaxml*: Running split function _subpackage...
+>>> lua5.4-luaxml*: Preparing subpackage lua5.4-luaxml...
+>>> lua5.4-luaxml*: Stripping binaries
+>>> lua5.4-luaxml*: Running postcheck for lua5.4-luaxml
+>>> lua-luaxml*: Running postcheck for lua-luaxml
+>>> lua-luaxml*: Preparing package lua-luaxml...
+>>> lua-luaxml*: Stripping binaries
+>>> WARNING: lua-luaxml*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-luaxml*: Scanning shared objects
+>>> lua5.2-luaxml*: Scanning shared objects
+>>> lua5.3-luaxml*: Scanning shared objects
+>>> lua5.4-luaxml*: Scanning shared objects
+>>> lua-luaxml*: Tracing dependencies...
+>>> lua-luaxml*: Package size: 0.0 
+>>> lua-luaxml*: Compressing data...
+>>> lua-luaxml*: Create checksum...
+pigz: not found
+>>> lua-luaxml*: Create lua-luaxml-2.0.0-r1.apk
+>>> lua5.2-luaxml*: Tracing dependencies...
+	lua5.2
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-luaxml*: Package size: 32.8 KB
+>>> lua5.2-luaxml*: Compressing data...
+>>> lua5.2-luaxml*: Create checksum...
+pigz: not found
+>>> lua5.2-luaxml*: Create lua5.2-luaxml-2.0.0-r1.apk
+>>> lua5.3-luaxml*: Tracing dependencies...
+	lua5.3
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-luaxml*: Package size: 33.1 KB
+>>> lua5.3-luaxml*: Compressing data...
+>>> lua5.3-luaxml*: Create checksum...
+pigz: not found
+>>> lua5.3-luaxml*: Create lua5.3-luaxml-2.0.0-r1.apk
+>>> lua5.4-luaxml*: Tracing dependencies...
+	lua5.4
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-luaxml*: Package size: 33.0 KB
+>>> lua5.4-luaxml*: Compressing data...
+>>> lua5.4-luaxml*: Create checksum...
+pigz: not found
+>>> lua5.4-luaxml*: Create lua5.4-luaxml-2.0.0-r1.apk
+>>> lua-luaxml: Build complete at Thu, 22 May 2025 22:42:23 +0000 elapsed time 0h 0m 16s
+>>> lua-luaxml: Cleaning up srcdir
+>>> lua-luaxml: Cleaning up pkgdir
+>>> lua-luaxml: Uninstalling dependencies...
+(1/13) Purging .makedepends-lua-luaxml (20250522.224212)
+(2/13) Purging lua5.2-dev (5.2.4-r13)
+(3/13) Purging lua-unit (3.4-r0)
+(4/13) Purging lua5.3-dev (5.3.6-r6)
+(5/13) Purging lua5.4-dev (5.4.7-r0)
+(6/13) Purging lua5.2-unit (3.4-r0)
+(7/13) Purging lua5.2 (5.2.4-r13)
+(8/13) Purging lua5.3-unit (3.4-r0)
+(9/13) Purging lua5.3 (5.3.6-r6)
+(10/13) Purging lua5.4-unit (3.4-r0)
+(11/13) Purging linenoise (1.0-r5)
+(12/13) Purging lua5.2-libs (5.2.4-r13)
+(13/13) Purging lua5.3-libs (5.3.6-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-luaxml: Updating the main/x86_64 repository index...
+>>> lua-luaxml: Signing the index...
+pigz: not found

@@ -1,0 +1,213 @@
+pigz: not found
+>>> llvm16: Building main/llvm16 16.0.6-r12 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:06:17 +0000
+>>> llvm16: Validating /home/packager/aports/main/llvm16/APKBUILD...
+>>> llvm16: Analyzing dependencies...
+>>> llvm16: Installing for build: build-base chrpath cmake python3 py3-setuptools samurai libffi-dev zlib-dev zstd-dev binutils-dev curl-dev libxml2-dev~2.13 cmd:bash coreutils diffutils
+(1/41) Installing chrpath (0.16-r4)
+(2/41) Installing lz4-libs (1.10.0-r0)
+(3/41) Installing xz-libs (5.6.3-r1)
+(4/41) Installing libarchive (3.7.9-r0)
+(5/41) Installing rhash-libs (1.4.5-r0)
+(6/41) Installing libuv (1.49.2-r0)
+(7/41) Installing cmake (3.31.7-r0)
+(8/41) Installing libffi (3.4.7-r0)
+(9/41) Installing gdbm (1.24-r0)
+(10/41) Installing mpdecimal (4.0.0-r0)
+(11/41) Installing sqlite-libs (3.49.2-r0)
+(12/41) Installing python3 (3.12.10-r1)
+(13/41) Installing python3-pycache-pyc0 (3.12.10-r1)
+(14/41) Installing pyc (3.12.10-r1)
+(15/41) Installing python3-pyc (3.12.10-r1)
+(16/41) Installing py3-parsing (3.2.3-r0)
+(17/41) Installing py3-parsing-pyc (3.2.3-r0)
+(18/41) Installing py3-packaging (25.0-r0)
+(19/41) Installing py3-packaging-pyc (25.0-r0)
+(20/41) Installing py3-setuptools (80.3.1-r0)
+(21/41) Installing py3-setuptools-pyc (80.3.1-r0)
+(22/41) Installing samurai (1.2-r6)
+(23/41) Installing libffi-dev (3.4.7-r0)
+(24/41) Installing zstd (1.5.7-r0)
+(25/41) Installing zstd-dev (1.5.7-r0)
+(26/41) Installing binutils-dev (2.44-r0)
+(27/41) Installing brotli (1.1.0-r2)
+(28/41) Installing brotli-dev (1.1.0-r2)
+(29/41) Installing c-ares-dev (1.34.5-r0)
+(30/41) Installing libidn2-dev (2.3.7-r0)
+(31/41) Installing libpsl-utils (0.21.5-r3)
+(32/41) Installing libpsl-dev (0.21.5-r3)
+(33/41) Installing nghttp2-dev (1.65.0-r0)
+(34/41) Installing openssl-dev (3.5.0-r0)
+(35/41) Installing curl-dev (8.13.0-r1)
+(36/41) Installing xz (5.6.3-r1)
+(37/41) Installing xz-dev (5.6.3-r1)
+(38/41) Installing libxml2 (2.13.4-r6)
+(39/41) Installing libxml2-utils (2.13.4-r6)
+(40/41) Installing libxml2-dev (2.13.4-r6)
+(41/41) Installing .makedepends-llvm16 (20250523.170618)
+Executing busybox-1.37.0-r12.trigger
+OK: 674 MiB in 173 packages
+>>> llvm16: Cleaning up srcdir
+>>> llvm16: Cleaning up pkgdir
+>>> llvm16: Cleaning up tmpdir
+>>> llvm16: Fetching https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.6/llvm-project-16.0.6.src.tar.xz
+Connecting to github.com (140.82.121.4:443)
+Connecting to objects.githubusercontent.com (185.199.111.133:443)
+saving to '/var/cache/distfiles/llvm-project-16.0.6.src.tar.xz.part'
+llvm-project-16.0.6.   0% |                                |  335k  0:05:42 ETA
+llvm-project-16.0.6.  44% |**************                  | 50.0M  0:00:02 ETA
+llvm-project-16.0.6.  99% |******************************* |  112M  0:00:00 ETA
+llvm-project-16.0.6. 100% |********************************|  112M  0:00:00 ETA
+'/var/cache/distfiles/llvm-project-16.0.6.src.tar.xz.part' saved
+>>> llvm16: Fetching https://github.com/llvm/llvm-project/releases/download/llvmorg-16.0.6/llvm-project-16.0.6.src.tar.xz
+>>> llvm16: Checking sha512sums...
+llvm-project-16.0.6.src.tar.xz: OK
+0001-Disable-dynamic-lib-tests-for-musl-s-dlclose-is-noop.patch: OK
+allocscore.patch: OK
+fix-memory-mf_exec-on-aarch64.patch: OK
+install-prefix.patch: OK
+llvm-stack-size.patch: OK
+ppc64le-miscompile.patch: OK
+rust-feature-tables.patch: OK
+9001-CMake-Quote-variables-where-TARGET-may-be-a-value.patch: OK
+9002-LV-Convert-consecutive-ptr-uniforms.ll-to-use-opaque.patch: OK
+9003-LV-Add-test-where-pointer-is-incorrectly-marked-as-u.patch: OK
+9004-LV-Don-t-consider-pointer-as-uniform-if-it-is-also-s.patch: OK
+9011-AArch64CompressJumpTables-prevent-over-compression.patch: OK
+LoongArch-Assume-no-op-addrspacecasts-by-default.patch: OK
+>>> llvm16: Unpacking /var/cache/distfiles/llvm-project-16.0.6.src.tar.xz...
+>>> llvm16: 0001-Disable-dynamic-lib-tests-for-musl-s-dlclose-is-noop.patch
+patching file llvm/unittests/Support/CMakeLists.txt
+Hunk #1 succeeded at 131 with fuzz 2 (offset 7 lines).
+>>> llvm16: allocscore.patch
+patching file llvm/unittests/CodeGen/RegAllocScoreTest.cpp
+>>> llvm16: fix-memory-mf_exec-on-aarch64.patch
+patching file llvm/lib/Support/Unix/Memory.inc
+>>> llvm16: install-prefix.patch
+patching file llvm/cmake/modules/CMakeLists.txt
+Hunk #1 succeeded at 42 (offset 1 line).
+Hunk #2 succeeded at 116 (offset 5 lines).
+>>> llvm16: llvm-stack-size.patch
+patching file llvm/lib/Support/Threading.cpp
+>>> llvm16: ppc64le-miscompile.patch
+patching file llvm/lib/Target/PowerPC/PPCMIPeephole.cpp
+Hunk #1 succeeded at 1288 (offset -27 lines).
+Hunk #2 succeeded at 1296 (offset -27 lines).
+patching file llvm/test/CodeGen/PowerPC/cmp_elimination.ll
+>>> llvm16: rust-feature-tables.patch
+patching file llvm/include/llvm/MC/MCSubtargetInfo.h
+>>> llvm16: 9001-CMake-Quote-variables-where-TARGET-may-be-a-value.patch
+patching file llvm/cmake/modules/LLVM-Config.cmake
+>>> llvm16: 9002-LV-Convert-consecutive-ptr-uniforms.ll-to-use-opaque.patch
+patching file llvm/test/Transforms/LoopVectorize/consecutive-ptr-uniforms.ll
+>>> llvm16: 9003-LV-Add-test-where-pointer-is-incorrectly-marked-as-u.patch
+patching file llvm/test/Transforms/LoopVectorize/consecutive-ptr-uniforms.ll
+>>> llvm16: 9004-LV-Don-t-consider-pointer-as-uniform-if-it-is-also-s.patch
+patching file llvm/lib/Transforms/Vectorize/LoopVectorize.cpp
+patching file llvm/test/Transforms/LoopVectorize/consecutive-ptr-uniforms.ll
+patching file llvm/test/Transforms/LoopVectorize/opaque-ptr.ll
+>>> llvm16: 9011-AArch64CompressJumpTables-prevent-over-compression.patch
+patching file llvm/lib/Target/AArch64/AArch64CompressJumpTables.cpp
+patching file llvm/test/CodeGen/AArch64/jump-table-compress.mir
+>>> llvm16: LoongArch-Assume-no-op-addrspacecasts-by-default.patch
+patching file llvm/lib/Target/LoongArch/LoongArchTargetMachine.h
+Hunk #1 succeeded at 44 (offset -1 lines).
+patching file llvm/test/CodeGen/LoongArch/addrspacecast.ll
+removed 'test/CodeGen/AArch64/wineh4.mir'
+removed 'test/ExecutionEngine/Interpreter/intrinsics.ll'
+removed 'test/CodeGen/Hexagon/csr-stubs-spill-threshold.ll'
+removed 'test/CodeGen/Hexagon/long-calls.ll'
+removed 'test/CodeGen/Hexagon/mlong-calls.ll'
+removed 'test/CodeGen/Hexagon/pic-regusage.ll'
+removed 'test/CodeGen/Hexagon/runtime-stkchk.ll'
+removed 'test/CodeGen/Hexagon/swp-memrefs-epilog.ll'
+removed 'test/CodeGen/Hexagon/vararg-formal.ll'
+removed 'test/tools/llvm-objcopy/MachO/universal-object.test'
+removed 'test/DebugInfo/X86/vla-multi.ll'
+removed 'test/tools/yaml2obj/ELF/header-elfdatanone.yaml'
+removed 'test/CodeGen/X86/vector-interleaved-load-i32-stride-4.ll'
+removed 'test/Transforms/SampleProfile/pseudo-probe-update-2.ll'
+removed 'test/Transforms/SampleProfile/pseudo-probe-update.ll'
+removed 'test/Transforms/LoopUnroll/peel-branch-weights.ll'
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- The ASM compiler identification is GNU
+-- Found assembler: /usr/bin/gcc
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/llvm16/src/llvm-project-16.0.6.src/build/CMakeFiles/CMakeScratch/TryCompile-mpfaag'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_9ccd6
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o CMakeFiles/cmTC_9ccd6.dir/testCCompiler.c.o -c /home/packager/aports/main/llvm16/src/llvm-project-16.0.6.src/build/CMakeFiles/CMakeScratch/TryCompile-mpfaag/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_9ccd6.dir/testCCompiler.c.o -o cmTC_9ccd6   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_9ccd6.dir/testCCompiler.c.o -o cmTC_9ccd6   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_9ccd6: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_9ccd6 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:54 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: llvm16: build failed
+>>> llvm16: Uninstalling dependencies...
+(1/41) Purging .makedepends-llvm16 (20250523.170618)
+(2/41) Purging chrpath (0.16-r4)
+(3/41) Purging cmake (3.31.7-r0)
+(4/41) Purging py3-setuptools-pyc (80.3.1-r0)
+(5/41) Purging py3-setuptools (80.3.1-r0)
+(6/41) Purging py3-packaging-pyc (25.0-r0)
+(7/41) Purging py3-packaging (25.0-r0)
+(8/41) Purging py3-parsing-pyc (3.2.3-r0)
+(9/41) Purging py3-parsing (3.2.3-r0)
+(10/41) Purging python3-pyc (3.12.10-r1)
+(11/41) Purging python3-pycache-pyc0 (3.12.10-r1)
+(12/41) Purging pyc (3.12.10-r1)
+(13/41) Purging python3 (3.12.10-r1)
+(14/41) Purging samurai (1.2-r6)
+(15/41) Purging libffi-dev (3.4.7-r0)
+(16/41) Purging libffi (3.4.7-r0)
+(17/41) Purging binutils-dev (2.44-r0)
+(18/41) Purging curl-dev (8.13.0-r1)
+(19/41) Purging libxml2-dev (2.13.4-r6)
+(20/41) Purging libxml2-utils (2.13.4-r6)
+(21/41) Purging libxml2 (2.13.4-r6)
+(22/41) Purging brotli-dev (1.1.0-r2)
+(23/41) Purging brotli (1.1.0-r2)
+(24/41) Purging c-ares-dev (1.34.5-r0)
+(25/41) Purging gdbm (1.24-r0)
+(26/41) Purging libarchive (3.7.9-r0)
+(27/41) Purging libpsl-dev (0.21.5-r3)
+(28/41) Purging libpsl-utils (0.21.5-r3)
+(29/41) Purging libuv (1.49.2-r0)
+(30/41) Purging lz4-libs (1.10.0-r0)
+(31/41) Purging mpdecimal (4.0.0-r0)
+(32/41) Purging nghttp2-dev (1.65.0-r0)
+(33/41) Purging openssl-dev (3.5.0-r0)
+(34/41) Purging rhash-libs (1.4.5-r0)
+(35/41) Purging sqlite-libs (3.49.2-r0)
+(36/41) Purging xz-dev (5.6.3-r1)
+(37/41) Purging xz (5.6.3-r1)
+(38/41) Purging xz-libs (5.6.3-r1)
+(39/41) Purging zstd-dev (1.5.7-r0)
+(40/41) Purging zstd (1.5.7-r0)
+(41/41) Purging libidn2-dev (2.3.7-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

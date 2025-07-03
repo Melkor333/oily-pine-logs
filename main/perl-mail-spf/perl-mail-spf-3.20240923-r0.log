@@ -1,0 +1,191 @@
+pigz: not found
+>>> perl-mail-spf: Building main/perl-mail-spf 3.20240923-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:13:21 +0000
+>>> perl-mail-spf: Validating /home/packager/aports/main/perl-mail-spf/APKBUILD...
+>>> perl-mail-spf: Analyzing dependencies...
+>>> perl-mail-spf: Installing for build: build-base perl perl-error perl-net-dns perl-uri perl-netaddr-ip perl-net-dns-resolver-programmable
+(1/13) Installing libbz2 (1.0.8-r6)
+(2/13) Installing perl (5.40.2-r0)
+(3/13) Installing perl-error (0.17030-r0)
+(4/13) Installing perl-digest-sha1 (2.13-r19)
+(5/13) Installing perl-digest-md5 (2.59-r2)
+(6/13) Installing perl-digest-hmac (1.05-r0)
+(7/13) Installing perl-net-dns (1.49-r0)
+(8/13) Installing perl-uri (5.28-r0)
+(9/13) Installing perl-netaddr-ip (4.079-r13)
+(10/13) Installing perl-net-dns-resolver-programmable (0.009-r4)
+(11/13) Installing .makedepends-perl-mail-spf (20250518.091323)
+(12/13) Installing perl-git (2.47.2-r0)
+(13/13) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 298 MiB in 94 packages
+>>> perl-mail-spf: Cleaning up srcdir
+>>> perl-mail-spf: Cleaning up pkgdir
+>>> perl-mail-spf: Cleaning up tmpdir
+>>> perl-mail-spf: Fetching https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Mail-SPF-3.20240923.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Mail-SPF-3.20240923.tar.gz.part'
+Mail-SPF-3.20240923. 100% |********************************| 94271  0:00:00 ETA
+'/var/cache/distfiles/Mail-SPF-3.20240923.tar.gz.part' saved
+>>> perl-mail-spf: Fetching https://cpan.metacpan.org/authors/id/M/MB/MBRADSHAW/Mail-SPF-3.20240923.tar.gz
+>>> perl-mail-spf: Checking sha512sums...
+Mail-SPF-3.20240923.tar.gz: OK
+>>> perl-mail-spf: Unpacking /var/cache/distfiles/Mail-SPF-3.20240923.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Mail::SPF
+Writing MYMETA.yml and MYMETA.json
+cp lib/Mail/SPF/Mod/Redirect.pm blib/lib/Mail/SPF/Mod/Redirect.pm
+cp lib/Mail/SPF/Mech/Exists.pm blib/lib/Mail/SPF/Mech/Exists.pm
+cp lib/Mail/SPF/Record.pm blib/lib/Mail/SPF/Record.pm
+cp lib/Mail/SPF/Mech.pm blib/lib/Mail/SPF/Mech.pm
+cp lib/Mail/SPF.pm blib/lib/Mail/SPF.pm
+cp lib/Mail/SPF/v2/Record.pm blib/lib/Mail/SPF/v2/Record.pm
+cp lib/Mail/SPF/Term.pm blib/lib/Mail/SPF/Term.pm
+cp lib/Mail/SPF/Mod/Exp.pm blib/lib/Mail/SPF/Mod/Exp.pm
+cp lib/Mail/SPF/Result.pm blib/lib/Mail/SPF/Result.pm
+cp lib/Mail/SPF/Exception.pm blib/lib/Mail/SPF/Exception.pm
+cp lib/Mail/SPF/Mech/MX.pm blib/lib/Mail/SPF/Mech/MX.pm
+cp lib/Mail/SPF/v1/Record.pm blib/lib/Mail/SPF/v1/Record.pm
+cp lib/Mail/SPF/MacroString.pm blib/lib/Mail/SPF/MacroString.pm
+cp lib/Mail/SPF/Base.pm blib/lib/Mail/SPF/Base.pm
+cp lib/Mail/SPF/Server.pm blib/lib/Mail/SPF/Server.pm
+cp lib/Mail/SPF/SenderIPAddrMech.pm blib/lib/Mail/SPF/SenderIPAddrMech.pm
+cp lib/Mail/SPF/Mech/PTR.pm blib/lib/Mail/SPF/Mech/PTR.pm
+cp lib/Mail/SPF/Mech/IP4.pm blib/lib/Mail/SPF/Mech/IP4.pm
+cp lib/Mail/SPF/Mech/All.pm blib/lib/Mail/SPF/Mech/All.pm
+cp lib/Mail/SPF/Util.pm blib/lib/Mail/SPF/Util.pm
+cp lib/Mail/SPF/Mech/Include.pm blib/lib/Mail/SPF/Mech/Include.pm
+cp lib/Mail/SPF/Mod.pm blib/lib/Mail/SPF/Mod.pm
+cp lib/Mail/SPF/Request.pm blib/lib/Mail/SPF/Request.pm
+cp lib/Mail/SPF/Mech/IP6.pm blib/lib/Mail/SPF/Mech/IP6.pm
+cp lib/Mail/SPF/Mech/A.pm blib/lib/Mail/SPF/Mech/A.pm
+cp bin/spfd blib/script/spfd
+cp bin/spfquery blib/script/spfquery
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/spfd
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/spfquery
+Manifying 2 pod documents
+Manifying 25 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/00.00-class-misc.t .......... ok
+t/00.01-class-util.t .......... ok
+t/00.02-class-request.t ....... ok
+t/00.03-class-result.t ........ ok
+t/00.04-class-server.t ........ ok
+t/00.05-class-macrostring.t ... ok
+t/00.99-class-misc.t .......... ok
+t/10.00-rfc4408.t ............. skipped: Mail::SPF::Test required for testing Mail::SPF's RFC compliance
+t/10.01-rfc4406.t ............. skipped: Mail::SPF::Test required for testing Mail::SPF's RFC compliance
+t/10.02-rfc7208.t ............. skipped: Mail::SPF::Test required for testing Mail::SPF's RFC compliance
+t/90-author-pod-validation.t .. skipped: Test::Pod 1.00 required for testing POD validity
+All tests successful.
+Files=11, Tests=132,  2 wallclock secs ( 0.06 usr  0.01 sys +  1.05 cusr  0.18 csys =  1.30 CPU)
+Result: PASS
+>>> perl-mail-spf: Entering fakeroot...
+Manifying 2 pod documents
+Manifying 25 pod documents
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Request.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mod.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Server.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Base.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/SenderIPAddrMech.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Util.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Record.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/MacroString.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Term.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Result.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Exception.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/v1/Record.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mod/Exp.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mod/Redirect.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/IP6.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/MX.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/All.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/PTR.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/Include.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/IP4.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/Exists.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/Mech/A.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/perl5/vendor_perl/Mail/SPF/v2/Record.pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man1/spfquery.1
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man1/spfd.1
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Base.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::PTR.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::IP6.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mod::Exp.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::Include.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Term.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Exception.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::v1::Record.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Request.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::IP4.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Result.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::A.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::All.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mod::Redirect.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::MX.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Server.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mod.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Mech::Exists.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::MacroString.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Util.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::Record.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::v2::Record.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/share/man/man3/Mail::SPF::SenderIPAddrMech.3pm
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/bin/spfd
+Installing /home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf/usr/bin/spfquery
+removed 'usr/bin/spfd'
+removed 'usr/bin/spfquery'
+removed directory: 'usr/bin'
+removed 'usr/share/man/man1/spfquery.1'
+removed 'usr/share/man/man1/spfd.1'
+removed directory: 'usr/share/man/man1'
+>>> perl-mail-spf-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-mail-spf/pkg/perl-mail-spf-doc/usr/share/man'
+>>> perl-mail-spf-doc*: Preparing subpackage perl-mail-spf-doc...
+>>> perl-mail-spf-doc*: Running postcheck for perl-mail-spf-doc
+>>> perl-mail-spf*: Running postcheck for perl-mail-spf
+>>> perl-mail-spf*: Preparing package perl-mail-spf...
+>>> perl-mail-spf-doc*: Tracing dependencies...
+>>> perl-mail-spf-doc*: Package size: 56.1 KB
+>>> perl-mail-spf-doc*: Compressing data...
+>>> perl-mail-spf-doc*: Create checksum...
+pigz: not found
+>>> perl-mail-spf-doc*: Create perl-mail-spf-doc-3.20240923-r0.apk
+>>> perl-mail-spf*: Tracing dependencies...
+	perl
+	perl-error
+	perl-net-dns
+	perl-uri
+	perl-netaddr-ip
+>>> perl-mail-spf*: Package size: 187.6 KB
+>>> perl-mail-spf*: Compressing data...
+>>> perl-mail-spf*: Create checksum...
+pigz: not found
+>>> perl-mail-spf*: Create perl-mail-spf-3.20240923-r0.apk
+>>> perl-mail-spf: Build complete at Sun, 18 May 2025 09:13:27 +0000 elapsed time 0h 0m 6s
+>>> perl-mail-spf: Cleaning up srcdir
+>>> perl-mail-spf: Cleaning up pkgdir
+>>> perl-mail-spf: Uninstalling dependencies...
+(1/13) Purging .makedepends-perl-mail-spf (20250518.091323)
+(2/13) Purging perl-uri (5.28-r0)
+(3/13) Purging perl-netaddr-ip (4.079-r13)
+(4/13) Purging perl-net-dns-resolver-programmable (0.009-r4)
+(5/13) Purging perl-net-dns (1.49-r0)
+(6/13) Purging perl-digest-hmac (1.05-r0)
+(7/13) Purging perl-digest-sha1 (2.13-r19)
+(8/13) Purging perl-digest-md5 (2.59-r2)
+(9/13) Purging git-perl (2.47.2-r0)
+(10/13) Purging perl-git (2.47.2-r0)
+(11/13) Purging perl-error (0.17030-r0)
+(12/13) Purging perl (5.40.2-r0)
+(13/13) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-mail-spf: Updating the main/x86_64 repository index...
+>>> perl-mail-spf: Signing the index...
+pigz: not found

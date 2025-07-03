@@ -1,0 +1,235 @@
+pigz: not found
+>>> perl-io-socket-ssl: Building main/perl-io-socket-ssl 2.089-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:12:14 +0000
+>>> perl-io-socket-ssl: Validating /home/packager/aports/main/perl-io-socket-ssl/APKBUILD...
+>>> perl-io-socket-ssl: Analyzing dependencies...
+>>> perl-io-socket-ssl: Installing for build: build-base perl ca-certificates perl-net-ssleay perl-mozilla-ca
+(1/9) Installing libbz2 (1.0.8-r6)
+(2/9) Installing perl (5.40.2-r0)
+(3/9) Installing ca-certificates (20241121-r2)
+(4/9) Installing perl-net-ssleay (1.94-r2)
+(5/9) Installing perl-mozilla-ca (20250202-r0)
+(6/9) Installing .makedepends-perl-io-socket-ssl (20250518.071215)
+(7/9) Installing perl-error (0.17029-r2)
+(8/9) Installing perl-git (2.47.2-r0)
+(9/9) Installing git-perl (2.47.2-r0)
+Executing ca-certificates-20241121-r2.trigger
+Executing busybox-1.37.0-r12.trigger
+OK: 298 MiB in 90 packages
+>>> perl-io-socket-ssl: Cleaning up srcdir
+>>> perl-io-socket-ssl: Cleaning up pkgdir
+>>> perl-io-socket-ssl: Cleaning up tmpdir
+>>> perl-io-socket-ssl: Fetching https://cpan.metacpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.089.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/IO-Socket-SSL-2.089.tar.gz.part'
+IO-Socket-SSL-2.089. 100% |********************************|  265k  0:00:00 ETA
+'/var/cache/distfiles/IO-Socket-SSL-2.089.tar.gz.part' saved
+>>> perl-io-socket-ssl: Fetching https://cpan.metacpan.org/authors/id/S/SU/SULLR/IO-Socket-SSL-2.089.tar.gz
+>>> perl-io-socket-ssl: Checking sha512sums...
+IO-Socket-SSL-2.089.tar.gz: OK
+>>> perl-io-socket-ssl: Unpacking /var/cache/distfiles/IO-Socket-SSL-2.089.tar.gz...
+
+WARNING
+No library for handling international domain names found.
+It will work but croak if you try to verify an international name against
+a certificate.
+It's recommended to install URI version>=1.50.
+Net::IDN::Encode and Net::LibIDN are also still supported.
+
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for IO::Socket::SSL
+Writing MYMETA.yml and MYMETA.json
+cp lib/IO/Socket/SSL/Utils.pm blib/lib/IO/Socket/SSL/Utils.pm
+cp lib/IO/Socket/SSL.pod blib/lib/IO/Socket/SSL.pod
+cp lib/IO/Socket/SSL/Intercept.pm blib/lib/IO/Socket/SSL/Intercept.pm
+cp lib/IO/Socket/SSL/PublicSuffix.pm blib/lib/IO/Socket/SSL/PublicSuffix.pm
+cp lib/IO/Socket/SSL.pm blib/lib/IO/Socket/SSL.pm
+Manifying 4 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t t/external/*.t
+# openssl version compiled=0x30300030 linked=0x30300030 -- OpenSSL 3.3.3 11 Feb 2025
+# Net::SSLeay version=1.94
+# parent IO::Socket::IP version=0.42
+t/01loadmodule.t .................. ok
+t/acceptSSL-timeout.t ............. ok
+t/alpn.t .......................... ok
+t/auto_verify_hostname.t .......... ok
+t/cert_formats.t .................. ok
+t/cert_no_file.t .................. ok
+t/compatibility.t ................. ok
+t/connectSSL-timeout.t ............ ok
+t/core.t .......................... ok
+t/dhe.t ........................... ok
+t/ecdhe.t ......................... ok
+# tcp connect to www.chksum.de:443 ok
+# fingerprint matches
+# validation with default CA w/o OCSP ok
+# got stapled response as expected
+# validation with default CA with OCSP defaults ok
+# validation with default CA with OCSP full chain ok
+# tcp connect to www.bild.de:443 ok
+# tcp connect to revoked.grc.com:443 ok
+# fingerprint matches
+# validation with default CA w/o OCSP ok
+t/external/ocsp.t ................. ok
+# found 148 CA certs
+# have root CA for www.bild.de in store
+# 5 connections to www.bild.de ok
+# have root CA for www.yahoo.com in store
+# 5 connections to www.yahoo.com ok
+# have root CA for www.comdirect.de in store
+# 5 connections to www.comdirect.de ok
+# have root CA for meine.deutsche-bank.de in store
+# 5 connections to meine.deutsche-bank.de ok
+# fingerprint meine.deutsche-bank.de matches
+# have root CA for www.twitter.com in store
+# 5 connections to www.twitter.com ok
+# have root CA for www.facebook.com in store
+# 5 connections to www.facebook.com ok
+# have root CA for www.live.com in store
+# 5 connections to www.live.com ok
+t/external/usable_ca.t ............ ok
+t/io-socket-inet6.t ............... skipped: no IO::Socket::INET6 available
+t/io-socket-ip.t .................. ok
+t/memleak_bad_handshake.t ......... ok
+t/mitm.t .......................... ok
+t/multiple-cert-rsa-ecc.t ......... ok
+t/nonblock.t ...................... ok
+t/npn.t ........................... ok
+# -- test: newINET start_SSL stop_SSL start_SSL
+# server accepted new client
+# wait for initial data from client
+# got 0x666f6f from client
+# server: got plain data at start of connection
+# server: TLS upgrade
+# server: TLS downgrade
+# server: TLS upgrade#2
+# -- test: newSSL stop_SSL connect_SSL
+# server accepted new client
+# wait for initial data from client
+# got 0x160301 from client
+# server: TLS upgrade
+# server: TLS downgrade
+# server: TLS upgrade#2
+# -- test: newSSL:0 connect_SSL stop_SSL connect_SSL
+# server accepted new client
+# wait for initial data from client
+# got 0x666f6f from client
+# server: got plain data at start of connection
+# server: TLS upgrade
+# server: TLS downgrade
+# server: TLS upgrade#2
+# -- test: newSSL:0 start_SSL stop_SSL connect_SSL
+# server accepted new client
+# wait for initial data from client
+# got 0x666f6f from client
+# server: got plain data at start of connection
+# server: TLS upgrade
+# server: TLS downgrade
+# server: TLS upgrade#2
+# server accepted new client
+# wait for initial data from client
+# got 0x656e64 from client
+# client requested end of tests
+t/plain_upgrade_downgrade.t ....... ok
+# looks like OpenSSL was compiled without SSLv3 support
+t/protocol_version.t .............. ok
+# client accepted: ver=TLSv1_3 cipher=TLS_CHACHA20_POLY1305_SHA256
+# accept failed: , SSL accept attempt failed error:0A0000FD:SSL routines::binder does not verify
+# client accepted: ver=TLSv1_3 cipher=TLS_CHACHA20_POLY1305_SHA256
+# client accepted: ver=TLSv1_3 cipher=TLS_CHACHA20_POLY1305_SHA256
+# accept failed: , SSL accept attempt failed error:0A0000FD:SSL routines::binder does not verify
+# client accepted: ver=TLSv1_3 cipher=TLS_CHACHA20_POLY1305_SHA256
+# accept failed: , SSL accept attempt failed error:0A0000FD:SSL routines::binder does not verify
+# client accepted: ver=TLSv1_2 cipher=DHE-PSK-AES256-GCM-SHA384
+# accept failed: , SSL accept attempt failed error:1C800066:Provider routines::cipher operation failed error:0A000119:SSL routines::decryption failed or bad record mac error:0A000139:SSL routines::record layer failure
+# client accepted: ver=TLSv1_2 cipher=DHE-PSK-AES256-GCM-SHA384
+# client accepted: ver=TLSv1_2 cipher=DHE-PSK-AES256-GCM-SHA384
+# accept failed: , SSL accept attempt failed error:1C800066:Provider routines::cipher operation failed error:0A000119:SSL routines::decryption failed or bad record mac error:0A000139:SSL routines::record layer failure
+# client accepted: ver=TLSv1_2 cipher=DHE-PSK-AES256-GCM-SHA384
+# accept failed: , SSL accept attempt failed error:1C800066:Provider routines::cipher operation failed error:0A000119:SSL routines::decryption failed or bad record mac error:0A000139:SSL routines::record layer failure
+t/psk.t ........................... ok
+t/public_suffix_lib_encode_idn.t .. ok
+t/public_suffix_lib_libidn.t ...... ok
+t/public_suffix_lib_uri.t ......... ok
+t/public_suffix_ssl.t ............. ok
+t/readline.t ...................... ok
+t/session_cache.t ................. ok
+# listen at 127.0.0.1:33969
+# listen at 127.0.0.1:43593
+# connect to 0: success reuse=0 version=TLSv1_3
+# connect to 0: success reuse=1 version=TLSv1_3
+# connect to 1: success reuse=1 version=TLSv1_3
+# connect to 1: success reuse=0 version=TLSv1_3
+# connect to 0: success reuse=0 version=TLSv1_3
+# connect to 0: success reuse=1 version=TLSv1_3
+t/session_ticket.t ................ ok
+t/sessions.t ...................... ok
+t/set_curves.t .................... ok
+t/signal-readline.t ............... ok
+t/sni.t ........................... ok
+t/sni_verify.t .................... ok
+t/start-stopssl.t ................. ok
+t/startssl-failed.t ............... ok
+t/startssl.t ...................... ok
+t/sysread_write.t ................. ok
+t/verify_fingerprint.t ............ ok
+t/verify_hostname.t ............... ok
+t/verify_hostname_standalone.t .... ok
+t/verify_partial_chain.t .......... ok
+All tests successful.
+Files=43, Tests=836, 49 wallclock secs ( 0.21 usr  0.06 sys +  7.97 cusr  1.30 csys =  9.54 CPU)
+Result: PASS
+>>> perl-io-socket-ssl: Entering fakeroot...
+Manifying 4 pod documents
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/perl5/vendor_perl/IO/Socket/SSL.pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/perl5/vendor_perl/IO/Socket/SSL.pod
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/perl5/vendor_perl/IO/Socket/SSL/Utils.pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/perl5/vendor_perl/IO/Socket/SSL/PublicSuffix.pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/perl5/vendor_perl/IO/Socket/SSL/Intercept.pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/man/man3/IO::Socket::SSL::Utils.3pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/man/man3/IO::Socket::SSL.3pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/man/man3/IO::Socket::SSL::PublicSuffix.3pm
+Installing /home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl/usr/share/man/man3/IO::Socket::SSL::Intercept.3pm
+>>> perl-io-socket-ssl-doc*: Running split function doc...
+'usr/share/perl5/vendor_perl/IO/Socket/SSL.pod' -> '/home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl-doc/usr/share/perl5/vendor_perl/IO/Socket/SSL.pod'
+'usr/share/man' -> '/home/packager/aports/main/perl-io-socket-ssl/pkg/perl-io-socket-ssl-doc/usr/share/man'
+>>> perl-io-socket-ssl-doc*: Preparing subpackage perl-io-socket-ssl-doc...
+>>> perl-io-socket-ssl-doc*: Running postcheck for perl-io-socket-ssl-doc
+>>> perl-io-socket-ssl*: Running postcheck for perl-io-socket-ssl
+>>> perl-io-socket-ssl*: Preparing package perl-io-socket-ssl...
+>>> perl-io-socket-ssl-doc*: Tracing dependencies...
+>>> perl-io-socket-ssl-doc*: Package size: 129.2 KB
+>>> perl-io-socket-ssl-doc*: Compressing data...
+>>> perl-io-socket-ssl-doc*: Create checksum...
+pigz: not found
+>>> perl-io-socket-ssl-doc*: Create perl-io-socket-ssl-doc-2.089-r0.apk
+>>> perl-io-socket-ssl*: Tracing dependencies...
+	perl
+	ca-certificates
+	perl-net-ssleay
+	perl-mozilla-ca
+>>> perl-io-socket-ssl*: Package size: 469.1 KB
+>>> perl-io-socket-ssl*: Compressing data...
+>>> perl-io-socket-ssl*: Create checksum...
+pigz: not found
+>>> perl-io-socket-ssl*: Create perl-io-socket-ssl-2.089-r0.apk
+>>> perl-io-socket-ssl: Build complete at Sun, 18 May 2025 07:13:07 +0000 elapsed time 0h 0m 53s
+>>> perl-io-socket-ssl: Cleaning up srcdir
+>>> perl-io-socket-ssl: Cleaning up pkgdir
+>>> perl-io-socket-ssl: Uninstalling dependencies...
+(1/9) Purging .makedepends-perl-io-socket-ssl (20250518.071215)
+(2/9) Purging ca-certificates (20241121-r2)
+Executing ca-certificates-20241121-r2.post-deinstall
+(3/9) Purging perl-net-ssleay (1.94-r2)
+(4/9) Purging perl-mozilla-ca (20250202-r0)
+(5/9) Purging git-perl (2.47.2-r0)
+(6/9) Purging perl-git (2.47.2-r0)
+(7/9) Purging perl-error (0.17029-r2)
+(8/9) Purging perl (5.40.2-r0)
+(9/9) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-io-socket-ssl: Updating the main/x86_64 repository index...
+>>> perl-io-socket-ssl: Signing the index...
+pigz: not found

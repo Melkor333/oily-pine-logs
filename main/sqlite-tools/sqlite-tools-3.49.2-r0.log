@@ -1,0 +1,128 @@
+pigz: not found
+>>> sqlite-tools: Building main/sqlite-tools 3.49.2-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:16:21 +0000
+>>> sqlite-tools: Validating /home/packager/aports/main/sqlite-tools/APKBUILD...
+>>> sqlite-tools: Analyzing dependencies...
+>>> sqlite-tools: Installing for build: build-base autoconf readline-dev sqlite-dev tcl-dev cmd:bash
+(1/7) Installing sqlite (3.49.2-r0)
+(2/7) Installing sqlite-libs (3.49.2-r0)
+(3/7) Installing sqlite-dev (3.49.2-r0)
+(4/7) Installing tzdata (2025b-r0)
+(5/7) Installing tcl (8.6.16-r0)
+(6/7) Installing tcl-dev (8.6.16-r0)
+(7/7) Installing .makedepends-sqlite-tools (20250523.181623)
+Executing busybox-1.37.0-r12.trigger
+OK: 574 MiB in 139 packages
+>>> sqlite-tools: Cleaning up srcdir
+>>> sqlite-tools: Cleaning up pkgdir
+>>> sqlite-tools: Cleaning up tmpdir
+>>> sqlite-tools: Fetching https://www.sqlite.org/2025/sqlite-src-3490200.zip
+Connecting to www.sqlite.org (194.195.208.62:443)
+saving to '/var/cache/distfiles/sqlite-src-3490200.zip.part'
+sqlite-src-3490200.z   6% |**                              |  880k  0:00:14 ETA
+sqlite-src-3490200.z 100% |********************************| 13.7M  0:00:00 ETA
+'/var/cache/distfiles/sqlite-src-3490200.zip.part' saved
+>>> sqlite-tools: Fetching https://www.sqlite.org/2025/sqlite-src-3490200.zip
+>>> sqlite-tools: Checking sha512sums...
+sqlite-src-3490200.zip: OK
+date4-test-musl.patch: OK
+stdout-invalid-argument.patch: OK
+tclsqlite-include-stdint.patch: OK
+>>> sqlite-tools: Unpacking /var/cache/distfiles/sqlite-src-3490200.zip...
+>>> sqlite-tools: date4-test-musl.patch
+patching file test/date4.test
+>>> sqlite-tools: stdout-invalid-argument.patch
+patching file test/tester.tcl
+Hunk #1 succeeded at 1556 (offset -29 lines).
+>>> sqlite-tools: tclsqlite-include-stdint.patch
+patching file src/tclsqlite.c
+Hunk #1 succeeded at 77 (offset 9 lines).
+>>> sqlite-tools: TEA version number ok
+mkdir: created directory 'autoconf/tea/generic'
+Configuring SQLite version 3.49.2
+Host System...x86_64-alpine-linux-musl
+Build System...x86_64-alpine-linux-musl
+Source dir = /home/packager/aports/main/sqlite-tools/src/sqlite-src-3490200
+Build dir  = /home/packager/aports/main/sqlite-tools/src/sqlite-src-3490200
+C compiler... gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_ENABLE_FTS3_PARENTHESIS 	-DSQLITE_ENABLE_COLUMN_METADATA 	-DSQLITE_SECURE_DELETE 	-DSQLITE_ENABLE_UNLOCK_NOTIFY 	-DSQLITE_ENABLE_RTREE 	-DSQLITE_ENABLE_GEOPOLY 	-DSQLITE_USE_URI 	-DSQLITE_ENABLE_DBSTAT_VTAB 	-DSQLITE_SOUNDEX 	-DSQLITE_MAX_VARIABLE_NUMBER=250000 
+C++ compiler... g++ -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt 
+Build C compiler...cc
+Checking for stdlib.h...ok
+Warning: Failed to find x86_64-alpine-linux-musl-ld, falling back to ld which may be incorrect
+Warning: Failed to find x86_64-alpine-linux-musl-ar, falling back to ar which may be incorrect
+Looking for install ... /usr/bin/install
+Checking for int8_t...ok
+Checking for int16_t...ok
+Checking for int32_t...ok
+Checking for int64_t...ok
+Checking for intptr_t...ok
+Checking for uint8_t...ok
+Checking for uint16_t...ok
+Checking for uint32_t...ok
+Checking for uint64_t...ok
+Checking for uintptr_t...ok
+Checking for gmtime_r...not found
+Checking for isnan...not found
+Checking for localtime_r...not found
+Checking for localtime_s...not found
+Checking for malloc_usable_size...not found
+Checking for strchrnul...not found
+Checking for usleep...not found
+Checking for utime...not found
+Checking for pread...not found
+Checking for pread64...not found
+Checking for pwrite...not found
+Checking for pwrite64...not found
+Checking libs for fdatasync...no
+Checking libs for nanosleep...no
+Checking for sys/types.h...ok
+Checking for sys/stat.h...ok
+Checking for dlfcn.h...ok
+Checking for unistd.h...ok
+Checking for stdlib.h...ok
+Checking for malloc.h...ok
+Checking for memory.h...ok
+Checking for string.h...ok
+Checking for strings.h...ok
+Checking for inttypes.h...ok
+Checking for zlib.h...ok
+Checking libs for deflate...no
+Use amalgamation for builds? yes
+Use gcov? no
+test-runner flags: no
+Use #line macros in the amalgamation: no
+Checking for a suitable tcl... 
+Checking for tclsh9.0...no
+Checking for tclsh8.6.../usr/bin/tclsh8.6
+/usr/bin/tclsh8.6 recommends the tclConfig.sh from /usr/lib
+Using tclConfig.sh: /usr/lib/tclConfig.sh
+Using tclsh: /usr/bin/tclsh8.6
+Checking for TCL to use for code generation... 
+Checking for dirent.h...ok
+Checking for sys/time.h...ok
+Checking for realpath...not found
+Checking for _fullpath...not found
+TCL for code generation: /usr/bin/tclsh8.6
+Emscripten SDK? not found
+Checking for sys/types.h...(cached) ok
+Checking if -D_FILE_OFFSET_BITS=64 is needed...no
+Build shared library? yes
+Build static library? yes
+SQLITE_DEBUG build? no
+Checking whether the C compiler accepts -rpath /usr/lib...no
+Checking whether the C compiler accepts -Wl,-rpath,/usr/lib...no
+Checking whether the C compiler accepts -Wl,-rpath -Wl,/usr/lib ...no
+Checking whether the C compiler accepts -Wl,-R/usr/lib...no
+Checking whether the C compiler accepts -Wl,-R/usr/lib ...(cached) no
+Checking whether the C compiler accepts -Wl,-soname,libsqlite3.so.0...no
+ERROR: This environment does not support SONAME.
+>>> ERROR: sqlite-tools: build failed
+>>> sqlite-tools: Uninstalling dependencies...
+(1/7) Purging .makedepends-sqlite-tools (20250523.181623)
+(2/7) Purging sqlite-dev (3.49.2-r0)
+(3/7) Purging sqlite (3.49.2-r0)
+(4/7) Purging sqlite-libs (3.49.2-r0)
+(5/7) Purging tcl-dev (8.6.16-r0)
+(6/7) Purging tcl (8.6.16-r0)
+(7/7) Purging tzdata (2025b-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,111 @@
+pigz: not found
+>>> perl-test-tcp: Building main/perl-test-tcp 2.22-r3 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:26:58 +0000
+>>> perl-test-tcp: Validating /home/packager/aports/main/perl-test-tcp/APKBUILD...
+>>> perl-test-tcp: Analyzing dependencies...
+>>> perl-test-tcp: Installing for build: build-base perl perl-test-sharedfork perl-dev
+(1/10) Installing libbz2 (1.0.8-r6)
+(2/10) Installing perl (5.40.2-r0)
+(3/10) Installing perl-test-requires (0.11-r3)
+(4/10) Installing perl-test-sharedfork (0.35-r3)
+(5/10) Installing perl-utils (5.40.2-r0)
+(6/10) Installing perl-dev (5.40.2-r0)
+(7/10) Installing .makedepends-perl-test-tcp (20250518.092701)
+(8/10) Installing perl-error (0.17030-r0)
+(9/10) Installing perl-git (2.47.2-r0)
+(10/10) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 91 packages
+>>> perl-test-tcp: Cleaning up srcdir
+>>> perl-test-tcp: Cleaning up pkgdir
+>>> perl-test-tcp: Cleaning up tmpdir
+>>> perl-test-tcp: Fetching https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Test-TCP-2.22.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Test-TCP-2.22.tar.gz.part'
+Test-TCP-2.22.tar.gz 100% |********************************| 26582  0:00:00 ETA
+'/var/cache/distfiles/Test-TCP-2.22.tar.gz.part' saved
+>>> perl-test-tcp: Fetching https://cpan.metacpan.org/authors/id/M/MI/MIYAGAWA/Test-TCP-2.22.tar.gz
+>>> perl-test-tcp: Checking sha512sums...
+Test-TCP-2.22.tar.gz: OK
+>>> perl-test-tcp: Unpacking /var/cache/distfiles/Test-TCP-2.22.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Test::TCP
+Writing MYMETA.yml and MYMETA.json
+cp lib/Net/EmptyPort.pm blib/lib/Net/EmptyPort.pm
+cp lib/Test/TCP.pm blib/lib/Test/TCP.pm
+cp lib/Test/TCP/CheckPort.pm blib/lib/Test/TCP/CheckPort.pm
+Manifying 3 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# Test::More: 1.302199
+t/00_compile.t ................. ok
+t/01_simple.t .................. ok
+# your server received SIGABRT
+t/02_abrt.t .................... ok
+t/03_return_when_sigterm.t ..... ok
+t/04_die.t ..................... ok
+# $Config{sig_name}: ZERO HUP INT QUIT ILL TRAP ABRT BUS FPE KILL USR1 SEGV USR2 PIPE ALRM TERM STKFLT CHLD CONT STOP TSTP TTIN TTOU URG XCPU XFSZ VTALRM PROF WINCH IO PWR SYS NUM32 NUM33 NUM34 RTMIN NUM36 NUM37 NUM38 NUM39 NUM40 NUM41 NUM42 NUM43 NUM44 NUM45 NUM46 NUM47 NUM48 NUM49 NUM50 NUM51 NUM52 NUM53 NUM54 NUM55 NUM56 NUM57 NUM58 NUM59 NUM60 NUM61 NUM62 NUM63 RTMAX IOT POLL UNUSED 
+# CHILD_ERROR_NATIVE: 2
+# $?: 2
+t/05_sigint.t .................. ok
+t/06_nest.t .................... ok
+t/07_optional.t ................ ok
+t/08_exit.t .................... ok
+t/09_fork.t .................... ok
+t/10_oo.t ...................... ok
+    # found an empty IPv6 port
+t/11_net_empty_port.t .......... ok
+t/12_pass_wait_port_options.t .. ok
+t/13_undef_port.t .............. ok
+t/14_listen.t .................. ok
+All tests successful.
+Files=15, Tests=150, 28 wallclock secs ( 0.08 usr  0.02 sys +  1.68 cusr  0.33 csys =  2.11 CPU)
+Result: PASS
+>>> perl-test-tcp: Entering fakeroot...
+Manifying 3 pod documents
+Appending installation info to /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/lib/perl5/core_perl/perllocal.pod
+Installing /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/share/perl5/vendor_perl/Net/EmptyPort.pm
+Installing /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/share/perl5/vendor_perl/Test/TCP.pm
+Installing /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/share/perl5/vendor_perl/Test/TCP/CheckPort.pm
+Installing /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/share/man/man3/Test::TCP.3pm
+Installing /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/share/man/man3/Test::TCP::CheckPort.3pm
+Installing /home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp/usr/share/man/man3/Net::EmptyPort.3pm
+>>> perl-test-tcp-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-test-tcp/pkg/perl-test-tcp-doc/usr/share/man'
+>>> perl-test-tcp-doc*: Preparing subpackage perl-test-tcp-doc...
+>>> perl-test-tcp-doc*: Running postcheck for perl-test-tcp-doc
+>>> perl-test-tcp*: Running postcheck for perl-test-tcp
+>>> perl-test-tcp*: Preparing package perl-test-tcp...
+>>> perl-test-tcp-doc*: Tracing dependencies...
+>>> perl-test-tcp-doc*: Package size: 6.5 KB
+>>> perl-test-tcp-doc*: Compressing data...
+>>> perl-test-tcp-doc*: Create checksum...
+pigz: not found
+>>> perl-test-tcp-doc*: Create perl-test-tcp-doc-2.22-r3.apk
+>>> perl-test-tcp*: Tracing dependencies...
+	perl
+	perl-test-sharedfork
+>>> perl-test-tcp*: Package size: 19.9 KB
+>>> perl-test-tcp*: Compressing data...
+>>> perl-test-tcp*: Create checksum...
+pigz: not found
+>>> perl-test-tcp*: Create perl-test-tcp-2.22-r3.apk
+>>> perl-test-tcp: Build complete at Sun, 18 May 2025 09:27:32 +0000 elapsed time 0h 0m 34s
+>>> perl-test-tcp: Cleaning up srcdir
+>>> perl-test-tcp: Cleaning up pkgdir
+>>> perl-test-tcp: Uninstalling dependencies...
+(1/10) Purging .makedepends-perl-test-tcp (20250518.092701)
+(2/10) Purging perl-test-sharedfork (0.35-r3)
+(3/10) Purging perl-test-requires (0.11-r3)
+(4/10) Purging perl-dev (5.40.2-r0)
+(5/10) Purging perl-utils (5.40.2-r0)
+(6/10) Purging git-perl (2.47.2-r0)
+(7/10) Purging perl-git (2.47.2-r0)
+(8/10) Purging perl-error (0.17030-r0)
+(9/10) Purging perl (5.40.2-r0)
+(10/10) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-test-tcp: Updating the main/x86_64 repository index...
+>>> perl-test-tcp: Signing the index...
+pigz: not found

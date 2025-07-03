@@ -1,0 +1,147 @@
+pigz: not found
+>>> perl-css-minifier-xs: Building main/perl-css-minifier-xs 0.13-r5 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:46:01 +0000
+>>> perl-css-minifier-xs: Validating /home/packager/aports/main/perl-css-minifier-xs/APKBUILD...
+>>> perl-css-minifier-xs: Analyzing dependencies...
+>>> perl-css-minifier-xs: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-css-minifier-xs (20250518.094603)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-css-minifier-xs: Cleaning up srcdir
+>>> perl-css-minifier-xs: Cleaning up pkgdir
+>>> perl-css-minifier-xs: Cleaning up tmpdir
+>>> perl-css-minifier-xs: Fetching https://cpan.metacpan.org/authors/id/G/GT/GTERMARS/CSS-Minifier-XS-0.13.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/CSS-Minifier-XS-0.13.tar.gz.part'
+CSS-Minifier-XS-0.13 100% |********************************| 25935  0:00:00 ETA
+'/var/cache/distfiles/CSS-Minifier-XS-0.13.tar.gz.part' saved
+>>> perl-css-minifier-xs: Fetching https://cpan.metacpan.org/authors/id/G/GT/GTERMARS/CSS-Minifier-XS-0.13.tar.gz
+>>> perl-css-minifier-xs: Checking sha512sums...
+CSS-Minifier-XS-0.13.tar.gz: OK
+>>> perl-css-minifier-xs: Unpacking /var/cache/distfiles/CSS-Minifier-XS-0.13.tar.gz...
+Warning: prerequisite Test::DiagINC 0.002 not found.
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for CSS::Minifier::XS
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  XS.xs > XS.xsc
+Running Mkbootstrap for XS ()
+chmod 644 "XS.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/CSS/Minifier/XS/XS.bs 644
+cp lib/CSS/Minifier/XS.pm blib/lib/CSS/Minifier/XS.pm
+mv XS.xsc XS.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.13\" -DXS_VERSION=\"0.13\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   XS.c
+rm -f blib/arch/auto/CSS/Minifier/XS/XS.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  XS.o  -o blib/arch/auto/CSS/Minifier/XS/XS.so  \
+      \
+  
+chmod 755 blib/arch/auto/CSS/Minifier/XS/XS.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/CSS/Minifier/XS/XS.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module               Want     Have
+#     ------------------- ----- --------
+#     ExtUtils::MakeMaker   any     7.70
+#     File::Spec            any     3.91
+#     File::Temp            any   0.2311
+#     IO::Handle            any     1.55
+#     IPC::Open3            any     1.22
+#     Test::DiagINC       0.002  missing
+#     Test::More           0.96 1.302199
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Runtime Requires ===
+# 
+#     Module Want Have
+#     ------ ---- ----
+# 
+# 
+# *** WARNING WARNING WARNING WARNING WARNING WARNING WARNING WARNING ***
+# 
+# The following REQUIRED prerequisites were not satisfied:
+# 
+# Test::DiagINC is not installed (version '0.002' required)
+# 
+t/00-report-prereqs.t .. ok
+t/01-compile.t ......... ok
+t/minify.t ............. ok
+All tests successful.
+Files=3, Tests=23,  1 wallclock secs ( 0.04 usr  0.00 sys +  0.40 cusr  0.05 csys =  0.49 CPU)
+Result: PASS
+>>> perl-css-minifier-xs: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- XS.bs blib/arch/auto/CSS/Minifier/XS/XS.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-css-minifier-xs/pkg/perl-css-minifier-xs/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-css-minifier-xs/pkg/perl-css-minifier-xs/usr/lib/perl5/vendor_perl/auto/CSS/Minifier/XS/XS.so
+Installing /home/packager/aports/main/perl-css-minifier-xs/pkg/perl-css-minifier-xs/usr/lib/perl5/vendor_perl/CSS/Minifier/XS.pm
+Installing /home/packager/aports/main/perl-css-minifier-xs/pkg/perl-css-minifier-xs/usr/share/man/man3/CSS::Minifier::XS.3pm
+>>> perl-css-minifier-xs-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-css-minifier-xs/pkg/perl-css-minifier-xs-doc/usr/share/man'
+>>> perl-css-minifier-xs-doc*: Preparing subpackage perl-css-minifier-xs-doc...
+>>> perl-css-minifier-xs-doc*: Running postcheck for perl-css-minifier-xs-doc
+>>> perl-css-minifier-xs*: Running postcheck for perl-css-minifier-xs
+>>> perl-css-minifier-xs*: Preparing package perl-css-minifier-xs...
+>>> perl-css-minifier-xs*: Stripping binaries
+>>> perl-css-minifier-xs-doc*: Scanning shared objects
+>>> perl-css-minifier-xs*: Scanning shared objects
+>>> perl-css-minifier-xs-doc*: Tracing dependencies...
+>>> perl-css-minifier-xs-doc*: Package size: 2.3 KB
+>>> perl-css-minifier-xs-doc*: Compressing data...
+>>> perl-css-minifier-xs-doc*: Create checksum...
+pigz: not found
+>>> perl-css-minifier-xs-doc*: Create perl-css-minifier-xs-doc-0.13-r5.apk
+>>> perl-css-minifier-xs*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-css-minifier-xs*: Package size: 25.2 KB
+>>> perl-css-minifier-xs*: Compressing data...
+>>> perl-css-minifier-xs*: Create checksum...
+pigz: not found
+>>> perl-css-minifier-xs*: Create perl-css-minifier-xs-0.13-r5.apk
+>>> perl-css-minifier-xs: Build complete at Sun, 18 May 2025 09:46:06 +0000 elapsed time 0h 0m 5s
+>>> perl-css-minifier-xs: Cleaning up srcdir
+>>> perl-css-minifier-xs: Cleaning up pkgdir
+>>> perl-css-minifier-xs: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-css-minifier-xs (20250518.094603)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-css-minifier-xs: Updating the main/x86_64 repository index...
+>>> perl-css-minifier-xs: Signing the index...
+pigz: not found

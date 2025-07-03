@@ -1,0 +1,83 @@
+pigz: not found
+>>> strace: Building main/strace 6.13-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:57:39 +0000
+>>> strace: Validating /home/packager/aports/main/strace/APKBUILD...
+>>> strace: Analyzing dependencies...
+>>> strace: Installing for build: build-base binutils-dev elfutils-dev gawk linux-headers
+(1/12) Installing binutils-dev (2.44-r0)
+(2/12) Installing libelf (0.191-r0)
+(3/12) Installing musl-fts (1.2.7-r6)
+(4/12) Installing xz-libs (5.6.3-r1)
+(5/12) Installing libdw (0.191-r0)
+(6/12) Installing libasm (0.191-r0)
+(7/12) Installing xz (5.6.3-r1)
+(8/12) Installing xz-dev (5.6.3-r1)
+(9/12) Installing zstd (1.5.7-r0)
+(10/12) Installing zstd-dev (1.5.7-r0)
+(11/12) Installing elfutils-dev (0.191-r0)
+(12/12) Installing .makedepends-strace (20250523.175741)
+Executing busybox-1.37.0-r12.trigger
+OK: 573 MiB in 144 packages
+>>> strace: Cleaning up srcdir
+>>> strace: Cleaning up pkgdir
+>>> strace: Cleaning up tmpdir
+>>> strace: Fetching https://github.com/strace/strace/releases/download/v6.13/strace-6.13.tar.xz
+Connecting to github.com (140.82.121.3:443)
+Connecting to objects.githubusercontent.com (185.199.108.133:443)
+saving to '/var/cache/distfiles/strace-6.13.tar.xz.part'
+strace-6.13.tar.xz.p 100% |********************************| 2580k  0:00:00 ETA
+'/var/cache/distfiles/strace-6.13.tar.xz.part' saved
+>>> strace: Fetching https://github.com/strace/strace/releases/download/v6.13/strace-6.13.tar.xz
+>>> strace: Checking sha512sums...
+strace-6.13.tar.xz: OK
+off64.patch: OK
+busybox.patch: OK
+tv_usec.patch: OK
+nlattr-fix.patch: OK
+>>> strace: Unpacking /var/cache/distfiles/strace-6.13.tar.xz...
+>>> strace: off64.patch
+patching file tests/readahead.c
+patching file tests/sync_file_range.c
+patching file tests/sync_file_range2.c
+>>> strace: busybox.patch
+patching file tests/status-detached.expected
+patching file tests/strace--tips.test
+patching file tests/strace-k.test
+>>> strace: tv_usec.patch
+patching file tests/futimesat.c
+patching file tests/xettimeofday.c
+patching file tests/xselect.c
+patching file tests/xutimes.c
+>>> strace: nlattr-fix.patch
+patching file tests/nlattr.c
+Hunk #1 succeeded at 43 (offset -18 lines).
+Hunk #2 succeeded at 250 (offset -9 lines).
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... no
+configure: error: in `/home/packager/aports/main/strace/src/strace-6.13':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+>>> ERROR: strace: build failed
+>>> strace: Uninstalling dependencies...
+(1/12) Purging .makedepends-strace (20250523.175741)
+(2/12) Purging binutils-dev (2.44-r0)
+(3/12) Purging elfutils-dev (0.191-r0)
+(4/12) Purging libasm (0.191-r0)
+(5/12) Purging libdw (0.191-r0)
+(6/12) Purging libelf (0.191-r0)
+(7/12) Purging musl-fts (1.2.7-r6)
+(8/12) Purging xz-dev (5.6.3-r1)
+(9/12) Purging xz (5.6.3-r1)
+(10/12) Purging xz-libs (5.6.3-r1)
+(11/12) Purging zstd-dev (1.5.7-r0)
+(12/12) Purging zstd (1.5.7-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

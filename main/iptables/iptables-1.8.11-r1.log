@@ -1,0 +1,99 @@
+pigz: not found
+>>> iptables: Building main/iptables 1.8.11-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:26:12 +0000
+>>> iptables: Validating /home/packager/aports/main/iptables/APKBUILD...
+>>> iptables: Analyzing dependencies...
+>>> iptables: Installing for build: build-base linux-headers libnftnl-dev bison flex autoconf automake libtool
+(1/7) Installing libmnl (1.0.5-r2)
+(2/7) Installing libnftnl (1.2.8-r0)
+(3/7) Installing libmnl-dev (1.0.5-r2)
+(4/7) Installing libnftnl-dev (1.2.8-r0)
+(5/7) Installing libltdl (2.4.7-r3)
+(6/7) Installing libtool (2.4.7-r3)
+(7/7) Installing .makedepends-iptables (20250523.162614)
+Executing busybox-1.37.0-r12.trigger
+OK: 567 MiB in 139 packages
+>>> iptables: Cleaning up srcdir
+>>> iptables: Cleaning up pkgdir
+>>> iptables: Cleaning up tmpdir
+>>> iptables: Fetching https://www.netfilter.org/projects/iptables/files/iptables-1.8.11.tar.xz
+Connecting to www.netfilter.org (92.243.20.29:443)
+saving to '/var/cache/distfiles/iptables-1.8.11.tar.xz.part'
+iptables-1.8.11.tar. 100% |********************************|  634k  0:00:00 ETA
+'/var/cache/distfiles/iptables-1.8.11.tar.xz.part' saved
+>>> iptables: Fetching https://www.netfilter.org/projects/iptables/files/iptables-1.8.11.tar.xz
+>>> iptables: Checking sha512sums...
+iptables-1.8.11.tar.xz: OK
+use-sh-iptables-apply.patch: OK
+iptables.initd: OK
+iptables.confd: OK
+ip6tables.confd: OK
+ebtables.initd: OK
+ebtables.confd: OK
+configure-Avoid-addition-assignment-operators.patch: OK
+fix-interface-comparissons-in-dash-C-commands.patch: OK
+drop-interface-mask-leftovers-from-post-parse-callbacks.patch: OK
+>>> iptables: Unpacking /var/cache/distfiles/iptables-1.8.11.tar.xz...
+>>> iptables: use-sh-iptables-apply.patch
+patching file iptables/iptables-apply
+>>> iptables: configure-Avoid-addition-assignment-operators.patch
+patching file configure.ac
+>>> iptables: fix-interface-comparissons-in-dash-C-commands.patch
+patching file iptables/nft-arp.c
+patching file iptables/nft-ipv4.c
+patching file iptables/nft-ipv6.c
+patching file iptables/nft-shared.c
+patching file iptables/nft-shared.h
+patching file iptables/tests/shell/testcases/nft-only/0020-compare-interfaces_0
+>>> iptables: drop-interface-mask-leftovers-from-post-parse-callbacks.patch
+patching file iptables/nft-arp.c
+patching file iptables/xshared.c
+patching file iptables/xshared.h
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:13: installing 'build-aux/compile'
+configure.ac:12: installing 'build-aux/missing'
+iptables/Makefile.am: installing 'build-aux/depcomp'
+autoreconf: Leaving directory '.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... no
+configure: error: in '/home/packager/aports/main/iptables/src/iptables-1.8.11':
+configure: error: C compiler cannot create executables
+See 'config.log' for more details
+>>> ERROR: iptables: build failed
+>>> iptables: Uninstalling dependencies...
+(1/7) Purging .makedepends-iptables (20250523.162614)
+(2/7) Purging libnftnl-dev (1.2.8-r0)
+(3/7) Purging libnftnl (1.2.8-r0)
+(4/7) Purging libtool (2.4.7-r3)
+(5/7) Purging libltdl (2.4.7-r3)
+(6/7) Purging libmnl-dev (1.0.5-r2)
+(7/7) Purging libmnl (1.0.5-r2)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

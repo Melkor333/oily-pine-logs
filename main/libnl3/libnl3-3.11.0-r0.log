@@ -1,0 +1,77 @@
+pigz: not found
+>>> libnl3: Building main/libnl3 3.11.0-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:03:16 +0000
+>>> libnl3: Validating /home/packager/aports/main/libnl3/APKBUILD...
+>>> libnl3: Analyzing dependencies...
+>>> libnl3: Installing for build: build-base linux-headers flex bison libtool autoconf automake
+(1/3) Installing libltdl (2.4.7-r3)
+(2/3) Installing libtool (2.4.7-r3)
+(3/3) Installing .makedepends-libnl3 (20250523.180318)
+Executing busybox-1.37.0-r12.trigger
+OK: 566 MiB in 135 packages
+>>> libnl3: Cleaning up srcdir
+>>> libnl3: Cleaning up pkgdir
+>>> libnl3: Cleaning up tmpdir
+>>> libnl3: Fetching https://github.com/thom311/libnl/releases/download/libnl3_11_0/libnl-3.11.0.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to objects.githubusercontent.com (185.199.110.133:443)
+saving to '/var/cache/distfiles/libnl-3.11.0.tar.gz.part'
+libnl-3.11.0.tar.gz. 100% |********************************| 1097k  0:00:00 ETA
+'/var/cache/distfiles/libnl-3.11.0.tar.gz.part' saved
+>>> libnl3: Fetching https://github.com/thom311/libnl/releases/download/libnl3_11_0/libnl-3.11.0.tar.gz
+>>> libnl3: Checking sha512sums...
+libnl-3.11.0.tar.gz: OK
+libnl3-musl.patch: OK
+>>> libnl3: Unpacking /var/cache/distfiles/libnl-3.11.0.tar.gz...
+>>> libnl3: libnl3-musl.patch
+patching file include/linux-private/linux/if_ether.h
+patching file include/linux-private/linux/libc-compat.h
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: subdirectory doc not present
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:64: warning: AC_COMPILE_IFELSE was called before AC_USE_SYSTEM_EXTENSIONS
+./lib/autoconf/specific.m4:541: AC_USE_SYSTEM_EXTENSIONS is expanded from...
+configure.ac:64: the top level
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:45: installing 'build-aux/compile'
+configure.ac:43: installing 'build-aux/missing'
+Makefile.am: installing 'build-aux/depcomp'
+autoreconf: Leaving directory '.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... no
+configure: error: in '/home/packager/aports/main/libnl3/src/libnl-3.11.0':
+configure: error: C compiler cannot create executables
+See 'config.log' for more details
+>>> ERROR: libnl3: build failed
+>>> libnl3: Uninstalling dependencies...
+(1/3) Purging .makedepends-libnl3 (20250523.180318)
+(2/3) Purging libtool (2.4.7-r3)
+(3/3) Purging libltdl (2.4.7-r3)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

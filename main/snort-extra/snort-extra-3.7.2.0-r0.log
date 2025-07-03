@@ -1,0 +1,86 @@
+pigz: not found
+>>> snort-extra: Building main/snort-extra 3.7.2.0-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:22:46 +0000
+>>> snort-extra: Validating /home/packager/aports/main/snort-extra/APKBUILD...
+>>> snort-extra: Analyzing dependencies...
+>>> snort-extra: Installing for build: build-base daq-dev cmake samurai snort-dev
+(1/13) Installing libmnl (1.0.5-r2)
+(2/13) Installing libpcap (1.10.5-r0)
+(3/13) Installing daq (3.0.16-r0)
+(4/13) Installing daq-dev (3.0.16-r0)
+(5/13) Installing lz4-libs (1.10.0-r0)
+(6/13) Installing xz-libs (5.6.3-r1)
+(7/13) Installing libarchive (3.7.9-r0)
+(8/13) Installing rhash-libs (1.4.5-r0)
+(9/13) Installing libuv (1.49.2-r0)
+(10/13) Installing cmake (3.31.7-r0)
+(11/13) Installing samurai (1.2-r6)
+(12/13) Installing snort-dev (3.5.2.0-r0)
+(13/13) Installing .makedepends-snort-extra (20250523.172248)
+Executing busybox-1.37.0-r12.trigger
+OK: 619 MiB in 145 packages
+>>> snort-extra: Cleaning up srcdir
+>>> snort-extra: Cleaning up pkgdir
+>>> snort-extra: Cleaning up tmpdir
+>>> snort-extra: Fetching snort3_extra-3.7.2.0.tar.gz::https://github.com/snort3/snort3_extra/archive/refs/tags/3.7.2.0.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/snort3_extra-3.7.2.0.tar.gz.part'
+snort3_extra-3.7.2.0 100% |********************************| 59169  0:00:00 ETA
+'/var/cache/distfiles/snort3_extra-3.7.2.0.tar.gz.part' saved
+>>> snort-extra: Fetching snort3_extra-3.7.2.0.tar.gz::https://github.com/snort3/snort3_extra/archive/refs/tags/3.7.2.0.tar.gz
+>>> snort-extra: Checking sha512sums...
+snort3_extra-3.7.2.0.tar.gz: OK
+>>> snort-extra: Unpacking /var/cache/distfiles/snort3_extra-3.7.2.0.tar.gz...
+-- The CXX compiler identification is GNU 14.2.0
+-- The C compiler identification is GNU 14.2.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Check for working CXX compiler: /usr/bin/g++
+-- Check for working CXX compiler: /usr/bin/g++ - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCXXCompiler.cmake:73 (message):
+  The C++ compiler
+
+    "/usr/bin/g++"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/snort-extra/src/snort3_extra-3.7.2.0/build/CMakeFiles/CMakeScratch/TryCompile-gMKPNb'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_6046e
+    [1/2] /usr/bin/g++   -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -flto=auto -o CMakeFiles/cmTC_6046e.dir/testCXXCompiler.cxx.o -c /home/packager/aports/main/snort-extra/src/snort3_extra-3.7.2.0/build/CMakeFiles/CMakeScratch/TryCompile-gMKPNb/testCXXCompiler.cxx
+    [2/2] : && /usr/bin/g++ -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -flto=auto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_6046e.dir/testCXXCompiler.cxx.o -o cmTC_6046e   && :
+    ninja: job failed: : && /usr/bin/g++ -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -flto=auto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_6046e.dir/testCXXCompiler.cxx.o -o cmTC_6046e   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_6046e: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_6046e has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: snort-extra: build failed
+>>> snort-extra: Uninstalling dependencies...
+(1/13) Purging .makedepends-snort-extra (20250523.172248)
+(2/13) Purging daq-dev (3.0.16-r0)
+(3/13) Purging daq (3.0.16-r0)
+(4/13) Purging cmake (3.31.7-r0)
+(5/13) Purging samurai (1.2-r6)
+(6/13) Purging snort-dev (3.5.2.0-r0)
+(7/13) Purging libarchive (3.7.9-r0)
+(8/13) Purging libmnl (1.0.5-r2)
+(9/13) Purging libpcap (1.10.5-r0)
+(10/13) Purging libuv (1.49.2-r0)
+(11/13) Purging lz4-libs (1.10.0-r0)
+(12/13) Purging rhash-libs (1.4.5-r0)
+(13/13) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

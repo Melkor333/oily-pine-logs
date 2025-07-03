@@ -1,0 +1,141 @@
+pigz: not found
+>>> perl-mail-imapclient: Building main/perl-mail-imapclient 3.43-r2 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:42:13 +0000
+>>> perl-mail-imapclient: Validating /home/packager/aports/main/perl-mail-imapclient/APKBUILD...
+>>> perl-mail-imapclient: Analyzing dependencies...
+>>> perl-mail-imapclient: Installing for build: build-base perl perl-parse-recdescent
+(1/7) Installing libbz2 (1.0.8-r6)
+(2/7) Installing perl (5.40.2-r0)
+(3/7) Installing perl-parse-recdescent (1.967015-r6)
+(4/7) Installing .makedepends-perl-mail-imapclient (20250518.094214)
+(5/7) Installing perl-error (0.17030-r0)
+(6/7) Installing perl-git (2.47.2-r0)
+(7/7) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 298 MiB in 88 packages
+>>> perl-mail-imapclient: Cleaning up srcdir
+>>> perl-mail-imapclient: Cleaning up pkgdir
+>>> perl-mail-imapclient: Cleaning up tmpdir
+>>> perl-mail-imapclient: Fetching https://cpan.metacpan.org/authors/id/P/PL/PLOBBES/Mail-IMAPClient-3.43.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Mail-IMAPClient-3.43.tar.gz.part'
+Mail-IMAPClient-3.43 100% |********************************|  185k  0:00:00 ETA
+'/var/cache/distfiles/Mail-IMAPClient-3.43.tar.gz.part' saved
+>>> perl-mail-imapclient: Fetching https://cpan.metacpan.org/authors/id/P/PL/PLOBBES/Mail-IMAPClient-3.43.tar.gz
+>>> perl-mail-imapclient: Checking sha512sums...
+Mail-IMAPClient-3.43.tar.gz: OK
+>>> perl-mail-imapclient: Unpacking /var/cache/distfiles/Mail-IMAPClient-3.43.tar.gz...
+The following optional modules were not found:
+	Authen::NTLM for Authmechanism 'NTLM'
+	Authen::SASL for Authmechanism 'DIGEST-MD5'
+	Digest::HMAC_MD5 for Authmechanism 'CRAM-MD5'
+	IO::Socket::SSL for SSL enabled connections (Ssl => 1)
+	Test::Pod for Pod tests
+Optional modules are available from any CPAN mirror, reference:
+  https://metacpan.org/
+  https://www.cpan.org/modules/by-module/
+
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Mail::IMAPClient
+Writing MYMETA.yml and MYMETA.json
+
+(OPTIONAL) For extended tests during 'make test', create a file
+'test.txt' in the top level directory of this distribution (the same
+directory as the Makefile.PL, etc.).  This file must contain an IMAP
+server name or IP (server=...), a user account (user=...), and a
+password (passed=...).  A port (port=....) and an authentication
+mechanism to be used (authmechanism=...) can also be specified.
+
+Example:
+
+--- BEGIN: test.txt ---
+server=localhost
+user=mytestuser
+passed=mypassword
+port=143
+--- END: test.txt ---
+
+NOTE: When testing is completed, be sure to remove test.txt (either by
+hand or by 'make clean').
+
+cp lib/Mail/IMAPClient.pod blib/lib/Mail/IMAPClient.pod
+cp lib/Mail/IMAPClient/BodyStructure.pm blib/lib/Mail/IMAPClient/BodyStructure.pm
+cp lib/Mail/IMAPClient/Thread.pm blib/lib/Mail/IMAPClient/Thread.pm
+cp lib/Mail/IMAPClient/BodyStructure/Parse.pod blib/lib/Mail/IMAPClient/BodyStructure/Parse.pod
+cp lib/Mail/IMAPClient/Thread.grammar blib/lib/Mail/IMAPClient/Thread.grammar
+cp lib/Mail/IMAPClient/Thread.pod blib/lib/Mail/IMAPClient/Thread.pod
+cp lib/Mail/IMAPClient.pm blib/lib/Mail/IMAPClient.pm
+cp lib/Mail/IMAPClient/BodyStructure/Parse.grammar blib/lib/Mail/IMAPClient/BodyStructure/Parse.grammar
+cp lib/Mail/IMAPClient/BodyStructure/Parse.pm blib/lib/Mail/IMAPClient/BodyStructure/Parse.pm
+cp lib/Mail/IMAPClient/MessageSet.pm blib/lib/Mail/IMAPClient/MessageSet.pm
+Manifying 5 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/basic.t .......... skipped: test parameters not provided in test.txt
+t/body_string.t .... ok
+t/bodystructure.t .. ok
+t/fetch_hash.t ..... ok
+t/messageset.t ..... ok
+t/pod.t ............ skipped: Test::Pod 1.00 required for testing POD
+t/quota.t .......... skipped: test parameters not provided in test.txt
+t/simple.t ......... ok
+t/thread.t ......... ok
+All tests successful.
+Files=9, Tests=109,  2 wallclock secs ( 0.05 usr  0.01 sys +  0.98 cusr  0.09 csys =  1.13 CPU)
+Result: PASS
+>>> perl-mail-imapclient: Entering fakeroot...
+Manifying 5 pod documents
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient.pod
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient.pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/Thread.pod
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/Thread.grammar
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/MessageSet.pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/BodyStructure.pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/Thread.pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/BodyStructure/Parse.pod
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/BodyStructure/Parse.pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/perl5/vendor_perl/Mail/IMAPClient/BodyStructure/Parse.grammar
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/man/man3/Mail::IMAPClient::Thread.3pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/man/man3/Mail::IMAPClient.3pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/man/man3/Mail::IMAPClient::MessageSet.3pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/man/man3/Mail::IMAPClient::BodyStructure::Parse.3pm
+Installing /home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient/usr/share/man/man3/Mail::IMAPClient::BodyStructure.3pm
+>>> perl-mail-imapclient-doc*: Running split function doc...
+'usr/share/perl5/vendor_perl/Mail/IMAPClient.pod' -> '/home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient-doc/usr/share/perl5/vendor_perl/Mail/IMAPClient.pod'
+'usr/share/perl5/vendor_perl/Mail/IMAPClient/Thread.pod' -> '/home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient-doc/usr/share/perl5/vendor_perl/Mail/IMAPClient/Thread.pod'
+'usr/share/perl5/vendor_perl/Mail/IMAPClient/BodyStructure/Parse.pod' -> '/home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient-doc/usr/share/perl5/vendor_perl/Mail/IMAPClient/BodyStructure/Parse.pod'
+'usr/share/man' -> '/home/packager/aports/main/perl-mail-imapclient/pkg/perl-mail-imapclient-doc/usr/share/man'
+>>> perl-mail-imapclient-doc*: Preparing subpackage perl-mail-imapclient-doc...
+>>> perl-mail-imapclient-doc*: Running postcheck for perl-mail-imapclient-doc
+>>> perl-mail-imapclient*: Running postcheck for perl-mail-imapclient
+>>> perl-mail-imapclient*: Preparing package perl-mail-imapclient...
+>>> perl-mail-imapclient-doc*: Tracing dependencies...
+>>> perl-mail-imapclient-doc*: Package size: 193.3 KB
+>>> perl-mail-imapclient-doc*: Compressing data...
+>>> perl-mail-imapclient-doc*: Create checksum...
+pigz: not found
+>>> perl-mail-imapclient-doc*: Create perl-mail-imapclient-doc-3.43-r2.apk
+>>> perl-mail-imapclient*: Tracing dependencies...
+	perl
+	perl-parse-recdescent
+>>> perl-mail-imapclient*: Package size: 1007.4 KB
+>>> perl-mail-imapclient*: Compressing data...
+>>> perl-mail-imapclient*: Create checksum...
+pigz: not found
+>>> perl-mail-imapclient*: Create perl-mail-imapclient-3.43-r2.apk
+>>> perl-mail-imapclient: Build complete at Sun, 18 May 2025 09:42:21 +0000 elapsed time 0h 0m 8s
+>>> perl-mail-imapclient: Cleaning up srcdir
+>>> perl-mail-imapclient: Cleaning up pkgdir
+>>> perl-mail-imapclient: Uninstalling dependencies...
+(1/7) Purging .makedepends-perl-mail-imapclient (20250518.094214)
+(2/7) Purging perl-parse-recdescent (1.967015-r6)
+(3/7) Purging git-perl (2.47.2-r0)
+(4/7) Purging perl-git (2.47.2-r0)
+(5/7) Purging perl-error (0.17030-r0)
+(6/7) Purging perl (5.40.2-r0)
+(7/7) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-mail-imapclient: Updating the main/x86_64 repository index...
+>>> perl-mail-imapclient: Signing the index...
+pigz: not found

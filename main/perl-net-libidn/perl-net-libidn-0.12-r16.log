@@ -1,0 +1,137 @@
+pigz: not found
+>>> perl-net-libidn: Building main/perl-net-libidn 0.12-r16 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:05:36 +0000
+>>> perl-net-libidn: Validating /home/packager/aports/main/perl-net-libidn/APKBUILD...
+>>> perl-net-libidn: Analyzing dependencies...
+>>> perl-net-libidn: Installing for build: build-base perl libidn-dev perl-dev
+(1/10) Installing libbz2 (1.0.8-r6)
+(2/10) Installing perl (5.40.2-r0)
+(3/10) Installing libidn (1.42-r0)
+(4/10) Installing libidn-dev (1.42-r0)
+(5/10) Installing perl-utils (5.40.2-r0)
+(6/10) Installing perl-dev (5.40.2-r0)
+(7/10) Installing .makedepends-perl-net-libidn (20250518.070538)
+(8/10) Installing perl-error (0.17029-r2)
+(9/10) Installing perl-git (2.47.2-r0)
+(10/10) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 91 packages
+>>> perl-net-libidn: Cleaning up srcdir
+>>> perl-net-libidn: Cleaning up pkgdir
+>>> perl-net-libidn: Cleaning up tmpdir
+>>> perl-net-libidn: Fetching https://cpan.metacpan.org/authors/id/T/TH/THOR/Net-LibIDN-0.12.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Net-LibIDN-0.12.tar.gz.part'
+Net-LibIDN-0.12.tar. 100% |********************************| 14262  0:00:00 ETA
+'/var/cache/distfiles/Net-LibIDN-0.12.tar.gz.part' saved
+>>> perl-net-libidn: Fetching https://cpan.metacpan.org/authors/id/T/TH/THOR/Net-LibIDN-0.12.tar.gz
+>>> perl-net-libidn: Checking sha512sums...
+Net-LibIDN-0.12.tar.gz: OK
+>>> perl-net-libidn: Unpacking /var/cache/distfiles/Net-LibIDN-0.12.tar.gz...
+Found LibIDN, with TLD checking support
+Checking if your kit is complete...
+Looks good
+Unrecognized argument in LIBS ignored: '-fstack-protector-strong'
+Generating a Unix-style Makefile
+Writing Makefile for Net::LibIDN
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  LibIDN.xs > LibIDN.xsc
+Running Mkbootstrap for LibIDN ()
+chmod 644 "LibIDN.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LibIDN.bs blib/arch/auto/Net/LibIDN/LibIDN.bs 644
+cp LibIDN.pm blib/lib/Net/LibIDN.pm
+AutoSplitting blib/lib/Net/LibIDN.pm (blib/lib/auto/Net/LibIDN)
+mv LibIDN.xsc LibIDN.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.12\" -DXS_VERSION=\"0.12\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -DHAVE_TLD LibIDN.c
+rm -f blib/arch/auto/Net/LibIDN/LibIDN.so
+LD_RUN_PATH="/usr/lib" cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  LibIDN.o  -o blib/arch/auto/Net/LibIDN/LibIDN.so  \
+   -L/usr/local/lib -lidn   \
+  
+chmod 755 blib/arch/auto/Net/LibIDN/LibIDN.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LibIDN.bs blib/arch/auto/Net/LibIDN/LibIDN.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-Iblib/lib" "-Iblib/arch" test.pl
+1..21
+# Running under perl version 5.040002 for linux
+# Current time local: Sun May 18 07:05:40 2025
+# Current time GMT:   Sun May 18 07:05:40 2025
+# Using Test.pm version 1.31
+ok 1
+ok 2
+ok 3
+ok 4
+ok 5
+ok 6
+ok 7
+ok 8
+ok 9
+ok 10
+ok 11
+not ok 12
+# Test 12 got: "14" (test.pl at line 37)
+#    Expected: "13"
+#  test.pl line 37 is: skip($has_nono, $$res{nvalid}, 13);
+not ok 13
+# Test 13 got: "7184" (test.pl at line 46)
+#    Expected: "7470"
+#  test.pl line 46 is: skip($has_nono, $sum, 7470);
+ok 14
+ok 15
+ok 16
+ok 17
+ok 18
+ok 19
+ok 20
+ok 21
+>>> perl-net-libidn: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LibIDN.bs blib/arch/auto/Net/LibIDN/LibIDN.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-net-libidn/pkg/perl-net-libidn/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-net-libidn/pkg/perl-net-libidn/usr/lib/perl5/vendor_perl/auto/Net/LibIDN/LibIDN.so
+Installing /home/packager/aports/main/perl-net-libidn/pkg/perl-net-libidn/usr/lib/perl5/vendor_perl/Net/LibIDN.pm
+Installing /home/packager/aports/main/perl-net-libidn/pkg/perl-net-libidn/usr/lib/perl5/vendor_perl/auto/Net/LibIDN/autosplit.ix
+Installing /home/packager/aports/main/perl-net-libidn/pkg/perl-net-libidn/usr/share/man/man3/Net::LibIDN.3pm
+>>> perl-net-libidn-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-net-libidn/pkg/perl-net-libidn-doc/usr/share/man'
+>>> perl-net-libidn-doc*: Preparing subpackage perl-net-libidn-doc...
+>>> perl-net-libidn-doc*: Running postcheck for perl-net-libidn-doc
+>>> perl-net-libidn*: Running postcheck for perl-net-libidn
+>>> perl-net-libidn*: Preparing package perl-net-libidn...
+>>> perl-net-libidn*: Stripping binaries
+>>> WARNING: perl-net-libidn*: Redundant /usr/lib in rpath found
+>>> perl-net-libidn-doc*: Scanning shared objects
+>>> perl-net-libidn*: Scanning shared objects
+>>> perl-net-libidn-doc*: Tracing dependencies...
+>>> perl-net-libidn-doc*: Package size: 3.1 KB
+>>> perl-net-libidn-doc*: Compressing data...
+>>> perl-net-libidn-doc*: Create checksum...
+pigz: not found
+>>> perl-net-libidn-doc*: Create perl-net-libidn-doc-0.12-r16.apk
+>>> perl-net-libidn*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+	so:libidn.so.12
+>>> perl-net-libidn*: Package size: 37.0 KB
+>>> perl-net-libidn*: Compressing data...
+>>> perl-net-libidn*: Create checksum...
+pigz: not found
+>>> perl-net-libidn*: Create perl-net-libidn-0.12-r16.apk
+>>> perl-net-libidn: Build complete at Sun, 18 May 2025 07:05:41 +0000 elapsed time 0h 0m 5s
+>>> perl-net-libidn: Cleaning up srcdir
+>>> perl-net-libidn: Cleaning up pkgdir
+>>> perl-net-libidn: Uninstalling dependencies...
+(1/10) Purging .makedepends-perl-net-libidn (20250518.070538)
+(2/10) Purging libidn-dev (1.42-r0)
+(3/10) Purging libidn (1.42-r0)
+(4/10) Purging perl-dev (5.40.2-r0)
+(5/10) Purging perl-utils (5.40.2-r0)
+(6/10) Purging git-perl (2.47.2-r0)
+(7/10) Purging perl-git (2.47.2-r0)
+(8/10) Purging perl-error (0.17029-r2)
+(9/10) Purging perl (5.40.2-r0)
+(10/10) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-net-libidn: Updating the main/x86_64 repository index...
+>>> perl-net-libidn: Signing the index...
+pigz: not found

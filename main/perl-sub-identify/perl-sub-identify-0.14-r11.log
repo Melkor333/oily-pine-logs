@@ -1,0 +1,127 @@
+pigz: not found
+>>> perl-sub-identify: Building main/perl-sub-identify 0.14-r11 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:12:07 +0000
+>>> perl-sub-identify: Validating /home/packager/aports/main/perl-sub-identify/APKBUILD...
+>>> perl-sub-identify: Analyzing dependencies...
+>>> perl-sub-identify: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-sub-identify (20250518.091209)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-sub-identify: Cleaning up srcdir
+>>> perl-sub-identify: Cleaning up pkgdir
+>>> perl-sub-identify: Cleaning up tmpdir
+>>> perl-sub-identify: Fetching https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Sub-Identify-0.14.tar.gz.part'
+Sub-Identify-0.14.ta 100% |********************************| 53135  0:00:00 ETA
+'/var/cache/distfiles/Sub-Identify-0.14.tar.gz.part' saved
+>>> perl-sub-identify: Fetching https://cpan.metacpan.org/authors/id/R/RG/RGARCIA/Sub-Identify-0.14.tar.gz
+>>> perl-sub-identify: Checking sha512sums...
+Sub-Identify-0.14.tar.gz: OK
+>>> perl-sub-identify: Unpacking /var/cache/distfiles/Sub-Identify-0.14.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Sub::Identify
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Identify.xs > Identify.xsc
+Running Mkbootstrap for Identify ()
+chmod 644 "Identify.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Identify.bs blib/arch/auto/Sub/Identify/Identify.bs 644
+cp lib/Sub/Identify.pm blib/lib/Sub/Identify.pm
+mv Identify.xsc Identify.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.14\" -DXS_VERSION=\"0.14\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Identify.c
+In file included from Identify.xs:4:
+ppport.h:4389:10: warning: "WIDEST_UTYPE" redefined
+ 4389 | # define WIDEST_UTYPE U64TYPE
+      |          ^~~~~~~~~~~~
+In file included from /usr/lib/perl5/core_perl/CORE/perl.h:3329,
+                 from Identify.xs:2:
+/usr/lib/perl5/core_perl/CORE/handy.h:1422:9: note: this is the location of the previous definition
+ 1422 | #define WIDEST_UTYPE PERL_UINTMAX_T
+      |         ^~~~~~~~~~~~
+ppport.h:6060:11: warning: "MUTABLE_PTR" redefined
+ 6060 | #  define MUTABLE_PTR(p) ({ void *_p = (p); _p; })
+      |           ^~~~~~~~~~~
+/usr/lib/perl5/core_perl/CORE/handy.h:99:11: note: this is the location of the previous definition
+   99 | #  define MUTABLE_PTR(p) ({ void *p_ = (p); p_; })
+      |           ^~~~~~~~~~~
+rm -f blib/arch/auto/Sub/Identify/Identify.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Identify.o  -o blib/arch/auto/Sub/Identify/Identify.so  \
+      \
+  
+chmod 755 blib/arch/auto/Sub/Identify/Identify.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Identify.bs blib/arch/auto/Sub/Identify/Identify.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/01basic-pureperl.t ......... ok
+t/01basic.t .................. ok
+t/02errors.t ................. ok
+t/03proto.t .................. ok
+t/04codelocation-pureperl.t .. ok
+t/04codelocation.t ........... ok
+t/05constant-pureperl.t ...... ok
+t/05constant.t ............... ok
+t/06codelocxs-pureperl.t ..... ok
+t/06codelocxs.t .............. ok
+t/20attributes.t ............. ok
+t/21attributes-pureperl.t .... ok
+t/30signatures.t ............. ok
+t/pod.t ...................... skipped: Test::Pod 1.14 required for testing POD
+All tests successful.
+Files=14, Tests=146,  1 wallclock secs ( 0.06 usr  0.01 sys +  0.87 cusr  0.17 csys =  1.11 CPU)
+Result: PASS
+>>> perl-sub-identify: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Identify.bs blib/arch/auto/Sub/Identify/Identify.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-sub-identify/pkg/perl-sub-identify/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-sub-identify/pkg/perl-sub-identify/usr/lib/perl5/vendor_perl/auto/Sub/Identify/Identify.so
+Installing /home/packager/aports/main/perl-sub-identify/pkg/perl-sub-identify/usr/lib/perl5/vendor_perl/Sub/Identify.pm
+Installing /home/packager/aports/main/perl-sub-identify/pkg/perl-sub-identify/usr/share/man/man3/Sub::Identify.3pm
+>>> perl-sub-identify-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-sub-identify/pkg/perl-sub-identify-doc/usr/share/man'
+>>> perl-sub-identify-doc*: Preparing subpackage perl-sub-identify-doc...
+>>> perl-sub-identify-doc*: Running postcheck for perl-sub-identify-doc
+>>> perl-sub-identify*: Running postcheck for perl-sub-identify
+>>> perl-sub-identify*: Preparing package perl-sub-identify...
+>>> perl-sub-identify*: Stripping binaries
+>>> perl-sub-identify-doc*: Scanning shared objects
+>>> perl-sub-identify*: Scanning shared objects
+>>> perl-sub-identify-doc*: Tracing dependencies...
+>>> perl-sub-identify-doc*: Package size: 1.9 KB
+>>> perl-sub-identify-doc*: Compressing data...
+>>> perl-sub-identify-doc*: Create checksum...
+pigz: not found
+>>> perl-sub-identify-doc*: Create perl-sub-identify-doc-0.14-r11.apk
+>>> perl-sub-identify*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-sub-identify*: Package size: 18.0 KB
+>>> perl-sub-identify*: Compressing data...
+>>> perl-sub-identify*: Create checksum...
+pigz: not found
+>>> perl-sub-identify*: Create perl-sub-identify-0.14-r11.apk
+>>> perl-sub-identify: Build complete at Sun, 18 May 2025 09:12:13 +0000 elapsed time 0h 0m 6s
+>>> perl-sub-identify: Cleaning up srcdir
+>>> perl-sub-identify: Cleaning up pkgdir
+>>> perl-sub-identify: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-sub-identify (20250518.091209)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-sub-identify: Updating the main/x86_64 repository index...
+>>> perl-sub-identify: Signing the index...
+pigz: not found

@@ -1,0 +1,133 @@
+pigz: not found
+>>> tiff: Building main/tiff 4.7.0-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:06:49 +0000
+>>> tiff: Validating /home/packager/aports/main/tiff/APKBUILD...
+>>> tiff: Analyzing dependencies...
+>>> tiff: Installing for build: build-base cmake libjpeg-turbo-dev libwebp-dev python3 samurai zlib-dev zstd-dev diffutils
+(1/27) Installing lz4-libs (1.10.0-r0)
+(2/27) Installing xz-libs (5.6.3-r1)
+(3/27) Installing libarchive (3.7.9-r0)
+(4/27) Installing rhash-libs (1.4.5-r0)
+(5/27) Installing libuv (1.49.2-r0)
+(6/27) Installing cmake (3.31.7-r0)
+(7/27) Installing libjpeg-turbo (3.1.0-r0)
+(8/27) Installing libturbojpeg (3.1.0-r0)
+(9/27) Installing libjpeg-turbo-dev (3.1.0-r0)
+(10/27) Installing libsharpyuv (1.4.0-r0)
+(11/27) Installing libwebp (1.4.0-r0)
+(12/27) Installing libwebpdecoder (1.4.0-r0)
+(13/27) Installing libwebpdemux (1.4.0-r0)
+(14/27) Installing libwebpmux (1.4.0-r0)
+(15/27) Installing libwebp-dev (1.4.0-r0)
+(16/27) Installing libffi (3.4.7-r0)
+(17/27) Installing gdbm (1.24-r0)
+(18/27) Installing mpdecimal (4.0.0-r0)
+(19/27) Installing sqlite-libs (3.49.2-r0)
+(20/27) Installing python3 (3.12.10-r1)
+(21/27) Installing python3-pycache-pyc0 (3.12.10-r1)
+(22/27) Installing pyc (3.12.10-r1)
+(23/27) Installing python3-pyc (3.12.10-r1)
+(24/27) Installing samurai (1.2-r6)
+(25/27) Installing zstd (1.5.7-r0)
+(26/27) Installing zstd-dev (1.5.7-r0)
+(27/27) Installing .makedepends-tiff (20250523.160652)
+Executing busybox-1.37.0-r12.trigger
+OK: 655 MiB in 159 packages
+>>> tiff: Cleaning up srcdir
+>>> tiff: Cleaning up pkgdir
+>>> tiff: Cleaning up tmpdir
+>>> tiff: Fetching https://download.osgeo.org/libtiff/tiff-4.7.0.tar.gz
+Connecting to download.osgeo.org (140.211.15.30:443)
+saving to '/var/cache/distfiles/tiff-4.7.0.tar.gz.part'
+tiff-4.7.0.tar.gz.pa  12% |****                            |  479k  0:00:06 ETA
+tiff-4.7.0.tar.gz.pa 100% |********************************| 3805k  0:00:00 ETA
+'/var/cache/distfiles/tiff-4.7.0.tar.gz.part' saved
+>>> tiff: Fetching https://download.osgeo.org/libtiff/tiff-4.7.0.tar.gz
+>>> tiff: Checking sha512sums...
+tiff-4.7.0.tar.gz: OK
+>>> tiff: Unpacking /var/cache/distfiles/tiff-4.7.0.tar.gz...
+CMake Deprecation Warning at CMakeLists.txt:27 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at CMakeLists.txt:30 (cmake_policy):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Building tiff version 4.7.0
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/tiff/src/tiff-4.7.0/build/CMakeFiles/CMakeScratch/TryCompile-nMAhAA'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_15db3
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto  -std=gnu99 -o CMakeFiles/cmTC_15db3.dir/testCCompiler.c.o -c /home/packager/aports/main/tiff/src/tiff-4.7.0/build/CMakeFiles/CMakeScratch/TryCompile-nMAhAA/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_15db3.dir/testCCompiler.c.o -o cmTC_15db3   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_15db3.dir/testCCompiler.c.o -o cmTC_15db3   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_15db3: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_15db3 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:41 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: tiff: build failed
+>>> tiff: Uninstalling dependencies...
+(1/27) Purging .makedepends-tiff (20250523.160652)
+(2/27) Purging cmake (3.31.7-r0)
+(3/27) Purging libjpeg-turbo-dev (3.1.0-r0)
+(4/27) Purging libjpeg-turbo (3.1.0-r0)
+(5/27) Purging libturbojpeg (3.1.0-r0)
+(6/27) Purging libwebp-dev (1.4.0-r0)
+(7/27) Purging libwebpdecoder (1.4.0-r0)
+(8/27) Purging libwebpdemux (1.4.0-r0)
+(9/27) Purging libwebpmux (1.4.0-r0)
+(10/27) Purging python3-pyc (3.12.10-r1)
+(11/27) Purging python3-pycache-pyc0 (3.12.10-r1)
+(12/27) Purging pyc (3.12.10-r1)
+(13/27) Purging python3 (3.12.10-r1)
+(14/27) Purging samurai (1.2-r6)
+(15/27) Purging zstd-dev (1.5.7-r0)
+(16/27) Purging zstd (1.5.7-r0)
+(17/27) Purging gdbm (1.24-r0)
+(18/27) Purging libarchive (3.7.9-r0)
+(19/27) Purging libffi (3.4.7-r0)
+(20/27) Purging libuv (1.49.2-r0)
+(21/27) Purging libwebp (1.4.0-r0)
+(22/27) Purging lz4-libs (1.10.0-r0)
+(23/27) Purging mpdecimal (4.0.0-r0)
+(24/27) Purging rhash-libs (1.4.5-r0)
+(25/27) Purging sqlite-libs (3.49.2-r0)
+(26/27) Purging xz-libs (5.6.3-r1)
+(27/27) Purging libsharpyuv (1.4.0-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

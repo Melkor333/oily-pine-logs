@@ -1,0 +1,1633 @@
+pigz: not found
+>>> ruby-repl_type_completor: Building main/ruby-repl_type_completor 0.1.9-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:06:24 +0000
+>>> ruby-repl_type_completor: Validating /home/packager/aports/main/ruby-repl_type_completor/APKBUILD...
+>>> ruby-repl_type_completor: Analyzing dependencies...
+>>> ruby-repl_type_completor: Installing for build: build-base ruby ruby-rbs ruby-rdoc ruby-test-unit ruby-test-unit-ruby-core
+(1/12) Installing ca-certificates (20241121-r2)
+(2/12) Installing libffi (3.4.7-r0)
+(3/12) Installing yaml (0.2.5-r2)
+(4/12) Installing ruby-libs (3.3.8-r0)
+(5/12) Installing ruby (3.3.8-r0)
+(6/12) Installing ruby-bundler (2.6.8-r0)
+(7/12) Installing ruby-rbs (3.4.4-r0)
+(8/12) Installing ruby-rdoc (3.3.8-r0)
+(9/12) Installing ruby-power_assert (2.0.5-r0)
+(10/12) Installing ruby-test-unit (3.6.8-r0)
+(11/12) Installing ruby-test-unit-ruby-core (1.0.6-r0)
+(12/12) Installing .makedepends-ruby-repl_type_completor (20250523.180626)
+Executing ca-certificates-20241121-r2.trigger
+Executing busybox-1.37.0-r12.trigger
+OK: 589 MiB in 144 packages
+>>> ruby-repl_type_completor: Cleaning up srcdir
+>>> ruby-repl_type_completor: Cleaning up pkgdir
+>>> ruby-repl_type_completor: Cleaning up tmpdir
+>>> ruby-repl_type_completor: Fetching https://github.com/ruby/repl_type_completor/archive/v0.1.9/repl_type_completor-0.1.9.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/repl_type_completor-0.1.9.tar.gz.part'
+repl_type_completor- 100% |********************************| 32275  0:00:00 ETA
+'/var/cache/distfiles/repl_type_completor-0.1.9.tar.gz.part' saved
+>>> ruby-repl_type_completor: Fetching https://github.com/ruby/repl_type_completor/archive/v0.1.9/repl_type_completor-0.1.9.tar.gz
+>>> ruby-repl_type_completor: Checking sha512sums...
+repl_type_completor-0.1.9.tar.gz: OK
+gemspec.patch: OK
+>>> ruby-repl_type_completor: Unpacking /var/cache/distfiles/repl_type_completor-0.1.9.tar.gz...
+>>> ruby-repl_type_completor: gemspec.patch
+patching file repl_type_completor.gemspec
+WARNING:  description and summary are identical
+WARNING:  You have specified the uri:
+  https://github.com/ruby/repl_type_completor
+for all of the following keys:
+  homepage_uri
+  source_code_uri
+  documentation_uri
+Only the first one will be shown on rubygems.org
+WARNING:  See https://guides.rubygems.org/specification-reference/ for help
+  Successfully built RubyGem
+  Name: repl_type_completor
+  Version: 0.1.9
+  File: repl_type_completor-0.1.9.gem
+Loaded suite -e
+Started
+TestReplTypeCompletor::TestCase: 
+  TestReplTypeCompletor::AnalyzeTest: 
+    test_and_or:						E
+================================================================================
+Error: test_and_or(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:619:in `test_and_or'
+     616:     end
+     617: 
+     618:     def test_and_or
+  => 619:       assert_call('(1&&1.0).', include: Float, exclude: Integer)
+     620:       assert_call('(nil&&1.0).', include: NilClass)
+     621:       assert_call('(nil||1).', include: Integer)
+     622:       assert_call('(1||1.0).', include: Float)
+================================================================================
+: (2.211573)
+    test_array:							E
+================================================================================
+Error: test_array(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:538:in `test_array'
+     535:     end
+     536: 
+     537:     def test_array
+  => 538:       assert_call('[1,2,3].sample.', include: Integer)
+     539:       assert_call('a = 1.0; [1,2,a].sample.', include: [Integer, Float])
+     540:       assert_call('a = [1.0]; [1,2,*a].sample.', include: [Integer, Float])
+     541:     end
+================================================================================
+: (0.002341)
+    test_array_aref:						E
+================================================================================
+Error: test_array_aref(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:709:in `test_array_aref'
+     706:     end
+     707: 
+     708:     def test_array_aref
+  => 709:       assert_call('[1][0..].', include: [Array, NilClass], exclude: Integer)
+     710:       assert_call('[1][0].', include: Integer, exclude: [Array, NilClass])
+     711:       assert_call('[1].[](0).', include: Integer, exclude: [Array, NilClass])
+     712:       assert_call('[1].[](0){}.', include: Integer, exclude: [Array, NilClass])
+================================================================================
+: (0.019865)
+    test_block:							E
+================================================================================
+Error: test_block(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:177:in `test_block'
+     174:     end
+     175: 
+     176:     def test_block
+  => 177:       assert_call('nil.then{1}.', include: Integer, exclude: NilClass)
+     178:       assert_call('nil.then(&:to_s).', include: String, exclude: NilClass)
+     179:     end
+     180: 
+================================================================================
+: (0.002188)
+    test_block_args:						E
+================================================================================
+Error: test_block_args(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:698:in `test_block_args'
+     695:     end
+     696: 
+     697:     def test_block_args
+  => 698:       assert_call('[1,2,3].tap{|a| a.', include: Array)
+     699:       assert_call('[1,2,3].tap{|a,| a.', include: Integer)
+     700:       assert_call('[1,2,3].tap{|a,b| a.', include: Integer)
+     701:       assert_call('[1,2,3].tap{|(a,b)| a.', include: Integer)
+================================================================================
+: (0.002377)
+    test_block_break:						E
+================================================================================
+Error: test_block_break(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:182:in `test_block_break'
+     179:     end
+     180: 
+     181:     def test_block_break
+  => 182:       assert_call('1.tap{}.', include: [Integer], exclude: NilClass)
+     183:       assert_call('1.tap{break :a}.', include: [Symbol, Integer], exclude: NilClass)
+     184:       assert_call('1.tap{break :a, :b}[0].', include: Symbol)
+     185:       assert_call('1.tap{break :a; break "a"}.', include: [Symbol, Integer], exclude: [NilClass, String])
+================================================================================
+: (0.002286)
+    test_block_next:						E
+================================================================================
+Error: test_block_next(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:197:in `test_block_next'
+     194:     end
+     195: 
+     196:     def test_block_next
+  => 197:       assert_call('nil.then{1}.', include: Integer, exclude: [NilClass, Object])
+     198:       assert_call('nil.then{next 1}.', include: Integer, exclude: [NilClass, Object])
+     199:       assert_call('nil.then{next :a, :b}[0].', include: Symbol)
+     200:       assert_call('nil.then{next 1; 1.0}.', include: Integer, exclude: [Float, NilClass, Object])
+================================================================================
+: (0.002306)
+    test_block_parameter:					E
+================================================================================
+Error: test_block_parameter(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:397:in `test_block_parameter'
+     394:     end
+     395: 
+     396:     def test_block_parameter
+  => 397:       assert_call('method { |arg = 1.chr.', include: [String])
+     398:       assert_call('method do |arg = 1.chr.', include: [String])
+     399:       assert_call('method { |arg1 = 1.|(2|3), arg2 = 1.chr.', include: [String])
+     400:       assert_call('method do |arg1 = 1.|(2|3), arg2 = 1.chr.', include: [String])
+================================================================================
+: (0.019883)
+    test_block_symbol:						E
+================================================================================
+Error: test_block_symbol(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:148:in `test_block_symbol'
+     145:     end
+     146: 
+     147:     def test_block_symbol
+  => 148:       assert_call('[1].map(&:', include: Integer)
+     149:       assert_call('1.to_s.tap(&:', include: String)
+     150:     end
+     151: 
+================================================================================
+: (0.002498)
+    test_bottom_type_termination:				E
+================================================================================
+Error: test_bottom_type_termination(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:681:in `test_bottom_type_termination'
+     678:     end
+     679: 
+     680:     def test_bottom_type_termination
+  => 681:       assert_call('a=1; tap { raise; a=1.0; a.', include: Float)
+     682:       assert_call('a=1; tap { loop{}; a=1.0; a.', include: Float)
+     683:       assert_call('a=1; tap { raise; a=1.0 } a.', include: Integer, exclude: Float)
+     684:       assert_call('a=1; tap { loop{}; a=1.0 } a.', include: Integer, exclude: Float)
+================================================================================
+: (0.002252)
+    test_call_parameter:					E
+================================================================================
+Error: test_call_parameter(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:688:in `test_call_parameter'
+     685:     end
+     686: 
+     687:     def test_call_parameter
+  => 688:       assert_call('f((x=1),*b,c:1,**d,&e); x.', include: Integer)
+     689:       assert_call('f(a,*(x=1),c:1,**d,&e); x.', include: Integer)
+     690:       assert_call('f(a,*b,(x=1):1,**d,&e); x.', include: Integer)
+     691:       assert_call('f(a,*b,c:(x=1),**d,&e); x.', include: Integer)
+================================================================================
+: (0.002186)
+    test_case_in:						E
+================================================================================
+Error: test_case_in(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:657:in `test_case_in'
+     654:     end
+     655: 
+     656:     def test_case_in
+  => 657:       assert_call('case x; in A; 1; in B; 1.0; end.', include: [Integer, Float], exclude: NilClass)
+     658:       assert_call('case x; in A; 1; in B; 1.0; else; 1r; end.', include: [Integer, Float, Rational], exclude: NilClass)
+     659:       assert_call('a=""; case 1; in A; a=1; in B; a=1.0; end; a.', include: [Integer, Float], exclude: String)
+     660:       assert_call('a=""; case 1; in A; a=1; in B; a=1.0; else; a=1r; end; a.', include: [Integer, Float, Rational], exclude: String)
+================================================================================
+: (0.002131)
+    test_case_when:						E
+================================================================================
+Error: test_case_when(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:646:in `test_case_when'
+     643:     end
+     644: 
+     645:     def test_case_when
+  => 646:       assert_call('case x; when A; 1; when B; 1.0; end.', include: [Integer, Float, NilClass])
+     647:       assert_call('case x; when A; 1; when B; 1.0; else; 1r; end.', include: [Integer, Float, Rational], exclude: NilClass)
+     648:       assert_call('case; when (a=1); a.', include: Integer)
+     649:       assert_call('case x; when (a=1); a.', include: Integer)
+================================================================================
+: (0.020258)
+    test_class_module:						E
+================================================================================
+Error: test_class_module(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:428:in `test_class_module'
+     425:     end
+     426: 
+     427:     def test_class_module
+  => 428:       assert_call('class (1.', include: Integer)
+     429:       assert_call('class (a=1)::B; end; a.', include: Integer)
+     430:       assert_call('class Array; 1; end.', include: Integer)
+     431:       assert_call('class ::Array; 1; end.', include: Integer)
+================================================================================
+: (0.002535)
+    test_conditional_assign:					E
+================================================================================
+Error: test_conditional_assign(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:167:in `test_conditional_assign'
+     164:     end
+     165: 
+     166:     def test_conditional_assign
+  => 167:       assert_call('a = 1; a = "" if cond; a.', include: [String, Integer], exclude: NilClass)
+     168:       assert_call('a = 1 if cond; a.', include: [Integer, NilClass])
+     169:       assert_call(<<~RUBY, include: [String, Symbol], exclude: [Integer, NilClass])
+     170:         a = 1
+================================================================================
+: (0.002203)
+    test_constant_path:						E
+================================================================================
+Error: test_constant_path(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:450:in `test_constant_path'
+     447:     end
+     448: 
+     449:     def test_constant_path
+  => 450:       assert_call('class A; X=1; class B; X=""; X.', include: String, exclude: Integer)
+     451:       assert_call('class A; X=1; class B; X=""; end; X.', include: Integer, exclude: String)
+     452:       assert_call('class A; class B; X=1; end; end; class A; class B; X.', include: Integer)
+     453:       assert_call('module ReplTypeCompletor; VERSION.', include: String)
+================================================================================
+: (0.014432)
+    test_def:							E
+================================================================================
+Error: test_def(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:364:in `test_def'
+     361:     end
+     362: 
+     363:     def test_def
+  => 364:       assert_call('def f; end.', include: Symbol)
+     365:       assert_call('s=""; def s.f; self.', include: String)
+     366:       assert_call('def (a="").f; end; a.', include: String)
+     367:       assert_call('def f(a=1); a.', include: Integer)
+================================================================================
+: (0.031991)
+    test_defined:						E
+================================================================================
+Error: test_defined(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:386:in `test_defined'
+     383:     end
+     384: 
+     385:     def test_defined
+  => 386:       assert_call('defined?(a.b+c).', include: [String, NilClass])
+     387:       assert_call('defined?(a = 1); tap { a = 1.0 }; a.', include: [Integer, Float, NilClass])
+     388:     end
+     389: 
+================================================================================
+: (0.002530)
+    test_field_assign:						E
+================================================================================
+Error: test_field_assign(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:354:in `test_field_assign'
+     351:     end
+     352: 
+     353:     def test_field_assign
+  => 354:       assert_call('(a.!=1).', exclude: Integer)
+     355:       assert_call('(a.b=1).', include: Integer, exclude: NilClass)
+     356:       assert_call('(a&.b=1).', include: Integer)
+     357:       assert_call('(nil&.b=1).', include: NilClass)
+================================================================================
+: (0.002276)
+    test_for:							E
+================================================================================
+Error: test_for(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:594:in `test_for'
+     591:     end
+     592: 
+     593:     def test_for
+  => 594:       assert_call('for i in [1,2,3]; i.', include: Integer)
+     595:       assert_call('for i,j in [1,2,3]; i.', include: Integer)
+     596:       assert_call('for *,(*) in [1,2,3]; 1.', include: Integer)
+     597:       assert_call('for *i in [1,2,3]; i.sample.', include: Integer)
+================================================================================
+: (0.006825)
+    test_gvar_no_scope:						E
+================================================================================
+Error: test_gvar_no_scope(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:295:in `test_gvar_no_scope'
+     292:         $a = 'maybe' if x?
+     293:         $a.
+     294:       RUBY
+  => 295:       assert_call(code, include: [Symbol, String])
+     296:     end
+     297: 
+     298:     def test_ivar_no_scope
+================================================================================
+: (0.002194)
+    test_hash:							E
+================================================================================
+Error: test_hash(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:527:in `test_hash'
+     524:     end
+     525: 
+     526:     def test_hash
+  => 527:       assert_call('{}.', include: Hash)
+     528:       assert_call('{**a}.', include: Hash)
+     529:       assert_call('{ rand: }.values.sample.', include: Float)
+     530:       assert_call('rand=""; { rand: }.values.sample.', include: String, exclude: Float)
+================================================================================
+: (0.002187)
+    test_if_unless:						E
+================================================================================
+Error: test_if_unless(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:566:in `test_if_unless'
+     563:     end
+     564: 
+     565:     def test_if_unless
+  => 566:       assert_call('if cond; 1; end.', include: Integer)
+     567:       assert_call('unless true; 1; end.', include: Integer)
+     568:       assert_call('a=1; (a=1.0) if cond; a.', include: [Integer, Float])
+     569:       assert_call('a=1; (a=1.0) unless cond; a.', include: [Integer, Float])
+================================================================================
+: (0.016601)
+    test_instance_eval:						E
+================================================================================
+Error: test_instance_eval(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:192:in `test_instance_eval'
+     189:     end
+     190: 
+     191:     def test_instance_eval
+  => 192:       assert_call('1.instance_eval{:a.then{self.', include: Integer, exclude: Symbol)
+     193:       assert_call('1.then{:a.instance_eval{self.', include: Symbol, exclude: Integer)
+     194:     end
+     195: 
+================================================================================
+: (0.002205)
+    test_interface_match_var:					E
+================================================================================
+Error: test_interface_match_var(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:266:in `test_interface_match_var'
+     263:     end
+     264: 
+     265:     def test_interface_match_var
+  => 266:       assert_call('([1]+[:a]+["a"]).sample.', include: [Integer, String, Symbol])
+     267:     end
+     268: 
+     269:     def test_lvar_scope
+================================================================================
+: (0.002271)
+    test_it_parameter:						E
+================================================================================
+Error: test_it_parameter(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:556:in `test_it_parameter'
+     553:     end
+     554: 
+     555:     def test_it_parameter
+  => 556:       assert_call('->{it.', include: Object, exclude: NilClass)
+     557:       assert_call('->{p it; it=:a; it.', include: Symbol, exclude: Object)
+     558:       assert_call('1.tap{it.', include: Integer)
+     559:       assert_call('1.tap{p it; it=:a; it.', include: Symbol, exclude: Integer)
+================================================================================
+: (0.003749)
+    test_ivar_no_scope:						E
+================================================================================
+Error: test_ivar_no_scope(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:304:in `test_ivar_no_scope'
+     301:         @a = 'maybe' if x?
+     302:         @a.
+     303:       RUBY
+  => 304:       assert_call(code, include: [Symbol, String])
+     305:     end
+     306: 
+     307:     def test_massign
+================================================================================
+: (0.002132)
+    test_literal:						E
+================================================================================
+Error: test_literal(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:474:in `test_literal'
+     471:     end
+     472: 
+     473:     def test_literal
+  => 474:       assert_call('1.', include: Integer)
+     475:       assert_call('1.0.', include: Float)
+     476:       assert_call('1r.', include: Rational)
+     477:       assert_call('1i.', include: Complex)
+================================================================================
+: (0.016422)
+    test_local_variable_assign:					E
+================================================================================
+Error: test_local_variable_assign(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:142:in `test_local_variable_assign'
+     139:     end
+     140: 
+     141:     def test_local_variable_assign
+  => 142:       assert_call('(a = 1).', include: Integer)
+     143:       assert_call('a = 1; a = ""; a.', include: String, exclude: Integer)
+     144:       assert_call('1 => a; a.', include: Integer)
+     145:     end
+================================================================================
+: (0.002293)
+    test_lvar_ivar_gvar_cvar:					E
+================================================================================
+Error: test_lvar_ivar_gvar_cvar(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:31:in `assert_analyze_type'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:49:in `test_lvar_ivar_gvar_cvar'
+     46:     end
+     47: 
+     48:     def test_lvar_ivar_gvar_cvar
+  => 49:       assert_analyze_type('puts(x', :lvar_or_method, 'x')
+     50:       assert_analyze_type('puts($', :gvar, '$')
+     51:       assert_analyze_type('puts($x', :gvar, '$x')
+     52:       assert_analyze_type('puts(@', :ivar, '@')
+================================================================================
+: (0.002578)
+    test_lvar_scope:						E
+================================================================================
+Error: test_lvar_scope(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:278:in `test_lvar_scope'
+     275:         a = {} if x?
+     276:         a.
+     277:       RUBY
+  => 278:       assert_call(code, include: [Hash, Integer, String], exclude: [Symbol])
+     279:     end
+     280: 
+     281:     def test_lvar_scope_complex
+================================================================================
+: (0.002989)
+    test_lvar_scope_complex:					E
+================================================================================
+Error: test_lvar_scope_complex(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:282:in `test_lvar_scope_complex'
+     279:     end
+     280: 
+     281:     def test_lvar_scope_complex
+  => 282:       assert_call('if cond; a = 1; else; tap { a = :a }; end; a.', include: [NilClass, Integer, Symbol], exclude: [Object])
+     283:       assert_call('def f; if cond; a = 1; return; end; tap { a = :a }; a.', include: [NilClass, Symbol], exclude: [Integer, Object])
+     284:       assert_call('def f; if cond; return; a = 1; end; tap { a = :a }; a.', include: [NilClass, Symbol], exclude: [Integer, Object])
+     285:       assert_call('def f; if cond; return; if cond; return; a = 1; end; end; tap { a = :a }; a.', include: [NilClass, Symbol], exclude: [Integer, Object])
+================================================================================
+: (0.002446)
+    test_lvar_singleton_method:					E
+================================================================================
+Error: test_lvar_singleton_method(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:134:in `test_lvar_singleton_method'
+     131:       c = Object.new
+     132:       d = [a, b, c]
+     133:       binding = Kernel.binding
+  => 134:       assert_call('a.', include: Integer, exclude: String, binding: binding)
+     135:       assert_call('b.', include: b.singleton_class, exclude: [Integer, Object], binding: binding)
+     136:       assert_call('c.', include: c.singleton_class, exclude: [Integer, String], binding: binding)
+     137:       assert_call('d.', include: d.class, exclude: [Integer, String, Object], binding: binding)
+================================================================================
+: (0.002265)
+    test_massign:						E
+================================================================================
+Error: test_massign(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:308:in `test_massign'
+     305:     end
+     306: 
+     307:     def test_massign
+  => 308:       assert_call('(a,=1).', include: Integer)
+     309:       assert_call('(a,=[*1])[0].', include: Integer)
+     310:       assert_call('(a,=[1,2])[0].', include: Integer)
+     311:       assert_call('a,=[1,2]; a.', include: Integer, exclude: Array)
+================================================================================
+: (0.002198)
+    test_method_select:						E
+================================================================================
+Error: test_method_select(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:256:in `test_method_select'
+     253:     end
+     254: 
+     255:     def test_method_select
+  => 256:       assert_call('([]*4).', include: Array, exclude: String)
+     257:       assert_call('([]*"").', include: String, exclude: Array)
+     258:       assert_call('([]*unknown).', include: [String, Array])
+     259:       assert_call('p(1).', include: Integer)
+================================================================================
+: (0.001456)
+    test_module_cvar_ref:					E
+================================================================================
+Error: test_module_cvar_ref(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:119:in `test_module_cvar_ref'
+     116:     end
+     117:     def test_module_cvar_ref
+     118:       bind = binding
+  => 119:       assert_call('@@foo=1; class A; @@foo.', exclude: Integer, binding: bind)
+     120:       assert_call('@@foo=1; class A; @@foo=1.0; @@foo.', include: Float, exclude: Integer, binding: bind)
+     121:       assert_call('@@foo=1; class A; @@foo=1.0; end; @@foo.', include: Integer, exclude: Float, binding: bind)
+     122:       assert_call('module CVarModule; @@test_cvar.', include: Integer, binding: bind)
+================================================================================
+: (0.001286)
+    test_numbered_parameter:					E
+================================================================================
+Error: test_numbered_parameter(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:544:in `test_numbered_parameter'
+     541:     end
+     542: 
+     543:     def test_numbered_parameter
+  => 544:       assert_call('loop{_1.', include: NilClass)
+     545:       assert_call('1.tap{_1.', include: Integer)
+     546:       assert_call('1.tap{_3.', include: NilClass, exclude: Integer)
+     547:       assert_call('[:a,1].tap{_1.', include: Array, exclude: [Integer, Symbol])
+================================================================================
+: (0.001662)
+    test_optional_chain:					E
+================================================================================
+Error: test_optional_chain(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:418:in `test_optional_chain'
+     415:     end
+     416: 
+     417:     def test_optional_chain
+  => 418:       assert_call('[1,nil].sample.', include: [Integer, NilClass])
+     419:       assert_call('[1,nil].sample&.', include: [Integer], exclude: [NilClass])
+     420:       assert_call('[1,nil].sample.chr.', include: [String], exclude: [NilClass])
+     421:       assert_call('[1,nil].sample&.chr.', include: [String, NilClass])
+================================================================================
+: (0.002238)
+    test_opwrite:						E
+================================================================================
+Error: test_opwrite(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:626:in `test_opwrite'
+     623:     end
+     624: 
+     625:     def test_opwrite
+  => 626:       assert_call('a=[]; a*=1; a.', include: Array)
+     627:       assert_call('a=[]; a*=""; a.', include: String)
+     628:       assert_call('a=[1,false].sample; a||=1.0; a.', include: [Integer, Float])
+     629:       assert_call('a=1; a&&=1.0; a.', include: Float, exclude: Integer)
+================================================================================
+: (0.002654)
+    test_pattern_match:						E
+================================================================================
+Error: test_pattern_match(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:674:in `test_pattern_match'
+     671:     end
+     672: 
+     673:     def test_pattern_match
+  => 674:       assert_call('1 in a; a.', include: Integer)
+     675:       assert_call('a=1; x in String=>a; a.', include: [Integer, String])
+     676:       assert_call('a=1; x=>String=>a; a.', include: String, exclude: Integer)
+     677:       assert_call('x in (((String)|Integer))=>a; a.', include: [String, Integer])
+================================================================================
+: (0.002128)
+    test_range:							E
+================================================================================
+Error: test_range(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:159:in `test_range'
+     156:     end
+     157: 
+     158:     def test_range
+  => 159:       assert_call('(1..2).first.', include: Integer)
+     160:       assert_call('("a".."b").first.', include: String)
+     161:       assert_call('(..1.to_f).first.', include: Float)
+     162:       assert_call('(1.to_s..).first.', include: String)
+================================================================================
+: (0.017246)
+    test_rarely_used_syntax:					E
+================================================================================
+Error: test_rarely_used_syntax(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:510:in `test_rarely_used_syntax'
+     507: 
+     508:     def test_rarely_used_syntax
+     509:       # FlipFlop
+  => 510:       assert_call('if (a=1).even?..(a=1.0).even; a.', include: [Integer, Float])
+     511:       # MatchLastLine
+     512:       assert_call('if /regexp/; 1.', include: Integer)
+     513:       assert_call('if /reg#{a=1}exp/; a.', include: Integer)
+================================================================================
+: (0.002056)
+    test_rbs_instance_type:					E
+================================================================================
+Error: test_rbs_instance_type(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:724:in `test_rbs_instance_type'
+     721:     end
+     722: 
+     723:     def test_rbs_instance_type
+  => 724:       assert_call('Thread.start{}.', include: Thread)
+     725:       assert_call('"".encode("utf-8").', include: String)
+     726:     end
+     727:   end
+================================================================================
+: (0.002716)
+    test_rbs_untyped_function:					E
+================================================================================
+Error: test_rbs_untyped_function(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:717:in `test_rbs_untyped_function'
+     714: 
+     715:     def test_rbs_untyped_function
+     716:       # Block of Thread#initialize `(*untyped) { (?) -> void } -> void` is RBS::Types::UntypedFunction
+  => 717:       assert_call('Thread.new{_1.', include: NilClass)
+     718:       assert_call('"a".instance_eval{Thread.new{self.', include: String)
+     719:       # Proc#call `(?) -> untyped` is RBS::Types::UntypedFunction
+     720:       assert_call('proc{}.call; 1.', include: Integer)
+================================================================================
+: (0.002785)
+    test_redo_retry_yield_super:				E
+================================================================================
+Error: test_redo_retry_yield_super(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:499:in `test_redo_retry_yield_super'
+     496:     end
+     497: 
+     498:     def test_redo_retry_yield_super
+  => 499:       assert_call('a=nil; tap do a=1; redo; a=1i; end; a.', include: Integer, exclude: Complex)
+     500:       assert_call('a=nil; tap do a=1; retry; a=1i; end; a.', include: Integer, exclude: Complex)
+     501:       assert_call('a = 0; a = yield; a.', include: Object, exclude: Integer)
+     502:       assert_call('yield 1,(a=1); a.', include: Integer)
+================================================================================
+: (0.002320)
+    test_ref:							E
+================================================================================
+Error: test_ref(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:92:in `test_ref'
+     89:           binding
+     90:         end
+     91:       RUBY
+  => 92:       assert_call('STDIN.', include: STDIN.singleton_class)
+     93:       assert_call('$stdin.', include: $stdin.singleton_class)
+     94:       assert_call('@ivar.', include: Symbol, binding: bind)
+     95:       assert_call('@@cvar.', include: String, binding: bind)
+================================================================================
+: (0.002814)
+    test_rescue:						E
+================================================================================
+Error: test_rescue(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:59:in `test_rescue'
+     56:     end
+     57: 
+     58:     def test_rescue
+  => 59:       assert_call '(1 rescue 1.0).', include: [Integer, Float]
+     60:       assert_call 'a=""; (a=1) rescue (a=1.0); a.', include: [Integer, Float], exclude: String
+     61:       assert_call 'begin; 1; rescue; 1.0; end.', include: [Integer, Float]
+     62:       assert_call 'begin; 1; rescue A; 1.0; rescue B; 1i; end.', include: [Integer, Float, Complex]
+================================================================================
+: (0.002241)
+    test_rescue_assign:						E
+================================================================================
+Error: test_rescue_assign(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:72:in `test_rescue_assign'
+     69:     end
+     70: 
+     71:     def test_rescue_assign
+  => 72:       assert_equal [:lvar_or_method, 'a'], analyze('begin; rescue => a')[0, 2]
+     73:       assert_equal [:gvar, '$a'], analyze('begin; rescue => $a')[0, 2]
+     74:       assert_equal [:ivar, '@a'], analyze('begin; rescue => @a')[0, 2]
+     75:       assert_equal [:cvar, '@@a'], analyze('begin; rescue => @@a')[0, 2]
+================================================================================
+: (0.002678)
+    test_self:							E
+================================================================================
+Error: test_self(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:405:in `test_self'
+     402: 
+     403:     def test_self
+     404:       integer_binding = 1.instance_eval { Kernel.binding }
+  => 405:       assert_call('self.', include: [Integer], binding: integer_binding)
+     406:       string = +''
+     407:       string_binding = string.instance_eval { Kernel.binding }
+     408:       assert_call('self.', include: [string.singleton_class], binding: string_binding)
+================================================================================
+: (0.003829)
+    test_self_ivar_ref:						E
+================================================================================
+Error: test_self_ivar_ref(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:103:in `test_self_ivar_ref'
+     100:     def test_self_ivar_ref
+     101:       obj = Object.new
+     102:       obj.instance_variable_set(:@hoge, 1)
+  => 103:       assert_call('obj.instance_eval { @hoge.', include: Integer, binding: obj.instance_eval { binding })
+     104:       if Class.method_defined? :attached_object
+     105:         bind = binding
+     106:         assert_call('obj.instance_eval { @hoge.', include: Integer, binding: bind)
+================================================================================
+: (0.002146)
+    test_special_var:						E
+================================================================================
+Error: test_special_var(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:611:in `test_special_var'
+     608:     end
+     609: 
+     610:     def test_special_var
+  => 611:       assert_call('__FILE__.', include: String)
+     612:       assert_call('__LINE__.', include: Integer)
+     613:       assert_call('__ENCODING__.', include: Encoding)
+     614:       assert_call('$1.', include: String)
+================================================================================
+: (0.002039)
+    test_ternary_operator:					E
+================================================================================
+Error: test_ternary_operator(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:391:in `test_ternary_operator'
+     388:     end
+     389: 
+     390:     def test_ternary_operator
+  => 391:       assert_call('condition ? 1.chr.', include: [String])
+     392:       assert_call('condition ? value : 1.chr.', include: [String])
+     393:       assert_call('condition ? cond ? cond ? value : cond ? value : 1.chr.', include: [String])
+     394:     end
+================================================================================
+: (0.002195)
+    test_to_str_to_int:						E
+================================================================================
+Error: test_to_str_to_int(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:251:in `test_to_str_to_int'
+     248:       binding = Kernel.binding
+     249:       assert_equal String, ([] * sobj).class
+     250:       assert_equal Array, ([] * iobj).class
+  => 251:       assert_call('([]*sobj).', include: String, exclude: Array, binding: binding)
+     252:       assert_call('([]*iobj).', include: Array, exclude: String, binding: binding)
+     253:     end
+     254: 
+================================================================================
+: (0.002389)
+    test_union_splat:						E
+================================================================================
+Error: test_union_splat(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:153:in `test_union_splat'
+     150:     end
+     151: 
+     152:     def test_union_splat
+  => 153:       assert_call('a, = [[:a], 1, nil].sample; a.', include: [Symbol, Integer, NilClass], exclude: Object)
+     154:       assert_call('[[:a], 1, nil].each do _2; _1.', include: [Symbol, Integer, NilClass], exclude: Object)
+     155:       assert_call('a = [[:a], 1, ("a".."b")].sample; [*a].sample.', include: [Symbol, Integer, String], exclude: Object)
+     156:     end
+================================================================================
+: (0.017151)
+    test_vars_with_branch_termination:				E
+================================================================================
+Error: test_vars_with_branch_termination(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:210:in `test_vars_with_branch_termination'
+     207:     end
+     208: 
+     209:     def test_vars_with_branch_termination
+  => 210:       assert_call('a=1; tap{break; a=//}; a.', include: Integer, exclude: Regexp)
+     211:       assert_call('a=1; tap{a=1.0; break; a=//}; a.', include: [Integer, Float], exclude: Regexp)
+     212:       assert_call('a=1; tap{next; a=//}; a.', include: Integer, exclude: Regexp)
+     213:       assert_call('a=1; tap{a=1.0; next; a=//}; a.', include: [Integer, Float], exclude: Regexp)
+================================================================================
+: (0.002814)
+    test_while_until:						E
+================================================================================
+Error: test_while_until(TestReplTypeCompletor::AnalyzeTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:27:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:39:in `assert_call'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_type_analyze.rb:582:in `test_while_until'
+     579:     end
+     580: 
+     581:     def test_while_until
+  => 582:       assert_call('while cond; 123; end.', include: NilClass)
+     583:       assert_call('until cond; 123; end.', include: NilClass)
+     584:       assert_call('a=1; a=1.0 while cond; a.', include: [Integer, Float])
+     585:       assert_call('a=1; a=1.0 until cond; a.', include: [Integer, Float])
+================================================================================
+: (0.002163)
+  TestReplTypeCompletor::ReplTypeCompletorTest: 
+    test_analyze_error:						.: (0.000470)
+    test_basic_object:						E
+================================================================================
+Error: test_basic_object(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:167:in `test_basic_object'
+     164:       bo.instance_eval { @bar = 1 }
+     165:       bind = binding
+     166:       bo_self_bind = bo.instance_eval { Kernel.binding }
+  => 167:       assert_completion('bo.', binding: bind, include: 'foo')
+     168:       assert_completion('def bo.baz; self.', binding: bind, include: 'foo')
+     169:       assert_completion('[bo].first.', binding: bind, include: 'foo')
+     170:       assert_doc_namespace('bo', 'BasicObject', binding: bind)
+================================================================================
+E
+================================================================================
+Error: test_basic_object(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:167:in `test_basic_object'
+     164:       bo.instance_eval { @bar = 1 }
+     165:       bind = binding
+     166:       bo_self_bind = bo.instance_eval { Kernel.binding }
+  => 167:       assert_completion('bo.', binding: bind, include: 'foo')
+     168:       assert_completion('def bo.baz; self.', binding: bind, include: 'foo')
+     169:       assert_completion('[bo].first.', binding: bind, include: 'foo')
+     170:       assert_doc_namespace('bo', 'BasicObject', binding: bind)
+================================================================================
+: (0.004963)
+    test_call:							E
+================================================================================
+Error: test_call(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:77:in `test_call'
+     74:     end
+     75: 
+     76:     def test_call
+  => 77:       assert_completion('1.', include: 'abs')
+     78:       assert_completion('1.a', include: 'bs')
+     79:       assert_completion('ran', include: 'd')
+     80:       assert_doc_namespace('1.abs', 'Integer#abs')
+================================================================================
+E
+================================================================================
+Error: test_call(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:77:in `test_call'
+     74:     end
+     75: 
+     76:     def test_call
+  => 77:       assert_completion('1.', include: 'abs')
+     78:       assert_completion('1.a', include: 'bs')
+     79:       assert_completion('ran', include: 'd')
+     80:       assert_doc_namespace('1.abs', 'Integer#abs')
+================================================================================
+: (0.006166)
+    test_closed_no_completion:					E
+================================================================================
+Error: test_closed_no_completion(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:90:in `test_closed_no_completion'
+     87:       # `:"bin"` should not complete `:"bin"ding`
+     88:       assert_nil(ReplTypeCompletor.analyze(':"bin"', binding: binding))
+     89:       # `ex()` should not complete `ex()it`
+  => 90:       assert_nil(ReplTypeCompletor.analyze('ex()', binding: binding))
+     91:     end
+     92: 
+     93:     def test_lvar
+================================================================================
+: (0.002235)
+    test_completion_candidates_error:				E
+================================================================================
+Error: test_completion_candidates_error(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:239:in `block in test_completion_candidates_error'
+     236:     def test_completion_candidates_error
+     237:       result = ReplTypeCompletor.analyze '1.', binding: binding
+     238:       with_failing_method(ReplTypeCompletor::Types::InstanceType, :methods, 'error_in_methods') do
+  => 239:         assert_equal [], result.completion_candidates
+     240:       end
+     241:       assert_equal 'error_in_methods', ReplTypeCompletor.last_completion_error&.message
+     242:     ensure
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:221:in `with_failing_method'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:238:in `test_completion_candidates_error'
+================================================================================
+: (0.002115)
+    test_confusing_lvar_method_it:				E
+================================================================================
+Error: test_confusing_lvar_method_it(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:107:in `test_confusing_lvar_method_it'
+     104: 
+     105:     def test_confusing_lvar_method_it
+     106:       bind = eval('item = 1; ins=1; random = 1; binding')
+  => 107:       assert_completion('->{it', binding: bind, include: ['em', 'self'])
+     108:       assert_completion('->{ins', binding: bind, include: 'pect')
+     109:       assert_completion('->{rand', binding: bind, include: 'om')
+     110:     end
+================================================================================
+E
+================================================================================
+Error: test_confusing_lvar_method_it(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:107:in `test_confusing_lvar_method_it'
+     104: 
+     105:     def test_confusing_lvar_method_it
+     106:       bind = eval('item = 1; ins=1; random = 1; binding')
+  => 107:       assert_completion('->{it', binding: bind, include: ['em', 'self'])
+     108:       assert_completion('->{ins', binding: bind, include: 'pect')
+     109:       assert_completion('->{rand', binding: bind, include: 'om')
+     110:     end
+================================================================================
+: (0.004116)
+    test_const:							E
+================================================================================
+Error: test_const(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:113:in `test_const'
+     110:     end
+     111: 
+     112:     def test_const
+  => 113:       assert_completion('Ar', include: 'ray')
+     114:       assert_completion('::Ar', include: 'ray')
+     115:       assert_completion('ReplTypeCompletor::V', include: 'ERSION')
+     116:       assert_completion('FooBar=1; F', include: 'ooBar')
+================================================================================
+E
+================================================================================
+Error: test_const(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:113:in `test_const'
+     110:     end
+     111: 
+     112:     def test_const
+  => 113:       assert_completion('Ar', include: 'ray')
+     114:       assert_completion('::Ar', include: 'ray')
+     115:       assert_completion('ReplTypeCompletor::V', include: 'ERSION')
+     116:       assert_completion('FooBar=1; F', include: 'ooBar')
+================================================================================
+: (0.019138)
+    test_cvar:							E
+================================================================================
+Error: test_cvar(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:150:in `test_cvar'
+     147:     def test_cvar
+     148:       bind = eval('m=Module.new; module m::M; @@foo = 1; binding; end')
+     149:       assert_equal(1, bind.eval('@@foo'))
+  => 150:       assert_completion('@', binding: bind, include: '@foo')
+     151:       assert_completion('@@', binding: bind, include: 'foo')
+     152:       assert_completion('@@f', binding: bind, include: 'oo')
+     153:       assert_doc_namespace('@@foo', 'Integer', binding: bind)
+================================================================================
+E
+================================================================================
+Error: test_cvar(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:150:in `test_cvar'
+     147:     def test_cvar
+     148:       bind = eval('m=Module.new; module m::M; @@foo = 1; binding; end')
+     149:       assert_equal(1, bind.eval('@@foo'))
+  => 150:       assert_completion('@', binding: bind, include: '@foo')
+     151:       assert_completion('@@', binding: bind, include: 'foo')
+     152:       assert_completion('@@f', binding: bind, include: 'oo')
+     153:       assert_doc_namespace('@@foo', 'Integer', binding: bind)
+================================================================================
+: (0.004382)
+    test_deprecated_const_without_warning:			E
+================================================================================
+Error: test_deprecated_const_without_warning(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:190:in `block in test_deprecated_const_without_warning'
+     187:     deprecate_constant :DEPRECATED_CONST
+     188:     def test_deprecated_const_without_warning
+     189:       assert_deprecated_warning(/\A\z/) do
+  => 190:         assert_completion('DEPRECATED', include: '_CONST', binding: binding)
+     191:         assert_completion('DEPRECATED_CONST.a', include: 'bs', binding: binding)
+     192:         assert_doc_namespace('DEPRECATED_CONST', 'Integer', binding: binding)
+     193:       end
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:653:in `block in assert_deprecated_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:638:in `block (2 levels) in assert_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/envutil.rb:222:in `verbose_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:637:in `block in assert_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/envutil.rb:283:in `with_default_internal'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:636:in `assert_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:651:in `assert_deprecated_warning'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:189:in `test_deprecated_const_without_warning'
+================================================================================
+E
+================================================================================
+Error: test_deprecated_const_without_warning(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:190:in `block in test_deprecated_const_without_warning'
+     187:     deprecate_constant :DEPRECATED_CONST
+     188:     def test_deprecated_const_without_warning
+     189:       assert_deprecated_warning(/\A\z/) do
+  => 190:         assert_completion('DEPRECATED', include: '_CONST', binding: binding)
+     191:         assert_completion('DEPRECATED_CONST.a', include: 'bs', binding: binding)
+     192:         assert_doc_namespace('DEPRECATED_CONST', 'Integer', binding: binding)
+     193:       end
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:653:in `block in assert_deprecated_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:638:in `block (2 levels) in assert_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/envutil.rb:222:in `verbose_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:637:in `block in assert_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/envutil.rb:283:in `with_default_internal'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:636:in `assert_warning'
+/usr/lib/ruby/gems/3.3.0/gems/test-unit-ruby-core-1.0.6/lib/core_assertions.rb:651:in `assert_deprecated_warning'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:189:in `test_deprecated_const_without_warning'
+================================================================================
+: (0.005284)
+    test_doc_namespace_error:					E
+================================================================================
+Error: test_doc_namespace_error(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `doc_namespace' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:249:in `block in test_doc_namespace_error'
+     246:     def test_doc_namespace_error
+     247:       result = ReplTypeCompletor.analyze '1.', binding: binding
+     248:       with_failing_method(ReplTypeCompletor::Result, :method_doc, 'error_in_method_doc') do
+  => 249:         assert_nil result.doc_namespace('abs')
+     250:       end
+     251:       assert_equal 'error_in_method_doc', ReplTypeCompletor.last_completion_error&.message
+     252:     ensure
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:221:in `with_failing_method'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:248:in `test_doc_namespace_error'
+================================================================================
+: (0.004379)
+    test_gvar:							E
+================================================================================
+Error: test_gvar(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:127:in `test_gvar'
+     124:     end
+     125: 
+     126:     def test_gvar
+  => 127:       assert_completion('$', include: 'stdout')
+     128:       assert_completion('$s', include: 'tdout')
+     129:       assert_completion('$', exclude: 'foobar')
+     130:       assert_completion('$foobar=1; $', include: 'foobar')
+================================================================================
+E
+================================================================================
+Error: test_gvar(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:127:in `test_gvar'
+     124:     end
+     125: 
+     126:     def test_gvar
+  => 127:       assert_completion('$', include: 'stdout')
+     128:       assert_completion('$s', include: 'tdout')
+     129:       assert_completion('$', exclude: 'foobar')
+     130:       assert_completion('$foobar=1; $', include: 'foobar')
+================================================================================
+: (0.003763)
+    test_info:							E
+================================================================================
+Error: test_info(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:127:in `test_gvar'
+================================================================================
+: (0.001827)
+    test_ivar:							E
+================================================================================
+Error: test_ivar(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:138:in `test_ivar'
+     135: 
+     136:     def test_ivar
+     137:       bind = Object.new.instance_eval { @foo = 1; binding }
+  => 138:       assert_completion('@', binding: bind, include: 'foo')
+     139:       assert_completion('@f', binding: bind, include: 'oo')
+     140:       assert_completion('@bar = 1; @', include: 'bar')
+     141:       assert_completion('@bar = 1; @b', include: 'ar')
+================================================================================
+E
+================================================================================
+Error: test_ivar(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:138:in `test_ivar'
+     135: 
+     136:     def test_ivar
+     137:       bind = Object.new.instance_eval { @foo = 1; binding }
+  => 138:       assert_completion('@', binding: bind, include: 'foo')
+     139:       assert_completion('@f', binding: bind, include: 'oo')
+     140:       assert_completion('@bar = 1; @', include: 'bar')
+     141:       assert_completion('@bar = 1; @b', include: 'ar')
+================================================================================
+: (0.019424)
+    test_loaded_gem_types:					E
+================================================================================
+Error: test_loaded_gem_types(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:261:in `test_loaded_gem_types'
+     258:       omit unless Dir.exist?("#{Gem.loaded_specs['rbs'].gem_dir}/sig")
+     259: 
+     260:       result = ReplTypeCompletor.analyze 'RBS::CLI::LibraryOptions.new.loader.', binding: binding
+  => 261:       candidtes = result.completion_candidates
+     262:       assert_includes candidtes, 'add'
+     263:     end
+     264: 
+================================================================================
+E
+================================================================================
+Error: test_loaded_gem_types(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:260:in `test_loaded_gem_types'
+     257:       # gem_dir/sig directory does not exist when running with `make test-bundled-gems`
+     258:       omit unless Dir.exist?("#{Gem.loaded_specs['rbs'].gem_dir}/sig")
+     259: 
+  => 260:       result = ReplTypeCompletor.analyze 'RBS::CLI::LibraryOptions.new.loader.', binding: binding
+     261:       candidtes = result.completion_candidates
+     262:       assert_includes candidtes, 'add'
+     263:     end
+================================================================================
+: (0.004636)
+    test_lvar:							E
+================================================================================
+Error: test_lvar(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:95:in `test_lvar'
+     92: 
+     93:     def test_lvar
+     94:       bind = eval('lvar = 1; binding')
+  => 95:       assert_completion('lva', binding: bind, include: 'r')
+     96:       assert_completion('lvar.', binding: bind, include: 'abs')
+     97:       assert_completion('lvar.a', binding: bind, include: 'bs')
+     98:       assert_completion('lvar = ""; lvar.', binding: bind, include: 'ascii_only?')
+================================================================================
+E
+================================================================================
+Error: test_lvar(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:95:in `test_lvar'
+     92: 
+     93:     def test_lvar
+     94:       bind = eval('lvar = 1; binding')
+  => 95:       assert_completion('lva', binding: bind, include: 'r')
+     96:       assert_completion('lvar.', binding: bind, include: 'abs')
+     97:       assert_completion('lvar.a', binding: bind, include: 'bs')
+     98:       assert_completion('lvar = ""; lvar.', binding: bind, include: 'ascii_only?')
+================================================================================
+: (0.004094)
+    test_method_block_sym:					E
+================================================================================
+Error: test_method_block_sym(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:54:in `test_method_block_sym'
+     51:     end
+     52: 
+     53:     def test_method_block_sym
+  => 54:       assert_completion('[1].map(&:', include: 'abs')
+     55:       assert_completion('[:a].map(&:', exclude: 'abs')
+     56:       assert_completion('[1].map(&:a', include: 'bs')
+     57:       assert_doc_namespace('[1].map(&:abs', 'Integer#abs')
+================================================================================
+E
+================================================================================
+Error: test_method_block_sym(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:54:in `test_method_block_sym'
+     51:     end
+     52: 
+     53:     def test_method_block_sym
+  => 54:       assert_completion('[1].map(&:', include: 'abs')
+     55:       assert_completion('[:a].map(&:', exclude: 'abs')
+     56:       assert_completion('[1].map(&:a', include: 'bs')
+     57:       assert_doc_namespace('[1].map(&:abs', 'Integer#abs')
+================================================================================
+: (0.006199)
+    test_none:							E
+================================================================================
+Error: test_none(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:202:in `test_none'
+     199:     end
+     200: 
+     201:     def test_none
+  => 202:       result = ReplTypeCompletor.analyze('()', binding: binding)
+     203:       assert_nil result
+     204:     end
+     205: 
+================================================================================
+: (0.002059)
+    test_repl_type_completor_api:				F
+================================================================================
+Failure: test_repl_type_completor_api(TestReplTypeCompletor::ReplTypeCompletorTest):
+  <NameError(<uninitialized constant Prism::ItParametersNode>)
+  /home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+  /home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+  /home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+  /home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:202:in `test_none'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testcase.rb:906:in `run_test'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testcase.rb:593:in `block (2 levels) in run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/fixture.rb:276:in `block in create_fixtures_runner'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/fixture.rb:276:in `block in create_fixtures_runner'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/fixture.rb:257:in `run_fixture'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/fixture.rb:292:in `run_setup'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testcase.rb:591:in `block in run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testcase.rb:590:in `catch'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testcase.rb:590:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:96:in `run_test'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:62:in `block in run_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:61:in `each'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:61:in `run_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:39:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testsuite.rb:56:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:96:in `run_test'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:62:in `block in run_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:61:in `each'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:61:in `run_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:39:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testsuite.rb:56:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:96:in `run_test'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:62:in `block in run_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:61:in `each'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:61:in `run_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:39:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/testsuite.rb:56:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:72:in `run_suite'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:49:in `block (3 levels) in run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:44:in `catch'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:44:in `block (2 levels) in run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/test-suite-runner.rb:19:in `run_all_tests'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:43:in `block in run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:107:in `with_listener'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnermediator.rb:42:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunner.rb:40:in `start_mediator'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunner.rb:25:in `start'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/ui/testrunnerutilities.rb:24:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/autorunner.rb:496:in `block in run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/autorunner.rb:561:in `change_work_directory'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/autorunner.rb:495:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit/autorunner.rb:67:in `run'
+  /usr/lib/ruby/gems/3.3.0/gems/test-unit-3.6.8/lib/test/unit.rb:518:in `block (2 levels) in <top (required)>'
+  > was expected to be nil.
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:208:in `test_repl_type_completor_api'
+     205: 
+     206:     def test_repl_type_completor_api
+     207:       assert_nil ReplTypeCompletor.rbs_load_error
+  => 208:       assert_nil ReplTypeCompletor.last_completion_error
+     209:       assert_equal true, ReplTypeCompletor.rbs_load_started?
+     210:       assert_equal true, ReplTypeCompletor.rbs_loaded?
+     211:       assert_nothing_raised { ReplTypeCompletor.preload_rbs }
+================================================================================
+E
+================================================================================
+Error: test_repl_type_completor_api(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:202:in `test_none'
+================================================================================
+: (0.004727)
+    test_require:						E
+================================================================================
+Error: test_require(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:37:in `test_require'
+     34:     end
+     35: 
+     36:     def test_require
+  => 37:       assert_completion("require '", include: 'set')
+     38:       assert_completion("require 's", include: 'et')
+     39:       assert_completion('require "', include: 'set')
+     40:       assert_completion('require "s', include: 'et')
+================================================================================
+E
+================================================================================
+Error: test_require(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:37:in `test_require'
+     34:     end
+     35: 
+     36:     def test_require
+  => 37:       assert_completion("require '", include: 'set')
+     38:       assert_completion("require 's", include: 'et')
+     39:       assert_completion('require "', include: 'set')
+     40:       assert_completion('require "s', include: 'et')
+================================================================================
+: (0.018799)
+    test_sig_dir:						E
+================================================================================
+Error: test_sig_dir(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `doc_namespace' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:33:in `assert_doc_namespace'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:197:in `test_sig_dir'
+     194:     end
+     195: 
+     196:     def test_sig_dir
+  => 197:       assert_doc_namespace('ReplTypeCompletor.analyze(code, binding: binding).completion_candidates.__id__', 'Array#__id__')
+     198:       assert_doc_namespace('ReplTypeCompletor.analyze(code, binding: binding).doc_namespace.__id__', 'String#__id__')
+     199:     end
+     200: 
+================================================================================
+E
+================================================================================
+Error: test_sig_dir(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:33:in `assert_doc_namespace'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:197:in `test_sig_dir'
+     194:     end
+     195: 
+     196:     def test_sig_dir
+  => 197:       assert_doc_namespace('ReplTypeCompletor.analyze(code, binding: binding).completion_candidates.__id__', 'Array#__id__')
+     198:       assert_doc_namespace('ReplTypeCompletor.analyze(code, binding: binding).doc_namespace.__id__', 'String#__id__')
+     199:     end
+     200: 
+================================================================================
+: (0.004578)
+    test_symbol:						E
+================================================================================
+Error: test_symbol(TestReplTypeCompletor::ReplTypeCompletorTest): NoMethodError: undefined method `completion_candidates' for nil
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:63:in `test_symbol'
+     60:     def test_symbol
+     61:       prefix = ':test_com'
+     62:       sym = :test_completion_symbol
+  => 63:       assert_completion(prefix, include: sym.inspect.delete_prefix(prefix))
+     64:     end
+     65: 
+     66:     def test_symbol_limit
+================================================================================
+E
+================================================================================
+Error: test_symbol(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:63:in `test_symbol'
+     60:     def test_symbol
+     61:       prefix = ':test_com'
+     62:       sym = :test_completion_symbol
+  => 63:       assert_completion(prefix, include: sym.inspect.delete_prefix(prefix))
+     64:     end
+     65: 
+     66:     def test_symbol_limit
+================================================================================
+: (0.003584)
+    test_symbol_limit:						E
+================================================================================
+Error: test_symbol_limit(TestReplTypeCompletor::ReplTypeCompletorTest): NameError: uninitialized constant Prism::ItParametersNode
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:128:in `find_target'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:64:in `analyze_code'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/lib/repl_type_completor.rb:33:in `analyze'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:27:in `assert_completion'
+/home/packager/aports/main/ruby-repl_type_completor/src/repl_type_completor-0.1.9/test/repl_type_completor/test_repl_type_completor.rb:63:in `test_symbol'
+================================================================================
+: (0.003815)
+  TestReplTypeCompletor::RequirePathsTest: 
+    test_require_paths:						.: (0.052670)
+    test_require_paths_no_duplication:				.: (0.042947)
+    test_require_relative_paths:				.: (0.002640)
+  TestReplTypeCompletor::ScopeTest: 
+    test_branch:						.: (0.001098)
+    test_break:							.: (0.000695)
+    test_conditional:						.: (0.000358)
+    test_lvar:							.: (0.000288)
+    test_nested_scope:						.: (0.000779)
+    test_scope_local_variables:					.: (0.000672)
+  TestReplTypeCompletor::TypesTest: 
+    test_basic_object_methods:					.: (0.016662)
+    test_singleton_type_methods:				.: (0.000644)
+    test_type_from_object:					.: (0.000789)
+    test_type_inspect:						.: (0.000369)
+    test_type_methods:						.: (0.058236)
+
+Finished in 2.818858928 seconds.
+--------------------------------------------------------------------------------
+92 tests, 103 assertions, 1 failures, 91 errors, 0 pendings, 0 omissions, 0 notifications
+20.6522% passed
+--------------------------------------------------------------------------------
+32.64 tests/s, 36.54 assertions/s
+>>> ERROR: ruby-repl_type_completor: check failed
+>>> ruby-repl_type_completor: Uninstalling dependencies...
+(1/12) Purging .makedepends-ruby-repl_type_completor (20250523.180626)
+(2/12) Purging ruby-rbs (3.4.4-r0)
+(3/12) Purging ruby-bundler (2.6.8-r0)
+(4/12) Purging ruby-rdoc (3.3.8-r0)
+(5/12) Purging ruby-test-unit (3.6.8-r0)
+(6/12) Purging ruby-power_assert (2.0.5-r0)
+(7/12) Purging ruby-test-unit-ruby-core (1.0.6-r0)
+(8/12) Purging ruby (3.3.8-r0)
+(9/12) Purging ca-certificates (20241121-r2)
+Executing ca-certificates-20241121-r2.post-deinstall
+(10/12) Purging ruby-libs (3.3.8-r0)
+(11/12) Purging yaml (0.2.5-r2)
+(12/12) Purging libffi (3.4.7-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,105 @@
+pigz: not found
+>>> ca-certificates: Building main/ca-certificates 20241121-r2 (using abuild 3.14.1-r4) started Fri, 16 May 2025 20:37:48 +0000
+>>> ca-certificates: Validating /home/packager/aports/main/ca-certificates/APKBUILD...
+>>> ca-certificates: Analyzing dependencies...
+>>> ca-certificates: Installing for build: build-base perl openssl-dev>3
+(1/7) Installing libbz2 (1.0.8-r6)
+(2/7) Installing perl (5.40.2-r0)
+(3/7) Installing openssl-dev (3.3.3-r0)
+(4/7) Installing .makedepends-ca-certificates (20250516.203749)
+(5/7) Installing perl-error (0.17029-r2)
+(6/7) Installing perl-git (2.47.2-r0)
+(7/7) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 298 MiB in 81 packages
+>>> ca-certificates: Cleaning up srcdir
+>>> ca-certificates: Cleaning up pkgdir
+>>> ca-certificates: Cleaning up tmpdir
+>>> ca-certificates: Fetching https://gitlab.alpinelinux.org/alpine/ca-certificates/-/archive/20241121/ca-certificates-20241121.tar.bz2
+Connecting to gitlab.alpinelinux.org (172.105.69.85:443)
+saving to '/var/cache/distfiles/ca-certificates-20241121.tar.bz2.part'
+ca-certificates-2024 100% |********************************|  228k  0:00:00 ETA
+'/var/cache/distfiles/ca-certificates-20241121.tar.bz2.part' saved
+>>> ca-certificates: Fetching https://gitlab.alpinelinux.org/alpine/ca-certificates/-/archive/20241121/ca-certificates-20241121.tar.bz2
+>>> ca-certificates: Checking sha512sums...
+ca-certificates-20241121.tar.bz2: OK
+0001-mk-ca-bundle-remove-CKA_NSS_SERVER_DISTRUST_AFTER-co.patch: OK
+>>> ca-certificates: Unpacking /var/cache/distfiles/ca-certificates-20241121.tar.bz2...
+>>> ca-certificates: 0001-mk-ca-bundle-remove-CKA_NSS_SERVER_DISTRUST_AFTER-co.patch
+patching file mk-ca-bundle.pl
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o update-ca-certificates update-ca.c -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o c_rehash c_rehash.c -lcrypto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+perl mk-ca-bundle.pl -n -w 64 cert.pem
+Can't exec "curl": No such file or directory at mk-ca-bundle.pl line 139.
+SHA256 of old file: 0
+SHA256 of new file: c99d6d3f8d3d4e47719ba2b648992f5b58b150128d3aca3c05c566d8dc98e116
+Processing  'certdata.txt' ...
+Done (148 CA certs processed, 27 skipped).
+/bin/sh split-ca-bundle.sh < cert.pem
+touch certdata.stamp
+>>> ca-certificates: Entering fakeroot...
+install -d -m755 /home/packager/aports/main/ca-certificates/pkg/ca-certificates/etc/ca-certificates/update.d \
+	/home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/bin \
+	/home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/sbin \
+	/home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/share/ca-certificates \
+	/home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/local/share/ca-certificates \
+	/home/packager/aports/main/ca-certificates/pkg/ca-certificates/etc/ssl/certs
+for cert in *.crt; do \
+	install -D -m644 $cert /home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/share/ca-certificates/mozilla/$cert; \
+done
+install -D -m644 update-ca-certificates.8 /home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/share/man/man8/update-ca-certificates.8
+install -m755 update-ca-certificates /home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/sbin
+install -m755 c_rehash /home/packager/aports/main/ca-certificates/pkg/ca-certificates/usr/bin
+>>> ca-certificates-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/ca-certificates/pkg/ca-certificates-doc/usr/share/man'
+>>> ca-certificates-doc*: Preparing subpackage ca-certificates-doc...
+>>> ca-certificates-doc*: Running postcheck for ca-certificates-doc
+>>> ca-certificates-bundle*: Running split function bundle...
+>>> ca-certificates-bundle*: Preparing subpackage ca-certificates-bundle...
+>>> ca-certificates-bundle*: Running postcheck for ca-certificates-bundle
+>>> ca-certificates*: Running postcheck for ca-certificates
+>>> ca-certificates*: Preparing package ca-certificates...
+>>> ca-certificates*: Stripping binaries
+>>> ca-certificates*: Script found. /bin/sh added as a dependency for ca-certificates-20241121-r2.apk
+>>> ca-certificates*: Adding .post-deinstall
+>>> ca-certificates*: Adding .trigger
+>>> ca-certificates-bundle*: Scanning shared objects
+>>> ca-certificates-doc*: Scanning shared objects
+>>> ca-certificates*: Scanning shared objects
+>>> ca-certificates-bundle*: Tracing dependencies...
+>>> ca-certificates-bundle*: Package size: 216.1 KB
+>>> ca-certificates-bundle*: Compressing data...
+>>> ca-certificates-bundle*: Create checksum...
+pigz: not found
+>>> ca-certificates-bundle*: Create ca-certificates-bundle-20241121-r2.apk
+>>> ca-certificates-doc*: Tracing dependencies...
+>>> ca-certificates-doc*: Package size: 1.0 KB
+>>> ca-certificates-doc*: Compressing data...
+>>> ca-certificates-doc*: Create checksum...
+pigz: not found
+>>> ca-certificates-doc*: Create ca-certificates-doc-20241121-r2.apk
+>>> ca-certificates*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+>>> ca-certificates*: Package size: 250.0 KB
+>>> ca-certificates*: Compressing data...
+>>> ca-certificates*: Create checksum...
+pigz: not found
+>>> ca-certificates*: Create ca-certificates-20241121-r2.apk
+>>> ca-certificates: Build complete at Fri, 16 May 2025 20:37:53 +0000 elapsed time 0h 0m 5s
+>>> ca-certificates: Cleaning up srcdir
+>>> ca-certificates: Cleaning up pkgdir
+>>> ca-certificates: Uninstalling dependencies...
+(1/7) Purging .makedepends-ca-certificates (20250516.203749)
+(2/7) Purging openssl-dev (3.3.3-r0)
+(3/7) Purging git-perl (2.47.2-r0)
+(4/7) Purging perl-git (2.47.2-r0)
+(5/7) Purging perl-error (0.17029-r2)
+(6/7) Purging perl (5.40.2-r0)
+(7/7) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 259 MiB in 74 packages
+>>> ca-certificates: Updating the main/x86_64 repository index...
+>>> ca-certificates: Signing the index...
+pigz: not found

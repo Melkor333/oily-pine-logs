@@ -1,0 +1,108 @@
+pigz: not found
+>>> libmemcached: Building main/libmemcached 1.1.4-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:40:35 +0000
+>>> libmemcached: Validating /home/packager/aports/main/libmemcached/APKBUILD...
+>>> libmemcached: Analyzing dependencies...
+>>> libmemcached: Installing for build: build-base cyrus-sasl-dev bison cmake flex libevent-dev memcached-dev samurai
+(1/23) Installing gdbm (1.24-r0)
+(2/23) Installing libsasl (2.1.28-r8)
+(3/23) Installing cyrus-sasl-dev (2.1.28-r8)
+(4/23) Installing lz4-libs (1.10.0-r0)
+(5/23) Installing xz-libs (5.6.3-r1)
+(6/23) Installing libarchive (3.7.9-r0)
+(7/23) Installing rhash-libs (1.4.5-r0)
+(8/23) Installing libuv (1.49.2-r0)
+(9/23) Installing cmake (3.31.7-r0)
+(10/23) Installing libffi (3.4.7-r0)
+(11/23) Installing mpdecimal (4.0.0-r0)
+(12/23) Installing sqlite-libs (3.49.2-r0)
+(13/23) Installing python3 (3.12.10-r1)
+(14/23) Installing python3-pycache-pyc0 (3.12.10-r1)
+(15/23) Installing pyc (3.12.10-r1)
+(16/23) Installing python3-pyc (3.12.10-r1)
+(17/23) Installing libevent (2.1.12-r8)
+(18/23) Installing libevent-dev (2.1.12-r8)
+(19/23) Installing libseccomp (2.5.5-r1)
+(20/23) Installing memcached (1.6.32-r0)
+Executing memcached-1.6.32-r0.pre-install
+(21/23) Installing memcached-dev (1.6.32-r0)
+(22/23) Installing samurai (1.2-r6)
+(23/23) Installing .makedepends-libmemcached (20250523.184038)
+Executing busybox-1.37.0-r12.trigger
+OK: 654 MiB in 155 packages
+>>> libmemcached: Cleaning up srcdir
+>>> libmemcached: Cleaning up pkgdir
+>>> libmemcached: Cleaning up tmpdir
+>>> libmemcached: Fetching libmemcached-1.1.4.tar.gz::https://github.com/awesomized/libmemcached/archive/refs/tags/1.1.4.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/libmemcached-1.1.4.tar.gz.part'
+libmemcached-1.1.4.t  425k --:--:-- ETA
+libmemcached-1.1.4.t 100% |********************************|  517k  0:00:00 ETA
+'/var/cache/distfiles/libmemcached-1.1.4.tar.gz.part' saved
+>>> libmemcached: Fetching libmemcached-1.1.4.tar.gz::https://github.com/awesomized/libmemcached/archive/refs/tags/1.1.4.tar.gz
+>>> libmemcached: Checking sha512sums...
+libmemcached-1.1.4.tar.gz: OK
+>>> libmemcached: Unpacking /var/cache/distfiles/libmemcached-1.1.4.tar.gz...
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/libmemcached/src/libmemcached-1.1.4/build/CMakeFiles/CMakeScratch/TryCompile-iKMHmd'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_7f560
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -o CMakeFiles/cmTC_7f560.dir/testCCompiler.c.o -c /home/packager/aports/main/libmemcached/src/libmemcached-1.1.4/build/CMakeFiles/CMakeScratch/TryCompile-iKMHmd/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_7f560.dir/testCCompiler.c.o -o cmTC_7f560   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_7f560.dir/testCCompiler.c.o -o cmTC_7f560   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_7f560: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_7f560 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:9 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: libmemcached: build failed
+>>> libmemcached: Uninstalling dependencies...
+(1/23) Purging .makedepends-libmemcached (20250523.184038)
+(2/23) Purging cyrus-sasl-dev (2.1.28-r8)
+(3/23) Purging cmake (3.31.7-r0)
+(4/23) Purging libevent-dev (2.1.12-r8)
+(5/23) Purging python3-pyc (3.12.10-r1)
+(6/23) Purging python3-pycache-pyc0 (3.12.10-r1)
+(7/23) Purging pyc (3.12.10-r1)
+(8/23) Purging python3 (3.12.10-r1)
+(9/23) Purging memcached-dev (1.6.32-r0)
+(10/23) Purging memcached (1.6.32-r0)
+(11/23) Purging samurai (1.2-r6)
+(12/23) Purging libarchive (3.7.9-r0)
+(13/23) Purging libevent (2.1.12-r8)
+(14/23) Purging libffi (3.4.7-r0)
+(15/23) Purging libsasl (2.1.28-r8)
+(16/23) Purging libseccomp (2.5.5-r1)
+(17/23) Purging libuv (1.49.2-r0)
+(18/23) Purging lz4-libs (1.10.0-r0)
+(19/23) Purging mpdecimal (4.0.0-r0)
+(20/23) Purging rhash-libs (1.4.5-r0)
+(21/23) Purging sqlite-libs (3.49.2-r0)
+(22/23) Purging xz-libs (5.6.3-r1)
+(23/23) Purging gdbm (1.24-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

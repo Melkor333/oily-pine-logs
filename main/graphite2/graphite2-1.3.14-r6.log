@@ -1,0 +1,112 @@
+pigz: not found
+>>> graphite2: Building main/graphite2 1.3.14-r6 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:07:41 +0000
+>>> graphite2: Validating /home/packager/aports/main/graphite2/APKBUILD...
+>>> graphite2: Analyzing dependencies...
+>>> graphite2: Installing for build: build-base freetype-dev cmake samurai
+(1/15) Installing libpng (1.6.47-r0)
+(2/15) Installing freetype (2.13.3-r0)
+(3/15) Installing bzip2-dev (1.0.8-r6)
+(4/15) Installing brotli (1.1.0-r2)
+(5/15) Installing brotli-dev (1.1.0-r2)
+(6/15) Installing libpng-dev (1.6.47-r0)
+(7/15) Installing freetype-dev (2.13.3-r0)
+(8/15) Installing lz4-libs (1.10.0-r0)
+(9/15) Installing xz-libs (5.6.3-r1)
+(10/15) Installing libarchive (3.7.9-r0)
+(11/15) Installing rhash-libs (1.4.5-r0)
+(12/15) Installing libuv (1.49.2-r0)
+(13/15) Installing cmake (3.31.7-r0)
+(14/15) Installing samurai (1.2-r6)
+(15/15) Installing .makedepends-graphite2 (20250523.160745)
+Executing busybox-1.37.0-r12.trigger
+OK: 619 MiB in 147 packages
+>>> graphite2: Cleaning up srcdir
+>>> graphite2: Cleaning up pkgdir
+>>> graphite2: Cleaning up tmpdir
+>>> graphite2: Fetching graphite2-1.3.14.tar.gz::https://github.com/silnrsi/graphite/archive/1.3.14.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/graphite2-1.3.14.tar.gz.part'
+graphite2-1.3.14.tar 4680k --:--:-- ETA
+graphite2-1.3.14.tar 100% |********************************| 6474k  0:00:00 ETA
+'/var/cache/distfiles/graphite2-1.3.14.tar.gz.part' saved
+>>> graphite2: Fetching graphite2-1.3.14.tar.gz::https://github.com/silnrsi/graphite/archive/1.3.14.tar.gz
+>>> graphite2: Checking sha512sums...
+graphite2-1.3.14.tar.gz: OK
+cmake.patch: OK
+>>> graphite2: Unpacking /var/cache/distfiles/graphite2-1.3.14.tar.gz...
+>>> graphite2: cmake.patch
+patching file src/CMakeLists.txt
+CMake Deprecation Warning at CMakeLists.txt:1 (CMAKE_MINIMUM_REQUIRED):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Warning (dev) at CMakeLists.txt:4 (find_package):
+  Policy CMP0148 is not set: The FindPythonInterp and FindPythonLibs modules
+  are removed.  Run "cmake --help-policy CMP0148" for policy details.  Use
+  the cmake_policy command to set the policy and suppress this warning.
+
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Could NOT find PythonInterp (missing: PYTHON_EXECUTABLE) (Required is at least version "3.6")
+Hint: The project() command has not yet been called.  It sets up system-specific search paths.
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/graphite2/src/graphite-1.3.14/build-shared/CMakeFiles/CMakeScratch/TryCompile-CLEHhp'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_b0801
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto -DNDEBUG -o CMakeFiles/cmTC_b0801.dir/testCCompiler.c.o -c /home/packager/aports/main/graphite2/src/graphite-1.3.14/build-shared/CMakeFiles/CMakeScratch/TryCompile-CLEHhp/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto -DNDEBUG -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_b0801.dir/testCCompiler.c.o -o cmTC_b0801   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -flto=auto -DNDEBUG -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_b0801.dir/testCCompiler.c.o -o cmTC_b0801   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_b0801: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_b0801 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:5 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: graphite2: build failed
+>>> graphite2: Uninstalling dependencies...
+(1/15) Purging .makedepends-graphite2 (20250523.160745)
+(2/15) Purging freetype-dev (2.13.3-r0)
+(3/15) Purging freetype (2.13.3-r0)
+(4/15) Purging cmake (3.31.7-r0)
+(5/15) Purging samurai (1.2-r6)
+(6/15) Purging brotli-dev (1.1.0-r2)
+(7/15) Purging brotli (1.1.0-r2)
+(8/15) Purging bzip2-dev (1.0.8-r6)
+(9/15) Purging libarchive (3.7.9-r0)
+(10/15) Purging libpng-dev (1.6.47-r0)
+(11/15) Purging libpng (1.6.47-r0)
+(12/15) Purging libuv (1.49.2-r0)
+(13/15) Purging lz4-libs (1.10.0-r0)
+(14/15) Purging rhash-libs (1.4.5-r0)
+(15/15) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

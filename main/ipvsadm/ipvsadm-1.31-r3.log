@@ -1,0 +1,60 @@
+pigz: not found
+>>> ipvsadm: Building main/ipvsadm 1.31-r3 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:37:45 +0000
+>>> ipvsadm: Validating /home/packager/aports/main/ipvsadm/APKBUILD...
+>>> ipvsadm: Analyzing dependencies...
+>>> ipvsadm: Installing for build: build-base libnl3-dev popt-dev linux-headers
+(1/6) Installing libnl3 (3.11.0-r0)
+(2/6) Installing libnl3-cli (3.11.0-r0)
+(3/6) Installing libnl3-dev (3.11.0-r0)
+(4/6) Installing popt (1.19-r4)
+(5/6) Installing popt-dev (1.19-r4)
+(6/6) Installing .makedepends-ipvsadm (20250523.183748)
+Executing busybox-1.37.0-r12.trigger
+OK: 566 MiB in 138 packages
+>>> ipvsadm: Cleaning up srcdir
+>>> ipvsadm: Cleaning up pkgdir
+>>> ipvsadm: Cleaning up tmpdir
+>>> ipvsadm: Fetching https://kernel.org/pub/linux/utils/kernel/ipvsadm/ipvsadm-1.31.tar.xz
+Connecting to kernel.org (139.178.84.217:443)
+Connecting to mirrors.edge.kernel.org (147.75.80.249:443)
+saving to '/var/cache/distfiles/ipvsadm-1.31.tar.xz.part'
+ipvsadm-1.31.tar.xz. 100% |********************************| 42396  0:00:00 ETA
+'/var/cache/distfiles/ipvsadm-1.31.tar.xz.part' saved
+>>> ipvsadm: Fetching https://kernel.org/pub/linux/utils/kernel/ipvsadm/ipvsadm-1.31.tar.xz
+>>> ipvsadm: Checking sha512sums...
+ipvsadm-1.31.tar.xz: OK
+ipvsadm.initd: OK
+>>> ipvsadm: Unpacking /var/cache/distfiles/ipvsadm-1.31.tar.xz...
+make -C libipvs
+make[1]: Entering directory '/home/packager/aports/main/ipvsadm/src/ipvsadm-1.31/libipvs'
+gcc -Wall -Wunused -Wstrict-prototypes -g -fPIC -DLIBIPVS_USE_NL -I/usr/include/libnl3  -DHAVE_NET_IP_VS_H  -c -o libipvs.o libipvs.c
+gcc -Wall -Wunused -Wstrict-prototypes -g -fPIC -DLIBIPVS_USE_NL -I/usr/include/libnl3  -DHAVE_NET_IP_VS_H  -c -o ip_vs_nl_policy.o ip_vs_nl_policy.c
+ar rv libipvs.a libipvs.o ip_vs_nl_policy.o
+ar: creating libipvs.a
+a - libipvs.o
+a - ip_vs_nl_policy.o
+gcc -shared -Wl,-soname,libipvs.so -o libipvs.so libipvs.o ip_vs_nl_policy.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: libipvs.so has a LOAD segment with RWX permissions
+make[1]: Leaving directory '/home/packager/aports/main/ipvsadm/src/ipvsadm-1.31/libipvs'
+make -C libipvs
+make[1]: Entering directory '/home/packager/aports/main/ipvsadm/src/ipvsadm-1.31/libipvs'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/ipvsadm/src/ipvsadm-1.31/libipvs'
+gcc -Wall -Wunused -Wstrict-prototypes -g  -DVERSION=\"1.31\" -DSCHEDULERS=\""rr|wrr|lc|wlc|lblc|lblcr|dh|sh|sed|nq|fo|ovf|mh"\" -DPE_LIST=\""sip"\"  -DHAVE_NET_IP_VS_H -c -o ipvsadm.o ipvsadm.c
+gcc -Wall -Wunused -Wstrict-prototypes -g  -DVERSION=\"1.31\" -DSCHEDULERS=\""rr|wrr|lc|wlc|lblc|lblcr|dh|sh|sed|nq|fo|ovf|mh"\" -DPE_LIST=\""sip"\"  -DHAVE_NET_IP_VS_H -c -o config_stream.o config_stream.c
+gcc -Wall -Wunused -Wstrict-prototypes -g  -DVERSION=\"1.31\" -DSCHEDULERS=\""rr|wrr|lc|wlc|lblc|lblcr|dh|sh|sed|nq|fo|ovf|mh"\" -DPE_LIST=\""sip"\"  -DHAVE_NET_IP_VS_H -c -o dynamic_array.o dynamic_array.c
+gcc -Wall -Wunused -Wstrict-prototypes -g -o ipvsadm ipvsadm.o config_stream.o dynamic_array.o libipvs/libipvs.a -lpopt -lnl-genl-3 -lnl-3
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: ipvsadm: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: ipvsadm has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:90: ipvsadm] Error 1
+>>> ERROR: ipvsadm: build failed
+>>> ipvsadm: Uninstalling dependencies...
+(1/6) Purging .makedepends-ipvsadm (20250523.183748)
+(2/6) Purging libnl3-dev (3.11.0-r0)
+(3/6) Purging libnl3-cli (3.11.0-r0)
+(4/6) Purging libnl3 (3.11.0-r0)
+(5/6) Purging popt-dev (1.19-r4)
+(6/6) Purging popt (1.19-r4)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

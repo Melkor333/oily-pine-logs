@@ -1,0 +1,89 @@
+pigz: not found
+>>> abuild: Building main/abuild 3.15.0_rc3-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:35:10 +0000
+>>> abuild: Validating /home/packager/aports/main/abuild/APKBUILD...
+>>> abuild: Analyzing dependencies...
+>>> abuild: Installing for build: build-base apk-tools>=2.0.7-r1 cmd:getcap fakeroot musl-utils lzip openssl>3 patch pkgconf scanelf tar openssl-dev>3 zlib-dev pkgconfig scdoc cmd:setcap kyua git
+(1/8) Installing openssl-dev (3.5.0-r0)
+(2/8) Installing scdoc (1.11.3-r0)
+(3/8) Installing libcap-setcap (2.71-r0)
+(4/8) Installing atf (0.21-r7)
+(5/8) Installing lutok (0.4-r6)
+(6/8) Installing sqlite-libs (3.49.2-r0)
+(7/8) Installing kyua (0.13-r8)
+(8/8) Installing .makedepends-abuild (20250523.183512)
+Executing busybox-1.37.0-r12.trigger
+OK: 591 MiB in 140 packages
+>>> abuild: Cleaning up srcdir
+>>> abuild: Cleaning up pkgdir
+>>> abuild: Cleaning up tmpdir
+>>> abuild: Fetching https://gitlab.alpinelinux.org/alpine/abuild/-/archive/3.15.0_rc3/abuild-3.15.0_rc3.tar.gz
+Connecting to gitlab.alpinelinux.org (172.105.69.85:443)
+saving to '/var/cache/distfiles/abuild-3.15.0_rc3.tar.gz.part'
+abuild-3.15.0_rc3.ta 100% |********************************|  124k  0:00:00 ETA
+'/var/cache/distfiles/abuild-3.15.0_rc3.tar.gz.part' saved
+>>> abuild: Fetching https://gitlab.alpinelinux.org/alpine/abuild/-/archive/3.15.0_rc3/abuild-3.15.0_rc3.tar.gz
+>>> abuild: Checking sha512sums...
+abuild-3.15.0_rc3.tar.gz: OK
+>>> abuild: Unpacking /var/cache/distfiles/abuild-3.15.0_rc3.tar.gz...
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   abuild.in > abuild
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   abuild-keygen.in > abuild-keygen
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   abuild-sign.in > abuild-sign
+chmod +x abuild-keygen
+chmod +x abuild
+chmod +x abuild-sign
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   newapkbuild.in > newapkbuild
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   abump.in > abump
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   apkgrel.in > apkgrel
+chmod +x newapkbuild
+chmod +x abump
+chmod +x apkgrel
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   buildlab.in > buildlab
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   apkbuild-cpan.in > apkbuild-cpan
+chmod +x buildlab
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   apkbuild-pypi.in > apkbuild-pypi
+chmod +x apkbuild-cpan
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   checkapk.in > checkapk
+chmod +x apkbuild-pypi
+chmod +x checkapk
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   apkbuild-gem-resolver.in > apkbuild-gem-resolver
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -o abuild-tar.o -c abuild-tar.c
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -o abuild-gzsplit.o -c abuild-gzsplit.c
+chmod +x apkbuild-gem-resolver
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -o abuild-sudo.o -c abuild-sudo.c
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -o abuild-fetch.o -c abuild-fetch.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  abuild-rmtemp.c   -o abuild-rmtemp
+scdoc < newapkbuild.1.scd > newapkbuild.1
+scdoc < abuild.1.scd > abuild.1
+scdoc < abump.1.scd > abump.1
+scdoc < APKBUILD.5.scd > APKBUILD.5
+scdoc < abuild.conf.5.scd > abuild.conf.5
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   functions.sh.in > functions.sh
+sed -e 's:@VERSION@:3.15.0_rc3-r1:g' -e 's:@prefix@:/usr:g' -e 's:@sysconfdir@:/etc:g' -e 's:@sharedir@:/usr/share/abuild:g'   abuild.conf.in > abuild.conf
+chmod +x functions.sh
+gcc abuild-gzsplit.o -o abuild-gzsplit -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lz 
+gcc abuild-fetch.o -o abuild-fetch -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: abuild-gzsplit: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: abuild-gzsplit has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:102: abuild-gzsplit] Error 1
+make: *** Waiting for unfinished jobs....
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: abuild-fetch: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: abuild-fetch has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [Makefile:99: abuild-fetch] Error 1
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: abuild-rmtemp: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: abuild-rmtemp has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make: *** [<builtin>: abuild-rmtemp] Error 1
+>>> ERROR: abuild: build failed
+>>> abuild: Uninstalling dependencies...
+(1/8) Purging .makedepends-abuild (20250523.183512)
+(2/8) Purging openssl-dev (3.5.0-r0)
+(3/8) Purging scdoc (1.11.3-r0)
+(4/8) Purging kyua (0.13-r8)
+(5/8) Purging atf (0.21-r7)
+(6/8) Purging libcap-setcap (2.71-r0)
+(7/8) Purging lutok (0.4-r6)
+(8/8) Purging sqlite-libs (3.49.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,991 @@
+pigz: not found
+>>> monit: Building main/monit 5.35.0-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:15:52 +0000
+>>> monit: Validating /home/packager/aports/main/monit/APKBUILD...
+>>> monit: Analyzing dependencies...
+>>> monit: Installing for build: build-base openssl-dev>3 zlib-dev
+(1/3) Installing openssl-dev (3.5.0-r0)
+(2/3) Installing zlib-dev (1.3.1-r2)
+(3/3) Installing .makedepends-monit (20250518.091553)
+OK: 263 MiB in 84 packages
+>>> monit: Cleaning up srcdir
+>>> monit: Cleaning up pkgdir
+>>> monit: Cleaning up tmpdir
+>>> monit: Fetching https://mmonit.com/monit/dist/monit-5.35.0.tar.gz
+Connecting to mmonit.com (88.99.240.67:443)
+saving to '/var/cache/distfiles/monit-5.35.0.tar.gz.part'
+monit-5.35.0.tar.gz. 100% |********************************| 1490k  0:00:00 ETA
+'/var/cache/distfiles/monit-5.35.0.tar.gz.part' saved
+>>> monit: Fetching https://mmonit.com/monit/dist/monit-5.35.0.tar.gz
+>>> monit: Checking sha512sums...
+monit-5.35.0.tar.gz: OK
+monit.initd: OK
+monit.confd: OK
+>>> monit: Unpacking /var/cache/distfiles/monit-5.35.0.tar.gz...
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./config/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... none
+checking whether make sets $(MAKE)... (cached) yes
+checking for bison... no
+checking for byacc... no
+checking for yacc... no
+checking for flex... no
+checking for pod2man... no
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -fstack-protector-all... yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for vfork.h... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for socket in -lsocket... no
+checking for socket in -linet... no
+checking for inet_addr in -lnsl... no
+checking for inet_aton in -lresolv... yes
+checking for crypt in -lc... yes
+checking for pthread_create in -lpthread... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking whether stat file-mode macros are broken... no
+checking for alloca.h... yes
+checking for arpa/inet.h... yes
+checking for asm/page.h... no
+checking for asm/param.h... no
+checking for cf.h... no
+checking for crt_externs.h... no
+checking for ctype.h... yes
+checking for crypt.h... yes
+checking for CoreFoundation/CoreFoundation.h... no
+checking for devstat.h... no
+checking for dirent.h... yes
+checking for DiskArbitration/DiskArbitration.h... no
+checking for errno.h... yes
+checking for execinfo.h... no
+checking for fcntl.h... yes
+checking for getopt.h... yes
+checking for glob.h... yes
+checking for grp.h... yes
+checking for ifaddrs.h... yes
+checking for IOKit/storage/IOBlockStorageDriver.h... no
+checking for kinfo.h... no
+checking for kvm.h... no
+checking for paths.h... yes
+checking for kstat.h... no
+checking for libzfs.h... no
+checking for zone.h... no
+checking for sys/protosw.h... no
+checking for libproc.h... no
+checking for limits.h... yes
+checking for loadavg.h... no
+checking for locale.h... yes
+checking for lvm.h... no
+checking for mach/host_info.h... no
+checking for mach/mach.h... no
+checking for mach/mach_host.h... no
+checking for memory.h... yes
+checking for mntent.h... yes
+checking for netdb.h... yes
+checking for sys/socket.h... yes
+checking for netinet/in.h... yes
+checking for netinet/tcp.h... yes
+checking for netinet/in_systm.h... yes
+checking for pam/pam_appl.h... no
+checking for security/pam_appl.h... no
+checking for poll.h... yes
+checking for procfs.h... no
+checking for sys/procfs.h... yes
+checking for procinfo.h... no
+checking for pthread.h... yes
+checking for pwd.h... yes
+checking for regex.h... yes
+checking for sigsetjmp.h... no
+checking for signal.h... yes
+checking for stdarg.h... yes
+checking for stddef.h... yes
+checking for stdio.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for stropts.h... yes
+checking for sys/cfgodm.h... no
+checking for sys/cfgdb.h... no
+checking for sys/dk.h... no
+checking for sys/dkstat.h... no
+checking for sys/disk.h... no
+checking for sys/filio.h... no
+checking for sys/fs/zfs.h... no
+checking for sys/instance.h... no
+checking for sys/ioctl.h... yes
+checking for sys/iostat.h... no
+checking for sys/loadavg.h... no
+checking for sys/lock.h... no
+checking for sys/mntent.h... no
+checking for sys/mnttab.h... no
+checking for sys/mutex.h... no
+checking for sys/nlist.h... no
+checking for sys/nvpair.h... no
+checking for sys/param.h... yes
+checking for sys/pstat.h... no
+checking for sys/queue.h... no
+checking for sys/resource.h... yes
+checking for sys/sched.h... no
+checking for sys/statfs.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/sysinfo.h... yes
+checking for sys/sysmacros.h... yes
+checking for sys/systemcfg.h... no
+checking for sys/time.h... yes
+checking for sys/tree.h... no
+checking for sys/types.h... (cached) yes
+checking for sys/un.h... yes
+checking for sys/utsname.h... yes
+checking for sys/var.h... no
+checking for sys/vmmeter.h... no
+checking for sys/vm_usage.h... no
+checking for sys/vfs.h... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking for utmpx.h... yes
+checking for uvm/uvm_extern.h... no
+checking for uvm/uvm_param.h... no
+checking for vm/vm.h... no
+checking for net/if_media.h... no
+checking for net/if_dl.h... no
+checking for net/route.h... yes
+checking for libperfstat.h... no
+checking for netinet/ip.h... yes
+checking for net/if.h... yes
+checking for netinet/ip_icmp.h... yes
+checking for netinet/icmp6.h... yes
+checking for sys/sysctl.h... no
+checking for sys/mount.h... yes
+checking for sys/proc.h... no
+checking for sys/swap.h... yes
+checking for sys/ucred.h... no
+checking for sys/user.h... yes
+checking for machine/vmparam.h... no
+checking for vm/pmap.h... no
+checking for machine/pmap.h... no
+checking for vm/vm_map.h... no
+checking for vm/vm_object.h... no
+checking for sys/resourcevar.h... no
+checking for uvm/uvm_map.h... no
+checking for uvm/uvm_pmap.h... no
+checking for uvm/uvm_object.h... no
+checking for uvm/uvm.h... no
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for pid_t... (cached) yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for struct tm.tm_gmtoff... no
+checking for error_at_line... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for strftime... yes
+checking for statfs... yes
+checking for statvfs... yes
+checking for setlocale... yes
+checking for getaddrinfo... yes
+checking for syslog... yes
+checking for vsyslog... yes
+checking for backtrace... no
+checking for getloadavg... yes
+checking for getopt_long... yes
+checking for x86_64-alpine-linux-musl-gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) none
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... none
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... yes
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for an ANSI C-conforming const... yes
+checking whether byte ordering is bigendian... no
+checking for stdint.h... (cached) yes
+checking for stdbool.h... yes
+checking for IPv6 support... yes
+checking pid file location... /run
+checking for large files support... enabled
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for zlibVersion in -lz... yes
+checking for zlib.h... yes
+checking for PAM support... disabled
+checking for AddressSanitizer support... disabled
+checking for static SSL support... disabled
+checking for SSL support... enabled
+checking for SSL include directory... /usr/include
+checking for SSL library directory... /usr/lib
+checking for SSLv2... no
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether SSL_OP_NO_TLSv1_1 is declared... yes
+checking whether SSL_OP_NO_TLSv1_2 is declared... yes
+checking whether SSL_OP_NO_TLSv1_3 is declared... yes
+checking for EC_KEY support... yes
+checking for ASN1_TIME_diff support... yes
+checking for SSL_CTX_set_keylog_callback support... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating system/startup/monit.upstart
+config.status: creating system/startup/monit.service
+config.status: creating src/config.h
+config.status: executing libtool_patch commands
+config.status: executing monitrc commands
+config.status: executing depfiles commands
+config.status: executing libtool commands
+=== configuring in libmonit (/home/packager/aports/main/monit/src/monit-5.35.0/libmonit)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--localstatedir=/var' '--without-pam' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=gcc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=g++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./config/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... none
+checking whether C compiler accepts -Wextra... yes
+checking whether C compiler accepts -fstack-protector-all... yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for AddressSanitizer support... disabled
+checking for zlibVersion in -lz... yes
+checking for zlib.h... yes
+checking for pthread_create in -lpthread... yes
+checking for round in -lm... yes
+checking for ctype.h... yes
+checking for errno.h... yes
+checking for execinfo.h... no
+checking for fcntl.h... yes
+checking for ifaddrs.h... yes
+checking for kstat.h... no
+checking for limits.h... yes
+checking for net/if_dl.h... no
+checking for net/if_media.h... no
+checking for netinet/in.h... yes
+checking for poll.h... yes
+checking for pthread.h... yes
+checking for setjmp.h... yes
+checking for signal.h... yes
+checking for stdarg.h... yes
+checking for stdio.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for stropts.h... yes
+checking for sys/dirent.h... no
+checking for sys/event.h... no
+checking for sys/filio.h... no
+checking for sys/ioctl.h... yes
+checking for sys/poll.h... yes
+checking for sys/protosw.h... no
+checking for sys/random.h... yes
+checking for sys/sendfile.h... yes
+checking for sys/socket.h... yes
+checking for sys/sysctl.h... no
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for usersec.h... no
+checking for net/if.h... yes
+checking for net/route.h... yes
+checking for libperfstat.h... no
+checking for uchar_t... no
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether sigsetjmp is declared... yes
+checking for vsnprintf... yes
+checking for timegm... yes
+checking for getgrouplist... yes
+checking for getrandom... yes
+checking for arc4random_buf... no
+checking for clock_gettime... yes
+checking for x86_64-alpine-linux-musl-gcc... (cached) gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... (cached) yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) none
+checking whether the compiler supports GNU C++... yes
+checking whether g++ accepts -g... yes
+checking for g++ option to enable C++11 features... none needed
+checking dependency style of g++... none
+checking how to run the C++ preprocessor... g++ -E
+checking for ld used by g++... /usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the g++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for g++ option to produce PIC... -fPIC -DPIC
+checking if g++ PIC flag -fPIC -DPIC works... yes
+checking if g++ static flag -static works... no
+checking if g++ supports -c -o file.o... yes
+checking if g++ supports -c -o file.o... (cached) yes
+checking whether the g++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for an ANSI C-conforming const... yes
+checking whether byte ordering is bigendian... no
+checking for stdint.h... (cached) yes
+checking for stdbool.h... yes
+checking for IPv6 support... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating test/Makefile
+config.status: creating src/xconfig.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
++------------------------------------------------------------+
+| License:                                                   |
+| This is Open Source Software and use is subject to the GNU |
+| AFFERO GENERAL PUBLIC LICENSE version 3, available in this |
+| distribution in the file COPYING.                          |
+|                                                            |
+| By continuing this installation process, you are bound by  |
+| the terms of this license agreement. If you do not agree   |
+| with the terms of this license, you must abort the         |
+| installation process at this point.                        |
++------------------------------------------------------------+
+| Libmonit is configured as follows:                         |
+|                                                            |
+|   Optimized:                                    DISABLED   |
+|   Profiling:                                    DISABLED   |
+|   Compression:                                  ENABLED    |
++------------------------------------------------------------+
+
+Monit Build Information:
+
+                Architecture: LINUX
+       SSL include directory: /usr/include
+       SSL library directory: /usr/lib
+              Compiler flags: -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include
+                Linker flags: -lz -lpthread -lresolv  -L/usr/lib -lssl -lcrypto -L/usr/lib
+           pid file location: /run
+           Install directory: /usr
+
++------------------------------------------------------------+
+| License:                                                   |
+| This is Open Source Software and use is subject to the GNU |
+| AFFERO GENERAL PUBLIC LICENSE version 3, available in this |
+| distribution in the file COPYING.                          |
+|                                                            |
+| By continuing this installation process, you are bound by  |
+| the terms of this license agreement. If you do not agree   |
+| with the terms of this license, you must abort the         |
+| installation process at this point.                        |
++------------------------------------------------------------+
+| Monit has been configured with the following options:      |
+|                                                            |
+          printf "|  %-45.45s %-21.21s  |\n" "Compression:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                               ^~~~
+./configure:26032: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "Compression:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                            ^~~~
+./configure:26032: Command 'tput' not found (OILS-ERR-100)
+|  Compression:                                  ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "PAM support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                               ^~~~
+./configure:26040: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "PAM support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                            ^~~~
+./configure:26040: Command 'tput' not found (OILS-ERR-100)
+|  PAM support:                                  ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "SSL support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                               ^~~~
+./configure:26048: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "SSL support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                            ^~~~
+./configure:26048: Command 'tput' not found (OILS-ERR-100)
+|  SSL support:                                  ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "Large files support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                       ^~~~
+./configure:26056: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "Large files support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                                    ^~~~
+./configure:26056: Command 'tput' not found (OILS-ERR-100)
+|  Large files support:                          ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "ASAN support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                ^~~~
+./configure:26064: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "ASAN support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                             ^~~~
+./configure:26064: Command 'tput' not found (OILS-ERR-100)
+|  ASAN support:                                 ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "IPv6 support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                ^~~~
+./configure:26072: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "IPv6 support:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                             ^~~~
+./configure:26072: Command 'tput' not found (OILS-ERR-100)
+|  IPv6 support:                                 ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "Optimized:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                             ^~~~
+./configure:26080: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "Optimized:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                          ^~~~
+./configure:26080: Command 'tput' not found (OILS-ERR-100)
+|  Optimized:                                    ENABLED                |
+          printf "|  %-45.45s %-21.21s  |\n" "Profiling:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                             ^~~~
+./configure:26088: Command 'tput' not found (OILS-ERR-100)
+          printf "|  %-45.45s %-21.21s  |\n" "Profiling:" "$(tput setaf 2 ${fmt})ENABLED$(tput sgr0)"
+                                                                                          ^~~~
+./configure:26088: Command 'tput' not found (OILS-ERR-100)
+|  Profiling:                                    ENABLED                |
++------------------------------------------------------------+
+make  all-recursive
+make[1]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+Making all in libmonit
+make[2]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+Making all in .
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/system/Mem.lo src/system/Mem.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/system/Net.lo src/system/Net.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/system/Command.lo src/system/Command.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/system/Random.lo src/system/Random.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/system/System.lo src/system/System.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/system/Time.lo src/system/Time.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/util/Fmt.lo src/util/Fmt.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/util/Array.lo src/util/Array.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Mem.c  -fPIC -DPIC -o src/system/.libs/Mem.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Time.c  -fPIC -DPIC -o src/system/.libs/Time.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Net.c  -fPIC -DPIC -o src/system/.libs/Net.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Random.c  -fPIC -DPIC -o src/system/.libs/Random.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/System.c  -fPIC -DPIC -o src/system/.libs/System.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Command.c  -fPIC -DPIC -o src/system/.libs/Command.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/Fmt.c  -fPIC -DPIC -o src/util/.libs/Fmt.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/Array.c  -fPIC -DPIC -o src/util/.libs/Array.o
+src/system/Time.c: In function 'Time_localStr':
+src/system/Time.c:1398:12: warning: 'nonnull' argument 'result' compared to NULL [-Wnonnull-compare]
+ 1398 |         if (result) {
+      |            ^
+src/system/Time.c: In function 'Time_str':
+src/system/Time.c:1419:12: warning: 'nonnull' argument 'result' compared to NULL [-Wnonnull-compare]
+ 1419 |         if (result) {
+      |            ^
+src/system/Time.c: In function 'Time_uptime':
+src/system/Time.c:1463:12: warning: 'nonnull' argument 'result' compared to NULL [-Wnonnull-compare]
+ 1463 |         if (result) {
+      |            ^
+In file included from ./src/Config.h:48,
+                 from src/util/Fmt.c:26:
+src/util/Fmt.c: In function 'Fmt_bytes2str':
+./src/exceptions/assert.h:49:20: warning: 'nonnull' argument 's' compared to NULL [-Wnonnull-compare]
+   49 | #define assert(e) ((void)((e)||(Exception_throw(&(AssertException), __func__, __FILE__, __LINE__, #e),0)))
+      |                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/util/Fmt.c:86:9: note: in expansion of macro 'assert'
+   86 |         assert(s);
+      |         ^~~~~~
+src/util/Fmt.c: In function 'Fmt_time2str':
+./src/exceptions/assert.h:49:20: warning: 'nonnull' argument 's' compared to NULL [-Wnonnull-compare]
+   49 | #define assert(e) ((void)((e)||(Exception_throw(&(AssertException), __func__, __FILE__, __LINE__, #e),0)))
+      |                   ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/util/Fmt.c:120:9: note: in expansion of macro 'assert'
+  120 |         assert(s);
+      |         ^~~~~~
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Random.c -o src/system/Random.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Mem.c -o src/system/Mem.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/System.c -o src/system/System.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/Fmt.c -o src/util/Fmt.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Net.c -o src/system/Net.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/util/List.lo src/util/List.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/util/Str.lo src/util/Str.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/Array.c -o src/util/Array.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/util/StringBuffer.lo src/util/StringBuffer.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/Str.c  -fPIC -DPIC -o src/util/.libs/Str.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/List.c  -fPIC -DPIC -o src/util/.libs/List.o
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/thread/Thread.lo src/thread/Thread.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/StringBuffer.c  -fPIC -DPIC -o src/util/.libs/StringBuffer.o
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/Bootstrap.lo src/Bootstrap.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/thread/Thread.c  -fPIC -DPIC -o src/thread/.libs/Thread.o
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/exceptions/assert.lo src/exceptions/assert.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/Bootstrap.c  -fPIC -DPIC -o src/.libs/Bootstrap.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/List.c -o src/util/List.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/exceptions/assert.c  -fPIC -DPIC -o src/exceptions/.libs/assert.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/Bootstrap.c -o src/Bootstrap.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/thread/Thread.c -o src/thread/Thread.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/exceptions/assert.c -o src/exceptions/assert.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/exceptions/Exception.lo src/exceptions/Exception.c
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/io/Dir.lo src/io/Dir.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Command.c -o src/system/Command.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/StringBuffer.c -o src/util/StringBuffer.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/io/File.lo src/io/File.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/system/Time.c -o src/system/Time.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/io/InputStream.lo src/io/InputStream.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/exceptions/Exception.c  -fPIC -DPIC -o src/exceptions/.libs/Exception.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/Dir.c  -fPIC -DPIC -o src/io/.libs/Dir.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/File.c  -fPIC -DPIC -o src/io/.libs/File.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/util/Str.c -o src/util/Str.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/InputStream.c  -fPIC -DPIC -o src/io/.libs/InputStream.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/exceptions/Exception.c -o src/exceptions/Exception.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/Dir.c -o src/io/Dir.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile gcc -DHAVE_CONFIG_H -I. -I./src    -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o src/io/OutputStream.lo src/io/OutputStream.c
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/InputStream.c -o src/io/InputStream.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/OutputStream.c  -fPIC -DPIC -o src/io/.libs/OutputStream.o
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/File.c -o src/io/File.o >/dev/null 2>&1
+libtool: compile:  gcc -DHAVE_CONFIG_H -I. -I./src -I./src -I./src/exceptions -I./src/io -I./src/net -I./src/util -I./src/thread -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -c src/io/OutputStream.c -o src/io/OutputStream.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o libmonit.la  src/Bootstrap.lo src/exceptions/assert.lo src/exceptions/Exception.lo src/io/Dir.lo src/io/File.lo src/io/InputStream.lo src/io/OutputStream.lo src/system/Mem.lo src/system/Net.lo src/system/Command.lo src/system/Random.lo src/system/System.lo src/system/Time.lo src/util/Fmt.lo src/util/Array.lo src/util/List.lo src/util/Str.lo src/util/StringBuffer.lo src/thread/Thread.lo  -lm -lpthread -lz 
+libtool: link: ar cr .libs/libmonit.a src/.libs/Bootstrap.o src/exceptions/.libs/assert.o src/exceptions/.libs/Exception.o src/io/.libs/Dir.o src/io/.libs/File.o src/io/.libs/InputStream.o src/io/.libs/OutputStream.o src/system/.libs/Mem.o src/system/.libs/Net.o src/system/.libs/Command.o src/system/.libs/Random.o src/system/.libs/System.o src/system/.libs/Time.o src/util/.libs/Fmt.o src/util/.libs/Array.o src/util/.libs/List.o src/util/.libs/Str.o src/util/.libs/StringBuffer.o src/thread/.libs/Thread.o 
+libtool: link: ranlib .libs/libmonit.a
+libtool: link: ( cd ".libs" && rm -f "libmonit.la" && ln -s "../libmonit.la" "libmonit.la" )
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+Making all in test
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o StrTest.o StrTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o FmtTest.o FmtTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o SystemTest.o SystemTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o RandomTest.o RandomTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o ArrayTest.o ArrayTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o ListTest.o ListTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o DirTest.o DirTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o StringBufferTest.o StringBufferTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o InputStreamTest.o InputStreamTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o OutputStreamTest.o OutputStreamTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o FileTest.o FileTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o ExceptionTest.o ExceptionTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o NetTest.o NetTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o TimeTest.o TimeTest.c
+gcc -DHAVE_CONFIG_H -I. -I../src  -I../src/ -I../src/util -I../src/net -I../src/io -I../src/exceptions -I../src/thread    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11 -c -o CommandTest.o CommandTest.c
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o FmtTest FmtTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o SystemTest SystemTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o RandomTest RandomTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o ArrayTest ArrayTest.o ../libmonit.la -lm -lpthread -lz 
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o FmtTest FmtTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o ListTest ListTest.o ../libmonit.la -lm -lpthread -lz 
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o SystemTest SystemTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o RandomTest RandomTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o DirTest DirTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o StringBufferTest StringBufferTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o InputStreamTest InputStreamTest.o ../libmonit.la -lm -lpthread -lz 
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o ArrayTest ArrayTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o OutputStreamTest OutputStreamTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o FileTest FileTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o NetTest NetTest.o ../libmonit.la -lm -lpthread -lz 
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o ListTest ListTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o TimeTest TimeTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o CommandTest CommandTest.o ../libmonit.la -lm -lpthread -lz 
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o DirTest DirTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o StringBufferTest StringBufferTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o InputStreamTest InputStreamTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o StrTest StrTest.o ../libmonit.la -lm -lpthread -lz 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused  -std=c11  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lrt -o ExceptionTest ExceptionTest.o ../libmonit.la -lm -lpthread -lz 
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o OutputStreamTest OutputStreamTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o FileTest FileTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o NetTest NetTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o TimeTest TimeTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o CommandTest CommandTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o StrTest StrTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D _REENTRANT -D_GNU_SOURCE -Wall -Wunused -std=c11 -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o ExceptionTest ExceptionTest.o  ../.libs/libmonit.a -lrt -lm -lpthread -lz
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[2]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[2]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/y.tab.o src/y.tab.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/lex.yy.o src/lex.yy.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/monit.o src/monit.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/alert.o src/alert.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/control.o src/control.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/daemonize.o src/daemonize.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/env.o src/env.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/event.o src/event.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/file.o src/file.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/gc.o src/gc.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http.o src/http.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/log.o src/log.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/md5.o src/md5.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/md5_crypt.o src/md5_crypt.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/net/net.o src/net/net.c
+src/log.c: In function '_backtrace':
+src/log.c:183:29: warning: unused parameter 'force' [-Wunused-parameter]
+  183 | static void _backtrace(bool force) {
+      |                             ^
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/net/socket.o src/net/socket.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/net/Link.o src/net/Link.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/sha1.o src/sha1.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/checksum.o src/checksum.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/signal.o src/signal.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/spawn.o src/spawn.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/state.o src/state.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/util.o src/util.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/validate.o src/validate.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/device/device_common.o src/device/device_common.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/device/sysdep_LINUX.o src/device/sysdep_LINUX.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http/base64.o src/http/base64.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http/cervlet.o src/http/cervlet.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http/client.o src/http/client.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http/engine.o src/http/engine.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http/xml.o src/http/xml.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/http/processor.o src/http/processor.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/notification/Address.o src/notification/Address.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/notification/MMonit.o src/notification/MMonit.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/notification/SMTP.o src/notification/SMTP.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/process/SystemInfo.o src/process/SystemInfo.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/process/ProcessTree.o src/process/ProcessTree.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/process/sysdep_LINUX.o src/process/sysdep_LINUX.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/apache_status.o src/protocols/apache_status.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/clamav.o src/protocols/clamav.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/default.o src/protocols/default.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/dns.o src/protocols/dns.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/dwp.o src/protocols/dwp.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/fail2ban.o src/protocols/fail2ban.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/ftp.o src/protocols/ftp.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/generic.o src/protocols/generic.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/gps.o src/protocols/gps.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/http.o src/protocols/http.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/imap.o src/protocols/imap.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/ldap2.o src/protocols/ldap2.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/ldap3.o src/protocols/ldap3.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/lmtp.o src/protocols/lmtp.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/memcache.o src/protocols/memcache.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/mongodb.o src/protocols/mongodb.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/mqtt.o src/protocols/mqtt.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/mysql.o src/protocols/mysql.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/nntp.o src/protocols/nntp.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/ntp3.o src/protocols/ntp3.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/pgsql.o src/protocols/pgsql.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/pop.o src/protocols/pop.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/postfix_policy.o src/protocols/postfix_policy.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/protocol.o src/protocols/protocol.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/radius.o src/protocols/radius.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/rdate.o src/protocols/rdate.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/redis.o src/protocols/redis.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/rsync.o src/protocols/rsync.c
+src/protocols/mysql.c: In function '_getCachingSha2Password':
+src/protocols/mysql.c:401:9: warning: 'SHA256_Init' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  401 |         SHA256_Init(&ctx);
+      |         ^~~~~~~~~~~
+In file included from /usr/include/openssl/x509.h:41,
+                 from /usr/include/openssl/ssl.h:32,
+                 from src/protocols/mysql.c:45:
+/usr/include/openssl/sha.h:73:27: note: declared here
+   73 | OSSL_DEPRECATEDIN_3_0 int SHA256_Init(SHA256_CTX *c);
+      |                           ^~~~~~~~~~~
+src/protocols/mysql.c:402:9: warning: 'SHA256_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  402 |         SHA256_Update(&ctx, stage2, SHA256_DIGEST_LENGTH);
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/sha.h:74:27: note: declared here
+   74 | OSSL_DEPRECATEDIN_3_0 int SHA256_Update(SHA256_CTX *c,
+      |                           ^~~~~~~~~~~~~
+src/protocols/mysql.c:403:9: warning: 'SHA256_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  403 |         SHA256_Update(&ctx, salt, strlen(salt));
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/sha.h:74:27: note: declared here
+   74 | OSSL_DEPRECATEDIN_3_0 int SHA256_Update(SHA256_CTX *c,
+      |                           ^~~~~~~~~~~~~
+src/protocols/mysql.c:404:9: warning: 'SHA256_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  404 |         SHA256_Final(stage3, &ctx);
+      |         ^~~~~~~~~~~~
+/usr/include/openssl/sha.h:76:27: note: declared here
+   76 | OSSL_DEPRECATEDIN_3_0 int SHA256_Final(unsigned char *md, SHA256_CTX *c);
+      |                           ^~~~~~~~~~~~
+src/protocols/mysql.c: In function '_sendEncryptedPassword':
+src/protocols/mysql.c:640:9: warning: 'PEM_read_bio_RSA_PUBKEY' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  640 |         RSA *rsa = PEM_read_bio_RSA_PUBKEY(bio, NULL, NULL, NULL);
+      |         ^~~
+In file included from /usr/include/openssl/ssl.h:37:
+/usr/include/openssl/pem.h:458:1: note: declared here
+  458 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, RSA_PUBKEY, RSA)
+      | ^~~~~~~~~~~~~~~~~~~
+src/protocols/mysql.c:651:9: warning: 'RSA_size' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  651 |         unsigned char encryptedPassword[RSA_size(rsa)];
+      |         ^~~~~~~~
+In file included from /usr/include/openssl/x509.h:36:
+/usr/include/openssl/rsa.h:215:27: note: declared here
+  215 | OSSL_DEPRECATEDIN_3_0 int RSA_size(const RSA *rsa);
+      |                           ^~~~~~~~
+src/protocols/mysql.c:652:9: warning: 'RSA_public_encrypt' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  652 |         int encryptedPasswordLength = RSA_public_encrypt((int)passwordLength, saltedPassword, encryptedPassword, rsa, RSA_PKCS1_OAEP_PADDING);
+      |         ^~~
+/usr/include/openssl/rsa.h:293:5: note: declared here
+  293 | int RSA_public_encrypt(int flen, const unsigned char *from, unsigned char *to,
+      |     ^~~~~~~~~~~~~~~~~~
+src/protocols/mysql.c:653:9: warning: 'RSA_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  653 |         RSA_free(rsa);
+      |         ^~~~~~~~
+/usr/include/openssl/rsa.h:304:28: note: declared here
+  304 | OSSL_DEPRECATEDIN_3_0 void RSA_free(RSA *r);
+      |                            ^~~~~~~~
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/sieve.o src/protocols/sieve.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/sip.o src/protocols/sip.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/smtp.o src/protocols/smtp.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/spamassassin.o src/protocols/spamassassin.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/ssh.o src/protocols/ssh.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/tns.o src/protocols/tns.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/protocols/websocket.o src/protocols/websocket.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/ssl/Ssl.o src/ssl/Ssl.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/terminal/TextBox.o src/terminal/TextBox.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/terminal/TextColor.o src/terminal/TextColor.c
+gcc -DHAVE_CONFIG_H -I. -I./src    -DLINUX -DSYSCONFDIR="\"/etc\"" -I./src -I./src/device -I./src/http -I./src/notification -I./src/process -I./src/protocols -I./src/ssl -I./src/terminal -I./libmonit/src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -c -o src/statistics/Statistics.o src/statistics/Statistics.c
+src/ssl/Ssl.c: In function 'SslServer_new':
+src/ssl/Ssl.c:979:9: warning: 'EC_KEY_new_by_curve_name' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  979 |         EC_KEY *key = EC_KEY_new_by_curve_name(NID_X9_62_prime256v1);
+      |         ^~~~~~
+In file included from /usr/include/openssl/x509.h:33,
+                 from src/ssl/Ssl.c:85:
+/usr/include/openssl/ec.h:1017:31: note: declared here
+ 1017 | OSSL_DEPRECATEDIN_3_0 EC_KEY *EC_KEY_new_by_curve_name(int nid);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~
+src/ssl/Ssl.c:982:17: warning: 'EC_KEY_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  982 |                 EC_KEY_free(key);
+      |                 ^~~~~~~~~~~
+/usr/include/openssl/ec.h:1022:28: note: declared here
+ 1022 | OSSL_DEPRECATEDIN_3_0 void EC_KEY_free(EC_KEY *key);
+      |                            ^~~~~~~~~~~
+/bin/sh ./libtool  --tag=CC   --mode=link gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused  -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -static   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -rdynamic -o monit src/y.tab.o src/lex.yy.o src/monit.o src/alert.o src/control.o src/daemonize.o src/env.o src/event.o src/file.o src/gc.o src/http.o src/log.o src/md5.o src/md5_crypt.o src/net/net.o src/net/socket.o src/net/Link.o src/sha1.o src/checksum.o src/signal.o src/spawn.o src/state.o src/util.o src/validate.o src/device/device_common.o src/device/sysdep_LINUX.o src/http/base64.o src/http/cervlet.o src/http/client.o src/http/engine.o src/http/xml.o src/http/processor.o src/notification/Address.o src/notification/MMonit.o src/notification/SMTP.o src/process/SystemInfo.o src/process/ProcessTree.o src/process/sysdep_LINUX.o src/protocols/apache_status.o src/protocols/clamav.o src/protocols/default.o src/protocols/dns.o src/protocols/dwp.o src/protocols/fail2ban.o src/protocols/ftp.o src/protocols/generic.o src/protocols/gps.o src/protocols/http.o src/protocols/imap.o src/protocols/ldap2.o src/protocols/ldap3.o src/protocols/lmtp.o src/protocols/memcache.o src/protocols/mongodb.o src/protocols/mqtt.o src/protocols/mysql.o src/protocols/nntp.o src/protocols/ntp3.o src/protocols/pgsql.o src/protocols/pop.o src/protocols/postfix_policy.o src/protocols/protocol.o src/protocols/radius.o src/protocols/rdate.o src/protocols/redis.o src/protocols/rsync.o src/protocols/sieve.o src/protocols/sip.o src/protocols/smtp.o src/protocols/spamassassin.o src/protocols/ssh.o src/protocols/tns.o src/protocols/websocket.o src/ssl/Ssl.o src/terminal/TextBox.o src/terminal/TextColor.o src/statistics/Statistics.o libmonit/libmonit.la -lz -lpthread -lresolv  -L/usr/lib -lssl -lcrypto -L/usr/lib
+libtool: link: gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -fstack-protector-all -D_GNU_SOURCE -Wall -Wunused -std=c11 -D _REENTRANT -I/usr/include -I/usr/include -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -rdynamic -o monit src/y.tab.o src/lex.yy.o src/monit.o src/alert.o src/control.o src/daemonize.o src/env.o src/event.o src/file.o src/gc.o src/http.o src/log.o src/md5.o src/md5_crypt.o src/net/net.o src/net/socket.o src/net/Link.o src/sha1.o src/checksum.o src/signal.o src/spawn.o src/state.o src/util.o src/validate.o src/device/device_common.o src/device/sysdep_LINUX.o src/http/base64.o src/http/cervlet.o src/http/client.o src/http/engine.o src/http/xml.o src/http/processor.o src/notification/Address.o src/notification/MMonit.o src/notification/SMTP.o src/process/SystemInfo.o src/process/ProcessTree.o src/process/sysdep_LINUX.o src/protocols/apache_status.o src/protocols/clamav.o src/protocols/default.o src/protocols/dns.o src/protocols/dwp.o src/protocols/fail2ban.o src/protocols/ftp.o src/protocols/generic.o src/protocols/gps.o src/protocols/http.o src/protocols/imap.o src/protocols/ldap2.o src/protocols/ldap3.o src/protocols/lmtp.o src/protocols/memcache.o src/protocols/mongodb.o src/protocols/mqtt.o src/protocols/mysql.o src/protocols/nntp.o src/protocols/ntp3.o src/protocols/pgsql.o src/protocols/pop.o src/protocols/postfix_policy.o src/protocols/protocol.o src/protocols/radius.o src/protocols/rdate.o src/protocols/redis.o src/protocols/rsync.o src/protocols/sieve.o src/protocols/sip.o src/protocols/smtp.o src/protocols/spamassassin.o src/protocols/ssh.o src/protocols/tns.o src/protocols/websocket.o src/ssl/Ssl.o src/terminal/TextBox.o src/terminal/TextColor.o src/statistics/Statistics.o  libmonit/.libs/libmonit.a -lrt -lm -lz -lpthread -lresolv -L/usr/lib -lssl -lcrypto
+make[2]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make[1]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make  check-recursive
+make[1]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+Making check in libmonit
+make[2]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+Making check in .
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+Making check in test
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[2]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[2]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make[1]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+>>> monit: Entering fakeroot...
+make  install-recursive
+make[1]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+Making install in libmonit
+make[2]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+Making install in .
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[4]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+Making install in test
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[4]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit/test'
+make[2]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0/libmonit'
+make[2]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make[3]: Entering directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+ ./config/install-sh -c -d '/home/packager/aports/main/monit/pkg/monit/usr/bin'
+ ./config/install-sh -c -d '/home/packager/aports/main/monit/pkg/monit/usr/share/man/man1'
+  /bin/sh ./libtool   --mode=install /usr/bin/install -c monit '/home/packager/aports/main/monit/pkg/monit/usr/bin'
+ /usr/bin/install -c -m 644 monit.1 '/home/packager/aports/main/monit/pkg/monit/usr/share/man/man1'
+libtool: install: /usr/bin/install -c monit /home/packager/aports/main/monit/pkg/monit/usr/bin/monit
+make[3]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make[2]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+make[1]: Leaving directory '/home/packager/aports/main/monit/src/monit-5.35.0'
+>>> monit-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/monit/pkg/monit-doc/usr/share/man'
+>>> monit-doc*: Preparing subpackage monit-doc...
+>>> monit-doc*: Running postcheck for monit-doc
+>>> monit-openrc*: Running split function openrc...
+'etc/conf.d' -> '/home/packager/aports/main/monit/pkg/monit-openrc/etc/conf.d'
+'etc/init.d' -> '/home/packager/aports/main/monit/pkg/monit-openrc/etc/init.d'
+>>> monit-openrc*: Preparing subpackage monit-openrc...
+>>> monit-openrc*: Running postcheck for monit-openrc
+>>> monit*: Running postcheck for monit
+>>> monit*: Preparing package monit...
+>>> monit*: Stripping binaries
+>>> monit-doc*: Scanning shared objects
+>>> monit-openrc*: Scanning shared objects
+>>> monit*: Scanning shared objects
+>>> monit-doc*: Tracing dependencies...
+>>> monit-doc*: Package size: 46.7 KB
+>>> monit-doc*: Compressing data...
+>>> monit-doc*: Create checksum...
+pigz: not found
+>>> monit-doc*: Create monit-doc-5.35.0-r0.apk
+>>> monit-openrc*: Tracing dependencies...
+>>> monit-openrc*: Package size: 1.1 KB
+>>> monit-openrc*: Compressing data...
+>>> monit-openrc*: Create checksum...
+pigz: not found
+>>> monit-openrc*: Create monit-openrc-5.35.0-r0.apk
+>>> monit*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libssl.so.3
+	so:libz.so.1
+>>> monit*: Package size: 770.3 KB
+>>> monit*: Compressing data...
+>>> monit*: Create checksum...
+pigz: not found
+>>> monit*: Create monit-5.35.0-r0.apk
+>>> monit: Build complete at Sun, 18 May 2025 09:16:23 +0000 elapsed time 0h 0m 31s
+>>> monit: Cleaning up srcdir
+>>> monit: Cleaning up pkgdir
+>>> monit: Uninstalling dependencies...
+(1/3) Purging .makedepends-monit (20250518.091553)
+(2/3) Purging openssl-dev (3.5.0-r0)
+(3/3) Purging zlib-dev (1.3.1-r2)
+OK: 261 MiB in 81 packages
+>>> monit: Updating the main/x86_64 repository index...
+>>> monit: Signing the index...
+pigz: not found

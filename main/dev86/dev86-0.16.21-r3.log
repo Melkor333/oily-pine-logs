@@ -1,0 +1,54 @@
+pigz: not found
+>>> dev86: Building main/dev86 0.16.21-r3 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:06:12 +0000
+>>> dev86: Validating /home/packager/aports/main/dev86/APKBUILD...
+>>> dev86: Analyzing dependencies...
+>>> dev86: Installing for build: build-base cmd:bash coreutils
+(1/1) Installing .makedepends-dev86 (20250523.170614)
+OK: 564 MiB in 133 packages
+>>> dev86: Cleaning up srcdir
+>>> dev86: Cleaning up pkgdir
+>>> dev86: Cleaning up tmpdir
+>>> dev86: Fetching dev86-0.16.21.tar.gz::https://github.com/lkundrak/dev86/archive/v0.16.21.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/dev86-0.16.21.tar.gz.part'
+dev86-0.16.21.tar.gz 100% |********************************|  694k  0:00:00 ETA
+'/var/cache/distfiles/dev86-0.16.21.tar.gz.part' saved
+>>> dev86: Fetching dev86-0.16.21.tar.gz::https://github.com/lkundrak/dev86/archive/v0.16.21.tar.gz
+>>> dev86: Checking sha512sums...
+dev86-0.16.21.tar.gz: OK
+dev86-noelks.patch: OK
+dev86-pic.patch: OK
+dev86-long.patch: OK
+gcc14.patch: OK
+>>> dev86: Unpacking /var/cache/distfiles/dev86-0.16.21.tar.gz...
+>>> dev86: dev86-noelks.patch
+patching file makefile.in
+>>> dev86: dev86-pic.patch
+patching file elksemu/elks.c
+>>> dev86: dev86-long.patch
+patching file ld/x86_aout.h
+>>> dev86: gcc14.patch
+patching file bcc/dbprintf.c
+patching file cpp/cpp.c
+patching file ld/catimage.c
+patching file ld/objchop.c
+patching file unproto/strsave.c
+patching file unproto/symbol.c
+patching file unproto/tok_class.c
+patching file unproto/tok_io.c
+patching file unproto/unproto.c
+patching file ar/ar.c
+>>> dev86: building bcc86 unproto copt as86 ld86
+make[1]: Entering directory '/home/packager/aports/main/dev86/src/dev86-0.16.21'
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DGNUMAKE -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ifdefg ifdef.c
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: ifdefg: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: ifdefg has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Makefile:63: ifdefg] Error 1
+make[1]: Leaving directory '/home/packager/aports/main/dev86/src/dev86-0.16.21'
+make: *** [GNUmakefile:9: bcc86] Error 2
+>>> ERROR: dev86: build failed
+>>> dev86: Uninstalling dependencies...
+(1/1) Purging .makedepends-dev86 (20250523.170614)
+OK: 564 MiB in 132 packages

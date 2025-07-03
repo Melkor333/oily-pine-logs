@@ -1,0 +1,192 @@
+pigz: not found
+>>> lua-subprocess: Building main/lua-subprocess 0_git20230625-r1 (using abuild 3.14.1-r4) started Thu, 22 May 2025 22:14:23 +0000
+>>> lua-subprocess: Validating /home/packager/aports/main/lua-subprocess/APKBUILD...
+>>> lua-subprocess: Analyzing dependencies...
+>>> lua-subprocess: Installing for build: build-base asciidoc lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/31) Installing libffi (3.4.7-r0)
+(2/31) Installing gdbm (1.24-r0)
+(3/31) Installing xz-libs (5.6.3-r1)
+(4/31) Installing mpdecimal (4.0.0-r0)
+(5/31) Installing sqlite-libs (3.49.2-r0)
+(6/31) Installing python3 (3.12.10-r1)
+(7/31) Installing python3-pycache-pyc0 (3.12.10-r1)
+(8/31) Installing pyc (3.12.10-r1)
+(9/31) Installing libxml2 (2.13.4-r6)
+(10/31) Installing libxml2-utils (2.13.4-r6)
+(11/31) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(12/31) Installing libgcrypt (1.10.3-r1)
+(13/31) Installing libxslt (1.1.42-r2)
+(14/31) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(15/31) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(16/31) Installing docbook-xsl (1.79.2-r11)
+(17/31) Installing asciidoc-pyc (10.2.1-r0)
+(18/31) Installing python3-pyc (3.12.10-r1)
+(19/31) Installing asciidoc (10.2.1-r0)
+(20/31) Installing lua5.1-libs (5.1.5-r13)
+(21/31) Installing lua5.1 (5.1.5-r13)
+(22/31) Installing lua5.1-dev (5.1.5-r13)
+(23/31) Installing lua5.2-libs (5.2.4-r13)
+(24/31) Installing lua5.2 (5.2.4-r13)
+(25/31) Installing lua5.2-dev (5.2.4-r13)
+(26/31) Installing linenoise (1.0-r5)
+(27/31) Installing lua5.3-libs (5.3.6-r6)
+(28/31) Installing lua5.3 (5.3.6-r6)
+(29/31) Installing lua5.3-dev (5.3.6-r6)
+(30/31) Installing lua5.4-dev (5.4.7-r0)
+(31/31) Installing .makedepends-lua-subprocess (20250522.221425)
+Executing busybox-1.37.0-r12.trigger
+OK: 387 MiB in 145 packages
+>>> lua-subprocess: Cleaning up srcdir
+>>> lua-subprocess: Cleaning up pkgdir
+>>> lua-subprocess: Cleaning up tmpdir
+>>> lua-subprocess: Fetching lua-subprocess-ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz::https://github.com/tdtrask/lua-subprocess/archive/ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/lua-subprocess-ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz.part'
+lua-subprocess-ccd71 100% |********************************| 16894  0:00:00 ETA
+'/var/cache/distfiles/lua-subprocess-ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz.part' saved
+>>> lua-subprocess: Fetching lua-subprocess-ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz::https://github.com/tdtrask/lua-subprocess/archive/ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz
+>>> lua-subprocess: Checking sha512sums...
+lua-subprocess-ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz: OK
+makefile.patch: OK
+gcc14.patch: OK
+>>> lua-subprocess: Unpacking /var/cache/distfiles/lua-subprocess-ccd71c90653b39c6745c771af4393c9e76e4105f.tar.gz...
+>>> lua-subprocess: makefile.patch
+patching file Makefile
+>>> lua-subprocess: gcc14.patch
+patching file liolib-copy.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSHARE_LIOLIB  -DOS_POSIX -DSHARE_LIOLIB -shared -fPIC -o subprocess.so subprocess.c liolib-copy.c
+asciidoc subprocess.txt
+asciidoc: WARNING: subprocess.txt: line 37: section title out of sequence: expected level 2, got level 3
+asciidoc: WARNING: subprocess.txt: line 128: section title out of sequence: expected level 2, got level 3
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSHARE_LIOLIB -I/usr/include/lua5.2 -DOS_POSIX -DSHARE_LIOLIB -shared -fPIC -o subprocess.so subprocess.c liolib-copy.c
+asciidoc subprocess.txt
+asciidoc: WARNING: subprocess.txt: line 37: section title out of sequence: expected level 2, got level 3
+asciidoc: WARNING: subprocess.txt: line 128: section title out of sequence: expected level 2, got level 3
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSHARE_LIOLIB -I/usr/include/lua5.3 -DOS_POSIX -DSHARE_LIOLIB -shared -fPIC -o subprocess.so subprocess.c liolib-copy.c
+asciidoc subprocess.txt
+asciidoc: WARNING: subprocess.txt: line 37: section title out of sequence: expected level 2, got level 3
+asciidoc: WARNING: subprocess.txt: line 128: section title out of sequence: expected level 2, got level 3
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSHARE_LIOLIB -I/usr/include/lua5.4 -DOS_POSIX -DSHARE_LIOLIB -shared -fPIC -o subprocess.so subprocess.c liolib-copy.c
+asciidoc subprocess.txt
+asciidoc: WARNING: subprocess.txt: line 37: section title out of sequence: expected level 2, got level 3
+asciidoc: WARNING: subprocess.txt: line 128: section title out of sequence: expected level 2, got level 3
+>>> lua-subprocess: Entering fakeroot...
+mkdir -p /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.1/
+install -m755 subprocess.so /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.1/
+mkdir -p /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.2/
+install -m755 subprocess.so /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.2/
+mkdir -p /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.3/
+install -m755 subprocess.so /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.3/
+mkdir -p /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.4/
+install -m755 subprocess.so /home/packager/aports/main/lua-subprocess/pkg/lua-subprocess/usr/lib/lua/5.4/
+>>> lua5.1-subprocess*: Running split function _split...
+>>> lua5.1-subprocess*: Preparing subpackage lua5.1-subprocess...
+>>> lua5.1-subprocess*: Stripping binaries
+>>> lua5.1-subprocess*: Running postcheck for lua5.1-subprocess
+>>> lua5.2-subprocess*: Running split function _split...
+>>> lua5.2-subprocess*: Preparing subpackage lua5.2-subprocess...
+>>> lua5.2-subprocess*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> lua5.2-subprocess*: Running postcheck for lua5.2-subprocess
+>>> lua5.3-subprocess*: Running split function _split...
+>>> lua5.3-subprocess*: Preparing subpackage lua5.3-subprocess...
+>>> lua5.3-subprocess*: Stripping binaries
+>>> lua5.3-subprocess*: Running postcheck for lua5.3-subprocess
+>>> lua5.4-subprocess*: Running split function _split...
+>>> lua5.4-subprocess*: Preparing subpackage lua5.4-subprocess...
+>>> lua5.4-subprocess*: Stripping binaries
+>>> lua5.4-subprocess*: Running postcheck for lua5.4-subprocess
+>>> lua-subprocess*: Running postcheck for lua-subprocess
+>>> lua-subprocess*: Preparing package lua-subprocess...
+>>> lua-subprocess*: Stripping binaries
+>>> WARNING: lua-subprocess*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-subprocess*: Scanning shared objects
+>>> lua5.1-subprocess*: Scanning shared objects
+libfakeroot internal error: payload not recognized!
+>>> lua5.2-subprocess*: Scanning shared objects
+>>> lua5.3-subprocess*: Scanning shared objects
+>>> lua5.4-subprocess*: Scanning shared objects
+>>> lua-subprocess*: Tracing dependencies...
+>>> lua-subprocess*: Package size: 1.0 B
+>>> lua-subprocess*: Compressing data...
+>>> lua-subprocess*: Create checksum...
+pigz: not found
+>>> lua-subprocess*: Create lua-subprocess-0_git20230625-r1.apk
+>>> lua5.1-subprocess*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.1-subprocess*: Package size: 21.6 KB
+>>> lua5.1-subprocess*: Compressing data...
+>>> lua5.1-subprocess*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.1-subprocess*: Create lua5.1-subprocess-0_git20230625-r1.apk
+>>> lua5.2-subprocess*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-subprocess*: Package size: 21.6 KB
+>>> lua5.2-subprocess*: Compressing data...
+>>> lua5.2-subprocess*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.2-subprocess*: Create lua5.2-subprocess-0_git20230625-r1.apk
+>>> lua5.3-subprocess*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-subprocess*: Package size: 21.6 KB
+>>> lua5.3-subprocess*: Compressing data...
+>>> lua5.3-subprocess*: Create checksum...
+pigz: not found
+>>> lua5.3-subprocess*: Create lua5.3-subprocess-0_git20230625-r1.apk
+>>> lua5.4-subprocess*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-subprocess*: Package size: 21.6 KB
+>>> lua5.4-subprocess*: Compressing data...
+>>> lua5.4-subprocess*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> lua5.4-subprocess*: Create lua5.4-subprocess-0_git20230625-r1.apk
+>>> lua-subprocess: Build complete at Thu, 22 May 2025 22:14:48 +0000 elapsed time 0h 0m 25s
+>>> lua-subprocess: Cleaning up srcdir
+>>> lua-subprocess: Cleaning up pkgdir
+>>> lua-subprocess: Uninstalling dependencies...
+(1/31) Purging .makedepends-lua-subprocess (20250522.221425)
+(2/31) Purging asciidoc-pyc (10.2.1-r0)
+(3/31) Purging asciidoc (10.2.1-r0)
+(4/31) Purging docbook-xsl (1.79.2-r11)
+(5/31) Purging docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.pre-deinstall
+(6/31) Purging docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.pre-deinstall
+(7/31) Purging docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.pre-deinstall
+(8/31) Purging libxml2-utils (2.13.4-r6)
+(9/31) Purging libxslt (1.1.42-r2)
+(10/31) Purging python3-pyc (3.12.10-r1)
+(11/31) Purging python3-pycache-pyc0 (3.12.10-r1)
+(12/31) Purging pyc (3.12.10-r1)
+(13/31) Purging python3 (3.12.10-r1)
+(14/31) Purging lua5.1-dev (5.1.5-r13)
+(15/31) Purging lua5.1 (5.1.5-r13)
+(16/31) Purging lua5.1-libs (5.1.5-r13)
+(17/31) Purging lua5.2-dev (5.2.4-r13)
+(18/31) Purging lua5.2 (5.2.4-r13)
+(19/31) Purging lua5.2-libs (5.2.4-r13)
+(20/31) Purging lua5.3-dev (5.3.6-r6)
+(21/31) Purging lua5.3 (5.3.6-r6)
+(22/31) Purging lua5.3-libs (5.3.6-r6)
+(23/31) Purging lua5.4-dev (5.4.7-r0)
+(24/31) Purging gdbm (1.24-r0)
+(25/31) Purging libffi (3.4.7-r0)
+(26/31) Purging libgcrypt (1.10.3-r1)
+(27/31) Purging libxml2 (2.13.4-r6)
+(28/31) Purging linenoise (1.0-r5)
+(29/31) Purging mpdecimal (4.0.0-r0)
+(30/31) Purging sqlite-libs (3.49.2-r0)
+(31/31) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 314 MiB in 114 packages
+>>> lua-subprocess: Updating the main/x86_64 repository index...
+>>> lua-subprocess: Signing the index...
+pigz: not found

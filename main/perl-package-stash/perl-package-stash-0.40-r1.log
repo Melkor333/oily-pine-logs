@@ -1,0 +1,207 @@
+pigz: not found
+>>> perl-package-stash: Building main/perl-package-stash 0.40-r1 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:51:56 +0000
+>>> perl-package-stash: Validating /home/packager/aports/main/perl-package-stash/APKBUILD...
+>>> perl-package-stash: Analyzing dependencies...
+>>> perl-package-stash: Installing for build: build-base perl perl-dist-checkconflicts perl-module-implementation perl-test-fatal perl-test-needs perl-cpan-meta-check
+(1/13) Installing libbz2 (1.0.8-r6)
+(2/13) Installing perl (5.40.2-r0)
+(3/13) Installing perl-module-runtime (0.016-r6)
+(4/13) Installing perl-dist-checkconflicts (0.11-r4)
+(5/13) Installing perl-try-tiny (0.32-r0)
+(6/13) Installing perl-module-implementation (0.09-r5)
+(7/13) Installing perl-test-fatal (0.017-r1)
+(8/13) Installing perl-test-needs (0.002010-r1)
+(9/13) Installing perl-cpan-meta-check (0.018-r0)
+(10/13) Installing .makedepends-perl-package-stash (20250518.075159)
+(11/13) Installing perl-error (0.17029-r2)
+(12/13) Installing perl-git (2.47.2-r0)
+(13/13) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 297 MiB in 94 packages
+>>> perl-package-stash: Cleaning up srcdir
+>>> perl-package-stash: Cleaning up pkgdir
+>>> perl-package-stash: Cleaning up tmpdir
+>>> perl-package-stash: Fetching https://cpan.metacpan.org/authors/id/E/ET/ETHER/Package-Stash-0.40.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Package-Stash-0.40.tar.gz.part'
+Package-Stash-0.40.t 100% |********************************| 55402  0:00:00 ETA
+'/var/cache/distfiles/Package-Stash-0.40.tar.gz.part' saved
+>>> perl-package-stash: Fetching https://cpan.metacpan.org/authors/id/E/ET/ETHER/Package-Stash-0.40.tar.gz
+>>> perl-package-stash: Checking sha512sums...
+Package-Stash-0.40.tar.gz: OK
+>>> perl-package-stash: Unpacking /var/cache/distfiles/Package-Stash-0.40.tar.gz...
+HASCOMPILER_Um2/TESTDVTR.c:2:10: fatal error: EXTERN.h: No such file or directory
+    2 | #include "EXTERN.h"
+      |          ^~~~~~~~~~
+compilation terminated.
+Couldn't execute gcc -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 "-I/usr/lib/perl5/core_perl/CORE" -fPIC -c HASCOMPILER_Um2/TESTDVTR.c -o HASCOMPILER_Um2/TESTDVTR.o: Not a tty at Makefile.PL line 113.
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Package::Stash
+Writing MYMETA.yml and MYMETA.json
+cp lib/Package/Stash/PP.pm blib/lib/Package/Stash/PP.pm
+cp lib/Package/Stash.pm blib/lib/Package/Stash.pm
+cp lib/Package/Stash/Conflicts.pm blib/lib/Package/Stash/Conflicts.pm
+cp bin/package-stash-conflicts blib/script/package-stash-conflicts
+"/usr/bin/perl" -MExtUtils::MY -e 'MY->fixin(shift)' -- blib/script/package-stash-conflicts
+Manifying 2 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t t/impl-selection/*.t
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module               Want Have
+#     -------------------- ---- ----
+#     Dist::CheckConflicts 0.02 0.11
+#     ExtUtils::MakeMaker   any 7.70
+#     Text::ParseWords      any 3.31
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module                    Want     Have
+#     ------------------------ ----- --------
+#     CPAN::Meta::Check        0.011    0.018
+#     CPAN::Meta::Requirements   any    2.143
+#     ExtUtils::MakeMaker        any     7.70
+#     File::Spec                 any     3.91
+#     Test::Fatal                any    0.017
+#     Test::More                0.88 1.302199
+#     Test::Needs                any 0.002010
+#     base                       any     2.27
+#     lib                        any     0.65
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Test Suggests ===
+# 
+#     Module          Want    Have
+#     --------------- ---- -------
+#     Variable::Magic  any missing
+# 
+# === Runtime Requires ===
+# 
+#     Module                 Want Have
+#     ---------------------- ---- ----
+#     B                       any 1.89
+#     Carp                    any 1.54
+#     Dist::CheckConflicts   0.02 0.11
+#     Getopt::Long            any 2.57
+#     Module::Implementation 0.06 0.09
+#     Scalar::Util            any 1.63
+#     Symbol                  any 1.09
+#     constant                any 1.33
+#     strict                  any 1.13
+#     warnings                any 1.70
+# 
+# === Runtime Recommends ===
+# 
+#     Module             Want    Have
+#     ------------------ ---- -------
+#     Package::Stash::XS 0.26 missing
+# 
+# === Other Modules ===
+# 
+#     Module             Have
+#     --------------- -------
+#     Encode             3.21
+#     File::Temp       0.2311
+#     JSON::PP           4.16
+#     Module::Runtime   0.016
+#     Sub::Name       missing
+#     YAML            missing
+#     autodie            2.37
+# 
+t/00-report-prereqs.t ............ ok
+t/addsub.t ....................... ok
+t/anon-basic.t ................... skipped: Need Package::Anon
+t/anon.t ......................... skipped: Need Package::Anon
+t/bare-anon-basic.t .............. skipped: This isn't really going to work yet, probably
+t/bare-anon.t .................... skipped: This isn't really going to work yet, probably
+t/basic.t ........................ ok
+t/compile-time.t ................. ok
+t/edge-cases.t ................... ok
+t/extension.t .................... ok
+t/get.t .......................... ok
+t/impl-selection/basic-pp.t ...... ok
+t/impl-selection/basic-xs.t ...... skipped: Need Package::Stash::XS
+t/impl-selection/bug-rt-78272.t .. ok
+t/impl-selection/choice.t ........ ok
+t/impl-selection/env.t ........... ok
+t/impl-selection/var.t ........... ok
+t/io.t ........................... ok
+t/isa.t .......................... ok
+t/magic.t ........................ ok
+t/paamayim_nekdotayim.t .......... ok
+t/scalar-values.t ................ ok
+t/stash-deletion.t ............... ok
+t/synopsis.t ..................... ok
+t/warnings-taint.t ............... ok
+t/warnings.t ..................... ok
+t/zzz-check-breaks.t ............. ok
+All tests successful.
+Files=27, Tests=417,  3 wallclock secs ( 0.10 usr  0.03 sys +  2.10 cusr  0.40 csys =  2.63 CPU)
+Result: PASS
+>>> perl-package-stash: Entering fakeroot...
+Manifying 2 pod documents
+Appending installation info to /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/lib/perl5/core_perl/perllocal.pod
+Installing /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/share/perl5/vendor_perl/Package/Stash.pm
+Installing /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/share/perl5/vendor_perl/Package/Stash/PP.pm
+Installing /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/share/perl5/vendor_perl/Package/Stash/Conflicts.pm
+Installing /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/share/man/man3/Package::Stash.3pm
+Installing /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/share/man/man3/Package::Stash::PP.3pm
+Installing /home/packager/aports/main/perl-package-stash/pkg/perl-package-stash/usr/bin/package-stash-conflicts
+>>> perl-package-stash-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-package-stash/pkg/perl-package-stash-doc/usr/share/man'
+>>> perl-package-stash-doc*: Preparing subpackage perl-package-stash-doc...
+>>> perl-package-stash-doc*: Running postcheck for perl-package-stash-doc
+>>> perl-package-stash*: Running postcheck for perl-package-stash
+>>> perl-package-stash*: Preparing package perl-package-stash...
+>>> perl-package-stash-doc*: Tracing dependencies...
+>>> perl-package-stash-doc*: Package size: 5.7 KB
+>>> perl-package-stash-doc*: Compressing data...
+>>> perl-package-stash-doc*: Create checksum...
+pigz: not found
+>>> perl-package-stash-doc*: Create perl-package-stash-doc-0.40-r1.apk
+>>> perl-package-stash*: Tracing dependencies...
+	perl
+	perl-dist-checkconflicts
+	perl-module-implementation
+>>> perl-package-stash*: Package size: 23.2 KB
+>>> perl-package-stash*: Compressing data...
+>>> perl-package-stash*: Create checksum...
+pigz: not found
+>>> perl-package-stash*: Create perl-package-stash-0.40-r1.apk
+>>> perl-package-stash: Build complete at Sun, 18 May 2025 07:52:04 +0000 elapsed time 0h 0m 8s
+>>> perl-package-stash: Cleaning up srcdir
+>>> perl-package-stash: Cleaning up pkgdir
+>>> perl-package-stash: Uninstalling dependencies...
+(1/13) Purging .makedepends-perl-package-stash (20250518.075159)
+(2/13) Purging perl-dist-checkconflicts (0.11-r4)
+(3/13) Purging perl-module-implementation (0.09-r5)
+(4/13) Purging perl-module-runtime (0.016-r6)
+(5/13) Purging perl-test-fatal (0.017-r1)
+(6/13) Purging perl-try-tiny (0.32-r0)
+(7/13) Purging perl-test-needs (0.002010-r1)
+(8/13) Purging perl-cpan-meta-check (0.018-r0)
+(9/13) Purging git-perl (2.47.2-r0)
+(10/13) Purging perl-git (2.47.2-r0)
+(11/13) Purging perl-error (0.17029-r2)
+(12/13) Purging perl (5.40.2-r0)
+(13/13) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-package-stash: Updating the main/x86_64 repository index...
+>>> perl-package-stash: Signing the index...
+pigz: not found

@@ -1,0 +1,137 @@
+pigz: not found
+>>> lua-pc: Building main/lua-pc 1.0.0-r12 (using abuild 3.14.1-r4) started Fri, 23 May 2025 00:42:45 +0000
+>>> lua-pc: Validating /home/packager/aports/main/lua-pc/APKBUILD...
+>>> lua-pc: Analyzing dependencies...
+>>> lua-pc: Installing for build: build-base lua5.1-dev lua5.2-dev lua5.3-dev lua5.4-dev
+(1/12) Installing lua5.1-libs (5.1.5-r13)
+(2/12) Installing lua5.1 (5.1.5-r13)
+(3/12) Installing lua5.1-dev (5.1.5-r13)
+(4/12) Installing lua5.2-libs (5.2.4-r13)
+(5/12) Installing lua5.2 (5.2.4-r13)
+(6/12) Installing lua5.2-dev (5.2.4-r13)
+(7/12) Installing linenoise (1.0-r5)
+(8/12) Installing lua5.3-libs (5.3.6-r6)
+(9/12) Installing lua5.3 (5.3.6-r6)
+(10/12) Installing lua5.3-dev (5.3.6-r6)
+(11/12) Installing lua5.4-dev (5.4.7-r0)
+(12/12) Installing .makedepends-lua-pc (20250523.004247)
+Executing busybox-1.37.0-r12.trigger
+OK: 319 MiB in 126 packages
+>>> lua-pc: Cleaning up srcdir
+>>> lua-pc: Cleaning up pkgdir
+>>> lua-pc: Cleaning up tmpdir
+>>> lua-pc: Fetching https://dev.alpinelinux.org/archive/lpc/lpc-1.0.0.tar.gz
+Connecting to dev.alpinelinux.org (185.15.220.34:443)
+saving to '/var/cache/distfiles/lpc-1.0.0.tar.gz.part'
+lpc-1.0.0.tar.gz.par 100% |********************************| 11524  0:00:00 ETA
+'/var/cache/distfiles/lpc-1.0.0.tar.gz.part' saved
+>>> lua-pc: Fetching https://dev.alpinelinux.org/archive/lpc/lpc-1.0.0.tar.gz
+>>> lua-pc: Checking sha512sums...
+lpc-1.0.0.tar.gz: OK
+lpc-lua5.2-compat.patch: OK
+>>> lua-pc: Unpacking /var/cache/distfiles/lpc-1.0.0.tar.gz...
+>>> lua-pc: lpc-lua5.2-compat.patch
+patching file Makefile
+patching file lpc.c
+gcc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c lpc.c -o lpc.o
+gcc -llua -lm -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -o lpc.so lpc.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpc.so has a LOAD segment with RWX permissions
+gcc -I/usr/include/lua5.2 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c lpc.c -o lpc.o
+gcc -L/usr/lib/lua5.2 -llua -lm -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -o lpc.so lpc.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpc.so has a LOAD segment with RWX permissions
+gcc -I/usr/include/lua5.3 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c lpc.c -o lpc.o
+gcc -L/usr/lib/lua5.3 -llua -lm -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -o lpc.so lpc.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpc.so has a LOAD segment with RWX permissions
+gcc -I/usr/include/lua5.4 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -c lpc.c -o lpc.o
+gcc -L/usr/lib/lua5.4 -llua -lm -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -o lpc.so lpc.o
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: lpc.so has a LOAD segment with RWX permissions
+>>> lua-pc: Entering fakeroot...
+>>> lua5.1-pc*: Running split function _split...
+install -d /home/packager/aports/main/lua-pc/pkg/lua5.1-pc/usr/lib/lua/5.1
+install lpc.so /home/packager/aports/main/lua-pc/pkg/lua5.1-pc/usr/lib/lua/5.1
+>>> lua5.1-pc*: Preparing subpackage lua5.1-pc...
+>>> lua5.1-pc*: Stripping binaries
+>>> lua5.1-pc*: Running postcheck for lua5.1-pc
+>>> lua5.2-pc*: Running split function _split...
+install -d /home/packager/aports/main/lua-pc/pkg/lua5.2-pc/usr/lib/lua/5.2
+install lpc.so /home/packager/aports/main/lua-pc/pkg/lua5.2-pc/usr/lib/lua/5.2
+>>> lua5.2-pc*: Preparing subpackage lua5.2-pc...
+>>> lua5.2-pc*: Stripping binaries
+>>> lua5.2-pc*: Running postcheck for lua5.2-pc
+>>> lua5.3-pc*: Running split function _split...
+install -d /home/packager/aports/main/lua-pc/pkg/lua5.3-pc/usr/lib/lua/5.3
+install lpc.so /home/packager/aports/main/lua-pc/pkg/lua5.3-pc/usr/lib/lua/5.3
+>>> lua5.3-pc*: Preparing subpackage lua5.3-pc...
+>>> lua5.3-pc*: Stripping binaries
+>>> lua5.3-pc*: Running postcheck for lua5.3-pc
+>>> lua5.4-pc*: Running split function _split...
+install -d /home/packager/aports/main/lua-pc/pkg/lua5.4-pc/usr/lib/lua/5.4
+install lpc.so /home/packager/aports/main/lua-pc/pkg/lua5.4-pc/usr/lib/lua/5.4
+>>> lua5.4-pc*: Preparing subpackage lua5.4-pc...
+>>> lua5.4-pc*: Stripping binaries
+>>> lua5.4-pc*: Running postcheck for lua5.4-pc
+>>> lua-pc*: Running postcheck for lua-pc
+>>> lua-pc*: Preparing package lua-pc...
+>>> lua-pc*: Stripping binaries
+>>> WARNING: lua-pc*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-pc*: Scanning shared objects
+>>> lua5.1-pc*: Scanning shared objects
+>>> lua5.2-pc*: Scanning shared objects
+>>> lua5.3-pc*: Scanning shared objects
+>>> lua5.4-pc*: Scanning shared objects
+>>> lua-pc*: Tracing dependencies...
+	lua5.1-pc
+>>> lua-pc*: Package size: 0.0 
+>>> lua-pc*: Compressing data...
+>>> lua-pc*: Create checksum...
+pigz: not found
+>>> lua-pc*: Create lua-pc-1.0.0-r12.apk
+>>> lua5.1-pc*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.1-pc*: Package size: 12.0 KB
+>>> lua5.1-pc*: Compressing data...
+>>> lua5.1-pc*: Create checksum...
+pigz: not found
+>>> lua5.1-pc*: Create lua5.1-pc-1.0.0-r12.apk
+>>> lua5.2-pc*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.2-pc*: Package size: 11.3 KB
+>>> lua5.2-pc*: Compressing data...
+>>> lua5.2-pc*: Create checksum...
+pigz: not found
+>>> lua5.2-pc*: Create lua5.2-pc-1.0.0-r12.apk
+>>> lua5.3-pc*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.3-pc*: Package size: 11.4 KB
+>>> lua5.3-pc*: Compressing data...
+>>> lua5.3-pc*: Create checksum...
+pigz: not found
+>>> lua5.3-pc*: Create lua5.3-pc-1.0.0-r12.apk
+>>> lua5.4-pc*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> lua5.4-pc*: Package size: 11.5 KB
+>>> lua5.4-pc*: Compressing data...
+>>> lua5.4-pc*: Create checksum...
+pigz: not found
+>>> lua5.4-pc*: Create lua5.4-pc-1.0.0-r12.apk
+>>> lua-pc: Build complete at Fri, 23 May 2025 00:42:58 +0000 elapsed time 0h 0m 13s
+>>> lua-pc: Cleaning up srcdir
+>>> lua-pc: Cleaning up pkgdir
+>>> lua-pc: Uninstalling dependencies...
+(1/12) Purging .makedepends-lua-pc (20250523.004247)
+(2/12) Purging lua5.1-dev (5.1.5-r13)
+(3/12) Purging lua5.1 (5.1.5-r13)
+(4/12) Purging lua5.1-libs (5.1.5-r13)
+(5/12) Purging lua5.2-dev (5.2.4-r13)
+(6/12) Purging lua5.2 (5.2.4-r13)
+(7/12) Purging lua5.2-libs (5.2.4-r13)
+(8/12) Purging lua5.3-dev (5.3.6-r6)
+(9/12) Purging lua5.3 (5.3.6-r6)
+(10/12) Purging lua5.3-libs (5.3.6-r6)
+(11/12) Purging lua5.4-dev (5.4.7-r0)
+(12/12) Purging linenoise (1.0-r5)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> lua-pc: Updating the main/x86_64 repository index...
+>>> lua-pc: Signing the index...
+pigz: not found

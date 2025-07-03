@@ -1,0 +1,195 @@
+pigz: not found
+>>> perl-log-any: Building main/perl-log-any 1.717-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:16:29 +0000
+>>> perl-log-any: Validating /home/packager/aports/main/perl-log-any/APKBUILD...
+>>> perl-log-any: Analyzing dependencies...
+>>> perl-log-any: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-log-any (20250518.101631)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-log-any: Cleaning up srcdir
+>>> perl-log-any: Cleaning up pkgdir
+>>> perl-log-any: Cleaning up tmpdir
+>>> perl-log-any: Fetching https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-1.717.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Log-Any-1.717.tar.gz.part'
+Log-Any-1.717.tar.gz 100% |********************************| 62565  0:00:00 ETA
+'/var/cache/distfiles/Log-Any-1.717.tar.gz.part' saved
+>>> perl-log-any: Fetching https://cpan.metacpan.org/authors/id/P/PR/PREACTION/Log-Any-1.717.tar.gz
+>>> perl-log-any: Checking sha512sums...
+Log-Any-1.717.tar.gz: OK
+>>> perl-log-any: Unpacking /var/cache/distfiles/Log-Any-1.717.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Log::Any
+Writing MYMETA.yml and MYMETA.json
+cp lib/Log/Any/Proxy.pm blib/lib/Log/Any/Proxy.pm
+cp lib/Log/Any/Adapter/Syslog.pm blib/lib/Log/Any/Adapter/Syslog.pm
+cp lib/Log/Any/Adapter/Null.pm blib/lib/Log/Any/Adapter/Null.pm
+cp lib/Log/Any/Adapter/Util.pm blib/lib/Log/Any/Adapter/Util.pm
+cp lib/Log/Any/Adapter/Multiplex.pm blib/lib/Log/Any/Adapter/Multiplex.pm
+cp lib/Log/Any/Adapter/Base.pm blib/lib/Log/Any/Adapter/Base.pm
+cp lib/Log/Any/Proxy/WithStackTrace.pm blib/lib/Log/Any/Proxy/WithStackTrace.pm
+cp lib/Log/Any/Adapter/Stdout.pm blib/lib/Log/Any/Adapter/Stdout.pm
+cp lib/Log/Any/Adapter/Stderr.pm blib/lib/Log/Any/Adapter/Stderr.pm
+cp lib/Log/Any/Proxy/Test.pm blib/lib/Log/Any/Proxy/Test.pm
+cp lib/Log/Any/Test.pm blib/lib/Log/Any/Test.pm
+cp lib/Log/.gitignore blib/lib/Log/.gitignore
+cp lib/Log/Any/Adapter/Development.pod blib/lib/Log/Any/Adapter/Development.pod
+cp lib/Log/Any/Adapter/Capture.pm blib/lib/Log/Any/Adapter/Capture.pm
+cp lib/Log/Any/Proxy/Null.pm blib/lib/Log/Any/Proxy/Null.pm
+cp lib/Log/Any/Adapter/Test.pm blib/lib/Log/Any/Adapter/Test.pm
+cp lib/Log/Any.pm blib/lib/Log/Any.pm
+cp lib/Log/Any/Adapter/File.pm blib/lib/Log/Any/Adapter/File.pm
+cp lib/Log/Any/Adapter.pm blib/lib/Log/Any/Adapter.pm
+cp lib/Log/Any/Manager.pm blib/lib/Log/Any/Manager.pm
+Manifying 19 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/00-compile.t .............. ok
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module              Want     Have
+#     ------------------- ---- --------
+#     ExtUtils::MakeMaker  any     7.70
+#     File::Spec           any     3.91
+#     IO::Handle           any     1.55
+#     IPC::Open3           any     1.22
+#     Test::More           any 1.302199
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+t/00-report-prereqs.t ....... ok
+t/adapter-import.t .......... ok
+t/author-pod-syntax.t ....... skipped: these tests are for testing by the author
+t/capture.t ................. ok
+t/context.t ................. ok
+t/default-adapter-env.t ..... ok
+t/default-adapter-params.t .. ok
+t/default-adapter-use.t ..... ok
+t/default-adapter.t ......... ok
+t/default-vs-test.t ......... ok
+t/errors-adapter.t .......... ok
+t/filescreen.t .............. ok
+t/import.t .................. ok
+t/inner-adapter.t ........... ok
+t/log-any-test.t ............ ok
+t/memory.t .................. ok
+t/multiplex.t ............... ok
+t/null-proxy.t .............. ok
+t/proxy-with-stack-trace.t .. skipped: Devel::StackTrace >= 2.00 is required for this test
+t/proxy.t ................... ok
+t/release-backcompat.t ...... skipped: these tests are for release candidate testing
+t/replace_log.t ............. ok
+t/sprintf.t ................. ok
+t/stringify.t ............... ok
+t/structured-logging.t ...... ok
+t/syslog.t .................. ok
+t/util.t .................... ok
+t/valid-methods.t ........... ok
+All tests successful.
+Files=29, Tests=309,  3 wallclock secs ( 0.09 usr  0.04 sys +  2.48 cusr  0.49 csys =  3.10 CPU)
+Result: PASS
+>>> perl-log-any: Entering fakeroot...
+Manifying 19 pod documents
+Appending installation info to /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/lib/perl5/core_perl/perllocal.pod
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/.gitignore
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Manager.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Test.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Proxy.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/File.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Stdout.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Base.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Util.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Capture.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Test.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Stderr.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Multiplex.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Development.pod
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Syslog.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Adapter/Null.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Proxy/WithStackTrace.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Proxy/Test.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/perl5/vendor_perl/Log/Any/Proxy/Null.pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Test.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Proxy::Null.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Multiplex.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Util.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Development.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Capture.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Stderr.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Proxy::Test.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Manager.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::File.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Null.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Test.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Syslog.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Proxy.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Proxy::WithStackTrace.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Base.3pm
+Installing /home/packager/aports/main/perl-log-any/pkg/perl-log-any/usr/share/man/man3/Log::Any::Adapter::Stdout.3pm
+>>> perl-log-any-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-log-any/pkg/perl-log-any-doc/usr/share/man'
+>>> perl-log-any-doc*: Preparing subpackage perl-log-any-doc...
+>>> perl-log-any-doc*: Running postcheck for perl-log-any-doc
+>>> perl-log-any*: Running postcheck for perl-log-any
+>>> perl-log-any*: Preparing package perl-log-any...
+>>> perl-log-any-doc*: Tracing dependencies...
+>>> perl-log-any-doc*: Package size: 39.6 KB
+>>> perl-log-any-doc*: Compressing data...
+>>> perl-log-any-doc*: Create checksum...
+pigz: not found
+>>> perl-log-any-doc*: Create perl-log-any-doc-1.717-r0.apk
+>>> perl-log-any*: Tracing dependencies...
+	perl
+>>> perl-log-any*: Package size: 109.7 KB
+>>> perl-log-any*: Compressing data...
+>>> perl-log-any*: Create checksum...
+pigz: not found
+>>> perl-log-any*: Create perl-log-any-1.717-r0.apk
+>>> perl-log-any: Build complete at Sun, 18 May 2025 10:16:37 +0000 elapsed time 0h 0m 8s
+>>> perl-log-any: Cleaning up srcdir
+>>> perl-log-any: Cleaning up pkgdir
+>>> perl-log-any: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-log-any (20250518.101631)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-log-any: Updating the main/x86_64 repository index...
+>>> perl-log-any: Signing the index...
+pigz: not found

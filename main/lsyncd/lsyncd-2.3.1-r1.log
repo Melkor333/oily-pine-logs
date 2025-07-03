@@ -1,0 +1,105 @@
+pigz: not found
+>>> lsyncd: Building main/lsyncd 2.3.1-r1 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:59:46 +0000
+>>> lsyncd: Validating /home/packager/aports/main/lsyncd/APKBUILD...
+>>> lsyncd: Analyzing dependencies...
+>>> lsyncd: Installing for build: build-base rsync cmake lua5.4 lua5.4-dev samurai
+(1/12) Installing lz4-libs (1.10.0-r0)
+(2/12) Installing popt (1.19-r4)
+(3/12) Installing libxxhash (0.8.3-r0)
+(4/12) Installing rsync (3.4.0-r0)
+(5/12) Installing xz-libs (5.6.3-r1)
+(6/12) Installing libarchive (3.7.9-r0)
+(7/12) Installing rhash-libs (1.4.5-r0)
+(8/12) Installing libuv (1.49.2-r0)
+(9/12) Installing cmake (3.31.7-r0)
+(10/12) Installing lua5.4-dev (5.4.7-r0)
+(11/12) Installing samurai (1.2-r6)
+(12/12) Installing .makedepends-lsyncd (20250523.175948)
+Executing busybox-1.37.0-r12.trigger
+OK: 620 MiB in 144 packages
+>>> lsyncd: Cleaning up srcdir
+>>> lsyncd: Cleaning up pkgdir
+>>> lsyncd: Cleaning up tmpdir
+>>> lsyncd: Fetching lsyncd-2.3.1.tar.gz::https://github.com/lsyncd/lsyncd/archive/release-2.3.1.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/lsyncd-2.3.1.tar.gz.part'
+lsyncd-2.3.1.tar.gz. 100% |********************************|  122k  0:00:00 ETA
+'/var/cache/distfiles/lsyncd-2.3.1.tar.gz.part' saved
+>>> lsyncd: Fetching lsyncd-2.3.1.tar.gz::https://github.com/lsyncd/lsyncd/archive/release-2.3.1.tar.gz
+>>> lsyncd: Checking sha512sums...
+lsyncd-2.3.1.tar.gz: OK
+fix-realpath.patch: OK
+lpostcmd.patch: OK
+fix-mandir.patch: OK
+lua5.4.patch: OK
+lsyncd.initd: OK
+>>> lsyncd: Unpacking /var/cache/distfiles/lsyncd-2.3.1.tar.gz...
+>>> lsyncd: fix-realpath.patch
+patching file lsyncd.c
+Hunk #1 succeeded at 208 (offset 37 lines).
+>>> lsyncd: lpostcmd.patch
+patching file examples/lpostcmd.lua
+>>> lsyncd: fix-mandir.patch
+patching file CMakeLists.txt
+Hunk #1 succeeded at 136 (offset 9 lines).
+>>> lsyncd: lua5.4.patch
+patching file lsyncd.h
+CMake Warning (dev) at CMakeLists.txt:2 (project):
+  cmake_minimum_required() should be called prior to this top-level project()
+  call.  Please see the cmake-commands(7) manual for usage documentation of
+  both commands.
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- The C compiler identification is GNU 14.2.0
+-- The CXX compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/lsyncd/src/lsyncd-release-2.3.1/build/CMakeFiles/CMakeScratch/TryCompile-kKIJbI'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_34f2c
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o CMakeFiles/cmTC_34f2c.dir/testCCompiler.c.o -c /home/packager/aports/main/lsyncd/src/lsyncd-release-2.3.1/build/CMakeFiles/CMakeScratch/TryCompile-kKIJbI/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_34f2c.dir/testCCompiler.c.o -o cmTC_34f2c   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs   -rdynamic CMakeFiles/cmTC_34f2c.dir/testCCompiler.c.o -o cmTC_34f2c   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_34f2c: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_34f2c has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:2 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: lsyncd: build failed
+>>> lsyncd: Uninstalling dependencies...
+(1/12) Purging .makedepends-lsyncd (20250523.175948)
+(2/12) Purging rsync (3.4.0-r0)
+(3/12) Purging cmake (3.31.7-r0)
+(4/12) Purging lua5.4-dev (5.4.7-r0)
+(5/12) Purging samurai (1.2-r6)
+(6/12) Purging libarchive (3.7.9-r0)
+(7/12) Purging libuv (1.49.2-r0)
+(8/12) Purging libxxhash (0.8.3-r0)
+(9/12) Purging lz4-libs (1.10.0-r0)
+(10/12) Purging popt (1.19-r4)
+(11/12) Purging rhash-libs (1.4.5-r0)
+(12/12) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

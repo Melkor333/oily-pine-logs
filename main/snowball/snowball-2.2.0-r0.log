@@ -1,0 +1,235 @@
+pigz: not found
+>>> snowball: Building main/snowball 2.2.0-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:46:29 +0000
+>>> snowball: Validating /home/packager/aports/main/snowball/APKBUILD...
+>>> snowball: Analyzing dependencies...
+>>> snowball: Installing for build: build-base perl
+(1/6) Installing libbz2 (1.0.8-r6)
+(2/6) Installing perl (5.40.2-r0)
+(3/6) Installing .makedepends-snowball (20250518.094631)
+(4/6) Installing perl-error (0.17030-r0)
+(5/6) Installing perl-git (2.47.2-r0)
+(6/6) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 297 MiB in 87 packages
+>>> snowball: Cleaning up srcdir
+>>> snowball: Cleaning up pkgdir
+>>> snowball: Cleaning up tmpdir
+>>> snowball: Fetching snowball-2.2.0.tar.gz::https://github.com/snowballstem/snowball/archive/refs/tags/v2.2.0.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/snowball-2.2.0.tar.gz.part'
+snowball-2.2.0.tar.g 100% |********************************|  218k  0:00:00 ETA
+'/var/cache/distfiles/snowball-2.2.0.tar.gz.part' saved
+>>> snowball: Fetching snowball-2.2.0.tar.gz::https://github.com/snowballstem/snowball/archive/refs/tags/v2.2.0.tar.gz
+>>> snowball: Checking sha512sums...
+snowball-2.2.0.tar.gz: OK
+libstemmer-library.patch: OK
+>>> snowball: Unpacking /var/cache/distfiles/snowball-2.2.0.tar.gz...
+>>> snowball: libstemmer-library.patch
+patching file GNUmakefile
+patching file libstemmer/symbol.map
+libstemmer/mkalgorithms.pl algorithms.mk libstemmer/modules.txt
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/space.o compiler/space.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/tokeniser.o compiler/tokeniser.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/analyser.o compiler/analyser.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator.o compiler/generator.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/driver.o compiler/driver.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_csharp.o compiler/generator_csharp.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_java.o compiler/generator_java.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_js.o compiler/generator_js.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_pascal.o compiler/generator_pascal.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_python.o compiler/generator_python.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_rust.o compiler/generator_rust.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_go.o compiler/generator_go.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o compiler/generator_ada.o compiler/generator_ada.c
+sed 's/@MODULES_H@/modules.h/' libstemmer/libstemmer_c.in >libstemmer/libstemmer.c
+libstemmer/mkmodules.pl libstemmer/modules.h src_c libstemmer/modules.txt libstemmer/mkinc.mak
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o runtime/api.o runtime/api.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o runtime/utilities.o runtime/utilities.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o examples/stemwords.o examples/stemwords.c
+In function 'generate_try',
+    inlined from 'generate.part.0' at compiler/generator_ada.c:1325:31:
+compiler/generator_ada.c:462:9: warning: 'savevar' may be used uninitialized [-Wmaybe-uninitialized]
+  462 |         str_delete(savevar);
+      |         ^~~~~~~~~~~~~~~~~~~
+compiler/generator_ada.c: In function 'generate.part.0':
+compiler/generator_ada.c:442:18: note: 'savevar' was declared here
+  442 |     struct str * savevar;
+      |                  ^~~~~~~
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o snowball compiler/space.o compiler/tokeniser.o compiler/analyser.o compiler/generator.o compiler/driver.o compiler/generator_csharp.o compiler/generator_java.o compiler/generator_js.o compiler/generator_pascal.o compiler/generator_python.o compiler/generator_rust.o compiler/generator_go.o compiler/generator_ada.o
+./snowball algorithms/arabic.sbl -o src_c/stem_UTF_8_arabic -eprefix arabic_UTF_8_ -r ../runtime -u
+./snowball algorithms/armenian.sbl -o src_c/stem_UTF_8_armenian -eprefix armenian_UTF_8_ -r ../runtime -u
+./snowball algorithms/basque.sbl -o src_c/stem_UTF_8_basque -eprefix basque_UTF_8_ -r ../runtime -u
+./snowball algorithms/dutch.sbl -o src_c/stem_UTF_8_dutch -eprefix dutch_UTF_8_ -r ../runtime -u
+./snowball algorithms/catalan.sbl -o src_c/stem_UTF_8_catalan -eprefix catalan_UTF_8_ -r ../runtime -u
+./snowball algorithms/danish.sbl -o src_c/stem_UTF_8_danish -eprefix danish_UTF_8_ -r ../runtime -u
+./snowball algorithms/english.sbl -o src_c/stem_UTF_8_english -eprefix english_UTF_8_ -r ../runtime -u
+./snowball algorithms/finnish.sbl -o src_c/stem_UTF_8_finnish -eprefix finnish_UTF_8_ -r ../runtime -u
+./snowball algorithms/french.sbl -o src_c/stem_UTF_8_french -eprefix french_UTF_8_ -r ../runtime -u
+./snowball algorithms/german.sbl -o src_c/stem_UTF_8_german -eprefix german_UTF_8_ -r ../runtime -u
+./snowball algorithms/greek.sbl -o src_c/stem_UTF_8_greek -eprefix greek_UTF_8_ -r ../runtime -u
+./snowball algorithms/hindi.sbl -o src_c/stem_UTF_8_hindi -eprefix hindi_UTF_8_ -r ../runtime -u
+./snowball algorithms/hungarian.sbl -o src_c/stem_UTF_8_hungarian -eprefix hungarian_UTF_8_ -r ../runtime -u
+./snowball algorithms/indonesian.sbl -o src_c/stem_UTF_8_indonesian -eprefix indonesian_UTF_8_ -r ../runtime -u
+./snowball algorithms/irish.sbl -o src_c/stem_UTF_8_irish -eprefix irish_UTF_8_ -r ../runtime -u
+./snowball algorithms/italian.sbl -o src_c/stem_UTF_8_italian -eprefix italian_UTF_8_ -r ../runtime -u
+./snowball algorithms/lithuanian.sbl -o src_c/stem_UTF_8_lithuanian -eprefix lithuanian_UTF_8_ -r ../runtime -u
+./snowball algorithms/nepali.sbl -o src_c/stem_UTF_8_nepali -eprefix nepali_UTF_8_ -r ../runtime -u
+./snowball algorithms/porter.sbl -o src_c/stem_UTF_8_porter -eprefix porter_UTF_8_ -r ../runtime -u
+./snowball algorithms/portuguese.sbl -o src_c/stem_UTF_8_portuguese -eprefix portuguese_UTF_8_ -r ../runtime -u
+./snowball algorithms/norwegian.sbl -o src_c/stem_UTF_8_norwegian -eprefix norwegian_UTF_8_ -r ../runtime -u
+./snowball algorithms/romanian.sbl -o src_c/stem_UTF_8_romanian -eprefix romanian_UTF_8_ -r ../runtime -u
+./snowball algorithms/russian.sbl -o src_c/stem_UTF_8_russian -eprefix russian_UTF_8_ -r ../runtime -u
+./snowball algorithms/serbian.sbl -o src_c/stem_UTF_8_serbian -eprefix serbian_UTF_8_ -r ../runtime -u
+./snowball algorithms/swedish.sbl -o src_c/stem_UTF_8_swedish -eprefix swedish_UTF_8_ -r ../runtime -u
+./snowball algorithms/spanish.sbl -o src_c/stem_UTF_8_spanish -eprefix spanish_UTF_8_ -r ../runtime -u
+./snowball algorithms/tamil.sbl -o src_c/stem_UTF_8_tamil -eprefix tamil_UTF_8_ -r ../runtime -u
+./snowball algorithms/turkish.sbl -o src_c/stem_UTF_8_turkish -eprefix turkish_UTF_8_ -r ../runtime -u
+./snowball charsets/KOI8-R.sbl algorithms/russian.sbl -o src_c/stem_KOI8_R_russian -eprefix russian_KOI8_R_ -r ../runtime
+./snowball algorithms/yiddish.sbl -o src_c/stem_UTF_8_yiddish -eprefix yiddish_UTF_8_ -r ../runtime -u
+./snowball algorithms/basque.sbl -o src_c/stem_ISO_8859_1_basque -eprefix basque_ISO_8859_1_ -r ../runtime
+./snowball algorithms/catalan.sbl -o src_c/stem_ISO_8859_1_catalan -eprefix catalan_ISO_8859_1_ -r ../runtime
+./snowball algorithms/danish.sbl -o src_c/stem_ISO_8859_1_danish -eprefix danish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/dutch.sbl -o src_c/stem_ISO_8859_1_dutch -eprefix dutch_ISO_8859_1_ -r ../runtime
+./snowball algorithms/english.sbl -o src_c/stem_ISO_8859_1_english -eprefix english_ISO_8859_1_ -r ../runtime
+./snowball algorithms/finnish.sbl -o src_c/stem_ISO_8859_1_finnish -eprefix finnish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/french.sbl -o src_c/stem_ISO_8859_1_french -eprefix french_ISO_8859_1_ -r ../runtime
+./snowball algorithms/german.sbl -o src_c/stem_ISO_8859_1_german -eprefix german_ISO_8859_1_ -r ../runtime
+./snowball algorithms/indonesian.sbl -o src_c/stem_ISO_8859_1_indonesian -eprefix indonesian_ISO_8859_1_ -r ../runtime
+./snowball algorithms/irish.sbl -o src_c/stem_ISO_8859_1_irish -eprefix irish_ISO_8859_1_ -r ../runtime
+./snowball algorithms/italian.sbl -o src_c/stem_ISO_8859_1_italian -eprefix italian_ISO_8859_1_ -r ../runtime
+./snowball algorithms/portuguese.sbl -o src_c/stem_ISO_8859_1_portuguese -eprefix portuguese_ISO_8859_1_ -r ../runtime
+./snowball algorithms/porter.sbl -o src_c/stem_ISO_8859_1_porter -eprefix porter_ISO_8859_1_ -r ../runtime
+./snowball algorithms/norwegian.sbl -o src_c/stem_ISO_8859_1_norwegian -eprefix norwegian_ISO_8859_1_ -r ../runtime
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_arabic.o src_c/stem_UTF_8_arabic.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_armenian.o src_c/stem_UTF_8_armenian.c
+./snowball algorithms/swedish.sbl -o src_c/stem_ISO_8859_1_swedish -eprefix swedish_ISO_8859_1_ -r ../runtime
+./snowball charsets/ISO-8859-2.sbl algorithms/romanian.sbl -o src_c/stem_ISO_8859_2_romanian -eprefix romanian_ISO_8859_2_ -r ../runtime
+./snowball charsets/ISO-8859-2.sbl algorithms/hungarian.sbl -o src_c/stem_ISO_8859_2_hungarian -eprefix hungarian_ISO_8859_2_ -r ../runtime
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_basque.o src_c/stem_UTF_8_basque.c
+./snowball algorithms/spanish.sbl -o src_c/stem_ISO_8859_1_spanish -eprefix spanish_ISO_8859_1_ -r ../runtime
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_catalan.o src_c/stem_UTF_8_catalan.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_danish.o src_c/stem_UTF_8_danish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_dutch.o src_c/stem_UTF_8_dutch.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_english.o src_c/stem_UTF_8_english.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_finnish.o src_c/stem_UTF_8_finnish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_french.o src_c/stem_UTF_8_french.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_german.o src_c/stem_UTF_8_german.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_greek.o src_c/stem_UTF_8_greek.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_hindi.o src_c/stem_UTF_8_hindi.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_hungarian.o src_c/stem_UTF_8_hungarian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_indonesian.o src_c/stem_UTF_8_indonesian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_irish.o src_c/stem_UTF_8_irish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_italian.o src_c/stem_UTF_8_italian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_lithuanian.o src_c/stem_UTF_8_lithuanian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_nepali.o src_c/stem_UTF_8_nepali.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_norwegian.o src_c/stem_UTF_8_norwegian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_porter.o src_c/stem_UTF_8_porter.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_portuguese.o src_c/stem_UTF_8_portuguese.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_romanian.o src_c/stem_UTF_8_romanian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_russian.o src_c/stem_UTF_8_russian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_serbian.o src_c/stem_UTF_8_serbian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_spanish.o src_c/stem_UTF_8_spanish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_swedish.o src_c/stem_UTF_8_swedish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_tamil.o src_c/stem_UTF_8_tamil.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_turkish.o src_c/stem_UTF_8_turkish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_yiddish.o src_c/stem_UTF_8_yiddish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_KOI8_R_russian.o src_c/stem_KOI8_R_russian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_basque.o src_c/stem_ISO_8859_1_basque.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_catalan.o src_c/stem_ISO_8859_1_catalan.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_danish.o src_c/stem_ISO_8859_1_danish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_dutch.o src_c/stem_ISO_8859_1_dutch.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_english.o src_c/stem_ISO_8859_1_english.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_finnish.o src_c/stem_ISO_8859_1_finnish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_french.o src_c/stem_ISO_8859_1_french.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_german.o src_c/stem_ISO_8859_1_german.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_indonesian.o src_c/stem_ISO_8859_1_indonesian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_irish.o src_c/stem_ISO_8859_1_irish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_italian.o src_c/stem_ISO_8859_1_italian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_norwegian.o src_c/stem_ISO_8859_1_norwegian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_porter.o src_c/stem_ISO_8859_1_porter.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_portuguese.o src_c/stem_ISO_8859_1_portuguese.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_spanish.o src_c/stem_ISO_8859_1_spanish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_1_swedish.o src_c/stem_ISO_8859_1_swedish.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_2_hungarian.o src_c/stem_ISO_8859_2_hungarian.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_ISO_8859_2_romanian.o src_c/stem_ISO_8859_2_romanian.c
+./snowball algorithms/german2.sbl -o src_c/stem_UTF_8_german2 -eprefix german2_UTF_8_ -r ../runtime -u
+./snowball algorithms/kraaij_pohlmann.sbl -o src_c/stem_UTF_8_kraaij_pohlmann -eprefix kraaij_pohlmann_UTF_8_ -r ../runtime -u
+./snowball algorithms/lovins.sbl -o src_c/stem_UTF_8_lovins -eprefix lovins_UTF_8_ -r ../runtime -u
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_german2.o src_c/stem_UTF_8_german2.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_kraaij_pohlmann.o src_c/stem_UTF_8_kraaij_pohlmann.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o src_c/stem_UTF_8_lovins.o src_c/stem_UTF_8_lovins.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations   -c -o libstemmer/libstemmer.o libstemmer/libstemmer.c
+ar -cru libstemmer.a libstemmer/libstemmer.o runtime/api.o runtime/utilities.o src_c/stem_UTF_8_arabic.o src_c/stem_UTF_8_armenian.o src_c/stem_UTF_8_basque.o src_c/stem_UTF_8_catalan.o src_c/stem_UTF_8_danish.o src_c/stem_UTF_8_dutch.o src_c/stem_UTF_8_english.o src_c/stem_UTF_8_finnish.o src_c/stem_UTF_8_french.o src_c/stem_UTF_8_german.o src_c/stem_UTF_8_greek.o src_c/stem_UTF_8_hindi.o src_c/stem_UTF_8_hungarian.o src_c/stem_UTF_8_indonesian.o src_c/stem_UTF_8_irish.o src_c/stem_UTF_8_italian.o src_c/stem_UTF_8_lithuanian.o src_c/stem_UTF_8_nepali.o src_c/stem_UTF_8_norwegian.o src_c/stem_UTF_8_porter.o src_c/stem_UTF_8_portuguese.o src_c/stem_UTF_8_romanian.o src_c/stem_UTF_8_russian.o src_c/stem_UTF_8_serbian.o src_c/stem_UTF_8_spanish.o src_c/stem_UTF_8_swedish.o src_c/stem_UTF_8_tamil.o src_c/stem_UTF_8_turkish.o src_c/stem_UTF_8_yiddish.o src_c/stem_KOI8_R_russian.o src_c/stem_ISO_8859_1_basque.o src_c/stem_ISO_8859_1_catalan.o src_c/stem_ISO_8859_1_danish.o src_c/stem_ISO_8859_1_dutch.o src_c/stem_ISO_8859_1_english.o src_c/stem_ISO_8859_1_finnish.o src_c/stem_ISO_8859_1_french.o src_c/stem_ISO_8859_1_german.o src_c/stem_ISO_8859_1_indonesian.o src_c/stem_ISO_8859_1_irish.o src_c/stem_ISO_8859_1_italian.o src_c/stem_ISO_8859_1_norwegian.o src_c/stem_ISO_8859_1_porter.o src_c/stem_ISO_8859_1_portuguese.o src_c/stem_ISO_8859_1_spanish.o src_c/stem_ISO_8859_1_swedish.o src_c/stem_ISO_8859_2_hungarian.o src_c/stem_ISO_8859_2_romanian.o
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-soname,libstemmer.so.2,-version-script,libstemmer/symbol.map -o libstemmer.so.2.2.0 libstemmer/libstemmer.o runtime/api.o runtime/utilities.o src_c/stem_UTF_8_arabic.o src_c/stem_UTF_8_armenian.o src_c/stem_UTF_8_basque.o src_c/stem_UTF_8_catalan.o src_c/stem_UTF_8_danish.o src_c/stem_UTF_8_dutch.o src_c/stem_UTF_8_english.o src_c/stem_UTF_8_finnish.o src_c/stem_UTF_8_french.o src_c/stem_UTF_8_german.o src_c/stem_UTF_8_greek.o src_c/stem_UTF_8_hindi.o src_c/stem_UTF_8_hungarian.o src_c/stem_UTF_8_indonesian.o src_c/stem_UTF_8_irish.o src_c/stem_UTF_8_italian.o src_c/stem_UTF_8_lithuanian.o src_c/stem_UTF_8_nepali.o src_c/stem_UTF_8_norwegian.o src_c/stem_UTF_8_porter.o src_c/stem_UTF_8_portuguese.o src_c/stem_UTF_8_romanian.o src_c/stem_UTF_8_russian.o src_c/stem_UTF_8_serbian.o src_c/stem_UTF_8_spanish.o src_c/stem_UTF_8_swedish.o src_c/stem_UTF_8_tamil.o src_c/stem_UTF_8_turkish.o src_c/stem_UTF_8_yiddish.o src_c/stem_KOI8_R_russian.o src_c/stem_ISO_8859_1_basque.o src_c/stem_ISO_8859_1_catalan.o src_c/stem_ISO_8859_1_danish.o src_c/stem_ISO_8859_1_dutch.o src_c/stem_ISO_8859_1_english.o src_c/stem_ISO_8859_1_finnish.o src_c/stem_ISO_8859_1_french.o src_c/stem_ISO_8859_1_german.o src_c/stem_ISO_8859_1_indonesian.o src_c/stem_ISO_8859_1_irish.o src_c/stem_ISO_8859_1_italian.o src_c/stem_ISO_8859_1_norwegian.o src_c/stem_ISO_8859_1_porter.o src_c/stem_ISO_8859_1_portuguese.o src_c/stem_ISO_8859_1_spanish.o src_c/stem_ISO_8859_1_swedish.o src_c/stem_ISO_8859_2_hungarian.o src_c/stem_ISO_8859_2_romanian.o
+ar: `u' modifier ignored since `D' is the default (see `U')
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o stemwords examples/stemwords.o libstemmer.a
+ln -s libstemmer.so.2.2.0 libstemmer.so.2
+ln -s libstemmer.so.2.2.0 libstemmer.so
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Iinclude  -c -o tests/stemtest.o tests/stemtest.c
+gcc -fPIC -O2 -W -Wall -Wmissing-prototypes -Wmissing-declarations -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o stemtest tests/stemtest.o libstemmer.a
+./stemtest
+>>> snowball: Entering fakeroot...
+>>> snowball-doc*: Running split function doc...
+'usr/share/licenses' -> '/home/packager/aports/main/snowball/pkg/snowball-doc/usr/share/licenses'
+>>> snowball-doc*: Preparing subpackage snowball-doc...
+>>> snowball-doc*: Running postcheck for snowball-doc
+>>> libstemmer*: Running split function _libstemmer...
+>>> libstemmer*: Preparing subpackage libstemmer...
+>>> libstemmer*: Stripping binaries
+>>> libstemmer*: Running postcheck for libstemmer
+>>> libstemmer-dev*: Running split function _libstemmerdev...
+'usr/include' -> '/home/packager/aports/main/snowball/pkg/libstemmer-dev/usr/include'
+'usr/lib/libstemmer.a' -> '/home/packager/aports/main/snowball/pkg/libstemmer-dev/usr/lib/libstemmer.a'
+>>> libstemmer-dev*: Preparing subpackage libstemmer-dev...
+>>> libstemmer-dev*: Stripping binaries
+>>> libstemmer-dev*: Running postcheck for libstemmer-dev
+>>> snowball*: Running postcheck for snowball
+>>> snowball*: Preparing package snowball...
+>>> snowball*: Stripping binaries
+>>> libstemmer-dev*: Scanning shared objects
+>>> libstemmer*: Scanning shared objects
+>>> snowball-doc*: Scanning shared objects
+>>> snowball*: Scanning shared objects
+>>> libstemmer-dev*: Tracing dependencies...
+	libstemmer=2.2.0-r0
+>>> libstemmer-dev*: Package size: 1.3 MB
+>>> libstemmer-dev*: Compressing data...
+>>> libstemmer-dev*: Create checksum...
+pigz: not found
+>>> libstemmer-dev*: Create libstemmer-dev-2.2.0-r0.apk
+>>> libstemmer*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> libstemmer*: Package size: 1.1 MB
+>>> libstemmer*: Compressing data...
+>>> libstemmer*: Create checksum...
+pigz: not found
+>>> libstemmer*: Create libstemmer-2.2.0-r0.apk
+>>> snowball-doc*: Tracing dependencies...
+>>> snowball-doc*: Package size: 1.6 KB
+>>> snowball-doc*: Compressing data...
+>>> snowball-doc*: Create checksum...
+pigz: not found
+>>> snowball-doc*: Create snowball-doc-2.2.0-r0.apk
+>>> snowball*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> snowball*: Package size: 748.0 KB
+>>> snowball*: Compressing data...
+>>> snowball*: Create checksum...
+pigz: not found
+>>> snowball*: Create snowball-2.2.0-r0.apk
+>>> snowball: Build complete at Sun, 18 May 2025 09:46:40 +0000 elapsed time 0h 0m 11s
+>>> snowball: Cleaning up srcdir
+>>> snowball: Cleaning up pkgdir
+>>> snowball: Uninstalling dependencies...
+(1/6) Purging .makedepends-snowball (20250518.094631)
+(2/6) Purging git-perl (2.47.2-r0)
+(3/6) Purging perl-git (2.47.2-r0)
+(4/6) Purging perl-error (0.17030-r0)
+(5/6) Purging perl (5.40.2-r0)
+(6/6) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> snowball: Updating the main/x86_64 repository index...
+>>> snowball: Signing the index...
+pigz: not found

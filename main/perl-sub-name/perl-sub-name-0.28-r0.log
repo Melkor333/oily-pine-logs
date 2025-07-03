@@ -1,0 +1,176 @@
+pigz: not found
+>>> perl-sub-name: Building main/perl-sub-name 0.28-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:38:41 +0000
+>>> perl-sub-name: Validating /home/packager/aports/main/perl-sub-name/APKBUILD...
+>>> perl-sub-name: Analyzing dependencies...
+>>> perl-sub-name: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-sub-name (20250518.103842)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-sub-name: Cleaning up srcdir
+>>> perl-sub-name: Cleaning up pkgdir
+>>> perl-sub-name: Cleaning up tmpdir
+>>> perl-sub-name: Fetching https://cpan.metacpan.org/authors/id/E/ET/ETHER/Sub-Name-0.28.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Sub-Name-0.28.tar.gz.part'
+Sub-Name-0.28.tar.gz 100% |********************************|  155k  0:00:00 ETA
+'/var/cache/distfiles/Sub-Name-0.28.tar.gz.part' saved
+>>> perl-sub-name: Fetching https://cpan.metacpan.org/authors/id/E/ET/ETHER/Sub-Name-0.28.tar.gz
+>>> perl-sub-name: Checking sha512sums...
+Sub-Name-0.28.tar.gz: OK
+>>> perl-sub-name: Unpacking /var/cache/distfiles/Sub-Name-0.28.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Sub::Name
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Name.xs > Name.xsc
+Running Mkbootstrap for Name ()
+chmod 644 "Name.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Name.bs blib/arch/auto/Sub/Name/Name.bs 644
+cp lib/Sub/Name.pm blib/lib/Sub/Name.pm
+mv Name.xsc Name.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.28\" -DXS_VERSION=\"0.28\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Name.c
+rm -f blib/arch/auto/Sub/Name/Name.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Name.o  -o blib/arch/auto/Sub/Name/Name.so  \
+      \
+  
+chmod 755 blib/arch/auto/Sub/Name/Name.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Name.bs blib/arch/auto/Sub/Name/Name.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module               Want     Have
+#     ------------------- ----- --------
+#     ExtUtils::MakeMaker   any     7.70
+#     perl                5.006 5.040002
+# 
+# === Configure Suggests ===
+# 
+#     Module      Want Have
+#     -------- ------- ----
+#     JSON::PP 2.27300 4.16
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module               Want     Have
+#     ------------------- ----- --------
+#     B                     any     1.89
+#     B::Deparse            any     1.76
+#     Carp                  any     1.54
+#     ExtUtils::MakeMaker   any     7.70
+#     File::Spec            any     3.91
+#     Test::More            any 1.302199
+#     if                    any   0.0610
+#     perl                5.006 5.040002
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Test Suggests ===
+# 
+#     Module          Want    Have
+#     --------------- ---- -------
+#     B::C            1.48 missing
+#     Devel::CheckBin  any missing
+# 
+# === Runtime Requires ===
+# 
+#     Module    Want     Have
+#     -------- ----- --------
+#     Exporter   any     5.78
+#     XSLoader   any     0.32
+#     perl     5.006 5.040002
+#     strict     any     1.13
+#     warnings   any     1.70
+# 
+# === Other Modules ===
+# 
+#     Module             Have
+#     --------------- -------
+#     DynaLoader         1.56
+#     Encode             3.21
+#     File::Temp       0.2311
+#     JSON::PP           4.16
+#     Module::Runtime missing
+#     Pod::Coverage   missing
+#     Sub::Name          0.28
+#     YAML            missing
+#     autodie            2.37
+# 
+t/00-report-prereqs.t .. ok
+t/exotic_names.t ....... ok
+t/lexical.t ............ ok
+t/quotes-bug.t ......... skipped: single quote as a package separator has been deprecated
+t/RT42725_deparse.t .... ok
+t/RT96893_perlcc.t ..... skipped: B::C required for testing perlcc -O3
+t/smoke.t .............. ok
+All tests successful.
+Files=7, Tests=1575,  1 wallclock secs ( 0.13 usr  0.04 sys +  1.08 cusr  0.13 csys =  1.38 CPU)
+Result: PASS
+>>> perl-sub-name: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Name.bs blib/arch/auto/Sub/Name/Name.bs 644
+Manifying 1 pod document
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-sub-name/pkg/perl-sub-name/usr/lib/perl5/vendor_perl/auto/Sub/Name/Name.so
+Installing /home/packager/aports/main/perl-sub-name/pkg/perl-sub-name/usr/lib/perl5/vendor_perl/Sub/Name.pm
+Installing /home/packager/aports/main/perl-sub-name/pkg/perl-sub-name/usr/share/man/man3/Sub::Name.3pm
+>>> perl-sub-name-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-sub-name/pkg/perl-sub-name-doc/usr/share/man'
+>>> perl-sub-name-doc*: Preparing subpackage perl-sub-name-doc...
+>>> perl-sub-name-doc*: Running postcheck for perl-sub-name-doc
+>>> perl-sub-name*: Running postcheck for perl-sub-name
+>>> perl-sub-name*: Preparing package perl-sub-name...
+>>> perl-sub-name*: Stripping binaries
+>>> perl-sub-name-doc*: Scanning shared objects
+>>> perl-sub-name*: Scanning shared objects
+>>> perl-sub-name-doc*: Tracing dependencies...
+>>> perl-sub-name-doc*: Package size: 1.9 KB
+>>> perl-sub-name-doc*: Compressing data...
+>>> perl-sub-name-doc*: Create checksum...
+pigz: not found
+>>> perl-sub-name-doc*: Create perl-sub-name-doc-0.28-r0.apk
+>>> perl-sub-name*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-sub-name*: Package size: 17.8 KB
+>>> perl-sub-name*: Compressing data...
+>>> perl-sub-name*: Create checksum...
+pigz: not found
+>>> perl-sub-name*: Create perl-sub-name-0.28-r0.apk
+>>> perl-sub-name: Build complete at Sun, 18 May 2025 10:38:47 +0000 elapsed time 0h 0m 6s
+>>> perl-sub-name: Cleaning up srcdir
+>>> perl-sub-name: Cleaning up pkgdir
+>>> perl-sub-name: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-sub-name (20250518.103842)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-sub-name: Updating the main/x86_64 repository index...
+>>> perl-sub-name: Signing the index...
+pigz: not found

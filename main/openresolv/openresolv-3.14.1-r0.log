@@ -1,0 +1,124 @@
+pigz: not found
+>>> openresolv: Building main/openresolv 3.14.1-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:25:59 +0000
+>>> openresolv: Validating /home/packager/aports/main/openresolv/APKBUILD...
+>>> openresolv: Analyzing dependencies...
+>>> openresolv: Installing for build: build-base
+(1/1) Installing .makedepends-openresolv (20250518.092600)
+OK: 261 MiB in 82 packages
+>>> openresolv: Cleaning up srcdir
+>>> openresolv: Cleaning up pkgdir
+>>> openresolv: Cleaning up tmpdir
+>>> openresolv: Fetching openresolv-3.14.1.tar.gz::https://github.com/NetworkConfiguration/openresolv/archive/refs/tags/v3.14.1.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/openresolv-3.14.1.tar.gz.part'
+openresolv-3.14.1.ta 100% |********************************| 24601  0:00:00 ETA
+'/var/cache/distfiles/openresolv-3.14.1.tar.gz.part' saved
+>>> openresolv: Fetching openresolv-3.14.1.tar.gz::https://github.com/NetworkConfiguration/openresolv/archive/refs/tags/v3.14.1.tar.gz
+>>> openresolv: Checking sha512sums...
+openresolv-3.14.1.tar.gz: OK
+detect_init-remove-irrelevant.patch: OK
+>>> openresolv: Unpacking /var/cache/distfiles/openresolv-3.14.1.tar.gz...
+>>> openresolv: detect_init-remove-irrelevant.patch
+patching file resolvconf.in
+Hunk #1 succeeded at 321 (offset 22 lines).
+Deriving operating system from ... x86_64-alpine-linux-musl
+Configuring openresolv for ... linux
+Checking for directory /libexec ... no
+
+   SYSCONFDIR =		/etc
+   SBINDIR =		/usr/sbin
+   LIBEXECDIR =		/usr/lib/resolvconf
+   VARDIR =		/run
+   MANDIR =		/usr/share/man
+
+   RESTARTCMD =		
+   RCDIR =		
+   STATUSARG =		
+
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	resolvconf.in > resolvconf
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	resolvconf.8.in > resolvconf.8
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	resolvconf.conf.5.in > resolvconf.conf.5
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	libc.in > libc
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	dnsmasq.in > dnsmasq
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	named.in > named
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	pdnsd.in > pdnsd
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	pdns_recursor.in > pdns_recursor
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	unbound.in > unbound
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	avahi-daemon.in > avahi-daemon
+sed	-e 's:@SBINDIR@:/usr/sbin:g' -e 's:@SYSCONFDIR@:/etc:g' -e 's:@LIBEXECDIR@:/usr/lib/resolvconf:g' \
+	-e 's:@VARDIR@:/run/resolvconf:g' \
+	-e 's:@RCDIR@::g' -e 's:@RESTARTCMD@::g' -e 's:@RCDIR@::g' -e 's:@STATUSARG@::g' \
+	mdnsd.in > mdnsd
+>>> openresolv: Entering fakeroot...
+install -d /home/packager/aports/main/openresolv/pkg/openresolv/usr/sbin
+install -d /home/packager/aports/main/openresolv/pkg/openresolv/usr/share/man/man8
+install -m 0755 resolvconf /home/packager/aports/main/openresolv/pkg/openresolv/usr/sbin
+install -m 0444 resolvconf.8 /home/packager/aports/main/openresolv/pkg/openresolv/usr/share/man/man8
+install -d /home/packager/aports/main/openresolv/pkg/openresolv/etc
+install -d /home/packager/aports/main/openresolv/pkg/openresolv/usr/share/man/man5
+test -e /home/packager/aports/main/openresolv/pkg/openresolv/etc/resolvconf.conf || \
+install -m 0644 resolvconf.conf /home/packager/aports/main/openresolv/pkg/openresolv/etc
+install -m 0444 resolvconf.conf.5 /home/packager/aports/main/openresolv/pkg/openresolv/usr/share/man/man5
+install -d /home/packager/aports/main/openresolv/pkg/openresolv/usr/lib/resolvconf
+install -m 0644 libc dnsmasq named pdnsd pdns_recursor unbound /home/packager/aports/main/openresolv/pkg/openresolv/usr/lib/resolvconf
+install -d /home/packager/aports/main/openresolv/pkg/openresolv/usr/lib/resolvconf/libc.d
+install -m 0644 avahi-daemon mdnsd \
+	/home/packager/aports/main/openresolv/pkg/openresolv/usr/lib/resolvconf/libc.d
+>>> openresolv-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/openresolv/pkg/openresolv-doc/usr/share/man'
+>>> openresolv-doc*: Preparing subpackage openresolv-doc...
+>>> openresolv-doc*: Running postcheck for openresolv-doc
+>>> openresolv*: Running postcheck for openresolv
+>>> openresolv*: Preparing package openresolv...
+>>> openresolv-doc*: Tracing dependencies...
+>>> openresolv-doc*: Package size: 7.7 KB
+>>> openresolv-doc*: Compressing data...
+>>> openresolv-doc*: Create checksum...
+pigz: not found
+>>> openresolv-doc*: Create openresolv-doc-3.14.1-r0.apk
+>>> openresolv*: Tracing dependencies...
+>>> openresolv*: Package size: 53.9 KB
+>>> openresolv*: Compressing data...
+>>> openresolv*: Create checksum...
+pigz: not found
+>>> openresolv*: Create openresolv-3.14.1-r0.apk
+>>> openresolv: Build complete at Sun, 18 May 2025 09:26:02 +0000 elapsed time 0h 0m 3s
+>>> openresolv: Cleaning up srcdir
+>>> openresolv: Cleaning up pkgdir
+>>> openresolv: Uninstalling dependencies...
+(1/1) Purging .makedepends-openresolv (20250518.092600)
+OK: 261 MiB in 81 packages
+>>> openresolv: Updating the main/x86_64 repository index...
+>>> openresolv: Signing the index...
+pigz: not found

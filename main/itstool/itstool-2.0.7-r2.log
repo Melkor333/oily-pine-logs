@@ -1,0 +1,155 @@
+pigz: not found
+>>> itstool: Building main/itstool 2.0.7-r2 (using abuild 3.14.1-r4) started Thu, 22 May 2025 22:48:58 +0000
+>>> itstool: Validating /home/packager/aports/main/itstool/APKBUILD...
+>>> itstool: Analyzing dependencies...
+>>> itstool: Installing for build: build-base py3-libxml2 python3 autoconf automake diffutils gettext
+(1/15) Installing libffi (3.4.7-r0)
+(2/15) Installing gdbm (1.24-r0)
+(3/15) Installing xz-libs (5.6.3-r1)
+(4/15) Installing mpdecimal (4.0.0-r0)
+(5/15) Installing sqlite-libs (3.49.2-r0)
+(6/15) Installing python3 (3.12.10-r1)
+(7/15) Installing python3-pycache-pyc0 (3.12.10-r1)
+(8/15) Installing pyc (3.12.10-r1)
+(9/15) Installing py3-libxml2-pyc (2.13.4-r6)
+(10/15) Installing python3-pyc (3.12.10-r1)
+(11/15) Installing libxml2 (2.13.4-r6)
+(12/15) Installing py3-libxml2 (2.13.4-r6)
+(13/15) Installing gettext-libs (0.22.5-r0)
+(14/15) Installing gettext (0.22.5-r0)
+(15/15) Installing .makedepends-itstool (20250522.224900)
+Executing busybox-1.37.0-r12.trigger
+OK: 353 MiB in 129 packages
+>>> itstool: Cleaning up srcdir
+>>> itstool: Cleaning up pkgdir
+>>> itstool: Cleaning up tmpdir
+>>> itstool: Fetching https://github.com/itstool/itstool/archive/2.0.7/itstool-2.0.7.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/itstool-2.0.7.tar.gz.part'
+itstool-2.0.7.tar.gz 100% |********************************| 80082  0:00:00 ETA
+'/var/cache/distfiles/itstool-2.0.7.tar.gz.part' saved
+>>> itstool: Fetching https://github.com/itstool/itstool/archive/2.0.7/itstool-2.0.7.tar.gz
+>>> itstool: Checking sha512sums...
+itstool-2.0.7.tar.gz: OK
+fix-segfault.patch: OK
+10-python_3.12.patch: OK
+>>> itstool: Unpacking /var/cache/distfiles/itstool-2.0.7.tar.gz...
+>>> itstool: fix-segfault.patch
+patching file itstool.in
+Hunk #1 succeeded at 1070 (offset 17 lines).
+>>> itstool: 10-python_3.12.patch
+patching file itstool.in
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force 
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: configure.ac: not using Autoheader
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:2: installing './install-sh'
+configure.ac:2: installing './missing'
+autoreconf: Leaving directory '.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether /usr/bin/python3 version is >= 2.6... yes
+checking for /usr/bin/python3 version... 3.12
+checking for /usr/bin/python3 platform... linux
+checking for GNU default /usr/bin/python3 prefix... ${prefix}
+checking for GNU default /usr/bin/python3 exec_prefix... ${exec_prefix}
+checking for /usr/bin/python3 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for /usr/bin/python3 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for python module libxml2... found
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating itstool
+config.status: creating itstool.1
+config.status: creating its/Makefile
+config.status: creating setup.py
+Making all in its
+make[1]: Entering directory '/home/packager/aports/main/itstool/src/itstool-2.0.7/its'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/itstool/src/itstool-2.0.7/its'
+make[1]: Entering directory '/home/packager/aports/main/itstool/src/itstool-2.0.7'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/packager/aports/main/itstool/src/itstool-2.0.7'
+/home/packager/aports/main/itstool/src/itstool-2.0.7/tests/run_tests.py:382: SyntaxWarning: invalid escape sequence '\/'
+  call("sed -i -e 's/@DATADIR@/%s/' %s" % (data_dir.replace('/', '\/'), test_binary_path), shell=True)
+................................................................
+----------------------------------------------------------------------
+Ran 64 tests in 62.106s
+
+OK
+>>> itstool: Entering fakeroot...
+Making install in its
+make[1]: Entering directory '/home/packager/aports/main/itstool/src/itstool-2.0.7/its'
+make[2]: Entering directory '/home/packager/aports/main/itstool/src/itstool-2.0.7/its'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/itstool/pkg/itstool/usr/share/itstool/its'
+ /usr/bin/install -c -m 644 docbook.its docbook5.its its.its mallard.its ttml.its xhtml.its '/home/packager/aports/main/itstool/pkg/itstool/usr/share/itstool/its'
+make[2]: Leaving directory '/home/packager/aports/main/itstool/src/itstool-2.0.7/its'
+make[1]: Leaving directory '/home/packager/aports/main/itstool/src/itstool-2.0.7/its'
+make[1]: Entering directory '/home/packager/aports/main/itstool/src/itstool-2.0.7'
+make[2]: Entering directory '/home/packager/aports/main/itstool/src/itstool-2.0.7'
+ /bin/mkdir -p '/home/packager/aports/main/itstool/pkg/itstool/usr/bin'
+ /bin/mkdir -p '/home/packager/aports/main/itstool/pkg/itstool/usr/share/man/man1'
+ /usr/bin/install -c itstool '/home/packager/aports/main/itstool/pkg/itstool/usr/bin'
+ /usr/bin/install -c -m 644 itstool.1 '/home/packager/aports/main/itstool/pkg/itstool/usr/share/man/man1'
+make[2]: Leaving directory '/home/packager/aports/main/itstool/src/itstool-2.0.7'
+make[1]: Leaving directory '/home/packager/aports/main/itstool/src/itstool-2.0.7'
+>>> itstool-doc*: Running split function doc...
+renamed 'usr/share/man' -> '/home/packager/aports/main/itstool/pkg/itstool-doc/usr/share/man'
+>>> itstool-doc*: Preparing subpackage itstool-doc...
+>>> itstool-doc*: Running postcheck for itstool-doc
+>>> itstool*: Running postcheck for itstool
+>>> itstool*: Preparing package itstool...
+>>> itstool-doc*: Tracing dependencies...
+>>> itstool-doc*: Package size: 1.2 KB
+>>> itstool-doc*: Compressing data...
+>>> itstool-doc*: Create checksum...
+pigz: not found
+>>> itstool-doc*: Create itstool-doc-2.0.7-r2.apk
+>>> itstool*: Tracing dependencies...
+	py3-libxml2
+	python3
+>>> itstool*: Package size: 94.4 KB
+>>> itstool*: Compressing data...
+>>> itstool*: Create checksum...
+pigz: not found
+>>> itstool*: Create itstool-2.0.7-r2.apk
+>>> itstool: Build complete at Thu, 22 May 2025 22:50:16 +0000 elapsed time 0h 1m 18s
+>>> itstool: Cleaning up srcdir
+>>> itstool: Cleaning up pkgdir
+>>> itstool: Uninstalling dependencies...
+(1/15) Purging .makedepends-itstool (20250522.224900)
+(2/15) Purging py3-libxml2-pyc (2.13.4-r6)
+(3/15) Purging py3-libxml2 (2.13.4-r6)
+(4/15) Purging python3-pyc (3.12.10-r1)
+(5/15) Purging python3-pycache-pyc0 (3.12.10-r1)
+(6/15) Purging pyc (3.12.10-r1)
+(7/15) Purging python3 (3.12.10-r1)
+(8/15) Purging gettext (0.22.5-r0)
+(9/15) Purging gdbm (1.24-r0)
+(10/15) Purging gettext-libs (0.22.5-r0)
+(11/15) Purging libffi (3.4.7-r0)
+(12/15) Purging libxml2 (2.13.4-r6)
+(13/15) Purging mpdecimal (4.0.0-r0)
+(14/15) Purging sqlite-libs (3.49.2-r0)
+(15/15) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> itstool: Updating the main/x86_64 repository index...
+>>> itstool: Signing the index...
+pigz: not found

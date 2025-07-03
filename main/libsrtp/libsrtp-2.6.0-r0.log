@@ -1,0 +1,267 @@
+pigz: not found
+>>> libsrtp: Building main/libsrtp 2.6.0-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:00:40 +0000
+>>> libsrtp: Validating /home/packager/aports/main/libsrtp/APKBUILD...
+>>> libsrtp: Analyzing dependencies...
+>>> libsrtp: Installing for build: build-base libpcap-dev meson openssl-dev
+(1/18) Installing libpcap (1.10.5-r0)
+(2/18) Installing libpcap-dev (1.10.5-r0)
+(3/18) Installing samurai (1.2-r6)
+(4/18) Installing libbz2 (1.0.8-r6)
+(5/18) Installing libffi (3.4.7-r0)
+(6/18) Installing gdbm (1.24-r0)
+(7/18) Installing xz-libs (5.6.3-r1)
+(8/18) Installing mpdecimal (4.0.0-r0)
+(9/18) Installing sqlite-libs (3.49.2-r0)
+(10/18) Installing python3 (3.12.10-r0)
+(11/18) Installing python3-pycache-pyc0 (3.12.10-r0)
+(12/18) Installing pyc (3.12.10-r0)
+(13/18) Installing meson-pyc (1.6.1-r4)
+(14/18) Installing python3-pyc (3.12.10-r0)
+(15/18) Installing meson (1.6.1-r4)
+(16/18) Installing openssl-dev (3.5.0-r0)
+(17/18) Installing .makedepends-libsrtp (20250518.090041)
+(18/18) Installing abuild-meson (1.6.1-r4)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 99 packages
+>>> libsrtp: Cleaning up srcdir
+>>> libsrtp: Cleaning up pkgdir
+>>> libsrtp: Cleaning up tmpdir
+>>> libsrtp: Fetching libsrtp-2.6.0.tar.gz::https://github.com/cisco/libsrtp/archive/refs/tags/v2.6.0.tar.gz
+Connecting to github.com (140.82.121.3:443)
+Connecting to codeload.github.com (140.82.121.9:443)
+saving to '/var/cache/distfiles/libsrtp-2.6.0.tar.gz.part'
+libsrtp-2.6.0.tar.gz 100% |********************************|  625k  0:00:00 ETA
+'/var/cache/distfiles/libsrtp-2.6.0.tar.gz.part' saved
+>>> libsrtp: Fetching libsrtp-2.6.0.tar.gz::https://github.com/cisco/libsrtp/archive/refs/tags/v2.6.0.tar.gz
+>>> libsrtp: Checking sha512sums...
+libsrtp-2.6.0.tar.gz: OK
+>>> libsrtp: Unpacking /var/cache/distfiles/libsrtp-2.6.0.tar.gz...
+The Meson build system
+Version: 1.6.1
+Source dir: /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0
+Build dir: /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/builddir
+Build type: native build
+Project name: libsrtp2
+Project version: 2.6.0
+C compiler for the host machine: gcc (gcc 14.2.0 "gcc (Alpine 14.2.0) 14.2.0")
+C linker for the host machine: gcc ld.bfd 2.43.1
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Has header "arpa/inet.h" : YES 
+Has header "byteswap.h" : YES 
+Has header "inttypes.h" : YES 
+Has header "machine/types.h" : NO 
+Has header "netinet/in.h" : YES 
+Has header "stdint.h" : YES 
+Has header "stdlib.h" : YES 
+Has header "sys/int_types.h" : NO 
+Has header "sys/socket.h" : YES 
+Has header "sys/types.h" : YES 
+Has header "sys/uio.h" : YES 
+Has header "unistd.h" : YES 
+Checking for function "sigaction" : YES 
+Checking for function "inet_aton" : YES 
+Checking for function "inet_pton" : YES 
+Checking for function "usleep" : YES 
+Checking for function "socket" : YES 
+Has header "stdint.h" : YES (cached)
+Checking for type "size_t" : YES 
+Checking for type "unsigned long" : YES 
+Checking for size of "unsigned long" : 8 
+Checking for type "unsigned long long" : YES 
+Checking for size of "unsigned long long" : 8 
+Checking if "inline keyword check" compiles: YES 
+Found pkg-config: YES (/usr/bin/pkg-config) 2.3.0
+Run-time dependency openssl found: YES 3.5.0
+Checking for function "kdf_srtp" with dependency openssl: NO 
+Configuring config.h using configuration
+Compiler for C supports arguments -funroll-loops: YES 
+Program sh found: YES (/bin/sh)
+Program rtpw_test.sh found: YES (/home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/test/rtpw_test.sh)
+Program rtpw_test_gcm.sh found: YES (/home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/test/rtpw_test_gcm.sh)
+Run-time dependency libpcap found: YES 1.10.5
+Program doxygen found: NO
+Build targets in project: 13
+
+libsrtp2 2.6.0
+
+  User defined options
+    auto_features     : auto
+    b_lto             : false
+    b_pie             : true
+    b_staticpic       : true
+    bindir            : /usr/bin
+    buildtype         : plain
+    crypto-library    : openssl
+    datadir           : /usr/share
+    includedir        : /usr/include
+    infodir           : /usr/share/info
+    libdir            : /usr/lib
+    libexecdir        : /usr/libexec
+    localedir         : /usr/share/locale
+    localstatedir     : /var
+    mandir            : /usr/share/man
+    pcap-tests        : enabled
+    prefix            : /usr
+    python.bytecompile: 0
+    sbindir           : /usr/sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    tests             : enabled
+    werror            : false
+    wrap_mode         : nodownload
+
+Found ninja-1.9 at /usr/bin/ninja
+ninja: entering directory '/home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/builddir'
+[1/67] Compiling C object test/rtp_decoder.p/.._crypto_math_datatypes.c.o
+[2/67] Compiling C object test/rtp_decoder.p/util.c.o
+[3/67] Compiling C object test/rtp_decoder.p/rtp.c.o
+[4/67] Compiling C object test/rtp_decoder.p/getopt_s.c.o
+[5/67] Compiling C object test/rtp_decoder.p/rtp_decoder.c.o
+[6/67] Compiling C object test/rtpw.p/.._crypto_math_datatypes.c.o
+[7/67] Compiling C object test/rtpw.p/util.c.o
+[8/67] Compiling C object test/rtpw.p/rtp.c.o
+[9/67] Compiling C object test/rtpw.p/getopt_s.c.o
+[10/67] Compiling C object test/rtpw.p/rtpw.c.o
+[11/67] Compiling C object test/test_srtp.p/getopt_s.c.o
+[12/67] Compiling C object test/test_srtp.p/test_srtp.c.o
+[13/67] Compiling C object test/rdbx_driver.p/ut_sim.c.o
+[14/67] Compiling C object test/rdbx_driver.p/getopt_s.c.o
+[15/67] Compiling C object test/rdbx_driver.p/rdbx_driver.c.o
+[16/67] Compiling C object test/roc_driver.p/ut_sim.c.o
+[17/67] Compiling C object test/roc_driver.p/getopt_s.c.o
+[18/67] Compiling C object test/roc_driver.p/roc_driver.c.o
+[19/67] Compiling C object test/replay_driver.p/ut_sim.c.o
+[20/67] Compiling C object test/replay_driver.p/getopt_s.c.o
+[21/67] Compiling C object test/replay_driver.p/replay_driver.c.o
+[22/67] Compiling C object test/srtp_driver.p/util.c.o
+[23/67] Compiling C object test/srtp_driver.p/getopt_s.c.o
+[24/67] Compiling C object test/srtp_driver.p/srtp_driver.c.o
+[25/67] Compiling C object crypto/test/env.p/.._.._test_util.c.o
+[26/67] Compiling C object crypto/test/env.p/.._.._test_getopt_s.c.o
+[27/67] Compiling C object crypto/test/env.p/env.c.o
+[28/67] Compiling C object crypto/test/kernel_driver.p/.._.._test_util.c.o
+[29/67] Compiling C object crypto/test/kernel_driver.p/.._.._test_getopt_s.c.o
+[30/67] Compiling C object crypto/test/kernel_driver.p/kernel_driver.c.o
+[31/67] Compiling C object crypto/test/datatypes_driver.p/.._.._test_util.c.o
+[32/67] Compiling C object crypto/test/datatypes_driver.p/.._.._test_getopt_s.c.o
+[33/67] Compiling C object crypto/test/datatypes_driver.p/datatypes_driver.c.o
+[34/67] Compiling C object libsrtp2.a.p/crypto_replay_rdbx.c.o
+[35/67] Compiling C object libsrtp2.a.p/crypto_replay_rdb.c.o
+[36/67] Compiling C object libsrtp2.a.p/crypto_math_datatypes.c.o
+[37/67] Compiling C object libsrtp2.a.p/crypto_kernel_key.c.o
+[38/67] Compiling C object libsrtp2.a.p/crypto_kernel_err.c.o
+[39/67] Compiling C object libsrtp2.a.p/crypto_kernel_crypto_kernel.c.o
+[40/67] Compiling C object libsrtp2.a.p/crypto_kernel_alloc.c.o
+[41/67] Compiling C object libsrtp2.a.p/crypto_hash_hmac_ossl.c.o
+[42/67] Compiling C object libsrtp2.a.p/crypto_hash_null_auth.c.o
+[43/67] Compiling C object libsrtp2.a.p/crypto_hash_auth_test_cases.c.o
+[44/67] Compiling C object libsrtp2.a.p/crypto_hash_auth.c.o
+[45/67] Compiling C object libsrtp2.a.p/crypto_cipher_aes_gcm_ossl.c.o
+[46/67] Compiling C object libsrtp2.a.p/crypto_cipher_aes_icm_ossl.c.o
+[47/67] Compiling C object libsrtp2.a.p/crypto_cipher_null_cipher.c.o
+[48/67] Compiling C object libsrtp2.a.p/crypto_cipher_cipher_test_cases.c.o
+[49/67] Compiling C object libsrtp2.a.p/crypto_cipher_cipher.c.o
+[50/67] Compiling C object libsrtp2.a.p/srtp_srtp.c.o
+[51/67] Compiling C object crypto/test/cipher_driver.p/.._.._test_util.c.o
+[52/67] Compiling C object crypto/test/cipher_driver.p/.._.._test_getopt_s.c.o
+[53/67] Compiling C object crypto/test/cipher_driver.p/cipher_driver.c.o
+[54/67] Linking static target libsrtp2.a
+[55/67] Linking target libsrtp2.so.1
+[56/67] Generating symbol file libsrtp2.so.1.p/libsrtp2.so.1.symbols
+[57/67] Linking target test/rtp_decoder
+[58/67] Linking target test/rtpw
+[59/67] Linking target test/test_srtp
+[60/67] Linking target test/rdbx_driver
+[61/67] Linking target test/roc_driver
+[62/67] Linking target test/replay_driver
+[63/67] Linking target test/srtp_driver
+[64/67] Linking target crypto/test/env
+[65/67] Linking target crypto/test/kernel_driver
+[66/67] Linking target crypto/test/datatypes_driver
+[67/67] Linking target crypto/test/cipher_driver
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/builddir
+ 1/11 datatypes_driver OK              0.03s
+ 2/11 kernel_driver    OK              0.03s
+ 3/11 env              OK              0.03s
+ 4/11 srtp_driver      OK              0.03s
+ 5/11 cipher_driver    OK              0.05s
+ 6/11 test_srtp        OK              0.01s
+ 7/11 rdbx_driver      OK              0.27s
+ 8/11 replay_driver    OK              2.27s
+ 9/11 roc_driver       OK              8.23s
+10/11 rtpw_test        OK              8.03s
+11/11 rtpw_test_gcm    OK             16.06s
+
+Ok:                 11  
+Expected Fail:      0   
+Fail:               0   
+Unexpected Pass:    0   
+Skipped:            0   
+Timeout:            0   
+
+Full log written to /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/builddir/meson-logs/testlog.txt
+>>> libsrtp: Entering fakeroot...
+Installing libsrtp2.so.1 to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/lib
+Installing /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/include/srtp.h to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/include/srtp2
+Installing /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/crypto/include/auth.h to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/include/srtp2
+Installing /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/crypto/include/cipher.h to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/include/srtp2
+Installing /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/crypto/include/crypto_types.h to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/include/srtp2
+Installing /home/packager/aports/main/libsrtp/src/libsrtp-2.6.0/builddir/meson-private/libsrtp2.pc to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/lib/pkgconfig
+Installing symlink pointing to libsrtp2.so.1 to /home/packager/aports/main/libsrtp/pkg/libsrtp/usr/lib/libsrtp2.so
+>>> libsrtp-dev*: Running split function dev...
+'usr/include' -> '/home/packager/aports/main/libsrtp/pkg/libsrtp-dev/usr/include'
+'usr/lib/pkgconfig' -> '/home/packager/aports/main/libsrtp/pkg/libsrtp-dev/usr/lib/pkgconfig'
+'usr/lib/libsrtp2.so' -> '/home/packager/aports/main/libsrtp/pkg/libsrtp-dev/usr/lib/libsrtp2.so'
+>>> libsrtp-dev*: Preparing subpackage libsrtp-dev...
+>>> libsrtp-dev*: Stripping binaries
+>>> libsrtp-dev*: Running postcheck for libsrtp-dev
+>>> libsrtp*: Running postcheck for libsrtp
+>>> libsrtp*: Preparing package libsrtp...
+>>> libsrtp*: Stripping binaries
+>>> libsrtp-dev*: Scanning shared objects
+>>> libsrtp*: Scanning shared objects
+>>> libsrtp-dev*: Tracing dependencies...
+	libsrtp=2.6.0-r0
+	pkgconfig
+>>> libsrtp-dev*: Package size: 89.7 KB
+>>> libsrtp-dev*: Compressing data...
+>>> libsrtp-dev*: Create checksum...
+pigz: not found
+>>> libsrtp-dev*: Create libsrtp-dev-2.6.0-r0.apk
+>>> libsrtp*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+>>> libsrtp*: Package size: 70.0 KB
+>>> libsrtp*: Compressing data...
+>>> libsrtp*: Create checksum...
+pigz: not found
+>>> libsrtp*: Create libsrtp-2.6.0-r0.apk
+>>> libsrtp: Build complete at Sun, 18 May 2025 09:01:26 +0000 elapsed time 0h 0m 46s
+>>> libsrtp: Cleaning up srcdir
+>>> libsrtp: Cleaning up pkgdir
+>>> libsrtp: Uninstalling dependencies...
+(1/18) Purging .makedepends-libsrtp (20250518.090041)
+(2/18) Purging libpcap-dev (1.10.5-r0)
+(3/18) Purging libpcap (1.10.5-r0)
+(4/18) Purging openssl-dev (3.5.0-r0)
+(5/18) Purging abuild-meson (1.6.1-r4)
+(6/18) Purging meson-pyc (1.6.1-r4)
+(7/18) Purging meson (1.6.1-r4)
+(8/18) Purging samurai (1.2-r6)
+(9/18) Purging python3-pyc (3.12.10-r0)
+(10/18) Purging python3-pycache-pyc0 (3.12.10-r0)
+(11/18) Purging pyc (3.12.10-r0)
+(12/18) Purging python3 (3.12.10-r0)
+(13/18) Purging gdbm (1.24-r0)
+(14/18) Purging libbz2 (1.0.8-r6)
+(15/18) Purging libffi (3.4.7-r0)
+(16/18) Purging mpdecimal (4.0.0-r0)
+(17/18) Purging sqlite-libs (3.49.2-r0)
+(18/18) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> libsrtp: Updating the main/x86_64 repository index...
+>>> libsrtp: Signing the index...
+pigz: not found

@@ -1,0 +1,153 @@
+pigz: not found
+>>> nodejs: Building main/nodejs 22.13.1-r5 (using abuild 3.14.1-r4) started Fri, 23 May 2025 16:57:38 +0000
+>>> nodejs: Validating /home/packager/aports/main/nodejs/APKBUILD...
+>>> nodejs: Analyzing dependencies...
+>>> nodejs: Installing for build: build-base ca-certificates ada-dev brotli-dev c-ares-dev icu-dev linux-headers nghttp2-dev openssl-dev py3-jinja2 python3 samurai simdjson-dev simdutf-dev sqlite-dev zlib-dev
+(1/35) Installing ca-certificates (20241121-r2)
+(2/35) Installing ada-libs (2.9.2-r3)
+(3/35) Installing fmt (11.2.0-r0)
+(4/35) Installing ada (2.9.2-r3)
+(5/35) Installing ada-dev (2.9.2-r3)
+(6/35) Installing brotli (1.1.0-r2)
+(7/35) Installing brotli-dev (1.1.0-r2)
+(8/35) Installing c-ares-dev (1.34.5-r0)
+(9/35) Installing icu-data-en (76.1-r0)
+Executing icu-data-en-76.1-r0.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(10/35) Installing icu-libs (76.1-r0)
+(11/35) Installing icu (76.1-r0)
+(12/35) Installing icu-dev (76.1-r0)
+(13/35) Installing nghttp2-dev (1.65.0-r0)
+(14/35) Installing openssl-dev (3.5.0-r0)
+(15/35) Installing libffi (3.4.7-r0)
+(16/35) Installing gdbm (1.24-r0)
+(17/35) Installing xz-libs (5.6.3-r1)
+(18/35) Installing mpdecimal (4.0.0-r0)
+(19/35) Installing sqlite-libs (3.49.2-r0)
+(20/35) Installing python3 (3.12.10-r1)
+(21/35) Installing python3-pycache-pyc0 (3.12.10-r1)
+(22/35) Installing pyc (3.12.10-r1)
+(23/35) Installing py3-jinja2-pyc (3.1.6-r0)
+(24/35) Installing py3-markupsafe-pyc (3.0.2-r0)
+(25/35) Installing python3-pyc (3.12.10-r1)
+(26/35) Installing py3-markupsafe (3.0.2-r0)
+(27/35) Installing py3-jinja2 (3.1.6-r0)
+(28/35) Installing samurai (1.2-r6)
+(29/35) Installing simdjson (3.12.0-r0)
+(30/35) Installing simdjson-dev (3.12.0-r0)
+(31/35) Installing simdutf (7.0.0-r1)
+(32/35) Installing simdutf-dev (7.0.0-r1)
+(33/35) Installing sqlite (3.49.2-r0)
+(34/35) Installing sqlite-dev (3.49.2-r0)
+(35/35) Installing .makedepends-nodejs (20250523.165740)
+Executing ca-certificates-20241121-r2.trigger
+Executing busybox-1.37.0-r12.trigger
+OK: 628 MiB in 167 packages
+>>> nodejs: Cleaning up srcdir
+>>> nodejs: Cleaning up pkgdir
+>>> nodejs: Cleaning up tmpdir
+>>> nodejs: Fetching https://nodejs.org/dist/v22.13.1/node-v22.13.1.tar.gz
+Connecting to nodejs.org (104.20.22.46:443)
+saving to '/var/cache/distfiles/node-v22.13.1.tar.gz.part'
+node-v22.13.1.tar.gz  54% |*****************               | 51.0M  0:00:00 ETA
+node-v22.13.1.tar.gz 100% |********************************| 94.4M  0:00:00 ETA
+'/var/cache/distfiles/node-v22.13.1.tar.gz.part' saved
+>>> nodejs: Fetching https://nodejs.org/dist/v22.13.1/node-v22.13.1.tar.gz
+>>> nodejs: Checking sha512sums...
+node-v22.13.1.tar.gz: OK
+ncrypto-include-openssl-rand.h.patch: OK
+v8-ppc64le-compat.patch: OK
+v8-riscv-trap-handler.patch: OK
+v8-no-static-zlib.patch: OK
+v8-disable-trap-handler-on-riscv-sv39.patch: OK
+nodejs.pc.in: OK
+>>> nodejs: Unpacking /var/cache/distfiles/node-v22.13.1.tar.gz...
+>>> nodejs: ncrypto-include-openssl-rand.h.patch
+patching file deps/ncrypto/ncrypto.cc
+Hunk #1 succeeded at 3 with fuzz 2 (offset -2 lines).
+>>> nodejs: v8-ppc64le-compat.patch
+patching file deps/v8/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock.cc
+patching file deps/v8/third_party/abseil-cpp/absl/base/internal/unscaledcycleclock_config.h
+patching file deps/v8/third_party/abseil-cpp/absl/debugging/internal/examine_stack.cc
+patching file deps/v8/third_party/abseil-cpp/absl/debugging/internal/stacktrace_config.h
+>>> nodejs: v8-riscv-trap-handler.patch
+patching file tools/v8_gypfiles/v8.gyp
+Hunk #1 succeeded at 802 (offset 5 lines).
+Hunk #2 succeeded at 1186 with fuzz 2 (offset 10 lines).
+>>> nodejs: v8-no-static-zlib.patch
+patching file tools/v8_gypfiles/features.gypi
+patching file tools/v8_gypfiles/v8.gyp
+Hunk #1 succeeded at 1022 (offset 19 lines).
+>>> nodejs: v8-disable-trap-handler-on-riscv-sv39.patch
+patching file deps/v8/src/trap-handler/trap-handler.h
+>>> nodejs: Building node binary
+INFO: configure completed successfully
+ninja -C out/Release  -j8
+ninja: entering directory 'out/Release'
+[1/1919] CC obj/test/overlapped-checker/overlapped-checker.main_unix.o
+[2/1919] CC obj/src/large_pages/node_text_start.node_text_start.o
+[3/1919] CC obj/test/sqlite/sqlite_extension.extension.o
+[4/1919] CC obj/deps/uvwasi/src/uvwasi.wasi_serdes.o
+[5/1919] CC obj/deps/uvwasi/src/uvwasi.wasi_rights.o
+[6/1919] CC obj/deps/uvwasi/src/uvwasi.uvwasi.o
+[7/1919] CC obj/deps/uvwasi/src/uvwasi.uv_mapping.o
+[8/1919] CC obj/deps/uvwasi/src/uvwasi.sync_helpers.o
+[9/1919] AR obj/libnode_text_start.a
+[10/1919] LINK overlapped-checker
+[11/1919] CC obj/deps/uvwasi/src/uvwasi.poll_oneoff.o
+ninja: job failed: gcc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -pthread -rdynamic -fno-lto -m64  -flto=4 -fuse-linker-plugin -ffat-lto-objects  -o overlapped-checker -Wl,--start-group obj/test/overlapped-checker/overlapped-checker.main_unix.o  -lz -lada -lsimdjson -lsimdutf -lbrotlidec -lbrotlienc -lcares -lnghttp2 -lsqlite3 -lcrypto -lssl -licui18n -licuuc -Wl,--end-group
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: overlapped-checker: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: overlapped-checker has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+../../deps/uvwasi/src/uvwasi.c: In function 'uvwasi__get_filestat_set_times':
+../../deps/uvwasi/src/uvwasi.c:107:20: warning: 'stat.st_atim' may be used uninitialized [-Wmaybe-uninitialized]
+  107 |     *st_atim = stat.st_atim / NANOS_PER_SEC;
+      |                ~~~~^~~~~~~~
+../../deps/uvwasi/src/uvwasi.c:64:21: note: 'stat' declared here
+   64 |   uvwasi_filestat_t stat;
+      |                     ^~~~
+ninja: subcommand failed
+make: *** [Makefile:151: node] Error 1
+>>> ERROR: nodejs: build failed
+>>> nodejs: Uninstalling dependencies...
+(1/35) Purging .makedepends-nodejs (20250523.165740)
+(2/35) Purging ca-certificates (20241121-r2)
+Executing ca-certificates-20241121-r2.post-deinstall
+(3/35) Purging ada-dev (2.9.2-r3)
+(4/35) Purging ada (2.9.2-r3)
+(5/35) Purging ada-libs (2.9.2-r3)
+(6/35) Purging brotli-dev (1.1.0-r2)
+(7/35) Purging brotli (1.1.0-r2)
+(8/35) Purging c-ares-dev (1.34.5-r0)
+(9/35) Purging icu-dev (76.1-r0)
+(10/35) Purging nghttp2-dev (1.65.0-r0)
+(11/35) Purging openssl-dev (3.5.0-r0)
+(12/35) Purging py3-jinja2-pyc (3.1.6-r0)
+(13/35) Purging py3-jinja2 (3.1.6-r0)
+(14/35) Purging py3-markupsafe-pyc (3.0.2-r0)
+(15/35) Purging py3-markupsafe (3.0.2-r0)
+(16/35) Purging python3-pyc (3.12.10-r1)
+(17/35) Purging python3-pycache-pyc0 (3.12.10-r1)
+(18/35) Purging pyc (3.12.10-r1)
+(19/35) Purging python3 (3.12.10-r1)
+(20/35) Purging samurai (1.2-r6)
+(21/35) Purging simdjson-dev (3.12.0-r0)
+(22/35) Purging simdjson (3.12.0-r0)
+(23/35) Purging simdutf-dev (7.0.0-r1)
+(24/35) Purging simdutf (7.0.0-r1)
+(25/35) Purging sqlite-dev (3.49.2-r0)
+(26/35) Purging sqlite (3.49.2-r0)
+(27/35) Purging sqlite-libs (3.49.2-r0)
+(28/35) Purging fmt (11.2.0-r0)
+(29/35) Purging gdbm (1.24-r0)
+(30/35) Purging icu (76.1-r0)
+(31/35) Purging icu-libs (76.1-r0)
+(32/35) Purging libffi (3.4.7-r0)
+(33/35) Purging mpdecimal (4.0.0-r0)
+(34/35) Purging xz-libs (5.6.3-r1)
+(35/35) Purging icu-data-en (76.1-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

@@ -1,0 +1,393 @@
+pigz: not found
+>>> aconf: Building main/aconf 0.8.1-r4 (using abuild 3.14.1-r4) started Thu, 22 May 2025 23:38:32 +0000
+>>> aconf: Validating /home/packager/aports/main/aconf/APKBUILD...
+>>> aconf: Analyzing dependencies...
+>>> aconf: Installing for build: build-base lua5.3-augeas lua5.3-b64 lua5.3-cjson lua5.3-file-magic lua5.3-openrc lua5.3-ossl lua5.3-posix lua5.3-stringy uwsgi uwsgi-lua ldoc
+(1/26) Installing xz-libs (5.6.3-r1)
+(2/26) Installing libxml2 (2.13.4-r6)
+(3/26) Installing augeas-libs (1.12.0-r6)
+(4/26) Installing lua5.3-augeas (0.1.2-r7)
+(5/26) Installing linenoise (1.0-r5)
+(6/26) Installing lua5.3-libs (5.3.6-r6)
+(7/26) Installing lua5.3 (5.3.6-r6)
+(8/26) Installing lua5.3-b64 (0.1-r5)
+(9/26) Installing lua5.3-cjson (2.1.0-r11)
+(10/26) Installing lua5.3-file-magic (0.2-r5)
+(11/26) Installing ifupdown-ng (0.12.1-r6)
+(12/26) Installing openrc (0.55.1-r2)
+Executing openrc-0.55.1-r2.post-install
+(13/26) Installing lua5.3-openrc (0.2-r6)
+(14/26) Installing lua5.3-ossl (20220711-r3)
+(15/26) Installing lua5.3-bit32 (5.3.0-r6)
+(16/26) Installing lua5.3-posix (36.3-r0)
+(17/26) Installing lua5.3-stringy (0.5.1-r3)
+(18/26) Installing mailcap (2.1.54-r0)
+(19/26) Installing uwsgi (2.0.28-r0)
+Executing uwsgi-2.0.28-r0.pre-install
+(20/26) Installing uwsgi-openrc (2.0.28-r0)
+(21/26) Installing uwsgi-lua (2.0.28-r0)
+(22/26) Installing lua-filesystem (1.8.0-r4)
+(23/26) Installing lua5.3-filesystem (1.8.0-r4)
+(24/26) Installing lua-penlight (1.14.0-r0)
+(25/26) Installing ldoc (1.5.0-r0)
+(26/26) Installing .makedepends-aconf (20250522.233834)
+Executing busybox-1.37.0-r12.trigger
+OK: 320 MiB in 140 packages
+>>> aconf: Cleaning up srcdir
+>>> aconf: Cleaning up pkgdir
+>>> aconf: Cleaning up tmpdir
+>>> aconf: Fetching https://dev.alpinelinux.org/archive/aconf/aconf-0.8.1.tar.xz
+Connecting to dev.alpinelinux.org (185.15.220.34:443)
+saving to '/var/cache/distfiles/aconf-0.8.1.tar.xz.part'
+aconf-0.8.1.tar.xz.p 100% |********************************|  174k  0:00:00 ETA
+'/var/cache/distfiles/aconf-0.8.1.tar.xz.part' saved
+>>> aconf: Fetching https://dev.alpinelinux.org/archive/aconf/aconf-0.8.1.tar.xz
+>>> aconf: Checking sha512sums...
+aconf-0.8.1.tar.xz: OK
+aconf.initd: OK
+>>> aconf: Unpacking /var/cache/distfiles/aconf-0.8.1.tar.xz...
+>>> aconf: Entering fakeroot...
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/sbin/
+install -m 755 run-server.sh /home/packager/aports/main/aconf/pkg/aconf/usr/sbin/aconfd
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/
+ln -s /usr/share/lua/5.3/aconf /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/aconf
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/
+install -m 644 aconf/persistence/defer.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/defer.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/
+install -m 644 aconf/persistence/util.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/util.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/
+install -m 644 aconf/persistence/init.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/init.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/
+install -m 644 aconf/persistence/backends/json.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/json.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/
+install -m 644 aconf/persistence/backends/service.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/service.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/
+install -m 644 aconf/persistence/backends/volatile.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/volatile.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/
+install -m 644 aconf/persistence/backends/null.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/null.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/
+install -m 644 aconf/persistence/backends/augeas.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/augeas.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/
+install -m 644 aconf/persistence/backends/files.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/persistence/backends/files.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/transaction/
+install -m 644 aconf/transaction/base.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/transaction/base.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/transaction/
+install -m 644 aconf/transaction/init.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/transaction/init.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/
+install -m 644 aconf/loader.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/loader.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/
+install -m 644 aconf/util.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/util.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/
+install -m 644 aconf/error.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/error.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/
+install -m 644 aconf/modules/dns-zone.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/dns-zone.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/
+install -m 644 aconf/modules/strongswan.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/strongswan.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/
+install -m 644 aconf/modules/openssh.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/openssh.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/
+install -m 644 aconf/modules/network.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/network.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/
+install -m 644 aconf/modules/dnsmasq.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/modules/dnsmasq.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/
+install -m 644 aconf/object.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/object.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/
+install -m 644 aconf/init.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/init.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/
+install -m 644 aconf/path.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/path.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/combination.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/combination.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/time.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/time.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/net.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/net.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/set.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/set.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/service.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/service.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/aaa.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/aaa.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/binary.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/binary.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/field.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/field.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/init.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/init.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/model.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/model.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/node.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/node.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/permission.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/permission.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/
+install -m 644 aconf/model/root.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/lua/5.3/aconf/model/root.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/augeas/
+install -m 644 augeas/aconf_dnsmasq.aug /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/augeas/aconf_dnsmasq.aug
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/
+ln -s /etc/aconf /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/config
+install -d /home/packager/aports/main/aconf/pkg/aconf/etc/aconf/
+install -m 600 config/audit.json /home/packager/aports/main/aconf/pkg/aconf/etc/aconf/audit.json
+install -d /home/packager/aports/main/aconf/pkg/aconf/etc/aconf/
+install -m 600 config/auth.json /home/packager/aports/main/aconf/pkg/aconf/etc/aconf/auth.json
+ldoc -f markdown -M -p aconf aconf
+reading configuration from /home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/config.ld
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+***closing section from master module***
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+***closing section from master module***
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+***closing section from master module***
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+found master module	/home/packager/aports/main/aconf/src/aconf-0.8.1/aconf/model/field.lua
+format: using built-in markdown
+output written to /home/packager/aports/main/aconf/src/aconf-0.8.1/doc
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/doc/aconf/
+install -m 644 doc/index.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/doc/aconf/index.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/doc/aconf/
+install -m 644 doc/ldoc.css /home/packager/aports/main/aconf/pkg/aconf/usr/share/doc/aconf/ldoc.css
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/
+install -m 644 LICENSE /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/LICENSE
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/
+install -m 644 server.lua /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/server.lua
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/
+install -m 644 web/lib/bootstrap.css /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/bootstrap.css
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/client.css /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/client.css
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/layout/
+install -m 644 web/layout/stacked.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/layout/stacked.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/layout/
+install -m 644 web/layout/default.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/layout/default.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/layout/
+install -m 644 web/layout/tabular.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/layout/tabular.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/view.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/view.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/insert.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/insert.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/login.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/login.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/client.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/client.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/basic-input.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/basic-input.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/checkboxes.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/checkboxes.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/date.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/date.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/tabular-layout.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/tabular-layout.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/fields.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/fields.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/menu.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/menu.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/link.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/link.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/audio.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/audio.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/select.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/select.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/set-checkbox.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/set-checkbox.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/del-button.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/del-button.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/widget.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/widget.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/error.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/error.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/collection.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/collection.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/
+install -m 644 web/directive/input.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/directive/input.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/wait.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/wait.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/checkboxes.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/checkboxes.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/date.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/date.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/link.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/link.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/audio.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/audio.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/reference.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/reference.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/inline.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/inline.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/textarea.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/textarea.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/checkbox.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/checkbox.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/combobox.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/combobox.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/
+install -m 644 web/widget/field.html /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/widget/field.html
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/path.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/path.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/
+install -m 644 web/lib/angular.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/angular.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/
+install -m 644 web/lib/bootstrap.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/bootstrap.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/
+install -m 644 web/lib/underscore.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/underscore.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/
+install -m 644 web/lib/angular-route.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/angular-route.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/angular-ui/
+install -m 644 web/lib/angular-ui/bootstrap.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/angular-ui/bootstrap.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/angular-ui/
+install -m 644 web/lib/angular-ui/sortable.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/angular-ui/sortable.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/
+install -m 644 web/lib/jquery.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/
+install -m 644 web/lib/jquery-ui/mouse.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/mouse.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/
+install -m 644 web/lib/jquery-ui/widget.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/widget.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/
+install -m 644 web/lib/jquery-ui/sortable.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/sortable.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/
+install -m 644 web/lib/jquery-ui/core.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/lib/jquery-ui/core.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/transaction.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/transaction.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/node.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/node.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/field.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/field.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/client.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/client.js
+install -d /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/
+install -m 644 web/type.js /home/packager/aports/main/aconf/pkg/aconf/usr/share/aconf/web/type.js
+>>> aconf-doc*: Running split function doc...
+renamed 'usr/share/doc' -> '/home/packager/aports/main/aconf/pkg/aconf-doc/usr/share/doc'
+>>> aconf-doc*: Preparing subpackage aconf-doc...
+libfakeroot internal error: payload not recognized!
+>>> aconf-doc*: Running postcheck for aconf-doc
+>>> aconf-openrc*: Running split function openrc...
+renamed 'etc/init.d' -> '/home/packager/aports/main/aconf/pkg/aconf-openrc/etc/init.d'
+>>> aconf-openrc*: Preparing subpackage aconf-openrc...
+>>> aconf-openrc*: Running postcheck for aconf-openrc
+>>> aconf-mod-dnsmasq*: Running split function _module...
+renamed 'usr/share/lua/5.3/aconf/modules/dnsmasq.lua' -> '/home/packager/aports/main/aconf/pkg/aconf-mod-dnsmasq/usr/share/lua/5.3/aconf/modules/dnsmasq.lua'
+renamed 'usr/share/aconf/augeas/aconf_dnsmasq.aug' -> '/home/packager/aports/main/aconf/pkg/aconf-mod-dnsmasq/usr/share/aconf/augeas/aconf_dnsmasq.aug'
+>>> aconf-mod-dnsmasq*: Preparing subpackage aconf-mod-dnsmasq...
+>>> aconf-mod-dnsmasq*: Running postcheck for aconf-mod-dnsmasq
+>>> aconf-mod-dns-zone*: Running split function _module...
+renamed 'usr/share/lua/5.3/aconf/modules/dns-zone.lua' -> '/home/packager/aports/main/aconf/pkg/aconf-mod-dns-zone/usr/share/lua/5.3/aconf/modules/dns-zone.lua'
+>>> aconf-mod-dns-zone*: Preparing subpackage aconf-mod-dns-zone...
+>>> aconf-mod-dns-zone*: Running postcheck for aconf-mod-dns-zone
+>>> aconf-mod-network*: Running split function _module...
+renamed 'usr/share/lua/5.3/aconf/modules/network.lua' -> '/home/packager/aports/main/aconf/pkg/aconf-mod-network/usr/share/lua/5.3/aconf/modules/network.lua'
+>>> aconf-mod-network*: Preparing subpackage aconf-mod-network...
+>>> aconf-mod-network*: Running postcheck for aconf-mod-network
+>>> aconf-mod-openssh*: Running split function _module...
+renamed 'usr/share/lua/5.3/aconf/modules/openssh.lua' -> '/home/packager/aports/main/aconf/pkg/aconf-mod-openssh/usr/share/lua/5.3/aconf/modules/openssh.lua'
+>>> aconf-mod-openssh*: Preparing subpackage aconf-mod-openssh...
+>>> aconf-mod-openssh*: Running postcheck for aconf-mod-openssh
+>>> aconf-mod-strongswan*: Running split function _module...
+renamed 'usr/share/lua/5.3/aconf/modules/strongswan.lua' -> '/home/packager/aports/main/aconf/pkg/aconf-mod-strongswan/usr/share/lua/5.3/aconf/modules/strongswan.lua'
+>>> aconf-mod-strongswan*: Preparing subpackage aconf-mod-strongswan...
+libfakeroot internal error: payload not recognized!
+>>> aconf-mod-strongswan*: Running postcheck for aconf-mod-strongswan
+>>> aconf*: Running postcheck for aconf
+>>> aconf*: Preparing package aconf...
+>>> aconf-doc*: Tracing dependencies...
+>>> aconf-doc*: Package size: 7.6 KB
+>>> aconf-doc*: Compressing data...
+>>> aconf-doc*: Create checksum...
+pigz: not found
+>>> aconf-doc*: Create aconf-doc-0.8.1-r4.apk
+>>> aconf-mod-dns-zone*: Tracing dependencies...
+	aconf=0.8.1-r4
+>>> aconf-mod-dns-zone*: Package size: 2.6 KB
+>>> aconf-mod-dns-zone*: Compressing data...
+>>> aconf-mod-dns-zone*: Create checksum...
+pigz: not found
+>>> aconf-mod-dns-zone*: Create aconf-mod-dns-zone-0.8.1-r4.apk
+>>> aconf-mod-dnsmasq*: Tracing dependencies...
+	aconf=0.8.1-r4
+>>> aconf-mod-dnsmasq*: Package size: 1.6 KB
+>>> aconf-mod-dnsmasq*: Compressing data...
+>>> aconf-mod-dnsmasq*: Create checksum...
+pigz: not found
+>>> aconf-mod-dnsmasq*: Create aconf-mod-dnsmasq-0.8.1-r4.apk
+>>> aconf-mod-network*: Tracing dependencies...
+	aconf=0.8.1-r4
+>>> aconf-mod-network*: Package size: 7.0 KB
+>>> aconf-mod-network*: Compressing data...
+>>> aconf-mod-network*: Create checksum...
+libfakeroot internal error: payload not recognized!
+pigz: not found
+>>> aconf-mod-network*: Create aconf-mod-network-0.8.1-r4.apk
+>>> aconf-mod-openssh*: Tracing dependencies...
+	aconf=0.8.1-r4
+>>> aconf-mod-openssh*: Package size: 1.3 KB
+>>> aconf-mod-openssh*: Compressing data...
+>>> aconf-mod-openssh*: Create checksum...
+pigz: not found
+>>> aconf-mod-openssh*: Create aconf-mod-openssh-0.8.1-r4.apk
+>>> aconf-mod-strongswan*: Tracing dependencies...
+	aconf=0.8.1-r4
+>>> aconf-mod-strongswan*: Package size: 4.6 KB
+>>> aconf-mod-strongswan*: Compressing data...
+>>> aconf-mod-strongswan*: Create checksum...
+pigz: not found
+>>> aconf-mod-strongswan*: Create aconf-mod-strongswan-0.8.1-r4.apk
+>>> aconf-openrc*: Tracing dependencies...
+>>> aconf-openrc*: Package size: 294.0 B
+>>> aconf-openrc*: Compressing data...
+>>> aconf-openrc*: Create checksum...
+pigz: not found
+>>> aconf-openrc*: Create aconf-openrc-0.8.1-r4.apk
+>>> aconf*: Tracing dependencies...
+	lua5.3-augeas
+	lua5.3-b64
+	lua5.3-cjson
+	lua5.3-file-magic
+	lua5.3-openrc
+	lua5.3-ossl
+	lua5.3-posix
+	lua5.3-stringy
+	uwsgi
+	uwsgi-lua
+>>> aconf*: Package size: 676.4 KB
+>>> aconf*: Compressing data...
+>>> aconf*: Create checksum...
+pigz: not found
+>>> aconf*: Create aconf-0.8.1-r4.apk
+>>> aconf: Build complete at Thu, 22 May 2025 23:38:49 +0000 elapsed time 0h 0m 17s
+>>> aconf: Cleaning up srcdir
+>>> aconf: Cleaning up pkgdir
+>>> aconf: Uninstalling dependencies...
+(1/26) Purging .makedepends-aconf (20250522.233834)
+(2/26) Purging lua5.3-augeas (0.1.2-r7)
+(3/26) Purging lua5.3-b64 (0.1-r5)
+(4/26) Purging lua5.3-cjson (2.1.0-r11)
+(5/26) Purging lua5.3-file-magic (0.2-r5)
+(6/26) Purging lua5.3-openrc (0.2-r6)
+(7/26) Purging lua5.3-ossl (20220711-r3)
+(8/26) Purging lua5.3-posix (36.3-r0)
+(9/26) Purging lua5.3-bit32 (5.3.0-r6)
+(10/26) Purging lua5.3-stringy (0.5.1-r3)
+(11/26) Purging uwsgi-lua (2.0.28-r0)
+(12/26) Purging uwsgi-openrc (2.0.28-r0)
+(13/26) Purging uwsgi (2.0.28-r0)
+(14/26) Purging mailcap (2.1.54-r0)
+(15/26) Purging ldoc (1.5.0-r0)
+(16/26) Purging lua-penlight (1.14.0-r0)
+(17/26) Purging lua5.3-filesystem (1.8.0-r4)
+(18/26) Purging lua5.3 (5.3.6-r6)
+(19/26) Purging lua-filesystem (1.8.0-r4)
+(20/26) Purging augeas-libs (1.12.0-r6)
+(21/26) Purging openrc (0.55.1-r2)
+(22/26) Purging ifupdown-ng (0.12.1-r6)
+(23/26) Purging libxml2 (2.13.4-r6)
+(24/26) Purging linenoise (1.0-r5)
+(25/26) Purging lua5.3-libs (5.3.6-r6)
+(26/26) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 313 MiB in 114 packages
+>>> aconf: Updating the main/x86_64 repository index...
+>>> aconf: Signing the index...
+pigz: not found

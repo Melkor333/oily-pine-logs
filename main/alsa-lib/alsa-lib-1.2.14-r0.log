@@ -1,0 +1,868 @@
+pigz: not found
+>>> alsa-lib: Building main/alsa-lib 1.2.14-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 14:25:06 +0000
+>>> alsa-lib: Validating /home/packager/aports/main/alsa-lib/APKBUILD...
+>>> alsa-lib: Analyzing dependencies...
+>>> alsa-lib: Installing for build: build-base linux-headers
+(1/2) Installing linux-headers (6.14.2-r0)
+(2/2) Installing .makedepends-alsa-lib (20250523.142508)
+OK: 313 MiB in 112 packages
+>>> alsa-lib: Cleaning up srcdir
+>>> alsa-lib: Cleaning up pkgdir
+>>> alsa-lib: Cleaning up tmpdir
+>>> alsa-lib: Fetching https://alsa-project.org/files/pub/lib/alsa-lib-1.2.14.tar.bz2
+Connecting to alsa-project.org (45.14.194.44:443)
+saving to '/var/cache/distfiles/alsa-lib-1.2.14.tar.bz2.part'
+alsa-lib-1.2.14.tar. 100% |********************************| 1089k  0:00:00 ETA
+'/var/cache/distfiles/alsa-lib-1.2.14.tar.bz2.part' saved
+>>> alsa-lib: Fetching https://alsa-project.org/files/pub/lib/alsa-lib-1.2.14.tar.bz2
+>>> alsa-lib: Checking sha512sums...
+alsa-lib-1.2.14.tar.bz2: OK
+remove-test.patch: OK
+fix-PATH_MAX-on-ppc64le.patch: OK
+>>> alsa-lib: Unpacking /var/cache/distfiles/alsa-lib-1.2.14.tar.bz2...
+>>> alsa-lib: remove-test.patch
+patching file test/Makefile.am
+patching file test/Makefile.in
+Hunk #5 succeeded at 451 (offset 2 lines).
+Hunk #6 succeeded at 535 (offset 2 lines).
+Hunk #7 succeeded at 592 (offset 2 lines).
+Hunk #8 succeeded at 856 (offset 1 line).
+Hunk #9 succeeded at 919 (offset 1 line).
+>>> alsa-lib: fix-PATH_MAX-on-ppc64le.patch
+patching file src/ucm/ucm_exec.c
+Hunk #1 succeeded at 32 with fuzz 2 (offset 1 line).
+>>> alsa-lib: Updating ./config.sub
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking whether make supports nested variables... (cached) yes
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... none
+checking how to run the C preprocessor... gcc -E
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/time.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking whether ln -s works... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-file... no
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for shl_load... no
+checking for shl_load in -ldld... no
+checking for dlopen... yes
+checking whether a program can dlopen itself... yes
+checking whether a statically linked program can dlopen itself... no
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking if gcc supports -Wl,--no-undefined flag... yes
+checking if gcc supports -Wl,-z,defs flag... yes
+checking for egrep... (cached) /bin/grep -E
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for uselocale... yes
+checking for eaccess... yes
+checking for gcc option to enable large file support... none needed
+checking for library version... major 1 minor 2 subminor 14 extrastr  extraver 1000000
+checking for versioned symbols... no
+checking for symbolic-functions... no
+checking for custom symbol prefixes... 
+checking for debug... yes
+checking for debug assert... no
+checking for tmpdir... /tmp
+checking for softfloat... no
+checking for LFS calls... no
+checking for libdl... checking for library containing dlsym... none required
+checking for pthread... checking for pthread_join in -lpthread... yes
+checking for gcc options needed to detect all undeclared functions... none needed
+checking whether PTHREAD_MUTEX_RECURSIVE is declared... yes
+checking for __thread... yes
+checking for librt... checking for clock_gettime in -lrt... yes
+checking for use of wordexp... no
+checking for endian.h... yes
+checking for sys/endian.h... no
+checking for sys/shm.h... yes
+checking for malloc.h... yes
+checking for resmgr support... no
+checking for aload* support... yes
+checking for ALSA device file directory... /dev/snd/
+checking for aload* device file directory... /dev/
+checking whether GCC supports builtin atomic intrinsics... yes
+checking for default lockless dmix... no
+checking for max number of cards... 32
+checking for thread-safe API functions... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/pictures/Makefile
+config.status: creating doc/doxygen.cfg
+config.status: creating include/Makefile
+config.status: creating include/sound/Makefile
+config.status: creating include/sound/uapi/Makefile
+config.status: creating src/Versions.in
+config.status: creating src/Makefile
+config.status: creating src/control/Makefile
+config.status: creating src/mixer/Makefile
+config.status: creating src/pcm/Makefile
+config.status: creating src/pcm/scopes/Makefile
+config.status: creating src/rawmidi/Makefile
+config.status: creating src/timer/Makefile
+config.status: creating src/hwdep/Makefile
+config.status: creating src/seq/Makefile
+config.status: creating src/ucm/Makefile
+config.status: creating src/topology/Makefile
+config.status: creating src/conf/Makefile
+config.status: creating src/conf/cards/Makefile
+config.status: creating src/conf/ctl/Makefile
+config.status: creating src/conf/pcm/Makefile
+config.status: creating modules/Makefile
+config.status: creating modules/mixer/Makefile
+config.status: creating modules/mixer/simple/Makefile
+config.status: creating aserver/Makefile
+config.status: creating test/Makefile
+config.status: creating test/lsb/Makefile
+config.status: creating utils/Makefile
+config.status: creating utils/alsa-lib.spec
+config.status: creating utils/alsa.pc
+config.status: creating utils/alsa-topology.pc
+config.status: creating include/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+Creating asoundlib.h...
+Making all in doc
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+Making all in pictures
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+Making all in include
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make  all-recursive
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+Making all in sound
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+Making all in uapi
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+if ! test -r alsa/local.h; then \
+	ln -s ../include alsa; \
+fi
+for f in asoundlib.h version.h; do \
+	if ! test -r ../include/$f; then \
+		ln -s /home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/$f ../include/$f; \
+	fi; \
+done
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+Making all in src
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make  all-recursive
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+Making all in control
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+  CC       cards.lo
+  CC       tlv.lo
+  CC       eld.lo
+  CC       namehint.lo
+  CC       hcontrol.lo
+  CC       control.lo
+  CC       control_hw.lo
+  CC       control_empty.lo
+  CC       setup.lo
+  CC       ctlparse.lo
+  CC       control_plugin.lo
+  CC       control_symbols.lo
+  CC       control_remap.lo
+  CC       control_shm.lo
+  CC       control_ext.lo
+  CCLD     libcontrol.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+Making all in mixer
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+  CC       bag.lo
+  CC       mixer.lo
+  CC       simple.lo
+  CC       simple_none.lo
+  CC       simple_abst.lo
+  CCLD     libmixer.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+Making all in pcm
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+  CC       mask.lo
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+  CC       interval.lo
+  CC       pcm.lo
+  CC       pcm_simple.lo
+  CC       pcm_params.lo
+  CC       pcm_hw.lo
+  CC       pcm_misc.lo
+  CC       pcm_mmap.lo
+  CC       pcm_symbols.lo
+  CC       pcm_generic.lo
+  CC       pcm_plugin.lo
+  CC       pcm_copy.lo
+  CC       pcm_linear.lo
+  CC       pcm_route.lo
+  CC       pcm_mulaw.lo
+  CC       pcm_alaw.lo
+  CC       pcm_adpcm.lo
+  CC       pcm_rate.lo
+  CC       pcm_rate_linear.lo
+  CC       pcm_plug.lo
+  CC       pcm_multi.lo
+  CC       pcm_shm.lo
+  CC       pcm_file.lo
+  CC       pcm_null.lo
+  CC       pcm_empty.lo
+  CC       pcm_share.lo
+  CC       pcm_meter.lo
+  CC       pcm_hooks.lo
+  CC       pcm_lfloat.lo
+  CC       pcm_ladspa.lo
+  CC       pcm_dmix.lo
+  CC       pcm_dshare.lo
+  CC       pcm_dsnoop.lo
+  CC       pcm_direct.lo
+  CC       pcm_asym.lo
+  CC       pcm_iec958.lo
+  CC       pcm_softvol.lo
+  CC       pcm_extplug.lo
+  CC       pcm_ioplug.lo
+  CC       pcm_mmap_emul.lo
+  CCLD     libpcm.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+Making all in timer
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+  CC       timer.lo
+  CC       timer_hw.lo
+  CC       timer_query.lo
+  CC       timer_query_hw.lo
+  CC       timer_symbols.lo
+  CCLD     libtimer.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+Making all in rawmidi
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+  CC       rawmidi.lo
+  CC       rawmidi_hw.lo
+  CC       rawmidi_symbols.lo
+  CC       ump.lo
+  CC       rawmidi_virt.lo
+  CCLD     librawmidi.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+Making all in hwdep
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+  CC       hwdep.lo
+  CC       hwdep_hw.lo
+  CC       hwdep_symbols.lo
+  CCLD     libhwdep.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+Making all in seq
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+  CC       seq_hw.lo
+  CC       seq.lo
+  CC       seq_event.lo
+  CC       seqmid.lo
+  CC       seq_midi_event.lo
+  CC       seq_symbols.lo
+  CC       seq_old.lo
+  CCLD     libseq.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+Making all in ucm
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+  CC       utils.lo
+  CC       parser.lo
+  CC       ucm_cond.lo
+  CC       ucm_subs.lo
+  CC       ucm_include.lo
+  CC       ucm_regex.lo
+  CC       main.lo
+  CC       ucm_exec.lo
+  CCLD     libucm.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+Making all in conf
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+Making all in cards
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+Making all in ctl
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+Making all in pcm
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+  CC       conf.lo
+  CC       confeval.lo
+  CC       confmisc.lo
+  CC       input.lo
+  CC       output.lo
+  CC       error.lo
+  CC       dlmisc.lo
+  CC       async.lo
+  CC       socket.lo
+  CC       shmarea.lo
+  CC       userfile.lo
+  CC       names.lo
+  CCLD     libasound.la
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+Making all in src/topology
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+  CC       parser.lo
+  CC       builder.lo
+  CC       ctl.lo
+  CC       dapm.lo
+  CC       pcm.lo
+  CC       data.lo
+  CC       text.lo
+  CC       channel.lo
+  CC       ops.lo
+  CC       elem.lo
+  CC       save.lo
+  CC       decoder.lo
+  CC       log.lo
+  CCLD     libatopology.la
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+Making all in modules
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+Making all in mixer
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+Making all in simple
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer/simple'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer/simple'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+Making all in aserver
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/aserver'
+  CC       aserver.o
+  CCLD     aserver
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/aserver'
+Making all in test
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+Making all in .
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+Making all in lsb
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+Making all in utils
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/utils'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/utils'
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14'
+Making check in doc
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+Making check in pictures
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+Making check in include
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+Making check in sound
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+Making check in uapi
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+if ! test -r alsa/local.h; then \
+	ln -s ../include alsa; \
+fi
+for f in asoundlib.h version.h; do \
+	if ! test -r ../include/$f; then \
+		ln -s /home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/$f ../include/$f; \
+	fi; \
+done
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+Making check in src
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make  check-recursive
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+Making check in control
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+Making check in mixer
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+Making check in pcm
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[4]: Nothing to be done for 'check-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+Making check in timer
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+Making check in rawmidi
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+Making check in hwdep
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+Making check in seq
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+Making check in ucm
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+Making check in conf
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+Making check in cards
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+Making check in ctl
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+Making check in pcm
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[4]: Nothing to be done for 'check'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[4]: Nothing to be done for 'check-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+Making check in src/topology
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+Making check in modules
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+Making check in mixer
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+Making check in simple
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer/simple'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer/simple'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules/mixer'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/modules'
+Making check in aserver
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/aserver'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/aserver'
+Making check in test
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+Making check in .
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+make  control pcm pcm_min latency seq seq-ump-example playmidi1 timer rawmidi midiloop umpinfo queue_timer namehint client_event_filter chmap audio_time user-ctl-element-set pcm-multi-thread
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+  CC       control.o
+  CC       pcm.o
+  CC       pcm_min.o
+  CC       latency.o
+  CC       seq.o
+  CC       seq-ump-example.o
+  CC       playmidi1.o
+  CC       timer.o
+In file included from seq.c:12:
+seq-sender.c: In function 'event_sender':
+seq-sender.c:150:62: warning: variable 'pcm_flag' set but not used [-Wunused-but-set-variable]
+  150 |         int client, port, queue, max, err, v1, v2, time = 0, pcm_flag = 0;
+      |                                                              ^~~~~~~~
+  CC       rawmidi.o
+  CC       midiloop.o
+  CC       umpinfo.o
+  CC       queue_timer.o
+  CC       namehint.o
+  CC       client_event_filter.o
+  CC       chmap.o
+  CC       audio_time.o
+  CC       user_ctl_element_set-user-ctl-element-set.o
+  CC       pcm-multi-thread.o
+  CCLD     control
+  CCLD     pcm_min
+  CCLD     seq
+user-ctl-element-set.c: In function 'check_elem_set_props':
+user-ctl-element-set.c:523:22: warning: unused variable 'j' [-Wunused-variable]
+  523 |         unsigned int j;
+      |                      ^
+  CCLD     seq-ump-example
+  CCLD     timer
+  CCLD     rawmidi
+  CCLD     umpinfo
+  CCLD     midiloop
+  CCLD     queue_timer
+  CCLD     namehint
+  CCLD     client_event_filter
+  CCLD     chmap
+  CCLD     audio_time
+  CCLD     user-ctl-element-set
+  CCLD     pcm-multi-thread
+  CCLD     pcm
+  CCLD     latency
+  CCLD     playmidi1
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+Making check in lsb
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make  config midi_event
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+  CC       config.o
+  CC       midi_event.o
+  CCLD     midi_event
+  CCLD     config
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make  check-TESTS
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+PASS: config
+PASS: midi_event
+============================================================================
+Testsuite summary for alsa-lib 1.2.14
+============================================================================
+# TOTAL: 2
+# PASS:  2
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test/lsb'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/test'
+Making check in utils
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/utils'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/utils'
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14'
+>>> alsa-lib: Entering fakeroot...
+Making install in doc
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+Making install in pictures
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc/pictures'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/doc'
+Making install in include
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+Making install in sound
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+Making install in uapi
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/alsa/sound/uapi'
+ /usr/bin/install -c -m 644 asound_fm.h hdsp.h hdspm.h sb16_csp.h sscape_ioctl.h emu10k1.h asoc.h tlv.h '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/alsa/sound/uapi'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound/uapi'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/alsa/sound'
+ /usr/bin/install -c -m 644 asound_fm.h hdsp.h hdspm.h sb16_csp.h sscape_ioctl.h emu10k1.h asoc.h tlv.h type_compat.h '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/alsa/sound'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/sound'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+if ! test -r alsa/local.h; then \
+	ln -s ../include alsa; \
+fi
+for f in asoundlib.h version.h; do \
+	if ! test -r ../include/$f; then \
+		ln -s /home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/$f ../include/$f; \
+	fi; \
+done
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+if ! test -r alsa/local.h; then \
+	ln -s ../include alsa; \
+fi
+for f in asoundlib.h version.h; do \
+	if ! test -r ../include/$f; then \
+		ln -s /home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include/$f ../include/$f; \
+	fi; \
+done
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/alsa'
+ /usr/bin/install -c -m 644 asoundlib.h asoundef.h version.h global.h input.h output.h error.h conf.h control.h control_plugin.h control_external.h pcm.h pcm_old.h timer.h pcm_plugin.h pcm_rate.h pcm_external.h pcm_extplug.h pcm_ioplug.h rawmidi.h ump.h ump_msg.h hwdep.h mixer.h mixer_abst.h seq_event.h seq.h seqmid.h seq_midi_event.h use-case.h topology.h '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/alsa'
+make  install-data-hook
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+test -d /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/sys || mkdir -p /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/sys
+/usr/bin/install -c -m 644 ./sys.h /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/sys/asoundlib.h
+/usr/bin/install -c -m 644 ./sys.h /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/include/asoundlib.h
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/include'
+Making install in src
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make  install-recursive
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+Making install in control
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/control'
+Making install in mixer
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/mixer'
+Making install in pcm
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[5]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Nothing to be done for 'install-data-am'.
+make[5]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/pcm'
+Making install in timer
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/timer'
+Making install in rawmidi
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/rawmidi'
+Making install in hwdep
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/hwdep'
+Making install in seq
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/seq'
+Making install in ucm
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/ucm'
+Making install in conf
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+Making install in cards
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+make[5]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/cards'
+ /usr/bin/install -c -m 644 aliases.conf AACI.conf ATIIXP.conf ATIIXP-SPDMA.conf ATIIXP-MODEM.conf AU8810.conf AU8820.conf AU8830.conf Audigy.conf Audigy2.conf Aureon51.conf Aureon71.conf CA0106.conf CMI8338.conf CMI8338-SWIEC.conf CMI8738-MC6.conf CMI8738-MC8.conf CMI8788.conf CS46xx.conf Echo_Echo3G.conf EMU10K1.conf EMU10K1X.conf ENS1370.conf ENS1371.conf ES1968.conf FM801.conf FWSpeakers.conf FireWave.conf GUS.conf HDA-Intel.conf HdmiLpeAudio.conf ICE1712.conf ICE1724.conf ICH.conf ICH4.conf ICH-MODEM.conf Loopback.conf Maestro3.conf NFORCE.conf PC-Speaker.conf '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/cards'
+ /usr/bin/install -c -m 644 pistachio-card.conf PMac.conf PMacToonie.conf PS3.conf RME9636.conf RME9652.conf SI7018.conf SB-XFi.conf TRID4DWAVENX.conf USB-Audio.conf YMF744.conf vc4-hdmi.conf VIA686A.conf VIA8233.conf VIA8233A.conf VIA8237.conf VX222.conf VXPocket.conf VXPocket440.conf '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/cards'
+make[5]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/cards'
+Making install in ctl
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+make[5]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/ctl'
+ /usr/bin/install -c -m 644 default.conf '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/ctl'
+make[5]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/ctl'
+Making install in pcm
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[5]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/pcm'
+ /usr/bin/install -c -m 644 default.conf front.conf rear.conf center_lfe.conf side.conf surround21.conf surround40.conf surround41.conf surround50.conf surround51.conf surround71.conf iec958.conf hdmi.conf modem.conf dmix.conf dsnoop.conf dpl.conf '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa/pcm'
+make[5]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf/pcm'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[5]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[5]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa'
+ /usr/bin/install -c -m 644 alsa.conf '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/share/alsa'
+make[5]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/conf'
+make[3]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[4]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libasound.la '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libasound.so.2.0.0 /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib/libasound.so.2.0.0
+libtool: install: (cd /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib && { ln -s -f libasound.so.2.0.0 libasound.so.2 || { rm -f libasound.so.2 && ln -s libasound.so.2.0.0 libasound.so.2; }; })
+libtool: install: (cd /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib && { ln -s -f libasound.so.2.0.0 libasound.so || { rm -f libasound.so && ln -s libasound.so.2.0.0 libasound.so; }; })
+libtool: install: /usr/bin/install -c .libs/libasound.lai /home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib/libasound.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[3]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src'
+Making install in src/topology
+make[1]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+make[2]: Entering directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+ /bin/mkdir -p '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libatopology.la '/home/packager/aports/main/alsa-lib/pkg/alsa-lib/usr/lib'
+libtool: warning: relinking 'libatopology.la'
+libtool: install: \\\(cd /home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology; /bin/sh "/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/libtool"  --silent --tag CC --mode=relink gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -version-info 2:0:0 -Wl,-z,defs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libatopology.la -rpath /usr/lib parser.lo builder.lo ctl.lo dapm.lo pcm.lo data.lo text.lo channel.lo ops.lo elem.lo save.lo decoder.lo log.lo ../libasound.la -inst-prefix-dir /home/packager/aports/main/alsa-lib/pkg/alsa-lib)\\\
+  \\\(cd /home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology; /bin/sh "/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/libtool"  --silent --tag CC --mode=relink gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -version-info 2:0:0 -Wl,-z,defs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libatopology.la -rpath /usr/lib parser.lo builder.lo ctl.lo dapm.lo pcm.lo data.lo text.lo channel.lo ops.lo elem.lo save.lo decoder.lo log.lo ../libasound.la -inst-prefix-dir /home/packager/aports/main/alsa-lib/pkg/alsa-lib)\\\
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ^
+[ eval arg at line 1887 of ../../libtool ]:1
+
+        eval "$_G_cmd"
+        ^~~~
+../../libtool:1887: Invalid word while parsing command line (Id.Op_RParen)
+libtool:   error: error: relink 'libatopology.la' with the above command before installing it
+make[2]: *** [Makefile:412: install-libLTLIBRARIES] Error 1
+make[2]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+make[1]: *** [Makefile:598: install-am] Error 2
+make[1]: Leaving directory '/home/packager/aports/main/alsa-lib/src/alsa-lib-1.2.14/src/topology'
+make: *** [Makefile:406: install-recursive] Error 1
+>>> ERROR: alsa-lib*: package failed
+>>> ERROR: alsa-lib: rootpkg failed
+>>> alsa-lib: Uninstalling dependencies...
+(1/2) Purging .makedepends-alsa-lib (20250523.142508)
+(2/2) Purging linux-headers (6.14.2-r0)
+OK: 307 MiB in 110 packages

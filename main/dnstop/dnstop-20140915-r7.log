@@ -1,0 +1,157 @@
+pigz: not found
+>>> dnstop: Building main/dnstop 20140915-r7 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:45:42 +0000
+>>> dnstop: Validating /home/packager/aports/main/dnstop/APKBUILD...
+>>> dnstop: Analyzing dependencies...
+>>> dnstop: Installing for build: build-base libpcap-dev ncurses-dev
+(1/3) Installing libpcap (1.10.5-r0)
+(2/3) Installing libpcap-dev (1.10.5-r0)
+(3/3) Installing .makedepends-dnstop (20250518.104543)
+Executing busybox-1.37.0-r12.trigger
+OK: 262 MiB in 84 packages
+>>> dnstop: Cleaning up srcdir
+>>> dnstop: Cleaning up pkgdir
+>>> dnstop: Cleaning up tmpdir
+>>> dnstop: Fetching http://dns.measurement-factory.com/tools/dnstop/src/dnstop-20140915.tar.gz
+Connecting to dns.measurement-factory.com (104.237.131.42:80)
+saving to '/var/cache/distfiles/dnstop-20140915.tar.gz.part'
+dnstop-20140915.tar.  18% |*****                           | 14219  0:00:04 ETA
+dnstop-20140915.tar. 100% |********************************| 77917  0:00:00 ETA
+'/var/cache/distfiles/dnstop-20140915.tar.gz.part' saved
+>>> dnstop: Fetching http://dns.measurement-factory.com/tools/dnstop/src/dnstop-20140915.tar.gz
+>>> dnstop: Checking sha512sums...
+dnstop-20140915.tar.gz: OK
+musl-fix.patch: OK
+>>> dnstop: Unpacking /var/cache/distfiles/dnstop-20140915.tar.gz...
+>>> dnstop: musl-fix.patch
+patching file dnstop.c
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for initscr in -lncurses... yes
+checking for pcap_open_live in -lpcap... yes
+checking for main in -lsocket... no
+checking for main in -lnsl... no
+checking for main in -lresolv... yes
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking for stdint.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for unistd.h... (cached) yes
+checking endian.h usability... yes
+checking endian.h presence... yes
+checking for endian.h... yes
+checking arpa/nameser_compat.h usability... yes
+checking arpa/nameser_compat.h presence... yes
+checking for arpa/nameser_compat.h... yes
+checking for net/if_arp.h... yes
+checking for net/if.h... yes
+checking for netinet/if_ether.h... yes
+checking for net/if_ppp.h... no
+checking for an ANSI C-conforming const... yes
+checking for off_t... yes
+checking for size_t... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint8_t... yes
+checking for struct bpf_timeval... no
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking return type of signal handlers... void
+checking whether lstat dereferences a symlink specified with a trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for memset... yes
+checking for select... yes
+checking for strchr... yes
+checking for strdup... yes
+checking for strrchr... yes
+checking for strstr... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DUSE_IPV6=1   -c -o dnstop.o dnstop.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DUSE_IPV6=1   -c -o hashtbl.o hashtbl.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DUSE_IPV6=1   -c -o inX_addr.o inX_addr.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DUSE_IPV6=1   -c -o lookup3.o lookup3.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DUSE_IPV6=1 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o dnstop dnstop.o hashtbl.o inX_addr.o lookup3.o -lresolv -lpcap -lncurses 
+>>> dnstop: Entering fakeroot...
+install -m 755 dnstop /home/packager/aports/main/dnstop/pkg/dnstop/usr/bin
+install -m 644 dnstop.8 /home/packager/aports/main/dnstop/pkg/dnstop/usr/share/man/man8
+>>> dnstop-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/dnstop/pkg/dnstop-doc/usr/share/man'
+>>> dnstop-doc*: Preparing subpackage dnstop-doc...
+>>> dnstop-doc*: Running postcheck for dnstop-doc
+>>> dnstop*: Running postcheck for dnstop
+>>> dnstop*: Preparing package dnstop...
+>>> dnstop*: Stripping binaries
+>>> dnstop-doc*: Scanning shared objects
+>>> dnstop*: Scanning shared objects
+>>> dnstop-doc*: Tracing dependencies...
+>>> dnstop-doc*: Package size: 2.3 KB
+>>> dnstop-doc*: Compressing data...
+>>> dnstop-doc*: Create checksum...
+pigz: not found
+>>> dnstop-doc*: Create dnstop-doc-20140915-r7.apk
+>>> dnstop*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libncursesw.so.6
+	so:libpcap.so.1
+>>> dnstop*: Package size: 55.6 KB
+>>> dnstop*: Compressing data...
+>>> dnstop*: Create checksum...
+pigz: not found
+>>> dnstop*: Create dnstop-20140915-r7.apk
+>>> dnstop: Build complete at Sun, 18 May 2025 10:45:51 +0000 elapsed time 0h 0m 9s
+>>> dnstop: Cleaning up srcdir
+>>> dnstop: Cleaning up pkgdir
+>>> dnstop: Uninstalling dependencies...
+(1/3) Purging .makedepends-dnstop (20250518.104543)
+(2/3) Purging libpcap-dev (1.10.5-r0)
+(3/3) Purging libpcap (1.10.5-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> dnstop: Updating the main/x86_64 repository index...
+>>> dnstop: Signing the index...
+pigz: not found

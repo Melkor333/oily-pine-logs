@@ -1,0 +1,82 @@
+pigz: not found
+>>> librtlsdr: Building main/librtlsdr 2.0.2-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 17:59:11 +0000
+>>> librtlsdr: Validating /home/packager/aports/main/librtlsdr/APKBUILD...
+>>> librtlsdr: Analyzing dependencies...
+>>> librtlsdr: Installing for build: build-base libusb-dev cmake samurai
+(1/10) Installing libusb (1.0.27-r0)
+(2/10) Installing libusb-dev (1.0.27-r0)
+(3/10) Installing lz4-libs (1.10.0-r0)
+(4/10) Installing xz-libs (5.6.3-r1)
+(5/10) Installing libarchive (3.7.9-r0)
+(6/10) Installing rhash-libs (1.4.5-r0)
+(7/10) Installing libuv (1.49.2-r0)
+(8/10) Installing cmake (3.31.7-r0)
+(9/10) Installing samurai (1.2-r6)
+(10/10) Installing .makedepends-librtlsdr (20250523.175914)
+Executing busybox-1.37.0-r12.trigger
+OK: 618 MiB in 142 packages
+>>> librtlsdr: Cleaning up srcdir
+>>> librtlsdr: Cleaning up pkgdir
+>>> librtlsdr: Cleaning up tmpdir
+>>> librtlsdr: Fetching rtl-sdr-2.0.2.tar.gz::https://github.com/osmocom/rtl-sdr/archive/refs/tags/v2.0.2.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to codeload.github.com (140.82.121.10:443)
+saving to '/var/cache/distfiles/rtl-sdr-2.0.2.tar.gz.part'
+rtl-sdr-2.0.2.tar.gz 100% |********************************|  133k  0:00:00 ETA
+'/var/cache/distfiles/rtl-sdr-2.0.2.tar.gz.part' saved
+>>> librtlsdr: Fetching rtl-sdr-2.0.2.tar.gz::https://github.com/osmocom/rtl-sdr/archive/refs/tags/v2.0.2.tar.gz
+>>> librtlsdr: Checking sha512sums...
+rtl-sdr-2.0.2.tar.gz: OK
+correct_udev_rules_path.patch: OK
+>>> librtlsdr: Unpacking /var/cache/distfiles/rtl-sdr-2.0.2.tar.gz...
+>>> librtlsdr: correct_udev_rules_path.patch
+patching file CMakeLists.txt
+-- The C compiler identification is GNU 14.2.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Check for working C compiler: /usr/bin/gcc
+-- Check for working C compiler: /usr/bin/gcc - broken
+CMake Error at /usr/share/cmake/Modules/CMakeTestCCompiler.cmake:67 (message):
+  The C compiler
+
+    "/usr/bin/gcc"
+
+  is not able to compile a simple test program.
+
+  It fails with the following output:
+
+    Change Dir: '/home/packager/aports/main/librtlsdr/src/rtl-sdr-2.0.2/build/CMakeFiles/CMakeScratch/TryCompile-fGgoPL'
+    
+    Run Build Command(s): /usr/bin/ninja -v cmTC_9bd89
+    [1/2] /usr/bin/gcc   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -o CMakeFiles/cmTC_9bd89.dir/testCCompiler.c.o -c /home/packager/aports/main/librtlsdr/src/rtl-sdr-2.0.2/build/CMakeFiles/CMakeScratch/TryCompile-fGgoPL/testCCompiler.c
+    [2/2] : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_9bd89.dir/testCCompiler.c.o -o cmTC_9bd89   && :
+    ninja: job failed: : && /usr/bin/gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs CMakeFiles/cmTC_9bd89.dir/testCCompiler.c.o -o cmTC_9bd89   && :
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: cmTC_9bd89: error: PHDR segment not covered by LOAD segment
+    /usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: cmTC_9bd89 has a LOAD segment with RWX permissions
+    collect2: error: ld returned 1 exit status
+    ninja: subcommand failed
+    
+    
+
+  
+
+  CMake will not be able to correctly generate this project.
+Call Stack (most recent call first):
+  CMakeLists.txt:28 (project)
+
+
+-- Configuring incomplete, errors occurred!
+>>> ERROR: librtlsdr: build failed
+>>> librtlsdr: Uninstalling dependencies...
+(1/10) Purging .makedepends-librtlsdr (20250523.175914)
+(2/10) Purging libusb-dev (1.0.27-r0)
+(3/10) Purging libusb (1.0.27-r0)
+(4/10) Purging cmake (3.31.7-r0)
+(5/10) Purging samurai (1.2-r6)
+(6/10) Purging libarchive (3.7.9-r0)
+(7/10) Purging libuv (1.49.2-r0)
+(8/10) Purging lz4-libs (1.10.0-r0)
+(9/10) Purging rhash-libs (1.4.5-r0)
+(10/10) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

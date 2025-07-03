@@ -1,0 +1,732 @@
+pigz: not found
+>>> djbdns: Building main/djbdns 1.05-r54 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:45:21 +0000
+>>> djbdns: Validating /home/packager/aports/main/djbdns/APKBUILD...
+>>> djbdns: Analyzing dependencies...
+>>> djbdns: Installing for build: build-base
+(1/1) Installing .makedepends-djbdns (20250518.074522)
+OK: 261 MiB in 82 packages
+>>> djbdns: Cleaning up srcdir
+>>> djbdns: Cleaning up pkgdir
+>>> djbdns: Cleaning up tmpdir
+>>> djbdns: Fetching https://cr.yp.to/djbdns/djbdns-1.05.tar.gz
+Connecting to cr.yp.to (131.193.32.109:443)
+saving to '/var/cache/distfiles/djbdns-1.05.tar.gz.part'
+djbdns-1.05.tar.gz.p 37422 --:--:-- ETA
+djbdns-1.05.tar.gz.p 100% |********************************| 85648  0:00:00 ETA
+'/var/cache/distfiles/djbdns-1.05.tar.gz.part' saved
+>>> djbdns: Fetching https://www.fefe.de/dns/djbdns-1.05-test25.diff.bz2
+Connecting to www.fefe.de (31.15.64.162:443)
+saving to '/var/cache/distfiles/djbdns-1.05-test25.diff.bz2.part'
+djbdns-1.05-test25.d 100% |********************************| 20376  0:00:00 ETA
+'/var/cache/distfiles/djbdns-1.05-test25.diff.bz2.part' saved
+>>> djbdns: Fetching https://cr.yp.to/djbdns/djbdns-1.05.tar.gz
+>>> djbdns: Fetching https://www.fefe.de/dns/djbdns-1.05-test25.diff.bz2
+>>> djbdns: Checking sha512sums...
+djbdns-1.05.tar.gz: OK
+djbdns-1.05-test25.diff.bz2: OK
+headtail.patch: OK
+dnsroots.patch: OK
+dnstracesort.patch: OK
+djbdns-1.05-jumbo-josb.patch: OK
+implicit.patch: OK
+incompatible.patch: OK
+1.05-errno.patch: OK
+1.05-response.patch: OK
+tinydns.pre-install: OK
+tinydns.initd: OK
+tinydns.confd: OK
+dnscache.initd: OK
+dnscache.confd: OK
+dnscache.monthly: OK
+>>> djbdns: Unpacking /var/cache/distfiles/djbdns-1.05.tar.gz...
+>>> djbdns: headtail.patch
+patching file Makefile
+Hunk #3 succeeded at 445 (offset -4 lines).
+Hunk #4 succeeded at 566 (offset -4 lines).
+Hunk #5 succeeded at 754 (offset -4 lines).
+Hunk #6 succeeded at 897 (offset -4 lines).
+>>> djbdns: dnsroots.patch
+patching file dnsroots.global
+>>> djbdns: dnstracesort.patch
+patching file dnstracesort.sh
+>>> djbdns: djbdns-1.05-jumbo-josb.patch
+patching file CHANGES
+patching file Makefile
+patching file Makefile.sig
+patching file README
+patching file SYSDEPS
+patching file TARGETS
+patching file VERSION
+patching file auto_home.c
+patching file axfr-get.c
+patching file cache.c
+patching file cache.h
+patching file chkshsgr.c
+patching file direntry.h
+patching file dns.h
+patching file dns_rotateip.c
+patching file dnscache-conf.c
+patching file dnscache.c
+patching file dnsfilter.c
+patching file hasdevtcp.h
+patching file hassgact.h
+patching file hassgact.h1
+patching file hassgact.h2
+patching file hassgprm.h
+patching file hassgprm.h1
+patching file hassgprm.h2
+patching file hasshsgr.h
+patching file iopause.h
+patching file log.c
+patching file log.h
+patching file okclient.c
+patching file parsetype.c
+patching file printrecord.c
+patching file prot.c
+patching file query.c
+patching file query.h
+patching file seek_set.c
+patching file select.h
+patching file server.c
+patching file sig.c
+patching file sig.h
+patching file sig_block.c
+patching file sig_catch.c
+patching file sig_pause.c
+patching file tinydns-data.c
+patching file trysgact.c
+patching file trysgprm.c
+patching file uint32.h
+patching file uint64.h
+>>> djbdns: implicit.patch
+patching file dnsq.c
+patching file dnsqr.c
+patching file utime.c
+>>> djbdns: incompatible.patch
+patching file tinydns-data.c
+patching file chkshsgr.c
+patching file hier.c
+patching file utime.c
+>>> djbdns: 1.05-errno.patch
+patching file error.h
+>>> djbdns: 1.05-response.patch
+patching file response.c
+Hunk #1 succeeded at 34 with fuzz 2.
+( cat warn-auto.sh; \
+echo 'main="$1"; shift'; \
+echo exec "`head -n 1 conf-ld`" \
+'-o "$main" "$main".o ${1+"$@"}' \
+) > load
+chmod 755 load
+( cat warn-auto.sh; \
+echo exec "`head -n 1 conf-cc`" '-c ${1+"$@"}' \
+) > compile
+chmod 755 compile
+( cat warn-auto.sh; \
+echo CC=\'`head -n 1 conf-cc`\'; \
+echo LD=\'`head -n 1 conf-ld`\'; \
+cat find-systype.sh; \
+) | sh > systype
+( case "`cat systype`" in \
+  sunos-5.*) cat hasdevtcp.h2 ;; \
+  *) cat hasdevtcp.h1 ;; \
+esac ) > hasdevtcp.h
+( ( ./compile tryulong32.c && ./load tryulong32 && \
+./tryulong32 ) >/dev/null 2>&1 \
+&& cat uint32.h2 || cat uint32.h1 ) > uint32.h
+rm -f tryulong32.o tryulong32
+cat warn-auto.sh choose.sh \
+| sed s}HOME}"`head -n 1 conf-home`"}g \
+> choose
+chmod 755 choose
+./choose clr tryulong64 uint64.h1 uint64.h2 > uint64.h
+./compile dnscache-conf.c
+./compile generic-conf.c
+./compile auto-str.c
+auto-str.c:7:6: warning: conflicting types for built-in function 'puts'; expected 'int(const char *)' [-Wbuiltin-declaration-mismatch]
+    7 | void puts(const char *s)
+      |      ^~~~
+auto-str.c:3:1: note: 'puts' is declared in header '<stdio.h>'
+    2 | #include "exit.h"
+  +++ |+#include <stdio.h>
+    3 | 
+( cat warn-auto.sh; \
+echo 'main="$1"; shift'; \
+echo 'rm -f "$main"'; \
+echo 'ar cr "$main" ${1+"$@"}'; \
+case "`cat systype`" in \
+sunos-5.*) ;; \
+unix_sv*) ;; \
+irix64-*) ;; \
+irix-*) ;; \
+dgux-*) ;; \
+hp-ux-*) ;; \
+sco*) ;; \
+*) echo 'ranlib "$main"' ;; \
+esac \
+) > makelib
+chmod 755 makelib
+./compile buffer.c
+./compile buffer_1.c
+./compile buffer_2.c
+./compile buffer_copy.c
+./compile buffer_get.c
+./compile buffer_put.c
+./compile strerr_die.c
+./compile strerr_sys.c
+./makelib buffer.a buffer.o buffer_1.o buffer_2.o \
+buffer_copy.o buffer_get.o buffer_put.o strerr_die.o \
+strerr_sys.o
+./compile buffer_read.c
+./compile buffer_write.c
+./compile error.c
+./compile error_str.c
+./compile ndelay_off.c
+./compile ndelay_on.c
+./compile open_read.c
+./compile open_trunc.c
+./compile openreadclose.c
+./compile readclose.c
+./compile seek_set.c
+./compile socket_accept.c
+./compile socket_bind.c
+./compile socket_conn.c
+./compile socket_listen.c
+./compile socket_recv.c
+./compile socket_send.c
+./compile socket_tcp.c
+./compile socket_udp.c
+./makelib unix.a buffer_read.o buffer_write.o error.o \
+error_str.o ndelay_off.o ndelay_on.o open_read.o \
+open_trunc.o openreadclose.o readclose.o seek_set.o \
+socket_accept.o socket_bind.o socket_conn.o socket_listen.o \
+socket_recv.o socket_send.o socket_tcp.o socket_udp.o
+./compile byte_chr.c
+./compile byte_copy.c
+./compile byte_cr.c
+./compile byte_diff.c
+./compile byte_zero.c
+./compile case_diffb.c
+./compile case_diffs.c
+./compile case_lowerb.c
+./compile fmt_ulong.c
+./compile ip4_fmt.c
+./compile ip4_scan.c
+./compile scan_ulong.c
+./compile str_chr.c
+./compile str_diff.c
+./compile str_len.c
+./compile str_rchr.c
+./compile str_start.c
+./compile uint16_pack.c
+./compile uint16_unpack.c
+./compile uint32_pack.c
+./compile uint32_unpack.c
+./makelib byte.a byte_chr.o byte_copy.o byte_cr.o \
+byte_diff.o byte_zero.o case_diffb.o case_diffs.o \
+case_lowerb.o fmt_ulong.o ip4_fmt.o ip4_scan.o scan_ulong.o \
+str_chr.o str_diff.o str_len.o str_rchr.o str_start.o \
+uint16_pack.o uint16_unpack.o uint32_pack.o uint32_unpack.o
+./load auto-str buffer.a unix.a byte.a 
+./auto-str auto_home `head -n 1 conf-home` > auto_home.c
+./compile auto_home.c
+./compile tai_add.c
+./compile tai_now.c
+./compile tai_pack.c
+./compile tai_sub.c
+./compile tai_uint.c
+./compile tai_unpack.c
+./compile taia_add.c
+./compile taia_approx.c
+./compile taia_frac.c
+./compile taia_less.c
+./compile taia_now.c
+./compile taia_pack.c
+./compile taia_sub.c
+./compile taia_tai.c
+./compile taia_uint.c
+./makelib libtai.a tai_add.o tai_now.o tai_pack.o \
+tai_sub.o tai_uint.o tai_unpack.o taia_add.o taia_approx.o \
+taia_frac.o taia_less.o taia_now.o taia_pack.o taia_sub.o \
+taia_tai.o taia_uint.o
+./load dnscache-conf generic-conf.o auto_home.o libtai.a \
+buffer.a unix.a byte.a 
+./choose clr trypoll iopause.h1 iopause.h2 > iopause.h
+./compile dnscache.c
+./compile droproot.c
+./compile okclient.c
+./compile log.c
+./compile cache.c
+./compile query.c
+./compile response.c
+./compile dd.c
+./choose c trydrent direntry.h1 direntry.h2 > direntry.h
+./compile roots.c
+./choose c trysysel select.h1 select.h2 > select.h
+./compile iopause.c
+./compile chkshsgr.c
+./load chkshsgr 
+./chkshsgr || ( cat warn-shsgr; exit 1 )
+./choose clr tryshsgr hasshsgr.h1 hasshsgr.h2 > hasshsgr.h
+./compile prot.c
+./compile dns_dfd.c
+./compile dns_domain.c
+./compile dns_dtda.c
+./compile dns_ip.c
+./compile dns_ipq.c
+./compile dns_mx.c
+./compile dns_name.c
+./compile dns_nd.c
+./compile dns_packet.c
+./compile dns_random.c
+./compile dns_rcip.c
+./compile dns_rcrw.c
+./compile dns_resolve.c
+./compile dns_rotateip.c
+./compile dns_sortip.c
+./compile dns_transmit.c
+./compile dns_txt.c
+./makelib dns.a dns_dfd.o dns_domain.o dns_dtda.o dns_ip.o \
+dns_ipq.o dns_mx.o dns_name.o dns_nd.o dns_packet.o \
+dns_random.o dns_rcip.o dns_rcrw.o dns_resolve.o \
+dns_rotateip.o dns_sortip.o dns_transmit.o dns_txt.o
+./compile env.c
+./makelib env.a env.o
+./compile alloc.c
+./compile alloc_re.c
+./compile getln.c
+./compile getln2.c
+./compile stralloc_cat.c
+./compile stralloc_catb.c
+./compile stralloc_cats.c
+./compile stralloc_copy.c
+./compile stralloc_eady.c
+./compile stralloc_num.c
+./compile stralloc_opyb.c
+./compile stralloc_opys.c
+./compile stralloc_pend.c
+./makelib alloc.a alloc.o alloc_re.o getln.o getln2.o \
+stralloc_cat.o stralloc_catb.o stralloc_cats.o \
+stralloc_copy.o stralloc_eady.o stralloc_num.o \
+stralloc_opyb.o stralloc_opys.o stralloc_pend.o
+./compile sig.c
+./choose cl trysgprm hassgprm.h1 hassgprm.h2 > hassgprm.h
+./compile sig_block.c
+./choose cl trysgact hassgact.h1 hassgact.h2 > hassgact.h
+./compile sig_catch.c
+./compile sig_pause.c
+./makelib sig.a sig.o sig_block.o sig_catch.o sig_pause.o
+( ( ./compile trylsock.c && \
+./load trylsock -lsocket -lnsl ) >/dev/null 2>&1 \
+&& echo -lsocket -lnsl || exit 0 ) > socket.lib
+rm -f trylsock.o trylsock
+./load dnscache droproot.o okclient.o log.o cache.o \
+query.o response.o dd.o roots.o iopause.o prot.o dns.a \
+env.a alloc.a buffer.a libtai.a unix.a byte.a sig.a  `cat \
+socket.lib`
+./compile walldns-conf.c
+./load walldns-conf generic-conf.o auto_home.o buffer.a \
+unix.a byte.a 
+./compile walldns.c
+./compile server.c
+./compile qlog.c
+./compile cdb.c
+./compile cdb_hash.c
+./compile cdb_make.c
+./makelib cdb.a cdb.o cdb_hash.o cdb_make.o
+./load walldns server.o iopause.o response.o droproot.o qlog.o \
+prot.o dd.o dns.a libtai.a env.a cdb.a alloc.a buffer.a unix.a \
+byte.a  `cat socket.lib`
+./compile rbldns-conf.c
+./load rbldns-conf generic-conf.o auto_home.o buffer.a \
+unix.a byte.a 
+./compile rbldns.c
+./load rbldns server.o iopause.o response.o dd.o droproot.o qlog.o \
+prot.o dns.a env.a libtai.a cdb.a alloc.a buffer.a unix.a \
+byte.a  `cat socket.lib`
+./compile rbldns-data.c
+./load rbldns-data cdb.a alloc.a buffer.a unix.a byte.a 
+./compile pickdns-conf.c
+./load pickdns-conf generic-conf.o auto_home.o buffer.a \
+unix.a byte.a 
+./compile pickdns.c
+./load pickdns server.o iopause.o response.o droproot.o qlog.o \
+prot.o dns.a env.a libtai.a cdb.a alloc.a buffer.a unix.a \
+byte.a  `cat socket.lib`
+./compile pickdns-data.c
+./load pickdns-data cdb.a dns.a alloc.a buffer.a unix.a \
+byte.a 
+./compile tinydns-conf.c
+./load tinydns-conf generic-conf.o auto_home.o buffer.a \
+unix.a byte.a 
+./compile tinydns.c
+./compile tdlookup.c
+./load tinydns server.o iopause.o droproot.o tdlookup.o response.o \
+qlog.o prot.o dns.a libtai.a env.a cdb.a alloc.a buffer.a \
+unix.a byte.a  `cat socket.lib`
+./compile tinydns-data.c
+./load tinydns-data cdb.a dns.a alloc.a buffer.a unix.a \
+byte.a 
+./compile tinydns-get.c
+./compile printpacket.c
+./compile printrecord.c
+./compile parsetype.c
+./load tinydns-get tdlookup.o response.o printpacket.o \
+printrecord.o parsetype.o dns.a libtai.a cdb.a buffer.a \
+alloc.a unix.a byte.a 
+./compile tinydns-edit.c
+./load tinydns-edit dns.a alloc.a buffer.a unix.a byte.a 
+./compile axfr-get.c
+./compile timeoutread.c
+./compile timeoutwrite.c
+./load axfr-get iopause.o timeoutread.o timeoutwrite.o \
+dns.a libtai.a alloc.a buffer.a unix.a byte.a 
+./compile axfrdns-conf.c
+./load axfrdns-conf generic-conf.o auto_home.o buffer.a \
+unix.a byte.a 
+./compile axfrdns.c
+./load axfrdns iopause.o droproot.o tdlookup.o response.o \
+qlog.o prot.o timeoutread.o timeoutwrite.o dns.a libtai.a \
+alloc.a env.a cdb.a buffer.a unix.a byte.a 
+./compile dnsip.c
+./load dnsip iopause.o dns.a env.a libtai.a alloc.a \
+buffer.a unix.a byte.a  `cat socket.lib`
+./compile dnsipq.c
+./load dnsipq iopause.o dns.a env.a libtai.a alloc.a \
+buffer.a unix.a byte.a  `cat socket.lib`
+./compile dnsname.c
+./load dnsname iopause.o dns.a env.a libtai.a alloc.a \
+buffer.a unix.a byte.a  `cat socket.lib`
+./compile dnstxt.c
+./load dnstxt iopause.o dns.a env.a libtai.a alloc.a \
+buffer.a unix.a byte.a  `cat socket.lib`
+./compile dnsmx.c
+./load dnsmx iopause.o dns.a env.a libtai.a alloc.a \
+buffer.a unix.a byte.a  `cat socket.lib`
+./compile dnsfilter.c
+./compile sgetopt.c
+./compile subgetopt.c
+./makelib getopt.a sgetopt.o subgetopt.o
+./load dnsfilter iopause.o getopt.a dns.a env.a libtai.a \
+alloc.a buffer.a unix.a byte.a  `cat socket.lib`
+./compile random-ip.c
+./load random-ip dns.a libtai.a buffer.a unix.a byte.a 
+./compile dnsqr.c
+./load dnsqr iopause.o printrecord.o printpacket.o \
+parsetype.o dns.a env.a libtai.a buffer.a alloc.a unix.a \
+byte.a  `cat socket.lib`
+./compile dnsq.c
+./load dnsq iopause.o printrecord.o printpacket.o \
+parsetype.o dns.a env.a libtai.a buffer.a alloc.a unix.a \
+byte.a  `cat socket.lib`
+./compile dnstrace.c
+./load dnstrace dd.o iopause.o printrecord.o parsetype.o \
+dns.a env.a libtai.a alloc.a buffer.a unix.a byte.a  `cat \
+socket.lib`
+cat warn-auto.sh dnstracesort.sh \
+| sed s}HOME}"`head -n 1 conf-home`"}g \
+> dnstracesort
+chmod 755 dnstracesort
+./compile cachetest.c
+./load cachetest cache.o libtai.a buffer.a unix.a env.a \
+alloc.a byte.a dns.a
+./compile utime.c
+./load utime byte.a 
+cat warn-auto.sh rts.sh \
+| sed s}HOME}"`head -n 1 conf-home`"}g \
+> rts
+chmod 755 rts
+./compile install.c
+./compile hier.c
+hier.c: In function 'hier':
+hier.c:11:5: warning: passing argument 1 of 'h' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   11 |   h(auto_home,-1,-1,02755);
+      |     ^~~~~~~~~
+hier.c:5:21: note: expected 'char *' but argument is of type 'const char *'
+    5 | extern void h(char *home,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:12:5: warning: passing argument 1 of 'd' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   12 |   d(auto_home,"bin",-1,-1,02755);
+      |     ^~~~~~~~~
+hier.c:4:21: note: expected 'char *' but argument is of type 'const char *'
+    4 | extern void d(char *home,char *subdir,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:14:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   14 |   c(auto_home,"bin","dnscache-conf",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:15:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   15 |   c(auto_home,"bin","tinydns-conf",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:16:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   16 |   c(auto_home,"bin","walldns-conf",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:17:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   17 |   c(auto_home,"bin","rbldns-conf",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:18:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   18 |   c(auto_home,"bin","pickdns-conf",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:19:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   19 |   c(auto_home,"bin","axfrdns-conf",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:21:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   21 |   c(auto_home,"bin","dnscache",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:22:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   22 |   c(auto_home,"bin","tinydns",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:23:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   23 |   c(auto_home,"bin","walldns",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:24:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   24 |   c(auto_home,"bin","rbldns",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:25:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   25 |   c(auto_home,"bin","pickdns",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:26:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   26 |   c(auto_home,"bin","axfrdns",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:28:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   28 |   c(auto_home,"bin","tinydns-get",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:29:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   29 |   c(auto_home,"bin","tinydns-data",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:30:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   30 |   c(auto_home,"bin","tinydns-edit",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:31:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   31 |   c(auto_home,"bin","rbldns-data",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:32:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   32 |   c(auto_home,"bin","pickdns-data",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:33:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   33 |   c(auto_home,"bin","axfr-get",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:35:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   35 |   c(auto_home,"bin","dnsip",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:36:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   36 |   c(auto_home,"bin","dnsipq",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:37:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   37 |   c(auto_home,"bin","dnsname",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:38:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   38 |   c(auto_home,"bin","dnstxt",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:39:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   39 |   c(auto_home,"bin","dnsmx",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:40:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   40 |   c(auto_home,"bin","dnsfilter",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:41:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   41 |   c(auto_home,"bin","random-ip",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:42:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   42 |   c(auto_home,"bin","dnsqr",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:43:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   43 |   c(auto_home,"bin","dnsq",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:44:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   44 |   c(auto_home,"bin","dnstrace",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+hier.c:45:5: warning: passing argument 1 of 'c' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   45 |   c(auto_home,"bin","dnstracesort",-1,-1,0755);
+      |     ^~~~~~~~~
+hier.c:3:21: note: expected 'char *' but argument is of type 'const char *'
+    3 | extern void c(char *home,char *subdir,char *file,int uid,int gid,int mode);
+      |               ~~~~~~^~~~
+./load install hier.o auto_home.o buffer.a unix.a byte.a 
+./compile instcheck.c
+./load instcheck hier.o auto_home.o buffer.a unix.a byte.a 
+>>> djbdns: Entering fakeroot...
+>>> djbdns-common*: Running split function common...
+'usr/bin/dnsqr' -> '/home/packager/aports/main/djbdns/pkg/djbdns-common/usr/bin/dnsqr'
+'usr/bin/dnsip' -> '/home/packager/aports/main/djbdns/pkg/djbdns-common/usr/bin/dnsip'
+>>> djbdns-common*: Preparing subpackage djbdns-common...
+>>> djbdns-common*: Stripping binaries
+>>> djbdns-common*: Running postcheck for djbdns-common
+>>> tinydns*: Running split function tinydns...
+'usr/bin/tinydns' -> '/home/packager/aports/main/djbdns/pkg/tinydns/usr/bin/tinydns'
+'usr/bin/tinydns-conf' -> '/home/packager/aports/main/djbdns/pkg/tinydns/usr/bin/tinydns-conf'
+'usr/bin/tinydns-data' -> '/home/packager/aports/main/djbdns/pkg/tinydns/usr/bin/tinydns-data'
+'usr/bin/tinydns-edit' -> '/home/packager/aports/main/djbdns/pkg/tinydns/usr/bin/tinydns-edit'
+'usr/bin/tinydns-get' -> '/home/packager/aports/main/djbdns/pkg/tinydns/usr/bin/tinydns-get'
+>>> tinydns*: Preparing subpackage tinydns...
+>>> tinydns*: Stripping binaries
+>>> tinydns*: Script found. /bin/sh added as a dependency for tinydns-1.05-r54.apk
+>>> tinydns*: Adding .pre-install
+>>> tinydns*: Running postcheck for tinydns
+>>> tinydns-openrc*: Running split function tinydns_openrc...
+>>> tinydns-openrc*: Preparing subpackage tinydns-openrc...
+>>> tinydns-openrc*: Running postcheck for tinydns-openrc
+>>> dnscache*: Running split function dnscache...
+>>> dnscache*: Preparing subpackage dnscache...
+>>> dnscache*: Stripping binaries
+>>> dnscache*: Script found. /bin/sh added as a dependency for dnscache-1.05-r54.apk
+>>> dnscache*: Adding .pre-install
+>>> dnscache*: Running postcheck for dnscache
+>>> dnscache-openrc*: Running split function dnscache_openrc...
+>>> dnscache-openrc*: Preparing subpackage dnscache-openrc...
+>>> dnscache-openrc*: Running postcheck for dnscache-openrc
+>>> djbdns-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/djbdns/pkg/djbdns-doc/usr/share/doc'
+>>> djbdns-doc*: Preparing subpackage djbdns-doc...
+>>> djbdns-doc*: Running postcheck for djbdns-doc
+>>> djbdns*: Running postcheck for djbdns
+>>> djbdns*: Preparing package djbdns...
+>>> djbdns*: Stripping binaries
+>>> djbdns-common*: Scanning shared objects
+>>> djbdns-doc*: Scanning shared objects
+>>> djbdns*: Scanning shared objects
+>>> dnscache-openrc*: Scanning shared objects
+>>> dnscache*: Scanning shared objects
+>>> tinydns-openrc*: Scanning shared objects
+>>> tinydns*: Scanning shared objects
+>>> djbdns-common*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> djbdns-common*: Package size: 68.0 KB
+>>> djbdns-common*: Compressing data...
+>>> djbdns-common*: Create checksum...
+pigz: not found
+>>> djbdns-common*: Create djbdns-common-1.05-r54.apk
+>>> djbdns-doc*: Tracing dependencies...
+>>> djbdns-doc*: Package size: 1.0 B
+>>> djbdns-doc*: Compressing data...
+>>> djbdns-doc*: Create checksum...
+pigz: not found
+>>> djbdns-doc*: Create djbdns-doc-1.05-r54.apk
+>>> djbdns*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> djbdns*: Package size: 526.7 KB
+>>> djbdns*: Compressing data...
+>>> djbdns*: Create checksum...
+pigz: not found
+>>> djbdns*: Create djbdns-1.05-r54.apk
+>>> dnscache-openrc*: Tracing dependencies...
+>>> dnscache-openrc*: Package size: 1.7 KB
+>>> dnscache-openrc*: Compressing data...
+>>> dnscache-openrc*: Create checksum...
+pigz: not found
+>>> dnscache-openrc*: Create dnscache-openrc-1.05-r54.apk
+>>> dnscache*: Tracing dependencies...
+	djbdns-common
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+>>> dnscache*: Package size: 81.0 KB
+>>> dnscache*: Compressing data...
+>>> dnscache*: Create checksum...
+pigz: not found
+>>> dnscache*: Create dnscache-1.05-r54.apk
+>>> tinydns-openrc*: Tracing dependencies...
+>>> tinydns-openrc*: Package size: 2.0 KB
+>>> tinydns-openrc*: Compressing data...
+>>> tinydns-openrc*: Create checksum...
+pigz: not found
+>>> tinydns-openrc*: Create tinydns-openrc-1.05-r54.apk
+>>> tinydns*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+>>> tinydns*: Package size: 141.8 KB
+>>> tinydns*: Compressing data...
+>>> tinydns*: Create checksum...
+pigz: not found
+>>> tinydns*: Create tinydns-1.05-r54.apk
+>>> djbdns: Build complete at Sun, 18 May 2025 07:45:38 +0000 elapsed time 0h 0m 17s
+>>> djbdns: Cleaning up srcdir
+>>> djbdns: Cleaning up pkgdir
+>>> djbdns: Uninstalling dependencies...
+(1/1) Purging .makedepends-djbdns (20250518.074522)
+OK: 261 MiB in 81 packages
+>>> djbdns: Updating the main/x86_64 repository index...
+>>> djbdns: Signing the index...
+pigz: not found

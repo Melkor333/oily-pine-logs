@@ -1,0 +1,147 @@
+pigz: not found
+>>> dtach: Building main/dtach 0.9-r5 (using abuild 3.14.1-r4) started Sun, 18 May 2025 10:41:57 +0000
+>>> dtach: Validating /home/packager/aports/main/dtach/APKBUILD...
+>>> dtach: Analyzing dependencies...
+>>> dtach: Installing for build: build-base
+(1/1) Installing .makedepends-dtach (20250518.104159)
+OK: 261 MiB in 82 packages
+>>> dtach: Cleaning up srcdir
+>>> dtach: Cleaning up pkgdir
+>>> dtach: Cleaning up tmpdir
+>>> dtach: Fetching https://downloads.sourceforge.net/project/dtach/dtach/0.9/dtach-0.9.tar.gz
+Connecting to downloads.sourceforge.net (104.18.12.149:443)
+Connecting to deac-riga.dl.sourceforge.net (89.111.52.100:443)
+saving to '/var/cache/distfiles/dtach-0.9.tar.gz.part'
+dtach-0.9.tar.gz.par  26% |********                        | 16139  0:00:02 ETA
+dtach-0.9.tar.gz.par  26% |********                        | 16139  0:00:05 ETA
+dtach-0.9.tar.gz.par  26% |********                        | 16139  0:00:08 ETA
+dtach-0.9.tar.gz.par  53% |*****************               | 32523  0:00:03 ETA
+dtach-0.9.tar.gz.par  53% |*****************               | 32523  0:00:04 ETA
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  0:00:01 ETA
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  0:00:01 ETA
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  0:00:01 ETA
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  0:00:02 ETA
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  0:00:02 ETA
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  - stalled -
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  - stalled -
+dtach-0.9.tar.gz.par  80% |*************************       | 48907  - stalled -
+dtach-0.9.tar.gz.par 100% |********************************| 60608  0:00:00 ETA
+'/var/cache/distfiles/dtach-0.9.tar.gz.part' saved
+>>> dtach: Fetching https://downloads.sourceforge.net/project/dtach/dtach/0.9/dtach-0.9.tar.gz
+>>> dtach: Checking sha512sums...
+dtach-0.9.tar.gz: OK
+>>> dtach: Unpacking /var/cache/distfiles/dtach-0.9.tar.gz...
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to accept ISO C89... none needed
+checking how to run the C preprocessor... gcc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking whether gcc needs -traditional... no
+checking for openpty in -lutil... yes
+checking for socket in -lsocket... no
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking stropts.h usability... yes
+checking stropts.h presence... yes
+checking for stropts.h... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for ssize_t... yes
+checking return type of signal handlers... void
+checking for atexit... yes
+checking for dup2... yes
+checking for memset... yes
+checking for select... yes
+checking for socket... yes
+checking for strerror... yes
+checking for openpty... yes
+checking for forkpty... yes
+checking for ptsname... yes
+checking for grantpt... yes
+checking for unlockpt... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating config.h
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -W -Wall -I.   -c -o attach.o attach.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -W -Wall -I.   -c -o master.o master.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -W -Wall -I.   -c -o main.o main.c
+gcc -o dtach -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs attach.o master.o main.o -lutil 
+>>> dtach: Entering fakeroot...
+>>> dtach-doc*: Running split function doc...
+'usr/share/doc' -> '/home/packager/aports/main/dtach/pkg/dtach-doc/usr/share/doc'
+'usr/share/man' -> '/home/packager/aports/main/dtach/pkg/dtach-doc/usr/share/man'
+>>> dtach-doc*: Preparing subpackage dtach-doc...
+>>> dtach-doc*: Running postcheck for dtach-doc
+>>> dtach*: Running postcheck for dtach
+>>> dtach*: Preparing package dtach...
+>>> dtach*: Stripping binaries
+>>> dtach-doc*: Scanning shared objects
+>>> dtach*: Scanning shared objects
+>>> dtach-doc*: Tracing dependencies...
+>>> dtach-doc*: Package size: 11.0 KB
+>>> dtach-doc*: Compressing data...
+>>> dtach-doc*: Create checksum...
+pigz: not found
+>>> dtach-doc*: Create dtach-doc-0.9-r5.apk
+>>> dtach*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> dtach*: Package size: 17.9 KB
+>>> dtach*: Compressing data...
+>>> dtach*: Create checksum...
+pigz: not found
+>>> dtach*: Create dtach-0.9-r5.apk
+>>> dtach: Build complete at Sun, 18 May 2025 10:42:26 +0000 elapsed time 0h 0m 29s
+>>> dtach: Cleaning up srcdir
+>>> dtach: Cleaning up pkgdir
+>>> dtach: Uninstalling dependencies...
+(1/1) Purging .makedepends-dtach (20250518.104159)
+OK: 261 MiB in 81 packages
+>>> dtach: Updating the main/x86_64 repository index...
+>>> dtach: Signing the index...
+pigz: not found

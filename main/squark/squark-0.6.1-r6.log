@@ -1,0 +1,82 @@
+pigz: not found
+>>> squark: Building main/squark 0.6.1-r6 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:14:50 +0000
+>>> squark: Validating /home/packager/aports/main/squark/APKBUILD...
+>>> squark: Analyzing dependencies...
+>>> squark: Installing for build: build-base haserl net-snmp-dev cmph-dev lua-dev
+(1/17) Installing haserl-lua5.4 (0.9.36-r4)
+(2/17) Installing lua5.3-libs (5.3.6-r6)
+(3/17) Installing haserl-lua5.3 (0.9.36-r4)
+(4/17) Installing lua5.2-libs (5.2.4-r13)
+(5/17) Installing haserl-lua5.2 (0.9.36-r4)
+(6/17) Installing lua5.1-libs (5.1.5-r13)
+(7/17) Installing haserl-lua5.1 (0.9.36-r4)
+(8/17) Installing haserl (0.9.36-r4)
+(9/17) Installing openssl-dev (3.5.0-r0)
+(10/17) Installing net-snmp-libs (5.9.4-r1)
+(11/17) Installing net-snmp-agent-libs (5.9.4-r1)
+(12/17) Installing net-snmp-dev (5.9.4-r1)
+(13/17) Installing libcmph (2.0.2-r6)
+(14/17) Installing cmph-dev (2.0.2-r6)
+(15/17) Installing lua5.1 (5.1.5-r13)
+(16/17) Installing lua5.1-dev (5.1.5-r13)
+(17/17) Installing .makedepends-squark (20250523.181454)
+Executing busybox-1.37.0-r12.trigger
+OK: 586 MiB in 149 packages
+>>> squark: Cleaning up srcdir
+>>> squark: Cleaning up pkgdir
+>>> squark: Cleaning up tmpdir
+>>> squark: Fetching https://dev.alpinelinux.org/archive/squark/squark-0.6.1.tar.xz
+Connecting to dev.alpinelinux.org (185.15.220.34:443)
+saving to '/var/cache/distfiles/squark-0.6.1.tar.xz.part'
+squark-0.6.1.tar.xz. 100% |********************************| 74928  0:00:00 ETA
+'/var/cache/distfiles/squark-0.6.1.tar.xz.part' saved
+>>> squark: Fetching https://dev.alpinelinux.org/archive/squark/squark-0.6.1.tar.xz
+>>> squark: Checking sha512sums...
+squark-0.6.1.tar.xz: OK
+gcc-10.patch: OK
+>>> squark: Unpacking /var/cache/distfiles/squark-0.6.1.tar.xz...
+>>> squark: gcc-10.patch
+patching file src/filterdb.c
+patching file src/filterdb.h
+  CC      src/blob.o
+  CC      src/filterdb.o
+  CC      src/lua-squarkdb.o
+  CC      src/reporting.o
+src/filterdb.c:15:20: warning: 'sqdb_section_names' initialized and declared 'extern'
+   15 | extern const char *sqdb_section_names[SQDB_SECTION_MAX] = {
+      |                    ^~~~~~~~~~~~~~~~~~
+  CC      src/addr.o
+  CC      src/authdb.o
+  CC      src/config.o
+  CC      src/squark-auth-ip.o
+  CC      src/squark-auth-snmp.o
+  CC      src/squark-filter.o
+  LD -shared src/squarkdb.so
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: src/squarkdb.so has a LOAD segment with RWX permissions
+  LD      src/squark-auth-ip
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: src/squark-auth-ip: error: PHDR segment not covered by LOAD segment
+/usr/lib/gcc/x86_64-alpine-linux-musl/14.2.0/../../../../x86_64-alpine-linux-musl/bin/ld: warning: src/squark-auth-ip has a LOAD segment with RWX permissions
+collect2: error: ld returned 1 exit status
+make[1]: *** [Make.rules:233: src/squark-auth-ip] Error 1
+make: *** [Make.rules:264: src/] Error 2
+>>> ERROR: squark: build failed
+>>> squark: Uninstalling dependencies...
+(1/17) Purging .makedepends-squark (20250523.181454)
+(2/17) Purging haserl (0.9.36-r4)
+(3/17) Purging haserl-lua5.3 (0.9.36-r4)
+(4/17) Purging haserl-lua5.2 (0.9.36-r4)
+(5/17) Purging haserl-lua5.1 (0.9.36-r4)
+(6/17) Purging haserl-lua5.4 (0.9.36-r4)
+(7/17) Purging net-snmp-dev (5.9.4-r1)
+(8/17) Purging openssl-dev (3.5.0-r0)
+(9/17) Purging net-snmp-agent-libs (5.9.4-r1)
+(10/17) Purging net-snmp-libs (5.9.4-r1)
+(11/17) Purging cmph-dev (2.0.2-r6)
+(12/17) Purging libcmph (2.0.2-r6)
+(13/17) Purging lua5.1-dev (5.1.5-r13)
+(14/17) Purging lua5.1 (5.1.5-r13)
+(15/17) Purging lua5.1-libs (5.1.5-r13)
+(16/17) Purging lua5.2-libs (5.2.4-r13)
+(17/17) Purging lua5.3-libs (5.3.6-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

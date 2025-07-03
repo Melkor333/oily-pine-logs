@@ -1,0 +1,345 @@
+pigz: not found
+>>> libuv: Building main/libuv 1.50.0-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 14:26:55 +0000
+>>> libuv: Validating /home/packager/aports/main/libuv/APKBUILD...
+>>> libuv: Analyzing dependencies...
+>>> libuv: Installing for build: build-base automake autoconf libtool linux-headers
+(1/4) Installing libltdl (2.4.7-r3)
+(2/4) Installing libtool (2.4.7-r3)
+(3/4) Installing linux-headers (6.14.2-r0)
+(4/4) Installing .makedepends-libuv (20250523.142657)
+Executing busybox-1.37.0-r12.trigger
+OK: 315 MiB in 114 packages
+>>> libuv: Cleaning up srcdir
+>>> libuv: Cleaning up pkgdir
+>>> libuv: Cleaning up tmpdir
+>>> libuv: Fetching https://dist.libuv.org/dist/v1.50.0/libuv-v1.50.0.tar.gz
+Connecting to dist.libuv.org (185.199.111.153:443)
+saving to '/var/cache/distfiles/libuv-v1.50.0.tar.gz.part'
+libuv-v1.50.0.tar.gz 100% |********************************| 1308k  0:00:00 ETA
+'/var/cache/distfiles/libuv-v1.50.0.tar.gz.part' saved
+>>> libuv: Fetching https://dist.libuv.org/dist/v1.50.0/libuv-v1.50.0.tar.gz
+>>> libuv: Checking sha512sums...
+libuv-v1.50.0.tar.gz: OK
+>>> libuv: Unpacking /var/cache/distfiles/libuv-v1.50.0.tar.gz...
++ 986 libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
++ 986 aclocal -I m4
++ 1182 autoconf
+configure.ac:45: warning: The macro 'AC_PROG_LIBTOOL' is obsolete.
+configure.ac:45: You should run autoupdate.
+m4/libtool.m4:100: AC_PROG_LIBTOOL is expanded from...
+configure.ac:45: the top level
+configure.ac:48: warning: $as_echo is obsolete; use AS_ECHO(["message"]) instead
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+m4/ax_pthread.m4:88: AX_PTHREAD is expanded from...
+configure.ac:48: the top level
++ 1182 automake --add-missing --copy
+configure.ac:43: installing './ar-lib'
+configure.ac:26: installing './compile'
+configure.ac:23: installing './config.guess'
+configure.ac:23: installing './config.sub'
+configure.ac:21: installing './install-sh'
+configure.ac:21: installing './missing'
+Makefile.am: installing './depcomp'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 0.01
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... none needed
+checking whether gcc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of gcc... gcc3
+checking for gcc way to treat warnings as errors... -Werror
+checking if gcc supports __attribute__(( visibility("default") ))... yes
+checking if gcc supports -fvisibility=hidden... yes
+checking if gcc supports -fno-strict-aliasing flag... yes
+checking if gcc supports -fno-strict-aliasing flag... yes
+checking if gcc supports -g flag... yes
+checking if gcc supports -std=gnu89 flag... yes
+checking if gcc supports -Wall flag... yes
+checking if gcc supports -Wextra flag... yes
+checking if gcc supports -Wno-long-long flag... yes
+checking if gcc supports -Wno-unused-parameter flag... yes
+checking if gcc supports -Wstrict-prototypes flag... yes
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by gcc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-file... no
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from gcc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if gcc supports -fno-rtti -fno-exceptions... no
+checking for gcc option to produce PIC... -fPIC -DPIC
+checking if gcc PIC flag -fPIC -DPIC works... yes
+checking if gcc static flag -static works... yes
+checking if gcc supports -c -o file.o... yes
+checking if gcc supports -c -o file.o... (cached) yes
+checking whether the gcc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C preprocessor... gcc -E
+checking for egrep -e... (cached) /bin/grep -E
+checking whether gcc is Clang... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for library containing dlopen... none required
+checking for library containing kstat_lookup... no
+checking for library containing gethostbyname... none required
+checking for library containing perfstat_cpu... no
+checking for library containing clock_gettime... none required
+checking for library containing sendfile... none required
+checking for library containing socket... none required
+checking for gcc option to enable large file support... none needed
+checking for sys/ahafs_evProds.h... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libuv.pc
+config.status: executing depfiles commands
+config.status: executing libtool commands
+  CC       src/libuv_la-fs-poll.lo
+  CC       src/libuv_la-idna.lo
+  CC       src/libuv_la-inet.lo
+  CC       src/libuv_la-strscpy.lo
+  CC       src/libuv_la-thread-common.lo
+  CC       src/libuv_la-random.lo
+  CC       src/libuv_la-threadpool.lo
+  CC       src/libuv_la-timer.lo
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2497: src/libuv_la-strscpy.lo] Error 1
+make: *** Waiting for unfinished jobs....
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2504: src/libuv_la-thread-common.lo] Error 1
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2490: src/libuv_la-random.lo] Error 1
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2469: src/libuv_la-fs-poll.lo] Error 1
+make: *** [Makefile:2518: src/libuv_la-timer.lo] Error 1
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2511: src/libuv_la-threadpool.lo] Error 1
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2483: src/libuv_la-inet.lo] Error 1
+gcc: warning: \\\-DPACKAGE_NAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_NAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_TARNAME="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_TARNAME="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_VERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_VERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_STRING="libuv 1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_BUGREPORT="https://github.com/libuv/libuv/issues: linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE_URL=": linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE_URL=": linker input file not found: No such file or directory
+gcc: warning: \\\-DPACKAGE="libuv: linker input file unused because linking not done
+gcc: error: \\\-DPACKAGE="libuv: linker input file not found: No such file or directory
+gcc: warning: \\\-DVERSION="1.50.0: linker input file unused because linking not done
+gcc: error: \\\-DVERSION="1.50.0: linker input file not found: No such file or directory
+gcc: warning: \\\-DLT_OBJDIR=".libs/: linker input file unused because linking not done
+gcc: error: \\\-DLT_OBJDIR=".libs/: linker input file not found: No such file or directory
+make: *** [Makefile:2476: src/libuv_la-idna.lo] Error 1
+>>> ERROR: libuv: build failed
+>>> libuv: Uninstalling dependencies...
+(1/4) Purging .makedepends-libuv (20250523.142657)
+(2/4) Purging libtool (2.4.7-r3)
+(3/4) Purging libltdl (2.4.7-r3)
+(4/4) Purging linux-headers (6.14.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 110 packages

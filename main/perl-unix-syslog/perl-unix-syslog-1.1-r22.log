@@ -1,0 +1,193 @@
+pigz: not found
+>>> perl-unix-syslog: Building main/perl-unix-syslog 1.1-r22 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:06:28 +0000
+>>> perl-unix-syslog: Validating /home/packager/aports/main/perl-unix-syslog/APKBUILD...
+>>> perl-unix-syslog: Analyzing dependencies...
+>>> perl-unix-syslog: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-unix-syslog (20250518.070630)
+(6/8) Installing perl-error (0.17029-r2)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 306 MiB in 89 packages
+>>> perl-unix-syslog: Cleaning up srcdir
+>>> perl-unix-syslog: Cleaning up pkgdir
+>>> perl-unix-syslog: Cleaning up tmpdir
+>>> perl-unix-syslog: Fetching https://cpan.metacpan.org/authors/id/M/MH/MHARNISCH/Unix-Syslog-1.1.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Unix-Syslog-1.1.tar.gz.part'
+Unix-Syslog-1.1.tar. 100% |********************************| 13738  0:00:00 ETA
+'/var/cache/distfiles/Unix-Syslog-1.1.tar.gz.part' saved
+>>> perl-unix-syslog: Fetching https://cpan.metacpan.org/authors/id/M/MH/MHARNISCH/Unix-Syslog-1.1.tar.gz
+>>> perl-unix-syslog: Checking sha512sums...
+Unix-Syslog-1.1.tar.gz: OK
+>>> perl-unix-syslog: Unpacking /var/cache/distfiles/Unix-Syslog-1.1.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Unix::Syslog
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Syslog.xs > Syslog.xsc
+Running Mkbootstrap for Syslog ()
+chmod 644 "Syslog.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Syslog.bs blib/arch/auto/Unix/Syslog/Syslog.bs 644
+cp Syslog.pm blib/lib/Unix/Syslog.pm
+mv Syslog.xsc Syslog.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.1\" -DXS_VERSION=\"1.1\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Syslog.c
+rm -f blib/arch/auto/Unix/Syslog/Syslog.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Syslog.o  -o blib/arch/auto/Unix/Syslog/Syslog.so  \
+   -lc   \
+  
+chmod 755 blib/arch/auto/Unix/Syslog/Syslog.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Syslog.bs blib/arch/auto/Unix/Syslog/Syslog.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-Iblib/lib" "-Iblib/arch" test.pl
+1..54
+ok 1
+Testing priorities:
+LOG_EMERG            ok 2
+LOG_EMERG            ok 3
+LOG_ALERT            ok 4
+LOG_CRIT             ok 5
+LOG_ERR              ok 6
+LOG_WARNING          ok 7
+LOG_NOTICE           ok 8
+LOG_INFO             ok 9
+LOG_DEBUG            ok 10
+LOG_EMERG            ok 11
+LOG_ALERT            ok 12
+LOG_CRIT             ok 13
+LOG_ERR              ok 14
+LOG_WARNING          ok 15
+LOG_NOTICE           ok 16
+LOG_INFO             ok 17
+LOG_DEBUG            ok 18
+
+Testing facilities
+LOG_KERN             ok 19
+LOG_USER             ok 20
+LOG_MAIL             ok 21
+LOG_DAEMON           ok 22
+LOG_AUTH             ok 23
+LOG_SYSLOG           ok 24
+LOG_LPR              ok 25
+LOG_NEWS             ok 26
+LOG_UUCP             ok 27
+LOG_CRON             ok 28
+LOG_LOCAL0           ok 29
+LOG_LOCAL1           ok 30
+LOG_LOCAL2           ok 31
+LOG_LOCAL3           ok 32
+LOG_LOCAL4           ok 33
+LOG_LOCAL5           ok 34
+LOG_LOCAL6           ok 35
+LOG_LOCAL7           ok 36
+
+These facilities are not defined on all systems:
+LOG_AUTHPRIV         ok 37
+LOG_FTP              ok 38
+
+The number of available facilities is:
+LOG_NFACILITIES      ok 39
+LOG_FACMASK          ok 40
+
+Testing options
+LOG_PID              ok 41
+LOG_CONS             ok 42
+LOG_ODELAY           ok 43
+LOG_NDELAY           ok 44
+LOG_NOWAIT           ok 45
+
+These options are not defined on all systems:
+LOG_PERROR           ok 46
+
+Testing macros for setlogmask()
+LOG_MASK(1)          ok 47
+LOG_UPTO(1)          ok 48
+
+These macros are not defined on all systems:
+LOG_PRI(1)           ok 49
+LOG_MAKEPRI(1,1)     ok 50
+LOG_FAC(1)           ok 51
+
+On some systems these functions are undefined and
+return just empty strings:
+priorityname(LOG_EMERG) skipped 52
+facilityname(LOG_KERN) skipped 53
+
+Testing setlogmask:
+Setting mask to 64
+New mask is     64  ok 54
+
+*** Test results: 52 tests of 54 passed!
+
+Testing functions
+
+As the functions `openlog', `closelog' and `syslog' do not return any
+value that indicates success or failure, please have a look at the log
+file generated by syslogd(8).  The following tests print a message of
+the facility `local7' and the priority `info'.
+
+Calling closelog() without preceeding openlog()  ok
+openlog
+syslog
+setlogmask
+syslog
+closelog
+
+Testing pointer handling in closelog().
+Calling closelog() a second time.
+This message should not be preceeded by an error message
+   about dereferenced pointers.
+
+>>> perl-unix-syslog: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Syslog.bs blib/arch/auto/Unix/Syslog/Syslog.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-unix-syslog/pkg/perl-unix-syslog/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-unix-syslog/pkg/perl-unix-syslog/usr/lib/perl5/vendor_perl/auto/Unix/Syslog/Syslog.so
+Installing /home/packager/aports/main/perl-unix-syslog/pkg/perl-unix-syslog/usr/lib/perl5/vendor_perl/Unix/Syslog.pm
+Installing /home/packager/aports/main/perl-unix-syslog/pkg/perl-unix-syslog/usr/share/man/man3/Unix::Syslog.3pm
+>>> perl-unix-syslog-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-unix-syslog/pkg/perl-unix-syslog-doc/usr/share/man'
+>>> perl-unix-syslog-doc*: Preparing subpackage perl-unix-syslog-doc...
+>>> perl-unix-syslog-doc*: Running postcheck for perl-unix-syslog-doc
+>>> perl-unix-syslog*: Running postcheck for perl-unix-syslog
+>>> perl-unix-syslog*: Preparing package perl-unix-syslog...
+>>> perl-unix-syslog*: Stripping binaries
+>>> perl-unix-syslog-doc*: Scanning shared objects
+>>> perl-unix-syslog*: Scanning shared objects
+>>> perl-unix-syslog-doc*: Tracing dependencies...
+>>> perl-unix-syslog-doc*: Package size: 3.8 KB
+>>> perl-unix-syslog-doc*: Compressing data...
+>>> perl-unix-syslog-doc*: Create checksum...
+pigz: not found
+>>> perl-unix-syslog-doc*: Create perl-unix-syslog-doc-1.1-r22.apk
+>>> perl-unix-syslog*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-unix-syslog*: Package size: 26.9 KB
+>>> perl-unix-syslog*: Compressing data...
+>>> perl-unix-syslog*: Create checksum...
+pigz: not found
+>>> perl-unix-syslog*: Create perl-unix-syslog-1.1-r22.apk
+>>> perl-unix-syslog: Build complete at Sun, 18 May 2025 07:06:33 +0000 elapsed time 0h 0m 5s
+>>> perl-unix-syslog: Cleaning up srcdir
+>>> perl-unix-syslog: Cleaning up pkgdir
+>>> perl-unix-syslog: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-unix-syslog (20250518.070630)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17029-r2)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-unix-syslog: Updating the main/x86_64 repository index...
+>>> perl-unix-syslog: Signing the index...
+pigz: not found

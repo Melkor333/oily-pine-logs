@@ -1,0 +1,141 @@
+pigz: not found
+>>> perl-proc-wait3: Building main/perl-proc-wait3 0.05-r11 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:34:09 +0000
+>>> perl-proc-wait3: Validating /home/packager/aports/main/perl-proc-wait3/APKBUILD...
+>>> perl-proc-wait3: Analyzing dependencies...
+>>> perl-proc-wait3: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-proc-wait3 (20250518.093410)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-proc-wait3: Cleaning up srcdir
+>>> perl-proc-wait3: Cleaning up pkgdir
+>>> perl-proc-wait3: Cleaning up tmpdir
+>>> perl-proc-wait3: Fetching https://cpan.metacpan.org/authors/id/C/CT/CTILMES/Proc-Wait3-0.05.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Proc-Wait3-0.05.tar.gz.part'
+Proc-Wait3-0.05.tar. 100% |********************************| 10248  0:00:00 ETA
+'/var/cache/distfiles/Proc-Wait3-0.05.tar.gz.part' saved
+>>> perl-proc-wait3: Fetching https://cpan.metacpan.org/authors/id/C/CT/CTILMES/Proc-Wait3-0.05.tar.gz
+>>> perl-proc-wait3: Checking sha512sums...
+Proc-Wait3-0.05.tar.gz: OK
+>>> perl-proc-wait3: Unpacking /var/cache/distfiles/Proc-Wait3-0.05.tar.gz...
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.creationtime'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.creationtime'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.creationtime'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.creationtime'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.creationtime'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'LIBARCHIVE.creationtime'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+tar: Ignoring unknown extended header keyword 'SCHILY.dev'
+tar: Ignoring unknown extended header keyword 'SCHILY.ino'
+tar: Ignoring unknown extended header keyword 'SCHILY.nlink'
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Proc::Wait3
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  Wait3.xs > Wait3.xsc
+Running Mkbootstrap for Wait3 ()
+chmod 644 "Wait3.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Wait3.bs blib/arch/auto/Proc/Wait3/Wait3.bs 644
+cp Wait3.pm blib/lib/Proc/Wait3.pm
+mv Wait3.xsc Wait3.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.05\" -DXS_VERSION=\"0.05\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   Wait3.c
+rm -f blib/arch/auto/Proc/Wait3/Wait3.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  Wait3.o  -o blib/arch/auto/Proc/Wait3/Wait3.so  \
+      \
+  
+chmod 755 blib/arch/auto/Proc/Wait3/Wait3.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Wait3.bs blib/arch/auto/Proc/Wait3/Wait3.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-Iblib/lib" "-Iblib/arch" test.pl
+1..2
+# Running under perl version 5.040002 for linux
+# Current time local: Sun May 18 09:34:12 2025
+# Current time GMT:   Sun May 18 09:34:12 2025
+# Using Test.pm version 1.31
+ok 1
+Forked child 2566
+PID = [2566], STATUS = [0]
+Resources: 0.001272,0,3988,0,0,0,162,0,0,0,0,0,0,0,2,0
+ok 2
+>>> perl-proc-wait3: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- Wait3.bs blib/arch/auto/Proc/Wait3/Wait3.bs 644
+Manifying 1 pod document
+Appending installation info to /home/packager/aports/main/perl-proc-wait3/pkg/perl-proc-wait3/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-proc-wait3/pkg/perl-proc-wait3/usr/lib/perl5/vendor_perl/auto/Proc/Wait3/Wait3.so
+Installing /home/packager/aports/main/perl-proc-wait3/pkg/perl-proc-wait3/usr/lib/perl5/vendor_perl/Proc/Wait3.pm
+Installing /home/packager/aports/main/perl-proc-wait3/pkg/perl-proc-wait3/usr/share/man/man3/Proc::Wait3.3pm
+>>> perl-proc-wait3-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-proc-wait3/pkg/perl-proc-wait3-doc/usr/share/man'
+>>> perl-proc-wait3-doc*: Preparing subpackage perl-proc-wait3-doc...
+>>> perl-proc-wait3-doc*: Running postcheck for perl-proc-wait3-doc
+>>> perl-proc-wait3*: Running postcheck for perl-proc-wait3
+>>> perl-proc-wait3*: Preparing package perl-proc-wait3...
+>>> perl-proc-wait3*: Stripping binaries
+>>> perl-proc-wait3-doc*: Scanning shared objects
+>>> perl-proc-wait3*: Scanning shared objects
+>>> perl-proc-wait3-doc*: Tracing dependencies...
+>>> perl-proc-wait3-doc*: Package size: 1.8 KB
+>>> perl-proc-wait3-doc*: Compressing data...
+>>> perl-proc-wait3-doc*: Create checksum...
+pigz: not found
+>>> perl-proc-wait3-doc*: Create perl-proc-wait3-doc-0.05-r11.apk
+>>> perl-proc-wait3*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-proc-wait3*: Package size: 16.2 KB
+>>> perl-proc-wait3*: Compressing data...
+>>> perl-proc-wait3*: Create checksum...
+pigz: not found
+>>> perl-proc-wait3*: Create perl-proc-wait3-0.05-r11.apk
+>>> perl-proc-wait3: Build complete at Sun, 18 May 2025 09:34:14 +0000 elapsed time 0h 0m 5s
+>>> perl-proc-wait3: Cleaning up srcdir
+>>> perl-proc-wait3: Cleaning up pkgdir
+>>> perl-proc-wait3: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-proc-wait3 (20250518.093410)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-proc-wait3: Updating the main/x86_64 repository index...
+>>> perl-proc-wait3: Signing the index...
+pigz: not found

@@ -1,0 +1,202 @@
+pigz: not found
+>>> perl-params-validate: Building main/perl-params-validate 1.31-r3 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:54:07 +0000
+>>> perl-params-validate: Validating /home/packager/aports/main/perl-params-validate/APKBUILD...
+>>> perl-params-validate: Analyzing dependencies...
+>>> perl-params-validate: Installing for build: build-base perl perl-module-implementation perl-dev perl-module-build perl-test-requires perl-test-fatal
+(1/14) Installing libbz2 (1.0.8-r6)
+(2/14) Installing perl (5.40.2-r0)
+(3/14) Installing perl-module-runtime (0.016-r6)
+(4/14) Installing perl-try-tiny (0.32-r0)
+(5/14) Installing perl-module-implementation (0.09-r5)
+(6/14) Installing perl-utils (5.40.2-r0)
+(7/14) Installing perl-dev (5.40.2-r0)
+(8/14) Installing perl-module-build (0.4234-r1)
+(9/14) Installing perl-test-requires (0.11-r3)
+(10/14) Installing perl-test-fatal (0.017-r1)
+(11/14) Installing .makedepends-perl-params-validate (20250518.085409)
+(12/14) Installing perl-error (0.17030-r0)
+(13/14) Installing perl-git (2.47.2-r0)
+(14/14) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 95 packages
+>>> perl-params-validate: Cleaning up srcdir
+>>> perl-params-validate: Cleaning up pkgdir
+>>> perl-params-validate: Cleaning up tmpdir
+>>> perl-params-validate: Fetching https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.31.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Params-Validate-1.31.tar.gz.part'
+Params-Validate-1.31 100% |********************************|  208k  0:00:00 ETA
+'/var/cache/distfiles/Params-Validate-1.31.tar.gz.part' saved
+>>> perl-params-validate: Fetching https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/Params-Validate-1.31.tar.gz
+>>> perl-params-validate: Checking sha512sums...
+Params-Validate-1.31.tar.gz: OK
+>>> perl-params-validate: Unpacking /var/cache/distfiles/Params-Validate-1.31.tar.gz...
+Created MYMETA.yml and MYMETA.json
+Creating new 'Build' script for 'Params-Validate' version '1.31'
+Building Params-Validate
+gcc -Ic -I/usr/lib/perl5/core_perl/CORE '-DVERSION="1.31"' '-DXS_VERSION="1.31"' -fPIC -c -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE '-D_FILE_OFFSET_BITS=64' -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE '-D_FILE_OFFSET_BITS=64' -Os -fstack-clash-protection -Wformat '-Werror=format-security' -fno-plt -O2 -o lib/Params/Validate/XS.o lib/Params/Validate/XS.c
+ExtUtils::Mkbootstrap::Mkbootstrap('blib/arch/auto/Params/Validate/XS/XS.bs')
+cc -shared -Os -fstack-clash-protection -Wformat '-Werror=format-security' -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong -o blib/arch/auto/Params/Validate/XS/XS.so lib/Params/Validate/XS.o
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module          Want   Have
+#     ------------- ------ ------
+#     Module::Build 0.4227 0.4234
+# 
+# === Configure Suggests ===
+# 
+#     Module      Want Have
+#     -------- ------- ----
+#     JSON::PP 2.27300 4.16
+# 
+# === Build Requires ===
+# 
+#     Module               Want     Have
+#     ------------------ ------ --------
+#     ExtUtils::CBuilder    any 0.280240
+#     Module::Build      0.4227   0.4234
+# 
+# === Test Requires ===
+# 
+#     Module              Want     Have
+#     ------------------- ---- --------
+#     Devel::Peek          any     1.34
+#     ExtUtils::MakeMaker  any     7.70
+#     File::Spec           any     3.91
+#     File::Temp           any   0.2311
+#     Test::Fatal          any    0.017
+#     Test::More          0.96 1.302199
+#     Test::Requires       any     0.11
+#     Tie::Array           any     1.07
+#     Tie::Hash            any     1.06
+#     base                 any     2.27
+#     lib                  any     0.65
+#     overload             any     1.37
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Runtime Requires ===
+# 
+#     Module                 Want Have
+#     ---------------------- ---- ----
+#     Carp                    any 1.54
+#     Exporter                any 5.78
+#     Module::Implementation  any 0.09
+#     Scalar::Util           1.10 1.63
+#     XSLoader                any 0.32
+#     strict                  any 1.13
+#     vars                    any 1.05
+#     warnings                any 1.70
+# 
+t/00-report-prereqs.t ........ ok
+t/01-validate.t .............. ok
+t/02-noop.t .................. ok
+t/04-defaults.t .............. ok
+t/05-noop_default.t .......... ok
+t/06-options.t ............... ok
+t/07-with.t .................. ok
+t/08-noop_with.t ............. ok
+t/09-regex.t ................. ok
+t/10-noop_regex.t ............ ok
+t/11-cb.t .................... ok
+t/12-noop_cb.t ............... ok
+t/13-taint.t ................. ok
+t/14-no_validate.t ........... ok
+t/15-case.t .................. ok
+t/16-normalize.t ............. ok
+t/17-callbacks.t ............. ok
+t/18-depends.t ............... ok
+t/19-untaint.t ............... skipped: Test requires module 'Test::Taint' but it's not found
+t/21-can.t ................... ok
+t/22-overload-can-bug.t ...... ok
+t/23-readonly.t .............. skipped: Test requires module 'Readonly' but it's not found
+t/24-tied.t .................. ok
+t/25-undef-regex.t ........... ok
+t/26-isa.t ................... ok
+t/27-string-as-type.t ........ ok
+t/28-readonly-return.t ....... ok
+t/29-taint-mode.t ............ skipped: Test requires module 'Test::Taint' but it's not found
+t/30-hashref-alteration.t .... ok
+t/31-incorrect-spelling.t .... skipped: Spec validation is disabled for now
+t/32-regex-as-value.t ........ ok
+t/33-keep-errsv.t ............ ok
+t/34-recursive-validation.t .. ok
+t/35-default-xs-bug.t ........ ok
+t/36-large-arrays.t .......... ok
+t/37-exports.t ............... ok
+t/38-callback-message.t ...... ok
+t/39-reentrant.t ............. ok
+All tests successful.
+
+Test Summary Report
+-------------------
+t/34-recursive-validation.t (Wstat: 0 Tests: 1 Failed: 0)
+  TODO passed:   1
+Files=38, Tests=2512,  4 wallclock secs ( 0.24 usr  0.07 sys +  3.14 cusr  0.49 csys =  3.94 CPU)
+Result: PASS
+>>> perl-params-validate: Entering fakeroot...
+Building Params-Validate
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/auto/Params/Validate/XS/XS.so
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/auto/Params/Validate/XS/XS.bs
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/Params/ValidateXS.pm
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/Params/Validate.pm
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/Params/ValidatePP.pm
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/Params/Validate/PP.pm
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/Params/Validate/XS.pm
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/lib/perl5/vendor_perl/Params/Validate/Constants.pm
+Installing /home/packager/aports/main/perl-params-validate/pkg/perl-params-validate/usr/share/man/man3/Params::Validate.3pm
+>>> perl-params-validate-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-params-validate/pkg/perl-params-validate-doc/usr/share/man'
+>>> perl-params-validate-doc*: Preparing subpackage perl-params-validate-doc...
+>>> perl-params-validate-doc*: Running postcheck for perl-params-validate-doc
+>>> perl-params-validate*: Running postcheck for perl-params-validate
+>>> perl-params-validate*: Preparing package perl-params-validate...
+>>> perl-params-validate*: Stripping binaries
+>>> perl-params-validate-doc*: Scanning shared objects
+>>> perl-params-validate*: Scanning shared objects
+>>> perl-params-validate-doc*: Tracing dependencies...
+>>> perl-params-validate-doc*: Package size: 9.5 KB
+>>> perl-params-validate-doc*: Compressing data...
+>>> perl-params-validate-doc*: Create checksum...
+pigz: not found
+>>> perl-params-validate-doc*: Create perl-params-validate-doc-1.31-r3.apk
+>>> perl-params-validate*: Tracing dependencies...
+	perl
+	perl-module-implementation
+	so:libc.musl-x86_64.so.1
+>>> perl-params-validate*: Package size: 105.2 KB
+>>> perl-params-validate*: Compressing data...
+>>> perl-params-validate*: Create checksum...
+pigz: not found
+>>> perl-params-validate*: Create perl-params-validate-1.31-r3.apk
+>>> perl-params-validate: Build complete at Sun, 18 May 2025 08:54:18 +0000 elapsed time 0h 0m 11s
+>>> perl-params-validate: Cleaning up srcdir
+>>> perl-params-validate: Cleaning up pkgdir
+>>> perl-params-validate: Uninstalling dependencies...
+(1/14) Purging .makedepends-perl-params-validate (20250518.085409)
+(2/14) Purging perl-module-implementation (0.09-r5)
+(3/14) Purging perl-module-runtime (0.016-r6)
+(4/14) Purging perl-dev (5.40.2-r0)
+(5/14) Purging perl-utils (5.40.2-r0)
+(6/14) Purging perl-module-build (0.4234-r1)
+(7/14) Purging perl-test-requires (0.11-r3)
+(8/14) Purging perl-test-fatal (0.017-r1)
+(9/14) Purging perl-try-tiny (0.32-r0)
+(10/14) Purging git-perl (2.47.2-r0)
+(11/14) Purging perl-git (2.47.2-r0)
+(12/14) Purging perl-error (0.17030-r0)
+(13/14) Purging perl (5.40.2-r0)
+(14/14) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-params-validate: Updating the main/x86_64 repository index...
+>>> perl-params-validate: Signing the index...
+pigz: not found

@@ -1,0 +1,105 @@
+pigz: not found
+>>> perl-data-uuid: Building main/perl-data-uuid 1.227-r1 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:29:18 +0000
+>>> perl-data-uuid: Validating /home/packager/aports/main/perl-data-uuid/APKBUILD...
+>>> perl-data-uuid: Analyzing dependencies...
+>>> perl-data-uuid: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-data-uuid (20250518.092920)
+(6/8) Installing perl-error (0.17030-r0)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 307 MiB in 89 packages
+>>> perl-data-uuid: Cleaning up srcdir
+>>> perl-data-uuid: Cleaning up pkgdir
+>>> perl-data-uuid: Cleaning up tmpdir
+>>> perl-data-uuid: Fetching https://cpan.metacpan.org/authors/id/G/GT/GTERMARS/Data-UUID-1.227.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Data-UUID-1.227.tar.gz.part'
+Data-UUID-1.227.tar. 100% |********************************| 16705  0:00:00 ETA
+'/var/cache/distfiles/Data-UUID-1.227.tar.gz.part' saved
+>>> perl-data-uuid: Fetching https://cpan.metacpan.org/authors/id/G/GT/GTERMARS/Data-UUID-1.227.tar.gz
+>>> perl-data-uuid: Checking sha512sums...
+Data-UUID-1.227.tar.gz: OK
+>>> perl-data-uuid: Unpacking /var/cache/distfiles/Data-UUID-1.227.tar.gz...
+Checking if your kit is complete...
+Looks good
+Configured options (run perl Makefile.PL --help for how to change this):
+Generating a Unix-style Makefile
+Writing Makefile for Data::UUID
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap' -typemap '/home/packager/aports/main/perl-data-uuid/src/Data-UUID-1.227/typemap'  UUID.xs > UUID.xsc
+Running Mkbootstrap for UUID ()
+chmod 644 "UUID.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- UUID.bs blib/arch/auto/Data/UUID/UUID.bs 644
+cp UUID.pm blib/lib/Data/UUID.pm
+mv UUID.xsc UUID.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"1.227\" -DXS_VERSION=\"1.227\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"  -D'__linux__' UUID.c
+rm -f blib/arch/auto/Data/UUID/UUID.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  UUID.o  -o blib/arch/auto/Data/UUID/UUID.so  \
+      \
+  
+chmod 755 blib/arch/auto/Data/UUID/UUID.so
+Manifying 1 pod document
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- UUID.bs blib/arch/auto/Data/UUID/UUID.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+t/basic.t ................. ok
+t/from-name-collisions.t .. ok
+t/leaky_dollar_bang.t ..... ok
+t/pod-coverage.t .......... skipped: Pod coverage tests are not active. Please set $ENV{AUTHOR_TESTING} to activate.
+t/pod.t ................... skipped: Pod coverage tests are not active. Please set $ENV{AUTHOR_TESTING} to activate.
+t/segv.t .................. ok
+t/threads.t ............... ok
+All tests successful.
+Files=7, Tests=36,  1 wallclock secs ( 0.03 usr  0.01 sys +  0.65 cusr  0.08 csys =  0.77 CPU)
+Result: PASS
+>>> perl-data-uuid: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- UUID.bs blib/arch/auto/Data/UUID/UUID.bs 644
+Manifying 1 pod document
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-data-uuid/pkg/perl-data-uuid/usr/lib/perl5/vendor_perl/auto/Data/UUID/UUID.so
+Installing /home/packager/aports/main/perl-data-uuid/pkg/perl-data-uuid/usr/lib/perl5/vendor_perl/Data/UUID.pm
+Installing /home/packager/aports/main/perl-data-uuid/pkg/perl-data-uuid/usr/share/man/man3/Data::UUID.3pm
+>>> perl-data-uuid-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-data-uuid/pkg/perl-data-uuid-doc/usr/share/man'
+>>> perl-data-uuid-doc*: Preparing subpackage perl-data-uuid-doc...
+>>> perl-data-uuid-doc*: Running postcheck for perl-data-uuid-doc
+>>> perl-data-uuid*: Running postcheck for perl-data-uuid
+>>> perl-data-uuid*: Preparing package perl-data-uuid...
+>>> perl-data-uuid*: Stripping binaries
+>>> perl-data-uuid-doc*: Scanning shared objects
+>>> perl-data-uuid*: Scanning shared objects
+>>> perl-data-uuid-doc*: Tracing dependencies...
+>>> perl-data-uuid-doc*: Package size: 2.5 KB
+>>> perl-data-uuid-doc*: Compressing data...
+>>> perl-data-uuid-doc*: Create checksum...
+pigz: not found
+>>> perl-data-uuid-doc*: Create perl-data-uuid-doc-1.227-r1.apk
+>>> perl-data-uuid*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-data-uuid*: Package size: 30.0 KB
+>>> perl-data-uuid*: Compressing data...
+>>> perl-data-uuid*: Create checksum...
+pigz: not found
+>>> perl-data-uuid*: Create perl-data-uuid-1.227-r1.apk
+>>> perl-data-uuid: Build complete at Sun, 18 May 2025 09:29:24 +0000 elapsed time 0h 0m 6s
+>>> perl-data-uuid: Cleaning up srcdir
+>>> perl-data-uuid: Cleaning up pkgdir
+>>> perl-data-uuid: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-data-uuid (20250518.092920)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17030-r0)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 261 MiB in 81 packages
+>>> perl-data-uuid: Updating the main/x86_64 repository index...
+>>> perl-data-uuid: Signing the index...
+pigz: not found

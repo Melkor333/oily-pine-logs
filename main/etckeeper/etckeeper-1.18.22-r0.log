@@ -1,0 +1,19 @@
+pigz: not found
+>>> etckeeper: Building main/etckeeper 1.18.22-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 19:11:04 +0000
+>>> etckeeper: Validating /home/packager/aports/main/etckeeper/APKBUILD...
+>>> etckeeper: Analyzing dependencies...
+ERROR: unable to select packages:
+  bash-5.2.37-r0:
+    conflicts: oils-for-unix-bash-0.28.0-r0[cmd:bash=5.2.37-r0]
+    satisfies: bats-core-1.11.1-r0[bash]
+               .makedepends-grep-20250523.132400[cmd:bash]
+  .makedepends-etckeeper-20250523.191106:
+    masked in: cache
+    satisfies: world[.makedepends-etckeeper=20250523.191106]
+  oils-for-unix-bash-0.28.0-r0:
+    conflicts: bash-5.2.37-r0[cmd:bash=0.28.0-r0]
+    satisfies: world[oils-for-unix-bash]
+               .makedepends-grep-20250523.132400[cmd:bash]
+>>> ERROR: etckeeper: builddeps failed
+>>> etckeeper: Uninstalling dependencies...
+ERROR: No such package: .makedepends-etckeeper

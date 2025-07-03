@@ -1,0 +1,62 @@
+pigz: not found
+>>> libunwind: Building main/libunwind 1.8.1-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:11:24 +0000
+>>> libunwind: Validating /home/packager/aports/main/libunwind/APKBUILD...
+>>> libunwind: Analyzing dependencies...
+>>> libunwind: Installing for build: build-base autoconf automake libtool libucontext-dev linux-headers xz-dev
+(1/6) Installing libltdl (2.4.7-r3)
+(2/6) Installing libtool (2.4.7-r3)
+(3/6) Installing xz-libs (5.6.3-r1)
+(4/6) Installing xz (5.6.3-r1)
+(5/6) Installing xz-dev (5.6.3-r1)
+(6/6) Installing .makedepends-libunwind (20250523.181127)
+Executing busybox-1.37.0-r12.trigger
+OK: 567 MiB in 138 packages
+>>> libunwind: Cleaning up srcdir
+>>> libunwind: Cleaning up pkgdir
+>>> libunwind: Cleaning up tmpdir
+>>> libunwind: Fetching https://github.com/libunwind/libunwind/releases/download/v1.8.1/libunwind-1.8.1.tar.gz
+Connecting to github.com (140.82.121.4:443)
+Connecting to objects.githubusercontent.com (185.199.110.133:443)
+saving to '/var/cache/distfiles/libunwind-1.8.1.tar.gz.part'
+libunwind-1.8.1.tar. 100% |********************************|  936k  0:00:00 ETA
+'/var/cache/distfiles/libunwind-1.8.1.tar.gz.part' saved
+>>> libunwind: Fetching https://github.com/libunwind/libunwind/releases/download/v1.8.1/libunwind-1.8.1.tar.gz
+>>> libunwind: Checking sha512sums...
+libunwind-1.8.1.tar.gz: OK
+force-enable-man.patch: OK
+fix-libunwind-pc-in.patch: OK
+Remove-the-useless-endina.h-for-loongarch64.patch: OK
+>>> libunwind: Unpacking /var/cache/distfiles/libunwind-1.8.1.tar.gz...
+>>> libunwind: force-enable-man.patch
+patching file configure
+Hunk #1 succeeded at 18073 (offset 49 lines).
+>>> libunwind: fix-libunwind-pc-in.patch
+patching file src/unwind/libunwind.pc.in
+>>> libunwind: Remove-the-useless-endina.h-for-loongarch64.patch
+patching file src/loongarch64/getcontext.S
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for x86_64-alpine-linux-musl-gcc... gcc
+checking whether the C compiler works... no
+configure: error: in `/home/packager/aports/main/libunwind/src/libunwind-1.8.1':
+configure: error: C compiler cannot create executables
+See `config.log' for more details
+>>> ERROR: libunwind: build failed
+>>> libunwind: Uninstalling dependencies...
+(1/6) Purging .makedepends-libunwind (20250523.181127)
+(2/6) Purging libtool (2.4.7-r3)
+(3/6) Purging libltdl (2.4.7-r3)
+(4/6) Purging xz-dev (5.6.3-r1)
+(5/6) Purging xz (5.6.3-r1)
+(6/6) Purging xz-libs (5.6.3-r1)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

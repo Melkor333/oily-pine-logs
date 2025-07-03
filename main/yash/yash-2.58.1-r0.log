@@ -1,0 +1,59 @@
+pigz: not found
+>>> yash: Building main/yash 2.58.1-r0 (using abuild 3.14.1-r4) started Fri, 23 May 2025 18:07:09 +0000
+>>> yash: Validating /home/packager/aports/main/yash/APKBUILD...
+>>> yash: Analyzing dependencies...
+>>> yash: Installing for build: build-base busybox ncurses-dev ed
+(1/2) Installing ed (1.21-r0)
+(2/2) Installing .makedepends-yash (20250523.180711)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 134 packages
+>>> yash: Cleaning up srcdir
+>>> yash: Cleaning up pkgdir
+>>> yash: Cleaning up tmpdir
+>>> yash: Fetching https://github.com/magicant/yash/releases/download/2.58.1/yash-2.58.1.tar.xz
+Connecting to github.com (140.82.121.4:443)
+Connecting to objects.githubusercontent.com (185.199.108.133:443)
+saving to '/var/cache/distfiles/yash-2.58.1.tar.xz.part'
+yash-2.58.1.tar.xz.p 100% |********************************|  766k  0:00:00 ETA
+'/var/cache/distfiles/yash-2.58.1.tar.xz.part' saved
+>>> yash: Fetching https://github.com/magicant/yash/releases/download/2.58.1/yash-2.58.1.tar.xz
+>>> yash: Checking sha512sums...
+yash-2.58.1.tar.xz: OK
+default-yashrc.patch: OK
+sample-yashrc.patch: OK
+tests-musl-regex.patch: OK
+tests-busybox-ps.patch: OK
+tests-busybox-argv0.patch: OK
+global-yashrc: OK
+>>> yash: Unpacking /var/cache/distfiles/yash-2.58.1.tar.xz...
+>>> yash: default-yashrc.patch
+patching file share/initialization/default
+Hunk #1 succeeded at 13 with fuzz 2 (offset 1 line).
+>>> yash: sample-yashrc.patch
+patching file share/initialization/sample
+Hunk #1 succeeded at 3 with fuzz 1 (offset 1 line).
+>>> yash: tests-musl-regex.patch
+patching file tests/bracket-y.tst
+patching file tests/fnmatch-p.tst
+Hunk #1 succeeded at 275 (offset 20 lines).
+Hunk #2 succeeded at 314 (offset 20 lines).
+>>> yash: tests-busybox-ps.patch
+patching file tests/ppid-p.tst
+>>> yash: tests-busybox-argv0.patch
+patching file tests/exec-y.tst
+Hunk #1 succeeded at 7 (offset -17 lines).
+patching file tests/simple-p.tst
+oils warning: umask with symbolic input isn't implemented
+checking operating system... linux
+checking POSIX conformance... 200809
+checking SUS conformance... no
+checking whether the compiler works... no
+Compiler "gcc" not found or not working.
+The compiler is expected to accept these options: -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt 
+configuration failed
+>>> ERROR: yash: build failed
+>>> yash: Uninstalling dependencies...
+(1/2) Purging .makedepends-yash (20250523.180711)
+(2/2) Purging ed (1.21-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 564 MiB in 132 packages

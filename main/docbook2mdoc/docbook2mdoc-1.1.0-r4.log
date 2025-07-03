@@ -1,0 +1,95 @@
+pigz: not found
+>>> docbook2mdoc: Building main/docbook2mdoc 1.1.0-r4 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:16:36 +0000
+>>> docbook2mdoc: Validating /home/packager/aports/main/docbook2mdoc/APKBUILD...
+>>> docbook2mdoc: Analyzing dependencies...
+>>> docbook2mdoc: Installing for build: build-base bsd-compat-headers
+(1/2) Installing bsd-compat-headers (0.7.2-r6)
+(2/2) Installing .makedepends-docbook2mdoc (20250518.081638)
+OK: 261 MiB in 83 packages
+>>> docbook2mdoc: Cleaning up srcdir
+>>> docbook2mdoc: Cleaning up pkgdir
+>>> docbook2mdoc: Cleaning up tmpdir
+>>> docbook2mdoc: Fetching https://mandoc.bsd.lv/docbook2mdoc/snapshots/docbook2mdoc-1.1.0.tgz
+Connecting to mandoc.bsd.lv (66.111.2.12:443)
+saving to '/var/cache/distfiles/docbook2mdoc-1.1.0.tgz.part'
+docbook2mdoc-1.1.0.t 100% |********************************| 26732  0:00:00 ETA
+'/var/cache/distfiles/docbook2mdoc-1.1.0.tgz.part' saved
+>>> docbook2mdoc: Fetching https://mandoc.bsd.lv/docbook2mdoc/snapshots/docbook2mdoc-1.1.0.tgz
+>>> docbook2mdoc: Checking sha512sums...
+docbook2mdoc-1.1.0.tgz: OK
+fix-mandir.patch: OK
+strtonum.patch: OK
+>>> docbook2mdoc: Unpacking /var/cache/distfiles/docbook2mdoc-1.1.0.tgz...
+>>> docbook2mdoc: fix-mandir.patch
+File Makefile is read-only; trying to patch anyway
+patching file Makefile
+>>> docbook2mdoc: strtonum.patch
+File Makefile is read-only; trying to patch anyway
+patching file Makefile
+patching file compat.h
+File parse.c is read-only; trying to patch anyway
+patching file parse.c
+patching file strtonum.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o xmalloc.o xmalloc.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o node.o node.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o parse.o parse.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o reorg.o reorg.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o macro.o macro.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o docbook2mdoc.o docbook2mdoc.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o tree.o tree.c
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o main.o main.c
+main.c: In function 'main':
+main.c:114:59: warning: passing argument 1 of 'basename' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  114 |                         if (fd == -1 && (bname = basename(fname)) != NULL)
+      |                                                           ^~~~~
+In file included from main.c:19:
+/usr/include/libgen.h:9:16: note: expected 'char *' but argument is of type 'const char *'
+    9 | char *basename(char *);
+      |                ^~~~~~
+parse.c: In function 'parse_file':
+parse.c:1039:52: warning: passing argument 1 of 'dirname' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+ 1039 |         if (save_fname == NULL && (fname = dirname(fname)) != NULL &&
+      |                                                    ^~~~~
+In file included from parse.c:24:
+/usr/include/libgen.h:8:15: note: expected 'char *' but argument is of type 'const char *'
+    8 | char *dirname(char *);
+      |               ^~~~~~
+gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -W -Wall -Wstrict-prototypes -Wno-unused-parameter -Wwrite-strings   -c -o strtonum.o strtonum.c
+gcc -g -o docbook2mdoc xmalloc.o node.o parse.o reorg.o macro.o docbook2mdoc.o tree.o main.o strtonum.o
+>>> docbook2mdoc: Entering fakeroot...
+mkdir -p /home/packager/aports/main/docbook2mdoc/pkg/docbook2mdoc/usr/bin
+mkdir -p /home/packager/aports/main/docbook2mdoc/pkg/docbook2mdoc/usr/share/man/man1
+install -m 0755 docbook2mdoc /home/packager/aports/main/docbook2mdoc/pkg/docbook2mdoc/usr/bin
+install -m 0444 docbook2mdoc.1 /home/packager/aports/main/docbook2mdoc/pkg/docbook2mdoc/usr/share/man/man1
+>>> docbook2mdoc-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/docbook2mdoc/pkg/docbook2mdoc-doc/usr/share/man'
+>>> docbook2mdoc-doc*: Preparing subpackage docbook2mdoc-doc...
+>>> docbook2mdoc-doc*: Running postcheck for docbook2mdoc-doc
+>>> docbook2mdoc*: Running postcheck for docbook2mdoc
+>>> docbook2mdoc*: Preparing package docbook2mdoc...
+>>> docbook2mdoc*: Stripping binaries
+>>> docbook2mdoc-doc*: Scanning shared objects
+>>> docbook2mdoc*: Scanning shared objects
+>>> docbook2mdoc-doc*: Tracing dependencies...
+>>> docbook2mdoc-doc*: Package size: 2.4 KB
+>>> docbook2mdoc-doc*: Compressing data...
+>>> docbook2mdoc-doc*: Create checksum...
+pigz: not found
+>>> docbook2mdoc-doc*: Create docbook2mdoc-doc-1.1.0-r4.apk
+>>> docbook2mdoc*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> docbook2mdoc*: Package size: 49.9 KB
+>>> docbook2mdoc*: Compressing data...
+>>> docbook2mdoc*: Create checksum...
+pigz: not found
+>>> docbook2mdoc*: Create docbook2mdoc-1.1.0-r4.apk
+>>> docbook2mdoc: Build complete at Sun, 18 May 2025 08:16:40 +0000 elapsed time 0h 0m 4s
+>>> docbook2mdoc: Cleaning up srcdir
+>>> docbook2mdoc: Cleaning up pkgdir
+>>> docbook2mdoc: Uninstalling dependencies...
+(1/2) Purging .makedepends-docbook2mdoc (20250518.081638)
+(2/2) Purging bsd-compat-headers (0.7.2-r6)
+OK: 261 MiB in 81 packages
+>>> docbook2mdoc: Updating the main/x86_64 repository index...
+>>> docbook2mdoc: Signing the index...
+pigz: not found

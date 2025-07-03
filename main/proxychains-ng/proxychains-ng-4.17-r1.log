@@ -1,0 +1,87 @@
+pigz: not found
+>>> proxychains-ng: Building main/proxychains-ng 4.17-r1 (using abuild 3.14.1-r4) started Sun, 18 May 2025 09:24:26 +0000
+>>> proxychains-ng: Validating /home/packager/aports/main/proxychains-ng/APKBUILD...
+>>> proxychains-ng: Analyzing dependencies...
+>>> proxychains-ng: Installing for build: build-base
+(1/1) Installing .makedepends-proxychains-ng (20250518.092428)
+OK: 261 MiB in 82 packages
+>>> proxychains-ng: Cleaning up srcdir
+>>> proxychains-ng: Cleaning up pkgdir
+>>> proxychains-ng: Cleaning up tmpdir
+>>> proxychains-ng: Fetching https://github.com/rofl0r/proxychains-ng/releases/download/v4.17/proxychains-ng-4.17.tar.xz
+Connecting to github.com (140.82.121.3:443)
+Connecting to objects.githubusercontent.com (185.199.110.133:443)
+saving to '/var/cache/distfiles/proxychains-ng-4.17.tar.xz.part'
+proxychains-ng-4.17. 100% |********************************| 45288  0:00:00 ETA
+'/var/cache/distfiles/proxychains-ng-4.17.tar.xz.part' saved
+>>> proxychains-ng: Fetching https://github.com/rofl0r/proxychains-ng/releases/download/v4.17/proxychains-ng-4.17.tar.xz
+>>> proxychains-ng: Checking sha512sums...
+proxychains-ng-4.17.tar.xz: OK
+>>> proxychains-ng: Unpacking /var/cache/distfiles/proxychains-ng-4.17.tar.xz...
+checking whether C compiler works ... yes
+checking whether libc headers are complete ... yes
+checking whether C compiler understands -Wno-unknown-pragmas ... yes
+checking whether getnameinfo() servlen argument is POSIX compliant (socklen_t) ... yes
+checking whether we have GNU-style getservbyname_r() ... yes
+checking whether we have pipe2() and O_CLOEXEC ... yes
+checking whether we have SOCK_CLOEXEC ... yes
+checking whether we have clock_gettime ... yes
+checking whether $CC defines __APPLE__ ... no
+checking whether $CC defines __FreeBSD__ ... no
+checking whether $CC defines __OpenBSD__ ... no
+checking whether $CC defines __sun ... no
+checking whether $CC defines __HAIKU__ ... no
+checking whether we can use -Wl,--no-as-needed ... yes
+checking what's the option to use in linker to set library name ... --soname
+checking checking whether we can use -ldl ... yes
+checking checking whether we can use -lpthread ... yes
+Done, now run make && make install
+printf '#define VERSION "%s"\n' "$(sh tools/version.sh)" > src/version.h
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/core.o src/core.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/common.o src/common.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/libproxychains.o src/libproxychains.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/allocator_thread.o src/allocator_thread.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/rdns.o src/rdns.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/hostsreader.o src/hostsreader.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/hash.o src/hash.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/debug.o src/debug.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/main.o src/main.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/daemon/hsearch.o src/daemon/hsearch.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/daemon/sblist.o src/daemon/sblist.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/daemon/sblist_delete.o src/daemon/sblist_delete.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/daemon/daemon.o src/daemon/daemon.c
+src/daemon/daemon.c:8:9: warning: "_GNU_SOURCE" redefined
+    8 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+<command-line>: note: this is the location of the previous definition
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/daemon/udpserver.o src/daemon/udpserver.c
+gcc -DSUPER_SECURE -Wno-unknown-pragmas -DGN_NODELEN_T=socklen_t -DGN_SERVLEN_T=socklen_t -DGN_FLAGS_T=int -DHAVE_GNU_GETSERVBYNAME_R -DHAVE_PIPE2 -DHAVE_SOCK_CLOEXEC -DHAVE_CLOCK_GETTIME -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -O0 -g -std=c99 -D_GNU_SOURCE -pipe -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -DLIB_DIR=\"/usr/lib\" -DSYSCONFDIR=\"/etc/proxychains\" -DDLL_NAME=\"libproxychains4.so\"  -fPIC -c -o src/version.o src/version.c
+gcc src/common.o src/main.o  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -ldl -o proxychains4
+gcc src/daemon/hsearch.o src/daemon/sblist.o src/daemon/sblist_delete.o src/daemon/daemon.o src/daemon/udpserver.o  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o proxychains4-daemon
+gcc -fPIC -Wl,--no-as-needed -ldl -lpthread  -Wl,--soname,libproxychains4.so \
+	-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -o libproxychains4.so src/version.o src/core.o src/common.o src/libproxychains.o src/allocator_thread.o src/rdns.o src/hostsreader.o src/hash.o src/debug.o 
+>>> proxychains-ng: Entering fakeroot...
+./tools/install.sh -D -m 644 libproxychains4.so /home/packager/aports/main/proxychains-ng/pkg/proxychains-ng/usr/lib/libproxychains4.so
+./tools/install.sh -D -m 755 proxychains4 /home/packager/aports/main/proxychains-ng/pkg/proxychains-ng/usr/bin/proxychains4
+./tools/install.sh -D -m 755 proxychains4-daemon /home/packager/aports/main/proxychains-ng/pkg/proxychains-ng/usr/bin/proxychains4-daemon
+./tools/install.sh -D -m 644 src/proxychains.conf /home/packager/aports/main/proxychains-ng/pkg/proxychains-ng/etc/proxychains/proxychains.conf
+>>> proxychains-ng*: Running postcheck for proxychains-ng
+>>> proxychains-ng*: Preparing package proxychains-ng...
+>>> proxychains-ng*: Stripping binaries
+>>> proxychains-ng*: Scanning shared objects
+>>> proxychains-ng*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> proxychains-ng*: Package size: 75.3 KB
+>>> proxychains-ng*: Compressing data...
+>>> proxychains-ng*: Create checksum...
+pigz: not found
+>>> proxychains-ng*: Create proxychains-ng-4.17-r1.apk
+>>> proxychains-ng: Build complete at Sun, 18 May 2025 09:24:31 +0000 elapsed time 0h 0m 5s
+>>> proxychains-ng: Cleaning up srcdir
+>>> proxychains-ng: Cleaning up pkgdir
+>>> proxychains-ng: Uninstalling dependencies...
+(1/1) Purging .makedepends-proxychains-ng (20250518.092428)
+OK: 261 MiB in 81 packages
+>>> proxychains-ng: Updating the main/x86_64 repository index...
+>>> proxychains-ng: Signing the index...
+pigz: not found

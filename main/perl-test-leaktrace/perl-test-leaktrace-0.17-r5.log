@@ -1,0 +1,155 @@
+pigz: not found
+>>> perl-test-leaktrace: Building main/perl-test-leaktrace 0.17-r5 (using abuild 3.14.1-r4) started Sun, 18 May 2025 07:15:49 +0000
+>>> perl-test-leaktrace: Validating /home/packager/aports/main/perl-test-leaktrace/APKBUILD...
+>>> perl-test-leaktrace: Analyzing dependencies...
+>>> perl-test-leaktrace: Installing for build: build-base perl perl-dev
+(1/8) Installing libbz2 (1.0.8-r6)
+(2/8) Installing perl (5.40.2-r0)
+(3/8) Installing perl-utils (5.40.2-r0)
+(4/8) Installing perl-dev (5.40.2-r0)
+(5/8) Installing .makedepends-perl-test-leaktrace (20250518.071550)
+(6/8) Installing perl-error (0.17029-r2)
+(7/8) Installing perl-git (2.47.2-r0)
+(8/8) Installing git-perl (2.47.2-r0)
+Executing busybox-1.37.0-r12.trigger
+OK: 306 MiB in 89 packages
+>>> perl-test-leaktrace: Cleaning up srcdir
+>>> perl-test-leaktrace: Cleaning up pkgdir
+>>> perl-test-leaktrace: Cleaning up tmpdir
+>>> perl-test-leaktrace: Fetching https://cpan.metacpan.org/authors/id/L/LE/LEEJO/Test-LeakTrace-0.17.tar.gz
+Connecting to cpan.metacpan.org (146.75.122.217:443)
+saving to '/var/cache/distfiles/Test-LeakTrace-0.17.tar.gz.part'
+Test-LeakTrace-0.17. 100% |********************************| 34126  0:00:00 ETA
+'/var/cache/distfiles/Test-LeakTrace-0.17.tar.gz.part' saved
+>>> perl-test-leaktrace: Fetching https://cpan.metacpan.org/authors/id/L/LE/LEEJO/Test-LeakTrace-0.17.tar.gz
+>>> perl-test-leaktrace: Checking sha512sums...
+Test-LeakTrace-0.17.tar.gz: OK
+>>> perl-test-leaktrace: Unpacking /var/cache/distfiles/Test-LeakTrace-0.17.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for Test::LeakTrace
+Writing MYMETA.yml and MYMETA.json
+"/usr/bin/perl" "/usr/share/perl5/core_perl/ExtUtils/xsubpp"  -typemap '/usr/share/perl5/core_perl/ExtUtils/typemap'  LeakTrace.xs > LeakTrace.xsc
+Running Mkbootstrap for LeakTrace ()
+chmod 644 "LeakTrace.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LeakTrace.bs blib/arch/auto/Test/LeakTrace/LeakTrace.bs 644
+cp lib/Test/LeakTrace.pm blib/lib/Test/LeakTrace.pm
+cp lib/Test/LeakTrace/JA.pod blib/lib/Test/LeakTrace/JA.pod
+cp lib/Test/LeakTrace/Script.pm blib/lib/Test/LeakTrace/Script.pm
+mv LeakTrace.xsc LeakTrace.c
+cc -c   -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"0.17\" -DXS_VERSION=\"0.17\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   LeakTrace.c
+rm -f blib/arch/auto/Test/LeakTrace/LeakTrace.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  LeakTrace.o  -o blib/arch/auto/Test/LeakTrace/LeakTrace.so  \
+      \
+  
+chmod 755 blib/arch/auto/Test/LeakTrace/LeakTrace.so
+Manifying 3 pod documents
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LeakTrace.bs blib/arch/auto/Test/LeakTrace/LeakTrace.bs 644
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# Testing Test::LeakTrace/0.17
+t/00_compile.t ..... ok
+t/01_info.t ........ ok
+t/02_refs.t ........ ok
+t/03_count.t ....... ok
+t/04_test_funcs.t .. ok
+leaked REF(0x7f9600e058a8) from /usr/share/perl5/core_perl/Test2/Util/HashBase.pm line 153.
+leaked REF(0x7f9600dea9f8) from /usr/share/perl5/core_perl/Test2/Util/HashBase.pm line 153.
+leaked ARRAY(0x7f9600dd73d0) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked HASH(0x7f9600dd6e90) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked REF(0x7f9600dd6ae8) from /usr/share/perl5/core_perl/Test2/Util/HashBase.pm line 153.
+leaked GLOB(0x7f9600dd6980) from /usr/share/perl5/core_perl/Test/Builder.pm line 64.
+leaked GLOB(0x7f9600dd6968) from /usr/share/perl5/core_perl/Test2/Hub.pm line 280.
+leaked SCALAR(0x7f9600dd6620) from /usr/share/perl5/core_perl/Test2/API/Context.pm line 223.
+leaked SCALAR(0x7f9600dd96a0) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f9600dd8908) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f9600dd8830) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f9600dd87a0) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f9600dac780) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f96005c5dc8) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f96005d6420) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f96005d6408) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f96005d9538) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f96005d9508) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f96005d94d8) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked ARRAY(0x7f96005d9460) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked GLOB(0x7f960054fc28) from /usr/share/perl5/core_perl/Test2/API/Context.pm line 232.
+leaked GLOB(0x7f960054fb38) from /usr/share/perl5/core_perl/Test2/Formatter/TAP.pm line 195.
+leaked GLOB(0x7f960054fb20) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 69.
+leaked SCALAR(0x7f960054fb08) from /usr/share/perl5/core_perl/Test/Builder.pm line 64.
+leaked GLOB(0x7f960054faa8) from /usr/share/perl5/core_perl/Test2/Hub.pm line 293.
+leaked ARRAY(0x7f960054f9e8) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f9a0) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f988) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f970) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f958) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f940) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f928) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f910) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f8f8) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f8e0) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+leaked SCALAR(0x7f960054f8c8) from /usr/share/perl5/core_perl/Test2/Event/V2.pm line 42.
+t/05_script.t ...... ok
+t/06_threads.t ..... ok
+t/07_eval.t ........ ok
+t/08_leaktrace.t ... ok
+t/09_info_more.t ... ok
+t/10_bad_use.t ..... ok
+t/11_logfp.t ....... ok
+t/12_padstale.t .... ok
+t/13_do.t .......... ok
+All tests successful.
+Files=14, Tests=132,  2 wallclock secs ( 0.05 usr  0.03 sys +  1.20 cusr  0.14 csys =  1.42 CPU)
+Result: PASS
+>>> perl-test-leaktrace: Entering fakeroot...
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LeakTrace.bs blib/arch/auto/Test/LeakTrace/LeakTrace.bs 644
+Manifying 3 pod documents
+Appending installation info to /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/lib/perl5/vendor_perl/auto/Test/LeakTrace/LeakTrace.so
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/lib/perl5/vendor_perl/Test/LeakTrace.pm
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/lib/perl5/vendor_perl/Test/LeakTrace/JA.pod
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/lib/perl5/vendor_perl/Test/LeakTrace/Script.pm
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/share/man/man3/Test::LeakTrace.3pm
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/share/man/man3/Test::LeakTrace::JA.3pm
+Installing /home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace/usr/share/man/man3/Test::LeakTrace::Script.3pm
+>>> perl-test-leaktrace-doc*: Running split function doc...
+'usr/share/man' -> '/home/packager/aports/main/perl-test-leaktrace/pkg/perl-test-leaktrace-doc/usr/share/man'
+>>> perl-test-leaktrace-doc*: Preparing subpackage perl-test-leaktrace-doc...
+>>> perl-test-leaktrace-doc*: Running postcheck for perl-test-leaktrace-doc
+>>> perl-test-leaktrace*: Running postcheck for perl-test-leaktrace
+>>> perl-test-leaktrace*: Preparing package perl-test-leaktrace...
+>>> perl-test-leaktrace*: Stripping binaries
+>>> perl-test-leaktrace-doc*: Scanning shared objects
+>>> perl-test-leaktrace*: Scanning shared objects
+>>> perl-test-leaktrace-doc*: Tracing dependencies...
+>>> perl-test-leaktrace-doc*: Package size: 8.8 KB
+>>> perl-test-leaktrace-doc*: Compressing data...
+>>> perl-test-leaktrace-doc*: Create checksum...
+pigz: not found
+>>> perl-test-leaktrace-doc*: Create perl-test-leaktrace-doc-0.17-r5.apk
+>>> perl-test-leaktrace*: Tracing dependencies...
+	perl
+	so:libc.musl-x86_64.so.1
+>>> perl-test-leaktrace*: Package size: 39.6 KB
+>>> perl-test-leaktrace*: Compressing data...
+>>> perl-test-leaktrace*: Create checksum...
+pigz: not found
+>>> perl-test-leaktrace*: Create perl-test-leaktrace-0.17-r5.apk
+>>> perl-test-leaktrace: Build complete at Sun, 18 May 2025 07:15:55 +0000 elapsed time 0h 0m 6s
+>>> perl-test-leaktrace: Cleaning up srcdir
+>>> perl-test-leaktrace: Cleaning up pkgdir
+>>> perl-test-leaktrace: Uninstalling dependencies...
+(1/8) Purging .makedepends-perl-test-leaktrace (20250518.071550)
+(2/8) Purging perl-dev (5.40.2-r0)
+(3/8) Purging perl-utils (5.40.2-r0)
+(4/8) Purging git-perl (2.47.2-r0)
+(5/8) Purging perl-git (2.47.2-r0)
+(6/8) Purging perl-error (0.17029-r2)
+(7/8) Purging perl (5.40.2-r0)
+(8/8) Purging libbz2 (1.0.8-r6)
+Executing busybox-1.37.0-r12.trigger
+OK: 260 MiB in 81 packages
+>>> perl-test-leaktrace: Updating the main/x86_64 repository index...
+>>> perl-test-leaktrace: Signing the index...
+pigz: not found
