@@ -1,0 +1,4829 @@
+>>> busybox: Validating /home/packager/oily-pine/main/busybox/APKBUILD...
+>>> busybox: Cleaning up srcdir
+>>> busybox: Cleaning up pkgdir
+>>> busybox: Cleaning up tmpdir
+>>> busybox: Fetching https://busybox.net/downloads/busybox-1.37.0.tar.bz2
+>>> busybox: Fetching https://busybox.net/downloads/busybox-1.37.0.tar.bz2
+>>> busybox: Checking sha512sums...
+busybox-1.37.0.tar.bz2: OK
+0001-wget-add-header-Accept.patch: OK
+0002-adduser-default-to-sbin-nologin-as-shell-for-system-.patch: OK
+0003-ash-add-built-in-BB_ASH_VERSION-variable.patch: OK
+0004-Avoid-redefined-warnings-when-buiding-with-utmps.patch: OK
+0005-libbb-sockaddr2str-ensure-only-printable-characters-.patch: OK
+0006-modinfo-add-k-option-for-kernel-version.patch: OK
+0007-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch: OK
+0008-pgrep-add-support-for-matching-against-UID-and-RUID.patch: OK
+0009-properly-fix-wget-https-support.patch: OK
+0010-fsck-resolve-LABEL-.-UUID-.-spec-to-device.patch: OK
+0011-nslookup-sanitize-all-printed-strings-with-printable.patch: OK
+0012-ash-exec-busybox.static.patch: OK
+0013-app-location-for-cpio-vi-and-lspci.patch: OK
+0014-udhcpc-set-default-discover-retries-to-5.patch: OK
+0015-ping-make-ping-work-without-root-privileges.patch: OK
+0016-fbsplash-support-console-switching.patch: OK
+0017-fbsplash-support-image-and-bar-alignment-and-positio.patch: OK
+0018-depmod-support-generating-kmod-binary-index-files.patch: OK
+0019-Add-flag-for-not-following-symlinks-when-recursing.patch: OK
+0020-udhcpc-Don-t-background-if-n-is-given.patch: OK
+0021-tests-fix-tarball-creation.patch: OK
+0022-tests-musl-doesn-t-seem-to-recognize-UTC0-as-a-timez.patch: OK
+0023-Hackfix-to-disable-HW-acceleration-for-MD5-SHA1-on-x.patch: OK
+0024-umount-Implement-O-option-to-unmount-by-mount-option.patch: OK
+0025-find-fix-xdev-depth-and-delete.patch: OK
+0026-awk.c-fix-CVE-2023-42366-bug-15874.patch: OK
+0027-awk-Mark-test-for-handling-of-start-of-word-pattern-.patch: OK
+0028-od-Skip-od-B-on-big-endian.patch: OK
+0029-ash-reject-unknown-long-options.patch: OK
+0030-hexdump-Skip-a-single-test-on-big-endian-systems.patch: OK
+0031-syslogd-fix-wrong-OPT_locallog-flag-detection.patch: OK
+0032-lineedit-fix-some-tab-completions-written-to-stdout.patch: OK
+0033-lineedit-use-stdout-for-shell-history-builtin.patch: OK
+0034-adduser-remove-preconfigured-GECOS-full-name-field.patch: OK
+0001-hexdump-fix-regression-with-n4-e-u.patch: OK
+0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch: OK
+0001-tunctl-fix-segfault-on-ioctl-failure.patch: OK
+0001-init-add-support-for-separate-reboot-action.patch: OK
+acpid.logrotate: OK
+busyboxconfig: OK
+busyboxconfig-extras: OK
+bbsuid.c: OK
+dad.if-up: OK
+ssl_client.c: OK
+default.script: OK
+udhcpc.conf: OK
+securetty: OK
+acpid-poweroff.sh: OK
+acpid.initd: OK
+crond.confd: OK
+crond.initd: OK
+klogd.confd: OK
+klogd.initd: OK
+ntpd.confd: OK
+ntpd.initd: OK
+rdate.confd: OK
+rdate.initd: OK
+syslog.confd: OK
+syslog.initd: OK
+loadkmap.confd: OK
+loadkmap.initd: OK
+watchdog.confd: OK
+watchdog.initd: OK
+mdev.initd: OK
+dnsd.initd: OK
+httpd.initd: OK
+inetd.initd: OK
+udhcpd.initd: OK
+>>> busybox: Preparing build chroot...
+installing oils!
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+WARNING: opening /home/packager/packages//# for oils: No such file or directory
+(1/87) Installing musl (1.2.5-r13)
+(2/87) Installing libcrypto3 (3.5.1-r0)
+(3/87) Installing libssl3 (3.5.1-r0)
+(4/87) Installing zlib (1.3.1-r2)
+(5/87) Installing zstd-libs (1.5.7-r1)
+(6/87) Installing libapk (3.0.0_rc5_git20250613-r0)
+(7/87) Installing ca-certificates-bundle (20241121-r2)
+(8/87) Installing apk-tools (3.0.0_rc5_git20250613-r0)
+(9/87) Installing libcap2 (2.76-r0)
+(10/87) Installing libcap-getcap (2.76-r0)
+(11/87) Installing fakeroot (1.37.1.2-r0)
+(12/87) Installing scanelf (1.3.8-r1)
+(13/87) Installing musl-utils (1.2.5-r13)
+(14/87) Installing libgcc (14.3.0-r5)
+(15/87) Installing libstdc++ (14.3.0-r5)
+(16/87) Installing lzip (1.25-r0)
+(17/87) Installing openssl (3.5.1-r0)
+(18/87) Installing patch (2.8-r0)
+(19/87) Installing pkgconf (2.5.1-r0)
+(20/87) Installing acl-libs (2.3.2-r1)
+(21/87) Installing tar (1.35-r4)
+(22/87) Installing alpine-baselayout-data (3.7.0-r0)
+(23/87) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(24/87) Installing ssl_client (1.37.0-r18)
+(25/87) Installing ncurses-terminfo-base (6.5_p20250705-r0)
+(26/87) Installing libncursesw (6.5_p20250705-r0)
+(27/87) Installing readline (8.3.0-r1)
+(28/87) Installing oils-for-unix (0.28.0-r0)
+(29/87) Installing oils-for-unix-binsh (0.28.0-r0)
+(30/87) Installing abuild (3.15.0-r2)
+Executing abuild-3.15.0-r2.pre-install
+(31/87) Installing abuild-sudo (3.15.0-r2)
+(32/87) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(33/87) Installing bridge (1.5-r5)
+(34/87) Installing ifupdown-ng (0.12.1-r7)
+(35/87) Installing openrc-user (0.62.5-r0)
+(36/87) Installing openrc (0.62.5-r0)
+Executing openrc-0.62.5-r0.post-install
+(37/87) Installing mdev-conf (4.8-r0)
+(38/87) Installing busybox-mdev-openrc (1.37.0-r18)
+(39/87) Installing alpine-conf (3.20.0-r0)
+(40/87) Installing alpine-keys (2.5-r0)
+(41/87) Installing alpine-release (3.23.0_alpha20250612-r0)
+(42/87) Installing busybox-openrc (1.37.0-r18)
+(43/87) Installing busybox-suid (1.37.0-r18)
+(44/87) Installing alpine-base (3.23.0_alpha20250612-r0)
+(45/87) Installing jansson (2.14.1-r0)
+(46/87) Installing binutils (2.44-r0)
+(47/87) Installing libmagic (5.46-r2)
+(48/87) Installing file (5.46-r2)
+(49/87) Installing libgomp (14.3.0-r5)
+(50/87) Installing libatomic (14.3.0-r5)
+(51/87) Installing gmp (6.3.0-r4)
+(52/87) Installing isl26 (0.26-r1)
+(53/87) Installing mpfr4 (4.2.2-r0)
+(54/87) Installing mpc1 (1.3.1-r1)
+(55/87) Installing gcc (14.3.0-r5)
+(56/87) Installing libstdc++-dev (14.3.0-r5)
+(57/87) Installing musl-dev (1.2.5-r13)
+(58/87) Installing g++ (14.3.0-r5)
+(59/87) Installing make (4.4.1-r3)
+(60/87) Installing fortify-headers (1.1-r5)
+(61/87) Installing build-base (0.5-r3)
+(62/87) Installing brotli-libs (1.1.0-r2)
+(63/87) Installing c-ares (1.34.5-r0)
+(64/87) Installing libunistring (1.3-r0)
+(65/87) Installing libidn2 (2.3.8-r0)
+(66/87) Installing nghttp2-libs (1.66.0-r0)
+(67/87) Installing libpsl (0.21.5-r3)
+(68/87) Installing libcurl (8.14.1-r2)
+(69/87) Installing libexpat (2.7.1-r0)
+(70/87) Installing pcre2 (10.43-r1)
+(71/87) Installing git (2.50.1-r0)
+(72/87) Installing git-init-template (2.50.1-r0)
+(73/87) Installing linux-headers (6.15.5-r0)
+(74/87) Installing openssl-dev (3.5.1-r0)
+(75/87) Installing libbz2 (1.0.8-r6)
+(76/87) Installing perl (5.42.0-r0)
+(77/87) Installing perl-error (0.17030-r0)
+(78/87) Installing perl-git (2.50.1-r0)
+(79/87) Installing git-perl (2.50.1-r0)
+(80/87) Installing skalibs-libs (2.14.4.0-r0)
+(81/87) Installing skalibs-dev (2.14.4.0-r0)
+(82/87) Installing utmps-libs (0.1.3.1-r0)
+(83/87) Installing utmps-dev (0.1.3.1-r0)
+(84/87) Installing skalibs-static (2.14.4.0-r0)
+(85/87) Installing utmps-static (0.1.3.1-r0)
+(86/87) Installing unzip (6.0-r16)
+(87/87) Installing zip (3.0-r13)
+Executing busybox-1.37.0-r18.trigger
+OK: 324 MiB in 87 packages
+>>> busybox: Fetching https://busybox.net/downloads/busybox-1.37.0.tar.bz2
+>>> busybox: Checking sha512sums...
+busybox-1.37.0.tar.bz2: OK
+0001-wget-add-header-Accept.patch: OK
+0002-adduser-default-to-sbin-nologin-as-shell-for-system-.patch: OK
+0003-ash-add-built-in-BB_ASH_VERSION-variable.patch: OK
+0004-Avoid-redefined-warnings-when-buiding-with-utmps.patch: OK
+0005-libbb-sockaddr2str-ensure-only-printable-characters-.patch: OK
+0006-modinfo-add-k-option-for-kernel-version.patch: OK
+0007-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch: OK
+0008-pgrep-add-support-for-matching-against-UID-and-RUID.patch: OK
+0009-properly-fix-wget-https-support.patch: OK
+0010-fsck-resolve-LABEL-.-UUID-.-spec-to-device.patch: OK
+0011-nslookup-sanitize-all-printed-strings-with-printable.patch: OK
+0012-ash-exec-busybox.static.patch: OK
+0013-app-location-for-cpio-vi-and-lspci.patch: OK
+0014-udhcpc-set-default-discover-retries-to-5.patch: OK
+0015-ping-make-ping-work-without-root-privileges.patch: OK
+0016-fbsplash-support-console-switching.patch: OK
+0017-fbsplash-support-image-and-bar-alignment-and-positio.patch: OK
+0018-depmod-support-generating-kmod-binary-index-files.patch: OK
+0019-Add-flag-for-not-following-symlinks-when-recursing.patch: OK
+0020-udhcpc-Don-t-background-if-n-is-given.patch: OK
+0021-tests-fix-tarball-creation.patch: OK
+0022-tests-musl-doesn-t-seem-to-recognize-UTC0-as-a-timez.patch: OK
+0023-Hackfix-to-disable-HW-acceleration-for-MD5-SHA1-on-x.patch: OK
+0024-umount-Implement-O-option-to-unmount-by-mount-option.patch: OK
+0025-find-fix-xdev-depth-and-delete.patch: OK
+0026-awk.c-fix-CVE-2023-42366-bug-15874.patch: OK
+0027-awk-Mark-test-for-handling-of-start-of-word-pattern-.patch: OK
+0028-od-Skip-od-B-on-big-endian.patch: OK
+0029-ash-reject-unknown-long-options.patch: OK
+0030-hexdump-Skip-a-single-test-on-big-endian-systems.patch: OK
+0031-syslogd-fix-wrong-OPT_locallog-flag-detection.patch: OK
+0032-lineedit-fix-some-tab-completions-written-to-stdout.patch: OK
+0033-lineedit-use-stdout-for-shell-history-builtin.patch: OK
+0034-adduser-remove-preconfigured-GECOS-full-name-field.patch: OK
+0001-hexdump-fix-regression-with-n4-e-u.patch: OK
+0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch: OK
+0001-tunctl-fix-segfault-on-ioctl-failure.patch: OK
+0001-init-add-support-for-separate-reboot-action.patch: OK
+acpid.logrotate: OK
+busyboxconfig: OK
+busyboxconfig-extras: OK
+bbsuid.c: OK
+dad.if-up: OK
+ssl_client.c: OK
+default.script: OK
+udhcpc.conf: OK
+securetty: OK
+acpid-poweroff.sh: OK
+acpid.initd: OK
+crond.confd: OK
+crond.initd: OK
+klogd.confd: OK
+klogd.initd: OK
+ntpd.confd: OK
+ntpd.initd: OK
+rdate.confd: OK
+rdate.initd: OK
+syslog.confd: OK
+syslog.initd: OK
+loadkmap.confd: OK
+loadkmap.initd: OK
+watchdog.confd: OK
+watchdog.initd: OK
+mdev.initd: OK
+dnsd.initd: OK
+httpd.initd: OK
+inetd.initd: OK
+udhcpd.initd: OK
+>>> busybox: Unpacking /var/cache/distfiles/busybox-1.37.0.tar.bz2...
+>>> busybox: 0001-wget-add-header-Accept.patch
+patching file networking/wget.c
+>>> busybox: 0002-adduser-default-to-sbin-nologin-as-shell-for-system-.patch
+patching file loginutils/adduser.c
+>>> busybox: 0003-ash-add-built-in-BB_ASH_VERSION-variable.patch
+patching file shell/ash.c
+>>> busybox: 0004-Avoid-redefined-warnings-when-buiding-with-utmps.patch
+patching file include/libbb.h
+patching file libbb/messages.c
+patching file libbb/utmp.c
+patching file util-linux/last_fancy.c
+>>> busybox: 0005-libbb-sockaddr2str-ensure-only-printable-characters-.patch
+patching file libbb/xconnect.c
+>>> busybox: 0006-modinfo-add-k-option-for-kernel-version.patch
+patching file modutils/modinfo.c
+>>> busybox: 0007-nologin-Install-applet-to-sbin-instead-of-usr-sbin.patch
+patching file util-linux/nologin.c
+>>> busybox: 0008-pgrep-add-support-for-matching-against-UID-and-RUID.patch
+patching file procps/pgrep.c
+>>> busybox: 0009-properly-fix-wget-https-support.patch
+patching file networking/wget.c
+>>> busybox: 0010-fsck-resolve-LABEL-.-UUID-.-spec-to-device.patch
+patching file e2fsprogs/fsck.c
+>>> busybox: 0011-nslookup-sanitize-all-printed-strings-with-printable.patch
+patching file networking/nslookup.c
+>>> busybox: 0012-ash-exec-busybox.static.patch
+patching file shell/ash.c
+>>> busybox: 0013-app-location-for-cpio-vi-and-lspci.patch
+patching file archival/cpio.c
+patching file editors/vi.c
+patching file util-linux/lspci.c
+>>> busybox: 0014-udhcpc-set-default-discover-retries-to-5.patch
+patching file networking/udhcp/d6_dhcpc.c
+patching file networking/udhcp/dhcpc.c
+>>> busybox: 0015-ping-make-ping-work-without-root-privileges.patch
+patching file networking/ping.c
+>>> busybox: 0016-fbsplash-support-console-switching.patch
+patching file miscutils/fbsplash.c
+>>> busybox: 0017-fbsplash-support-image-and-bar-alignment-and-positio.patch
+patching file miscutils/fbsplash.c
+>>> busybox: 0018-depmod-support-generating-kmod-binary-index-files.patch
+patching file modutils/Config.src
+patching file modutils/depmod.c
+patching file modutils/modprobe.c
+patching file modutils/modutils.c
+patching file modutils/modutils.h
+>>> busybox: 0019-Add-flag-for-not-following-symlinks-when-recursing.patch
+patching file editors/diff.c
+>>> busybox: 0020-udhcpc-Don-t-background-if-n-is-given.patch
+patching file networking/udhcp/d6_dhcpc.c
+patching file networking/udhcp/dhcpc.c
+>>> busybox: 0021-tests-fix-tarball-creation.patch
+patching file testsuite/tar.tests
+>>> busybox: 0022-tests-musl-doesn-t-seem-to-recognize-UTC0-as-a-timez.patch
+patching file testsuite/date/date-timezone
+>>> busybox: 0023-Hackfix-to-disable-HW-acceleration-for-MD5-SHA1-on-x.patch
+patching file libbb/hash_md5_sha.c
+>>> busybox: 0024-umount-Implement-O-option-to-unmount-by-mount-option.patch
+patching file include/libbb.h
+patching file libbb/Kbuild.src
+patching file libbb/match_fsopts.c
+patching file util-linux/umount.c
+>>> busybox: 0025-find-fix-xdev-depth-and-delete.patch
+patching file findutils/find.c
+patching file include/libbb.h
+patching file libbb/recursive_action.c
+>>> busybox: 0026-awk.c-fix-CVE-2023-42366-bug-15874.patch
+patching file editors/awk.c
+>>> busybox: 0027-awk-Mark-test-for-handling-of-start-of-word-pattern-.patch
+patching file testsuite/awk.tests
+>>> busybox: 0028-od-Skip-od-B-on-big-endian.patch
+patching file testsuite/od.tests
+>>> busybox: 0029-ash-reject-unknown-long-options.patch
+patching file shell/ash.c
+Hunk #1 succeeded at 11516 (offset 14 lines).
+>>> busybox: 0030-hexdump-Skip-a-single-test-on-big-endian-systems.patch
+patching file testsuite/hexdump.tests
+>>> busybox: 0031-syslogd-fix-wrong-OPT_locallog-flag-detection.patch
+patching file sysklogd/syslogd.c
+>>> busybox: 0032-lineedit-fix-some-tab-completions-written-to-stdout.patch
+patching file libbb/lineedit.c
+>>> busybox: 0033-lineedit-use-stdout-for-shell-history-builtin.patch
+patching file libbb/lineedit.c
+>>> busybox: 0034-adduser-remove-preconfigured-GECOS-full-name-field.patch
+patching file loginutils/adduser.c
+>>> busybox: 0001-hexdump-fix-regression-with-n4-e-u.patch
+patching file libbb/dump.c
+patching file testsuite/hexdump.tests
+Hunk #1 succeeded at 87 (offset 5 lines).
+>>> busybox: 0001-awk-fix-handling-of-literal-backslashes-in-replaceme.patch
+patching file editors/awk.c
+Hunk #1 succeeded at 2638 (offset 2 lines).
+patching file testsuite/awk.tests
+Hunk #1 succeeded at 619 with fuzz 2 (offset 2 lines).
+>>> busybox: 0001-tunctl-fix-segfault-on-ioctl-failure.patch
+patching file networking/tunctl.c
+>>> busybox: 0001-init-add-support-for-separate-reboot-action.patch
+patching file init/init.c
+>>> busybox: Building bbsuid
+>>> busybox: Building ssl_client
+>>> busybox: Building dynamic busybox
+COPIED CONFIG to /tmp/src/build-dynamic/.config
+  GEN     /tmp/src/build-dynamic/Makefile
+  GEN     include/applets.h
+  GEN     include/usage.h
+  GEN     modutils/Kbuild
+  GEN     modutils/Config.in
+  GEN     libpwdgrp/Kbuild
+  GEN     editors/Kbuild
+  GEN     editors/Config.in
+  GEN     applets/Kbuild
+  GEN     libbb/Kbuild
+  GEN     libbb/Config.in
+  GEN     coreutils/Kbuild
+  GEN     coreutils/Config.in
+  GEN     coreutils/libcoreutils/Kbuild
+  GEN     scripts/Kbuild
+  GEN     shell/Kbuild
+  GEN     shell/Config.in
+  GEN     util-linux/Kbuild
+  GEN     util-linux/Config.in
+  GEN     util-linux/volume_id/Kbuild
+  GEN     util-linux/volume_id/Config.in
+  GEN     printutils/Kbuild
+  GEN     printutils/Config.in
+  GEN     miscutils/Kbuild
+  GEN     miscutils/Config.in
+  GEN     archival/Kbuild
+  GEN     archival/Config.in
+  GEN     archival/libarchive/Kbuild
+  GEN     mailutils/Kbuild
+  GEN     mailutils/Config.in
+  GEN     e2fsprogs/Kbuild
+  GEN     e2fsprogs/Config.in
+  GEN     sysklogd/Kbuild
+  GEN     sysklogd/Config.in
+  GEN     loginutils/Kbuild
+  GEN     loginutils/Config.in
+  GEN     runit/Kbuild
+  GEN     runit/Config.in
+  GEN     init/Kbuild
+  GEN     init/Config.in
+  GEN     debianutils/Kbuild
+  GEN     debianutils/Config.in
+  GEN     findutils/Kbuild
+  GEN     findutils/Config.in
+  GEN     procps/Kbuild
+  GEN     procps/Config.in
+  GEN     klibc-utils/Kbuild
+  GEN     klibc-utils/Config.in
+  GEN     networking/Kbuild
+  GEN     networking/Config.in
+  GEN     networking/udhcp/Kbuild
+  GEN     networking/udhcp/Config.in
+  GEN     networking/libiproute/Kbuild
+  GEN     console-tools/Kbuild
+  GEN     console-tools/Config.in
+  GEN     selinux/Kbuild
+  GEN     selinux/Config.in
+In file included from /tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:35:
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c: In function 'main':
+/tmp/src/busybox-1.37.0/scripts/kconfig/lkc.h:16:47: warning: statement with no effect [-Wunused-value]
+   16 | # define bindtextdomain(Domainname, Dirname) ((const char *) (Dirname))
+      |                                              ~^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:1066:9: note: in expansion of macro 'bindtextdomain'
+ 1066 |         bindtextdomain(PACKAGE, LOCALEDIR);
+      |         ^~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/lkc.h:15:34: warning: statement with no effect [-Wunused-value]
+   15 | # define textdomain(Domainname) ((const char *) (Domainname))
+      |                                 ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:1067:9: note: in expansion of macro 'textdomain'
+ 1067 |         textdomain(PACKAGE);
+      |         ^~~~~~~~~~
+scripts/kconfig/conf -s Config.in
+#
+# using defaults found in .config
+#
+make -C /tmp/src/busybox-1.37.0 O=/tmp/src/build-dynamic
+  GEN     /tmp/src/build-dynamic/Makefile
+  Using /tmp/src/busybox-1.37.0 as source for busybox
+/tmp/src/busybox-1.37.0/modutils/modutils.c: In function 'filename2modname':
+/tmp/src/busybox-1.37.0/modutils/modutils.c:149:1: warning: function may return address of local variable [-Wreturn-local-addr]
+  149 | }
+      | ^
+/tmp/src/busybox-1.37.0/modutils/modutils.c:128:14: note: declared here
+  128 |         char local_modname[MODULE_NAME_LEN];
+      |              ^~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/miscutils/fbsplash.c: In function 'fbsplash_main':
+/tmp/src/busybox-1.37.0/miscutils/fbsplash.c:676:25: warning: 'active_vt' may be used uninitialized [-Wmaybe-uninitialized]
+  676 |                         console_make_active(fd_tty0, active_vt);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/miscutils/fbsplash.c:557:22: note: 'active_vt' was declared here
+  557 |         int fd_tty0, active_vt;
+      |                      ^~~~~~~~~
+/tmp/src/busybox-1.37.0/networking/udhcp/dhcpc.c: In function 'udhcpc_main':
+/tmp/src/busybox-1.37.0/networking/udhcp/dhcpc.c:1649:48: warning: variable 'temp_addr' set but not used [-Wunused-but-set-variable]
+ 1649 |                                 struct in_addr temp_addr;
+      |                                                ^~~~~~~~~
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   53 | static const CODE *const bb_prioritynames = prioritynames;
+      |                                             ^~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   54 | static const CODE *const bb_facilitynames = facilitynames;
+      |                                             ^~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/networking/tunctl.c: In function 'tunctl_main':
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:100:9: note: in expansion of macro 'IOCTL'
+  100 |         IOCTL(fd, TUNSETIFF, (void *)&ifr);
+      |         ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:104:17: note: in expansion of macro 'IOCTL'
+  104 |                 IOCTL(fd, TUNSETPERSIST, (void *)(uintptr_t)0);
+      |                 ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:113:17: note: in expansion of macro 'IOCTL'
+  113 |                 IOCTL(fd, TUNSETGROUP, (void *)(uintptr_t)group);
+      |                 ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:118:9: note: in expansion of macro 'IOCTL'
+  118 |         IOCTL(fd, TUNSETOWNER, (void *)(uintptr_t)user);
+      |         ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:120:9: note: in expansion of macro 'IOCTL'
+  120 |         IOCTL(fd, TUNSETPERSIST, (void *)(uintptr_t)1);
+      |         ^~~~~
+Trying libraries: crypt m resolv rt
+ Library crypt is not needed, excluding it
+ Library m is not needed, excluding it
+ Library resolv is not needed, excluding it
+ Library rt is not needed, excluding it
+Final link with: <none>
+>>> busybox: Building dynamic busybox-extras
+  GEN     /tmp/src/build-dynamic-extras/Makefile
+  GEN     include/applets.h
+  GEN     include/usage.h
+  GEN     modutils/Kbuild
+  GEN     modutils/Config.in
+  GEN     libpwdgrp/Kbuild
+  GEN     editors/Kbuild
+  GEN     editors/Config.in
+  GEN     applets/Kbuild
+  GEN     libbb/Kbuild
+  GEN     libbb/Config.in
+  GEN     coreutils/Kbuild
+  GEN     coreutils/Config.in
+  GEN     coreutils/libcoreutils/Kbuild
+  GEN     scripts/Kbuild
+  GEN     shell/Kbuild
+  GEN     shell/Config.in
+  GEN     util-linux/Kbuild
+  GEN     util-linux/Config.in
+  GEN     util-linux/volume_id/Kbuild
+  GEN     util-linux/volume_id/Config.in
+  GEN     printutils/Kbuild
+  GEN     printutils/Config.in
+  GEN     miscutils/Kbuild
+  GEN     miscutils/Config.in
+  GEN     archival/Kbuild
+  GEN     archival/Config.in
+  GEN     archival/libarchive/Kbuild
+  GEN     mailutils/Kbuild
+  GEN     mailutils/Config.in
+  GEN     e2fsprogs/Kbuild
+  GEN     e2fsprogs/Config.in
+  GEN     sysklogd/Kbuild
+  GEN     sysklogd/Config.in
+  GEN     loginutils/Kbuild
+  GEN     loginutils/Config.in
+  GEN     runit/Kbuild
+  GEN     runit/Config.in
+  GEN     init/Kbuild
+  GEN     init/Config.in
+  GEN     debianutils/Kbuild
+  GEN     debianutils/Config.in
+  GEN     findutils/Kbuild
+  GEN     findutils/Config.in
+  GEN     procps/Kbuild
+  GEN     procps/Config.in
+  GEN     klibc-utils/Kbuild
+  GEN     klibc-utils/Config.in
+  GEN     networking/Kbuild
+  GEN     networking/Config.in
+  GEN     networking/udhcp/Kbuild
+  GEN     networking/udhcp/Config.in
+  GEN     networking/libiproute/Kbuild
+  GEN     console-tools/Kbuild
+  GEN     console-tools/Config.in
+  GEN     selinux/Kbuild
+  GEN     selinux/Config.in
+In file included from /tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:35:
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c: In function 'main':
+/tmp/src/busybox-1.37.0/scripts/kconfig/lkc.h:16:47: warning: statement with no effect [-Wunused-value]
+   16 | # define bindtextdomain(Domainname, Dirname) ((const char *) (Dirname))
+      |                                              ~^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:1066:9: note: in expansion of macro 'bindtextdomain'
+ 1066 |         bindtextdomain(PACKAGE, LOCALEDIR);
+      |         ^~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/lkc.h:15:34: warning: statement with no effect [-Wunused-value]
+   15 | # define textdomain(Domainname) ((const char *) (Domainname))
+      |                                 ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:1067:9: note: in expansion of macro 'textdomain'
+ 1067 |         textdomain(PACKAGE);
+      |         ^~~~~~~~~~
+scripts/kconfig/conf -s Config.in
+#
+# using defaults found in .config
+#
+make -C /tmp/src/busybox-1.37.0 O=/tmp/src/build-dynamic-extras
+  GEN     /tmp/src/build-dynamic-extras/Makefile
+  Using /tmp/src/busybox-1.37.0 as source for busybox
+/tmp/src/busybox-1.37.0/networking/tftp.c: In function 'tftpd_main':
+/tmp/src/busybox-1.37.0/networking/tftp.c:886:15: warning: 'local_file' is used uninitialized [-Wuninitialized]
+  886 |         char *local_file = local_file;
+      |               ^~~~~~~~~~
+/tmp/src/busybox-1.37.0/networking/tftp.c:886:15: note: 'local_file' was declared here
+  886 |         char *local_file = local_file;
+      |               ^~~~~~~~~~
+Trying libraries: crypt m rt
+ Library crypt is not needed, excluding it
+ Library m is not needed, excluding it
+ Library rt is not needed, excluding it
+Final link with: <none>
+>>> busybox: Building static busybox
+  GEN     /tmp/src/build-static/Makefile
+  GEN     include/applets.h
+  GEN     include/usage.h
+  GEN     modutils/Kbuild
+  GEN     modutils/Config.in
+  GEN     libpwdgrp/Kbuild
+  GEN     editors/Kbuild
+  GEN     editors/Config.in
+  GEN     applets/Kbuild
+  GEN     libbb/Kbuild
+  GEN     libbb/Config.in
+  GEN     coreutils/Kbuild
+  GEN     coreutils/Config.in
+  GEN     coreutils/libcoreutils/Kbuild
+  GEN     scripts/Kbuild
+  GEN     shell/Kbuild
+  GEN     shell/Config.in
+  GEN     util-linux/Kbuild
+  GEN     util-linux/Config.in
+  GEN     util-linux/volume_id/Kbuild
+  GEN     util-linux/volume_id/Config.in
+  GEN     printutils/Kbuild
+  GEN     printutils/Config.in
+  GEN     miscutils/Kbuild
+  GEN     miscutils/Config.in
+  GEN     archival/Kbuild
+  GEN     archival/Config.in
+  GEN     archival/libarchive/Kbuild
+  GEN     mailutils/Kbuild
+  GEN     mailutils/Config.in
+  GEN     e2fsprogs/Kbuild
+  GEN     e2fsprogs/Config.in
+  GEN     sysklogd/Kbuild
+  GEN     sysklogd/Config.in
+  GEN     loginutils/Kbuild
+  GEN     loginutils/Config.in
+  GEN     runit/Kbuild
+  GEN     runit/Config.in
+  GEN     init/Kbuild
+  GEN     init/Config.in
+  GEN     debianutils/Kbuild
+  GEN     debianutils/Config.in
+  GEN     findutils/Kbuild
+  GEN     findutils/Config.in
+  GEN     procps/Kbuild
+  GEN     procps/Config.in
+  GEN     klibc-utils/Kbuild
+  GEN     klibc-utils/Config.in
+  GEN     networking/Kbuild
+  GEN     networking/Config.in
+  GEN     networking/udhcp/Kbuild
+  GEN     networking/udhcp/Config.in
+  GEN     networking/libiproute/Kbuild
+  GEN     console-tools/Kbuild
+  GEN     console-tools/Config.in
+  GEN     selinux/Kbuild
+  GEN     selinux/Config.in
+In file included from /tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:35:
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c: In function 'main':
+/tmp/src/busybox-1.37.0/scripts/kconfig/lkc.h:16:47: warning: statement with no effect [-Wunused-value]
+   16 | # define bindtextdomain(Domainname, Dirname) ((const char *) (Dirname))
+      |                                              ~^~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:1066:9: note: in expansion of macro 'bindtextdomain'
+ 1066 |         bindtextdomain(PACKAGE, LOCALEDIR);
+      |         ^~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/lkc.h:15:34: warning: statement with no effect [-Wunused-value]
+   15 | # define textdomain(Domainname) ((const char *) (Domainname))
+      |                                 ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/scripts/kconfig/mconf.c:1067:9: note: in expansion of macro 'textdomain'
+ 1067 |         textdomain(PACKAGE);
+      |         ^~~~~~~~~~
+scripts/kconfig/conf -s Config.in
+#
+# using defaults found in .config
+#
+make -C /tmp/src/busybox-1.37.0 O=/tmp/src/build-static
+  GEN     /tmp/src/build-static/Makefile
+  Using /tmp/src/busybox-1.37.0 as source for busybox
+/tmp/src/busybox-1.37.0/modutils/modutils.c: In function 'filename2modname':
+/tmp/src/busybox-1.37.0/modutils/modutils.c:149:1: warning: function may return address of local variable [-Wreturn-local-addr]
+  149 | }
+      | ^
+/tmp/src/busybox-1.37.0/modutils/modutils.c:128:14: note: declared here
+  128 |         char local_modname[MODULE_NAME_LEN];
+      |              ^~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/networking/udhcp/dhcpc.c: In function 'udhcpc_main':
+/tmp/src/busybox-1.37.0/networking/udhcp/dhcpc.c:1649:48: warning: variable 'temp_addr' set but not used [-Wunused-but-set-variable]
+ 1649 |                                 struct in_addr temp_addr;
+      |                                                ^~~~~~~~~
+/tmp/src/busybox-1.37.0/miscutils/fbsplash.c: In function 'fbsplash_main':
+/tmp/src/busybox-1.37.0/miscutils/fbsplash.c:676:25: warning: 'active_vt' may be used uninitialized [-Wmaybe-uninitialized]
+  676 |                         console_make_active(fd_tty0, active_vt);
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/miscutils/fbsplash.c:557:22: note: 'active_vt' was declared here
+  557 |         int fd_tty0, active_vt;
+      |                      ^~~~~~~~~
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   53 | static const CODE *const bb_prioritynames = prioritynames;
+      |                                             ^~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:53:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   54 | static const CODE *const bb_facilitynames = facilitynames;
+      |                                             ^~~~~~~~~~~~~
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/sysklogd/syslogd_and_logger.c:54:45: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+/tmp/src/busybox-1.37.0/networking/tunctl.c: In function 'tunctl_main':
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:100:9: note: in expansion of macro 'IOCTL'
+  100 |         IOCTL(fd, TUNSETIFF, (void *)&ifr);
+      |         ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:104:17: note: in expansion of macro 'IOCTL'
+  104 |                 IOCTL(fd, TUNSETPERSIST, (void *)(uintptr_t)0);
+      |                 ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:113:17: note: in expansion of macro 'IOCTL'
+  113 |                 IOCTL(fd, TUNSETGROUP, (void *)(uintptr_t)group);
+      |                 ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:118:9: note: in expansion of macro 'IOCTL'
+  118 |         IOCTL(fd, TUNSETOWNER, (void *)(uintptr_t)user);
+      |         ^~~~~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:57:57: warning: zero-length gnu_printf format string [-Wformat-zero-length]
+   57 | #define IOCTL(a, b, c) ioctl_or_perror_and_die(a, b, c, "")
+      |                                                         ^~
+/tmp/src/busybox-1.37.0/networking/tunctl.c:120:9: note: in expansion of macro 'IOCTL'
+  120 |         IOCTL(fd, TUNSETPERSIST, (void *)(uintptr_t)1);
+      |         ^~~~~
+Trying libraries: crypt m resolv rt
+ Library crypt is not needed, excluding it
+ Library m is not needed, excluding it
+ Library resolv is not needed, excluding it
+ Library rt is not needed, excluding it
+Final link with: <none>
+make -C /tmp/src/build-dynamic \
+KBUILD_SRC=/tmp/src/busybox-1.37.0 \
+KBUILD_EXTMOD="" -f /tmp/src/busybox-1.37.0/Makefile check
+rm -f .kernelrelease
+sh /tmp/src/busybox-1.37.0/scripts/mkmakefile \
+    /tmp/src/busybox-1.37.0 /tmp/src/build-dynamic 1 37
+echo 1.37.0 > .kernelrelease
+  GEN     /tmp/src/build-dynamic/Makefile
+/tmp/src/busybox-1.37.0/scripts/gen_build_files.sh /tmp/src/busybox-1.37.0 /tmp/src/build-dynamic
+/bin/sh /tmp/src/busybox-1.37.0/applets/busybox.mkll /tmp/src/build-dynamic/include/autoconf.h include/applets.h > busybox.links
+  Using /tmp/src/busybox-1.37.0 as source for busybox
+if [ -f /tmp/src/busybox-1.37.0/.config ]; then \
+	echo "  /tmp/src/busybox-1.37.0 is not clean, please run 'make mrproper'";\
+	echo "  in the '/tmp/src/busybox-1.37.0' directory.";\
+	/bin/false; \
+fi;
+if [ ! -d include2 ]; then mkdir -p include2; fi;
+ln -fsn /tmp/src/busybox-1.37.0/include/asm-x86_64 include2/asm
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=scripts/basic
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=applets
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=scripts
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=.
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=applets
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=archival
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=archival/libarchive
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=console-tools
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=coreutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=coreutils/libcoreutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=debianutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=klibc-utils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=e2fsprogs
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=editors
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=findutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=init
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=libbb
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=libpwdgrp
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=loginutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=mailutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=miscutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=modutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=networking
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=networking/libiproute
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=networking/udhcp
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=printutils
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=procps
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=runit
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=selinux
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=shell
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=sysklogd
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=util-linux
+make -f /tmp/src/busybox-1.37.0/scripts/Makefile.build obj=util-linux/volume_id
+Trying libraries: crypt m resolv rt
+ Library crypt is not needed, excluding it
+ Library m is not needed, excluding it
+ Library resolv is not needed, excluding it
+ Library rt is not needed, excluding it
+Final link with: <none>
+echo 'cmd_busybox_unstripped := /tmp/src/busybox-1.37.0/scripts/trylink "busybox_unstripped" "gcc" "-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -malign-data=abi -Wall -Wshadow -Wwrite-strings -Wundef -Wstrict-prototypes -Wunused -Wunused-parameter -Wunused-function -Wunused-value -Wmissing-prototypes -Wmissing-declarations -Wno-format-security -Wdeclaration-after-statement -Wold-style-definition -finline-limit=0 -fno-builtin-strlen -fomit-frame-pointer -ffunction-sections -fdata-sections -fno-guess-branch-probability -funsigned-char -falign-functions=1 -falign-jumps=1 -falign-labels=1 -falign-loops=1 -fno-unwind-tables -fno-asynchronous-unwind-tables -fno-builtin-printf -Oz -fpie -I/usr/include/utmps -pie" "-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs " " applets/built-in.o" " archival/lib.a  archival/libarchive/lib.a  console-tools/lib.a  coreutils/lib.a  coreutils/libcoreutils/lib.a  debianutils/lib.a  klibc-utils/lib.a  e2fsprogs/lib.a  editors/lib.a  findutils/lib.a  init/lib.a  libbb/lib.a  libpwdgrp/lib.a  loginutils/lib.a  mailutils/lib.a  miscutils/lib.a  modutils/lib.a  networking/lib.a  networking/libiproute/lib.a  networking/udhcp/lib.a  printutils/lib.a  procps/lib.a  runit/lib.a  selinux/lib.a  shell/lib.a  sysklogd/lib.a  util-linux/lib.a  util-linux/volume_id/lib.a  archival/built-in.o  archival/libarchive/built-in.o  console-tools/built-in.o  coreutils/built-in.o  coreutils/libcoreutils/built-in.o  debianutils/built-in.o  klibc-utils/built-in.o  e2fsprogs/built-in.o  editors/built-in.o  findutils/built-in.o  init/built-in.o  libbb/built-in.o  libpwdgrp/built-in.o  loginutils/built-in.o  mailutils/built-in.o  miscutils/built-in.o  modutils/built-in.o  networking/built-in.o  networking/libiproute/built-in.o  networking/udhcp/built-in.o  printutils/built-in.o  procps/built-in.o  runit/built-in.o  selinux/built-in.o  shell/built-in.o  sysklogd/built-in.o  util-linux/built-in.o  util-linux/volume_id/built-in.o" "m crypt rt resolv" "-Wl,--push-state,-Bstatic -lutmps -lskarnet -Wl,--pop-state" && /tmp/src/busybox-1.37.0/scripts/generate_BUFSIZ.sh --post include/common_bufsiz.h' > ./.busybox_unstripped.cmd
+rm -f .old_version
+strip -s --remove-section=.note --remove-section=.comment \
+	busybox_unstripped -o busybox
+chmod a+x busybox
+test -d /tmp/src/build-dynamic/testsuite || cp -pPR /tmp/src/busybox-1.37.0/testsuite /tmp/src/build-dynamic
+bindir=/tmp/src/build-dynamic srcdir=/tmp/src/busybox-1.37.0/testsuite \
+/bin/sh -c "cd /tmp/src/build-dynamic/testsuite && /tmp/src/busybox-1.37.0/testsuite/runtest -v"
+======================
+echo -ne '' >input
+echo -ne '' | ./unknown 2>&1
+PASS: busybox as unknown name
+======================
+echo -ne '' >input
+echo -ne '' | true | busybox --help busybox 2>&1 | cat
+PASS: busybox --help busybox
+======================
+echo -ne '' >input
+echo -ne '' | busybox 2>&1 | cat
+PASS: busybox
+======================
+echo -ne '' >input
+echo -ne '' | busybox unknown 2>&1
+PASS: busybox unknown
+======================
+echo -ne '' >input
+echo -ne '' | busybox --help 2>&1
+PASS: busybox --help
+======================
+echo -ne '' >input
+echo -ne 'moo' | busybox cat
+PASS: busybox cat
+======================
+echo -ne '' >input
+echo -ne '' | busybox --help cat 2>&1 | grep Print
+PASS: busybox --help cat
+======================
+echo -ne '' >input
+echo -ne '' | busybox --help unknown 2>&1
+PASS: busybox --help unknown
+======================
+echo -ne '' >input
+echo -ne '' | ./busybox-suffix 2>&1 | cat
+PASS: ./busybox-suffix
+======================
+echo -ne '' >input
+echo -ne '' | ./busybox-suffix unknown 2>&1
+PASS: ./busybox-suffix unknown
+======================
+echo -ne '' >input
+echo -ne '' | ./busybox-suffix --help 2>&1
+PASS: ./busybox-suffix --help
+======================
+echo -ne '' >input
+echo -ne 'moo' | ./busybox-suffix cat
+PASS: ./busybox-suffix cat
+======================
+echo -ne '' >input
+echo -ne '' | ./busybox-suffix --help cat 2>&1 | grep Print
+PASS: ./busybox-suffix --help cat
+======================
+echo -ne '' >input
+echo -ne '' | ./busybox-suffix --help unknown 2>&1
+PASS: ./busybox-suffix --help unknown
+======================
+echo -ne '' >input
+echo -ne '' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 0
+======================
+echo -ne '' >input
+echo -ne '\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 1
+======================
+echo -ne '' >input
+echo -ne '#\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 2
+======================
+echo -ne '' >input
+echo -ne '#abc#\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 3
+======================
+echo -ne '' >input
+echo -ne '#abc#zz\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 4
+======================
+echo -ne '' >input
+echo -ne '#abc##zz\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 5
+======================
+echo -ne '' >input
+echo -ne 'z#abc##zz\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 6
+======================
+echo -ne '' >input
+echo -ne 'z##abc##zz\n' | awk -F '[#]' '{ print NF }'
+PASS: awk -F case 7
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{if(23==23) print "foo"}'
+PASS: awk if operator == 
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{if(23!=23) print "bar"}'
+PASS: awk if operator != 
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{if(23>=23) print "foo"}'
+PASS: awk if operator >= 
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{if(2 < 13) print "foo"}'
+PASS: awk if operator < 
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{if("a"=="ab") print "bar"}'
+PASS: awk if string == 
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ print or(4294967295,1) }'
+PASS: awk bitwise op
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+function empty_fun(count) {
+  # empty
+}
+END {
+  i=1
+  print "L" i "\n"
+  empty_fun(i + i + ++i)
+  print "L" i "\n"
+}'
+PASS: awk handles empty function f(arg){}
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+function empty_fun(){}
+END {empty_fun()
+  print "Ok"
+}'
+PASS: awk handles empty function f(){}
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+function outer_fun() {
+  return 1
+}
+END {
+  i=1
+  print "L" i "\n"
+  i += outer_fun()
+  print "L" i "\n"
+}'
+PASS: awk properly handles function from other scope
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+END {
+  i=1
+  print "L" i "\n"
+  i + trigger_error_fun()
+  print "L" i "\n"
+}' 2>&1
+PASS: awk properly handles undefined function
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+BEGIN {
+  v=1
+  a=2
+  print v (a)
+}' 2>&1
+PASS: awk 'v (a)' is not a function call, it is a concatenation
+======================
+echo -ne '' >input
+echo -ne '' | awk 'func f(){print"F"};func g(){print"G"};BEGIN{f(g(),g())}' 2>&1
+PASS: awk unused function args are evaluated
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ print or(0xffffffff,1) }'
+PASS: awk hex const 1
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ print or(0x80000000,1) }'
+PASS: awk hex const 2
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ print or(01234,1) }'
+PASS: awk oct const
+======================
+echo -ne '' >input
+echo -ne '011\n' | awk '{ print $1, $1+1 }'
+PASS: awk input is never oct
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ printf "%f %f\n", "000.123", "009.123" }'
+PASS: awk floating const with leading zeroes
+======================
+echo -ne '' >input
+echo -ne 'a--\na--b--\na--b--c--\na--b--c--d--' | awk -F-- '{ print NF, length($NF), $NF }'
+PASS: awk long field sep
+======================
+echo -ne '' >input
+echo -ne 'a!b\n' | awk -F'\x21' '{print $1}'
+PASS: awk -F handles escapes
+======================
+echo -ne '' >input
+echo -ne 'Hi\n' | awk 'gsub("@(samp|code|file)\{","");'; echo $?
+PASS: awk gsub falls back to non-extended-regex
+======================
+echo -ne '' >input
+echo -ne '' | awk -f awk_t1_opt-functions.awk -f awk_t1_opth-gen.awk <awk_t1_input | md5sum
+PASS: awk 'gcc build bug'
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { print ":" NF ":" $0 ":" $1 ":" $2 ":" }'
+PASS: awk NF in BEGIN
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+function b(tmp) {
+	tmp = 0;
+	print "" tmp; #this line causes the bug
+	return tmp;
+}
+function c(tmpc) {
+	tmpc = b(); return tmpc;
+}
+BEGIN {
+	print (c() ? "string" : "number");
+}'
+PASS: awk string cast (bug 725)
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { arr [3] = 1; print arr [3] }'
+PASS: awk handles whitespace before array subscript
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { getline line <"doesnt_exist"; print ERRNO; ERRNO=0; close("doesnt_exist"); print ERRNO; print "Ok" }'
+PASS: awk handles non-existing file correctly
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+BEGIN {
+  u["a"]=1
+  u["b"]=1
+  u["c"]=1
+  v["d"]=1
+  v["e"]=1
+  v["f"]=1
+  for (l in u) {
+    print "outer1", l;
+    for (l in v) {
+      print " inner", l;
+    }
+    print "outer2", l;
+  }
+  print "end", l;
+  l="a"
+  exit;
+}'
+PASS: awk nested loops with the same variable
+======================
+echo -ne '' >input
+echo -ne '' | awk '
+BEGIN{
+cnt = 0
+a[cnt] = "zeroth"
+a[++cnt] = "first"
+delete a[cnt--]
+print cnt
+print "[0]:" a[0]
+print "[1]:" a[1]
+}'
+PASS: awk 'delete a[v--]' evaluates v-- once
+======================
+echo -ne '' >input
+echo -ne '' | awk 'func f(,) { }' 2>&1
+PASS: awk func arg parsing 1
+======================
+echo -ne '' >input
+echo -ne '' | awk 'func f(a,,b) { }' 2>&1
+PASS: awk func arg parsing 2
+======================
+echo -ne '' >input
+echo -ne '' | awk 'func f(a,) { }' 2>&1
+PASS: awk func arg parsing 3
+======================
+echo -ne '' >input
+echo -ne '' | awk 'func f(a b) { }' 2>&1
+PASS: awk func arg parsing 4
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN {print()}' 2>&1
+PASS: awk handles empty ()
+======================
+echo -ne '' >input
+echo -ne 'a:b c:d\ne:f g:h' | awk '{FS=":"; print $1}'
+PASS: awk FS assignment
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{n=(2^31)-1; print n, int(n), n%1, ++n, int(n), n%1}'
+PASS: awk large integer
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN{ A[1]=2; A["qwe"]="asd"; print length(A)}'
+PASS: awk length(array)
+======================
+echo -ne '' >input
+echo -ne 'qwe' | awk '{print length; print length(); print length("qwe"); print length(99+9)}'
+PASS: awk length()
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ print length, 1 }'
+PASS: awk print length, 1
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ print length 1 }'
+PASS: awk print length 1
+======================
+echo -ne '' >input
+echo -ne '\n' | awk 'length == 0 { print "foo" }'
+PASS: awk length == 0
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{ if (length == 0) { print "bar" } }'
+PASS: awk if (length == 0)
+======================
+echo -ne 'do re mi\n' >input
+echo -ne '{print $2; print ARGC;}' | awk -f - input
+PASS: awk -f and ARGC
+======================
+echo -ne 'do re mi\n' >input
+echo -ne '' | awk -e '{print $2; print ARGC;}' input
+PASS: awk -e and ARGC
+======================
+echo -ne '' >input
+echo -ne 'BEGIN { if (1) break; else a = 1 }' | awk -f - 2>&1; echo $?
+PASS: awk break
+======================
+echo -ne '' >input
+echo -ne 'BEGIN { if (1) continue; else a = 1 }' | awk -f - 2>&1; echo $?
+PASS: awk continue
+======================
+echo -ne '' >input
+echo -ne '' | awk -e '{ for() }' 2>&1
+PASS: awk handles invalid for loop
+======================
+echo -ne '' >input
+echo -ne '' | awk -e foo:bar: 2>&1
+PASS: awk handles colon not preceded by ternary
+======================
+echo -ne '' >input
+echo -ne '' | awk -e '{delete}' 2>&1
+PASS: awk errors on missing delete arg
+======================
+echo -ne '' >input
+echo -ne '\n' | awk '{printf("hello%c null\n", 0)}'
+PASS: awk printf('%c') can output NUL
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { printf "[%-10c]\n", 0 }' | od -tx1
+PASS: awk printf('%-10c') can output NUL
+======================
+echo -ne '' >input
+echo -ne 'anything' | awk 2>&1 -- '{ $(-1) }'
+PASS: awk negative field access
+======================
+echo -ne '' >input
+echo -ne 'anything' | awk -v i=1 "BEGIN {print \"str\" ++i}"
+PASS: awk do not allow "str"++
+======================
+echo -ne '' >input
+echo -ne 'foo--bar' | awk -F '-*' '{print $1 "-" $2 "=" $3 "*" $4}'
+PASS: awk FS regex which can match empty string
+======================
+echo -ne '' >input
+echo -ne 'a=====123=' | awk -F '=+' '{print $NF}'
+PASS: awk $NF is empty
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { exit 42 } END { exit }'; echo $?
+PASS: awk exit N propagates through END's exit
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { print "STDERR %s" >"/dev/stderr" }' 2>&1
+PASS: awk print + redirect
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { "echo HELLO" | getline; print }'
+PASS: awk "cmd" | getline
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { printf "%%\n" }'
+PASS: awk printf %% prints one %
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { printf "Hello\
+ world\n" }'
+PASS: awk backslash+newline eaten with no trace
+======================
+echo -ne '' >input
+echo -ne '─ process timing ────────────────────────────────────┬─ overall results ────┐
+│        run time : 0 days, 0 hrs, 0 min, 56 sec      │  cycles done : 0     │
+│   last new find : 0 days, 0 hrs, 0 min, 1 sec       │ corpus count : 208   │
+│last saved crash : none seen yet                     │saved crashes : 0     │
+│ last saved hang : none seen yet                     │  saved hangs : 0     │
+├─ cycle progress ─────────────────────┬─ map coverage┴──────────────────────┤
+│  now processing : 184.1 (88.5%)      │    map density : 0.30% / 0.52%      │
+│  runs timed out : 0 (0.00%)          │ count coverage : 2.18 bits/tuple    │
+├─ stage progress ─────────────────────┼─ findings in depth ─────────────────┤
+│  now trying : havoc                  │ favored items : 43 (20.67%)         │
+│ stage execs : 11.2k/131k (8.51%)     │  new edges on : 52 (25.00%)         │
+│ total execs : 179k                   │ total crashes : 0 (0 saved)         │
+│  exec speed : 3143/sec               │  total tmouts : 0 (0 saved)         │
+├─ fuzzing strategy yields ────────────┴─────────────┬─ item geometry ───────┤
+│   bit flips : 11/648, 4/638, 5/618                 │    levels : 4         │
+│  byte flips : 0/81, 0/71, 0/52                     │   pending : 199       │
+│ arithmetics : 11/4494, 0/1153, 0/0                 │  pend fav : 35        │
+│  known ints : 1/448, 0/1986, 0/2288                │ own finds : 207       │
+│  dictionary : 0/0, 0/0, 0/0, 0/0                   │  imported : 0         │
+│havoc/splice : 142/146k, 23/7616                    │ stability : 100.00%   │
+│py/custom/rq : unused, unused, unused, unused       ├───────────────────────┘
+│    trim/eff : 57.02%/26, 0.00%                     │          [cpu000:100%]
+└────────────────────────────────────────────────────┘^C' | awk '$5=$$5=$0'; echo $?
+PASS: awk assign while assign
+======================
+echo -ne '' >input
+echo -ne 'word1 word2 word3\r' | awk '{ $1=$0; print }'
+PASS: awk does not split on CR (char 13)
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { a=0?"bug":"ok"; print a}'
+PASS: awk = and ?: precedence
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\\\"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \\
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\\\\\"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \\\
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\\\\\\\"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \\\\
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\&"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \&
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\0"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \0
+======================
+echo -ne '' >input
+echo -ne '' | awk 'BEGIN { s="\\\\0"; print "s=" s; print gensub("a", s, "g", "a|a") }'
+PASS: awk gensub backslashes \\0
+======================
+echo -ne '' >input
+echo -ne 'a\nb\n' | awk '$2 != 0'
+PASS: awk references to empty fields
+======================
+echo -ne '' >input
+echo -ne 'abc\n' | awk 'sub(/abc/, "\\\d")'
+PASS: awk sub literal backslash in replacement
+PASS: basename-does-not-remove-identical-extension
+PASS: basename-works
+======================
+echo -ne '' >input
+echo -ne '1 /* comment */ + 2' | bc
+PASS: bc comment
+======================
+echo -ne '' >input
+echo -ne '1 /*/ + 2 */ + 3' | bc
+PASS: bc /*/ is not a closed comment
+======================
+echo -ne '' >input
+echo -ne '1 /* " */ + 2' | bc
+PASS: bc comment with "
+======================
+echo -ne '' >input
+echo -ne '"string/*";9' | bc
+PASS: bc "string/*" is not a comment
+======================
+echo -ne '' >input
+echo -ne '#foo' | bc
+PASS: bc comment 3: unterminated #comment
+======================
+echo -ne '' >input
+echo -ne '1 \\\n + 2' | bc
+PASS: bc backslash 1
+======================
+echo -ne '' >input
+echo -ne '"STR\n"' | bc
+PASS: bc string 1
+======================
+echo -ne 'read();halt' >input
+echo -ne '4' | bc input
+PASS: bc read() 4<EOF>
+======================
+echo -ne 'read()^2;halt' >input
+echo -ne '4\n' | bc input
+PASS: bc read()^2
+======================
+echo -ne 'read()*read();halt' >input
+echo -ne '4\n5' | bc input
+PASS: bc read()*read()
+======================
+echo -ne '' >input
+echo -ne 'if (0) 1 else 2; 9' | bc
+PASS: bc if 0 else
+======================
+echo -ne '' >input
+echo -ne 'if (1) 1 else 2; 9' | bc
+PASS: bc if 1 else
+======================
+echo -ne '' >input
+echo -ne 'if (1) if (1) 1 else 2 else 3; 9' | bc
+PASS: bc if 1 if 1 else else
+======================
+echo -ne '' >input
+echo -ne 'if (0) 1 else if (1) 2; 9' | bc
+PASS: bc if 0 else if 1
+======================
+echo -ne '' >input
+echo -ne 'i=2; for (;;) { 2; if(--i==0) break; 3; }; 9' | bc
+PASS: bc for (;;)
+======================
+echo -ne '' >input
+echo -ne 'i=0; for(;i<3;)++i; 9' | bc
+PASS: bc for (;cond;)
+======================
+echo -ne '' >input
+echo -ne 'i=1; for(;i<4;i++)i; 9' | bc
+PASS: bc for (;cond;upd)
+======================
+echo -ne '' >input
+echo -ne 'for(i=1;i<4;i++)i; 9' | bc
+PASS: bc for (init;cond;upd)
+======================
+echo -ne '' >input
+echo -ne 'for (;;) {2;break}; 9' | bc
+PASS: bc for (;;) {break}
+======================
+echo -ne '' >input
+echo -ne 'define w() {return}\nw();9' | bc
+PASS: bc define {return}
+======================
+echo -ne '' >input
+echo -ne 'define w() { auto z; return 8; }; w(); 9' | bc
+PASS: bc define auto
+======================
+echo -ne '' >input
+echo -ne 'define w(x) { auto x[]; return x; }; w(8); 9' | bc
+PASS: bc define auto array same name
+======================
+echo -ne '' >input
+echo -ne 'define w()\n{ auto z; return 8; }\nw()\n9' | bc
+PASS: bc define with body on next line
+======================
+echo -ne '' >input
+echo -ne 'define void w() {print "void"}\nw()\n9' | bc
+PASS: bc void function
+======================
+echo -ne '' >input
+echo -ne 'define void() {print "void"}\nvoid()\n9' | bc
+PASS: bc function named 'void'
+======================
+echo -ne '' >input
+echo -ne 'void=6\nvoid\n9' | bc
+PASS: bc variable named 'void'
+======================
+echo -ne '' >input
+echo -ne 'if(0)\n3\n9' | bc
+PASS: bc if(cond)<NL>
+======================
+echo -ne '' >input
+echo -ne 'if(0)3 else\n4\n9' | bc
+PASS: bc if(cond) stmt else<NL>
+======================
+echo -ne '' >input
+echo -ne 'i=9;while(--i)\ni\n9' | bc
+PASS: bc while(cond)<NL>
+======================
+echo -ne '' >input
+echo -ne 'ifz=1;ifz\n++ifz;ifz++\nifz' | bc
+PASS: bc ifz does not match if keyword
+======================
+echo -ne '' >input
+echo -ne 'e(0)-2' | bc -l
+PASS: bc -l 'e(0)-2'
+======================
+echo -ne '' >input
+echo -ne '(!a&&b)' | bc
+PASS: bc (!a&&b)
+======================
+echo -ne '' >input
+echo -ne 'print ""' | bc
+PASS: bc print ""
+======================
+echo -ne '' >input
+echo -ne 'print 1,2,3' | bc
+PASS: bc print 1,2,3
+======================
+echo -ne '' >input
+echo -ne 'length(0); length(100); length(0.01); length(0.00120); length(0.012-0.012);' | bc
+PASS: bc length
+======================
+echo -ne '' >input
+echo -ne '{ print 1 }' | bc
+PASS: bc { print 1 }
+======================
+echo -ne '' >input
+echo -ne '-10 < -9' | bc
+PASS: bc comparison 1
+======================
+echo -ne '' >input
+echo -ne 'if(1) {
+	11
+	while(1) {
+		21
+		while(1) {
+			31
+			break
+			32
+		}
+		22
+		break
+		23
+	}
+	12
+} else {
+	88
+}
+99
+' | bc
+PASS: bc nested loops and breaks
+======================
+echo -ne '' >input
+echo -ne 'i=2
+while(i--) {
+	11
+	if(i) {
+		21
+		continue
+		22
+	} else {
+		31
+		continue
+	32
+	}
+	12
+}
+99
+' | bc
+PASS: bc continue in if
+======================
+echo -ne '' >input
+echo -ne 'for(i=1; i<3; i++) {
+    i
+    if(i==2) continue
+    77
+}
+99
+' | bc
+PASS: bc continue in for
+======================
+echo -ne '' >input
+echo -ne 'a=ZZ;a;ibase=36;a=ZZ;a;ibase=Z;a=ZZ;a' | bc
+PASS: bc ibase
+======================
+echo -ne '' >input
+echo -ne '
+for (b = 2; b <= 16; ++b) {
+	if (b == 10) continue
+	obase = 10
+	print "ibase = A; ibase = ", b, "\n"
+	obase = b
+	for (i = 0; i <= 65536; ++i) {
+		i
+		print "0.", i, "\n"
+		print "1.", i, "\n"
+		print i, ".", i, "\n"
+	}
+}' | bc 2>&1 | bc 2>&1 | md5sum 2>&1
+PASS: bc parsing of numbers
+======================
+echo -ne '' >input
+echo -ne '
+for (b = 2; b <= 101; ++b) {
+	if (b == 10) continue
+	s = b * b
+	print "obase = ", b, "\n"
+	for (i = 0; i <= s; ++i) {
+		i
+		print "0.", i, "\n"
+		print "1.", i, "\n"
+		print i, ".", i, "\n"
+	}
+	2189432174861923048671023498128347619023487610234689172304.192748960128745108927461089237469018723460
+}' | bc 2>&1 | bc 2>&1 | md5sum 2>&1
+PASS: bc printing of numbers
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_add.bc 2>&1; echo E:$? >&2; } | diff -u - bc_add_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_add.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_arctangent.bc 2>&1; echo E:$? >&2; } | diff -u - bc_arctangent_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_arctangent.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_array.bc 2>&1; echo E:$? >&2; } | diff -u - bc_array_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_array.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_arrays.bc 2>&1; echo E:$? >&2; } | diff -u - bc_arrays_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_arrays.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_bessel.bc 2>&1; echo E:$? >&2; } | diff -u - bc_bessel_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_bessel.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_boolean.bc 2>&1; echo E:$? >&2; } | diff -u - bc_boolean_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_boolean.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_cosine.bc 2>&1; echo E:$? >&2; } | diff -u - bc_cosine_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_cosine.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_decimal.bc 2>&1; echo E:$? >&2; } | diff -u - bc_decimal_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_decimal.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_divide.bc 2>&1; echo E:$? >&2; } | diff -u - bc_divide_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_divide.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_exponent.bc 2>&1; echo E:$? >&2; } | diff -u - bc_exponent_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_exponent.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_log.bc 2>&1; echo E:$? >&2; } | diff -u - bc_log_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_log.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_misc.bc 2>&1; echo E:$? >&2; } | diff -u - bc_misc_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_misc.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_misc1.bc 2>&1; echo E:$? >&2; } | diff -u - bc_misc1_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_misc1.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_misc2.bc 2>&1; echo E:$? >&2; } | diff -u - bc_misc2_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_misc2.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_modulus.bc 2>&1; echo E:$? >&2; } | diff -u - bc_modulus_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_modulus.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_multiply.bc 2>&1; echo E:$? >&2; } | diff -u - bc_multiply_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_multiply.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_numbers1.bc 2>&1; echo E:$? >&2; } | diff -u - bc_numbers1_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_numbers1.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_numbers2.bc 2>&1; echo E:$? >&2; } | diff -u - bc_numbers2_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_numbers2.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_pi.bc 2>&1; echo E:$? >&2; } | diff -u - bc_pi_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_pi.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_power.bc 2>&1; echo E:$? >&2; } | diff -u - bc_power_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_power.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_references.bc 2>&1; echo E:$? >&2; } | diff -u - bc_references_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_references.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_sine.bc 2>&1; echo E:$? >&2; } | diff -u - bc_sine_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_sine.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_sqrt.bc 2>&1; echo E:$? >&2; } | diff -u - bc_sqrt_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_sqrt.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_strings.bc 2>&1; echo E:$? >&2; } | diff -u - bc_strings_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_strings.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_subtract.bc 2>&1; echo E:$? >&2; } | diff -u - bc_subtract_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_subtract.bc
+======================
+echo -ne '' >input
+echo -ne '' | { { bc -lq bc_vars.bc 2>&1; echo E:$? >&2; } | diff -u - bc_vars_results.txt; echo E:$?; } 2>&1
+PASS: bc -lq bc_vars.bc
+PASS: bunzip2-reads-from-standard-input
+PASS: bunzip2-removes-compressed-file
+PASS: bunzip2: doesnt exist
+PASS: bunzip2: unknown suffix
+PASS: bunzip2: already exists
+PASS: bunzip2: stream unpack
+PASS: bunzip2: delete src
+PASS: bunzip2: test_bz2 file
+PASS: bunzip2: pbzip_4m_zeros file
+PASS: bunzip2: bz2_issue_11.bz2 corrupted example
+PASS: bunzip2: bz2_issue_12.bz2 corrupted example
+PASS: bzcat-does-not-remove-compressed-file
+PASS: zcat: dont delete gz src
+PASS: zcat: dont delete bz2 src
+PASS: zcat: dont delete Z src
+======================
+echo -ne '\x42\x5a\x68\x39\x31\x41\x59\x26\x53\x59\x63\x3e\xd6\xe2\x00\x00\x00\xc1\x00\x00\x10\x20\x00\x20\x00\x21\x00\x82\xb1\x77\x24\x53\x85\x09\x06\x33\xed\x6e\x20' >input
+echo -ne '' | bzcat input input; echo $?
+PASS: bzcat can print many files
+======================
+echo -ne '\x42\x5a\x68\x39\x17\x72\x45\x38\x50\x90\x00\x00\x00\x00' >input
+echo -ne '' | bzcat input input; echo $?
+PASS: bzcat can handle compressed zero-length bzip2 files
+======================
+echo -ne '\x1f\x9d\x90\x61\x14\x00' >input
+echo -ne '' | zcat input input; echo $?
+PASS: zcat can print many files
+======================
+echo -ne '\x1f\x9d\x90\x00' >input
+echo -ne '' | zcat input input; echo $?
+PASS: zcat can handle compressed zero-length (.Z) files
+======================
+echo -ne '' >input
+echo -ne '' | cal 1 2000
+PASS: cal 2000
+PASS: cat-prints-a-file
+PASS: cat-prints-a-file-and-standard-input
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | cat -e
+PASS: cat -e
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | cat -v
+PASS: cat -v
+======================
+echo -ne '' >input
+echo -ne 'line 1\n\nline 3\n' | cat -n
+PASS: cat -n
+======================
+echo -ne '' >input
+echo -ne 'line 1\n\nline 3\n' | cat -b
+PASS: cat -b
+PASS: cmp-detects-difference
+======================
+echo -ne '456\nabc\n' >input
+echo -ne '123\ndef\n' | comm input -
+PASS: comm test 1
+======================
+echo -ne '456\nabc\n' >input
+echo -ne '123\ndef\n' | comm - input
+PASS: comm test 2
+======================
+echo -ne 'abc\nxyz\n' >input
+echo -ne 'def\n' | comm input -
+PASS: comm test 3
+======================
+echo -ne 'abc\nxyz\n' >input
+echo -ne 'def\n' | comm - input
+PASS: comm test 4
+======================
+echo -ne '123\nabc\n' >input
+echo -ne 'def\n' | comm input -
+PASS: comm test 5
+======================
+echo -ne '123\nabc\n' >input
+echo -ne 'def\n' | comm - input
+PASS: comm test 6
+======================
+echo -ne 'abc' >input
+echo -ne 'def' | comm input -
+PASS: comm unterminated line 1
+======================
+echo -ne 'abc' >input
+echo -ne 'def' | comm - input
+PASS: comm unterminated line 2
+PASS: cp-RHL-does_not_preserve-links
+PASS: cp-a-files-to-dir
+PASS: cp-a-preserves-links
+PASS: cp-copies-empty-file
+PASS: cp-copies-large-file
+PASS: cp-copies-small-file
+PASS: cp-d-files-to-dir
+PASS: cp-dev-file
+PASS: cp-dir-create-dir
+PASS: cp-dir-existing-dir
+PASS: cp-does-not-copy-unreadable-file
+PASS: cp-files-to-dir
+PASS: cp-follows-links
+PASS: cp-parents
+PASS: cp-preserves-hard-links
+PASS: cp-preserves-links
+PASS: cp-preserves-source-file
+======================
+echo -ne '' >input
+echo -ne '' | \
+cd cp.testdir || exit 1; cp * ../cp.testdir2 2>&1; echo $?; cd ../cp.testdir2 || exit 1
+test ! -L file         && test   -f file             || echo BAD: file
+test ! -L file_symlink && test   -f file_symlink     || echo BAD: file_symlink
+test ! -L dir          && test ! -e dir              || echo BAD: dir
+test ! -L dir_symlink  && test ! -e dir_symlink      || echo BAD: dir_symlink
+
+FAIL: cp
+diff: can't stat 'expected': No such file or directory
+======================
+echo -ne '' >input
+echo -ne '' | \
+cd cp.testdir || exit 1; cp -d * ../cp.testdir2 2>&1; echo $?; cd ../cp.testdir2 || exit 1
+test ! -L file         && test   -f file             || echo BAD: file
+test   -L file_symlink && test   -f file_symlink     || echo BAD: file_symlink
+test ! -L dir          && test ! -e dir              || echo BAD: dir
+test   -L dir_symlink  && test ! -e dir_symlink      || echo BAD: dir_symlink
+
+  cd cp.testdir || exit 1; cp -d * ../cp.testdir2 2>&1; echo $?; cd ../cp.testdir2 || exit 1
+     ^~~~~~~~~~
+[ eval arg at line 103 of ./testing.sh ]:2
+
+    $ECHO -ne "$5" | eval "$2" > actual
+                     ^~~~
+./testing.sh:103: cd '/tmp/src/build-dynamic/testsuite/cp.testdir2/cp.testdir': No such file or directory
+======================
+echo -ne '' >input
+echo -ne '' | echo -ne '\x42\x5a\x68\x39\x31\x41\x59\x26\x53\x59\x64\x1e\x91\x8c\x00\x00\x48\x7f\x80\x4c\x48\x08\x00\x28\x01\xff\xe0\x3f\x24\x14\x00\x0e\x20\xdc\x60\x20\x00\x92\x11\xea\xa0\x1a\x00\x00\x00\x03\x20\x8a\x93\xd4\x9a\x68\x1a\x0d\x1e\x91\xa1\xa0\x06\x98\xe3\x5c\x2f\xd9\x26\xa1\x25\x24\x20\xed\x47\xc7\x21\x40\x2b\x6e\xf2\xe6\xfe\x98\x13\x68\xa8\xbd\x82\xb2\x4f\x26\x02\x24\x16\x5b\x22\x16\x72\x74\x15\xcd\xc1\xa6\x9e\xa6\x5e\x6c\x16\x37\x35\x01\x99\xc4\x81\x21\x29\x28\x4b\x69\x51\xa9\x3c\x1a\x9b\x0a\xe1\xe4\xb4\xaf\x85\x73\xba\x23\x10\x59\xe8\xb3\xe1\xa1\x63\x05\x8c\x4f\xc5\xdc\x91\x4e\x14\x24\x19\x07\xa4\x63\x00' | bzcat | cpio -i 2>&1; echo $?;
+ls -ln cpio.testdir | sed 's/  */ /g' | cut -d' ' -f 1-5,9- | grep -v '^total '
+PASS: cpio extracts zero-sized hardlinks
+======================
+echo -ne '' >input
+echo -ne '' | find cpio.testdir | cpio -H newc --create | (cd cpio.testdir2 && cpio -i 2>&1); echo $?;
+ls -ln cpio.testdir2/cpio.testdir | sed 's/  */ /g' | cut -d' ' -f 1-5,9- | grep -v '^total '
+PASS: cpio extracts zero-sized hardlinks 2
+======================
+echo -ne '' >input
+echo -ne '' | echo /usr/bin | cpio -dp cpio.testdir 2>&1; echo $?;
+ls cpio.testdir
+PASS: cpio -p with absolute paths
+======================
+echo -ne '' >input
+echo -ne '' | cd cpio.testdir && { echo file; echo link; } | cpio -ovHnewc >pack.cpio && rm ???? && cpio -idmvu <pack.cpio 2>/dev/null;
+ stat -c '%a %n' file
+FAIL: cpio restores suid/sgid bits
+diff: can't stat 'expected': No such file or directory
+======================
+echo -ne '' >input
+echo -ne '' | echo -ne '\x42\x5a\x68\x39\x31\x41\x59\x26\x53\x59\x64\x1e\x91\x8c\x00\x00\x48\x7f\x80\x4c\x48\x08\x00\x28\x01\xff\xe0\x3f\x24\x14\x00\x0e\x20\xdc\x60\x20\x00\x92\x11\xea\xa0\x1a\x00\x00\x00\x03\x20\x8a\x93\xd4\x9a\x68\x1a\x0d\x1e\x91\xa1\xa0\x06\x98\xe3\x5c\x2f\xd9\x26\xa1\x25\x24\x20\xed\x47\xc7\x21\x40\x2b\x6e\xf2\xe6\xfe\x98\x13\x68\xa8\xbd\x82\xb2\x4f\x26\x02\x24\x16\x5b\x22\x16\x72\x74\x15\xcd\xc1\xa6\x9e\xa6\x5e\x6c\x16\x37\x35\x01\x99\xc4\x81\x21\x29\x28\x4b\x69\x51\xa9\x3c\x1a\x9b\x0a\xe1\xe4\xb4\xaf\x85\x73\xba\x23\x10\x59\xe8\xb3\xe1\xa1\x63\x05\x8c\x4f\xc5\xdc\x91\x4e\x14\x24\x19\x07\xa4\x63\x00' | bzcat | cpio -id 2>&1; echo $?
+PASS: cpio extracts in existing directory
+======================
+echo -ne '' >input
+echo -ne '' | echo /tmp/src/build-dynamic/testsuite/cpio.tests | cpio -o -H newc | cpio -tv 2>&1 | head -n1 | awk ' { print $2 } '; echo $?
+PASS: cpio uses by default uid/gid
+======================
+echo -ne '' >input
+echo -ne '' | echo /tmp/src/build-dynamic/testsuite/cpio.tests | cpio -o -H newc -R 1234:5678 | cpio -tv 2>&1 | head -n1 | awk ' { print $2 } '; echo $?
+PASS: cpio -R with create
+======================
+echo -ne '' >input
+echo -ne '' | echo /tmp/src/build-dynamic/testsuite/cpio.tests | cpio -o -H newc | cpio -tv -R 8765:4321 2>&1 | head -n1 | awk ' { print $2 } '; echo $?
+PASS: cpio -R with extract
+======================
+echo -ne '' >input
+echo -ne '' | cryptpw -m des QWErty '123456789012345678901234567890'
+PASS: cryptpw des 12
+======================
+echo -ne '' >input
+echo -ne '' | cryptpw -m des QWErty 55
+PASS: cryptpw des 55
+======================
+echo -ne '' >input
+echo -ne '' | cryptpw -m des QWErty zz
+PASS: cryptpw des zz
+SKIPPED: cryptpw sha256
+SKIPPED: cryptpw sha256 rounds=99999
+SKIPPED: cryptpw sha512
+SKIPPED: cryptpw sha512 rounds=99999
+PASS: cut-cuts-a-character
+PASS: cut-cuts-a-closed-range
+PASS: cut-cuts-a-field
+PASS: cut-cuts-an-open-range
+PASS: cut-cuts-an-unclosed-range
+======================
+echo -ne 'the quick brown fox\n' >input
+echo -ne 'jumps over the lazy dog\n' | cut -d' ' -f2 - input
+PASS: cut '-' (stdin) and multi file handling
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -b 3,3,3 input
+PASS: cut -b a,a,a
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -b 1-3,2-5,7-9,9-10 input
+PASS: cut -b overlaps
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -b 3-8,4-6 input
+PASS: -b encapsulated
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -b 8-3 abc.txt 2>/dev/null || echo err
+PASS: cut high-low error
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -c 4-10 input
+PASS: cut -c a-b
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -c 41- input
+PASS: cut -c a-
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -c -39 input
+PASS: cut -c -b
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -c 40 input
+PASS: cut -c a
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -c 3,5-7,10 input
+PASS: cut -c a,b-c,d
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -d ':' -f 5- input
+PASS: cut -f a-
+======================
+echo -ne 'one:two:three:four:five:six:seven
+alpha:beta:gamma:delta:epsilon:zeta:eta:theta:iota:kappa:lambda:mu
+the quick brown fox jumps over the lazy dog
+' >input
+echo -ne '' | cut -d ' ' -f 3 input
+PASS: cut show whole line with no delim
+======================
+echo -ne '' >input
+echo -ne '' | echo 'ref_categorie=test' | cut -c 1-15 
+PASS: cut with echo, -c (a-b)
+======================
+echo -ne '' >input
+echo -ne '' | echo 'ref_categorie=test' | cut -c 14
+PASS: cut with echo, -c (a)
+======================
+echo -ne 'abcdefghijklmnopqrstuvwxyz' >input
+echo -ne '' | cut -c 4,5,20 input
+PASS: cut with -c (a,b,c)
+======================
+echo -ne 'abcdefghijklmnopqrstuvwxyz' >input
+echo -ne '' | cut -b 4,5,20 input
+PASS: cut with -b (a,b,c)
+======================
+echo -ne '406378:Sales:Itorre:Jan
+031762:Marketing:Nasium:Jim
+636496:Research:Ancholie:Mel
+396082:Sales:Jucacion:Ed
+' >input
+echo -ne '' | cut -d: -f3 -s input
+PASS: cut with -d -f(:) -s
+======================
+echo -ne '406378:Sales:Itorre:Jan
+031762:Marketing:Nasium:Jim
+636496:Research:Ancholie:Mel
+396082:Sales:Jucacion:Ed
+' >input
+echo -ne '' | cut -d' ' -f3 -s input && echo yes
+PASS: cut with -d -f( ) -s
+======================
+echo -ne '406378:Sales:Itorre:Jan
+031762:Marketing:Nasium:Jim
+636496:Research:Ancholie:Mel
+396082:Sales:Jucacion:Ed
+' >input
+echo -ne '' | cut -da -f3 -s input
+PASS: cut with -d -f(a) -s
+======================
+echo -ne '406378:Sales:Itorre:Jan
+031762:Marketing:Nasium:Jim
+636496:Research:Ancholie:Mel
+396082:Sales:Jucacion:Ed
+' >input
+echo -ne '' | cut -da -f3 -s -n input
+PASS: cut with -d -f(a) -s -n
+======================
+echo -ne '' >input
+echo -ne 'Bother, said Pooh. It's your husband, and he has a gun.
+Cheerios are donut seeds.
+Talk is cheap because supply exceeds demand.
+Weather forecast for tonight : dark.
+Apple: you can buy better, but you can't pay more.
+Subcalifragilisticexpialidocious.
+Auntie Em: Hate you, hate Kansas. Took the dog. Dorothy.' | cut -DF 2,7,5
+PASS: cut -DF
+======================
+echo -ne '' >input
+echo -ne 'a::b\n' | cut -d ':' -f 1-3
+PASS: cut empty field
+======================
+echo -ne '' >input
+echo -ne 'a::b::c:d\n' | cut -d ':' -f 3-5
+PASS: cut empty field 2
+PASS: date-@-works
+PASS: date-R-works
+PASS: date-format-works
+FAIL: date-timezone
++ 13431 busybox date -d '1999-1-2 3:4:5Z'
+date: invalid date '1999-1-2 3:4:5Z'
++ dt=''
+PASS: date-u-works
+PASS: date-works
+FAIL: date-works-1
++ unset LANG
++ unset LANGUAGE
++ unset LC_TIME
++ unset LC_ALL
++ 13487 busybox date -d '1:2' '+%T'
++ dt='01:02:00'
++ test 'x01:02:00' '=' 'x01:02:00'
++ 13488 busybox date -d '1:2:3' '+%T'
++ dt='01:02:03'
++ test 'x01:02:03' '=' 'x01:02:03'
++ host_date=/bin/date
++ 13489 /bin/date -d '1999-1-2 3:4:5'
++ hdt='Sat Jan  2 03:04:05 UTC 1999'
++ 13490 busybox date -d '1999-1-2 3:4:5'
++ dt='Sat Jan  2 03:04:05 UTC 1999'
++ test 'xSat Jan  2 03:04:05 UTC 1999' '=' 'xSat Jan  2 03:04:05 UTC 1999'
++ 13491 busybox date -d 200001231133 '+%c'
++ dt='Sun Jan 23 11:33:00 2000'
++ test 'xSun Jan 23 11:33:00 2000' '=' 'xSun Jan 23 11:33:00 2000'
++ 13492 busybox date -d 200001231133.30 '+%c'
++ dt='Sun Jan 23 11:33:30 2000'
++ test 'xSun Jan 23 11:33:30 2000' '=' 'xSun Jan 23 11:33:30 2000'
++ lcbbd='LC_ALL=C busybox date'
++ 13493 eval 'LC_ALL=C' busybox date '+%a'
++ 13493 busybox date '+%a'
++ wd=Wed
++ 13495 eval 'LC_ALL=C' busybox date '+%b'
++ 13495 busybox date '+%b'
++ mn=Jul
++ 13497 eval 'LC_ALL=C' busybox date '+%e'
++ 13497 busybox date '+%e'
++ dm=' 9'
++ 13499 eval 'LC_ALL=C' busybox date '+%H'
++ 13499 busybox date '+%H'
++ h=01
++ 13501 eval 'LC_ALL=C' busybox date '+%M'
++ 13501 busybox date '+%M'
++ m=18
++ 13503 eval 'LC_ALL=C' busybox date '+%S'
++ 13503 busybox date '+%S'
++ s=01
++ 13505 eval 'LC_ALL=C' busybox date -u '+%Z'
++ 13505 busybox date -u '+%Z'
++ z=UTC
++ 13507 eval 'LC_ALL=C' busybox date '+%Y'
++ 13507 busybox date '+%Y'
++ y=2025
++ res=OK
++ dm=9
++ '[' 9 -ge 1 ']'
++ '[' 9 -le 31 ']'
++ h=1
++ '[' 1 -ge 0 ']'
++ '[' 1 -le 23 ']'
++ m=18
++ '[' 18 -ge 0 ']'
++ '[' 18 -le 59 ']'
++ s=1
++ '[' 1 -ge 0 ']'
++ '[' 1 -le 59 ']'
++ '[' UTC '=' UTC ']'
++ '[' 2025 -ge 1970 ']'
++ test xOK '=' xOK
++ 13509 head -n 1
++ dt=$'+ 13510 busybox date -d 012311332000.30 \'%+c\''
++ test $'x+ 13510 busybox date -d 012311332000.30 \'%+c\'' '=' x
+======================
+echo -ne '' >input
+echo -ne '10 20+p' | dc
+PASS: dc basic syntax (stdin, multiple args)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e'10 20+p'
+PASS: dc basic syntax (argv, single arg)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e10 -e20+p
+PASS: dc basic syntax (argv, multiple args)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e'8 8 * 2 2 + / p'
+PASS: dc complex with spaces (single arg)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e'8 8*2 2+/p'
+PASS: dc complex without spaces (single arg)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e8 -e8 -e\* -e2 -e2 -e+ -e/ -ep
+PASS: dc complex with spaces (multiple args)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e8 -e8\*2 -e2+/p
+PASS: dc complex without spaces (multiple args)
+======================
+echo -ne '' >input
+echo -ne '' | dc -e'[40 2 +] x f'
+PASS: dc: x should execute strings
+======================
+echo -ne '' >input
+echo -ne '' | dc -e'42 x f'
+PASS: dc: x should not execute or pop non-strings
+======================
+echo -ne '' >input
+echo -ne '' | dc -e'42 112 a x'
+PASS: dc: x should work with strings created from a
+======================
+echo -ne '' >input
+echo -ne '' | dc -e '[\q] p'
+PASS: dc: p should print invalid escapes
+======================
+echo -ne '' >input
+echo -ne '' | dc -e '[q\] p'
+PASS: dc: p should print trailing backslashes
+======================
+echo -ne '' >input
+echo -ne '' | dc -e '[\] p'
+PASS: dc: p should parse/print single backslashes
+======================
+echo -ne '' >input
+echo -ne '' | dc -e '92 a p'
+PASS: dc: p should print single backslash strings
+======================
+echo -ne '1?2\nf' >input
+echo -ne '9\n' | dc -finput
+PASS: dc read
+======================
+echo -ne '1?2\nf' >input
+echo -ne '[str]\n' | dc -finput
+PASS: dc read string
+======================
+echo -ne '' >input
+echo -ne '[1p]sa [2p]sb 1 2>a\n9p' | dc
+PASS: dc '>a' (conditional execute string) 1
+======================
+echo -ne '' >input
+echo -ne '[1p]sa [2p]sb 2 1>a\n9p' | dc
+PASS: dc '>a' (conditional execute string) 2
+======================
+echo -ne '' >input
+echo -ne '[1p]sa [2p]sb 2 1>aeb\n9p' | dc
+PASS: dc '>aeb' (conditional execute string with else)
+======================
+echo -ne '' >input
+echo -ne '[2p]s \n[3p]\nl x\n9p' | dc
+PASS: dc space can be a register
+======================
+echo -ne '' >input
+echo -ne '[2p]s\n[3p]l\nx\n9p' | dc
+PASS: dc newline can be a register
+======================
+echo -ne '' >input
+echo -ne '0Zp\n0.000Zp\n100Zp\n0.01Zp\n0.00120Zp\n0.0012 0.0012 - Zp\n' | dc
+PASS: dc Z (length) for numbers
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_add.dc 2>&1; echo E:$? >&2; } | diff -u - dc_add_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_add.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_boolean.dc 2>&1; echo E:$? >&2; } | diff -u - dc_boolean_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_boolean.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_decimal.dc 2>&1; echo E:$? >&2; } | diff -u - dc_decimal_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_decimal.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_divide.dc 2>&1; echo E:$? >&2; } | diff -u - dc_divide_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_divide.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_divmod.dc 2>&1; echo E:$? >&2; } | diff -u - dc_divmod_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_divmod.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_misc.dc 2>&1; echo E:$? >&2; } | diff -u - dc_misc_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_misc.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_modexp.dc 2>&1; echo E:$? >&2; } | diff -u - dc_modexp_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_modexp.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_modulus.dc 2>&1; echo E:$? >&2; } | diff -u - dc_modulus_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_modulus.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_multiply.dc 2>&1; echo E:$? >&2; } | diff -u - dc_multiply_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_multiply.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_power.dc 2>&1; echo E:$? >&2; } | diff -u - dc_power_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_power.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_sqrt.dc 2>&1; echo E:$? >&2; } | diff -u - dc_sqrt_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_sqrt.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_strings.dc 2>&1; echo E:$? >&2; } | diff -u - dc_strings_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_strings.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc dc_subtract.dc 2>&1; echo E:$? >&2; } | diff -u - dc_subtract_results.txt; echo E:$?; } 2>&1
+PASS: dc dc_subtract.dc
+======================
+echo -ne '' >input
+echo -ne '' | { { dc -x dcx_vars.dc 2>&1; echo E:$? >&2; } | diff -u - dcx_vars_results.txt; echo E:$?; } 2>&1
+PASS: dc -x dcx_vars.dc
+PASS: dd-accepts-if
+PASS: dd-accepts-of
+PASS: dd-copies-from-standard-input-to-standard-output
+PASS: dd-count-bytes
+PASS: dd-prints-count-to-standard-error
+PASS: dd-reports-write-errors
+======================
+echo -ne 'qwe\nasd\nzxc\n' >input
+echo -ne 'asd\n' | diff -u - input | sed 's/	.*//'
+PASS: diff of stdin
+======================
+echo -ne 'qwe\nasd\nzxc' >input
+echo -ne 'asd\n' | diff -u - input | sed 's/	.*//'
+PASS: diff of stdin, no newline in the file
+======================
+echo -ne '' >input
+echo -ne 'stdin' | diff - -; echo $?; wc -c
+PASS: diff of stdin, twice
+======================
+echo -ne '' >input
+echo -ne 'a\n' | diff -u - input | sed 's/	.*//'
+PASS: diff of empty file against stdin
+======================
+echo -ne 'a\n' >input
+echo -ne '' | diff -u - input | sed 's/	.*//'
+PASS: diff of empty file against nonempty one
+======================
+echo -ne 'abc' >input
+echo -ne 'abc ' | diff -ub - input; echo $?
+PASS: diff -b treats EOF as whitespace
+======================
+echo -ne 'a \t c\n' >input
+echo -ne 'a\t \tc\n' | diff -ub - input; echo $?
+PASS: diff -b treats all spaces as equal
+======================
+echo -ne 'a\n' >input
+echo -ne '\na\n\n' | diff -uB - input; echo $?
+PASS: diff -B ignores changes whose lines are all blank
+======================
+echo -ne 'a\n' >input
+echo -ne '\nb\n\n' | diff -uB - input | sed 's/	.*//'
+PASS: diff -B does not ignore changes whose lines are not all blank
+======================
+echo -ne '\n1\n' >input
+echo -ne '1\n' | diff -qB - input; echo $?
+PASS: diff -B ignores blank single line change
+======================
+echo -ne '0\n' >input
+echo -ne '1\n' | diff -qB - input; echo $?
+PASS: diff -B does not ignore non-blank single line change
+======================
+echo -ne 'abc\na  c\ndef\n' >input
+echo -ne 'a c\n' | diff -ub - input | sed 's/	.*//'
+PASS: diff always takes context from old file
+======================
+echo -ne '' >input
+echo -ne '' | diff -ur diff1 diff2/subdir | sed 's/	.*//'
+PASS: diff diff1 diff2/subdir
+======================
+echo -ne '' >input
+echo -ne '' | diff -ur diff1 diff2/subdir/- | sed 's/	.*//'
+PASS: diff dir dir2/file/-
+======================
+echo -ne '' >input
+echo -ne '' | diff -ur diff1 diff2/subdir | sed 's/	.*//'
+PASS: diff of dir and fifo
+======================
+echo -ne '' >input
+echo -ne '' | diff -ur diff1 diff2/subdir | sed 's/	.*//'
+PASS: diff of file and fifo
+======================
+echo -ne '' >input
+echo -ne '' | diff -urN diff1 diff2/subdir | sed 's/	.*//'
+PASS: diff -rN does not read non-regular files
+======================
+echo -ne '' >input
+echo -ne '' | diff -ur diff1 diff2/ | sed 's/	.*//'; diff -ur .///diff1 diff2//// | sed 's/	.*//'
+PASS: diff diff1 diff2/
+PASS: dirname-handles-absolute-path
+PASS: dirname-handles-empty-path
+PASS: dirname-handles-multiple-slashes
+PASS: dirname-handles-relative-path
+PASS: dirname-handles-root
+PASS: dirname-handles-single-component
+PASS: dirname-works
+PASS: du-h-works
+PASS: du-k-works
+PASS: du-l-works
+PASS: du-m-works
+PASS: du-s-works
+PASS: du-works
+PASS: echo-does-not-print-newline
+PASS: echo-prints-argument
+PASS: echo-prints-arguments
+PASS: echo-prints-dash
+PASS: echo-prints-newline
+PASS: echo-prints-non-opts
+PASS: echo-prints-slash-zero
+PASS: echo-prints-slash_00041
+PASS: echo-prints-slash_0041
+PASS: echo-prints-slash_041
+PASS: echo-prints-slash_41
+======================
+echo -ne '' >input
+echo -ne '\t12345678\t12345678\n' | expand
+PASS: expand
+PASS: expr-big
+PASS: expr-works
+======================
+echo -ne '' >input
+echo -ne '' | factor '  0'
+PASS: factor '  0'
+======================
+echo -ne '' >input
+echo -ne '' | factor +1
+PASS: factor +1
+======================
+echo -ne '' >input
+echo -ne '' | factor ' +2'
+PASS: factor ' +2'
+======================
+echo -ne '' >input
+echo -ne '' | factor 1024
+PASS: factor 1024
+======================
+echo -ne '' >input
+echo -ne '' | factor 2305843009213693951
+PASS: factor 2^61-1
+======================
+echo -ne '' >input
+echo -ne '' | factor 4611686018427387903
+PASS: factor 2^62-1
+======================
+echo -ne '' >input
+echo -ne '' | factor 18446744073709551615
+PASS: factor 2^64-1
+======================
+echo -ne '' >input
+echo -ne '' | factor $((2*3*5*7*11*13*17*19*23*29*31*37*41*43*47))
+PASS: factor $((2*3*5*7*11*13*17*19*23*29*31*37*41*43*47))
+======================
+echo -ne '' >input
+echo -ne '' | factor 18446743988964486098
+PASS: factor 2 * 3037000493 * 3037000493
+======================
+echo -ne '' >input
+echo -ne '' | factor 18446743902517389507
+PASS: factor 3 * 2479700513 * 2479700513
+======================
+echo -ne '' >input
+echo -ne '' | factor 6144867742934288163
+PASS: factor 3 * 37831 * 37831 * 37831 * 37831
+======================
+echo -ne '' >input
+echo -ne '' | factor 1996249827549539523
+PASS: factor 3 * 13^16
+======================
+echo -ne '' >input
+echo -ne '' | factor 665416609183179841
+PASS: factor 13^16
+FAIL: false-is-silent
++ cmp - /dev/null
+cmp: EOF on /dev/null
+PASS: false-returns-failure
+PASS: find-supports-minus-xdev
+======================
+echo -ne '' >input
+echo -ne '' | cd find.tempdir && find -type f 2>&1
+FAIL: find -type f
+diff: can't stat 'expected': No such file or directory
+======================
+echo -ne '' >input
+echo -ne '' | cd find.tempdir && find testfile -exec true {} \; 2>&1; echo $?
+  cd find.tempdir && find testfile -exec true {} \; 2>&1; echo $?
+     ^~~~~~~~~~~~
+[ eval arg at line 103 of ./testing.sh ]:1
+
+    $ECHO -ne "$5" | eval "$2" > actual
+                     ^~~~
+./testing.sh:103: cd '/tmp/src/build-dynamic/testsuite/find.tempdir/find.tempdir': No such file or directory
+FAIL: find -exec exitcode 1
+--- expected
++++ actual
+@@ -1 +1 @@
+-0
++1
+======================
+echo -ne '' >input
+echo -ne '' | cd find.tempdir && find testfile -exec true {} + 2>&1; echo $?
+  cd find.tempdir && find testfile -exec true {} + 2>&1; echo $?
+     ^~~~~~~~~~~~
+[ eval arg at line 103 of ./testing.sh ]:1
+
+    $ECHO -ne "$5" | eval "$2" > actual
+                     ^~~~
+./testing.sh:103: cd '/tmp/src/build-dynamic/testsuite/find.tempdir/find.tempdir': No such file or directory
+FAIL: find -exec exitcode 2
+--- expected
++++ actual
+@@ -1 +1 @@
+-0
++1
+======================
+echo -ne '' >input
+echo -ne 'y' | cd find.tempdir && find testfile -ok true {} ';' 2>&1; echo $?
+  cd find.tempdir && find testfile -ok true {} ';' 2>&1; echo $?
+     ^~~~~~~~~~~~
+[ eval arg at line 103 of ./testing.sh ]:1
+
+    $ECHO -ne "$5" | eval "$2" > actual
+                     ^~~~
+./testing.sh:103: cd '/tmp/src/build-dynamic/testsuite/find.tempdir/find.tempdir': No such file or directory
+FAIL: find -ok
+--- expected
++++ actual
+@@ -1 +1 @@
+-true testfile ?0
++1
+======================
+echo -ne '' >input
+echo -ne '' | cd find.tempdir && find testfile -exec false {} \; 2>&1; echo $?
+  cd find.tempdir && find testfile -exec false {} \; 2>&1; echo $?
+     ^~~~~~~~~~~~
+[ eval arg at line 103 of ./testing.sh ]:1
+
+    $ECHO -ne "$5" | eval "$2" > actual
+                     ^~~~
+./testing.sh:103: cd '/tmp/src/build-dynamic/testsuite/find.tempdir/find.tempdir': No such file or directory
+FAIL: find -exec exitcode 3
+--- expected
++++ actual
+@@ -1 +1 @@
+-0
++1
+======================
+echo -ne '' >input
+echo -ne '' | cd find.tempdir && find testfile -exec false {} + 2>&1; echo $?
+  cd find.tempdir && find testfile -exec false {} + 2>&1; echo $?
+     ^~~~~~~~~~~~
+[ eval arg at line 103 of ./testing.sh ]:1
+
+    $ECHO -ne "$5" | eval "$2" > actual
+                     ^~~~
+./testing.sh:103: cd '/tmp/src/build-dynamic/testsuite/find.tempdir/find.tempdir': No such file or directory
+PASS: find -exec exitcode 4
+======================
+echo -ne '' >input
+echo -ne '' | find / -maxdepth 0 -name /
+PASS: find / -maxdepth 0 -name /
+======================
+echo -ne '' >input
+echo -ne '' | find // -maxdepth 0 -name /
+PASS: find // -maxdepth 0 -name /
+======================
+echo -ne '' >input
+echo -ne '' | find / -maxdepth 0 -name //
+PASS: find / -maxdepth 0 -name //
+======================
+echo -ne '' >input
+echo -ne '' | find // -maxdepth 0 -name //
+PASS: find // -maxdepth 0 -name //
+======================
+echo -ne '' >input
+echo -ne '' | find ./// -name .
+PASS: find ./// -name .
+======================
+echo -ne '' >input
+echo -ne '' | find ./// -name .///
+PASS: find ./// -name .///
+======================
+echo -ne '' >input
+echo -ne '123456\tasdf' | fold -w 7 -s
+PASS: fold -s
+======================
+echo -ne '' >input
+echo -ne 'qq w eee r tttt y' | fold -w1
+PASS: fold -w1
+======================
+echo -ne '' >input
+echo -ne 'The NUL is here:>\0< and another one is here:>\0< - they must be preserved
+' | fold -sw22
+PASS: fold with NULs
+======================
+echo -ne '' >input
+echo -ne '' | grep nonexistent 2> /dev/null ; echo $?
+PASS: grep (exit with error)
+======================
+echo -ne '' >input
+echo -ne '' | grep grep '/tmp/src/build-dynamic/testsuite/grep.tests' > /dev/null 2>&1 ; echo $?
+PASS: grep (exit success)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\nthree\nthree\nthree\n' | grep two
+PASS: grep (default to stdin)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\nthree\nthree\nthree\n' | grep two -
+PASS: grep - (specify stdin)
+======================
+echo -ne 'one\ntwo\nthree\nthree\nthree\n' >input
+echo -ne '' | grep two input
+PASS: grep input (specify file)
+======================
+echo -ne 'bug' >input
+echo -ne '' | grep bug input
+PASS: grep (no newline at EOL)
+======================
+echo -ne 'one\ntwo\nthree\nthree\nthree\n' >input
+echo -ne '' | grep two input empty 2>/dev/null
+PASS: grep two files
+======================
+echo -ne 'one\ntwo\nthree\n' >input
+echo -ne 'one\ntwo\ntoo\nthree\nthree\n' | grep two - input
+PASS: grep - infile (specify stdin and file)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | grep two - nonexistent 2> /dev/null ; echo $?
+PASS: grep - nofile (specify stdin and nonexisting file)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | grep -q nomatch - nonexistent 2> /dev/null ; echo $?
+PASS: grep -q - nofile (specify stdin and nonexisting file, no match)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | grep -q two - nonexistent ; echo $?
+PASS: grep -q - nofile (specify stdin and nonexisting file, match)
+======================
+echo -ne '' >input
+echo -ne '' | grep -s nomatch nonexistent ; echo $?
+PASS: grep -s nofile (nonexisting file, no match)
+======================
+echo -ne '' >input
+echo -ne 'nomatch\ndomatch\nend\n' | grep -s domatch nonexistent - ; echo $?
+PASS: grep -s nofile - (stdin and nonexisting file, match)
+SKIPPED: grep handles NUL in files
+SKIPPED: grep handles NUL on stdin
+SKIPPED: grep matches NUL
+======================
+echo -ne 'one\ntwo\n' >input
+echo -ne '' | grep -e one -e two input ; echo $?
+PASS: grep handles multiple regexps
+======================
+echo -ne 'one\ntwo\n' >input
+echo -ne '' | grep -F -e one -e two input ; echo $?
+PASS: grep -F handles multiple expessions
+======================
+echo -ne 'FOO\n' >input
+echo -ne '' | grep -F -i foo input ; echo $?
+PASS: grep -F handles -i
+======================
+echo -ne 'tw\ntwo\nthree\n' >input
+echo -ne 'tw.\nthr\n' | grep -f - input ; echo $?
+PASS: grep can read regexps from stdin
+======================
+echo -ne 'foo\n' >input
+echo -ne '' | grep -x foo input ; echo $?
+PASS: grep -x (full match)
+======================
+echo -ne 'foo bar\n' >input
+echo -ne '' | grep -x foo input ; echo $?
+PASS: grep -x (partial match 1)
+======================
+echo -ne 'bar foo\n' >input
+echo -ne '' | grep -x foo input ; echo $?
+PASS: grep -x (partial match 2)
+======================
+echo -ne 'foo\n' >input
+echo -ne '' | grep -x -F foo input ; echo $?
+PASS: grep -x -F (full match)
+======================
+echo -ne 'foo bar\n' >input
+echo -ne '' | grep -x -F foo input ; echo $?
+PASS: grep -x -F (partial match 1)
+======================
+echo -ne 'bar foo\n' >input
+echo -ne '' | grep -x -F foo input ; echo $?
+PASS: grep -x -F (partial match 2)
+======================
+echo -ne 'asd\n' >input
+echo -ne '' | grep -L qwe input; echo $?
+PASS: grep -L exitcode 0
+======================
+echo -ne 'qwe\n' >input
+echo -ne 'asd\n' | grep -L qwe input -; echo $?
+PASS: grep -L exitcode 0 #2
+======================
+echo -ne 'qwe\n' >input
+echo -ne '' | grep -L qwe input; echo $?
+PASS: grep -L exitcode 1
+======================
+echo -ne '' >input
+echo -ne 'b\ar\nfoo\nbaz' | grep -E fo+
+PASS: grep -E supports extended regexps
+======================
+echo -ne '' >input
+echo -ne 'foo\nbar\n' | egrep foo
+PASS: grep is also egrep
+======================
+echo -ne '' >input
+echo -ne 'FOO\n' | egrep foo ; [ $? -ne 0 ] && echo yes
+PASS: egrep is not case insensitive
+======================
+echo -ne '' >input
+echo -ne '00:19:3E:00:AA:5E 00:1D:60:3D:3A:FB 00:22:43:49:FB:AA\n' | grep -E -o '([[:xdigit:]]{2}[:-]){5}[[:xdigit:]]{2}'
+PASS: grep -E -o prints all matches
+======================
+echo -ne '' >input
+echo -ne '/var/test\n' | grep -o "[^/]*$"
+PASS: grep -o does not loop forever
+======================
+echo -ne '' >input
+echo -ne 'test\n' | grep -o "" | head -n1
+PASS: grep -o does not loop forever on zero-length match
+======================
+echo -ne '' >input
+echo -ne 'test\n' | grep -f input
+PASS: grep -f EMPTY_FILE
+======================
+echo -ne '' >input
+echo -ne 'test\n' | grep -v -f input
+PASS: grep -v -f EMPTY_FILE
+======================
+echo -ne '' >input
+echo -ne 'test\n' | grep -vxf input
+PASS: grep -vxf EMPTY_FILE
+======================
+echo -ne 'foop\n' >input
+echo -ne '' | grep -Fw foo input
+PASS: grep -Fw matches only words
+======================
+echo -ne 'foop foo\n' >input
+echo -ne '' | grep -Fw foo input
+PASS: grep -Fw doesn't stop on 1st mismatch
+======================
+echo -ne 'foop foo\n' >input
+echo -ne '' | grep -w foo input
+PASS: grep -w doesn't stop on 1st mismatch
+======================
+echo -ne 'strstr\n' >input
+echo -ne '' | grep -w ^str input
+PASS: grep -w ^str doesn't match str not at the beginning
+======================
+echo -ne 'anything\n' >input
+echo -ne '' | grep -w ^ input
+PASS: grep -w ^ doesn't hang
+======================
+echo -ne 'wordword\n' >input
+echo -ne '' | grep -w word input
+PASS: grep -w word doesn't match wordword
+======================
+echo -ne 'ww\n' >input
+echo -ne '' | grep -F -w w input
+PASS: grep -F -w w doesn't match ww
+======================
+echo -ne 'bword,word\nwordb,word\nbwordb,word\n' >input
+echo -ne '' | grep -w word input
+PASS: grep -w word match second word
+======================
+echo -ne '' >input
+echo -ne '  aa bb cc\n' | grep -x -v -e '.*aa.*' -e 'bb.*'; echo $?
+PASS: grep -x -v -e EXP1 -e EXP2 finds nothing if either EXP matches
+======================
+echo -ne '' >input
+echo -ne 'foo\nbar\nbaz\n' | grep -Fv "$(printf "foo\nbar\n")"
+PASS: grep PATTERN can be a newline-delimited list
+======================
+echo -ne '' >input
+echo -ne 'foo\nbar\nbaz\n' | grep -Fv -e "$(printf "foo\nbar\n")"
+PASS: grep -e PATTERN can be a newline-delimited list
+======================
+echo -ne '' >input
+echo -ne '' | grep -r . grep.testdir/symfoo
+PASS: grep -r on symlink to dir
+======================
+echo -ne '' >input
+echo -ne '' | grep -r . grep.testdir
+PASS: grep -r on dir/symlink to dir
+PASS: gunzip-reads-from-standard-input
+PASS: gunzip: doesnt exist
+PASS: gunzip: unknown suffix
+PASS: gunzip: already exists
+PASS: gunzip: stream unpack
+PASS: gunzip: delete src
+PASS: gzip-accepts-multiple-files
+PASS: gzip-accepts-single-minus
+PASS: gzip-compression-levels
+PASS: gzip-removes-original-file
+======================
+echo -ne '' >input
+echo -ne '' | head head.input
+PASS: head (without args)
+======================
+echo -ne '' >input
+echo -ne '' | head -n 2 head.input
+PASS: head -n <positive number>
+======================
+echo -ne '' >input
+echo -ne '' | head -n -9 head.input
+PASS: head -n <negative number>
+======================
+echo -ne '' >input
+echo -ne '\0\0\0\0' | hexdump -C
+PASS: hexdump -C with four NULs
+======================
+echo -ne '' >input
+echo -ne '\0\0\0\0\0\0\0\0\0\0\0' | hexdump -e '1/1 "%02x|"1/1 "%02x!\n"'
+PASS: hexdump does not think last padded block matches any full block
+======================
+echo -ne '' >input
+echo -ne '\0\0\0\0\0\0\0\0\0\0\0\0' | hexdump -e '1/1 "%02x|"1/1 "%02x!\n"'
+PASS: hexdump thinks last full block can match
+======================
+echo -ne '' >input
+echo -ne '\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff' | hexdump -e '16/1 " %3_u" "\n"'
+PASS: hexdump -e %3_u
+======================
+echo -ne '' >input
+echo -ne '\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff' | hexdump -e '16/1 " %4d" "\n"'
+PASS: hexdump -e /1 %d
+======================
+echo -ne '' >input
+echo -ne '\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff' | hexdump -e '8/2 " %6d" "\n"'
+PASS: hexdump -e /2 %d
+======================
+echo -ne '' >input
+echo -ne '\x4e\x61\xbc\x00AAAA' | hexdump -n4 -e '"%u"'
+PASS: hexdump -n4 -e '"%u"'
+PASS: hostid-works
+FAIL: hostname-d-works
++ 14543 busybox hostname -f
+hostname: build-edge-x86_64: Host not found
++ f=.
+PASS: hostname-i-works
+PASS: hostname-s-works
+PASS: hostname-works
+PASS: id-g-works
+PASS: id-u-works
+PASS: id-un-works
+PASS: id-ur-works
+PASS: ln-creates-hard-links
+PASS: ln-creates-soft-links
+PASS: ln-force-creates-hard-links
+PASS: ln-force-creates-soft-links
+PASS: ln-preserves-hard-links
+PASS: ln-preserves-soft-links
+PASS: ls-1-works
+PASS: ls-h-works
+PASS: ls-l-works
+PASS: ls-s-works
+======================
+echo -ne '' >input
+echo -ne '' | touch ls.testdir/A ls.testdir/B; ln -s ls.testdir ls.link; ls ls.link; ls -1 ls.link/; ls -1 ls.link; rm -f ls.link
+PASS: ls symlink_to_dir
+PASS: md5sum-verifies-non-binary-file
+PASS: md5sum
+PASS: md5sum -c EMPTY
+SKIPPED: mdev add /block/sda
+SKIPPED: mdev deletes /block/sda
+SKIPPED: mdev stops on first rule
+SKIPPED: mdev does not stop on dash-rule
+SKIPPED: mdev $ENVVAR=regex match
+SKIPPED: mdev move/symlink rule '>bar/baz'
+SKIPPED: mdev move/symlink rule '>bar/'
+SKIPPED: mdev move rule '=bar/baz/fname'
+SKIPPED: mdev regexp substring match + replace
+SKIPPED: mdev command
+SKIPPED: mdev move and command
+SKIPPED: mdev #maj,min and no explicit uid
+SKIPPED: move rule does not delete node with name == device_name
+PASS: mkdir-makes-a-directory
+PASS: mkdir-makes-parent-directories
+SKIPPED: mount (must be root to test this)
+PASS: mv-files-to-dir
+PASS: mv-files-to-dir-2
+PASS: mv-follows-links
+PASS: mv-moves-empty-file
+PASS: mv-moves-file
+PASS: mv-moves-hardlinks
+PASS: mv-moves-large-file
+PASS: mv-moves-small-file
+PASS: mv-moves-symlinks
+PASS: mv-moves-unreadable-files
+PASS: mv-preserves-hard-links
+PASS: mv-preserves-links
+PASS: mv-refuses-mv-dir-to-subdir
+PASS: mv-removes-source-file
+======================
+echo -ne 'line 1\n\nline 3\n' >input
+echo -ne '' | nl -b a input
+PASS: nl numbers all lines
+======================
+echo -ne 'line 1\n\nline 3\n' >input
+echo -ne '' | nl -b t input
+PASS: nl numbers non-empty lines
+======================
+echo -ne 'line 1\n\nline 3\n' >input
+echo -ne '' | nl -b n input
+PASS: nl numbers no lines
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od
+PASS: od (little-endian)
+SKIPPED: od -a (!DESKTOP)
+======================
+echo -ne '' >input
+echo -ne '\x00\x01\x02\x03\x04\x05\x06\x07\x08\x09\x0a\x0b\x0c\x0d\x0e\x0f\x10\x11\x12\x13\x14\x15\x16\x17\x18\x19\x1a\x1b\x1c\x1d\x1e\x1f\x70\x71\x72\x73\x74\x75\x76\x77\x78\x79\x7a\x7b\x7c\x7d\x7e\x7f\x80\x81\x82\x83\x84\x85\x86\x87\x88\x89\x8a\x8b\x8c\x8d\x8e\x8f\xf0\xf1\xf2\xf3\xf4\xf5\xf6\xf7\xf8\xf9\xfa\xfb\xfc\xfd\xfe\xff' | od -a
+PASS: od -a (DESKTOP)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -B
+PASS: od -B
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -o
+PASS: od -o (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -b
+PASS: od -b
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -c
+PASS: od -c
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -d
+PASS: od -d (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -D
+PASS: od -D (little-endian)
+SKIPPED: od -e (!DESKTOP little-endian)
+SKIPPED: od -F (!DESKTOP little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -f
+PASS: od -f (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -H
+PASS: od -H (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -X
+PASS: od -X (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -h
+PASS: od -h (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -x
+PASS: od -x (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -i
+PASS: od -i (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -O
+PASS: od -O (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -I
+PASS: od -I (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -L
+PASS: od -L (little-endian)
+======================
+echo -ne '' >input
+echo -ne '
+ABC�' | od -l
+PASS: od -l (little-endian)
+======================
+echo -ne '' >input
+echo -ne 'HELLO' | od -b
+PASS: od -b
+======================
+echo -ne '' >input
+echo -ne '\x00\x00\x00\x00\x00\x00\x00\x00' | od -f
+PASS: od -f
+======================
+echo -ne '' >input
+echo -ne 'HELLO' | od -b --traditional
+PASS: od -b --traditional
+======================
+echo -ne 'HELLO' >input
+echo -ne '' | od -b --traditional input
+PASS: od -b --traditional FILE
+PASS: paste
+PASS: paste-back-cuted-lines
+PASS: paste-multi-stdin
+PASS: paste-pairs
+PASS: paste-separate
+======================
+echo -ne '' >input
+echo -ne '' | pidof veryunlikelyoccuringbinaryname ; echo $?
+PASS: pidof (exit with error)
+======================
+echo -ne '' >input
+echo -ne '' | pidof pidof > /dev/null; echo $?
+PASS: pidof (exit with success)
+======================
+echo -ne '' >input
+echo -ne '' | pidof pidof.tests | grep -o -w 18086
+PASS: pidof this
+======================
+echo -ne '' >input
+echo -ne '' | pidof -o 1 init | grep -o -w 1
+PASS: pidof -o init
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '\c' foo
+PASS: printf produces no further output 1
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%s\c' foo bar
+PASS: printf produces no further output 2
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%s\n' foo '/home/packager'
+PASS: printf repeatedly uses pattern for each argv
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%b' 'a\tb' 'c\d\n' 2>&1; echo $?
+PASS: printf understands %b escaped_string
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%d\n' '"x' "'y" "'zTAIL" 2>&1; echo $?
+PASS: printf understands %d '"x' "'y" "'zTAIL"
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%s\n' '"x' "'y" "'zTAIL" 2>&1; echo $?
+PASS: printf understands %s '"x' "'y" "'zTAIL"
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '|%23.12f|\n' 5.25 2>&1; echo $?
+PASS: printf understands %23.12f
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '|%*.*f|\n' 23 12 5.25 2>&1; echo $?
+PASS: printf understands %*.*f
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '|%*f|\n' -23 5.25 2>&1; echo $?
+PASS: printf understands %*f with negative width
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '|%.*f|\n' -12 5.25 2>&1; echo $?
+PASS: printf understands %.*f with negative precision
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '|%*.*f|\n' -23 -12 5.25 2>&1; echo $?
+PASS: printf understands %*.*f with negative width/precision
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%zd\n' -5 2>&1; echo $?
+PASS: printf understands %zd
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%ld\n' -5 2>&1; echo $?
+PASS: printf understands %ld
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%Ld\n' -5 2>&1; echo $?
+PASS: printf understands %Ld
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%%\n' 2>&1; echo $?
+PASS: printf understands %%
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%d\n' 3 +3 '   3' '   +3' 2>&1; echo $?
+PASS: printf handles positive numbers for %d
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%i\n' 3 +3 '   3' '   +3' 2>&1; echo $?
+PASS: printf handles positive numbers for %i
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%x\n' 42 +42 '   42' '   +42' 2>&1; echo $?
+PASS: printf handles positive numbers for %x
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%0.3f\n' .42 +.42 '   .42' '   +.42' 2>&1; echo $?
+PASS: printf handles positive numbers for %f
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%d\n' 1 - 2 bad 3 123bad 4 2>&1; echo $?
+PASS: printf handles %d bad_input
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%' a b c 2>&1; echo $?
+PASS: printf aborts on bare %
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%r' a b c 2>&1; echo $?
+PASS: printf aborts on %r
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%0*d\n' 2 1 2>&1; echo $?
+PASS: printf treats leading 0 as flag
+======================
+echo -ne '' >input
+echo -ne '' | busybox printf '%0 d\n' 2 2>&1; echo $?
+PASS: printf handles multiple flags
+PASS: pwd-prints-working-directory
+======================
+echo -ne '' >input
+echo -ne '' | readlink ./readlink_testdir/testfile
+PASS: readlink on a file
+======================
+echo -ne '' >input
+echo -ne '' | readlink ./testlink
+PASS: readlink on a link
+======================
+echo -ne '' >input
+echo -ne '' | readlink -f ./readlink_testdir/testfile
+PASS: readlink -f on a file
+======================
+echo -ne '' >input
+echo -ne '' | readlink -f ./testlink
+PASS: readlink -f on a link
+======================
+echo -ne '' >input
+echo -ne '' | readlink -f ./readlink_testdir/readlink_testdir/testlink
+PASS: readlink -f on an invalid link
+======================
+echo -ne '' >input
+echo -ne '' | readlink -f readlink_testdir/../readlink_testdir/testfile
+PASS: readlink -f on a weird dir
+======================
+echo -ne '' >input
+echo -ne '' | realpath /not_file
+PASS: realpath on non-existent absolute path 1
+======================
+echo -ne '' >input
+echo -ne '' | realpath /not_file/
+PASS: realpath on non-existent absolute path 2
+======================
+echo -ne '' >input
+echo -ne '' | realpath //not_file
+PASS: realpath on non-existent absolute path 3
+======================
+echo -ne '' >input
+echo -ne '' | realpath /not_dir/not_file 2>&1
+PASS: realpath on non-existent absolute path 4
+======================
+echo -ne '' >input
+echo -ne '' | realpath realpath_testdir/not_file
+PASS: realpath on non-existent local file 1
+======================
+echo -ne '' >input
+echo -ne '' | realpath realpath_testdir/not_dir/not_file 2>&1
+PASS: realpath on non-existent local file 2
+======================
+echo -ne '' >input
+echo -ne '' | realpath link1
+PASS: realpath on link to non-existent file 1
+======================
+echo -ne '' >input
+echo -ne '' | realpath link2 2>&1
+PASS: realpath on link to non-existent file 2
+======================
+echo -ne '' >input
+echo -ne '' | realpath ./link1
+PASS: realpath on link to non-existent file 3
+======================
+echo -ne '' >input
+echo -ne '' | realpath ./link2 2>&1
+PASS: realpath on link to non-existent file 4
+======================
+echo -ne 'line 1\n\nline 3\n' >input
+echo -ne '' | rev input
+PASS: rev works
+======================
+echo -ne 'line 1\n\nline 3' >input
+echo -ne '' | rev input
+PASS: rev file with missing newline
+======================
+echo -ne 'lin\000e 1\n\nline 3\n' >input
+echo -ne '' | rev input
+PASS: rev file with NUL character
+======================
+echo -ne '---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+---------------+--------------+\nabc\n' >input
+echo -ne '' | rev input
+PASS: rev file with long line
+PASS: rm-removes-file
+PASS: rmdir-removes-parent-directories
+======================
+echo -ne '' >input
+echo -ne 'hello\n' | sed ""
+PASS: sed no files (stdin)
+======================
+echo -ne '' >input
+echo -ne 'hello\n' | sed "" -
+PASS: sed explicit stdin
+======================
+echo -ne '' >input
+echo -ne '\n' | sed -e 's/$/@/'
+PASS: sed handles empty lines
+======================
+echo -ne '' >input
+echo -ne 'hello' | sed "" - -
+PASS: sed stdin twice
+======================
+echo -ne '' >input
+echo -ne '' | sed -e '1 d'
+PASS: sed accepts blanks before command
+======================
+echo -ne '' >input
+echo -ne '2\n' | sed -e 'i1
+a3'
+PASS: sed accepts newlines in -e
+======================
+echo -ne '' >input
+echo -ne '2\n' | sed -e 'i\' -e '1' -e 'a\' -e '3'
+PASS: sed accepts multiple -e
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | sed -n -e s/foo/bar/ -e s/bar/baz/
+PASS: sed -n
+======================
+echo -ne '' >input
+echo -ne 'string\n' | sed 's/z*//g'
+PASS: sed with empty match
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | sed -e s/foo/bar/p -e s/bar/baz/p
+PASS: sed s//p
+======================
+echo -ne '' >input
+echo -ne 'abc\n' | sed -ne s/abc/def/p
+PASS: sed -n s//p
+======================
+echo -ne '' >input
+echo -ne '12345\n' | sed -e 's/[[:space:]]*/,/g'
+PASS: sed s//g (exhaustive)
+======================
+echo -ne '' >input
+echo -ne 'woo\n' | sed -e 's woo boing '
+PASS: sed s arbitrary delimiter
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | sed -e s/foo/bar/ -e s/bar/baz/
+PASS: sed s chains
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | sed -e s/foo/bar/ -e s/baz/nee/
+PASS: sed s chains2
+======================
+echo -ne '' >input
+echo -ne 'one@two' | sed -e 's@[@]@@'
+PASS: sed s [delimiter]
+======================
+echo -ne '' >input
+echo -ne 'one\ttwo' | sed 's/\t/ /'
+PASS: sed s with \t (GNU ext)
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | sed -e 'b one;p;: one'
+PASS: sed b (branch)
+======================
+echo -ne '' >input
+echo -ne 'foo\n' | sed -e 'b;p'
+PASS: sed b (branch with no label jumps to end)
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -e 's/a/1/;t one;p;: one;p'
+PASS: sed t (test/branch)
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -e 's/a/b/;:loop;t loop'
+PASS: sed t (test/branch clears test bit)
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -e 's/a/1/;T notone;p;: notone;p'
+PASS: sed T (!test/branch)
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -e 'n;p'
+PASS: sed n (flushes pattern space, terminates early)
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -e 'N;p'
+PASS: sed N (flushes pattern space (GNU behavior))
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed ':a;N;s/\n/ /;ta'
+PASS: sed N test2
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed 'N;s/\n/ /'
+PASS: sed N test3
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\nd\n' | sed "/b/N;/b\\nc/i woo"
+PASS: sed address match newline
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -n 'N;P;p'
+PASS: sed N (stops at end of input) and P (prints to first newline only)
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed G
+PASS: sed G (append hold space to pattern space)
+======================
+echo -ne '' >input
+echo -ne 'ook\n' | sed -e '/ook/d;s/ook/ping/p;i woot'
+PASS: sed d ends script iteration
+======================
+echo -ne '' >input
+echo -ne 'ook\nwoot\n' | sed -e '/ook/d;a\' -e 'bang'
+PASS: sed d ends script iteration (2)
+======================
+echo -ne '' >input
+echo -ne 'woo\0woo\0' | sed -e 's/woo/bang/g'
+PASS: sed embedded NUL g
+======================
+echo -ne 'woo\n' >input
+echo -ne 'woo\n' | sed -e 's/woo/bang/' input -
+PASS: sed normal newlines
+======================
+echo -ne 'woo\n' >input
+echo -ne 'woo' | sed -e 's/woo/bang/' input -
+PASS: sed leave off trailing newline
+======================
+echo -ne 'woo' >input
+echo -ne 'woo' | sed -e 's/woo/bang/' input -
+PASS: sed autoinsert newline
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo' | sed -e 's/nohit//' input -
+PASS: sed empty file plus cat
+======================
+echo -ne 'one\ntwo' >input
+echo -ne '' | sed -e 's/nohit//' input -
+PASS: sed cat plus empty file
+======================
+echo -ne '' >input
+echo -ne 'woot' | sed -e '/woot/a woo' -
+PASS: sed append autoinserts newline
+======================
+echo -ne 'boot' >input
+echo -ne 'woot' | sed -e '/oot/a woo' - input
+PASS: sed append autoinserts newline 2
+======================
+echo -ne 'boot' >input
+echo -ne '' | sed -e '/oot/a woo' -i input && cat input
+PASS: sed append autoinserts newline 3
+======================
+echo -ne '' >input
+echo -ne 'woot' | sed -e '/woot/i woo' -
+PASS: sed insert doesn't autoinsert newline
+======================
+echo -ne '' >input
+echo -ne 'one' | sed -e 'p' -
+PASS: sed print autoinsert newlines
+======================
+echo -ne 'one' >input
+echo -ne 'two' | sed -e 'p' input -
+PASS: sed print autoinsert newlines two files
+======================
+echo -ne 'no\n' >input
+echo -ne '' | sed -ne 's/woo/bang/' input
+PASS: sed noprint, no match, no newline
+======================
+echo -ne 'a woo\nb no' >input
+echo -ne 'c woo\nd no' | sed -ne 's/woo/bang/p' input -
+PASS: sed selective matches with one nl
+======================
+echo -ne 'a woo\nb woo' >input
+echo -ne 'c no\nd woo' | sed -ne 's/woo/bang/p' input -
+PASS: sed selective matches insert newline
+======================
+echo -ne 'a woo\nb woo' >input
+echo -ne 'c no\nd no' | sed -ne 's/woo/bang/p' input -
+PASS: sed selective matches noinsert newline
+======================
+echo -ne 'one' >input
+echo -ne 'two' | sed -e '/one/a 111' -e '/two/i 222' -e p input -
+PASS: sed clusternewline
+======================
+echo -ne 'thingy' >input
+echo -ne 'again' | sed -e 's/i/z/' -e 'woutputw' input -; echo -n X; cat outputw
+PASS: sed subst+write
+======================
+echo -ne 'a\0b\0' >input
+echo -ne 'c' | sed 's/i/z/' input -
+PASS: sed trailing NUL
+======================
+echo -ne 'a' >input
+echo -ne '' | sed 's/a/z\
+z/' input
+PASS: sed escaped newline in command
+======================
+echo -ne '' >input
+echo -ne 'hello\nthere' | sed -e '$p'
+PASS: sed match EOF
+======================
+echo -ne 'one\ntwo' >input
+echo -ne 'three\nfour' | sed -e '$p' input -
+PASS: sed match EOF two files
+======================
+echo -ne 'one\ntwo' >input
+echo -ne '' | sed -e '$i ook' -i input input2 && cat input input2
+PASS: sed match EOF inline
+======================
+echo -ne '' >input
+echo -ne '' | sed --version | grep -o 'GNU sed version '
+PASS: sed lie-to-autoconf
+======================
+echo -ne '' >input
+echo -ne 'woot' | sed -e '/woot/s//eep \0 eep/'
+PASS: sed backref from empty s uses range regex
+======================
+echo -ne '' >input
+echo -ne 'woot\n' | sed -e '/woot/s//eep \0 eep/'
+PASS: sed backref from empty s uses range regex with newline
+======================
+echo -ne '' >input
+echo -ne '' | sed -e '' -i 2> /dev/null || echo yes
+PASS: sed -i with no arg [GNUFAIL]
+======================
+echo -ne '' >input
+echo -ne 'xxx\n' | sed -e 's/xxx/[/'
+PASS: sed s/xxx/[/
+======================
+echo -ne '' >input
+echo -ne '0\n1\n2\n3\n' | sed 's/1/x/;T;n;: next;s/3/y/;t quit;n;b next;: quit;q'
+PASS: sed n command must reset 'substituted' bit
+======================
+echo -ne '' >input
+echo -ne 'first\nsecond\nthird\nfourth\n' | sed -n '1d;1,3p'
+PASS: sed d does not break n,m matching
+======================
+echo -ne '' >input
+echo -ne 'first\nsecond\nthird\nfourth\n' | sed -n '1d;1,/hir/p'
+PASS: sed d does not break n,regex matching
+======================
+echo -ne '' >input
+echo -ne 'first\nsecond\nthird\nfourth\nfirst2\nsecond2\nthird2\nfourth2\n' | sed -n '1,5d;1,/hir/p'
+PASS: sed d does not break n,regex matching #2
+======================
+echo -ne '' >input
+echo -ne 'first\nsecond\nthird\nfourth\n' | sed -n '2d;2,1p'
+PASS: sed 2d;2,1p (gnu compat)
+======================
+echo -ne '' >input
+echo -ne '/usr/lib\n' | sed 's,\(^/\|\)[^/][^/]*,>\0<,g'
+PASS: sed beginning (^) matches only once
+======================
+echo -ne '' >input
+echo -ne 'first\nsecond\n' | sed 'crepl'
+PASS: sed c
+======================
+echo -ne '' >input
+echo -ne 'qwe\nasd\nzxc\n' | sed '/asd/ { p; /s/ { s/s/c/ }; p; q }'
+PASS: sed nested {}s
+======================
+echo -ne '' >input
+echo -ne '	| one \\
+	| two \\
+' | sed -e '/| one /a \
+	| three \\' -e '/| one-/a \
+	| three-* \\'
+PASS: sed a cmd ended by double backslash
+======================
+echo -ne '' >input
+echo -ne 'line1\n' | sed '/1/a\\t\rzero\none\\ntwo\\\nthree'
+PASS: sed a cmd understands \n,\t,\r
+======================
+echo -ne '' >input
+echo -ne 'line1\n' | sed '/1/i\\t\rzero\none\\ntwo\\\nthree'
+PASS: sed i cmd understands \n,\t,\r
+======================
+echo -ne '' >input
+echo -ne '1\n2\n3\n4\n' | sed -n '1{N;N;d};1p;2,3p;3p;4p'
+PASS: sed with N skipping lines past ranges on next cmds
+======================
+echo -ne 'foo\n' >input
+echo -ne '' | cp input input2; sed -i -e '1s/foo/bar/' input input2 && cat input input2; rm input2
+PASS: sed -i with address modifies all files, not only first
+======================
+echo -ne '' >input
+echo -ne 'rrr\n' | sed 's/r/\r/'
+PASS: sed understands \r
+======================
+echo -ne '1\n2\n3\n4\n' >input
+echo -ne '' | sed '1,2d' -i input; echo $?; cat input
+PASS: sed -i finishes ranges correctly
+======================
+echo -ne '' >input
+echo -ne 'helllo\n' | sed 's/l*/@/g'
+PASS: sed zero chars match/replace advances correctly 1
+======================
+echo -ne '' >input
+echo -ne ' a.b\n' | sed 's [^ .]* x g'
+PASS: sed zero chars match/replace advances correctly 2
+======================
+echo -ne '' >input
+echo -ne '_aaa1aa\n' | sed 's/a/A/g'
+PASS: sed zero chars match/replace logic must not falsely trigger here 1
+======================
+echo -ne '' >input
+echo -ne 'qwerty\n' | sed 's/ *$/_/g'
+PASS: sed zero chars match/replace logic must not falsely trigger here 2
+======================
+echo -ne '' >input
+echo -ne '9+8=17\n' | sed 's+9\++X+'
+PASS: sed special char as s/// delimiter, in pattern
+======================
+echo -ne '' >input
+echo -ne '9+8=17\n' | sed 's&9&X\&&'
+PASS: sed special char as s/// delimiter, in replacement 1
+======================
+echo -ne '' >input
+echo -ne '9+8=17\n' | sed 's1\(9\)1X\11'
+PASS: sed special char as s/// delimiter, in replacement 2
+======================
+echo -ne '' >input
+echo -ne 'this is a regular line
+line with \
+continuation
+more regular lines
+line with \
+continuation
+' | sed ': testcont; /\\$/{ =; N; b testcont }'
+PASS: sed /$_in_regex/ should not match newlines, only end-of-line
+======================
+echo -ne '' >input
+echo -ne 'aa\n' | sed -e 's/a/b/2; s/a/c/g'
+PASS: sed s///NUM test
+======================
+echo -ne '' >input
+echo -ne '1\n2\n3\n4\n5\n' | sed /^2/,2{d}
+PASS: sed /regex/,N{...} addresses work
+======================
+echo -ne '' >input
+echo -ne '1\n2\n3\n4\n5\n' | sed /^2/,+2{d}
+PASS: sed /regex/,+N{...} addresses work
+======================
+echo -ne '' >input
+echo -ne 'a\n1\nc\nc\na\n2\na\n3\n' | sed -n '/a/,+1 p'
+PASS: sed /regex/,+N{...} addresses work 2
+======================
+echo -ne '1\n2\n3\n4\n5\n6\n7\n8\n' >input
+echo -ne '1\n2\n4\n5\n6\n7\n8\n' | cat - >input2; sed /^4/,+2{d} -i input input2; echo $?; cat input input2; rm input2
+PASS: sed /regex/,+N{...} -i works
+======================
+echo -ne '1\n2\n3\n4\n5\n6\n7\n8\n' >input
+echo -ne '1\n2\n4\n5\n6\n7\n8\n' | cat - >input2; sed /^4/,+0{d} -i input input2; echo $?; cat input input2; rm input2
+PASS: sed /regex/,+0{...} -i works
+======================
+echo -ne '1\n2\n3\n4\n5\n6\n7\n8\n' >input
+echo -ne '1\n2\n4\n5\n6\n7\n8\n' | cat - >input2; sed /^4/,+0d -i input input2; echo $?; cat input input2; rm input2
+PASS: sed /regex/,+0<cmd> -i works
+======================
+echo -ne '' >input
+echo -ne '123\nqwe\nasd\n' | sed 's/qwe/ZZZ/wz'; cat z; rm z
+PASS: sed 's///w FILE'
+======================
+echo -ne '' >input
+echo -ne 'q\nw\ne\nr\n' | sed '/w/p;//q'
+PASS: sed uses previous regexp
+======================
+echo -ne '' >input
+echo -ne 'abca\n' | sed -e 's/^a\|b//g'
+PASS: sed ^ OR not^
+======================
+echo -ne '' >input
+echo -ne 'a\nb\nc\n' | sed -n -e '/a/w sed.output' -e '/c/w sed.output' 2>&1 && cat sed.output && rm sed.output
+PASS: sed understands duplicate file name
+======================
+echo -ne '' >input
+echo -ne '' | seq 2> /dev/null || echo yes
+PASS: seq (exit with error)
+======================
+echo -ne '' >input
+echo -ne '' | seq 1 2 3 4 2> /dev/null || echo yes
+PASS: seq (exit with error)
+======================
+echo -ne '' >input
+echo -ne '' | seq 3
+PASS: seq one argument
+======================
+echo -ne '' >input
+echo -ne '' | seq 5 7
+PASS: seq two arguments
+======================
+echo -ne '' >input
+echo -ne '' | seq 7 5
+PASS: seq two arguments reversed
+======================
+echo -ne '' >input
+echo -ne '' | seq 3 3
+PASS: seq two arguments equal
+======================
+echo -ne '' >input
+echo -ne '' | seq 1 -15 1
+PASS: seq two arguments equal, arbitrary negative step
+======================
+echo -ne '' >input
+echo -ne '' | seq 1 +15 1
+PASS: seq two arguments equal, arbitrary positive step
+======================
+echo -ne '' >input
+echo -ne '' | seq 4 2 8
+PASS: seq count up by 2
+======================
+echo -ne '' >input
+echo -ne '' | seq 8 -2 4
+PASS: seq count down by 2
+======================
+echo -ne '' >input
+echo -ne '' | seq 4 -2 8
+PASS: seq count wrong way #1
+======================
+echo -ne '' >input
+echo -ne '' | seq 8 2 4
+PASS: seq count wrong way #2
+======================
+echo -ne '' >input
+echo -ne '' | seq 3 .3 4
+PASS: seq count by .3
+======================
+echo -ne '' >input
+echo -ne '' | seq 3 .30 4
+PASS: seq count by .30
+======================
+echo -ne '' >input
+echo -ne '' | seq 3 .30 4.000
+PASS: seq count by .30 to 4.000
+======================
+echo -ne '' >input
+echo -ne '' | seq .7 -.9 -2.2
+PASS: seq count by -.9
+======================
+echo -ne '' >input
+echo -ne '' | seq 4 0 8 | head -n 10
+PASS: seq count by zero
+======================
+echo -ne '' >input
+echo -ne '' | seq -w 003
+PASS: seq one argument with padding
+======================
+echo -ne '' >input
+echo -ne '' | seq -w 005 7
+PASS: seq two arguments with padding
+======================
+echo -ne '' >input
+echo -ne '' | seq -w 8 -3 04
+PASS: seq count down by 3 with padding
+======================
+echo -ne '' >input
+echo -ne '' | seq -w 09 .3 11
+PASS: seq count by .3 with padding 1
+======================
+echo -ne '' >input
+echo -ne '' | seq -w 03 .3 0004
+PASS: seq count by .3 with padding 2
+======================
+echo -ne '' >input
+echo -ne '' | seq -4 -2 -8
+PASS: seq from -4 count down by 2
+======================
+echo -ne '' >input
+echo -ne '' | seq -.0 -.25 -.9
+PASS: seq from -.0 count down by .25
+======================
+echo -ne '' >input
+echo -ne '' | seq -s : -1 1
+PASS: seq -s : with negative start
+======================
+echo -ne '' >input
+echo -ne '' | echo "da39a3ee5e6b4b0d3255bfef95601890afd80709 EMPTY" | sha1sum -c
+PASS: sha1sum: one-space separated input for -c
+PASS: sha1sum
+PASS: sha1sum -c EMPTY
+PASS: sha256sum
+PASS: sha256sum -c EMPTY
+PASS: sha3sum
+PASS: sha3sum -c EMPTY
+PASS: sha512sum
+PASS: sha512sum -c EMPTY
+======================
+echo -ne 'c\na\nb\n' >input
+echo -ne '' | sort input
+PASS: sort
+======================
+echo -ne '3\n1\n010\n' >input
+echo -ne '' | sort input
+PASS: sort #2
+======================
+echo -ne '' >input
+echo -ne 'b\na\nc\n' | sort
+PASS: sort stdin
+======================
+echo -ne '3\n1\n010\n' >input
+echo -ne '' | sort -n input
+PASS: sort numeric
+======================
+echo -ne 'point\nwook\npabst\naargh\nwalrus\n' >input
+echo -ne '' | sort -r input
+PASS: sort reverse
+======================
+echo -ne '42	1	3	woot
+42	1	010	zoology
+egg	1	2	papyrus
+7	3	42	soup
+999	3	0	algebra
+' >input
+echo -ne '' | sort -k4,4 input
+PASS: sort one key
+======================
+echo -ne '42	1	3	woot
+42	1	010	zoology
+egg	1	2	papyrus
+7	3	42	soup
+999	3	0	algebra
+' >input
+echo -ne '' | sort -k2,3n input
+PASS: sort key range with numeric option
+======================
+echo -ne '42	1	3	woot
+42	1	010	zoology
+egg	1	2	papyrus
+7	3	42	soup
+999	3	0	algebra
+' >input
+echo -ne '' | sort -k2,3n -r input
+PASS: sort key range with numeric option and global reverse
+======================
+echo -ne '42	1	3	woot
+42	1	010	zoology
+egg	1	2	papyrus
+7	3	42	soup
+999	3	0	algebra
+' >input
+echo -ne '' | sort -k2,3rn input
+PASS: sort key range with multiple options
+======================
+echo -ne 'c 3
+b 2
+d 2
+' >input
+echo -ne '' | sort -k 2,2n -k 1,1r input
+PASS: sort key range with two -k options
+======================
+echo -ne '/a/2
+/b/1
+' >input
+echo -ne '' | sort -n -k2 -t/ input
+PASS: sort with non-default leading delim 1
+======================
+echo -ne '/b/1
+/a/2
+' >input
+echo -ne '' | sort -n -k3 -t/ input
+PASS: sort with non-default leading delim 2
+======================
+echo -ne '//a/2
+//b/1
+' >input
+echo -ne '' | sort -n -k3 -t/ input
+PASS: sort with non-default leading delim 3
+======================
+echo -ne 'a/a:a
+a:b
+' >input
+echo -ne '' | sort -t: -k1,1 input
+PASS: sort with non-default leading delim 4
+======================
+echo -ne 'aa.2
+ab.1
+' >input
+echo -ne '' | sort -t. -k1,1.1 -k2 input
+PASS: sort with ENDCHAR
+======================
+echo -ne 'GLIBC_2.21
+GLIBC_2.1.1
+GLIBC_2.2.1
+GLIBC_2.2
+GLIBC_2.20
+GLIBC_2.10
+GLIBC_2.1
+' >input
+echo -ne '' | sort -t. -k 1,1 -k 2n,2n -k 3 input
+PASS: glibc build sort
+======================
+echo -ne 'GLIBC_2.10
+GLIBC_2.2.1
+GLIBC_2.1.1
+GLIBC_2.20
+GLIBC_2.2
+GLIBC_2.1
+GLIBC_2.21
+' >input
+echo -ne '' | sort -u -t. -k 1,1 -k 2n,2n -k 3 input
+PASS: glibc build sort unique
+======================
+echo -ne 'a c
+b c
+' >input
+echo -ne '' | sort -u -k2 input
+PASS: sort -u should consider field only when discarding
+======================
+echo -ne 'one\0two\0three\0' >input
+echo -ne '' | sort -z input
+PASS: sort -z outputs NUL terminated lines
+======================
+echo -ne '' >input
+echo -ne ' 2 \n 1 \n a \n' | sort -n -k2 -t ' '
+PASS: sort key doesn't strip leading blanks, disables fallback global sort
+======================
+echo -ne '222
+111
+' >input
+echo -ne '' | sort -o input input && cat input
+PASS: sort file in place
+======================
+echo -ne 'a 1
+b 2
+c 1
+d 2
+' >input
+echo -ne '' | sort -k2 -r -s input
+PASS: sort -sr (stable and reverse) does NOT reverse 'stable' ordering
+======================
+echo -ne '1Y
+5y
+1M
+2E
+3k
+3e
+2K
+4m
+1023
+1025
+3000
+1024
+' >input
+echo -ne '' | sort -h input
+PASS: sort -h
+======================
+echo -ne '2 April
+1  May
+3 March
+' >input
+echo -ne '' | sort -k2,2M input
+PASS: sort -k2,2M
+======================
+echo -ne 'z b
+a b
+z a
+a a' >input
+echo -ne '' | sort -s -u -k 2 input
+PASS: sort -s -u
+PASS: strings-works-like-GNU
+======================
+echo -ne '' >input
+echo -ne '' | sum -r '/tmp/src/build-dynamic/testsuite/sum.tests' | grep -c '/tmp/src/build-dynamic/testsuite/sum.tests' && echo wrongly_printed_filename || echo yes
+PASS: sum -r file doesn't print file's name
+======================
+echo -ne '' >input
+echo -ne '' | sum -r '/tmp/src/build-dynamic/testsuite/sum.tests' '/tmp/src/build-dynamic/testsuite/sum.tests' | grep -c '/tmp/src/build-dynamic/testsuite/sum.tests' && echo yes || echo wrongly_omitted_filename
+PASS: sum -r file file does print both names
+======================
+echo -ne '' >input
+echo -ne '' | sum -s '/tmp/src/build-dynamic/testsuite/sum.tests' | grep -c '/tmp/src/build-dynamic/testsuite/sum.tests' && echo yes || echo wrongly_omitted_filename
+PASS: sum -s file does print file's name
+PASS: tail-n-works
+UNTESTED: tail-works
+======================
+echo -ne '' >input
+echo -ne 'qw' | tail -c +55 2>&1; echo $?
+PASS: tail: +N with N > file length
+======================
+echo -ne '' >input
+echo -ne '' | 
+	dd if=/dev/zero bs=16k count=1 2>/dev/null | tail -c +8200 | wc -c;
+	dd if=/dev/zero bs=16k count=1 2>/dev/null | tail -c +8208 | wc -c;
+	
+PASS: tail: -c +N with largish N
+PASS: tar-archives-multiple-files
+PASS: tar-complains-about-missing-file
+PASS: tar-demands-at-least-one-ctx
+PASS: tar-demands-at-most-one-ctx
+PASS: tar-extracts-all-subdirs
+PASS: tar-extracts-file
+PASS: tar-extracts-from-standard-input
+PASS: tar-extracts-multiple-files
+PASS: tar-extracts-to-standard-output
+PASS: tar-handles-cz-options
+PASS: tar-handles-empty-include-and-non-empty-exclude-list
+PASS: tar-handles-exclude-and-extract-lists
+PASS: tar-handles-multiple-X-options
+PASS: tar-handles-nested-exclude
+PASS: tar_with_link_with_size
+FAIL: tar_with_prefix_fields
++ export TZ=UTC-1
++ res1='-rw-r--r-- fm3/users      9869 2007-03-12 10:44:54 VirtualBox-1.5.6_OSE/src/libs/xpcom18a4/ipc/ipcd/extensions/transmngr/public/ipcITransactionService.idl'
++ 31005 busybox tar tvf -
++ 31007 bunzip2
++ 31006 tar1_bz2
++ 31006 echo -ne $'\\x42\\x5a\\x68\\x39\\x31\\x41\\x59\\x26\\x53\\x59\\x12\\xd1\\x86\\x30\\x00\\x0c'
++ 31006 echo -ne $'\\xb8\\x7f\\x80\\xff\\x50\\x08\\xa0\\x5e\\xff\\xff\\xfd\\x7f\\xff\\xff\\xee\\xff'
++ 31006 echo -ne $'\\xff\\xff\\xfa\\x00\\x08\\x60\\x0f\\xc5\\x3e\\xf4\\xdc\\x00\\x00\\x59\\x25\\xbd'
++ 31006 echo -ne $'\\xb8\\x7a\\x02\\xb5\\x82\\x78\\x25\\xb0\\x89\\x54\\x10\\x11\\x44\\x8b\\x36\\x36'
++ 31006 echo -ne $'\\xc8\\x97\\x0d\\x34\\x9a\\x21\\xa9\\x36\\xa9\\xed\\x32\\x02\\x8d\\xa6\\x81\\x8a'
++ 31006 echo -ne $'\\x79\\x13\\x4d\\x1a\\x03\\x10\\x69\\xa0\\xd3\\x40\\x64\\x0f\\x44\\x68\\x3d\\x41'
++ 31006 echo -ne $'\\x2a\\x7a\\x20\\x09\\xa1\\x34\\x9a\\x09\\xa4\\xc8\\xf5\\x4f\\x46\\xa6\\x86\\x32'
++ 31006 echo -ne $'\\x4c\\x08\\x00\\x00\\xd0\\x06\\x9a\\x00\\xd3\\xd4\\x11\\x49\\xa7\\xb5\\x20\\x1a'
++ 31006 echo -ne $'\\x7a\\x80\\x00\\x00\\x00\\x00\\xd0\\x68\\x00\\x00\\x00\\x00\\x00\\x49\\xa8\\x89'
++ 31006 echo -ne $'\\xa9\\x31\\x4f\\x22\\xa7\\xea\\x9b\\x61\\x53\\xf4\\x93\\xf2\\xa3\\x47\\xa4\\xd3'
++ 31006 echo -ne $'\\x41\\xea\\x06\\x41\\xa0\\x0d\\x00\\x00\\x00\\x1e\\xa0\\x70\\x34\\xd3\\x4d\\x06'
++ 31006 echo -ne $'\\x86\\x86\\x86\\x46\\x80\\x64\\x01\\xa1\\xa0\\x34\\xd1\\x90\\x00\\x03\\x09\\x88'
++ 31006 echo -ne $'\\x0d\\x04\\x89\\x08\\x00\\x82\\x7a\\x4c\\x42\\x64\\xc9\\x3d\\x1a\\x29\\xe9\\xa2'
++ 31006 echo -ne $'\\x3d\\x46\\x9e\\x46\\x9a\\x13\\x26\\x9e\\x53\\x10\\x01\\x91\\xea\\x68\\x19\\xf0'
++ 31006 echo -ne $'\\x73\\xf2\\xe0\\xd1\\x3c\\x80\\x01\\xb1\\x48\\x44\\x08\\x9a\\xba\\xf3\\x9e\\x87'
++ 31006 echo -ne $'\\xec\\xc4\\x4b\\x02\\x92\\x80\\x75\\x00\\x56\\x42\\x88\\x10\\x68\\xcc\\x06\\x22'
++ 31006 echo -ne $'\\x7c\\x2b\\xa7\\xc8\\x21\\x91\\x13\\xe5\\x72\\xc0\\xe6\\x0c\\x03\\x10\\xf2\\x89'
++ 31006 echo -ne $'\\x9c\\x67\\x6b\\xc3\\xe6\\xae\\x98\\x85\\x0a\\x7f\\x25\\x2e\\x3d\\x84\\x5b\\xeb'
++ 31006 echo -ne $'\\xf3\\xff\\xb3\\x52\\xf7\\x6e\\xf6\\x92\\xd6\\x33\\x5f\\x4f\\xd1\\x3d\\xb7\\xc4'
++ 31006 echo -ne $'\\x0d\\x50\\x02\\x49\\x01\\xaf\\xd0\\x69\\xbb\\xd3\\xe9\\x63\\x0a\\x68\\x36\\x92'
++ 31006 echo -ne $'\\xf2\\x03\\x1d\\xf2\\xe2\\x35\\xbc\\x73\\xd4\\x44\\xf6\\xa0\\xe0\\x31\\xd7\\x7d'
++ 31006 echo -ne $'\\x56\\x96\\xcb\\x52\\xfc\\x79\\xe0\\xeb\\xf7\\x34\\xd8\\xda\\x18\\x72\\x30\\x94'
++ 31006 echo -ne $'\\x53\\x45\\xf5\\x54\\x56\\x6c\\x0b\\x50\\xa0\\xbc\\xbd\\xcc\\xd8\\x21\\xab\\x7b'
++ 31006 echo -ne $'\\xa8\\xa4\\xe4\\x78\\x25\\x73\\xbf\\x4b\\x30\\x38\\x71\\xe9\\x3c\\x14\\x5d\\xa3'
++ 31006 echo -ne $'\\x12\\x04\\x6b\\x37\\x9d\\xe5\\xce\\xa5\\xd9\\xd1\\xa5\\x69\\x09\\x08\\xc4\\x48'
++ 31006 echo -ne $'\\x4b\\x34\\x58\\x81\\x15\\x18\\x88\\xac\\x11\\x51\\x88\\x35\\x0d\\xd3\\x13\\x18'
++ 31006 echo -ne $'\\x67\\x73\\x20\\x5c\\x28\\x03\\x26\\xcd\\x6d\\x20\\x90\\xba\\xa4\\x12\\xb3\\x08'
++ 31006 echo -ne $'\\x27\\x74\\x6a\\x99\\xdf\\xb1\\x20\\x3d\\x85\\xe7\\x5f\\xab\\x0e\\x2e\\xdc\\x23'
++ 31006 echo -ne $'\\x99\\xe1\\xef\\x34\\x68\\xcd\\xa9\\xb0\\xbf\\xda\\xec\\x81\\xdd\\x66\\xca\\x21'
++ 31006 echo -ne $'\\x13\\x47\\xd7\\xca\\x48\\xcf\\xeb\\x25\\xbb\\x79\\x6d\\x40\\xd0\\xe4\\x69\\x3c'
++ 31006 echo -ne $'\\x8f\\x09\\x1e\\x7b\\xaa\\x4b\\x91\\x39\\xac\\xd6\\xd2\\x0c\\x85\\x1d\\xf7\\x70'
++ 31006 echo -ne $'\\x1f\\x1e\\x58\\xbb\\x22\\x11\\x29\\x39\\x14\\x4d\\x58\\x81\\x9f\\xd7\\x1e\\x22'
++ 31006 echo -ne $'\\x21\\x91\\x0a\\x40\\xd1\\x87\\x29\\x99\\x93\\xf4\\xf3\\x25\\x48\\xbb\\xb4\\x24'
++ 31006 echo -ne $'\\x2a\\x1c\\xa7\\x28\\xc1\\x68\\x08\\x25\\x00\\xaa\\x3d\\xee\\xae\\xc1\\xe1\\x4f'
++ 31006 echo -ne $'\\xe6\\x9a\\x26\\x6b\\xcf\\xb1\\x3e\\xb9\\x85\\x04\\xf4\\xef\\xff\\x7a\\x2f\\x2a'
++ 31006 echo -ne $'\\x04\\x08\\xe0\\x4c\\xb8\\xbd\\x8b\\x81\\xbf\\xa2\\xbe\\x82\\x52\\x9b\\x40\\x63'
++ 31006 echo -ne $'\\xe6\\xf3\\xb3\\xe4\\xe6\\xe5\\x94\\x4a\\xdd\\xc3\\x1b\\xaf\\x61\\xf3\\xbf\\x5b'
++ 31006 echo -ne $'\\x6d\\xaa\\xaa\\x27\\xe8\\x50\\x8d\\x23\\x97\\xa4\\xbd\\xc3\\xd2\\xe6\\xb5\\x66'
++ 31006 echo -ne $'\\x9a\\x1a\\x8e\\x45\\x2a\\xed\\x0b\\x79\\xb8\\x89\\x38\\x4a\\x04\\x85\\x0d\\x1e'
++ 31006 echo -ne $'\\x2b\\x77\\x51\\x91\\x5f\\x9f\\xe0\\x2a\\x49\\x56\\xd3\\xa1\\xde\\xf6\\xd7\\x88'
++ 31006 echo -ne $'\\x5a\\x61\\xe5\\x04\\x54\\xdf\\xa3\\x92\\xeb\\xbf\\x75\\x39\\xce\\xfa\\xf5\\xde'
++ 31006 echo -ne $'\\x30\\xd7\\x56\\xd1\\x7d\\x2c\\xdf\\xda\\x3e\\x1c\\xc8\\xc2\\x93\\x61\\x21\\x20'
++ 31006 echo -ne $'\\xb2\\x22\\x6d\\xbe\\x39\\x52\\x64\\xf6\\xb3\\x91\\x21\\x86\\xdb\\x67\\x72\\x8f'
++ 31006 echo -ne $'\\x49\\xad\\xe4\\x93\\x39\\x5c\\x34\\x8f\\x58\\xdb\\x58\\xd3\\x3c\\x1e\\x4c\\x6c'
++ 31006 echo -ne $'\\xbb\\x70\\x6f\\x42\\xcf\\x9e\\xbf\\xb1\\xcb\\xa9\\x8d\\x05\\xe7\\xea\\xea\\xd7'
++ 31006 echo -ne $'\\x3c\\x67\\x31\\x69\\x44\\x33\\xa4\\x92\\x9c\\x65\\xa4\\x89\\x5a\\xae\\xcf\\xc9'
++ 31006 echo -ne $'\\x55\\x43\\x62\\x6d\\xbf\\x05\\x3c\\xd1\\x0f\\x01\\x4a\\xb5\\x1d\\xbb\\x2c\\xfb'
++ 31006 echo -ne $'\\xa6\\xb7\\xb3\\xb1\\x1d\\x66\\xd3\\xeb\\x22\\xd0\\xb5\\x5a\\x4b\\xc4\\x47\\x47'
++ 31006 echo -ne $'\\x5a\\x49\\x85\\x18\\xbc\\x15\\x39\\x3b\\x92\\xee\\x51\\x98\\x33\\x34\\x5d\\xb5'
++ 31006 echo -ne $'\\xbb\\x8b\\x94\\x8c\\xde\\x8e\\x3f\\x3d\\x09\\x4f\\xba\\xd3\\xf6\\x79\\x74\\x8e'
++ 31006 echo -ne $'\\x82\\x0d\\x56\\x85\\xa2\\xc7\\xc6\\xa6\\x89\\x29\\x26\\xa3\\x53\\x5e\\x52\\xf5'
++ 31006 echo -ne $'\\x56\\x74\\x8b\\x17\\x82\\xed\\x7a\\x8b\\x68\\x61\\xa5\\xc9\\x7c\\xde\\x9f\\x68'
++ 31006 echo -ne $'\\x27\\x4d\\xea\\x65\\x68\\x6f\\x7d\\x5e\\x88\\x73\\x87\\x6c\\x92\\xf2\\xa9\\x15'
++ 31006 echo -ne $'\\x4e\\xee\\x4d\\x41\\xbb\\x98\\x5d\\x8a\\xaf\\xcb\\x11\\x7b\\x2a\\xce\\xf4\\x1e'
++ 31006 echo -ne $'\\x3a\\x28\\x48\\x14\\xfe\\x7f\\x09\\x45\\x48\\xf1\\x5b\\xc1\\xcb\\xcd\\x91\\xba'
++ 31006 echo -ne $'\\x3b\\xe2\\x7d\\x57\\x85\\x66\\x68\\xec\\x51\\x82\\x97\\x88\\xeb\\x94\\x3b\\x78'
++ 31006 echo -ne $'\\x6c\\xf4\\xf1\\x3e\\x38\\x8d\\x22\\x16\\xab\\x3b\\x13\\xb3\\x1b\\x39\\x94\\x0e'
++ 31006 echo -ne $'\\xa8\\x26\\xb7\\x8d\\xe9\\x7d\\x66\\x23\\x4b\\x65\\x07\\xb7\\x2b\\xc9\\x96\\xb6'
++ 31006 echo -ne $'\\x99\\x12\\x22\\xbc\\x90\\xda\\x51\\xbc\\xfd\\x97\\xa5\\x7d\\xbc\\x12\\xa6\\x72'
++ 31006 echo -ne $'\\xd3\\xe3\\x8c\\xc7\\x58\\xe1\\xf8\\x28\\xf4\\x46\\x49\\x14\\xd0\\x9d\\xb6\\xed'
++ 31006 echo -ne $'\\xce\\x99\\xc6\\xbc\\xed\\xa3\\xab\\xa0\\x8c\\x9d\\xce\\x1a\\x1a\\xc2\\xe6\\x77'
++ 31006 echo -ne $'\\xba\\xae\\xba\\xd6\\xc9\\xb2\\xd1\\x65\\x24\\x7b\\x0d\\xd4\\xf2\\xac\\x28\\xc3'
++ 31006 echo -ne $'\\x1c\\xbe\\x4a\\x54\\xe3\\x0f\\x8d\\xad\\xb2\\x37\\x9e\\x1f\\x81\\x72\\x2d\\xab'
++ 31006 echo -ne $'\\x8f\\xb1\\xcd\\xf7\\xb4\\x51\\x2f\\x1d\\xf8\\xad\\x77\\x14\\x37\\xd2\\x1a\\x9a'
++ 31006 echo -ne $'\\xc0\\xf2\\x48\\xc6\\x4c\\x8d\\xd3\\x8d\\xf1\\xd9\\x2e\\x2c\\xdd\\x7a\\x98\\x3c'
++ 31006 echo -ne $'\\x24\\x76\\xb9\\x9d\\x27\\xcd\\x71\\x7d\\x6c\\xc7\\x1f\\x0a\\x74\\x8a\\x6e\\x54'
++ 31006 echo -ne $'\\xec\\x5a\\xa1\\x77\\x60\\x80\\xef\\x00\\xa4\\x5f\\x9e\\x8b\\x2f\\x02\\x72\\x9c'
++ 31006 echo -ne $'\\x46\\xd8\\x79\\x92\\x4c\\x8f\\x4e\\x37\\xed\\x0c\\x58\\xab\\x44\\xee\\x1d\\xd1'
++ 31006 echo -ne $'\\xa1\\xb0\\xa5\\x1f\\xaf\\xb0\\x39\\x01\\x26\\xb2\\x4a\\x20\\x68\\x4a\\x18\\x23'
++ 31006 echo -ne $'\\xc3\\x03\\x84\\x22\\x18\\xdb\\x6d\\x83\\x60\\xc1\\x12\\x09\\x21\\x84\\x22\\x48'
++ 31006 echo -ne $'\\x7f\\x1e\\x17\\xf5\\xbe\\xce\\x4c\\x4f\\x9f\\x9f\\xee\\xf4\\xfe\\xef\\x9a\\x34'
++ 31006 echo -ne $'\\x91\\x8f\\x36\\x1d\\xbc\\x73\\xd7\\xeb\\xc8\\x2e\\x81\\x25\\xfa\\x18\\x76\\x35'
++ 31006 echo -ne $'\\x1f\\x16\\xdb\\x20\\x4b\\x74\\x6d\\x94\\x4e\\xe5\\x36\\xed\\xf5\\x5d\\x59\\xaf'
++ 31006 echo -ne $'\\x46\\x70\\xea\\x03\\xac\\x50\\xbb\\x26\\xab\\x39\\x9a\\x4b\\x6b\\x09\\x8c\\x6d'
++ 31006 echo -ne $'\\x34\\xcf\\xed\\xaa\\xf7\\x56\\x40\\xf2\\xab\\x07\\xca\\x22\\x71\\x97\\xc7\\x35'
++ 31006 echo -ne $'\\xe8\\x06\\x90\\x7b\\xec\\xc3\\x9f\\xa4\\xde\\xd9\\xdb\\x43\\xf1\\xd5\\x06\\x58'
++ 31006 echo -ne $'\\x72\\x9e\\x1f\\x08\\xb6\\xc2\\x05\\x0d\\x25\\xfe\\x7a\\x85\\xe5\\x10\\x12\\x68'
++ 31006 echo -ne $'\\x18\\x7e\\x8c\\xa0\\xfa\\xb4\\xc4\\xc7\\x4e\\xa9\\xf2\\x13\\xd7\\xc2\\x52\\xb5'
++ 31006 echo -ne $'\\xe3\\x72\\x37\\x31\\x1e\\x4f\\x99\\xfd\\xac\\x97\\x08\\x88\\x71\\x88\\xeb\\x1a'
++ 31006 echo -ne $'\\xf9\\xa1\\x10\\x9c\\x44\\x08\\x56\\x4a\\x77\\xaa\\x0f\\x19\\x5f\\x5f\\xb3\\x95'
++ 31006 echo -ne $'\\xee\\x9b\\x9f\\x5b\\xb5\\xc9\\x0a\\xf4\\x28\\x16\\x25\\x34\\x6c\\x72\\xda\\x92'
++ 31006 echo -ne $'\\xb4\\x2c\\xbd\\x5e\\xb1\\xe8\\xe5\\x0f\\x68\\xf3\\x44\\x8a\\xd5\\xfa\\x73\\x5c'
++ 31006 echo -ne $'\\x89\\x2e\\x99\\x7d\\xed\\xe3\\x5b\\x3f\\x48\\x97\\xeb\\xb6\\x76\\x5c\\xa5\\x9d'
++ 31006 echo -ne $'\\xef\\x12\\x1e\\x42\\x89\\x52\\xad\\x28\\x90\\xe5\\x2b\\x88\\xa0\\x4f\\x11\\x92'
++ 31006 echo -ne $'\\xcd\\xcc\\x63\\x40\\x1a\\xc7\\x10\\x0c\\x2f\\xcd\\x01\\xf2\\x07\\x38\\xac\\x14'
++ 31006 echo -ne $'\\xe5\\x90\\xc0\\x30\\x21\\xe2\\xe3\\x72\\x0e\\x3e\\x04\\xc8\\x9e\\xa7\\x00\\xdb'
++ 31006 echo -ne $'\\x91\\xdd\\x9d\\x80\\xa4\\x69\\x2a\\x48\\x37\\x97\\xa4\\x26\\x5d\\xae\\x84\\x1e'
++ 31006 echo -ne $'\\x88\\xf4\\x83\\x04\\x24\\xc9\\x1f\\x94\\x61\\x25\\xf9\\x82\\xdd\\xed\\x2d\\x96'
++ 31006 echo -ne $'\\xad\\x06\\x45\\xdd\\x88\\xd7\\x50\\x40\\x14\\xdc\\x7c\\xdb\\x0f\\x53\\x96\\x27'
++ 31006 echo -ne $'\\xcb\\x67\\xac\\xa6\\xc1\\x15\\x2f\\xc3\\xdb\\x2c\\xca\\x94\\xb3\\xf3\\xd1\\x6a'
++ 31006 echo -ne $'\\xba\\x34\\x83\\xd1\\xcc\\x40\\x3e\\x76\\xa1\\x69\\x7f\\x49\\x33\\xdc\\xa7\\x3c'
++ 31006 echo -ne $'\\x6a\\x67\\x15\\xab\\xdb\\x52\\xa0\\xb8\\xa6\\x1e\\xce\\xe3\\xaf\\xf4\\xa2\\x62'
++ 31006 echo -ne $'\\x35\\x0f\\x03\\x40\\x8e\\x20\\x12\\x9c\\xb6\\x34\\x71\\x3a\\x15\\x5d\\xe5\\x34'
++ 31006 echo -ne $'\\xa8\\xd4\\x05\\x99\\x6b\\x9a\\xb6\\x41\\x0b\\x78\\xc4\\xd8\\xd9\\x7a\\x65\\xdc'
++ 31006 echo -ne $'\\xdb\\xe3\\x42\\xd5\\x66\\xf9\\xb4\\x83\\x7e\\xc0\\xf4\\x01\\xc4\\xcc\\x3b\\x0e'
++ 31006 echo -ne $'\\x15\\xdc\\x15\\xc2\\x3e\\x04\\x2f\\xfc\\x6b\\x72\\xeb\\xf6\\xaa\\x16\\x20\\xde'
++ 31006 echo -ne $'\\xd3\\x3a\\xb1\\x10\\xc6\\x3c\\xe8\\x2b\\xb8\\xea\\xda\\x19\\x6e\\x36\\xaa\\xa4'
++ 31006 echo -ne $'\\x23\\x6d\\xa0\\x40\\xd1\\x5a\\x0b\\x7e\\xa4\\xd5\\x2d\\xcb\\xa9\\x15\\x35\\xba'
++ 31006 echo -ne $'\\x93\\x92\\x45\\x41\\xb0\\x1a\\xd1\\x13\\x31\\xb6\\x44\\x98\\x78\\x28\\x15\\xe4'
++ 31006 echo -ne $'\\xae\\xba\\x58\\xd1\\x75\\x36\\x34\\x1a\\xd8\\x28\\xf1\\x4a\\x4c\\xbc\\x1b\\xa8'
++ 31006 echo -ne $'\\xf7\\x57\\x92\\xbc\\xe2\\xb5\\xda\\xb6\\xa6\\x1d\\x83\\x37\\x96\\x43\\x20\\x84'
++ 31006 echo -ne $'\\xcb\\xb6\\xd9\\x3f\\xeb\\xfa\\xa0\\xfe\\x9a\\x7d\\xee\\x47\\x98\\xc4\\xe7\\xc4'
++ 31006 echo -ne $'\\xbd\\xc6\\xf0\\x6d\\xb2\\x26\\x10\\x1e\\x78\\xef\\xf3\\x28\\x3e\\x35\\xe6\\xe4'
++ 31006 echo -ne $'\\xe6\\xf3\\x0f\\x26\\x34\\x13\\x85\\xd0\\xcf\\x55\\x0f\\x8b\\xd7\\xe9\\xf4\\xdf'
++ 31006 echo -ne $'\\x70\\x68\\xc0\\xb5\\x30\\x3c\\xb1\\x01\\xe8\\x28\\xae\\x80\\x26\\x01\\x8b\\x15'
++ 31006 echo -ne $'\\x0f\\x80\\x48\\x18\\x4b\\xe2\\xed\\x59\\x92\\x31\\xcf\\xd2\\x8f\\x42\\xbf\\xee'
++ 31006 echo -ne $'\\xbd\\x07\\x91\\x24\\xc6\\x66\\x5e\\x8c\\x9a\\x48\\x63\\xe7\\xac\\x8a\\x1e\\xc5'
++ 31006 echo -ne $'\\x69\\x16\\x8d\\xac\\x67\\xdc\\x75\\x75\\x82\\xca\\x19\\x28\\x36\\x4d\\x10\\xf9'
++ 31006 echo -ne $'\\x41\\xcb\\x15\\x05\\x64\\xc7\\xb0\\xc3\\x64\\xf3\\x48\\x71\\x60\\xf2\\xbd\\xcc'
++ 31006 echo -ne $'\\x37\\xb1\\x36\\xbc\\xa7\\x2e\\x6b\\x20\\x11\\x51\\x42\\xe1\\x8a\\x29\\xac\\x44'
++ 31006 echo -ne $'\\x8f\\x63\\x56\\x23\\xd4\\xd4\\x07\\xb4\\x60\\xa4\\xb8\\xcd\\xee\\x49\\xa5\\x42'
++ 31006 echo -ne $'\\xcc\\x52\\x00\\x6f\\xdc\\x44\\x20\\x57\\x7d\\x36\\xd7\\x48\\x1a\\x22\\x2c\\xd0'
++ 31006 echo -ne $'\\x19\\x43\\x51\\x5e\\x1c\\x8c\\x5f\\x70\\xc2\\x6b\\xcf\\xea\\xd4\\x97\\x61\\x72'
++ 31006 echo -ne $'\\x33\\xc3\\x9a\\xd4\\x06\\xf1\\x8a\\x9a\\xfe\\x21\\x83\\x0b\\xea\\xf1\\xfa\\x2c'
++ 31006 echo -ne $'\\x52\\x23\\x2c\\xb8\\xc1\\xe6\\xc8\\x9d\\x9c\\x5f\\x8f\\xf2\\x4a\\x86\\x76\\x92'
++ 31006 echo -ne $'\\x78\\x0f\\x7d\\x9d\\x09\\x38\\xce\\xe1\\x9a\\xf3\\x60\\xed\\x65\\x0b\\x1a\\x68'
++ 31006 echo -ne $'\\xa6\\x52\\x39\\x18\\x1e\\x45\\xe3\\x5d\\xe0\\x7d\\xfb\\xc6\\xcc\\x44\\x18\\x93'
++ 31006 echo -ne $'\\xe9\\x71\\xa8\\x18\\x0d\\x74\\x48\\x8a\\x18\\x0b\\x61\\xbf\\xe1\\xa9\\x0e\\x4c'
++ 31006 echo -ne $'\\xad\\x1b\\xaf\\x1a\\x37\\x39\\x92\\x4d\\xcc\\x96\\x87\\x46\\x0d\\x83\\x06\\x33'
++ 31006 echo -ne $'\\x53\\x35\\xd9\\x2c\\x36\\x98\\x28\\x1c\\x52\\xb1\\x89\\x55\\x56\\xcc\\x37\\x20'
++ 31006 echo -ne $'\\x89\\x84\\x0e\\x3d\\x27\\x2f\\xc6\\xfa\\x78\\x04\\xe1\\xd5\\xc6\\x90\\x49\\x16'
++ 31006 echo -ne $'\\xfe\\x0a\\x16\\x6f\\x11\\x54\\x42\\x22\\xa1\\x90\\x2d\\x19\\x91\\x28\\x05\\xf2'
++ 31006 echo -ne $'\\x30\\x6c\\x14\\x16\\xd6\\x8a\\xce\\xf6\\xcd\\x7c\\x64\\x76\\x42\\xe9\\x28\\xe9'
++ 31006 echo -ne $'\\x1c\\xd1\\xb8\\x9e\\xcd\\x53\\xb2\\x6b\\x8d\\x57\\x57\\x2a\\xb8\\x59\\x58\\x8c'
++ 31006 echo -ne $'\\xd3\\x12\\x57\\xa6\\xe3\\x48\\x70\\xf5\\x55\\x0f\\x76\\xb5\\x27\\x08\\xd1\\xa0'
++ 31006 echo -ne $'\\xf8\\x60\\x09\\xa1\\xf2\\x30\\x43\\x4a\\x30\\x46\\xf7\\x96\\x19\\xe9\\x3a\\x44'
++ 31006 echo -ne $'\\xc0\\xd8\\xa8\\x51\\xae\\x50\\x92\\x81\\x81\\xda\\x10\\xd3\\x18\\x62\\x94\\xd0'
++ 31006 echo -ne $'\\x9e\\x54\\x0b\\x22\\xcc\\xd0\\xfe\\x0c\\x36\\x44\\x4d\\x4d\\x40\\x5c\\xa8\\x35'
++ 31006 echo -ne $'\\xb6\\x53\\x9c\\x36\\x9c\\x5a\\x0e\\x0e\\xb0\\x5c\\x29\\x2a\\x35\\x66\\xaa\\x3a'
++ 31006 echo -ne $'\\xcb\\x23\\x7b\\xbb\\xc8\\x60\\xbc\\xb4\\x28\\xf4\\x6e\\xfe\\x86\\xfc\\x16\\x85'
++ 31006 echo -ne $'\\x0c\\xe0\\x1d\\xcf\\xfd\\x12\\x28\\xc6\\x60\\xd0\\xe6\\x2f\\x76\\xf0\\x1a\\x5b'
++ 31006 echo -ne $'\\xfa\\xa6\\xc6\\xea\\x58\\xbb\\x26\\x37\\x84\\xdd\\x85\\xd5\\x37\\x82\\x76\\xd9'
++ 31006 echo -ne $'\\x14\\x7a\\xca\\xed\\x13\\x72\\xc3\\xe1\\xb9\\x69\\x45\\xd4\\xec\\x44\\x94\\x26'
++ 31006 echo -ne $'\\x8e\\x0b\\x90\\xb6\\x8b\\x1f\\x1e\\x01\\x96\\x5a\\xb9\\x51\\xa6\\x27\\xa2\\x9b'
++ 31006 echo -ne $'\\x38\\xd9\\x25\\x32\\x9b\\x54\\xfc\\x45\\xd1\\xa8\\x59\\x35\\x1a\\xb0\\xb2\\x1a'
++ 31006 echo -ne $'\\xc8\\x88\\x15\\x42\\x98\\x50\\x99\\x12\\x9e\\xf5\\x59\\xb2\\x5c\\xc5\\xa7\\x34'
++ 31006 echo -ne $'\\x35\\xca\\xb3\\xed\\xdc\\xc9\\x9f\\x3e\\x77\\x8f\\x6c\\xde\\xc8\\x41\\x6a\\xc5'
++ 31006 echo -ne $'\\x24\\x85\\x04\\xa1\\x2f\\xe3\\x47\\x8c\\x47\\xd4\\xdb\\x74\\x8c\\xb6\\x4c\\xef'
++ 31006 echo -ne $'\\xed\\xad\\x9f\\x86\\x31\\xd8\\xc8\\x07\\xc5\\x11\\x1c\\x39\\x3a\\xf8\\x75\\x73'
++ 31006 echo -ne $'\\xae\\x78\\x7d\\x1d\\x36\\x5b\\xd1\\x23\\x5d\\x84\\x17\\x5d\\x4b\\xac\\xd3\\x70'
++ 31006 echo -ne $'\\x8a\\x83\\x48\\x48\\x83\\x7b\\x5c\\x99\\x9e\\x56\\xbb\\xfc\\x0c\\x4b\\x04\\xcf'
++ 31006 echo -ne $'\\x83\\x5d\\xf8\\x31\\x2c\\xc4\\x5c\\xa1\\x68\\x6a\\x56\\xe1\\x7f\\xbe\\xd6\\x59'
++ 31006 echo -ne $'\\x6c\\x55\\xb0\\x63\\x41\\xeb\\x88\\x69\\xb6\\x9b\\x50\\xc4\\x31\\xea\\xb0\\xd7'
++ 31006 echo -ne $'\\xe2\\xfb\\x7b\\xeb\\xbb\\x52\\xc4\\x97\\x23\\xe9\\x16\\x29\\x18\\x50\\x4d\\x0e'
++ 31006 echo -ne $'\\x68\\x62\\xfb\\x3f\\xd9\\x07\\xb9\\x89\\x4d\\x58\\x7c\\x32\\x6d\\x12\\x3e\\x9b'
++ 31006 echo -ne $'\\x3a\\x14\\xee\\xac\\x3c\\x8d\\x09\\x62\\x30\\x8e\\xe0\\x86\\x84\\xb9\\xf3\\x0d'
++ 31006 echo -ne $'\\xf8\\xad\\x42\\xa6\\xbb\\x7d\\xd1\\xf2\\xf3\\xc0\\xe2\\x32\\xc4\\x40\\xaa\\x8a'
++ 31006 echo -ne $'\\x2a\\xe9\\xa9\\x45\\x83\\x23\\xf6\\x90\\x05\\x24\\x59\\x22\\x84\\x50\\x82\\xc0'
++ 31006 echo -ne $'\\x58\\x41\\x42\\x18\\x91\\x3d\\xd8\\x80\\xb1\\x26\\x68\\xb2\\xa8\\xc0\\x21\\x14'
++ 31006 echo -ne $'\\x18\\xdf\\x3a\\x86\\x25\\x85\\x56\\xab\\x20\\x38\\xcd\\xdc\\x98\\x6e\\x07\\xc4'
++ 31006 echo -ne $'\\x6b\\x16\\x55\\xe0\\x41\\xe0\\x41\\xda\\x29\\x62\\x8d\\xba\\xce\\xa2\\xcb\\xfc'
++ 31006 echo -ne $'\\x70\\x78\\x99\\xf9\\x16\\x0b\\x5a\\x0c\\xc5\\xad\\x18\\xeb\\xf0\\xb5\\xc9\\x25'
++ 31006 echo -ne $'\\x82\\x16\\xe0\\x5d\\xc1\\xc4\\xc6\\xf0\\x84\\x6a\\x45\\x7d\\xdb\\x28\\x46\\xab'
++ 31006 echo -ne $'\\xef\\x32\\xc9\\x49\\x50\\x51\\x60\\x77\\x1c\\xfd\\x58\\x9c\\x01\\x3b\\x7a\\xfa'
++ 31006 echo -ne $'\\x49\\x47\\x3e\\x87\\x1c\\x39\\xa6\\x6a\\xa4\\xb7\\x39\\x93\\xac\\xac\\xb0\\x39'
++ 31006 echo -ne $'\\x2f\\xbc\\xab\\x9b\\x52\\x96\\x24\\x46\\xc1\\x95\\xe4\\x31\\x89\\x37\\x18\\xc8'
++ 31006 echo -ne $'\\x2c\\x22\\x32\\x2a\\x8f\\xb6\\x58\\x77\\x57\\x77\\x2f\\x09\\xd0\\x7c\\xed\\x74'
++ 31006 echo -ne $'\\xaa\\x7c\\x86\\x25\\x45\\x0c\\x43\\x4d\\x31\\xb0\\x63\\x40\\xcf\\x86\\xfe\\x75'
++ 31006 echo -ne $'\\x76\\xe0\\xee\\x99\\xb5\\x71\\xe2\\x4e\\xe5\\xc1\\xf9\\x2e\\x48\\xe2\\xa6\\x1b'
++ 31006 echo -ne $'\\x28\\xa5\\xa3\\xbe\\xff\\x37\\xd1\\xdd\\x66\\xa2\\xe8\\xd3\\x88\\x4d\\x13\\xd5'
++ 31006 echo -ne $'\\x68\\x51\\x27\\x41\\xc3\\x6c\\x1b\\x48\\x67\\x6a\\xdf\\x25\\x2a\\x40\\xa1\\x87'
++ 31006 echo -ne $'\\x1d\\x54\\xb7\\xe3\\x91\\xc2\\x6b\\x5b\\xb9\\x8c\\xd5\\x10\\x11\\x10\\x16\\xab'
++ 31006 echo -ne $'\\x6b\\xbe\\x65\\x6b\\x73\\xa7\\x35\\xa1\\x09\\x60\\x60\\xed\\x96\\x39\\xc9\\x40'
++ 31006 echo -ne $'\\x5d\\xdc\\xee\\x60\\x49\\x0c\\x68\\x18\\x34\\xb2\\x6f\\x2a\\x95\\x14\\x29\\x95'
++ 31006 echo -ne $'\\x5b\\x59\\xd2\\x1f\\x63\\x2a\\xbe\\xfd\\xae\\x09\\x5c\\xee\\x11\\xb5\\x29\\x36'
++ 31006 echo -ne $'\\xca\\xdf\\x28\\x8c\\x65\\x42\\x46\\x74\\x0c\\x39\\x68\\x30\\xac\\x2c\\x2f\\xd0'
++ 31006 echo -ne $'\\x9b\\xb3\\x92\\x19\\x90\\xa1\\x07\\xcc\\xf6\\xde\\x64\\x5f\\x6f\\xd7\\xb6\\xcc'
++ 31006 echo -ne $'\\xe0\\x70\\x0f\\x0b\\xd2\\x0e\\x77\\xa1\\x70\\xe3\\x56\\x90\\x4b\\x28\\x58\\xd0'
++ 31006 echo -ne $'\\xd1\\xe1\\x9d\\x18\\x98\\xba\\x6b\\x36\\x54\\xa9\\x54\\x09\\x63\\x49\\x18\\x55'
++ 31006 echo -ne $'\\x60\\xba\\x11\\xb1\\x0a\\x14\\x45\\x1f\\xae\\x08\\x50\\x09\\x33\\x00\\xa2\\xb2'
++ 31006 echo -ne $'\\x71\\x81\\x75\\x89\\xb7\\xb9\\x0c\\x73\\xc0\\x4c\\x32\\x89\\x72\\xac\\xa9\\xa3'
++ 31006 echo -ne $'\\x47\\x5f\\x7d\\x4e\\x1b\\x4d\\xb9\\xea\\x84\\x45\\x00\\x37\\x3c\\xb3\\x7b\\xf8'
++ 31006 echo -ne $'\\xe7\\x0f\\xaa\\x33\\x1a\\x9b\\xc2\\x0c\\x35\\x8a\\xd4\\x04\\x46\\x42\\xcb\\xab'
++ 31006 echo -ne $'\\xaa\\xc7\\xe5\\xc9\\x20\\x6e\\x21\\xa6\\x8c\\xed\\x61\\x86\\x42\\x87\\x03\\x25'
++ 31006 echo -ne $'\\xde\\x2c\\x4a\\x85\\xcb\\xb4\\x36\\xc9\\xd4\\x72\\x60\\x62\\xc2\\x19\\xd0\\x30'
++ 31006 echo -ne $'\\x16\\x6d\\x58\\x61\\x62\\x16\\xe8\\xd2\\x0e\\xd0\\xf3\\xdb\\x53\\x37\\x07\\x37'
++ 31006 echo -ne $'\\x40\\xc3\\xe5\\x5b\\x9d\\x16\\x45\\x60\\x8e\\xfb\\x12\\xc4\\x5f\\x9f\\xdd\\xe1'
++ 31006 echo -ne $'\\x45\\x5d\\x45\\x36\\x21\\xa0\\xc0\\xb8\\x11\\x98\\x0f\\x64\\x98\\x67\\x1c\\x11'
++ 31006 echo -ne $'\\xa9\\xa1\\x65\\x10\\xb9\\x22\\x12\\x91\\x10\\x9b\\x10\\x6f\\x95\\x2e\\x34\\x91'
++ 31006 echo -ne $'\\x64\\x82\\xa4\\x05\\x02\\xfc\\x4a\\x9f\\x9c\\x4d\\x6c\\x8d\\x67\\x26\\x90\\x63'
++ 31006 echo -ne $'\\x04\\x12\\x6f\\x0e\\x55\\x3c\\x8e\\xf2\\x8d\\xb4\\x6b\\x3d\\xac\\xcf\\x84\\x2e'
++ 31006 echo -ne $'\\x60\\x0f\\x40\\x62\\x88\\x3a\\xcf\\xbd\\xea\\xad\\x40\\x4c\\x29\\xe1\\xb5\\xb6'
++ 31006 echo -ne $'\\x3e\\x15\\x86\\xd5\\xbe\\xad\\x27\\xde\\x2b\\x32\\xef\\xcf\\x97\\x88\\x8b\\x17'
++ 31006 echo -ne $'\\x80\\x43\\x0e\\x20\\x79\\x3b\\x36\\x73\\xb8\\xad\\x12\\x0e\\x87\\x59\\x5f\\xd3'
++ 31006 echo -ne $'\\x3c\\x8c\\x84\\xc8\\x54\\x2b\\x94\\xc9\\x2e\\x36\\x8b\\x32\\x48\\xf1\\xe3\\x08'
++ 31006 echo -ne $'\\xf0\\x36\\xc0\\xb8\\xc2\\xa2\\xa9\\xe2\\x52\\x02\\xf1\\x9b\\xcb\\xde\\xcc\\xb5'
++ 31006 echo -ne $'\\x5a\\x6c\\x05\\x06\\x31\\x44\\x41\\x88\\xa3\\x05\\x04\\x16\\x0d\\x4a\\x85\\x20'
++ 31006 echo -ne $'\\x79\\xda\\x89\\x82\\x1d\\x5f\\x5a\\x11\\x88\\x89\\x06\\x05\\xf5\\xf4\\xed\\x75'
++ 31006 echo -ne $'\\x62\\x39\\x37\\x69\\x11\\x32\\x3e\\x8d\\xe4\\x60\\x62\\x52\\xc9\\xad\\x82\\x9a'
++ 31006 echo -ne $'\\x9a\\x2f\\x06\\x41\\x26\\xb4\\x48\\x70\\x39\\x2b\\x8a\\xb1\\x5a\\x53\\xc6\\x48'
++ 31006 echo -ne $'\\x57\\x17\\xf5\\xd8\\x5a\\xc6\\x19\\x83\\x06\\x0b\\x9b\\x04\\xb8\\xf5\\xaf\\x23'
++ 31006 echo -ne $'\\x45\\x87\\x48\\x50\\x6d\\x16\\xea\\xb4\\x20\\xb8\\x49\\x92\\x6b\\x0c\\x76\\x14'
++ 31006 echo -ne $'\\x48\\x53\\xa1\\x29\\x74\\xf6\\xd7\\x49\\x44\\x39\\xba\\xbd\\x63\\xa6\\xf2\\x81'
++ 31006 echo -ne $'\\x8f\\x5b\\x5e\\x46\\x0a\\x34\\x95\\x31\\xc0\\xdd\\x60\\x50\\xd6\\x0a\\xa6\\x29'
++ 31006 echo -ne $'\\x3d\\x36\\x3a\\xc7\\xb8\\xcf\\x25\\x5e\\xf7\\x82\\x55\\x88\\xc2\\x8b\\x30\\xd2'
++ 31006 echo -ne $'\\x97\\x90\\x49\\x94\\xde\\xe5\\xaa\\xeb\\x42\\x8c\\x94\\x2a\\xa0\\x0d\\x9b\\xb5'
++ 31006 echo -ne $'\\x59\\xbe\\xcb\\x35\\xa3\\x37\\x54\\x76\\x35\\x98\\xcb\\x1f\\x13\\x3f\\x4a\\xd1'
++ 31006 echo -ne $'\\x45\\x87\\x67\\xed\\x66\\x02\\x06\\x49\\x1c\\x59\\x51\\x1f\\x4d\\x85\\x03\\x46'
++ 31006 echo -ne $'\\x65\\x86\\x4e\\x4c\\x6a\\xd2\\x24\\x31\\x5b\\x6a\\x3b\\x19\\x49\\xe1\\x83\\x14'
++ 31006 echo -ne $'\\xc1\\xf0\\x56\\x61\\x93\\x8b\\x33\\x13\\x54\\x6f\\x78\\x4c\\xa0\\x85\\xf0\\xb3'
++ 31006 echo -ne $'\\x17\\xaa\\xf2\\x67\\x02\\x0c\\x31\\xed\\x5e\\x98\\x02\\x28\\xc4\\xe5\\x87\\xa2'
++ 31006 echo -ne $'\\x70\\xd1\\xd5\\x9c\\xf8\\xec\\x19\\x88\\xa9\\x0d\\x0e\\x4a\\xe3\\x47\\x83\\x6e'
++ 31006 echo -ne $'\\xf7\\x70\\x3e\\xa4\\xa9\\xc0\\x4c\\xfa\\x2b\\x3b\\xd7\\x6f\\x96\\xc3\\x6d\\x6d'
++ 31006 echo -ne $'\\x71\\x2a\\x8d\\x62\\xf1\\xd3\\xdd\\xb0\\x33\\xd4\\x67\\x19\\x0d\\x30\\x85\\x3a'
++ 31006 echo -ne $'\\x06\\x04\\x85\\x00\\x48\\x5d\\x53\\x35\\xa0\\x31\\x56\\x84\\x82\\xa5\\xac\\x22'
++ 31006 echo -ne $'\\x02\\x44\\xaf\\x6d\\xc0\\x61\\x59\\x23\\x96\\x72\\x5a\\x81\\x9e\\x0c\\xe5\\x79'
++ 31006 echo -ne $'\\xda\\xd0\\x42\\x5c\\x89\\xa5\\x00\\xec\\x56\\x41\\x64\\x8a\\x11\\x60\\x79\\xb1'
++ 31006 echo -ne $'\\xed\\x55\\x16\\x54\\xe6\\x51\\x03\\x34\\x14\\x60\\x31\\xd2\\xf0\\x0b\\xce\\xf2'
++ 31006 echo -ne $'\\x4e\\x4c\\x45\\x8c\\xeb\\x2a\\x82\\x3a\\xa8\\x52\\xce\\x8f\\x4e\\xf1\\x89\\xea'
++ 31006 echo -ne $'\\x44\\x91\\x66\\xdd\\x6b\\x49\\xa3\\x83\\x0b\\x19\\x0e\\x66\\x5f\\x02\\x22\\x58'
++ 31006 echo -ne $'\\xe7\\xc0\\xa8\\xce\\x55\\x48\\xa6\\x04\\xf3\\x03\\xac\\x62\\xb2\\xc0\\xaa\\xa0'
++ 31006 echo -ne $'\\x09\\xae\\x5b\\x96\\xd0\\xdd\\xa9\\x1f\\xfb\\x2d\\x3d\\xf5\\x02\\xe1\\x86\\x02'
++ 31006 echo -ne $'\\x3e\\xda\\xd0\\x5d\\xba\\x16\\x39\\xcd\\x75\\xa2\\x47\\x26\\x74\\x25\\xa8\\x5e'
++ 31006 echo -ne $'\\xf3\\x36\\x0c\\x37\\x19\\x17\\x06\\x66\\xd0\\x0b\\x42\\x41\\x0a\\xa0\\xde\\x93'
++ 31006 echo -ne $'\\xd7\\xb4\\x9f\\xfb\\xc7\\x4f\\x65\\x54\\xda\\xb8\\x8b\\x23\\xde\\x9c\\x57\\xcf'
++ 31006 echo -ne $'\\x2d\\x2a\\x12\\xda\\xcc\\xf6\\x73\\x83\\x02\\x4c\\x0e\\x42\\x88\\xda\\x27\\xb9'
++ 31006 echo -ne $'\\xcb\\x04\\xb6\\x07\\x26\\x78\\xa1\\xa1\\x09\\xa3\\x6a\\x86\\xbd\\x9d\\xd4\\xf9'
++ 31006 echo -ne $'\\xc0\\x81\\xa6\\x49\\xa9\\x72\\xeb\\x56\\xbd\\xf9\\xea\\x89\\x4f\\xae\\x72\\x28'
++ 31006 echo -ne $'\\xb6\\x57\\x35\\xbe\\x94\\xad\\xc0\\xff\\x1e\\xf2\\x35\\x24\\xa0\\x45\\xd5\\x09'
++ 31006 echo -ne $'\\xc0\\xe0\\x10\\xd0\\x17\\x90\\xe2\\xff\\x8b\\xb9\\x22\\x9c\\x28\\x48\\x09\\x68'
++ 31006 echo -ne $'\\xc3\\x18\\x00'
++ t='-rw-r--r-- fm3/users      9869 2007-03-12 10:44:54 VirtualBox-1.5.6_OSE/src/libs/xpcom18a4/ipc/ipcd/extensions/transmngr/public/ipcITransactionService.idl'
+======================
+echo -ne '' >input
+echo -ne '' | \
+tar xvf - 2>&1; echo $?
+
+PASS: tar Empty file is not a tarball
+======================
+echo -ne '' >input
+echo -ne '' | \
+{ tar xvzf - 2>&1; echo $?; } | grep -Fv "invalid magic"
+
+PASS: tar Empty file is not a tarball.tar.gz
+======================
+echo -ne '' >input
+echo -ne '' | \
+dd if=/dev/zero bs=512 count=2 2>/dev/null | tar xvf - 2>&1; echo $?
+
+PASS: tar Two zeroed blocks is a ('truncated') empty tarball
+======================
+echo -ne '' >input
+echo -ne '' | \
+dd if=/dev/zero bs=512 count=20 2>/dev/null | tar xvf - 2>&1; echo $?
+
+PASS: tar Twenty zeroed blocks is an empty tarball
+======================
+echo -ne '' >input
+echo -ne '' | \
+>input_hard1
+ln input_hard1 input_hard2
+mkdir input_dir
+>input_dir/file
+for f in *; do [ "$f" = "input_dir" ] || chmod -R 644 "$f"; done
+chmod    755 input_dir
+tar cf test.tar input input_dir/ input_hard1 input_hard2 input_hard1 input_dir/ input
+tar tvf test.tar | sed "s/.*[0-9] input/input/"
+rm -rf input_dir
+tar xf test.tar 2>&1
+echo Ok: $?
+ls -l . input_dir/* | grep input_ | sed "s/\\(^[^ ]*\\) .* input/\\1 input/"
+
+PASS: tar hardlinks and repeated files
+======================
+echo -ne '' >input
+echo -ne '' | \
+>input_hard1
+chmod 741 input_hard1
+ln input_hard1 input_hard2
+mkdir input_dir
+ln input_hard1 input_dir
+ln input_hard2 input_dir
+chmod 550 input_dir
+# On some filesystems, input_dir/input_hard2 is returned by readdir
+# BEFORE input_dir/input_hard1! Thats why we cant just "tar cf ... input_*":
+tar cf test.tar input_dir/input_hard* input_hard*
+tar tvf test.tar | sed "s/.*[0-9] input/input/"
+chmod 770 input_dir
+rm -rf input_*
+tar xf test.tar 2>&1
+echo Ok: $?
+ls -l . input_dir/* | grep "input.*hard" | sed "s/\\(^[^ ]*\\) .* input/\\1 input/"
+
+PASS: tar hardlinks mode
+======================
+echo -ne '' >input
+echo -ne '' | \
+>input_file
+chmod 741 input_file
+ln -s input_file input_soft
+mkdir input_dir
+ln input_file input_dir
+ln input_soft input_dir
+chmod 550 input_dir
+tar cf test.tar input_dir/* input_[fs]*
+tar tvf test.tar | sed "s/.*[0-9] input/input/" | sort
+chmod 770 input_dir
+rm -rf input_*
+tar xf test.tar 2>&1
+echo Ok: $?
+ls -l . input_dir/* | grep "input_[fs]" | sed "s/\\(^[^ ]*\\) .* input/\\1 input/"
+
+PASS: tar symlinks mode
+======================
+echo -ne 'Ok\n' >input
+echo -ne '' | ln input input_hard
+tar cf test.tar input_hard
+echo WRONG >input
+# --overwrite opens 'input_hard' without unlinking,
+# thus 'input_hard' still linked to 'input' and we write 'Ok' into it
+tar xf test.tar --overwrite 2>&1 && cat input
+
+PASS: tar --overwrite
+======================
+echo -ne '' >input
+echo -ne '' | dd count=1 bs=1M if=/dev/zero of=F0 2>/dev/null
+tar -czf F0.tgz F0
+rm F0
+tar -xzvf F0.tgz && echo Ok
+rm F0 || echo BAD
+
+PASS: tar extract tgz
+======================
+echo -ne '' >input
+echo -ne 'begin-base64 644 hello_world.txz
+/Td6WFoAAATm1rRGAgAhARYAAAB0L+Wj4AX/AEldADQZSe6ODIZQ3rSQ8kAJ
+SnMPTX+XWGKW3Yu/Rwqg4Ik5wqgQKgVH97J8yA8IvZ4ahaCQogUNHRkXibr2
+Q615wcb2G7fJU49AhWAAAAAAUA8gu9DyXfAAAWWADAAAAB5FXGCxxGf7AgAA
+AAAEWVo=
+====
+' | uudecode -o input && tar tf input && echo Ok
+
+PASS: tar extract txz
+======================
+echo -ne '' >input
+echo -ne '' | rm -rf input_* test.tar 2>/dev/null
+mkdir input_dir
+echo Ok >input_dir/file
+tar cf test.tar ./../tar.tempdir/input_dir/../input_dir 2>&1
+rm -rf input_* 2>/dev/null
+tar -vxf test.tar 2>&1
+cat input_dir/file 2>&1
+
+PASS: tar strips /../ on extract
+======================
+echo -ne '' >input
+echo -ne 'begin-base64 644 attack.tar.bz2
+QlpoOTFBWSZTWRVn/bIAAKt7hMqwAEBAAP2QAhB0Y96AAACACCAAlISgpqe0
+po0DIaDynqAkpDRP1ANAhiYNSPR8VchKhAz0AK59+DA6FcMKBggOARIJdVHL
+DGllrjs20ATUgR1HmccBX3EhoMnpMJaNyggmxgLDMz54lBnBTJO/1L1lbMS4
+l4/V8LDoe90yiWJhOJvIypgEfxdyRThQkBVn/bI=
+====
+' | >>/tmp/passwd && uudecode -o input && tar xf input 2>&1 && rm passwd; cat /tmp/passwd; echo $?
+
+PASS: tar does not extract into symlinks
+======================
+echo -ne '' >input
+echo -ne 'begin-base64 644 attack.tar.bz2
+QlpoOTFBWSZTWRVn/bIAAKt7hMqwAEBAAP2QAhB0Y96AAACACCAAlISgpqe0
+po0DIaDynqAkpDRP1ANAhiYNSPR8VchKhAz0AK59+DA6FcMKBggOARIJdVHL
+DGllrjs20ATUgR1HmccBX3EhoMnpMJaNyggmxgLDMz54lBnBTJO/1L1lbMS4
+l4/V8LDoe90yiWJhOJvIypgEfxdyRThQkBVn/bI=
+====
+' | >>/tmp/passwd && uudecode -o input && tar xf input -k 2>&1 && rm passwd; cat /tmp/passwd; echo $?
+
+PASS: tar -k does not extract into symlinks
+======================
+echo -ne '' >input
+echo -ne 'begin-base64 644 tar_symlink_attack.tar.bz2
+QlpoOTFBWSZTWZgs7bQAALT/hMmQAFBAAf+AEMAGJPPv32AAAIAIMAC5thlR
+omAjAmCMADQT1BqNE0AEwAAjAEwElTKeo9NTR6h6gaeoA0DQNLVdwZZ5iNTk
+AQwCAV6S00QFJYhrlfFkVCEDEGtgNVqYrI0uK3ggnt30gqk4e1TTQm5QIAKa
+SJqzRGSFLMmOloHSAcvLiFxxRiQtQZF+qPxbo173ZDISOAoNoPN4PQPhBhKS
+n8fYaKlioCTzL2oXYczyUUIP4u5IpwoSEwWdtoA=
+====
+' | \
+exec 2>&1
+uudecode -o input && tar xvf input; echo $?
+ls /tmp/bb_test_evilfile
+ls bb_test_evilfile
+ls symlink/bb_test_evilfile
+
+PASS: tar Symlink attack: create symlink and then write through it
+======================
+echo -ne '' >input
+echo -ne '' | \
+mkdir dir
+>dir/a
+ln -s ../dir/a dir/b
+ln dir/b dir/c
+mkdir new
+tar cf - dir/* | tar -C new -xvf - 2>&1
+
+PASS: tar Symlinks and hardlinks coexist
+PASS: tee-appends-input
+PASS: tee-tees-input
+======================
+echo -ne '' >input
+echo -ne '' | busybox test; echo $?
+PASS: test: should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test ''; echo $?
+PASS: test '': should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test !; echo $?
+PASS: test !: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test a; echo $?
+PASS: test a: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test --help; echo $?
+PASS: test --help: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test -f; echo $?
+PASS: test -f: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test ! -f; echo $?
+PASS: test ! -f: should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test a = a; echo $?
+PASS: test a = a: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test -lt = -gt; echo $?
+PASS: test -lt = -gt: should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test a -a !; echo $?
+PASS: test a -a !: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test -f = a -o b; echo $?
+PASS: test -f = a -o b: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test ! a = b -a ! c = c; echo $?
+PASS: test ! a = b -a ! c = c: should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test ! a = b -a ! c = d; echo $?
+PASS: test ! a = b -a ! c = d: should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test '!' = '!'; echo $?
+PASS: test '!' = '!': should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test '(' = '('; echo $?
+PASS: test '(' = '(': should be true (0)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test '!' '!' = '!'; echo $?
+PASS: test '!' '!' = '!': should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | busybox test '!' '(' = '('; echo $?
+PASS: test '!' '(' = '(': should be false (1)
+======================
+echo -ne '' >input
+echo -ne '' | time -f 'abc\' sleep 0 2>&1
+real	0.000
+user	0.000
+sys	0.000
+FAIL: time -f trailing backslash
+--- expected
++++ actual
+@@ -1 +1,7 @@
+-abc?\sleep
++  time -f 'abc\' sleep 0 2>&1
++       ^~
++[ eval arg at line 103 of ./testing.sh ]:1
++
++    $ECHO -ne "$5" | eval "$2" > actual
++                     ^~~~
++./testing.sh:103: Command '-f' not found (OILS-ERR-100)
+======================
+echo -ne '' >input
+echo -ne '' | time -f 'abc%' sleep 0 2>&1
+real	0.000
+user	0.000
+sys	0.000
+FAIL: time -f trailing percent
+--- expected
++++ actual
+@@ -1 +1,7 @@
+-abc?
+\ No newline at end of file
++  time -f 'abc%' sleep 0 2>&1
++       ^~
++[ eval arg at line 103 of ./testing.sh ]:1
++
++    $ECHO -ne "$5" | eval "$2" > actual
++                     ^~~~
++./testing.sh:103: Command '-f' not found (OILS-ERR-100)
+======================
+echo -ne '' >input
+echo -ne '' | time -f 'abc\^def' sleep 0 2>&1
+real	0.000
+user	0.000
+sys	0.000
+FAIL: time -f undefined backslash
+--- expected
++++ actual
+@@ -1 +1,7 @@
+-abc?\^def
++  time -f 'abc\^def' sleep 0 2>&1
++       ^~
++[ eval arg at line 103 of ./testing.sh ]:1
++
++    $ECHO -ne "$5" | eval "$2" > actual
++                     ^~~~
++./testing.sh:103: Command '-f' not found (OILS-ERR-100)
+======================
+echo -ne '' >input
+echo -ne '' | time -f 'abc%^def' sleep 0 2>&1
+real	0.000
+user	0.000
+sys	0.000
+FAIL: time -f undefined percent
+--- expected
++++ actual
+@@ -1 +1,7 @@
+-abc?^def
++  time -f 'abc%^def' sleep 0 2>&1
++       ^~
++[ eval arg at line 103 of ./testing.sh ]:1
++
++    $ECHO -ne "$5" | eval "$2" > actual
++                     ^~~~
++./testing.sh:103: Command '-f' not found (OILS-ERR-100)
+======================
+echo -ne '' >input
+echo -ne '' | time -f 'abc\ndef\txyz' sleep 0 2>&1
+real	0.000
+user	0.000
+sys	0.000
+FAIL: time -f backslash tab and newline
+--- expected
++++ actual
+@@ -1,2 +1,7 @@
+-abc
+-def	xyz
++  time -f 'abc\ndef\txyz' sleep 0 2>&1
++       ^~
++[ eval arg at line 103 of ./testing.sh ]:1
++
++    $ECHO -ne "$5" | eval "$2" > actual
++                     ^~~~
++./testing.sh:103: Command '-f' not found (OILS-ERR-100)
+======================
+echo -ne '' >input
+echo -ne '' | time -f 'abc%%def' sleep 0 2>&1
+real	0.000
+user	0.000
+sys	0.000
+FAIL: time -f percent percent
+--- expected
++++ actual
+@@ -1 +1,7 @@
+-abc%def
++  time -f 'abc%%def' sleep 0 2>&1
++       ^~
++[ eval arg at line 103 of ./testing.sh ]:1
++
++    $ECHO -ne "$5" | eval "$2" > actual
++                     ^~~~
++./testing.sh:103: Command '-f' not found (OILS-ERR-100)
+PASS: touch-creates-file
+PASS: touch-does-not-create-file
+PASS: touch-touches-files-after-non-existent-file
+PASS: tr-d-alnum-works
+PASS: tr-d-works
+PASS: tr-non-gnu
+PASS: tr-rejects-wrong-class
+PASS: tr-works
+======================
+echo -ne '' >input
+echo -ne '[qwe]' | tr '[q-z]' '_Q-Z+'
+PASS: tr does not treat [] in [a-z] as special
+======================
+echo -ne '' >input
+echo -ne '19AFH\n' | tr -cd '[0-9A-F]'
+PASS: tr understands 0-9A-F
+======================
+echo -ne '' >input
+echo -ne '19AFH\n' | tr -cd '[:xdigit:]'
+PASS: tr understands [:xdigit:]
+======================
+echo -ne '' >input
+echo -ne '789abcxyz\n' | tr '[:digit:]y-z' 111111111123
+PASS: tr does not stop after [:digit:]
+======================
+echo -ne '' >input
+echo -ne '#0123456789ABCDEFGabcdefg\n' | tr '[:xdigit:]Gg' 1111111151242222333330xX
+PASS: tr has correct xdigit sequence
+======================
+echo -ne '' >input
+echo -ne '' | tree tree.tempdir
+PASS: tree error opening dir
+======================
+echo -ne '' >input
+echo -ne '' | cd tree2.tempdir && tree
+FAIL: tree single file
+diff: can't stat 'expected': No such file or directory
+======================
+echo -ne '' >input
+echo -ne '' | cd tree3.tempdir && tree
+FAIL: tree nested directories and files
+diff: can't stat 'expected': No such file or directory
+======================
+echo -ne '' >input
+echo -ne '' | tree tree2.tempdir tree3.tempdir
+FAIL: tree multiple directories
+--- expected
++++ actual
+@@ -1,20 +1,4 @@
+-tree2.tempdir
+-└── testfile
+-tree3.tempdir
+-├── test1
+-├── test2
+-│   ├── a
+-│   │   ├── testfile1
+-│   │   ├── testfile2
+-│   │   ├── testfile3
+-│   │   └── testfile4 -> ../b/testfile4
+-│   └── b
+-│       ├── test3 -> ../../test3
+-│       └── testfile4
+-└── test3
+-    ├── c
+-    │   └── testfile5
+-    └── d
+-        └── testfile6
++tree2.tempdir [error opening dir]
++tree3.tempdir [error opening dir]
+ 
+-7 directories, 9 files
++0 directories, 0 files
+FAIL: true-is-silent
++ cmp - /dev/null
+cmp: EOF on /dev/null
+PASS: true-returns-success
+======================
+echo -ne '' >input
+echo -ne '        12345678\n' | unexpand
+PASS: unexpand case 1
+======================
+echo -ne '' >input
+echo -ne '         12345678\n' | unexpand
+PASS: unexpand case 2
+======================
+echo -ne '' >input
+echo -ne '          12345678\n' | unexpand
+PASS: unexpand case 3
+======================
+echo -ne '' >input
+echo -ne '       \t12345678\n' | unexpand
+PASS: unexpand case 4
+======================
+echo -ne '' >input
+echo -ne '      \t12345678\n' | unexpand
+PASS: unexpand case 5
+======================
+echo -ne '' >input
+echo -ne '     \t12345678\n' | unexpand
+PASS: unexpand case 6
+======================
+echo -ne '' >input
+echo -ne '123 \t 45678\n' | unexpand
+PASS: unexpand case 7
+======================
+echo -ne '' >input
+echo -ne 'a b\n' | unexpand
+PASS: unexpand case 8
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand 
+PASS: unexpand flags 
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -f
+PASS: unexpand flags -f
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -f -t8
+PASS: unexpand flags -f -t8
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t8 -f
+PASS: unexpand flags -t8 -f
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t8 --first-only
+PASS: unexpand flags -t8 --first-only
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -a
+PASS: unexpand flags -a
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t8
+PASS: unexpand flags -t8
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -a -t8
+PASS: unexpand flags -a -t8
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t4
+PASS: unexpand flags -t4
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -a -t4
+PASS: unexpand flags -a -t4
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t4 -a
+PASS: unexpand flags -t4 -a
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t4 -f
+PASS: unexpand flags -t4 -f
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -f -t4
+PASS: unexpand flags -f -t4
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand -t4 --first-only
+PASS: unexpand flags -t4 --first-only
+======================
+echo -ne '' >input
+echo -ne '        a       b    c' | unexpand --first-only -t4
+PASS: unexpand flags --first-only -t4
+======================
+echo -ne '' >input
+echo -ne '' | uniq nonexistent 2> /dev/null || echo yes
+PASS: uniq (exit with error)
+======================
+echo -ne '' >input
+echo -ne '' | uniq /dev/null && echo yes
+PASS: uniq (exit success)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | uniq
+PASS: uniq (default to stdin)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | uniq -
+PASS: uniq - (specify stdin)
+======================
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' >input
+echo -ne '' | uniq input
+PASS: uniq input (specify file)
+======================
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' >input
+echo -ne '' | uniq input actual > /dev/null
+PASS: uniq input outfile (two files)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | uniq - actual
+PASS: uniq (stdin) outfile
+======================
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' >input
+echo -ne '' | uniq input -
+PASS: uniq input - (specify stdout)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | uniq -c | sed 's/^[ \t]*//'
+PASS: uniq -c (occurrence count)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | uniq -d
+PASS: uniq -d (dups only)
+======================
+echo -ne '' >input
+echo -ne 'cc	dd	ee8
+bb	cc	dd8
+aa	bb	cc9
+' | uniq -f2 -s 3
+PASS: uniq -f -s (skip fields and chars)
+======================
+echo -ne '' >input
+echo -ne 'cc1
+cc2
+cc3
+' | uniq -w 2
+PASS: uniq -w (compare max characters)
+======================
+echo -ne '' >input
+echo -ne 'aaccaa
+aaccbb
+bbccaa
+' | uniq -s 2 -w 2
+PASS: uniq -s -w (skip fields and compare max chars)
+======================
+echo -ne '' >input
+echo -ne 'one\ntwo\ntwo\nthree\nthree\nthree\n' | uniq -d -u
+PASS: uniq -u and -d produce no output
+======================
+echo -ne '' >input
+echo -ne '' | unlzma <unlzma_issue_1.lzma 2>&1 >/dev/null; echo $?
+PASS: unlzma (bad archive 1)
+======================
+echo -ne '' >input
+echo -ne '' | unlzma <unlzma_issue_2.lzma 2>&1 >/dev/null; echo $?
+PASS: unlzma (bad archive 2)
+======================
+echo -ne '' >input
+echo -ne '' | unlzma <unlzma_issue_3.lzma 2>&1 >/dev/null; echo $?
+PASS: unlzma (bad archive 3)
+======================
+echo -ne '' >input
+echo -ne '' | unzip -q foo.zip foo/ && test -d foo && test ! -f foo/bar && echo yes
+PASS: unzip (subdir only)
+SKIPPED: unzip (bad archive)
+======================
+echo -ne '' >input
+echo -ne '' | unzip -p ../unzip_bad_lzma_1.zip 2>&1; echo $?
+PASS: unzip (archive with corrupted lzma 1)
+======================
+echo -ne '' >input
+echo -ne '' | unzip -p ../unzip_bad_lzma_2.zip 2>&1; echo $?
+PASS: unzip (archive with corrupted lzma 2)
+PASS: uptime-works
+======================
+echo -ne '' >input
+echo -ne '' | uuencode foo </dev/null | head -n 1 | grep -q 666 && echo yes
+PASS: uuencode sets standard input mode correctly
+======================
+echo -ne '' >input
+echo -ne 'The fast grey fox jumped over the lazy brown dog.\n' | uuencode bb_uuenc_test.out
+PASS: uuencode correct encoding
+======================
+echo -ne '' >input
+echo -ne 'The fast grey fox jumped over the lazy brown dog.\n' | uuencode -m bb_uuenc_test.out
+PASS: uuencode correct base64 encoding
+======================
+echo -ne '' >input
+echo -ne '' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode empty file
+======================
+echo -ne '' >input
+echo -ne '' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m empty file
+======================
+echo -ne '' >input
+echo -ne 'A' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'A'
+======================
+echo -ne '' >input
+echo -ne 'A' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'A'
+======================
+echo -ne '' >input
+echo -ne 'AB' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'AB'
+======================
+echo -ne '' >input
+echo -ne 'AB' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'AB'
+======================
+echo -ne '' >input
+echo -ne 'ABC' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'ABC'
+======================
+echo -ne '' >input
+echo -ne 'ABC' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'ABC'
+======================
+echo -ne '' >input
+echo -ne 'ABCD' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'ABCD'
+======================
+echo -ne '' >input
+echo -ne 'ABCD' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'ABCD'
+======================
+echo -ne '' >input
+echo -ne 'ABCDE' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'ABCDE'
+======================
+echo -ne '' >input
+echo -ne 'ABCDE' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'ABCDE'
+======================
+echo -ne '' >input
+echo -ne 'ABCDEF' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'ABCDEF'
+======================
+echo -ne '' >input
+echo -ne 'ABCDEF' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'ABCDEF'
+======================
+echo -ne '' >input
+echo -ne 'A\x0\xffZ' | r=`uuencode FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode file 'A<NUL><0xff>Z'
+======================
+echo -ne '' >input
+echo -ne 'A\x0\xffZ' | r=`uuencode -m FILE`; echo "$r"; echo "$r" | uudecode -o -;
+PASS: uuencode -m file 'A<NUL><0xff>Z'
+PASS: wc-counts-all
+PASS: wc-counts-characters
+PASS: wc-counts-lines
+PASS: wc-counts-words
+PASS: wc-prints-longest-line-length
+PASS: wget--O-overrides--P
+PASS: wget-handles-empty-path
+PASS: wget-retrieves-google-index
+PASS: wget-supports--P
+PASS: which-uses-default-path
+PASS: xargs-works
+======================
+echo -ne '' >input
+echo -ne 'a\n_\nb\n' | xargs -E _
+PASS: xargs -E _ stops on underscore
+======================
+echo -ne '' >input
+echo -ne 'a\n_\nb\n' | xargs -E ''
+PASS: xargs -E ''
+======================
+echo -ne '' >input
+echo -ne 'a\n_\nb\n' | xargs -e
+PASS: xargs -e without param
+======================
+echo -ne '' >input
+echo -ne 'a\n_\nb\n' | xargs
+PASS: xargs does not stop on underscore ('new' GNU behavior)
+======================
+echo -ne '' >input
+echo -ne 'a\n' | xargs -s7 echo
+PASS: xargs -s7 can take one-char input
+======================
+echo -ne '' >input
+echo -ne '1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 00\n' | xargs -ts25 echo 2>&1 >/dev/null
+PASS: xargs -sNUM test 1
+======================
+echo -ne '' >input
+echo -ne '2 3 4 5 6 7 8 9 0 2 3 4 5 6 7 8 9 00\n' | xargs -ts25 echo 1 2>&1 >/dev/null
+PASS: xargs -sNUM test 2
+======================
+echo -ne '' >input
+echo -ne '' | seq 10000 99999 | sed -e 's/^/"/' -e 's/$/"/' | xargs echo | grep -o 99999; echo $?
+PASS: xargs argument line too long
+======================
+echo -ne '' >input
+echo -ne '1 2 3 4 5\n' | xargs -n1 echo
+PASS: xargs -n1
+======================
+echo -ne '' >input
+echo -ne '1 2 3 4 5\n' | xargs -n2 echo
+PASS: xargs -n2
+======================
+echo -ne '' >input
+echo -ne ' \n2\n\n4\n\n 6 6 \n \v \t 7\n\t\n\v\n' | xargs -I% echo '[%]'
+PASS: xargs -I skips empty lines and leading whitespace
+======================
+echo -ne '' >input
+echo -ne '\0' | xxd -p
+PASS: xxd -p with one NUL
+======================
+echo -ne '' >input
+echo -ne '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0' | xxd -p
+PASS: xxd -p with 30 NULs
+======================
+echo -ne '' >input
+echo -ne '\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0' | xxd -p
+PASS: xxd -p with 31 NULs
+======================
+echo -ne '' >input
+echo -ne '30313233343536373736353433323130 30313233343536373736353433323130' | xxd -p -r
+PASS: xxd -p -r
+======================
+echo -ne '' >input
+echo -ne '   00000000: 3031 3233 3435 3637 3839 3a3b 3c3d 3e3f  0123456789:;<=>?
+	00000010: 40                                       @
+' | xxd -r
+PASS: xxd -r skips leading whitespace and truncates at two spaces
+======================
+echo -ne '' >input
+echo -ne '30 !31 !!32
+' | xxd -p -r
+PASS: xxd -p -r skips one bad char, truncates at two bad chars
+======================
+echo -ne '' >input
+echo -ne '33 3!4 3!!5
+36
+' | xxd -p -r
+PASS: xxd -p -r ignores the nibble with 2nd char bad
+make[1]: *** [/tmp/src/busybox-1.37.0/Makefile.custom:74: check] Error 1
+make: *** [Makefile:112: check] Error 2
+>>> ERROR: busybox: check failed
+>>> ERROR: busybox: rootbld failed
+>>> busybox: Cleaning up build chroot

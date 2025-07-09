@@ -1,0 +1,39 @@
+>>> grub: Validating /home/packager/oily-pine/main/grub/APKBUILD...
+>>> grub: Cleaning up srcdir
+>>> grub: Cleaning up pkgdir
+>>> grub: Cleaning up tmpdir
+>>> grub: Fetching https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz
+>>> grub: Fetching https://ftp.gnu.org/gnu/grub/grub-2.12.tar.xz
+>>> grub: Checking sha512sums...
+grub-2.12.tar.xz: OK
+update-grub: OK
+grub-xen-host_grub.cfg: OK
+0001-Fix-grub-mkconfig-detection-of-linux-edge-virt.patch: OK
+0002-ensure-grub-mkconfig-ignores-.apk-new-files.patch: OK
+0003-prevent-harmless-LVM-warnings-from-grub-probe.patch: OK
+0004-Handle-encrypted-zfs-root-partition.patch: OK
+0005-Alpine-Linux-fixes-for-menu.patch: OK
+0006-build-force-no-pie.patch: OK
+0007-uefi-firmware-remove-fsetup-check.patch: OK
+Fix-grub-mkconfig-detection-of-xen.patch: OK
+>>> grub: Preparing build chroot...
+installing oils!
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+WARNING: opening /home/packager/packages//# for oils: No such file or directory
+ERROR: unable to select packages:
+  oils-for-unix-binsh-0.28.0-r0:
+    conflicts: busybox-binsh-1.37.0-r18[cmd:sh=0.28.0-r0]
+    satisfies: world[oils-for-unix-binsh]
+               openrc-0.62.5-r0[/bin/sh]
+               abuild-3.15.0-r2[/bin/sh]
+               kmod-34.2-r1[/bin/sh]
+               alpine-baselayout-3.7.0-r0[/bin/sh]
+  busybox-binsh-1.37.0-r18:
+    conflicts: oils-for-unix-binsh-0.28.0-r0[cmd:sh=1.37.0-r18]
+    satisfies: mkinitfs-3.12.0-r1[busybox-binsh]
+               openrc-0.62.5-r0[/bin/sh]
+               abuild-3.15.0-r2[/bin/sh]
+               kmod-34.2-r1[/bin/sh]
+               alpine-baselayout-3.7.0-r0[/bin/sh]
+>>> ERROR: grub: rootbld failed
+>>> grub: Cleaning up build chroot

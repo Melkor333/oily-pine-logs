@@ -1,0 +1,35 @@
+>>> syslinux: Validating /home/packager/oily-pine/main/syslinux/APKBUILD...
+>>> syslinux: Cleaning up srcdir
+>>> syslinux: Cleaning up pkgdir
+>>> syslinux: Cleaning up tmpdir
+>>> syslinux: Fetching https://www.kernel.org/pub/linux/utils/boot/syslinux/Testing/6.04/syslinux-6.04-pre1.tar.xz
+>>> syslinux: Fetching https://www.kernel.org/pub/linux/utils/boot/syslinux/Testing/6.04/syslinux-6.04-pre1.tar.xz
+>>> syslinux: Checking sha512sums...
+syslinux-6.04-pre1.tar.xz: OK
+update-extlinux.conf: OK
+update-extlinux: OK
+0008-Fix-build-with-GCC-14.patch: OK
+0018-prevent-pow-optimization.patch: OK
+fix-sysmacros.patch: OK
+gcc-10.patch: OK
+>>> syslinux: Preparing build chroot...
+installing oils!
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+WARNING: opening /home/packager/packages//# for oils: No such file or directory
+ERROR: unable to select packages:
+  oils-for-unix-binsh-0.28.0-r0:
+    conflicts: busybox-binsh-1.37.0-r18[cmd:sh=0.28.0-r0]
+    satisfies: world[oils-for-unix-binsh]
+               openrc-0.62.5-r0[/bin/sh]
+               abuild-3.15.0-r2[/bin/sh]
+               kmod-34.2-r1[/bin/sh]
+               alpine-baselayout-3.7.0-r0[/bin/sh]
+  busybox-binsh-1.37.0-r18:
+    conflicts: oils-for-unix-binsh-0.28.0-r0[cmd:sh=1.37.0-r18]
+    satisfies: mkinitfs-3.12.0-r1[busybox-binsh]
+               openrc-0.62.5-r0[/bin/sh]
+               abuild-3.15.0-r2[/bin/sh]
+               kmod-34.2-r1[/bin/sh]
+               alpine-baselayout-3.7.0-r0[/bin/sh]
+>>> ERROR: syslinux: rootbld failed
+>>> syslinux: Cleaning up build chroot

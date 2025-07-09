@@ -1,0 +1,980 @@
+>>> avahi: Validating /home/packager/oily-pine/main/avahi/APKBUILD...
+>>> avahi: Cleaning up srcdir
+>>> avahi: Cleaning up pkgdir
+>>> avahi: Cleaning up tmpdir
+>>> avahi: Fetching https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz
+>>> avahi: Fetching https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz
+>>> avahi: Checking sha512sums...
+avahi-0.8.tar.gz: OK
+CVE-2021-3468.patch: OK
+CVE-2021-3502.patch: OK
+CVE-2023-1981.patch: OK
+CVE-2023-38469.patch: OK
+CVE-2023-38470.patch: OK
+CVE-2023-38471.patch: OK
+CVE-2023-38472.patch: OK
+CVE-2023-38473.patch: OK
+Fetch-build-db-from-upstream-git.patch: OK
+build-db-Use-the-same-database-format-that-the-C-code-exp.patch: OK
+Add-hostname-dependency-to-avahi-daemon-service.patch: OK
+pkgconf.patch: OK
+>>> avahi: Preparing build chroot...
+installing oils!
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+WARNING: opening /home/packager/packages//# for oils: No such file or directory
+(1/191) Installing musl (1.2.5-r13)
+(2/191) Installing libcrypto3 (3.5.1-r0)
+(3/191) Installing libssl3 (3.5.1-r0)
+(4/191) Installing zlib (1.3.1-r2)
+(5/191) Installing zstd-libs (1.5.7-r1)
+(6/191) Installing libapk (3.0.0_rc5_git20250613-r0)
+(7/191) Installing ca-certificates-bundle (20241121-r2)
+(8/191) Installing apk-tools (3.0.0_rc5_git20250613-r0)
+(9/191) Installing libcap2 (2.76-r0)
+(10/191) Installing libcap-getcap (2.76-r0)
+(11/191) Installing fakeroot (1.37.1.2-r0)
+(12/191) Installing scanelf (1.3.8-r1)
+(13/191) Installing musl-utils (1.2.5-r13)
+(14/191) Installing libgcc (14.3.0-r5)
+(15/191) Installing libstdc++ (14.3.0-r5)
+(16/191) Installing lzip (1.25-r0)
+(17/191) Installing openssl (3.5.1-r0)
+(18/191) Installing patch (2.8-r0)
+(19/191) Installing pkgconf (2.5.1-r0)
+(20/191) Installing acl-libs (2.3.2-r1)
+(21/191) Installing tar (1.35-r4)
+(22/191) Installing alpine-baselayout-data (3.7.0-r0)
+(23/191) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(24/191) Installing ssl_client (1.37.0-r18)
+(25/191) Installing ncurses-terminfo-base (6.5_p20250705-r0)
+(26/191) Installing libncursesw (6.5_p20250705-r0)
+(27/191) Installing readline (8.3.0-r1)
+(28/191) Installing oils-for-unix (0.28.0-r0)
+(29/191) Installing oils-for-unix-binsh (0.28.0-r0)
+(30/191) Installing abuild (3.15.0-r2)
+Executing abuild-3.15.0-r2.pre-install
+(31/191) Installing abuild-sudo (3.15.0-r2)
+(32/191) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(33/191) Installing bridge (1.5-r5)
+(34/191) Installing ifupdown-ng (0.12.1-r7)
+(35/191) Installing openrc-user (0.62.5-r0)
+(36/191) Installing openrc (0.62.5-r0)
+Executing openrc-0.62.5-r0.post-install
+(37/191) Installing mdev-conf (4.8-r0)
+(38/191) Installing busybox-mdev-openrc (1.37.0-r18)
+(39/191) Installing alpine-conf (3.20.0-r0)
+(40/191) Installing alpine-keys (2.5-r0)
+(41/191) Installing alpine-release (3.23.0_alpha20250612-r0)
+(42/191) Installing busybox-openrc (1.37.0-r18)
+(43/191) Installing busybox-suid (1.37.0-r18)
+(44/191) Installing alpine-base (3.23.0_alpha20250612-r0)
+(45/191) Installing m4 (1.4.20-r0)
+(46/191) Installing libbz2 (1.0.8-r6)
+(47/191) Installing perl (5.42.0-r0)
+(48/191) Installing autoconf (2.72-r1)
+(49/191) Installing automake (1.18.1-r0)
+(50/191) Installing jansson (2.14.1-r0)
+(51/191) Installing binutils (2.44-r0)
+(52/191) Installing libmagic (5.46-r2)
+(53/191) Installing file (5.46-r2)
+(54/191) Installing libgomp (14.3.0-r5)
+(55/191) Installing libatomic (14.3.0-r5)
+(56/191) Installing gmp (6.3.0-r4)
+(57/191) Installing isl26 (0.26-r1)
+(58/191) Installing mpfr4 (4.2.2-r0)
+(59/191) Installing mpc1 (1.3.1-r1)
+(60/191) Installing gcc (14.3.0-r5)
+(61/191) Installing libstdc++-dev (14.3.0-r5)
+(62/191) Installing musl-dev (1.2.5-r13)
+(63/191) Installing g++ (14.3.0-r5)
+(64/191) Installing make (4.4.1-r3)
+(65/191) Installing fortify-headers (1.1-r5)
+(66/191) Installing build-base (0.5-r3)
+(67/191) Installing dbus-libs (1.16.2-r1)
+(68/191) Installing dbus-dev (1.16.2-r1)
+(69/191) Installing libexpat (2.7.1-r0)
+(70/191) Installing expat (2.7.1-r0)
+(71/191) Installing expat-dev (2.7.1-r0)
+(72/191) Installing gdbm (1.24-r0)
+(73/191) Installing gdbm-tools (1.24-r0)
+(74/191) Installing gdbm-dev (1.24-r0)
+(75/191) Installing xz-libs (5.8.1-r0)
+(76/191) Installing xz (5.8.1-r0)
+(77/191) Installing gettext-asprintf (0.24.1-r0)
+(78/191) Installing libintl (0.24.1-r0)
+(79/191) Installing libunistring (1.3-r0)
+(80/191) Installing gettext-libs (0.24.1-r0)
+(81/191) Installing gettext-envsubst (0.24.1-r0)
+(82/191) Installing libxml2 (2.13.8-r0)
+(83/191) Installing gettext (0.24.1-r0)
+(84/191) Installing gettext-dev (0.24.1-r0)
+(85/191) Installing brotli-libs (1.1.0-r2)
+(86/191) Installing c-ares (1.34.5-r0)
+(87/191) Installing libidn2 (2.3.8-r0)
+(88/191) Installing nghttp2-libs (1.66.0-r0)
+(89/191) Installing libpsl (0.21.5-r3)
+(90/191) Installing libcurl (8.14.1-r2)
+(91/191) Installing pcre2 (10.43-r1)
+(92/191) Installing git (2.50.1-r0)
+(93/191) Installing git-init-template (2.50.1-r0)
+(94/191) Installing perl-error (0.17030-r0)
+(95/191) Installing perl-git (2.50.1-r0)
+(96/191) Installing git-perl (2.50.1-r0)
+(97/191) Installing bzip2-dev (1.0.8-r6)
+(98/191) Installing libxml2-utils (2.13.8-r0)
+(99/191) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(100/191) Installing libxslt (1.1.43-r3)
+(101/191) Installing docbook-xsl-ns (1.79.2-r13)
+Executing docbook-xsl-ns-1.79.2-r13.post-install
+(102/191) Installing docbook-xsl-nons (1.79.2-r13)
+Executing docbook-xsl-nons-1.79.2-r13.post-install
+(103/191) Installing docbook-xsl (1.79.2-r13)
+(104/191) Installing libffi (3.5.1-r0)
+(105/191) Installing mpdecimal (4.0.1-r0)
+(106/191) Installing libpanelw (6.5_p20250705-r0)
+(107/191) Installing sqlite-libs (3.50.2-r0)
+(108/191) Installing python3 (3.12.11-r0)
+(109/191) Installing python3-pycache-pyc0 (3.12.11-r0)
+(110/191) Installing pyc (3.12.11-r0)
+(111/191) Installing python3-pyc (3.12.11-r0)
+(112/191) Installing py3-parsing (3.2.3-r0)
+(113/191) Installing py3-parsing-pyc (3.2.3-r0)
+(114/191) Installing py3-packaging (25.0-r0)
+(115/191) Installing py3-packaging-pyc (25.0-r0)
+(116/191) Installing libeconf (0.7.9-r0)
+(117/191) Installing libblkid (2.41.1-r0)
+(118/191) Installing libmount (2.41.1-r0)
+(119/191) Installing glib (2.84.3-r0)
+(120/191) Installing linux-headers (6.15.5-r0)
+(121/191) Installing libffi-dev (3.5.1-r0)
+(122/191) Installing bsd-compat-headers (0.7.2-r6)
+(123/191) Installing libformw (6.5_p20250705-r0)
+(124/191) Installing libmenuw (6.5_p20250705-r0)
+(125/191) Installing libncurses++ (6.5_p20250705-r0)
+(126/191) Installing ncurses-dev (6.5_p20250705-r0)
+(127/191) Installing libedit (20250104.3.1-r1)
+(128/191) Installing libedit-dev (20250104.3.1-r1)
+(129/191) Installing zlib-dev (1.3.1-r2)
+(130/191) Installing libpcre2-16 (10.43-r1)
+(131/191) Installing libpcre2-32 (10.43-r1)
+(132/191) Installing pcre2-dev (10.43-r1)
+(133/191) Installing libuuid (2.41.1-r0)
+(134/191) Installing libfdisk (2.41.1-r0)
+(135/191) Installing liblastlog2 (2.41.1-r0)
+(136/191) Installing libsmartcols (2.41.1-r0)
+(137/191) Installing sqlite (3.50.2-r0)
+(138/191) Installing sqlite-dev (3.50.2-r0)
+(139/191) Installing util-linux-dev (2.41.1-r0)
+(140/191) Installing glib-dev (2.84.3-r0)
+(141/191) Installing cairo-tools (1.18.4-r0)
+(142/191) Installing libpng (1.6.49-r0)
+(143/191) Installing freetype (2.13.3-r0)
+(144/191) Installing fontconfig (2.15.0-r3)
+(145/191) Installing brotli (1.1.0-r2)
+(146/191) Installing brotli-dev (1.1.0-r2)
+(147/191) Installing libpng-dev (1.6.49-r0)
+(148/191) Installing freetype-dev (2.13.3-r0)
+(149/191) Installing fontconfig-dev (2.15.0-r3)
+(150/191) Installing libxau (1.0.12-r0)
+(151/191) Installing xorgproto (2024.1-r0)
+(152/191) Installing libxau-dev (1.0.12-r0)
+(153/191) Installing libmd (1.1.0-r0)
+(154/191) Installing libbsd (0.12.2-r0)
+(155/191) Installing libxdmcp (1.1.5-r1)
+(156/191) Installing libxcb (1.17.0-r0)
+(157/191) Installing libx11 (1.8.12-r0)
+(158/191) Installing libxext (1.3.6-r2)
+(159/191) Installing xcb-proto (1.17.0-r0)
+(160/191) Installing xcb-proto-pyc (1.17.0-r0)
+(161/191) Installing libxdmcp-dev (1.1.5-r1)
+(162/191) Installing libxcb-dev (1.17.0-r0)
+(163/191) Installing xtrans (1.6.0-r0)
+(164/191) Installing libx11-dev (1.8.12-r0)
+(165/191) Installing libxext-dev (1.3.6-r2)
+(166/191) Installing libxrender (0.9.12-r0)
+(167/191) Installing libxrender-dev (0.9.12-r0)
+(168/191) Installing pixman (0.46.2-r0)
+(169/191) Installing pixman-dev (0.46.2-r0)
+(170/191) Installing util-macros (1.20.2-r0)
+(171/191) Installing xcb-util (0.4.1-r3)
+(172/191) Installing xcb-util-dev (0.4.1-r3)
+(173/191) Installing cairo (1.18.4-r0)
+(174/191) Installing cairo-gobject (1.18.4-r0)
+(175/191) Installing cairo-dev (1.18.4-r0)
+(176/191) Installing libltdl (2.5.4-r1)
+(177/191) Installing libtool (2.5.4-r1)
+(178/191) Installing py3-setuptools (80.9.0-r0)
+(179/191) Installing py3-setuptools-pyc (80.9.0-r0)
+(180/191) Installing gobject-introspection (1.84.0-r0)
+(181/191) Installing gobject-introspection-dev (1.84.0-r0)
+(182/191) Installing libcap-dev (2.76-r0)
+(183/191) Installing libdaemon (0.14-r6)
+(184/191) Installing libdaemon-dev (0.14-r6)
+(185/191) Installing libevent (2.1.12-r8)
+(186/191) Installing libevent-dev (2.1.12-r8)
+(187/191) Installing py3-dbus (1.4.0-r0)
+(188/191) Installing py3-dbus-pyc (1.4.0-r0)
+(189/191) Installing py3-gobject3-dev (3.52.3-r1)
+(190/191) Installing python3-dev (3.12.11-r0)
+(191/191) Installing python3-gdbm (3.12.11-r0)
+Executing busybox-1.37.0-r18.trigger
+Executing glib-2.84.3-r0.trigger
+No schema files found: doing nothing.
+OK: 493 MiB in 191 packages
+>>> avahi: Fetching https://github.com/lathiat/avahi/releases/download/v0.8/avahi-0.8.tar.gz
+>>> avahi: Checking sha512sums...
+avahi-0.8.tar.gz: OK
+CVE-2021-3468.patch: OK
+CVE-2021-3502.patch: OK
+CVE-2023-1981.patch: OK
+CVE-2023-38469.patch: OK
+CVE-2023-38470.patch: OK
+CVE-2023-38471.patch: OK
+CVE-2023-38472.patch: OK
+CVE-2023-38473.patch: OK
+Fetch-build-db-from-upstream-git.patch: OK
+build-db-Use-the-same-database-format-that-the-C-code-exp.patch: OK
+Add-hostname-dependency-to-avahi-daemon-service.patch: OK
+pkgconf.patch: OK
+>>> avahi: Unpacking /var/cache/distfiles/avahi-0.8.tar.gz...
+>>> avahi: CVE-2021-3468.patch
+patching file avahi-daemon/simple-protocol.c
+>>> avahi: CVE-2021-3502.patch
+patching file avahi-core/browse-dns-server.c
+patching file avahi-core/browse-domain.c
+patching file avahi-core/browse-service-type.c
+patching file avahi-core/browse-service.c
+patching file avahi-core/browse.c
+patching file avahi-core/resolve-address.c
+patching file avahi-core/resolve-host-name.c
+patching file avahi-core/resolve-service.c
+>>> avahi: CVE-2023-1981.patch
+patching file avahi-daemon/dbus-protocol.c
+>>> avahi: CVE-2023-38469.patch
+patching file avahi-core/rr.c
+Hunk #2 succeeded at 689 (offset -1 lines).
+>>> avahi: CVE-2023-38470.patch
+patching file avahi-common/domain-test.c
+patching file avahi-common/domain.c
+>>> avahi: CVE-2023-38471.patch
+patching file avahi-core/server.c
+patching file avahi-core/server.c
+>>> avahi: CVE-2023-38472.patch
+patching file avahi-client/client-test.c
+patching file avahi-daemon/dbus-entry-group.c
+>>> avahi: CVE-2023-38473.patch
+patching file avahi-common/alternative-test.c
+patching file avahi-common/alternative.c
+>>> avahi: Fetch-build-db-from-upstream-git.patch
+patching file service-type-database/build-db
+>>> avahi: build-db-Use-the-same-database-format-that-the-C-code-exp.patch
+patching file configure.ac
+patching file service-type-database/Makefile.am
+patching file service-type-database/build-db
+>>> avahi: Add-hostname-dependency-to-avahi-daemon-service.patch
+patching file initscript/gentoo/avahi-daemon.in
+>>> avahi: pkgconf.patch
+patching file avahi-libevent.pc.in
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: running: autopoint --force
+Copying file common/codeset.m4
+Copying file common/extern-inline.m4
+Copying file common/fcntl-o.m4
+Copying file common/glibc2.m4
+Copying file common/glibc21.m4
+Copying file common/intdiv0.m4
+Copying file common/intl.m4
+Copying file common/intldir.m4
+Copying file common/intlmacosx.m4
+Copying file common/intmax.m4
+Copying file common/inttypes-pri.m4
+Copying file common/inttypes_h.m4
+Copying file common/lcmessage.m4
+Copying file common/lock.m4
+Copying file common/longlong.m4
+Copying file common/printf-posix.m4
+Copying file common/size_max.m4
+Copying file common/stdint_h.m4
+Copying file common/threadlib.m4
+Copying file common/uintmax_t.m4
+Copying file common/visibility.m4
+Copying file common/wchar_t.m4
+Copying file common/wint_t.m4
+Copying file common/xsize.m4
+Copying file po/Makevars.template
+autoreconf: running: aclocal --force -I common
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'common'.
+libtoolize: copying file 'common/libtool.m4'
+libtoolize: copying file 'common/ltoptions.m4'
+libtoolize: copying file 'common/ltsugar.m4'
+libtoolize: copying file 'common/ltversion.m4'
+libtoolize: copying file 'common/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I common
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:59: warning: The macro 'AC_PROG_CC_C99' is obsolete.
+configure.ac:59: You should run autoupdate.
+./lib/autoconf/c.m4:1662: AC_PROG_CC_C99 is expanded from...
+configure.ac:59: the top level
+configure.ac:68: warning: The macro 'AC_PROG_GCC_TRADITIONAL' is obsolete.
+configure.ac:68: You should run autoupdate.
+./lib/autoconf/c.m4:1676: AC_PROG_GCC_TRADITIONAL is expanded from...
+configure.ac:68: the top level
+configure.ac:93: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:93: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+common/gcc_stack_protect.m4:42: GCC_STACK_PROTECT_LIB is expanded from...
+configure.ac:93: the top level
+configure.ac:135: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:135: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+common/gcc_stack_protect.m4:54: GCC_STACK_PROTECT_CC is expanded from...
+configure.ac:135: the top level
+configure.ac:138: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:138: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+common/gcc_stack_protect.m4:71: GCC_STACK_PROTECT_CXX is expanded from...
+configure.ac:138: the top level
+configure.ac:144: warning: The macro 'AC_PROG_LIBTOOL' is obsolete.
+configure.ac:144: You should run autoupdate.
+common/libtool.m4:100: AC_PROG_LIBTOOL is expanded from...
+configure.ac:144: the top level
+configure.ac:146: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+./lib/autoconf/lang.m4:199: AC_LANG_CONFTEST is expanded from...
+./lib/autoconf/general.m4:2821: _AC_COMPILE_IFELSE is expanded from...
+./lib/autoconf/general.m4:2837: AC_COMPILE_IFELSE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+configure.ac:146: the top level
+configure.ac:156: warning: The macro 'AC_LANG_C' is obsolete.
+configure.ac:156: You should run autoupdate.
+./lib/autoconf/c.m4:72: AC_LANG_C is expanded from...
+common/acx_pthread.m4:53: ACX_PTHREAD is expanded from...
+configure.ac:156: the top level
+configure.ac:156: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:156: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+common/acx_pthread.m4:53: ACX_PTHREAD is expanded from...
+configure.ac:156: the top level
+configure.ac:214: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:214: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+configure.ac:214: the top level
+configure.ac:229: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:229: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:229: the top level
+configure.ac:229: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:229: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2821: _AC_COMPILE_IFELSE is expanded from...
+./lib/autoconf/general.m4:2837: AC_COMPILE_IFELSE is expanded from...
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:229: the top level
+configure.ac:303: warning: AC_LANG_CONFTEST: no AC_LANG_SOURCE call detected in body
+./lib/autoconf/lang.m4:199: AC_LANG_CONFTEST is expanded from...
+configure.ac:303: the top level
+configure.ac:322: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:322: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:322: the top level
+configure.ac:349: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:349: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:349: the top level
+configure.ac:356: warning: The macro 'AC_HEADER_TIME' is obsolete.
+configure.ac:356: You should run autoupdate.
+./lib/autoconf/headers.m4:702: AC_HEADER_TIME is expanded from...
+configure.ac:356: the top level
+configure.ac:381: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:381: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+common/gcc_visibility.m4:6: CHECK_VISIBILITY_HIDDEN is expanded from...
+configure.ac:381: the top level
+configure.ac:870: warning: The macro 'AC_FD_CC' is obsolete.
+configure.ac:870: You should run autoupdate.
+./lib/autoconf/general.m4:399: AC_FD_CC is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+configure.ac:870: the top level
+configure.ac:873: warning: The macro 'AC_FD_CC' is obsolete.
+configure.ac:873: You should run autoupdate.
+./lib/autoconf/general.m4:399: AC_FD_CC is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+configure.ac:873: the top level
+configure.ac:875: warning: The macro 'AC_FD_CC' is obsolete.
+configure.ac:875: You should run autoupdate.
+./lib/autoconf/general.m4:399: AC_FD_CC is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+configure.ac:875: the top level
+configure.ac:875: warning: The macro 'AC_FD_CC' is obsolete.
+configure.ac:875: You should run autoupdate.
+./lib/autoconf/general.m4:399: AC_FD_CC is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+configure.ac:875: the top level
+configure.ac:880: warning: The macro 'AC_FD_CC' is obsolete.
+configure.ac:880: You should run autoupdate.
+./lib/autoconf/general.m4:399: AC_FD_CC is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+configure.ac:880: the top level
+configure.ac:880: warning: The macro 'AC_FD_CC' is obsolete.
+configure.ac:880: You should run autoupdate.
+./lib/autoconf/general.m4:399: AC_FD_CC is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+common/python.m4:4: AM_CHECK_PYMOD is expanded from...
+configure.ac:880: the top level
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:58: installing './compile'
+configure.ac:26: installing './missing'
+avahi-autoipd/Makefile.am:34: warning: source file '../avahi-daemon/setproctitle.c' is in a subdirectory,
+avahi-autoipd/Makefile.am:34: but option 'subdir-objects' is disabled
+automake: warning: possible forward-incompatibility.
+automake: At least one source file is in a subdirectory, but the 'subdir-objects'
+automake: automake option hasn't been enabled.  For now, the corresponding output
+automake: object file(s) will be placed in the top-level directory.  However, this
+automake: behavior may change in a future Automake major version, with object
+automake: files being placed in the same subdirectory as the corresponding sources.
+automake: You are advised to start using 'subdir-objects' option throughout your
+automake: project, to avoid future incompatibility.
+avahi-autoipd/Makefile.am:34: warning: source file '../avahi-common/malloc.c' is in a subdirectory,
+avahi-autoipd/Makefile.am:34: but option 'subdir-objects' is disabled
+avahi-autoipd/Makefile.am:34: warning: source file '../avahi-common/timeval.c' is in a subdirectory,
+avahi-autoipd/Makefile.am:34: but option 'subdir-objects' is disabled
+avahi-autoipd/Makefile.am: installing './depcomp'
+avahi-client/Makefile.am:43: warning: source file '../avahi-common/dbus.c' is in a subdirectory,
+avahi-client/Makefile.am:43: but option 'subdir-objects' is disabled
+avahi-client/Makefile.am:43: warning: source file '../avahi-common/dbus-watch-glue.c' is in a subdirectory,
+avahi-client/Makefile.am:43: but option 'subdir-objects' is disabled
+avahi-daemon/Makefile.am:48: warning: source file '../avahi-client/check-nss.c' is in a subdirectory,
+avahi-daemon/Makefile.am:48: but option 'subdir-objects' is disabled
+avahi-daemon/Makefile.am:115: warning: source file '../avahi-common/dbus.c' is in a subdirectory,
+avahi-daemon/Makefile.am:115: but option 'subdir-objects' is disabled
+avahi-daemon/Makefile.am:115: warning: source file '../avahi-common/dbus-watch-glue.c' is in a subdirectory,
+avahi-daemon/Makefile.am:115: but option 'subdir-objects' is disabled
+avahi-ui/Makefile.am:66: warning: source file '../avahi-utils/stdb.c' is in a subdirectory,
+avahi-ui/Makefile.am:66: but option 'subdir-objects' is disabled
+avahi-ui/Makefile.am:75: warning: source file '../avahi-utils/stdb.c' is in a subdirectory,
+avahi-ui/Makefile.am:75: but option 'subdir-objects' is disabled
+autoreconf: Leaving directory '.'
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking how to create a pax tar archive... gnutar
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for stow... no
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of cc... gcc3
+checking whether the compiler supports GNU C++... yes
+checking whether c++ accepts -g... yes
+checking for c++ option to enable C++11 features... none needed
+checking dependency style of c++... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/time.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking how to run the C preprocessor... cc -E
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking whether libssp exists... no
+checking whether stack-smashing protection is available... yes
+checking whether stack-smashing protection is buggy... no
+checking whether cc accepts -fstack-protector... yes
+checking whether c++ accepts -fstack-protector... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... no
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... c++ -E
+checking for ld used by c++... /usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the c++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for c++ option to produce PIC... -fPIC -DPIC
+checking if c++ PIC flag -fPIC -DPIC works... yes
+checking if c++ static flag -static works... no
+checking if c++ supports -c -o file.o... yes
+checking if c++ supports -c -o file.o... (cached) yes
+checking whether the c++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether the C++ compiler works... yes
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking whether to check for GCC pthread/shared inconsistencies... yes
+checking whether -pthread is sufficient with -shared... yes
+checking for linux/netlink.h... yes
+checking for net/route.h... no
+checking for sys/filio.h... no
+checking for sys/sysctl.h... no
+checking for struct lifconf... no
+checking for struct ip_mreqn... yes
+checking checking whether rtnetlink.h can be included with -std=c99... yes
+checking whether cc accepts -std=c99... yes
+checking whether cc accepts -Wall... yes
+checking whether cc accepts -W... yes
+checking whether cc accepts -Wextra... yes
+checking whether cc accepts -pedantic... yes
+checking whether cc accepts -pipe... yes
+checking whether cc accepts -Wformat... yes
+checking whether cc accepts -Wold-style-definition... yes
+checking whether cc accepts -Wdeclaration-after-statement... yes
+checking whether cc accepts -Wfloat-equal... yes
+checking whether cc accepts -Wmissing-declarations... yes
+checking whether cc accepts -Wmissing-prototypes... yes
+checking whether cc accepts -Wstrict-prototypes... yes
+checking whether cc accepts -Wredundant-decls... yes
+checking whether cc accepts -Wmissing-noreturn... yes
+checking whether cc accepts -Wshadow... yes
+checking whether cc accepts -Wendif-labels... yes
+checking whether cc accepts -Wpointer-arith... yes
+checking whether cc accepts -Wbad-function-cast... yes
+checking whether cc accepts -Wcast-qual... yes
+checking whether cc accepts -Wcast-align... yes
+checking whether cc accepts -Wwrite-strings... yes
+checking whether cc accepts -fdiagnostics-show-option... yes
+checking whether cc accepts -Wno-cast-qual... yes
+checking whether cc accepts -fno-strict-aliasing... yes
+checking for egrep... (cached) /bin/grep -E
+checking for arpa/inet.h... yes
+checking for fcntl.h... yes
+checking for inttypes.h... (cached) yes
+checking for limits.h... yes
+checking for netinet/in.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/ioctl.h... yes
+checking for sys/socket.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for netdb.h... yes
+checking for syslog.h... yes
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99 or later... yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for library containing inet_ntop... none required
+checking for library containing recv... none required
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether CMSG_SPACE is declared... yes
+checking for working memcmp... yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking for gethostname... yes
+checking for memchr... yes
+checking for memmove... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for select... yes
+checking for socket... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strrchr... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for uname... yes
+checking for setresuid... yes
+checking for setreuid... yes
+checking for setresgid... yes
+checking for setregid... yes
+checking for strcasecmp... yes
+checking for gettimeofday... yes
+checking for putenv... yes
+checking for strncasecmp... yes
+checking for strlcpy... yes
+checking for gethostbyname... yes
+checking for seteuid... yes
+checking for setegid... yes
+checking for setproctitle... no
+checking for getprogname... no
+checking for uid_t... yes
+checking for gid_t... yes
+checking for working chown... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for mode_t... yes
+checking for pid_t... yes
+checking whether environ is declared... yes
+checking for gcc -fvisibility=hidden support... yes
+checking for sys/capability.h... yes
+checking for sys/prctl.h... yes
+checking for chroot... yes
+checking for dlopen in -ldl... yes
+checking for dlfcn.h... (cached) yes
+checking for sys/inotify.h... yes
+checking for kqueue... no
+checking whether NLS is requested... yes
+checking for msgfmt... /usr/bin/msgfmt
+checking for gmsgfmt... /usr/bin/msgfmt
+checking for xgettext... /usr/bin/xgettext
+checking for msgmerge... /usr/bin/msgmerge
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) is GNU ld... yes
+checking for shared library run path origin... done
+checking for egrep -e... (cached) /bin/grep -E
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyCurrent... no
+checking for GNU gettext in libc... no
+checking for iconv... yes
+checking for working iconv... yes
+checking for GNU gettext in libintl... yes
+checking whether to use NLS... yes
+checking where the gettext function comes from... external libintl
+checking how to link with libintl... /usr/lib/libintl.so
+checking for pkg-config... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for  glib-2.0 >= 2.4.0 ... yes
+checking for  glib-2.0 >= 2.4.0 gobject-2.0 ... yes
+checking for gobject-introspection... yes
+checking for  libevent >= 2.0.21 ... yes
+checking for  dbus-1 >= 0.34 ... yes
+Your D-Bus version is 1,16,2.
+checking for dbus_connection_close... yes
+checking for dbus_bus_get_private... yes
+checking for XML_ParserCreate in -lexpat... yes
+checking for expat.h... yes
+checking for XML_ParserCreate in -lbsdxml... no
+checking for gdbm_open in -lgdbm... yes
+checking for gdbm.h... yes
+checking for  libdaemon >= 0.14 ... yes
+checking for a Python interpreter with version >= 2.6... python
+checking for python... /usr/bin/python
+checking for python version... 3.12
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for pygobject-3.0... yes
+checking for python module dbus... yes
+checking for python module socket... yes
+checking for python module dbm.gnu... yes
+configure: WARNING: *** Not rebuilding man pages as xmltoman is not found ***
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating avahi-common/Makefile
+config.status: creating avahi-core/Makefile
+config.status: creating avahi-glib/Makefile
+config.status: creating avahi-gobject/Makefile
+config.status: creating avahi-qt/Makefile
+config.status: creating avahi-daemon/Makefile
+config.status: creating avahi-daemon/avahi-dbus.conf
+config.status: creating avahi-discover-standalone/Makefile
+config.status: creating avahi-client/Makefile
+config.status: creating initscript/Makefile
+config.status: creating initscript/debian/Makefile
+config.status: creating initscript/gentoo/Makefile
+config.status: creating initscript/suse/Makefile
+config.status: creating initscript/fedora/Makefile
+config.status: creating initscript/lfs/Makefile
+config.status: creating initscript/mandriva/Makefile
+config.status: creating initscript/darwin/Makefile
+config.status: creating initscript/freebsd/Makefile
+config.status: creating initscript/slackware/Makefile
+config.status: creating avahi-dnsconfd/Makefile
+config.status: creating avahi-utils/Makefile
+config.status: creating avahi-python/Makefile
+config.status: creating avahi-python/avahi/Makefile
+config.status: creating avahi-python/avahi-discover/Makefile
+config.status: creating examples/Makefile
+config.status: creating common/Makefile
+config.status: creating man/Makefile
+config.status: creating tests/Makefile
+config.status: creating service-type-database/Makefile
+config.status: creating avahi-sharp/Makefile
+config.status: creating avahi-ui-sharp/Makefile
+config.status: creating avahi-compat-libdns_sd/Makefile
+config.status: creating avahi-compat-howl/Makefile
+config.status: creating avahi-compat-howl/samples/Makefile
+config.status: creating avahi-autoipd/Makefile
+config.status: creating avahi-ui/Makefile
+config.status: creating avahi-libevent/Makefile
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+
+ ---{ avahi 0.8 }---
+
+    prefix:                                    /usr
+    sysconfdir:                                /etc
+    localstatedir:                             /var
+    avahi socket:                              /run/avahi-daemon/socket
+    dbus-1 system.d dir:                       /usr/share/dbus-1/system.d
+    dbus-1 version:                            1.16.2
+    dbus-1 system socket:                      unix:path=/var/run/dbus/system_bus_socket
+    C Compiler:                                cc
+    CFLAGS:                                    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fstack-protector -std=c99 -Wall -W -Wextra -pedantic -pipe -Wformat -Wold-style-definition -Wdeclaration-after-statement -Wfloat-equal -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wredundant-decls -Wmissing-noreturn -Wshadow -Wendif-labels -Wpointer-arith -Wbad-function-cast -Wcast-qual -Wcast-align -Wwrite-strings -fdiagnostics-show-option -Wno-cast-qual -fno-strict-aliasing
+    Enable GLIB:                               yes
+    Enable GLIB GObject:                       yes
+    Enable GObject Introspection:              yes
+    Enable GTK 2.0:                            no
+    Enable GTK 3.0:                            no
+    Enable D-Bus:                              yes
+    With XML:                                  expat
+    Enable GDBM:                               yes
+    Enable DBM:                                no
+    Enable libdaemon:                          yes
+    Enable Python:                             yes
+    Enable pygobject:                          yes
+    Enable python-dbus:                        yes
+    Enable QT3:                                no
+    Enable QT4:                                no
+    Enable QT5:                                no
+    Enable Mono:                               no
+    Enable Monodoc:                            no
+    Distribution/OS:                           gentoo
+    User for avahi-daemon:                     avahi
+    Group for avahi-daemon:                    avahi
+    Priviliged access group for Avahi clients: netdev
+    User for avahi-autoipd:                    avahi-autoipd
+    Group for avahi-autoipd:                   avahi-autoipd
+    Enable chroot():                           yes
+    Enable Linux inotify:                      yes
+    Enable stack-smashing protection:          yes
+    systemd unit directory:                    
+
+    Building libavahi-core              yes
+    Building avahi-daemon:              yes
+    Building avahi-dnsconfd:            yes
+    Building libavahi-client:           yes
+    Building avahi-utils:               yes
+    Building avahi-python:              yes
+    Building libavahi-glib:             yes
+    Building libavahi-gobject:          yes
+    Building avahi-discover-standalone: no
+    Building libavahi-qt3:              no
+    Building libavahi-qt4:              no
+    Building libavahi-qt5:              no
+    Building avahi-sharp:               no
+    Building avahi-compat-libdns_sd:    yes
+    Building avahi-compat-howl:         yes
+    Building tests:                     no
+    Building avahi-core documentation:  no
+    Building avahi-autoipd:             no
+    Building libavahi-ui:               no
+    Building libavahi-libevent:		yes
+
+make  all-recursive
+make[1]: Entering directory '/tmp/src/avahi-0.8'
+Making all in common
+make[2]: Entering directory '/tmp/src/avahi-0.8/common'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/avahi-0.8/common'
+Making all in avahi-common
+make[2]: Entering directory '/tmp/src/avahi-0.8/avahi-common'
+  CC       libavahi_common_la-malloc.lo
+  CC       libavahi_common_la-strlst.lo
+  CC       libavahi_common_la-domain.lo
+  CC       libavahi_common_la-error.lo
+  CC       libavahi_common_la-address.lo
+  CC       libavahi_common_la-simple-watch.lo
+  CC       libavahi_common_la-alternative.lo
+  CC       libavahi_common_la-utf8.lo
+  CC       libavahi_common_la-rlist.lo
+  CC       libavahi_common_la-timeval.lo
+  CC       libavahi_common_la-thread-watch.lo
+  CC       libavahi_common_la-i18n.lo
+i18n.c: In function 'avahi_init_i18n':
+i18n.c:34:41: error: 'AVAHI_LOCALEDIR' undeclared (first use in this function)
+   34 |         bindtextdomain(GETTEXT_PACKAGE, AVAHI_LOCALEDIR);
+      |                                         ^~~~~~~~~~~~~~~
+i18n.c:34:41: note: each undeclared identifier is reported only once for each function it appears in
+make[2]: *** [Makefile:969: libavahi_common_la-i18n.lo] Error 1
+make[2]: *** Waiting for unfinished jobs....
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:955: libavahi_common_la-rlist.lo] Error 1
+make[2]: *** [Makefile:913: libavahi_common_la-error.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:962: libavahi_common_la-utf8.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:899: libavahi_common_la-address.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:934: libavahi_common_la-timeval.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:906: libavahi_common_la-alternative.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:948: libavahi_common_la-thread-watch.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:892: libavahi_common_la-malloc.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:920: libavahi_common_la-strlst.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:941: libavahi_common_la-simple-watch.lo] Error 1
+cc: warning: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file unused because linking not done
+cc: error: \\\-DDEBUG_TRAP=__asm__("int $3")\\\: linker input file not found: No such file or directory
+cc: warning: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file unused because linking not done
+cc: error: \\\-DAVAHI_LOCALEDIR="/usr//locale: linker input file not found: No such file or directory
+make[2]: *** [Makefile:927: libavahi_common_la-domain.lo] Error 1
+make[2]: Leaving directory '/tmp/src/avahi-0.8/avahi-common'
+make[1]: *** [Makefile:834: all-recursive] Error 1
+make[1]: Leaving directory '/tmp/src/avahi-0.8'
+make: *** [Makefile:744: all] Error 2
+>>> ERROR: avahi: build failed
+>>> ERROR: avahi: rootbld failed
+>>> avahi: Cleaning up build chroot

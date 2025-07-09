@@ -1,0 +1,1787 @@
+>>> freeradius: Validating /home/packager/oily-pine/main/freeradius/APKBUILD...
+>>> freeradius: Cleaning up srcdir
+>>> freeradius: Cleaning up pkgdir
+>>> freeradius: Cleaning up tmpdir
+>>> freeradius: Fetching https://github.com/FreeRADIUS/freeradius-server/releases/download/release_3_0_27/freeradius-server-3.0.27.tar.gz
+>>> freeradius: Fetching https://github.com/FreeRADIUS/freeradius-server/releases/download/release_3_0_27/freeradius-server-3.0.27.tar.gz
+>>> freeradius: Checking sha512sums...
+freeradius-server-3.0.27.tar.gz: OK
+freeradius.logrotated: OK
+radiusd.confd: OK
+radiusd.initd: OK
+setup-freeradius.in: OK
+print-var.mk: OK
+radacct-rotate: OK
+radacct-rotate.conf: OK
+radacct-rotate.crond: OK
+musl-fix-headers.patch: OK
+fix-scopeid.patch: OK
+default-config.patch: OK
+remove-eap-from-default-mods.patch: OK
+readme-setup-script.patch: OK
+dont-install-test-tools.patch: OK
+>>> freeradius: Preparing build chroot...
+installing oils!
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+WARNING: opening /home/packager/packages//# for oils: No such file or directory
+(1/174) Installing musl (1.2.5-r13)
+(2/174) Installing libcrypto3 (3.5.1-r0)
+(3/174) Installing libssl3 (3.5.1-r0)
+(4/174) Installing zlib (1.3.1-r2)
+(5/174) Installing zstd-libs (1.5.7-r1)
+(6/174) Installing libapk (3.0.0_rc5_git20250613-r0)
+(7/174) Installing ca-certificates-bundle (20241121-r2)
+(8/174) Installing apk-tools (3.0.0_rc5_git20250613-r0)
+(9/174) Installing libcap2 (2.76-r0)
+(10/174) Installing libcap-getcap (2.76-r0)
+(11/174) Installing fakeroot (1.37.1.2-r0)
+(12/174) Installing scanelf (1.3.8-r1)
+(13/174) Installing musl-utils (1.2.5-r13)
+(14/174) Installing libgcc (14.3.0-r5)
+(15/174) Installing libstdc++ (14.3.0-r5)
+(16/174) Installing lzip (1.25-r0)
+(17/174) Installing openssl (3.5.1-r0)
+(18/174) Installing patch (2.8-r0)
+(19/174) Installing pkgconf (2.5.1-r0)
+(20/174) Installing acl-libs (2.3.2-r1)
+(21/174) Installing tar (1.35-r4)
+(22/174) Installing alpine-baselayout-data (3.7.0-r0)
+(23/174) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(24/174) Installing ssl_client (1.37.0-r18)
+(25/174) Installing ncurses-terminfo-base (6.5_p20250705-r0)
+(26/174) Installing libncursesw (6.5_p20250705-r0)
+(27/174) Installing readline (8.3.0-r1)
+(28/174) Installing oils-for-unix (0.28.0-r0)
+(29/174) Installing oils-for-unix-binsh (0.28.0-r0)
+(30/174) Installing abuild (3.15.0-r2)
+Executing abuild-3.15.0-r2.pre-install
+(31/174) Installing abuild-sudo (3.15.0-r2)
+(32/174) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(33/174) Installing bridge (1.5-r5)
+(34/174) Installing ifupdown-ng (0.12.1-r7)
+(35/174) Installing openrc-user (0.62.5-r0)
+(36/174) Installing openrc (0.62.5-r0)
+Executing openrc-0.62.5-r0.post-install
+(37/174) Installing mdev-conf (4.8-r0)
+(38/174) Installing busybox-mdev-openrc (1.37.0-r18)
+(39/174) Installing alpine-conf (3.20.0-r0)
+(40/174) Installing alpine-keys (2.5-r0)
+(41/174) Installing alpine-release (3.23.0_alpha20250612-r0)
+(42/174) Installing busybox-openrc (1.37.0-r18)
+(43/174) Installing busybox-suid (1.37.0-r18)
+(44/174) Installing alpine-base (3.23.0_alpha20250612-r0)
+(45/174) Installing m4 (1.4.20-r0)
+(46/174) Installing libbz2 (1.0.8-r6)
+(47/174) Installing perl (5.42.0-r0)
+(48/174) Installing autoconf (2.72-r1)
+(49/174) Installing automake (1.18.1-r0)
+(50/174) Installing jansson (2.14.1-r0)
+(51/174) Installing binutils (2.44-r0)
+(52/174) Installing libmagic (5.46-r2)
+(53/174) Installing file (5.46-r2)
+(54/174) Installing libgomp (14.3.0-r5)
+(55/174) Installing libatomic (14.3.0-r5)
+(56/174) Installing gmp (6.3.0-r4)
+(57/174) Installing isl26 (0.26-r1)
+(58/174) Installing mpfr4 (4.2.2-r0)
+(59/174) Installing mpc1 (1.3.1-r1)
+(60/174) Installing gcc (14.3.0-r5)
+(61/174) Installing libstdc++-dev (14.3.0-r5)
+(62/174) Installing musl-dev (1.2.5-r13)
+(63/174) Installing g++ (14.3.0-r5)
+(64/174) Installing make (4.4.1-r3)
+(65/174) Installing fortify-headers (1.1-r5)
+(66/174) Installing build-base (0.5-r3)
+(67/174) Installing bash (5.3.0-r0)
+Executing bash-5.3.0-r0.post-install
+(68/174) Installing brotli-libs (1.1.0-r2)
+(69/174) Installing brotli (1.1.0-r2)
+(70/174) Installing brotli-dev (1.1.0-r2)
+(71/174) Installing c-ares (1.34.5-r0)
+(72/174) Installing c-ares-dev (1.34.5-r0)
+(73/174) Installing libunistring (1.3-r0)
+(74/174) Installing libidn2 (2.3.8-r0)
+(75/174) Installing libidn2-dev (2.3.8-r0)
+(76/174) Installing libpsl (0.21.5-r3)
+(77/174) Installing libpsl-utils (0.21.5-r3)
+(78/174) Installing libpsl-dev (0.21.5-r3)
+(79/174) Installing nghttp2-libs (1.66.0-r0)
+(80/174) Installing nghttp2-dev (1.66.0-r0)
+(81/174) Installing openssl-dev (3.5.1-r0)
+(82/174) Installing zlib-dev (1.3.1-r2)
+(83/174) Installing zstd (1.5.7-r1)
+(84/174) Installing zstd-dev (1.5.7-r1)
+(85/174) Installing libcurl (8.14.1-r2)
+(86/174) Installing curl-dev (8.14.1-r2)
+(87/174) Installing gdbm (1.24-r0)
+(88/174) Installing gdbm-tools (1.24-r0)
+(89/174) Installing gdbm-dev (1.24-r0)
+(90/174) Installing libexpat (2.7.1-r0)
+(91/174) Installing pcre2 (10.43-r1)
+(92/174) Installing git (2.50.1-r0)
+(93/174) Installing git-init-template (2.50.1-r0)
+(94/174) Installing perl-error (0.17030-r0)
+(95/174) Installing perl-git (2.50.1-r0)
+(96/174) Installing git-perl (2.50.1-r0)
+(97/174) Installing hiredis (1.3.0-r0)
+(98/174) Installing hiredis-dev (1.3.0-r0)
+(99/174) Installing json-c (0.18-r0)
+(100/174) Installing json-c-dev (0.18-r0)
+(101/174) Installing libeconf (0.7.9-r0)
+(102/174) Installing libblkid (2.41.1-r0)
+(103/174) Installing libuuid (2.41.1-r0)
+(104/174) Installing libfdisk (2.41.1-r0)
+(105/174) Installing sqlite-libs (3.50.2-r0)
+(106/174) Installing liblastlog2 (2.41.1-r0)
+(107/174) Installing libmount (2.41.1-r0)
+(108/174) Installing libsmartcols (2.41.1-r0)
+(109/174) Installing sqlite (3.50.2-r0)
+(110/174) Installing sqlite-dev (3.50.2-r0)
+(111/174) Installing util-linux-dev (2.41.1-r0)
+(112/174) Installing gawk (5.3.2-r2)
+(113/174) Installing libcom_err (1.47.2-r3)
+(114/174) Installing e2fsprogs-libs (1.47.2-r3)
+(115/174) Installing e2fsprogs-dev (1.47.2-r3)
+(116/174) Installing libffi (3.5.1-r0)
+(117/174) Installing libintl (0.24.1-r0)
+(118/174) Installing glib (2.84.3-r0)
+(119/174) Installing libverto (0.3.2-r2)
+(120/174) Installing libverto-glib (0.3.2-r2)
+(121/174) Installing libev (4.33-r1)
+(122/174) Installing libverto-libev (0.3.2-r2)
+(123/174) Installing libevent (2.1.12-r8)
+(124/174) Installing libverto-libevent (0.3.2-r2)
+(125/174) Installing libverto-dev (0.3.2-r2)
+(126/174) Installing krb5-conf (1.0-r2)
+(127/174) Installing keyutils-libs (1.6.3-r4)
+(128/174) Installing krb5-libs (1.21.3-r0)
+(129/174) Installing libsasl (2.1.28-r8)
+(130/174) Installing libldap (2.6.8-r0)
+(131/174) Installing krb5-server-ldap (1.21.3-r0)
+(132/174) Installing krb5-dev (1.21.3-r0)
+(133/174) Installing libpcap (1.10.5-r1)
+(134/174) Installing libpcap-dev (1.10.5-r1)
+(135/174) Installing libpq (17.5-r2)
+(136/174) Installing libpq-dev (17.5-r2)
+(137/174) Installing libltdl (2.5.4-r1)
+(138/174) Installing libtool (2.5.4-r1)
+(139/174) Installing linux-headers (6.15.5-r0)
+(140/174) Installing skalibs-libs (2.14.4.0-r0)
+(141/174) Installing utmps-libs (0.1.3.1-r0)
+(142/174) Installing linux-pam (1.7.0-r4)
+(143/174) Installing linux-pam-dev (1.7.0-r4)
+(144/174) Installing mariadb-connector-c (3.3.10-r0)
+(145/174) Installing mariadb-connector-c-dev (3.3.10-r0)
+(146/174) Installing net-snmp-libs (5.9.4-r2)
+(147/174) Installing net-snmp-agent-libs (5.9.4-r2)
+(148/174) Installing net-snmp-tools (5.9.4-r2)
+(149/174) Installing cyrus-sasl-dev (2.1.28-r8)
+(150/174) Installing xz-libs (5.8.1-r0)
+(151/174) Installing mpdecimal (4.0.1-r0)
+(152/174) Installing libpanelw (6.5_p20250705-r0)
+(153/174) Installing python3 (3.12.11-r0)
+(154/174) Installing python3-pycache-pyc0 (3.12.11-r0)
+(155/174) Installing pyc (3.12.11-r0)
+(156/174) Installing python3-pyc (3.12.11-r0)
+(157/174) Installing libevent-dev (2.1.12-r8)
+(158/174) Installing libsodium (1.0.20-r0)
+(159/174) Installing libsodium-dev (1.0.20-r0)
+(160/174) Installing openldap-dev (2.6.8-r0)
+(161/174) Installing perl-utils (5.42.0-r0)
+(162/174) Installing perl-dev (5.42.0-r0)
+(163/174) Installing python3-dev (3.12.11-r0)
+(164/174) Installing libhistory (8.3.0-r1)
+(165/174) Installing libformw (6.5_p20250705-r0)
+(166/174) Installing libmenuw (6.5_p20250705-r0)
+(167/174) Installing libncurses++ (6.5_p20250705-r0)
+(168/174) Installing ncurses-dev (6.5_p20250705-r0)
+(169/174) Installing readline-dev (8.3.0-r1)
+(170/174) Installing talloc (2.4.2-r1)
+(171/174) Installing py3-talloc (2.4.2-r1)
+(172/174) Installing talloc-dev (2.4.2-r1)
+(173/174) Installing unixodbc (2.3.12-r1)
+(174/174) Installing unixodbc-dev (2.3.12-r1)
+Executing busybox-1.37.0-r18.trigger
+Executing glib-2.84.3-r0.trigger
+OK: 444 MiB in 174 packages
+>>> freeradius: Fetching https://github.com/FreeRADIUS/freeradius-server/releases/download/release_3_0_27/freeradius-server-3.0.27.tar.gz
+>>> freeradius: Checking sha512sums...
+freeradius-server-3.0.27.tar.gz: OK
+freeradius.logrotated: OK
+radiusd.confd: OK
+radiusd.initd: OK
+setup-freeradius.in: OK
+print-var.mk: OK
+radacct-rotate: OK
+radacct-rotate.conf: OK
+radacct-rotate.crond: OK
+musl-fix-headers.patch: OK
+fix-scopeid.patch: OK
+default-config.patch: OK
+remove-eap-from-default-mods.patch: OK
+readme-setup-script.patch: OK
+dont-install-test-tools.patch: OK
+>>> freeradius: Unpacking /var/cache/distfiles/freeradius-server-3.0.27.tar.gz...
+>>> freeradius: musl-fix-headers.patch
+patching file src/modules/rlm_sql/sql.c
+>>> freeradius: fix-scopeid.patch
+patching file src/lib/misc.c
+Hunk #1 succeeded at 444 (offset 110 lines).
+Hunk #2 succeeded at 499 (offset 110 lines).
+Hunk #3 succeeded at 1141 (offset 287 lines).
+patching file src/main/client.c
+Hunk #1 succeeded at 1348 (offset 57 lines).
+Hunk #2 succeeded at 1378 (offset 57 lines).
+patching file src/main/radclient.c
+Hunk #1 succeeded at 544 (offset 60 lines).
+Hunk #2 succeeded at 566 (offset 60 lines).
+>>> freeradius: default-config.patch
+patching file raddb/mods-available/cui
+patching file raddb/mods-available/eap
+Hunk #1 succeeded at 592 (offset 58 lines).
+Hunk #2 succeeded at 669 (offset 58 lines).
+patching file raddb/mods-available/sql
+patching file raddb/radiusd.conf.in
+Hunk #3 succeeded at 552 (offset 43 lines).
+patching file raddb/sites-available/abfab-tls
+patching file raddb/sites-available/tls
+Hunk #1 succeeded at 388 (offset 22 lines).
+>>> freeradius: remove-eap-from-default-mods.patch
+patching file raddb/all.mk
+Hunk #1 succeeded at 8 with fuzz 1.
+patching file raddb/sites-available/default
+Hunk #1 succeeded at 402 (offset 16 lines).
+Hunk #2 succeeded at 584 (offset 48 lines).
+Hunk #3 succeeded at 963 (offset 105 lines).
+Hunk #4 succeeded at 1120 (offset 184 lines).
+patching file raddb/sites-available/inner-tunnel
+>>> freeradius: readme-setup-script.patch
+patching file raddb/README.rst
+>>> freeradius: dont-install-test-tools.patch
+patching file src/tests/map/map_unit.mk
+patching file src/main/radattr.mk
+>>> freeradius: Updating ./config.sub
+checking for asciidoctor... no
+configure: WARNING: asciidoctor not found - Please install if you want build the docs
+checking for pandoc... no
+configure: WARNING: pandoc not found - Please install if you want build the docs
+checking for doxygen... no
+configure: WARNING: doxygen not found - Please install if you want build the docs/source
+checking for antora... no
+configure: WARNING: antora not found - Please install if you want build the site
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether cc needs -traditional... no
+checking whether we are using SUNPro C... no
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking if compiler is clang... no
+checking for the compiler flag "-Wno-unknown-warning-option"... no
+checking for the compiler flag "-Qunused-arguments"... no
+checking for the compiler flag "-Wno-date-time"... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether byte ordering is bigendian... no
+checking for gmake... yes
+checking for gmake... /usr/bin/gmake
+checking number of system cores... 16
+checking for git... yes
+checking docdir... ${datadir}/doc/freeradius
+checking logdir... /var/log/radius
+checking radacctdir... /var/log/radius/radacct
+checking raddbdir... ${sysconfdir}/raddb
+checking dictdir... ${datarootdir}/freeradius
+checking for perl... /usr/bin/perl
+checking for snmpget... /usr/bin/snmpget
+checking for snmpwalk... /usr/bin/snmpwalk
+checking for rusers... /usr/bin/rusers
+checking for dirname... /usr/bin/dirname
+checking for grep... (cached) /bin/grep
+checking for _talloc in -ltalloc... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking for pthread_create in -lpthread... yes
+checking for the compiler flag "-pthread"... yes
+checking for library containing sem_init... none required
+checking for dlopen in -ldl... yes
+checking for getsockname in -lsocket... no
+checking for inet_aton in -lresolv... yes
+checking for inet_ntoa in -lnsl... no
+checking for htonl in -lws2_32... no
+checking for pcap_open_live in -lpcap... yes
+checking for pcap_fopen_offline... yes
+checking for pcap_dump_fopen... yes
+checking for pcap_create... yes
+checking for pcap_activate... yes
+checking for lcc_connect in -lcollectdclient... no
+checking for lcc_connect in -lcollectdclient in /usr/local/lib... no
+checking for lcc_connect in -lcollectdclient in /opt/lib... no
+configure: WARNING: collectdclient library not found. Use --with-collectdclient-lib-dir=<path>.
+checking for cap_get_proc in -lcap... no
+checking for cap_get_proc in -lcap in /usr/local/lib... no
+checking for cap_get_proc in -lcap in /opt/lib... no
+configure: WARNING: cap library not found, debugger checks will not be enabled. Use --with-cap-lib-dir=<path>.
+checking for a readline compatible library... -lreadline
+checking readline.h usability... no
+checking readline.h presence... no
+checking for readline.h... no
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking whether readline supports history... yes
+checking history.h usability... no
+checking history.h presence... no
+checking for history.h... no
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+configure: skipping test for systemd watchdog
+configure: skipping test for systemd/sd-daemon.h.
+checking for talloc.h... yes
+  		     break
+  		     ^~~~~
+./configure:8360: warning: Invalid control flow at top level
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking arpa/inet.h usability... yes
+checking arpa/inet.h presence... yes
+checking for arpa/inet.h... yes
+checking crypt.h usability... yes
+checking crypt.h presence... yes
+checking for crypt.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking features.h usability... yes
+checking features.h presence... yes
+checking for features.h... yes
+checking fnmatch.h usability... yes
+checking fnmatch.h presence... yes
+checking for fnmatch.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking glob.h usability... yes
+checking glob.h presence... yes
+checking for glob.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking for inttypes.h... (cached) yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking linux/if_packet.h usability... yes
+checking linux/if_packet.h presence... yes
+checking for linux/if_packet.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking prot.h usability... no
+checking prot.h presence... no
+checking for prot.h... no
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking resource.h usability... no
+checking resource.h presence... no
+checking for resource.h... no
+checking semaphore.h usability... yes
+checking semaphore.h presence... yes
+checking for semaphore.h... yes
+checking sia.h usability... no
+checking sia.h presence... no
+checking for sia.h... no
+checking siad.h usability... no
+checking siad.h presence... no
+checking for siad.h... no
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking stdatomic.h usability... yes
+checking stdatomic.h presence... yes
+checking for stdatomic.h... yes
+checking stdalign.h usability... yes
+checking stdalign.h presence... yes
+checking for stdalign.h... yes
+checking stdbool.h usability... yes
+checking stdbool.h presence... yes
+checking for stdbool.h... yes
+checking stddef.h usability... yes
+checking stddef.h presence... yes
+checking for stddef.h... yes
+checking for stdint.h... (cached) yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking sys/event.h usability... no
+checking sys/event.h presence... no
+checking for sys/event.h... no
+checking sys/fcntl.h usability... yes
+checking sys/fcntl.h presence... yes
+checking for sys/fcntl.h... yes
+checking sys/prctl.h usability... yes
+checking sys/prctl.h presence... yes
+checking for sys/prctl.h... yes
+checking sys/procctl.h usability... no
+checking sys/procctl.h presence... no
+checking for sys/procctl.h... no
+checking sys/ptrace.h usability... yes
+checking sys/ptrace.h presence... yes
+checking for sys/ptrace.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/security.h usability... no
+checking sys/security.h presence... no
+checking for sys/security.h... no
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking for sys/types.h... (cached) yes
+checking sys/un.h usability... yes
+checking sys/un.h presence... yes
+checking for sys/un.h... yes
+checking for sys/wait.h... (cached) yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking utmp.h usability... yes
+checking utmp.h presence... yes
+checking for utmp.h... yes
+checking utmpx.h usability... yes
+checking utmpx.h presence... yes
+checking for utmpx.h... yes
+checking winsock.h usability... no
+checking winsock.h presence... no
+checking for winsock.h... no
+checking for net/if.h... yes
+checking for DH_new in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+checking for openssl/ssl.h... yes
+  		     break
+  		     ^~~~~
+./configure:9266: warning: Invalid control flow at top level
+checking openssl/asn1.h usability... yes
+checking openssl/asn1.h presence... yes
+checking for openssl/asn1.h... yes
+checking openssl/conf.h usability... yes
+checking openssl/conf.h presence... yes
+checking for openssl/conf.h... yes
+checking openssl/crypto.h usability... yes
+checking openssl/crypto.h presence... yes
+checking for openssl/crypto.h... yes
+checking openssl/err.h usability... yes
+checking openssl/err.h presence... yes
+checking for openssl/err.h... yes
+checking openssl/evp.h usability... yes
+checking openssl/evp.h presence... yes
+checking for openssl/evp.h... yes
+checking openssl/hmac.h usability... yes
+checking openssl/hmac.h presence... yes
+checking for openssl/hmac.h... yes
+checking openssl/md5.h usability... yes
+checking openssl/md5.h presence... yes
+checking for openssl/md5.h... yes
+checking openssl/md4.h usability... yes
+checking openssl/md4.h presence... yes
+checking for openssl/md4.h... yes
+checking openssl/rand.h usability... yes
+checking openssl/rand.h presence... yes
+checking for openssl/rand.h... yes
+checking openssl/sha.h usability... yes
+checking openssl/sha.h presence... yes
+checking for openssl/sha.h... yes
+checking for openssl/ssl.h... (cached) yes
+checking openssl/ocsp.h usability... yes
+checking openssl/ocsp.h presence... yes
+checking for openssl/ocsp.h... yes
+checking openssl/engine.h usability... yes
+checking openssl/engine.h presence... yes
+checking for openssl/engine.h... yes
+checking for OpenSSL version >= 0.9.7... yes
+checking OpenSSL library and header version consistency... library: 30500010 header: 30500010... yes
+checking for SSL_get_client_random... yes
+checking for SSL_get_server_random... yes
+checking for SSL_SESSION_get_master_key... yes
+checking for HMAC_CTX_new... yes
+checking for HMAC_CTX_free... yes
+checking for ASN1_STRING_get0_data... yes
+checking for CONF_modules_load_file... yes
+checking for CRYPTO_set_id_callback... no
+checking for CRYPTO_set_locking_callback... no
+checking for pcap.h... yes
+  		     break
+  		     ^~~~~
+./configure:9596: warning: Invalid control flow at top level
+configure: skipping test for collectd/client.h.
+configure: skipping test for cap.h.
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking for socklen_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for __uint128_t... yes
+checking for uint128_t... no
+checking for struct in6_addr... yes
+checking for struct sockaddr_storage... yes
+checking for struct sockaddr_in6... yes
+checking for struct addrinfo... yes
+checking if sig_t is defined... yes
+checking for bindat... no
+checking for clock_gettime... yes
+checking for closefrom... no
+checking for ctime_r... yes
+checking for dladdr... yes
+checking for fcntl... yes
+checking for fopencookie... yes
+checking for funopen... no
+checking for getaddrinfo... yes
+checking for getnameinfo... yes
+checking for getopt_long... yes
+checking for getpeereid... no
+checking for getresuid... yes
+checking for gettimeofday... yes
+checking for getusershell... yes
+checking for gmtime_r... yes
+checking for if_indextoname... yes
+checking for inet_aton... yes
+checking for inet_ntop... yes
+checking for inet_pton... yes
+checking for initgroups... yes
+checking for kqueue... no
+checking for localtime_r... yes
+checking for mallopt... no
+checking for mkdirat... yes
+checking for openat... yes
+checking for pthread_sigmask... yes
+checking for setlinebuf... yes
+checking for setresuid... yes
+checking for setsid... yes
+checking for setuid... yes
+checking for setvbuf... yes
+checking for sigaction... yes
+checking for sigprocmask... yes
+checking for snprintf... yes
+checking for strcasecmp... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for strncasecmp... yes
+checking for strsep... yes
+checking for strsignal... yes
+checking for unlinkat... yes
+checking for vdprintf... yes
+checking for vsnprintf... yes
+checking return type of signal handlers... void
+checking for ut_xtime in struct utmpx... no
+checking for ipi_addr in struct in_pktinfo... yes
+checking for ipi6_addr in struct in6_pktinfo... yes
+checking if htonll is defined... no
+checking if htonlll is defined... no
+checking for an ANSI C-conforming const... yes
+checking type of OS... Linux
+checking if building with -DNDEBUG... yes
+checking for __thread support in compiler... yes
+checking for __builtin_choose_expr support in compiler... yes
+checking for __builtin_types_compatible_p support in compiler... yes
+checking for __builtin_bswap64 support in compiler... yes
+checking for __attribute__((__bounded__)) support in compiler... no
+checking for talloc_set_memlimit in -ltalloc... yes
+checking for crypt in -lcrypt... yes
+checking for crypt_r in -lcrypt... yes
+checking for setkey in -lcipher... no
+checking for execinfo.h... no
+checking for execinfo.h in /usr/local/include/... no
+checking for execinfo.h in /opt/include/... no
+checking for pcre.h... no
+checking for pcre.h in /usr/local/include/... no
+checking for pcre.h in /opt/include/... no
+checking for regex.h... yes
+  		     break
+  		     ^~~~~
+./configure:12382: warning: Invalid control flow at top level
+checking for extended regular expressions... yes
+checking for regcomp in -lregex... no
+checking for regncomp... no
+checking for regnexec... no
+checking for library containing __atomic_load_4... -latomic
+checking gethostbyaddr_r() syntax... GNU-style
+checking gethostbyname_r() syntax... GNU-style
+checking getpwnam_r... yes
+checking getgrnam_r... yes
+checking ctime_r() syntax... POSIX-style
+top_builddir=/tmp/src/freeradius-server-3.0.27
+configure: creating ./config.status
+config.status: creating ./Make.inc
+config.status: creating ./src/include/build-radpaths-h
+config.status: creating ./src/main/radsniff.mk
+config.status: creating ./src/main/checkrad
+config.status: creating ./src/main/radlast
+config.status: creating ./src/main/radtest
+config.status: creating ./scripts/rc.radiusd
+config.status: creating ./scripts/cron/radiusd.cron.daily
+config.status: creating ./scripts/cron/radiusd.cron.monthly
+config.status: creating ./scripts/cryptpasswd
+config.status: creating ./raddb/radrelay.conf
+config.status: creating ./raddb/radiusd.conf
+config.status: creating src/include/autoconf.h
+config.status: executing stamp-h commands
+config.status: executing build-radpaths-h commands
+config.status: executing main-chmod commands
+config.status: executing scripts-chmod commands
+=== configuring in src/modules/rlm_python3 (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_python3)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for a Python interpreter with version >= 3.0... python
+checking for python... /usr/bin/python
+checking for python version... 3.12
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for python3-config... python3-config
+configure: python3-config's cflags were "-I/usr/include/python3.12 -I/usr/include/python3.12  -fno-strict-overflow -Wsign-compare  -DNDEBUG -g -O3 -Wall"
+configure: Sanitized cflags were " -isystem/usr/include/python3.12 -isystem/usr/include/python3.12  -fno-strict-overflow   "
+checking for gawk... gawk
+configure: python3-config's ldflags were " -L/usr/lib -lpython3.12 -ldl  -lm }"
+configure: Sanitized ldflags were "-L/usr/lib -lpython3.12 -ldl -lm"
+checking for dl_iterate_phdr... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_cache (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_cache)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./drivers/rlm_cache_memcached (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_cache/./drivers/rlm_cache_memcached)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_cache_memcached is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_counter (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_counter)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for gdbm.h... yes
+  		     break
+  		     ^~~~~
+./configure:2955: warning: Invalid control flow at top level
+checking for gdbm_open in -lgdbm... yes
+checking to see GDBM_SYNC status... checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+needs it.
+checking for gdbm_fdesc... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_eap (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_eap)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+configure: creating ./config.status
+=== configuring in ./types/rlm_eap_fast (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_eap/./types/rlm_eap_fast)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for openssl/ec.h... yes
+  		     break
+  		     ^~~~~
+./configure:2795: warning: Invalid control flow at top level
+checking for EVP_CIPHER_CTX_new in -lcrypto... yes
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for OpenSSL version >= 1.0.1a... yes
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./types/rlm_eap_sim (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_eap/./types/rlm_eap_sim)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./types/rlm_eap_tnc (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_eap/./types/rlm_eap_tnc)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_eap_tnc is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./types/rlm_eap_ikev2 (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_eap/./types/rlm_eap_ikev2)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_eap_ikev2 is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./types/rlm_eap_pwd (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_eap/./types/rlm_eap_pwd)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for openssl/ec.h... yes
+  		     break
+  		     ^~~~~
+./configure:2819: warning: Invalid control flow at top level
+checking for EVP_CIPHER_CTX_new in -lcrypto... yes
+checking for EVP_sha256... yes
+checking for EC_GROUP_free... yes
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_ippool (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_ippool)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for gdbm.h... yes
+  		     break
+  		     ^~~~~
+./configure:2957: warning: Invalid control flow at top level
+checking for gdbm_open in -lgdbm... yes
+checking to see GDBM_SYNC status... checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+needs it.
+checking for gdbm_fdesc... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_krb5 (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_krb5)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for krb5-config... /usr/bin/krb5-config
+checking krb5-config CFLAGS... ""
+checking krb5-config LDFLAGS... -lkrb5 -lk5crypto -lcom_err
+checking krb5-config reported version... Kerberos 5 release 1.21.3 (121)
+checking krb5-config reported vendor... Massachusetts Institute of Technology
+checking canonical API type... MIT
+checking for krb5_get_error_message... no
+checking for krb5_free_error_string... no
+checking for krb5_free_error_message... no
+checking for krb5_is_thread_safe in -lkrb5... yes
+checking for com_err.h... yes
+  		     break
+  		     ^~~~~
+./configure:4084: warning: Invalid control flow at top level
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_ldap (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_ldap)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for ldap_init in -lldap... yes
+checking for ldap.h... yes
+  		     break
+  		     ^~~~~
+./configure:2949: warning: Invalid control flow at top level
+checking for ldap_sasl_interactive_bind... yes
+checking for ldap_unbind_ext_s... yes
+checking for ldap_start_tls_s... yes
+checking for ldap_initialize... yes
+checking for ldap_set_rebind_proc... yes
+checking for ldap_create_sort_control... yes
+checking for ldap_create_sort_keylist... yes
+checking for ldap_free_sort_keylist... yes
+checking for ldap_url_parse... yes
+checking for ldap_is_ldap_url... yes
+checking for ldap_url_desc2str... yes
+checking whether ldap_set_rebind_proc takes 3 arguments... 3
+checking for sasl/sasl.h... yes
+  		     break
+  		     ^~~~~
+./configure:3178: warning: Invalid control flow at top level
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_mschap (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_mschap)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for membership.h... no
+checking for membership.h in /usr/local/include/... no
+checking for membership.h in /opt/include/... no
+checking for wbclient.h in /usr/include/samba-4.0/... no
+checking for wbclient.h... no
+checking for wbclient.h in /usr/local/include/... no
+checking for wbclient.h in /opt/include/... no
+configure: WARNING: wbclient.h not found. Use --with-winbind-include-dir=<path>.
+configure: WARNING: silently building without support for direct authentication via winbind. requires: libwbclient
+checking for core/ntstatus.h in /usr/include/samba-4.0/... no
+checking for core/ntstatus.h... no
+checking for core/ntstatus.h in /usr/local/include/... no
+checking for core/ntstatus.h in /opt/include/... no
+configure: WARNING: core/ntstatus.h not found. Use --with-winbind-include-dir=<path>.
+configure: WARNING: silently building without support for direct authentication via winbind. requires: libwbclient
+configure: creating ./config.status
+config.status: creating rlm_mschap.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_pam (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_pam)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for dlopen in -ldl... yes
+checking for pam_start in -lpam... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking security/pam_appl.h usability... yes
+checking security/pam_appl.h presence... yes
+checking for security/pam_appl.h... yes
+checking pam/pam_appl.h usability... no
+checking pam/pam_appl.h presence... no
+checking for pam/pam_appl.h... no
+checking for security/pam_modules.h... yes
+checking for pam/pam_modules.h... no
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_perl (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_perl)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking whether perl executable path has been provided... no
+checking for perl... /usr/bin/perl
+configure: Calling ExtUtils::Embed to get 'ccopts'
+configure: ExtUtil's ccopts were " -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64  -I/usr/lib/perl5/core_perl/CORE "
+configure: Sanitized ccopts are "-D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -isystem /usr/lib/perl5/core_perl/CORE"
+configure: Calling ExtUtils::Embed to get 'ldflags'
+configure: ExtUtil's ldopts were "-rdynamic -Wl,-rpath,/usr/lib/perl5/core_perl/CORE  -fstack-protector-strong -L/usr/local/lib  -L/usr/lib/perl5/core_perl/CORE -lperl -lpthread -ldl -lm -lcrypt -lutil -lc"
+configure: Sanitized ldopts are "-rdynamic -Wl,-rpath,/usr/lib/perl5/core_perl/CORE -fstack-protector-strong -L/usr/local/lib -L/usr/lib/perl5/core_perl/CORE -lperl -lpthread -ldl -lm -lcrypt -lutil -lc"
+checking for EXTERN.h... yes
+  		     break
+  		     ^~~~~
+./configure:3099: warning: Invalid control flow at top level
+checking for perl.h... yes
+  		     break
+  		     ^~~~~
+./configure:3273: warning: Invalid control flow at top level
+checking we can link to boot_DynaLoader... yes
+checking we can link to Perl_hv_store()... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_python (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_python)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_python is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_radutmp (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_radutmp)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_realm (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_realm)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for tidc_create in -ltr_tid... no
+checking for tidc_create in -ltr_tid in /usr/local/lib... no
+checking for tidc_create in -ltr_tid in /opt/lib... no
+checking for tid_srvr_get_key_expiration in -ltr_tid... no
+checking for tid_srvr_get_key_expiration in -ltr_tid in /usr/local/lib... no
+checking for tid_srvr_get_key_expiration in -ltr_tid in /opt/lib... no
+checking for trust_router/tr_dh.h... no
+checking for trust_router/tr_dh.h in /usr/local/include/... no
+checking for trust_router/tr_dh.h in /opt/include/... no
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_rest (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_rest)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for gawk... gawk
+checking for curl-config... /usr/bin/curl-config
+checking for the version of libcurl... 8.14.1
+checking for libcurl >= version 7.19.1... yes
+checking whether libcurl is usable... yes
+checking for curl_free... yes
+configure: curl-config's cflags were ""
+configure: Sanitized cflags are ""
+checking for json/json.h in /tmp/src/freeradius-server-3.0.27/... yes
+checking for json_c_version in -ljson-c... yes
+checking for json_c_version... yes
+checking for json_type_to_name... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_sql (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./drivers/rlm_sql_iodbc (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_iodbc)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_sql_iodbc is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./drivers/rlm_sql_mysql (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_mysql)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for mysql_config... yes
+checking for mysql_init in -lmysqlclient_r (using mysql_config)... yes
+checking for mysql.h (using mysql_config --cflags)... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in ./drivers/rlm_sql_postgresql (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_postgresql)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for libpq-fe.h in /usr/include/postgresql/... yes
+checking for PGRES_SINGLE_TUPLE... yes
+checking for PGRES_COPY_BOTH... yes
+checking for PGRES_PIPELINE_SYNC... yes
+checking for PQconnectdb in -lpq in /usr/lib... yes
+checking for PQinitOpenSSL... yes
+checking for PQinitSSL... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in ./drivers/rlm_sql_oracle (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_oracle)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_sql_oracle is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./drivers/rlm_sql_unixodbc (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_unixodbc)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for SQLConnect in -lodbc in /usr/local/unixodbc/lib... yes
+checking for sql.h in /usr/local/unixodbc/include/... yes
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in ./drivers/rlm_sql_sqlite (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_sqlite)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for sqlite3_open in -lsqlite3... yes
+checking for sqlite3_prepare_v2... yes
+checking for sqlite3_open_v2... yes
+checking for sqlite3_create_function_v2... yes
+checking for sqlite3_errstr... yes
+checking for sqlite3_extended_result_codes... yes
+checking for sqlite3.h... yes
+  		     break
+  		     ^~~~~
+./configure:3044: warning: Invalid control flow at top level
+checking for sqlite3_int64... yes
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in ./drivers/rlm_sql_freetds (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql/./drivers/rlm_sql_freetds)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_sql_freetds is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_sqlcounter (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sqlcounter)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_sqlippool (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sqlippool)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_sql_map (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_sql_map)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_unix (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_unix)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for system password file... /etc/passwd
+checking for system shadow password file... /etc/shadow
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking shadow.h usability... yes
+checking shadow.h presence... yes
+checking for shadow.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking for getspnam... yes
+checking for getusershell... yes
+checking for getpwnam... yes
+checking for getspnam in -lshadow... no
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_yubikey (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_yubikey)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+*** module rlm_yubikey is disabled.
+configure: creating ./config.status
+config.status: creating all.mk
+config.status: creating config.h
+=== configuring in src/modules/rlm_redis (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_redis)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for hiredis/hiredis.h... yes
+  		     break
+  		     ^~~~~
+./configure:2775: warning: Invalid control flow at top level
+checking for redisConnect in -lhiredis... yes
+configure: creating ./config.status
+config.status: creating all.mk
+=== configuring in src/modules/rlm_rediswho (/tmp/src/freeradius-server-3.0.27/src/modules/rlm_rediswho)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--localstatedir=/var' '--datarootdir=/usr/share' '--libdir=/usr/lib/freeradius' '--with-logdir=/var/log/radius' '--with-radacctdir=/var/log/radius/radacct' '--with-system-libtool' '--with-system-libltdl' '--with-shared-libs' '--with-udpfromto' '--with-rlm_sql_sqlite' '--with-rlm_sql_postgresql' '--with-rlm_sql_mysql' '--with-rlm_krb5' '--with-rlm_rest' '--with-rlm_redis' '--with-rlm_rediswho' '--with-modules=rlm_python3' '--without-rlm_cache_memcached' '--without-rlm_eap_tnc' '--without-rlm_eap_ikev2' '--without-rlm_python' '--without-rlm_sql_freetds' '--without-rlm_sql_iodbc' '--without-rlm_sql_oracle' '--without-rlm_yubikey' '--without-rlm_ykclient' '--with-jsonc-include-dir=/tmp/src/freeradius-server-3.0.27' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' 'CXX=c++' 'CXXFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g' --cache-file=/dev/null --srcdir=.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for hiredis/hiredis.h... yes
+  		     break
+  		     ^~~~~
+./configure:2775: warning: Invalid control flow at top level
+checking for redisConnect in -lhiredis... yes
+configure: creating ./config.status
+config.status: creating all.mk
+  grep '^#define' src/include/autoconf.h | sed 's/#define /AC_/;s/ / := /' > build/tests/keywords/autoconf.h.mk
+                                                                           ^
+[ -c flag ]:1: Can't open 'build/tests/keywords/autoconf.h.mk': No such file or directory
+[ -c flag ]:1: I/O error applying redirect: No such file or directory
+CC jlibtool.c
+HEADER src/include/attributes.h
+HEADER src/include/features.h
+HEADER src/include/missing.h
+HEADER src/include/tls.h
+HEADER src/include/rfc2865.h
+HEADER src/include/rfc2866.h
+HEADER src/include/rfc2867.h
+HEADER src/include/rfc2868.h
+HEADER src/include/rfc2869.h
+HEADER src/include/rfc3162.h
+HEADER src/include/rfc3576.h
+HEADER src/include/rfc3580.h
+HEADER src/include/rfc4072.h
+HEADER src/include/rfc4372.h
+HEADER src/include/rfc4603.h
+HEADER src/include/rfc4675.h
+HEADER src/include/rfc4679.h
+HEADER src/include/rfc4818.h
+HEADER src/include/rfc4849.h
+HEADER src/include/rfc5090.h
+HEADER src/include/rfc5176.h
+HEADER src/include/rfc5447.h
+HEADER src/include/rfc5580.h
+HEADER src/include/rfc5607.h
+HEADER src/include/rfc5904.h
+HEADER src/include/rfc6519.h
+HEADER src/include/rfc6572.h
+HEADER src/include/rfc6677.h
+HEADER src/include/rfc6911.h
+HEADER src/include/rfc6929.h
+HEADER src/include/rfc6930.h
+HEADER src/include/rfc7055.h
+HEADER src/include/rfc7155.h
+HEADER src/include/rfc7268.h
+HEADER src/include/rfc7499.h
+HEADER src/include/rfc7930.h
+HEADER src/include/rfc8045.h
+HEADER src/include/rfc8559.h
+HEADER src/include/vqp.h
+HEADER src/include/freeradius.h
+CC src/lib/cbuff.c
+CC src/lib/cursor.c
+CC src/lib/debug.c
+CC src/lib/dict.c
+CC src/lib/filters.c
+CC src/lib/hash.c
+CC src/lib/hmacmd5.c
+CC src/lib/hmacsha1.c
+CC src/lib/isaac.c
+CC src/lib/log.c
+CC src/lib/misc.c
+CC src/lib/missing.c
+CC src/lib/md4.c
+CC src/lib/md5.c
+CC src/lib/net.c
+CC src/lib/pair.c
+CC src/lib/pcap.c
+CC src/lib/print.c
+CC src/lib/radius.c
+CC src/lib/rbtree.c
+CC src/lib/regex.c
+CC src/lib/sha1.c
+CC src/lib/snprintf.c
+CC src/lib/strlcat.c
+CC src/lib/strlcpy.c
+CC src/lib/socket.c
+CC src/lib/token.c
+CC src/lib/udpfromto.c
+CC src/lib/value.c
+CC src/lib/fifo.c
+CC src/lib/packet.c
+CC src/lib/event.c
+CC src/lib/getaddrinfo.c
+CC src/lib/heap.c
+CC src/lib/tcp.c
+CC src/lib/base64.c
+CC src/lib/version.c
+CC src/lib/atomic_queue.c
+CC src/lib/talloc.c
+LINK build/lib/libfreeradius-radius.la
+CC src/modules/rlm_always/rlm_always.c
+LINK build/lib/rlm_always.la
+CC src/modules/rlm_attr_filter/rlm_attr_filter.c
+LINK build/lib/rlm_attr_filter.la
+CC src/modules/rlm_cache/rlm_cache.c
+LINK build/lib/rlm_cache.la
+CC src/modules/rlm_cache/drivers/rlm_cache_rbtree/rlm_cache_rbtree.c
+LINK build/lib/rlm_cache_rbtree.la
+CC src/modules/rlm_chap/rlm_chap.c
+LINK build/lib/rlm_chap.la
+CC src/modules/rlm_counter/rlm_counter.c
+LINK build/lib/rlm_counter.la
+CC src/modules/rlm_cram/rlm_cram.c
+LINK build/lib/rlm_cram.la
+CC src/modules/rlm_date/rlm_date.c
+LINK build/lib/rlm_date.la
+CC src/modules/rlm_detail/rlm_detail.c
+LINK build/lib/rlm_detail.la
+CC src/modules/rlm_digest/rlm_digest.c
+LINK build/lib/rlm_digest.la
+CC src/modules/rlm_dynamic_clients/rlm_dynamic_clients.c
+LINK build/lib/rlm_dynamic_clients.la
+CC src/modules/rlm_eap/libeap/eapcommon.c
+CC src/modules/rlm_eap/libeap/eapcrypto.c
+CC src/modules/rlm_eap/libeap/eap_chbind.c
+CC src/modules/rlm_eap/libeap/eapsimlib.c
+CC src/modules/rlm_eap/libeap/fips186prf.c
+CC src/modules/rlm_eap/libeap/comp128.c
+CC src/modules/rlm_eap/libeap/eap_tls.c
+CC src/modules/rlm_eap/libeap/mppe_keys.c
+LINK build/lib/libfreeradius-eap.la
+CC src/modules/rlm_eap/rlm_eap.c
+CC src/modules/rlm_eap/eap.c
+CC src/modules/rlm_eap/mem.c
+LINK build/lib/rlm_eap.la
+CC src/modules/rlm_eap/types/rlm_eap_fast/rlm_eap_fast.c
+CC src/modules/rlm_eap/types/rlm_eap_fast/eap_fast.c
+CC src/modules/rlm_eap/types/rlm_eap_fast/eap_fast_crypto.c
+LINK build/lib/rlm_eap_fast.la
+CC src/modules/rlm_eap/types/rlm_eap_gtc/rlm_eap_gtc.c
+LINK build/lib/rlm_eap_gtc.la
+CC src/modules/rlm_eap/types/rlm_eap_md5/rlm_eap_md5.c
+CC src/modules/rlm_eap/types/rlm_eap_md5/eap_md5.c
+LINK build/lib/rlm_eap_md5.la
+CC src/modules/rlm_eap/types/rlm_eap_mschapv2/rlm_eap_mschapv2.c
+LINK build/lib/rlm_eap_mschapv2.la
+CC src/modules/rlm_eap/types/rlm_eap_peap/rlm_eap_peap.c
+CC src/modules/rlm_eap/types/rlm_eap_peap/peap.c
+LINK build/lib/rlm_eap_peap.la
+CC src/modules/rlm_eap/types/rlm_eap_pwd/rlm_eap_pwd.c
+CC src/modules/rlm_eap/types/rlm_eap_pwd/eap_pwd.c
+LINK build/lib/rlm_eap_pwd.la
+CC src/modules/rlm_eap/types/rlm_eap_sim/rlm_eap_sim.c
+LINK build/lib/rlm_eap_sim.la
+CC src/modules/rlm_eap/types/rlm_eap_tls/rlm_eap_tls.c
+LINK build/lib/rlm_eap_tls.la
+CC src/modules/rlm_eap/types/rlm_eap_ttls/rlm_eap_ttls.c
+CC src/modules/rlm_eap/types/rlm_eap_ttls/ttls.c
+LINK build/lib/rlm_eap_ttls.la
+CC src/modules/rlm_eap/radeapclient.c
+CC src/main/files.c
+CC src/main/threads.c
+CC src/main/version.c
+CC src/main/cb.c
+CC src/main/tls.c
+CC src/main/conffile.c
+CC src/main/evaluate.c
+CC src/main/exec.c
+CC src/main/exfile.c
+CC src/main/log.c
+CC src/main/parser.c
+CC src/main/map.c
+CC src/main/regex.c
+CC src/main/tmpl.c
+CC src/main/util.c
+CC src/main/pair.c
+CC src/main/xlat.c
+LINK build/lib/libfreeradius-server.la
+LINK build/bin/radeapclient
+CC src/modules/rlm_exec/rlm_exec.c
+LINK build/lib/rlm_exec.la
+CC src/modules/rlm_expiration/rlm_expiration.c
+LINK build/lib/rlm_expiration.la
+CC src/modules/rlm_expr/rlm_expr.c
+CC src/modules/rlm_expr/paircmp.c
+LINK build/lib/rlm_expr.la
+CC src/modules/rlm_files/rlm_files.c
+LINK build/lib/rlm_files.la
+CC src/modules/rlm_ippool/rlm_ippool.c
+LINK build/lib/rlm_ippool.la
+CC src/modules/rlm_ippool/rlm_ippool_tool.c
+LINK build/bin/rlm_ippool_tool
+CC src/modules/rlm_krb5/rlm_krb5.c
+CC src/modules/rlm_krb5/krb5.c
+LINK build/lib/rlm_krb5.la
+CC src/modules/rlm_ldap/rlm_ldap.c
+CC src/modules/rlm_ldap/attrmap.c
+CC src/modules/rlm_ldap/ldap.c
+CC src/modules/rlm_ldap/clients.c
+CC src/modules/rlm_ldap/groups.c
+CC src/modules/rlm_ldap/edir.c
+CC src/modules/rlm_ldap/sasl.c
+LINK build/lib/rlm_ldap.la
+CC src/modules/rlm_linelog/rlm_linelog.c
+LINK build/lib/rlm_linelog.la
+CC src/modules/rlm_logintime/rlm_logintime.c
+CC src/modules/rlm_logintime/timestr.c
+LINK build/lib/rlm_logintime.la
+CC src/modules/rlm_mschap/rlm_mschap.c
+CC src/modules/rlm_mschap/smbdes.c
+CC src/modules/rlm_mschap/mschap.c
+LINK build/lib/rlm_mschap.la
+CC src/modules/rlm_mschap/smbencrypt.c
+LINK build/bin/smbencrypt
+CC src/modules/rlm_otp/rlm_otp.c
+CC src/modules/rlm_otp/otp_radstate.c
+CC src/modules/rlm_otp/otp_pwe.c
+CC src/modules/rlm_otp/otp_pw_valid.c
+CC src/modules/rlm_otp/otp_util.c
+CC src/modules/rlm_otp/otp_mppe.c
+In file included from src/modules/rlm_otp/otp_mppe.c:33:
+src/modules/rlm_otp/otp_mppe.h:43:20: warning: 'otp_mppe_types' defined but not used [-Wunused-variable]
+   43 | static char const *otp_mppe_types[3] = {
+      |                    ^~~~~~~~~~~~~~
+src/modules/rlm_otp/otp_mppe.h:38:20: warning: 'otp_mppe_policy' defined but not used [-Wunused-variable]
+   38 | static char const *otp_mppe_policy[3] = {
+      |                    ^~~~~~~~~~~~~~~
+LINK build/lib/rlm_otp.la
+CC src/modules/rlm_pam/rlm_pam.c
+LINK build/lib/rlm_pam.la
+CC src/modules/rlm_pap/rlm_pap.c
+LINK build/lib/rlm_pap.la
+CC src/modules/rlm_passwd/rlm_passwd.c
+LINK build/lib/rlm_passwd.la
+CC src/modules/rlm_perl/rlm_perl.c
+LINK build/lib/rlm_perl.la
+CC src/modules/rlm_preprocess/rlm_preprocess.c
+LINK build/lib/rlm_preprocess.la
+CC src/modules/rlm_python3/rlm_python3.c
+src/modules/rlm_python3/rlm_python3.c:1042:1: warning: 'visibility' attribute ignored [-Wattributes]
+ 1042 | {
+      | ^
+src/modules/rlm_python3/rlm_python3.c: In function 'python_interpreter_init':
+src/modules/rlm_python3/rlm_python3.c:1132:25: warning: 'Py_SetProgramName' is deprecated [-Wdeprecated-declarations]
+ 1132 |                         Py_SetProgramName(name);                /* The value of argv[0] as a wide char string */
+      |                         ^~~~~~~~~~~~~~~~~
+In file included from /usr/include/python3.12/Python.h:94,
+                 from src/modules/rlm_python3/rlm_python3.c:37:
+/usr/include/python3.12/pylifecycle.h:37:38: note: declared here
+   37 | Py_DEPRECATED(3.11) PyAPI_FUNC(void) Py_SetProgramName(const wchar_t *);
+      |                                      ^~~~~~~~~~~~~~~~~
+src/modules/rlm_python3/rlm_python3.c:1145:17: warning: 'PyEval_InitThreads' is deprecated [-Wdeprecated-declarations]
+ 1145 |                 PyEval_InitThreads();                   /* This also grabs a lock (which we then need to release) */
+      |                 ^~~~~~~~~~~~~~~~~~
+In file included from /usr/include/python3.12/Python.h:95:
+/usr/include/python3.12/ceval.h:132:37: note: declared here
+  132 | Py_DEPRECATED(3.9) PyAPI_FUNC(void) PyEval_InitThreads(void);
+      |                                     ^~~~~~~~~~~~~~~~~~
+LINK build/lib/rlm_python3.la
+CC src/modules/rlm_radutmp/rlm_radutmp.c
+LINK build/lib/rlm_radutmp.la
+CC src/modules/rlm_realm/rlm_realm.c
+LINK build/lib/rlm_realm.la
+CC src/modules/rlm_redis/rlm_redis.c
+LINK build/lib/rlm_redis.la
+CC src/modules/rlm_rediswho/rlm_rediswho.c
+LINK build/lib/rlm_rediswho.la
+CC src/modules/rlm_replicate/rlm_replicate.c
+LINK build/lib/rlm_replicate.la
+CC src/modules/rlm_rest/rlm_rest.c
+CC src/modules/rlm_rest/rest.c
+src/modules/rlm_rest/rest.c: In function 'mod_conn_alive':
+src/modules/rlm_rest/rest.c:486:9: warning: 'CURLINFO_LASTSOCKET' is deprecated: since 7.45.0. Use CURLINFO_ACTIVESOCKET [-Wdeprecated-declarations]
+  486 |         ret = curl_easy_getinfo(candle, CURLINFO_LASTSOCKET, &last_socket);
+      |         ^~~
+In file included from src/modules/rlm_rest/rest.h:32,
+                 from src/modules/rlm_rest/rest.c:37:
+/usr/include/curl/curl.h:2957:3: note: declared here
+ 2957 |   CURLINFO_LASTSOCKET  CURL_DEPRECATED(7.45.0, "Use CURLINFO_ACTIVESOCKET")
+      |   ^~~~~~~~~~~~~~~~~~~
+src/modules/rlm_rest/rest.c: In function 'rest_request_config':
+src/modules/rlm_rest/rest.c:2241:17: warning: 'CURLOPT_RANDOM_FILE' is deprecated: since 7.84.0. Serves no purpose anymore [-Wdeprecated-declarations]
+ 2241 |                 SET_OPTION(CURLOPT_RANDOM_FILE, section->tls_random_file);
+      |                 ^~~~~~~~~~
+/usr/include/curl/curl.h:1404:3: note: declared here
+ 1404 |   CURLOPTDEPRECATED(CURLOPT_RANDOM_FILE, CURLOPTTYPE_STRINGPOINT, 76,
+      |   ^~~~~~~~~~~~~~~~~
+LINK build/lib/rlm_rest.la
+CC src/modules/rlm_soh/rlm_soh.c
+LINK build/lib/rlm_soh.la
+CC src/modules/rlm_sometimes/rlm_sometimes.c
+LINK build/lib/rlm_sometimes.la
+CC src/modules/rlm_sql/rlm_sql.c
+CC src/modules/rlm_sql/sql.c
+src/modules/rlm_sql/sql.c:193:13: warning: conflicting types for 'rlm_sql_fetch_row' due to enum/integer mismatch; have 'sql_rcode_t(rlm_sql_t *, REQUEST *, rlm_sql_handle_t **)' {aka 'sql_rcode_t(struct sql_inst *, struct rad_request *, struct rlm_sql_handle **)'} [-Wenum-int-mismatch]
+  193 | sql_rcode_t rlm_sql_fetch_row(rlm_sql_t *inst, REQUEST *request, rlm_sql_handle_t **handle)
+      |             ^~~~~~~~~~~~~~~~~
+In file included from src/modules/rlm_sql/sql.c:38:
+src/modules/rlm_sql/rlm_sql.h:255:17: note: previous declaration of 'rlm_sql_fetch_row' with type 'int(rlm_sql_t *, REQUEST *, rlm_sql_handle_t **)' {aka 'int(struct sql_inst *, struct rad_request *, struct rlm_sql_handle **)'}
+  255 | int             rlm_sql_fetch_row(rlm_sql_t *inst, REQUEST *request, rlm_sql_handle_t **handle);
+      |                 ^~~~~~~~~~~~~~~~~
+LINK build/lib/rlm_sql.la
+CC src/modules/rlm_sql/drivers/rlm_sql_mysql/rlm_sql_mysql.c
+LINK build/lib/rlm_sql_mysql.la
+CC src/modules/rlm_sql/drivers/rlm_sql_null/rlm_sql_null.c
+LINK build/lib/rlm_sql_null.la
+CC src/modules/rlm_sql/drivers/rlm_sql_postgresql/rlm_sql_postgresql.c
+src/modules/rlm_sql/drivers/rlm_sql_postgresql/rlm_sql_postgresql.c: In function 'sql_query':
+src/modules/rlm_sql/drivers/rlm_sql_postgresql/rlm_sql_postgresql.c:396:9: warning: enumeration value 'PGRES_TUPLES_CHUNK' not handled in switch [-Wswitch]
+  396 |         switch (status){
+      |         ^~~~~~
+LINK build/lib/rlm_sql_postgresql.la
+CC src/modules/rlm_sql/drivers/rlm_sql_sqlite/rlm_sql_sqlite.c
+LINK build/lib/rlm_sql_sqlite.la
+CC src/modules/rlm_sql/drivers/rlm_sql_unixodbc/rlm_sql_unixodbc.c
+src/modules/rlm_sql/drivers/rlm_sql_unixodbc/rlm_sql_unixodbc.c:283:20: warning: conflicting types for 'sql_check_error' due to enum/integer mismatch; have 'sql_rcode_t(long int,  rlm_sql_handle_t *, rlm_sql_config_t *)' {aka 'sql_rcode_t(long int,  struct rlm_sql_handle *, struct sql_config *)'} [-Wenum-int-mismatch]
+  283 | static sql_rcode_t sql_check_error(long error_handle, rlm_sql_handle_t *handle, UNUSED rlm_sql_config_t *config)
+      |                    ^~~~~~~~~~~~~~~
+src/modules/rlm_sql/drivers/rlm_sql_unixodbc/rlm_sql_unixodbc.c:43:12: note: previous declaration of 'sql_check_error' with type 'int(long int,  rlm_sql_handle_t *, rlm_sql_config_t *)' {aka 'int(long int,  struct rlm_sql_handle *, struct sql_config *)'}
+   43 | static int sql_check_error(long err_handle, rlm_sql_handle_t *handle, rlm_sql_config_t *config);
+      |            ^~~~~~~~~~~~~~~
+LINK build/lib/rlm_sql_unixodbc.la
+CC src/modules/rlm_sql_map/rlm_sql_map.c
+LINK build/lib/rlm_sql_map.la
+CC src/modules/rlm_sqlcounter/rlm_sqlcounter.c
+LINK build/lib/rlm_sqlcounter.la
+CC src/modules/rlm_sqlippool/rlm_sqlippool.c
+LINK build/lib/rlm_sqlippool.la
+CC src/modules/rlm_test/rlm_test.c
+LINK build/lib/rlm_test.la
+CC src/modules/rlm_totp/rlm_totp.c
+LINK build/lib/rlm_totp.la
+CC src/modules/rlm_unix/rlm_unix.c
+LINK build/lib/rlm_unix.la
+CC src/modules/rlm_unpack/rlm_unpack.c
+LINK build/lib/rlm_unpack.la
+CC src/modules/rlm_utf8/rlm_utf8.c
+LINK build/lib/rlm_utf8.la
+CC src/modules/rlm_wimax/rlm_wimax.c
+CC src/modules/rlm_wimax/milenage.c
+LINK build/lib/rlm_wimax.la
+CC src/modules/proto_dhcp/dhcp.c
+LINK build/lib/libfreeradius-dhcp.la
+CC src/modules/proto_dhcp/dhcpd.c
+LINK build/lib/proto_dhcp.la
+CC src/modules/proto_dhcp/rlm_dhcp.c
+LINK build/lib/rlm_dhcp.la
+CC src/modules/proto_dhcp/dhcpclient.c
+LINK build/bin/dhcpclient
+CC src/modules/proto_vmps/vmps.c
+CC src/modules/proto_vmps/vqp.c
+LINK build/lib/proto_vmps.la
+CC src/main/radclient.c
+LINK build/bin/radclient
+CC src/main/acct.c
+CC src/main/auth.c
+CC src/main/client.c
+CC src/main/crypt.c
+CC src/main/listen.c
+CC src/main/mainconfig.c
+CC src/main/modules.c
+CC src/main/modcall.c
+CC src/main/radiusd.c
+CC src/main/state.c
+CC src/main/stats.c
+CC src/main/soh.c
+CC src/main/connection.c
+CC src/main/session.c
+CC src/main/channel.c
+CC src/main/process.c
+CC src/main/realms.c
+CC src/main/detail.c
+CC src/main/tls_listen.c
+LINK build/bin/radiusd
+CC src/main/radsniff.c
+CC src/main/collectd.c
+LINK build/bin/radsniff
+CC src/main/radmin.c
+LINK build/bin/radmin
+CC src/main/radattr.c
+LINK build/bin/radattr
+CC src/main/radwho.c
+LINK build/bin/radwho
+CC src/main/unittest.c
+LINK build/bin/unittest
+CC src/tests/rbmonkey.c
+LINK build/bin/rbmonkey
+CC src/tests/map/map_unit.c
+LINK build/bin/map_unit
+INSTALL raddb/sites-enabled
+LN-S raddb/sites-enabled/default
+LN-S raddb/sites-enabled/inner-tunnel
+INSTALL raddb/mods-enabled
+LN-S raddb/mods-enabled/always
+LN-S raddb/mods-enabled/attr_filter
+LN-S raddb/mods-enabled/chap
+LN-S raddb/mods-enabled/date
+LN-S raddb/mods-enabled/detail
+LN-S raddb/mods-enabled/detail.log
+LN-S raddb/mods-enabled/digest
+LN-S raddb/mods-enabled/dynamic_clients
+LN-S raddb/mods-enabled/echo
+LN-S raddb/mods-enabled/exec
+LN-S raddb/mods-enabled/expiration
+LN-S raddb/mods-enabled/expr
+LN-S raddb/mods-enabled/files
+LN-S raddb/mods-enabled/linelog
+LN-S raddb/mods-enabled/logintime
+LN-S raddb/mods-enabled/mschap
+LN-S raddb/mods-enabled/ntlm_auth
+LN-S raddb/mods-enabled/pap
+LN-S raddb/mods-enabled/passwd
+LN-S raddb/mods-enabled/preprocess
+LN-S raddb/mods-enabled/radutmp
+LN-S raddb/mods-enabled/realm
+LN-S raddb/mods-enabled/replicate
+LN-S raddb/mods-enabled/soh
+LN-S raddb/mods-enabled/sradutmp
+LN-S raddb/mods-enabled/totp
+LN-S raddb/mods-enabled/unix
+LN-S raddb/mods-enabled/unpack
+LN-S raddb/mods-enabled/utf8
+>>> freeradius: Entering fakeroot...
+INSTALL dictionary
+mkdir: unrecognized option: /
+BusyBox v1.37.0 (2025-05-26 20:04:45 UTC) multi-call binary.
+
+Usage: mkdir [-m MODE] [-p] DIRECTORY...
+
+Create DIRECTORY
+
+	-m MODE	Mode
+	-p	No error if exists; make parent directories as needed
+mkdir: unrecognized option: /
+BusyBox v1.37.0 (2025-05-26 20:04:45 UTC) multi-call binary.
+
+Usage: mkdir [-m MODE] [-p] DIRECTORY...
+
+Create DIRECTORY
+
+	-m MODE	Mode
+	-p	No error if exists; make parent directories as needed
+mkdir: unrecognized option: /
+BusyBox v1.37.0 (2025-05-26 20:04:45 UTC) multi-call binary.
+
+Usage: mkdir [-m MODE] [-p] DIRECTORY...
+
+Create DIRECTORY
+
+	-m MODE	Mode
+	-p	No error if exists; make parent directories as needed
+mkdir: unrecognized option: /
+BusyBox v1.37.0 (2025-05-26 20:04:45 UTC) multi-call binary.
+
+Usage: mkdir [-m MODE] [-p] DIRECTORY...
+
+Create DIRECTORY
+
+	-m MODE	Mode
+	-p	No error if exists; make parent directories as needed
+mkdir: unrecognized option: /
+BusyBox v1.37.0 (2025-05-26 20:04:45 UTC) multi-call binary.
+
+Usage: mkdir [-m MODE] [-p] DIRECTORY...
+
+Create DIRECTORY
+
+	-m MODE	Mode
+	-p	No error if exists; make parent directories as needed
+mkdir: unrecognized option: /
+BusyBox v1.37.0 (2025-05-26 20:04:45 UTC) multi-call binary.
+
+Usage: mkdir [-m MODE] [-p] DIRECTORY...
+
+Create DIRECTORY
+
+	-m MODE	Mode
+	-p	No error if exists; make parent directories as needed
+cp: can't create '/tmp/pkg/freeradius/usr/share/freeradius/#inst.21482#': No such file or directory
+make: *** [Makefile:143: /tmp/pkg/freeradius/usr/share/freeradius/dictionary] Error 1
+>>> ERROR: freeradius*: package failed
+>>> ERROR: freeradius: rootpkg failed
+>>> ERROR: freeradius: rootbld failed
+>>> freeradius: Cleaning up build chroot
