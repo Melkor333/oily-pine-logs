@@ -32,12 +32,12 @@ WARNING: opening /home/packager/packages//# for oils: No such file or directory
 (20/78) Installing acl-libs (2.3.2-r1)
 (21/78) Installing tar (1.35-r4)
 (22/78) Installing alpine-baselayout-data (3.7.0-r0)
-(23/78) Installing busybox (1.37.0-r18)
-Executing busybox-1.37.0-r18.post-install
-(24/78) Installing ssl_client (1.37.0-r18)
+(23/78) Installing busybox (1.37.0-r19)
+Executing busybox-1.37.0-r19.post-install
+(24/78) Installing ssl_client (1.37.0-r19)
 (25/78) Installing ncurses-terminfo-base (6.5_p20250705-r0)
 (26/78) Installing libncursesw (6.5_p20250705-r0)
-(27/78) Installing readline (8.3.0-r1)
+(27/78) Installing readline (8.3.1-r0)
 (28/78) Installing oils-for-unix (0.28.0-r0)
 (29/78) Installing oils-for-unix-binsh (0.28.0-r0)
 (30/78) Installing abuild (3.15.0-r2)
@@ -52,15 +52,15 @@ Executing alpine-baselayout-3.7.0-r0.post-install
 (36/78) Installing openrc (0.62.5-r0)
 Executing openrc-0.62.5-r0.post-install
 (37/78) Installing mdev-conf (4.8-r0)
-(38/78) Installing busybox-mdev-openrc (1.37.0-r18)
+(38/78) Installing busybox-mdev-openrc (1.37.0-r19)
 (39/78) Installing alpine-conf (3.20.0-r0)
 (40/78) Installing alpine-keys (2.5-r0)
 (41/78) Installing alpine-release (3.23.0_alpha20250612-r0)
-(42/78) Installing busybox-openrc (1.37.0-r18)
-(43/78) Installing busybox-suid (1.37.0-r18)
+(42/78) Installing busybox-openrc (1.37.0-r19)
+(43/78) Installing busybox-suid (1.37.0-r19)
 (44/78) Installing alpine-base (3.23.0_alpha20250612-r0)
 (45/78) Installing jansson (2.14.1-r0)
-(46/78) Installing binutils (2.44-r0)
+(46/78) Installing binutils (2.44-r3)
 (47/78) Installing libmagic (5.46-r2)
 (48/78) Installing file (5.46-r2)
 (49/78) Installing libgomp (14.3.0-r5)
@@ -93,7 +93,7 @@ Executing openrc-0.62.5-r0.post-install
 (76/78) Installing perl-git (2.50.1-r0)
 (77/78) Installing git-perl (2.50.1-r0)
 (78/78) Installing parallel (20250622-r0)
-Executing busybox-1.37.0-r18.trigger
+Executing busybox-1.37.0-r19.trigger
 OK: 314 MiB in 78 packages
 >>> ocaml5: Fetching https://caml.inria.fr/pub/distrib/ocaml-5.3/ocaml-5.3.0.tar.xz
 >>> ocaml5: Checking sha512sums...
@@ -465,6 +465,7 @@ strip tmpheader.exe
   OCAMLC stdlib__Int.cmi
   OCAMLC stdlib__Unit.cmi
   OCAMLC stdlib__Marshal.cmi
+  OCAMLC stdlib__Int32.cmo
   OCAMLC stdlib__Int64.cmi
   OCAMLC stdlib__Nativeint.cmi
   OCAMLC stdlib__Lexing.cmi
@@ -490,16 +491,12 @@ strip tmpheader.exe
   OCAMLC stdlib__Uchar.cmo
   OCAMLC stdlib__Int.cmo
   OCAMLC stdlib__Unit.cmo
-  OCAMLC stdlib__Int32.cmo
   OCAMLC stdlib__Int64.cmo
   OCAMLC stdlib__Nativeint.cmo
-  OCAMLC stdlib__Parsing.cmi
   OCAMLC stdlib__Mutex.cmo
   OCAMLC stdlib__Condition.cmi
-  OCAMLC stdlib__Printexc.cmi
   OCAMLC stdlib__Bigarray.cmi
   OCAMLC stdlib__Random.cmi
-  OCAMLC stdlib__Hashtbl.cmi
   OCAMLC stdlib__Callback.cmo
   OCAMLC camlinternalOO.cmi
   OCAMLC camlinternalMod.cmi
@@ -508,7 +505,6 @@ strip tmpheader.exe
   OCAMLC stdlib__ListLabels.cmi
   OCAMLC stdlib__BytesLabels.cmi
   OCAMLC stdlib__StringLabels.cmi
-  OCAMLC stdlib__Effect.cmi
   OCAMLC std_exit.cmo
   OCAMLC stdlib__Obj.cmo
   OCAMLC stdlib__Type.cmo
@@ -522,6 +518,7 @@ strip tmpheader.exe
   OCAMLC stdlib__String.cmi
   OCAMLC stdlib__Array.cmi
   OCAMLC stdlib__Float.cmi
+  OCAMLC stdlib__Parsing.cmi
   OCAMLC stdlib__Set.cmi
   OCAMLC stdlib__Map.cmi
   OCAMLC stdlib__Stack.cmi
@@ -529,23 +526,14 @@ strip tmpheader.exe
   OCAMLC stdlib__Buffer.cmi
   OCAMLC stdlib__Condition.cmo
   OCAMLC stdlib__Semaphore.cmo
-  OCAMLC stdlib__Fun.cmo
-  OCAMLC stdlib__Gc.cmi
+  OCAMLC stdlib__Printexc.cmi
   OCAMLC stdlib__In_channel.cmi
   OCAMLC stdlib__Out_channel.cmi
-  OCAMLC stdlib__Bigarray.cmo
-  OCAMLC stdlib__Weak.cmi
-  OCAMLC stdlib__Format.cmi
-  OCAMLC camlinternalOO.cmo
+  OCAMLC stdlib__Hashtbl.cmi
   OCAMLC stdlib__Oo.cmi
-  OCAMLC camlinternalMod.cmo
-  OCAMLC stdlib__Ephemeron.cmi
-  OCAMLC stdlib__Complex.cmo
-  OCAMLC stdlib__ArrayLabels.cmo
   OCAMLC stdlib__ListLabels.cmo
   OCAMLC stdlib__BytesLabels.cmo
   OCAMLC stdlib__StringLabels.cmo
-  OCAMLC stdlib__MoreLabels.cmi
   OCAMLC stdlib__StdLabels.cmi
   OCAMLC stdlib__Option.cmo
   OCAMLC stdlib__Result.cmo
@@ -565,26 +553,38 @@ strip tmpheader.exe
   OCAMLC stdlib__Domain.cmo
   OCAMLC camlinternalFormat.cmi
   OCAMLC stdlib__Printf.cmi
+  OCAMLC stdlib__Fun.cmo
+  OCAMLC stdlib__Gc.cmi
   OCAMLC stdlib__In_channel.cmo
   OCAMLC stdlib__Out_channel.cmo
   OCAMLC stdlib__Digest.cmo
+  OCAMLC stdlib__Bigarray.cmo
   OCAMLC stdlib__Random.cmo
   OCAMLC stdlib__Hashtbl.cmo
-  OCAMLC stdlib__Weak.cmo
-  OCAMLC stdlib__Format.cmo
+  OCAMLC stdlib__Weak.cmi
+  OCAMLC stdlib__Format.cmi
   OCAMLC stdlib__Scanf.cmo
+  OCAMLC camlinternalOO.cmo
   OCAMLC stdlib__Oo.cmo
+  OCAMLC camlinternalMod.cmo
   OCAMLC stdlib__Dynarray.cmo
-  OCAMLC stdlib__Ephemeron.cmo
+  OCAMLC stdlib__Ephemeron.cmi
   OCAMLC stdlib__Filename.cmo
-  OCAMLC stdlib__MoreLabels.cmo
+  OCAMLC stdlib__Complex.cmo
+  OCAMLC stdlib__ArrayLabels.cmo
+  OCAMLC stdlib__MoreLabels.cmi
   OCAMLC stdlib__StdLabels.cmo
-  OCAMLC stdlib__Effect.cmo
+  OCAMLC stdlib__Effect.cmi
   OCAMLC camlinternalFormat.cmo
   OCAMLC stdlib__Printf.cmo
   OCAMLC stdlib__Arg.cmo
   OCAMLC stdlib__Printexc.cmo
   OCAMLC stdlib__Gc.cmo
+  OCAMLC stdlib__Weak.cmo
+  OCAMLC stdlib__Format.cmo
+  OCAMLC stdlib__Ephemeron.cmo
+  OCAMLC stdlib__Effect.cmo
+  OCAMLC stdlib__MoreLabels.cmo
   LINKC stdlib.cma
 rm tmpheader.exe
 make[2]: Leaving directory '/tmp/src/ocaml-5.3.0/stdlib'
@@ -821,7 +821,6 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC driver/makedepend.cmi
   GEN utils/config_main.ml
   OCAMLC utils/build_path_prefix_map.cmo
-  OCAMLC utils/format_doc.cmo
   OCAMLC utils/arg_helper.cmo
   OCAMLC utils/local_store.cmo
   OCAMLC utils/terminfo.cmo
@@ -846,27 +845,27 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC utils/linkdeps.cmi
   OCAMLC utils/domainstate.cmi
   OCAMLC parsing/camlinternalMenhirLib.cmi
+  OCAMLC tools/make_opcodes.cmo
+  GEN utils/config.ml
+  OCAMLC utils/format_doc.cmo
+  OCAMLC lambda/runtimedef.cmo
+  OCAMLC utils/config_main.cmi
+  OCAMLC utils/config_boot.cmi
+  OCAMLC utils/config.cmo
+  OCAMLC utils/domainstate.cmo
+  OCAMLC driver/main.cmo
+  OCAMLC bytecomp/bytelibrarian.cmi
+  OCAMLC parsing/location.cmi
+  OCAMLC utils/config_main.cmo
+  OCAMLC utils/config_boot.cmo
+  LINKC tools/make_opcodes
+  OCAMLC parsing/camlinternalMenhirLib.cmo
+  OCAMLC utils/numbers.cmi
+  OCAMLC utils/strongly_connected_components.cmi
   OCAMLC typing/ident.cmi
   OCAMLC middle_end/linkage_name.cmi
   OCAMLC middle_end/flambda/base_types/tag.cmi
   OCAMLC middle_end/flambda/base_types/static_exception.cmi
-  OCAMLC tools/make_opcodes.cmo
-  GEN utils/config.ml
-  OCAMLC utils/domainstate.cmo
-  OCAMLC lambda/runtimedef.cmo
-  OCAMLC utils/config_main.cmi
-  OCAMLC utils/config_boot.cmi
-  OCAMLC bytecomp/bytelibrarian.cmi
-  OCAMLC driver/main.cmo
-  OCAMLC utils/numbers.cmi
-  OCAMLC utils/strongly_connected_components.cmi
-  OCAMLC parsing/location.cmi
-  OCAMLC utils/config.cmo
-  OCAMLC utils/config_main.cmo
-  OCAMLC utils/config_boot.cmo
-  OCAMLC typing/path.cmi
-  OCAMLC parsing/camlinternalMenhirLib.cmo
-  OCAMLC middle_end/compilation_unit.cmi
   OCAMLC utils/clflags.cmi
   OCAMLC utils/consistbl.cmi
   OCAMLC utils/diffing.cmi
@@ -876,41 +875,41 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC utils/profile.cmo
   OCAMLC utils/warnings.cmo
   OCAMLC utils/linkdeps.cmo
-  OCAMLC utils/strongly_connected_components.cmo
   OCAMLC utils/targetint.cmo
   OCAMLC utils/diffing.cmo
   OCAMLC parsing/unit_info.cmo
   OCAMLC parsing/longident.cmo
-  OCAMLC typing/ident.cmo
   OCAMLC bytecomp/dll.cmo
   OCAMLC driver/errors.cmo
   OCAMLC utils/diffing_with_keys.cmi
   OCAMLC parsing/asttypes.cmi
   OCAMLC parsing/syntaxerr.cmi
   OCAMLC typing/annot.cmi
-  OCAMLC typing/shape.cmi
-  OCAMLC middle_end/flambda/base_types/set_of_closures_id.cmi
-  OCAMLC middle_end/flambda/base_types/export_id.cmi
-  LINKC tools/make_opcodes
+  OCAMLC typing/path.cmi
+  OCAMLC lambda/debuginfo.cmi
+  OCAMLC middle_end/compilation_unit.cmi
+  GEN bytecomp/opcodes.ml
   OCAMLC driver/compenv.cmi
   OCAMLC utils/numbers.cmo
   OCAMLC utils/clflags.cmo
   OCAMLC utils/ccomp.cmo
   OCAMLC utils/consistbl.cmo
+  OCAMLC utils/strongly_connected_components.cmo
   OCAMLC utils/diffing_with_keys.cmo
   OCAMLC parsing/location.cmo
   OCAMLC parsing/asttypes.cmo
   OCAMLC parsing/syntaxerr.cmo
+  OCAMLC typing/ident.cmo
+  OCAMLC lambda/debuginfo.cmo
   OCAMLC driver/compenv.cmo
   OCAMLC driver/main_args.cmo
   OCAMLC parsing/parsetree.cmi
-  OCAMLC lambda/debuginfo.cmi
-  OCAMLC middle_end/flambda/base_types/set_of_closures_origin.cmi
-  GEN bytecomp/opcodes.ml
-  OCAMLC typing/shape.cmo
-  GEN bytecomp/opcodes.mli
+  OCAMLC typing/shape.cmi
+  OCAMLC middle_end/flambda/base_types/set_of_closures_id.cmi
+  OCAMLC middle_end/flambda/base_types/export_id.cmi
   OCAMLC middle_end/backend_var.cmi
-  OCAMLC lambda/debuginfo.cmo
+  GEN bytecomp/opcodes.mli
+  OCAMLC middle_end/flambda/base_types/set_of_closures_origin.cmi
   OCAMLC bytecomp/opcodes.cmi
   OCAMLC parsing/docstrings.cmi
   OCAMLC parsing/ast_iterator.cmi
@@ -924,29 +923,35 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC parsing/depend.cmi
   OCAMLC typing/type_immediacy.cmi
   OCAMLC driver/pparse.cmi
-  OCAMLC parsing/docstrings.cmo
-  OCAMLC parsing/ast_iterator.cmo
-  OCAMLC parsing/printast.cmo
+  OCAMLC typing/shape.cmo
   OCAMLC bytecomp/opcodes.cmo
-  OCAMLC parsing/ast_helper.cmi
-  OCAMLC typing/outcometree.cmi
+  OCAMLC parsing/printast.cmo
   OCAMLC parsing/attr_helper.cmo
-  OCAMLC parsing/depend.cmo
-  OCAMLC typing/type_immediacy.cmo
+  OCAMLC parsing/ast_iterator.cmo
   OCAMLC parsing/ast_invariants.cmo
+  OCAMLC parsing/ast_helper.cmi
+  OCAMLC parsing/docstrings.cmo
+  OCAMLC parsing/depend.cmo
+  OCAMLC typing/outcometree.cmi
+  OCAMLC typing/type_immediacy.cmo
   OCAMLC driver/pparse.cmo
   OCAMLC typing/primitive.cmi
   OCAMLC typing/oprint.cmi
-  OCAMLC typing/types.cmi
-  OCAMLC typing/primitive.cmo
   GEN parsing/parser.mli
   OCAMLC parsing/ast_helper.cmo
   OCAMLC parsing/builtin_attributes.cmo
   GEN parsing/parser.ml
   OCAMLC parsing/ast_mapper.cmo
   OCAMLC parsing/parser.cmi
-  OCAMLC parsing/parser.cmo
+  OCAMLC typing/types.cmi
+  OCAMLC typing/primitive.cmo
   OCAMLC parsing/lexer.cmi
+  OCAMLC parsing/lexer.cmo
+  OCAMLC parsing/pprintast.cmo
+  OCAMLC parsing/parse.cmo
+  OCAMLC typing/path.cmo
+  OCAMLC typing/oprint.cmo
+  OCAMLC driver/makedepend.cmo
   OCAMLC typing/rawprinttyp.cmi
   OCAMLC typing/gprinttyp.cmi
   OCAMLC typing/btype.cmi
@@ -956,27 +961,20 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC file_formats/cmi_format.cmi
   OCAMLC typing/errortrace.cmi
   OCAMLC typing/signature_group.cmi
-  OCAMLC parsing/lexer.cmo
-  OCAMLC parsing/pprintast.cmo
-  OCAMLC parsing/parse.cmo
-  OCAMLC typing/path.cmo
+  OCAMLC parsing/parser.cmo
   OCAMLC typing/types.cmo
   OCAMLC typing/rawprinttyp.cmo
   OCAMLC typing/gprinttyp.cmo
-  OCAMLC typing/oprint.cmo
-  OCAMLC file_formats/cmi_format.cmo
-  OCAMLC typing/errortrace.cmo
-  OCAMLC typing/signature_group.cmo
-  OCAMLC driver/makedepend.cmo
-  OCAMLC typing/persistent_env.cmi
-  OCAMLC typing/env.cmi
   OCAMLC typing/btype.cmo
   OCAMLC typing/subst.cmo
   OCAMLC typing/predef.cmo
   OCAMLC typing/datarepr.cmo
+  OCAMLC file_formats/cmi_format.cmo
+  OCAMLC typing/errortrace.cmo
+  OCAMLC typing/signature_group.cmo
+  OCAMLC typing/persistent_env.cmi
+  OCAMLC typing/env.cmi
   OCAMLC typing/persistent_env.cmo
-  OCAMLC typing/env.cmo
-  OCAMLC bytecomp/bytepackager.cmi
   OCAMLC typing/typedtree.cmi
   OCAMLC typing/ctype.cmi
   OCAMLC typing/out_type.cmi
@@ -987,9 +985,50 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC typing/typedecl_unboxed.cmi
   OCAMLC lambda/lambda.cmi
   OCAMLC driver/compmisc.cmi
+  OCAMLC typing/env.cmo
   OCAMLC typing/shape_reduce.cmo
+  OCAMLC bytecomp/bytepackager.cmi
+  OCAMLC typing/typedecl_immediacy.cmi
+  OCAMLC typing/typedecl_separability.cmi
+  OCAMLC typing/typedecl_properties.cmo
   OCAMLC typing/printtyp.cmi
   OCAMLC typing/errortrace_report.cmi
+  OCAMLC typing/includeclass.cmi
+  OCAMLC typing/ctype.cmo
+  OCAMLC typing/out_type.cmo
+  OCAMLC typing/mtype.cmo
+  OCAMLC typing/typedecl_unboxed.cmo
+  OCAMLC typing/typedecl_immediacy.cmo
+  OCAMLC lambda/lambda.cmo
+  OCAMLC lambda/printlambda.cmi
+  OCAMLC lambda/value_rec_compiler.cmi
+  OCAMLC lambda/translobj.cmi
+  OCAMLC lambda/tmc.cmi
+  OCAMLC lambda/simplif.cmi
+  OCAMLC middle_end/internal_variable_names.cmi
+  OCAMLC middle_end/clambda_primitives.cmi
+  OCAMLC bytecomp/instruct.cmi
+  OCAMLC bytecomp/symtable.cmi
+  OCAMLC driver/compile_common.cmi
+  OCAMLC typing/typedtree.cmo
+  OCAMLC typing/printtyp.cmo
+  OCAMLC typing/errortrace_report.cmo
+  OCAMLC typing/includeclass.cmo
+  OCAMLC typing/envaux.cmo
+  OCAMLC typing/typedecl_separability.cmo
+  OCAMLC lambda/printlambda.cmo
+  OCAMLC lambda/value_rec_compiler.cmo
+  OCAMLC lambda/translobj.cmo
+  OCAMLC lambda/tmc.cmo
+  OCAMLC lambda/simplif.cmo
+  OCAMLC bytecomp/bytegen.cmi
+  OCAMLC bytecomp/printinstr.cmi
+  OCAMLC bytecomp/emitcode.cmi
+  OCAMLC bytecomp/bytelink.cmi
+  OCAMLC driver/compile.cmi
+  OCAMLC bytecomp/instruct.cmo
+  OCAMLC bytecomp/printinstr.cmo
+  OCAMLC typing/printtyped.cmi
   OCAMLC typing/includecore.cmi
   OCAMLC typing/tast_iterator.cmi
   OCAMLC typing/tast_mapper.cmi
@@ -1001,34 +1040,20 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC typing/patterns.cmi
   OCAMLC typing/parmatch.cmi
   OCAMLC typing/typedecl_variance.cmi
-  OCAMLC typing/typedecl_immediacy.cmi
-  OCAMLC typing/typedecl_separability.cmi
+  OCAMLC typing/typeopt.cmi
   OCAMLC typing/value_rec_check.cmi
   OCAMLC typing/typecore.cmi
   OCAMLC typing/typeclass.cmi
-  OCAMLC lambda/printlambda.cmi
   OCAMLC lambda/matching.cmi
-  OCAMLC lambda/value_rec_compiler.cmi
-  OCAMLC lambda/translobj.cmi
   OCAMLC lambda/translattribute.cmi
   OCAMLC lambda/translprim.cmi
   OCAMLC lambda/translcore.cmi
   OCAMLC lambda/translclass.cmi
   OCAMLC lambda/translmod.cmi
-  OCAMLC lambda/tmc.cmi
-  OCAMLC lambda/simplif.cmi
-  OCAMLC middle_end/internal_variable_names.cmi
-  OCAMLC middle_end/clambda_primitives.cmi
-  OCAMLC bytecomp/instruct.cmi
-  OCAMLC bytecomp/symtable.cmi
-  OCAMLC driver/compile_common.cmi
-  OCAMLC typing/typedtree.cmo
-  OCAMLC typing/ctype.cmo
-  OCAMLC typing/out_type.cmo
-  OCAMLC typing/printtyp.cmo
-  OCAMLC typing/errortrace_report.cmo
-  OCAMLC typing/mtype.cmo
-  OCAMLC typing/envaux.cmo
+  OCAMLC middle_end/variable.cmi
+  OCAMLC middle_end/clambda.cmi
+  OCAMLC bytecomp/meta.cmi
+  OCAMLC typing/printtyped.cmo
   OCAMLC typing/includecore.cmo
   OCAMLC typing/tast_iterator.cmo
   OCAMLC typing/tast_mapper.cmo
@@ -1039,71 +1064,46 @@ cp utils/config.mli utils/config_boot.mli
   OCAMLC typing/printpat.cmo
   OCAMLC typing/patterns.cmo
   OCAMLC typing/parmatch.cmo
-  OCAMLC typing/typedecl_properties.cmo
   OCAMLC typing/typedecl_variance.cmo
-  OCAMLC typing/typedecl_unboxed.cmo
-  OCAMLC typing/typedecl_immediacy.cmo
-  OCAMLC typing/typedecl_separability.cmo
-  OCAMLC lambda/lambda.cmo
-  OCAMLC lambda/printlambda.cmo
-  OCAMLC lambda/value_rec_compiler.cmo
-  OCAMLC lambda/translobj.cmo
-  OCAMLC lambda/translattribute.cmo
-  OCAMLC lambda/translmod.cmo
-  OCAMLC lambda/tmc.cmo
-  OCAMLC lambda/simplif.cmo
-  OCAMLC bytecomp/bytegen.cmi
-  OCAMLC bytecomp/printinstr.cmi
-  OCAMLC bytecomp/emitcode.cmi
-  OCAMLC bytecomp/bytelink.cmi
-  OCAMLC driver/compile.cmi
-  OCAMLC bytecomp/instruct.cmo
-  OCAMLC bytecomp/bytegen.cmo
-  OCAMLC bytecomp/printinstr.cmo
-  OCAMLC bytecomp/emitcode.cmo
-  OCAMLC typing/printtyped.cmi
-  OCAMLC typing/includeclass.cmi
-  OCAMLC typing/cmt2annot.cmi
-  OCAMLC typing/includemod.cmi
-  OCAMLC typing/typeopt.cmi
-  OCAMLC typing/typedecl.cmi
-  OCAMLC middle_end/variable.cmi
-  OCAMLC middle_end/clambda.cmi
-  OCAMLC bytecomp/meta.cmi
-  OCAMLC typing/printtyped.cmo
-  OCAMLC typing/includeclass.cmo
-  OCAMLC typing/cmt2annot.cmo
-  OCAMLC typing/includemod.cmo
   OCAMLC typing/typeopt.cmo
-  OCAMLC typing/typedecl.cmo
   OCAMLC typing/value_rec_check.cmo
-  OCAMLC typing/typecore.cmo
-  OCAMLC typing/typeclass.cmo
   OCAMLC lambda/matching.cmo
+  OCAMLC lambda/translattribute.cmo
   OCAMLC lambda/translprim.cmo
   OCAMLC lambda/translcore.cmo
   OCAMLC lambda/translclass.cmo
+  OCAMLC lambda/translmod.cmo
   OCAMLC bytecomp/meta.cmo
   OCAMLC bytecomp/symtable.cmo
+  OCAMLC bytecomp/bytegen.cmo
+  OCAMLC bytecomp/emitcode.cmo
   OCAMLC bytecomp/bytelink.cmo
   OCAMLC bytecomp/bytelibrarian.cmo
   OCAMLC driver/compile.cmo
   OCAMLC driver/maindriver.cmo
-  OCAMLC typing/includemod_errorprinter.cmi
-  OCAMLC typing/typemod.cmi
+  OCAMLC typing/cmt2annot.cmi
+  OCAMLC typing/includemod.cmi
+  OCAMLC typing/typedecl.cmi
   OCAMLC middle_end/flambda/base_types/closure_element.cmi
   OCAMLC middle_end/symbol.cmi
   OCAMLC middle_end/flambda/parameter.cmi
   OCAMLC middle_end/flambda/base_types/mutable_variable.cmi
-  OCAMLC typing/includemod_errorprinter.cmo
-  OCAMLC typing/typemod.cmo
+  OCAMLC typing/cmt2annot.cmo
+  OCAMLC typing/typedecl.cmo
+  OCAMLC typing/typecore.cmo
+  OCAMLC typing/typeclass.cmo
+  OCAMLC typing/includemod_errorprinter.cmi
+  OCAMLC typing/typemod.cmi
+  OCAMLC middle_end/flambda/base_types/var_within_closure.cmi
+  OCAMLC middle_end/flambda/base_types/closure_id.cmi
+  OCAMLC typing/includemod.cmo
   OCAMLC driver/compmisc.cmo
   OCAMLC driver/compile_common.cmo
   OCAMLC bytecomp/bytepackager.cmo
-  OCAMLC middle_end/flambda/base_types/var_within_closure.cmi
-  OCAMLC middle_end/flambda/base_types/closure_id.cmi
-  OCAMLC middle_end/flambda/base_types/closure_origin.cmi
+  OCAMLC typing/includemod_errorprinter.cmo
+  OCAMLC typing/typemod.cmo
   OCAMLC middle_end/flambda/projection.cmi
+  OCAMLC middle_end/flambda/base_types/closure_origin.cmi
   LINKC compilerlibs/ocamlbytecomp.cma
   OCAMLC middle_end/flambda/flambda.cmi
   OCAMLC middle_end/flambda/freshening.cmi
@@ -1132,8 +1132,11 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0/stdlib'
   OCAMLC camlinternalFormatBasics.cmi
   OCAMLC camlinternalFormatBasics.cmo
   OCAMLC stdlib.cmi
+  MKEXE yacc/ocamlyacc
   OCAMLC stdlib.cmo
   OCAMLC stdlib__Either.cmi
+make lex-all
+make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC stdlib__Sys.cmi
   OCAMLC stdlib__Int32.cmi
   OCAMLC stdlib__Type.cmi
@@ -1145,117 +1148,107 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0/stdlib'
   OCAMLC stdlib__Int.cmi
   OCAMLC stdlib__Unit.cmi
   OCAMLC stdlib__Marshal.cmi
-  OCAMLC stdlib__Int32.cmo
   OCAMLC stdlib__Int64.cmi
   OCAMLC stdlib__Nativeint.cmi
+  OCAMLC lex/cset.cmi
   OCAMLC stdlib__Lexing.cmi
+  OCAMLYACC lex/parser.ml
+  OCAMLLEX lex/lexer.ml
   OCAMLC stdlib__Mutex.cmi
+  OCAMLC lex/table.cmi
+  OCAMLC lex/main.cmi
   OCAMLC stdlib__Semaphore.cmi
   OCAMLC stdlib__Domain.cmi
   OCAMLC stdlib__Arg.cmi
   OCAMLC stdlib__Fun.cmi
   OCAMLC stdlib__Complex.cmi
   OCAMLC stdlib__Digest.cmi
-  OCAMLC stdlib__Random.cmi
   OCAMLC stdlib__Scanf.cmi
   OCAMLC stdlib__Callback.cmi
   OCAMLC stdlib__Filename.cmi
-  MKEXE yacc/ocamlyacc
   OCAMLC std_exit.cmi
   OCAMLC stdlib__Either.cmo
   OCAMLC stdlib__Sys.cmo
   OCAMLC stdlib__Obj.cmi
+  OCAMLC lex/cset.cmo
+  OCAMLC lex/syntax.cmi
   OCAMLC stdlib__Atomic.cmo
-make lex-all
-make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC stdlib__Lazy.cmi
+  OCAMLC lex/table.cmo
   OCAMLC stdlib__Seq.cmi
   OCAMLC stdlib__Bool.cmo
   OCAMLC stdlib__Char.cmo
   OCAMLC stdlib__Uchar.cmo
   OCAMLC stdlib__Int.cmo
   OCAMLC stdlib__Unit.cmo
+  OCAMLC stdlib__Int32.cmo
   OCAMLC stdlib__Int64.cmo
+  OCAMLC lex/syntax.cmo
+  OCAMLC lex/parser.cmi
+  OCAMLC lex/lexgen.cmi
   OCAMLC stdlib__Nativeint.cmo
-  OCAMLC lex/cset.cmi
   OCAMLC stdlib__Mutex.cmo
-  OCAMLYACC lex/parser.ml
-  OCAMLLEX lex/lexer.ml
-  OCAMLC lex/table.cmi
-  OCAMLC lex/main.cmi
   OCAMLC stdlib__Condition.cmi
   OCAMLC stdlib__Printexc.cmi
   OCAMLC stdlib__Bigarray.cmi
-  OCAMLC stdlib__Hashtbl.cmi
+  OCAMLC stdlib__Random.cmi
   OCAMLC stdlib__Callback.cmo
+  OCAMLC lex/parser.cmo
+  OCAMLC lex/lexer.cmi
   OCAMLC camlinternalOO.cmi
   OCAMLC camlinternalMod.cmi
-  OCAMLC stdlib__Dynarray.cmi
-  OCAMLC stdlib__ArrayLabels.cmi
-  OCAMLC stdlib__ListLabels.cmi
-  OCAMLC stdlib__BytesLabels.cmi
-  OCAMLC stdlib__StringLabels.cmi
-  OCAMLC stdlib__Effect.cmi
   OCAMLC std_exit.cmo
-  OCAMLC lex/cset.cmo
-  OCAMLC lex/syntax.cmi
   OCAMLC stdlib__Obj.cmo
-  OCAMLC lex/table.cmo
   OCAMLC stdlib__Type.cmo
   OCAMLC camlinternalLazy.cmo
+  OCAMLC lex/lexgen.cmo
+  OCAMLC lex/compact.cmi
+  OCAMLC lex/common.cmi
   OCAMLC stdlib__Lazy.cmo
   OCAMLC stdlib__Seq.cmo
   OCAMLC stdlib__Option.cmi
   OCAMLC stdlib__Result.cmi
   OCAMLC stdlib__List.cmi
-  OCAMLC lex/syntax.cmo
-  OCAMLC lex/parser.cmi
-  OCAMLC lex/lexgen.cmi
   OCAMLC stdlib__Bytes.cmi
   OCAMLC stdlib__String.cmi
+  OCAMLC lex/lexer.cmo
   OCAMLC stdlib__Array.cmi
+  OCAMLC lex/common.cmo
+  OCAMLC lex/outputbis.cmi
   OCAMLC stdlib__Float.cmi
   OCAMLC stdlib__Parsing.cmi
   OCAMLC stdlib__Set.cmi
   OCAMLC stdlib__Map.cmi
+  OCAMLC lex/compact.cmo
   OCAMLC stdlib__Stack.cmi
+  OCAMLC lex/output.cmi
   OCAMLC stdlib__Queue.cmi
-  OCAMLC lex/lexgen.cmo
-  OCAMLC lex/compact.cmi
-  OCAMLC lex/common.cmi
-  OCAMLC lex/parser.cmo
-  OCAMLC lex/lexer.cmi
+  OCAMLC lex/outputbis.cmo
   OCAMLC stdlib__Buffer.cmi
   OCAMLC stdlib__Condition.cmo
   OCAMLC stdlib__Semaphore.cmo
-  OCAMLC lex/compact.cmo
+  OCAMLC stdlib__Domain.cmo
   OCAMLC stdlib__Fun.cmo
   OCAMLC stdlib__Gc.cmi
+  OCAMLC lex/output.cmo
+  OCAMLC lex/main.cmo
   OCAMLC stdlib__In_channel.cmi
   OCAMLC stdlib__Out_channel.cmi
   OCAMLC stdlib__Bigarray.cmo
   OCAMLC stdlib__Random.cmo
-  OCAMLC lex/lexer.cmo
-  OCAMLC lex/common.cmo
-  OCAMLC lex/output.cmi
-  OCAMLC lex/outputbis.cmi
-  OCAMLC stdlib__Hashtbl.cmo
-  OCAMLC stdlib__Weak.cmi
+  OCAMLC stdlib__Hashtbl.cmi
   OCAMLC stdlib__Format.cmi
   OCAMLC camlinternalOO.cmo
   OCAMLC stdlib__Oo.cmi
   OCAMLC camlinternalMod.cmo
-  OCAMLC stdlib__Ephemeron.cmi
-  OCAMLC lex/output.cmo
+  OCAMLC stdlib__Dynarray.cmi
   OCAMLC stdlib__Complex.cmo
-  OCAMLC stdlib__ArrayLabels.cmo
-  OCAMLC lex/outputbis.cmo
-  OCAMLC lex/main.cmo
-  OCAMLC stdlib__ListLabels.cmo
-  OCAMLC stdlib__BytesLabels.cmo
-  OCAMLC stdlib__StringLabels.cmo
+  OCAMLC stdlib__ArrayLabels.cmi
+  OCAMLC stdlib__ListLabels.cmi
+  OCAMLC stdlib__BytesLabels.cmi
+  OCAMLC stdlib__StringLabels.cmi
   OCAMLC stdlib__MoreLabels.cmi
-  OCAMLC stdlib__StdLabels.cmi
+  OCAMLC stdlib__Effect.cmi
   OCAMLC stdlib__Option.cmo
   OCAMLC stdlib__Result.cmo
   OCAMLC stdlib__List.cmo
@@ -1271,28 +1264,35 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC stdlib__Stack.cmo
   OCAMLC stdlib__Queue.cmo
   OCAMLC stdlib__Buffer.cmo
-  OCAMLC stdlib__Domain.cmo
   OCAMLC camlinternalFormat.cmi
   OCAMLC stdlib__Printf.cmi
   OCAMLC stdlib__In_channel.cmo
   OCAMLC stdlib__Out_channel.cmo
   OCAMLC stdlib__Digest.cmo
-  OCAMLC stdlib__Weak.cmo
+  OCAMLC stdlib__Hashtbl.cmo
+  OCAMLC stdlib__Weak.cmi
   OCAMLC stdlib__Format.cmo
   OCAMLC stdlib__Oo.cmo
-  OCAMLC stdlib__Ephemeron.cmo
+  OCAMLC stdlib__Ephemeron.cmi
   OCAMLC stdlib__Filename.cmo
+  OCAMLC stdlib__ArrayLabels.cmo
+  OCAMLC stdlib__ListLabels.cmo
+  OCAMLC stdlib__BytesLabels.cmo
+  OCAMLC stdlib__StringLabels.cmo
   OCAMLC stdlib__MoreLabels.cmo
-  OCAMLC stdlib__StdLabels.cmo
+  OCAMLC stdlib__StdLabels.cmi
   OCAMLC stdlib__Effect.cmo
   OCAMLC camlinternalFormat.cmo
   OCAMLC stdlib__Printf.cmo
   OCAMLC stdlib__Arg.cmo
   OCAMLC stdlib__Printexc.cmo
-  LINKC lex/ocamllex
   OCAMLC stdlib__Gc.cmo
+  OCAMLC stdlib__Weak.cmo
   OCAMLC stdlib__Scanf.cmo
   OCAMLC stdlib__Dynarray.cmo
+  OCAMLC stdlib__Ephemeron.cmo
+  OCAMLC stdlib__StdLabels.cmo
+  LINKC lex/ocamllex
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0'
 make tools-all
 make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
@@ -1416,9 +1416,7 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC middle_end/flambda/invariant_params.cmo
   OCAMLC middle_end/flambda/inconstant_idents.cmo
   OCAMLC middle_end/flambda/lift_constants.cmo
-  OCAMLC middle_end/flambda/simplify_common.cmo
   OCAMLC middle_end/flambda/remove_unused_arguments.cmo
-  OCAMLC middle_end/flambda/inlining_stats_types.cmo
   OCAMLC tools/objinfo.cmo
   OCAMLC tools/ocamlcmt.cmo
   OCAMLC tools/ocamlprof.cmo
@@ -1437,17 +1435,21 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC middle_end/flambda/simplify_boxed_integer_ops.cmi
   OCAMLC middle_end/flambda/inlining_stats.cmi
   OCAMLC middle_end/flambda/inline_and_simplify_aux.cmi
-  LINKC tools/ocamlcmt
+  OCAMLC middle_end/flambda/simplify_common.cmo
+  OCAMLC middle_end/flambda/inlining_stats_types.cmo
   LINKC tools/ocamlcp
   LINKC tools/ocamlmktop
   LINKC tools/ocamloptp
   LINKC tools/primreq
   LINKC tools/stripdebug
-  LINKC tools/ocamlmklib
-  OCAMLC middle_end/flambda/inlining_stats.cmo
+  LINKC tools/cmpbyt
   OCAMLC middle_end/flambda/simplify_boxed_integer_ops.cmo
   OCAMLC middle_end/flambda/simplify_primitives.cmo
-  LINKC tools/cmpbyt
+  LINKC stdlib.cma
+  OCAMLC middle_end/flambda/inlining_stats.cmo
+  LINKC tools/ocamlcmt
+  LINKC tools/ocamlmklib
+make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/stdlib'
   OCAMLC middle_end/flambda/inlining_decision_intf.cmi
   OCAMLC middle_end/flambda/extract_projections.cmi
   OCAMLC middle_end/flambda/augment_specialised_args.cmi
@@ -1456,25 +1458,23 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC middle_end/flambda/unbox_closures.cmi
   OCAMLC middle_end/flambda/inline_and_simplify.cmi
   OCAMLC middle_end/flambda/inline_and_simplify_aux.cmo
+  OCAMLC middle_end/flambda/extract_projections.cmo
   OCAMLC middle_end/flambda/build_export_info.cmo
   LINKC tools/ocamlprof
-  OCAMLC middle_end/flambda/augment_specialised_args.cmo
-  OCAMLC middle_end/flambda/unbox_closures.cmo
-  OCAMLC middle_end/flambda/flambda_middle_end.cmo
-  OCAMLC middle_end/flambda/extract_projections.cmo
-  OCAMLC middle_end/flambda/unbox_free_vars_of_closures.cmo
-  OCAMLC middle_end/flambda/unbox_specialised_args.cmo
+  LINKC tools/dumpobj
   OCAMLC middle_end/flambda/inlining_transforms.cmi
   OCAMLC middle_end/flambda/inlining_decision.cmi
+  OCAMLC middle_end/flambda/augment_specialised_args.cmo
+  OCAMLC middle_end/flambda/unbox_free_vars_of_closures.cmo
+  OCAMLC middle_end/flambda/unbox_closures.cmo
+  OCAMLC middle_end/flambda/flambda_middle_end.cmo
+  OCAMLC middle_end/flambda/unbox_specialised_args.cmo
   OCAMLC middle_end/flambda/inlining_transforms.cmo
-  LINKC tools/dumpobj
   OCAMLC middle_end/flambda/inlining_decision.cmo
   OCAMLC middle_end/flambda/inline_and_simplify.cmo
   LINKC compilerlibs/ocamlmiddleend.cma
   LINKC tools/ocamlobjinfo
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0'
-  LINKC stdlib.cma
-make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/stdlib'
 make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
 make[2]: Leaving directory '/tmp/src/ocaml-5.3.0'
 make ocaml
@@ -1488,11 +1488,11 @@ make[2]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC toplevel/topmain.cmi
   OCAMLC toplevel/topstart.cmi
   OCAMLC toplevel/expunge.cmo
+cp toplevel/topmain.cmi toplevel/topmain.mli toplevel/byte
+cp toplevel/trace.cmi toplevel/trace.mli toplevel/byte
   OCAMLC toplevel/topcommon.cmi
   OCAMLC toplevel/genprintval.cmo
-cp toplevel/trace.cmi toplevel/trace.mli toplevel/byte
   OCAMLC toplevel/topprinters.cmo
-cp toplevel/topmain.cmi toplevel/topmain.mli toplevel/byte
   OCAMLC toplevel/topstart.cmo
   LINKC expunge
   OCAMLC toplevel/topeval.cmi
@@ -1772,12 +1772,12 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLLEX tools/cvt_emit.ml
   OCAMLC tools/cvt_emit.cmi
   OCAMLC driver/optmain.cmi
+  OCAMLC driver/opterrors.cmo
   OCAMLC asmcomp/x86_proc.cmi
   OCAMLC asmcomp/x86_dsl.cmi
   OCAMLC asmcomp/x86_gas.cmi
   OCAMLC asmcomp/x86_masm.cmi
   OCAMLC asmcomp/arch.cmi
-  OCAMLC driver/opterrors.cmo
   OCAMLC asmcomp/printcmm.cmi
   OCAMLC asmcomp/reg.cmi
   OCAMLC asmcomp/strmatch.cmi
@@ -1788,21 +1788,23 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC asmcomp/cmm_invariants.cmi
   OCAMLC asmcomp/cmm.cmo
   OCAMLC asmcomp/asmlibrarian.cmo
-  OCAMLC asmcomp/x86_proc.cmo
-  OCAMLC asmcomp/arch.cmo
   OCAMLC driver/optmain.cmo
-  OCAMLC asmcomp/mach.cmi
-  OCAMLC asmcomp/reg.cmo
-  OCAMLC asmcomp/strmatch.cmo
+  OCAMLC asmcomp/afl_instrument.cmo
   OCAMLC tools/cvt_emit.cmo
+  OCAMLC asmcomp/cmm_helpers.cmi
+  OCAMLC asmcomp/arch.cmo
+  OCAMLC asmcomp/strmatch.cmo
+  OCAMLC asmcomp/cmmgen_state.cmo
+  OCAMLC asmcomp/x86_proc.cmo
   OCAMLC asmcomp/x86_gas.cmo
   OCAMLC asmcomp/x86_masm.cmo
-  OCAMLC asmcomp/cmmgen_state.cmo
-  OCAMLC asmcomp/afl_instrument.cmo
-  OCAMLC asmcomp/cmm_invariants.cmo
-  OCAMLC asmcomp/cmm_helpers.cmi
+  OCAMLC asmcomp/reg.cmo
+  OCAMLC asmcomp/mach.cmi
   OCAMLC asmcomp/x86_dsl.cmo
   OCAMLC asmcomp/printcmm.cmo
+  OCAMLC asmcomp/cmm_invariants.cmo
+  LINKC tools/cvt_emit
+  GEN asmcomp/emit.ml
   OCAMLC asmcomp/proc.cmi
   OCAMLC asmcomp/interval.cmi
   OCAMLC asmcomp/dataflow.cmi
@@ -1845,7 +1847,6 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC asmcomp/deadcode.cmo
   OCAMLC asmcomp/stackframegen.cmo
   OCAMLC asmcomp/linear.cmo
-  LINKC tools/cvt_emit
   OCAMLC driver/optmaindriver.cmo
   OCAMLC asmcomp/printmach.cmi
   OCAMLC asmcomp/stackframe.cmi
@@ -1857,15 +1858,14 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC asmcomp/branch_relaxation_intf.cmi
   OCAMLC asmcomp/emitenv.cmi
   OCAMLC asmcomp/emit.cmi
-  GEN asmcomp/emit.ml
   OCAMLC asmcomp/printmach.cmo
   OCAMLC asmcomp/liveness.cmo
   OCAMLC asmcomp/printlinear.cmo
-  OCAMLC file_formats/linear_format.cmo
   OCAMLC asmcomp/stackframe.cmo
   OCAMLC asmcomp/linearize.cmo
   OCAMLC asmcomp/schedgen.cmo
   OCAMLC asmcomp/scheduling.cmo
+  OCAMLC file_formats/linear_format.cmo
   OCAMLC asmcomp/emitaux.cmi
   OCAMLC asmcomp/branch_relaxation.cmi
   OCAMLC asmcomp/branch_relaxation.cmo
@@ -1897,8 +1897,8 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0/stdlib'
   OCAMLOPT std_exit.cmx
   OCAMLOPT stdlib__Condition.cmx
   OCAMLOPT stdlib__Uchar.cmx
-  OCAMLOPT stdlib__Int32.cmx
   OCAMLOPT stdlib__Nativeint.cmx
+  OCAMLOPT stdlib__Int32.cmx
   OCAMLOPT stdlib__Semaphore.cmx
   OCAMLOPT stdlib__Obj.cmx
   OCAMLOPT stdlib__Type.cmx
@@ -2048,8 +2048,8 @@ cd stdlib; ln -sf ../runtime/libcomprmarsh.a .
   OCAMLOPT bytecomp/instruct.cmx
   OCAMLOPT bytecomp/meta.cmx
   OCAMLOPT bytecomp/symtable.cmx
-  OCAMLOPT file_formats/cmt_format.cmx
   OCAMLOPT lambda/simplif.cmx
+  OCAMLOPT file_formats/cmt_format.cmx
   OCAMLOPT typing/out_type.cmx
   OCAMLOPT typing/mtype.cmx
   OCAMLOPT typing/patterns.cmx
@@ -2117,6 +2117,7 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC debugger/history.cmi
   OCAMLC debugger/show_source.cmi
   OCAMLC debugger/program_management.cmi
+  OCAMLC debugger/loadprinter.cmi
   OCAMLC debugger/command_line.cmi
   OCAMLC debugger/main.cmi
   OCAMLC debugger/ocamldebug_entry.cmi
@@ -2129,17 +2130,16 @@ make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamldoc/odoc_comments_global.cmi
   OCAMLYACC ocamldoc/odoc_parser.mli
   OCAMLC otherlibs/str/str.cmi
-  OCAMLC ocamldoc/odoc_config.cmo
   OCAMLLEX ocamldoc/odoc_text_lexer.ml
   OCAMLLEX ocamldoc/odoc_lexer.ml
   OCAMLLEX ocamldoc/odoc_see_lexer.ml
+make[3]: Nothing to be done for 'lex-all'.
+make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamldoc/odoc_ocamlhtml.cmi
   OCAMLLEX ocamldoc/odoc_ocamlhtml.ml
   OCAMLC ocamldoc/odoc_latex_style.cmi
   OCAMLC ocamldoc/odoc.cmi
   OCAMLC ocamldoc/odoc_test.cmi
-make[3]: Nothing to be done for 'lex-all'.
-make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   CC ocamltest/run_unix.b.o
   CC ocamltest/run_stubs.b.o
   OCAMLC ocamltest/ocamltest_config.cmi
@@ -2163,8 +2163,8 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
 make tools-all
   OCAMLC otherlibs/dynlink/dynlink_platform_intf.cmi
   OCAMLC otherlibs/dynlink/byte/dynlink_symtable.cmi
-make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
 cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink/byte/
+make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLC otherlibs/dynlink/dynlink_config.cmo
   OCAMLC otherlibs/dynlink/dynlink_types.cmo
   OCAMLC debugger/int64ops.cmo
@@ -2177,7 +2177,6 @@ cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink
   OCAMLC debugger/events.cmo
   OCAMLC debugger/frames.cmi
   OCAMLC debugger/show_information.cmi
-  OCAMLC debugger/loadprinter.cmi
   OCAMLC ocamldoc/odoc_global.cmi
   OCAMLC ocamldoc/odoc_misc.cmi
   OCAMLC ocamldoc/odoc_text_parser.cmi
@@ -2186,6 +2185,7 @@ cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink
   OCAMLC ocamldoc/odoc_type.cmi
   OCAMLC ocamldoc/odoc_parser.cmi
   OCAMLC ocamldoc/odoc_env.cmi
+  OCAMLC ocamldoc/odoc_config.cmo
   OCAMLC ocamldoc/odoc_messages.cmo
   OCAMLC ocamldoc/odoc_global.cmo
   OCAMLC ocamldoc/odoc_types.cmo
@@ -2207,6 +2207,7 @@ cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink
   OCAMLC ocamltest/ocaml_filetypes.cmi
   OCAMLC ocamltest/ocaml_variables.cmi
   OCAMLC ocamltest/ocaml_commands.cmo
+  OCAMLC ocamltest/ocaml_tools.cmi
   OCAMLC ocamltest/options.cmi
   OCAMLC testsuite/lib/lib.cmo
   OCAMLC testsuite/lib/testing.cmo
@@ -2224,6 +2225,8 @@ cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink
   OCAMLC debugger/show_source.cmo
   OCAMLC debugger/time_travel.cmi
   OCAMLC ocamldoc/odoc_text_lexer.cmi
+make[3]: Nothing to be done for 'tools-all'.
+make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamldoc/odoc_value.cmi
   OCAMLC ocamldoc/odoc_extension.cmi
   OCAMLC ocamldoc/odoc_exception.cmi
@@ -2234,6 +2237,7 @@ cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink
   OCAMLC ocamldoc/odoc_name.cmo
   OCAMLC ocamldoc/odoc_parameter.cmo
   OCAMLC ocamldoc/odoc_type.cmo
+  OCAMLC ocamldoc/odoc_exception.cmo
   OCAMLC ocamldoc/odoc_parser.cmo
   OCAMLC ocamldoc/odoc_env.cmo
   OCAMLC ocamltest/ocamltest_stdlib.cmo
@@ -2243,8 +2247,6 @@ cp otherlibs/dynlink/dynlink.cmi otherlibs/dynlink/dynlink.mli otherlibs/dynlink
   OCAMLC ocamltest/actions.cmi
   OCAMLC ocamltest/strace.cmo
   OCAMLC ocamltest/tsl_parser.cmo
-make[3]: Nothing to be done for 'tools-all'.
-make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamltest/tsl_lexer.cmi
   OCAMLC ocamltest/modifier_parser.cmi
   OCAMLC ocamltest/builtin_variables.cmo
@@ -2254,7 +2256,7 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamltest/ocaml_directories.cmo
   OCAMLC ocamltest/ocaml_files.cmo
   OCAMLC ocamltest/ocaml_flags.cmi
-  OCAMLC ocamltest/ocaml_tools.cmi
+  OCAMLC ocamltest/ocaml_compilers.cmi
   OCAMLC ocamltest/ocaml_actions.cmi
   OCAMLC otherlibs/dynlink/dynlink_common.cmo
   OCAMLC otherlibs/dynlink/byte/dynlink.cmo
@@ -2271,7 +2273,6 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamldoc/odoc_text.cmo
   OCAMLC ocamldoc/odoc_value.cmo
   OCAMLC ocamldoc/odoc_extension.cmo
-  OCAMLC ocamldoc/odoc_exception.cmo
   OCAMLC ocamldoc/odoc_lexer.cmo
   OCAMLC ocamldoc/odoc_see_lexer.cmo
   OCAMLC ocamltest/actions.cmo
@@ -2282,7 +2283,10 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamltest/builtin_actions.cmi
   OCAMLC ocamltest/ocaml_modifiers.cmo
   OCAMLC ocamltest/ocaml_flags.cmo
-  OCAMLC ocamltest/ocaml_compilers.cmi
+  OCAMLC ocamltest/ocaml_compilers.cmo
+  OCAMLC ocamltest/ocaml_toplevels.cmi
+  OCAMLC ocamltest/ocaml_tests.cmi
+  OCAMLC ocamltest/options.cmo
   LINKC testsuite/lib/testing.cma
   OCAMLC debugger/debugger_parser.cmi
   OCAMLC debugger/checkpoints.cmo
@@ -2295,6 +2299,7 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC debugger/program_management.cmo
   OCAMLC debugger/frames.cmo
   OCAMLC debugger/eval.cmi
+  OCAMLC debugger/debugger_parser.cmo
   OCAMLC debugger/main.cmo
   OCAMLC ocamldoc/odoc_module.cmi
   OCAMLC ocamldoc/odoc_str.cmi
@@ -2304,17 +2309,15 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamltest/actions_helpers.cmo
   OCAMLC ocamltest/builtin_actions.cmo
   OCAMLC ocamltest/ocaml_tools.cmo
-  OCAMLC ocamltest/ocaml_compilers.cmo
-  OCAMLC ocamltest/ocaml_toplevels.cmi
-  OCAMLC ocamltest/ocaml_tests.cmi
-  OCAMLC ocamltest/options.cmo
+  OCAMLC ocamltest/ocaml_toplevels.cmo
+  OCAMLC ocamltest/ocaml_actions.cmo
+  OCAMLC ocamltest/ocaml_tests.cmo
   LINKC otherlibs/dynlink/dynlink.cma
   OCAMLC debugger/debugger_lexer.cmi
   OCAMLC debugger/printval.cmo
   OCAMLC debugger/eval.cmo
   OCAMLC debugger/show_information.cmo
   OCAMLC debugger/loadprinter.cmo
-  OCAMLC debugger/debugger_parser.cmo
   OCAMLC ocamldoc/odoc_merge.cmi
   OCAMLC ocamldoc/odoc_sig.cmi
   OCAMLC ocamldoc/odoc_search.cmi
@@ -2325,60 +2328,57 @@ make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLC ocamldoc/odoc_analyse.cmi
   OCAMLC ocamldoc/odoc_module.cmo
   OCAMLC ocamldoc/odoc_str.cmo
-  OCAMLC ocamldoc/odoc_merge.cmo
   OCAMLC ocamltest/tsl_semantics.cmo
   OCAMLC ocamltest/translate.cmo
-  OCAMLC ocamltest/ocaml_toplevels.cmo
-  OCAMLC ocamltest/ocaml_actions.cmo
-  OCAMLC ocamltest/ocaml_tests.cmo
   OCAMLC ocamltest/main.cmo
+  LINKC testsuite/tools/expect
 make -C otherlibs all
-make[3]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs'
   OCAMLC debugger/debugger_lexer.cmo
+make[3]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs'
   OCAMLC debugger/question.cmo
   OCAMLC debugger/command_line.cmo
-  OCAMLC ocamldoc/odoc_ast.cmi
-  OCAMLC ocamldoc/odoc_info.cmi
+  OCAMLC ocamldoc/odoc_merge.cmo
 for lib in runtime_events unix str systhreads; do (make -C $lib all) || exit $?; done
-make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
-  OCAMLC ocamldoc/odoc_sig.cmo
   OCAMLC ocamldoc/odoc_search.cmo
   OCAMLC ocamldoc/odoc_scan.cmo
+make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
   OCAMLC ocamldoc/odoc_cross.cmo
   OCAMLC ocamldoc/odoc_comments.cmo
   OCAMLC ocamldoc/odoc_dep.cmo
+  OCAMLC ocamldoc/odoc_ast.cmi
   CC runtime_events_consumer.b.o
   CC runtime_events_consumer.n.o
+  OCAMLC ocamldoc/odoc_info.cmi
+  OCAMLC ocamldoc/odoc_sig.cmo
   OCAMLC runtime_events.cmi
-  LINKC testsuite/tools/expect
+  OCAMLC runtime_events.cmo
   OCAMLC ocamldoc/odoc_ast.cmo
   OCAMLC ocamldoc/odoc_analyse.cmo
-  OCAMLC runtime_events.cmo
   OCAMLC ocamldoc/odoc_info.cmo
   OCAMLC ocamldoc/odoc_dag2html.cmi
   OCAMLC ocamldoc/odoc_to_text.cmi
   OCAMLC ocamldoc/odoc_man.cmi
   OCAMLC ocamldoc/odoc_latex.cmi
-  OCAMLMKLIB runtime_events.cma
   OCAMLC ocamldoc/odoc_texi.cmi
   OCAMLC ocamldoc/odoc_dot.cmi
+  OCAMLMKLIB runtime_events.cma
   OCAMLC ocamldoc/odoc_dag2html.cmo
   OCAMLC ocamldoc/odoc_html.cmi
-  OCAMLC ocamldoc/odoc_to_text.cmo
-  OCAMLC ocamldoc/odoc_man.cmo
   OCAMLC ocamldoc/odoc_dot.cmo
+  OCAMLC ocamldoc/odoc_to_text.cmo
   OCAMLC ocamldoc/odoc_texi.cmo
+  OCAMLC ocamldoc/odoc_man.cmo
+  OCAMLC debugger/ocamldebug.cmo
   OCAMLC ocamldoc/odoc_latex.cmo
   OCAMLC ocamldoc/odoc_html.cmo
   OCAMLC ocamldoc/odoc_gen.cmi
-  OCAMLC debugger/ocamldebug.cmo
-  LINKC ocamldoc/odoc_info.cma
   OCAMLC ocamldoc/odoc_gen.cmo
   OCAMLC ocamldoc/odoc_args.cmi
   OCAMLC debugger/ocamldebug_entry.cmo
   OCAMLC ocamldoc/odoc_args.cmo
   OCAMLC ocamldoc/odoc.cmo
   OCAMLC ocamldoc/odoc_test.cmo
+  LINKC ocamldoc/odoc_info.cma
   OCAMLMKLIB libcamlruntime_eventsbyt.a
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
 make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
@@ -2625,27 +2625,28 @@ make[2]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLOPT middle_end/flambda/allocated_const.cmx
   OCAMLOPT asmcomp/arch.cmx
   OCAMLOPT driver/opterrors.cmx
-  OCAMLOPT asmcomp/cmm.cmx
   OCAMLOPT middle_end/printclambda_primitives.cmx
-  OCAMLOPT middle_end/clambda.cmx
   OCAMLOPT middle_end/semantics_of_primitives.cmx
   OCAMLOPT middle_end/convert_primitives.cmx
   OCAMLOPT middle_end/compilation_unit.cmx
+  OCAMLOPT middle_end/clambda.cmx
+  OCAMLOPT asmcomp/cmm.cmx
+  OCAMLOPT middle_end/variable.cmx
+  OCAMLOPT middle_end/flambda/base_types/export_id.cmx
+  OCAMLOPT middle_end/flambda/base_types/set_of_closures_id.cmx
   OCAMLOPT asmcomp/printcmm.cmx
   OCAMLOPT asmcomp/reg.cmx
   OCAMLOPT asmcomp/strmatch.cmx
   OCAMLOPT asmcomp/afl_instrument.cmx
   OCAMLOPT asmcomp/cmm_invariants.cmx
-  OCAMLOPT middle_end/variable.cmx
-  OCAMLOPT middle_end/flambda/base_types/export_id.cmx
-  OCAMLOPT middle_end/flambda/base_types/set_of_closures_id.cmx
-  OCAMLOPT middle_end/flambda/base_types/set_of_closures_origin.cmx
-  OCAMLOPT asmcomp/mach.cmx
   OCAMLOPT middle_end/printclambda.cmx
+  OCAMLOPT middle_end/flambda/base_types/set_of_closures_origin.cmx
   OCAMLOPT middle_end/flambda/base_types/closure_element.cmx
   OCAMLOPT middle_end/symbol.cmx
   OCAMLOPT middle_end/flambda/base_types/mutable_variable.cmx
   OCAMLOPT middle_end/flambda/parameter.cmx
+  OCAMLOPT asmcomp/mach.cmx
+  OCAMLOPT middle_end/flambda/closure_conversion_aux.cmx
   OCAMLOPT asmcomp/dataflow.cmx
   OCAMLOPT asmcomp/comballoc.cmx
   OCAMLOPT asmcomp/split.cmx
@@ -2655,17 +2656,16 @@ make[2]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLOPT asmcomp/linear.cmx
   OCAMLOPT middle_end/flambda/base_types/closure_id.cmx
   OCAMLOPT middle_end/flambda/base_types/var_within_closure.cmx
-  OCAMLOPT middle_end/flambda/closure_conversion_aux.cmx
-  OCAMLOPT asmcomp/polling.cmx
-  OCAMLOPT middle_end/flambda/base_types/closure_origin.cmx
-  OCAMLOPT middle_end/flambda/projection.cmx
   OCAMLOPT file_formats/linear_format.cmx
   OCAMLOPT asmcomp/branch_relaxation.cmx
+  OCAMLOPT asmcomp/polling.cmx
   OCAMLOPT asmcomp/stackframe.cmx
+  OCAMLOPT middle_end/flambda/un_anf.cmx
+  OCAMLOPT middle_end/flambda/base_types/closure_origin.cmx
+  OCAMLOPT middle_end/flambda/projection.cmx
   OCAMLOPT asmcomp/reload.cmx
   OCAMLOPT asmcomp/linearize.cmx
   OCAMLOPT middle_end/flambda/flambda.cmx
-  OCAMLOPT middle_end/flambda/un_anf.cmx
   OCAMLOPT middle_end/flambda/flambda_iterators.cmx
   OCAMLOPT middle_end/flambda/effect_analysis.cmx
   OCAMLOPT middle_end/flambda/initialize_symbol_to_let_symbol.cmx
@@ -2711,13 +2711,13 @@ make[2]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLOPT asmcomp/cmmgen_state.cmx
   OCAMLOPT asmcomp/emitaux.cmx
   OCAMLOPT middle_end/flambda/inlining_decision.cmx
+  OCAMLOPT asmcomp/cmm_helpers.cmx
+  OCAMLOPT middle_end/flambda/unbox_specialised_args.cmx
+  OCAMLOPT middle_end/flambda/unbox_closures.cmx
   OCAMLOPT asmcomp/x86_dsl.cmx
   OCAMLOPT asmcomp/x86_gas.cmx
   OCAMLOPT asmcomp/x86_masm.cmx
   OCAMLOPT asmcomp/proc.cmx
-  OCAMLOPT asmcomp/cmm_helpers.cmx
-  OCAMLOPT middle_end/flambda/unbox_specialised_args.cmx
-  OCAMLOPT middle_end/flambda/unbox_closures.cmx
   OCAMLOPT asmcomp/interval.cmx
   OCAMLOPT asmcomp/selectgen.cmx
   OCAMLOPT asmcomp/CSEgen.cmx
@@ -2725,17 +2725,17 @@ make[2]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLOPT asmcomp/interf.cmx
   OCAMLOPT asmcomp/coloring.cmx
   OCAMLOPT asmcomp/schedgen.cmx
+  OCAMLOPT middle_end/flambda/inline_and_simplify.cmx
+  OCAMLOPT asmcomp/emit.cmx
   OCAMLOPT asmcomp/printmach.cmx
   OCAMLOPT asmcomp/linscan.cmx
-  OCAMLOPT asmcomp/scheduling.cmx
-  OCAMLOPT asmcomp/emit.cmx
-  OCAMLOPT middle_end/flambda/inline_and_simplify.cmx
   OCAMLOPT asmcomp/CSE.cmx
+  OCAMLOPT asmcomp/scheduling.cmx
   OCAMLOPT asmcomp/liveness.cmx
   OCAMLOPT asmcomp/printlinear.cmx
+  OCAMLOPT middle_end/flambda/flambda_middle_end.cmx
   OCAMLOPT middle_end/closure/closure_middle_end.cmx
   OCAMLOPT asmcomp/selection.cmx
-  OCAMLOPT middle_end/flambda/flambda_middle_end.cmx
   OCAMLOPT asmcomp/thread_sanitizer.cmx
   OCAMLOPT asmcomp/cmmgen.cmx
   OCAMLOPT asmcomp/asmgen.cmx
@@ -2813,37 +2813,37 @@ make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
   OCAMLLEX ocamldoc/odoc_ocamlhtml.ml
   OCAMLOPT ocamldoc/odoc_latex_style.cmx
 cd otherlibs/dynlink; ln -sf native/dynlink.cmx .
-make[4]: Nothing to be done for 'allopt'.
-make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
 make lex-all
-make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
 make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
-  OCAMLOPT tools/profiling.cmx
   CC ocamltest/run_unix.n.o
   CC ocamltest/run_stubs.n.o
   OCAMLOPT ocamltest/ocamltest_config.cmx
   OCAMLOPT ocamltest/ocamltest_unix.cmx
+make[4]: Nothing to be done for 'allopt'.
+make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
+make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
   OCAMLOPT ocamltest/variables.cmx
   OCAMLOPT ocamltest/result.cmx
+  OCAMLOPT tools/profiling.cmx
   OCAMLOPT ocamltest/tsl_ast.cmx
   OCAMLYACC ocamltest/tsl_parser.ml
   OCAMLLEX ocamltest/tsl_lexer.ml
   OCAMLOPT ocamltest/ocaml_backends.cmx
 make[4]: Nothing to be done for 'allopt'.
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
+make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/str'
   OCAMLOPT testsuite/lib/testing.cmx
   ASM testsuite/tools/asmgen_amd64.o
   OCAMLC testsuite/tools/parsecmmaux.cmi
-make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/str'
   OCAMLYACC testsuite/tools/parsecmm.mli
   OCAMLLEX testsuite/tools/lexcmm.ml
   OCAMLC testsuite/tools/codegen_main.cmi
-make[4]: Nothing to be done for 'allopt'.
-make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/str'
-make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/systhreads'
 make[3]: Nothing to be done for 'lex-all'.
 make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
+make[4]: Nothing to be done for 'allopt'.
+make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/str'
   OCAMLC tools/ocamltex.cmi
+make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/systhreads'
   OCAMLC toplevel/native/tophooks.cmi
 cp toplevel/topeval.cmi toplevel/topeval.mli toplevel/native
 cp toplevel/trace.cmi toplevel/trace.mli toplevel/native
@@ -2851,141 +2851,141 @@ cp toplevel/topmain.cmi toplevel/topmain.mli toplevel/native
   OCAMLOPT toplevel/genprintval.cmx
   OCAMLOPT toplevel/native/trace.cmx
   OCAMLOPT toplevel/topprinters.cmx
-make[4]: Nothing to be done for 'allopt'.
-make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/systhreads'
-  OCAMLOPT ocamldoc/odoc_types.cmx
-make[3]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs'
   OCAMLOPT ocamldoc/odoc_ocamlhtml.cmx
-make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
   OCAMLOPT ocamltest/ocamltest_stdlib.cmx
   OCAMLOPT ocamltest/strace.cmx
+make[4]: Nothing to be done for 'allopt'.
+make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/systhreads'
   OCAMLOPT ocamltest/tsl_parser.cmx
   OCAMLOPT ocamltest/builtin_variables.cmx
+make[3]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs'
   OCAMLOPT ocamltest/ocaml_filetypes.cmx
+make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
+  OCAMLC testsuite/tools/parsecmmaux.cmo
   OCAMLC testsuite/tools/parsecmm.cmi
-make tools-all
   OCAMLOPT lex/cset.cmx
-make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   OCAMLOPT lex/table.cmx
+make tools-all
+  OCAMLOPT ocamldoc/odoc_types.cmx
+make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
+  LINKOPT testsuite/lib/testing.cmxa
+  OCAMLC tools/ocamltex.cmo
+  OCAMLOPT ocamltest/tsl_lexer.cmx
   OCAMLOPT ocamldoc/odoc_global.cmx
   OCAMLOPT ocamldoc/odoc_misc.cmx
   OCAMLOPT ocamldoc/odoc_parameter.cmx
   OCAMLOPT ocamldoc/odoc_parser.cmx
-  OCAMLOPT ocamltest/tsl_lexer.cmx
-  LINKOPT testsuite/lib/testing.cmxa
-  OCAMLC testsuite/tools/parsecmmaux.cmo
-  OCAMLC tools/ocamltex.cmo
-  OCAMLOPT ocamldoc/odoc_lexer.cmx
-  OCAMLOPT ocamldoc/odoc_see_lexer.cmx
   OCAMLOPT ocamltest/run_command.cmx
   OCAMLOPT ocamltest/environments.cmx
   OCAMLOPT ocamltest/ocaml_variables.cmx
   OCAMLOPT ocamltest/ocaml_directories.cmx
   OCAMLC testsuite/tools/parsecmm.cmo
   OCAMLC testsuite/tools/lexcmm.cmi
-  OCAMLOPT ocamldoc/odoc_text_parser.cmx
-  OCAMLOPT ocamldoc/odoc_name.cmx
-  OCAMLOPT ocamltest/filecompare.cmx
   OCAMLOPT ocamltest/ocaml_files.cmx
+  OCAMLOPT ocamltest/filecompare.cmx
+  OCAMLOPT lex/syntax.cmx
+  OCAMLOPT ocamldoc/odoc_lexer.cmx
+  OCAMLOPT ocamldoc/odoc_see_lexer.cmx
 make[3]: Nothing to be done for 'tools-all'.
 make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
 make -C otherlibs all
 make[3]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs'
+  OCAMLOPT ocamltest/ocaml_commands.cmx
 for lib in runtime_events unix str systhreads; do (make -C $lib all) || exit $?; done
 make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
-make[4]: Nothing to be done for 'all'.
-make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
-make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
-  OCAMLOPT lex/syntax.cmx
   OCAMLOPT ocamltest/actions.cmx
   OCAMLOPT ocamltest/modifier_parser.cmx
   OCAMLOPT ocamltest/ocaml_modifiers.cmx
   OCAMLOPT ocamltest/ocaml_flags.cmx
-  OCAMLOPT ocamltest/ocaml_commands.cmx
-  OCAMLOPT ocamldoc/odoc_value.cmx
-  OCAMLOPT ocamldoc/odoc_type.cmx
-  OCAMLOPT ocamldoc/odoc_env.cmx
-  OCAMLOPT ocamldoc/odoc_text_lexer.cmx
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/runtime_events'
+make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
+  OCAMLOPT lex/parser.cmx
+  OCAMLOPT lex/lexgen.cmx
   OCAMLC testsuite/tools/lexcmm.cmo
   OCAMLC testsuite/tools/codegen_main.cmo
+  OCAMLOPT ocamltest/tests.cmx
+  OCAMLOPT ocamltest/actions_helpers.cmx
+  OCAMLOPT ocamldoc/odoc_text_parser.cmx
+  OCAMLOPT ocamldoc/odoc_name.cmx
 make[4]: Nothing to be done for 'all'.
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/unix'
-  OCAMLOPT ocamltest/tests.cmx
 make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/str'
-  OCAMLOPT ocamltest/actions_helpers.cmx
-  OCAMLOPT ocamldoc/odoc_extension.cmx
-  OCAMLOPT ocamldoc/odoc_exception.cmx
-  OCAMLOPT ocamldoc/odoc_class.cmx
 make[4]: Nothing to be done for 'all'.
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/str'
 make[4]: Entering directory '/tmp/src/ocaml-5.3.0/otherlibs/systhreads'
-  OCAMLOPT lex/parser.cmx
-  OCAMLOPT lex/lexgen.cmx
+  OCAMLOPT ocamltest/tsl_semantics.cmx
 make[4]: Nothing to be done for 'all'.
 make[4]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs/systhreads'
 make[3]: Leaving directory '/tmp/src/ocaml-5.3.0/otherlibs'
-  OCAMLOPT ocamltest/tsl_semantics.cmx
-  OCAMLOPT ocamldoc/odoc_module.cmx
-  OCAMLOPT ocamldoc/odoc_str.cmx
-  OCAMLOPT ocamldoc/odoc_text.cmx
+  OCAMLOPT ocamldoc/odoc_text_lexer.cmx
+  OCAMLOPT ocamldoc/odoc_value.cmx
+  OCAMLOPT ocamldoc/odoc_type.cmx
+  OCAMLOPT ocamldoc/odoc_env.cmx
   OCAMLOPT ocamltest/builtin_actions.cmx
   OCAMLOPT ocamltest/ocaml_tools.cmx
-  OCAMLOPT toplevel/topcommon.cmx
   OCAMLOPT ocamltest/translate.cmx
+  OCAMLOPT ocamldoc/odoc_extension.cmx
+  OCAMLOPT ocamldoc/odoc_exception.cmx
+  OCAMLOPT toplevel/topcommon.cmx
   OCAMLOPT ocamltest/ocaml_compilers.cmx
+  OCAMLOPT ocamldoc/odoc_class.cmx
+  LINKC tools/ocamltex
+  OCAMLOPT lex/lexer.cmx
+  OCAMLOPT ocamldoc/odoc_text.cmx
   OCAMLOPT ocamltest/options.cmx
+  OCAMLOPT ocamltest/ocaml_toplevels.cmx
+  OCAMLOPT ocamldoc/odoc_module.cmx
+  OCAMLOPT ocamldoc/odoc_str.cmx
+  OCAMLOPT ocamltest/ocaml_actions.cmx
+  LINKC testsuite/tools/codegen
   OCAMLOPT ocamldoc/odoc_merge.cmx
   OCAMLOPT ocamldoc/odoc_search.cmx
   OCAMLOPT ocamldoc/odoc_scan.cmx
   OCAMLOPT ocamldoc/odoc_dep.cmx
-  OCAMLOPT ocamltest/ocaml_toplevels.cmx
-  OCAMLOPT ocamltest/ocaml_actions.cmx
-  LINKC testsuite/tools/codegen
-  OCAMLOPT ocamldoc/odoc_sig.cmx
-  OCAMLOPT lex/lexer.cmx
-  OCAMLOPT ocamldoc/odoc_cross.cmx
-  LINKC tools/ocamltex
-  OCAMLOPT toplevel/native/tophooks.cmx
   OCAMLOPT ocamltest/ocaml_tests.cmx
   OCAMLOPT ocamltest/main.cmx
-  OCAMLOPT ocamldoc/odoc_comments.cmx
-  OCAMLOPT ocamldoc/odoc_ast.cmx
+  OCAMLOPT ocamldoc/odoc_sig.cmx
+  OCAMLOPT toplevel/native/tophooks.cmx
+  OCAMLOPT ocamldoc/odoc_cross.cmx
   OCAMLOPT lex/compact.cmx
   OCAMLOPT lex/common.cmx
-  OCAMLOPT toplevel/native/topeval.cmx
   LINKOPT ocamltest/ocamltest.opt
+  OCAMLOPT toplevel/native/topeval.cmx
+  OCAMLOPT ocamldoc/odoc_comments.cmx
   OCAMLOPT lex/output.cmx
   OCAMLOPT lex/outputbis.cmx
-  OCAMLOPT ocamldoc/odoc_analyse.cmx
+  OCAMLOPT ocamldoc/odoc_ast.cmx
   OCAMLOPT toplevel/toploop.cmx
+  OCAMLOPT ocamldoc/odoc_analyse.cmx
+  OCAMLOPT lex/main.cmx
   OCAMLOPT ocamldoc/odoc_info.cmx
   LINKOPT ocamldoc/odoc_info.cmxa
   OCAMLOPT ocamldoc/odoc_dag2html.cmx
   OCAMLOPT ocamldoc/odoc_to_text.cmx
   OCAMLOPT ocamldoc/odoc_man.cmx
   OCAMLOPT ocamldoc/odoc_dot.cmx
-  OCAMLOPT lex/main.cmx
-  OCAMLOPT ocamldoc/odoc_latex.cmx
-  OCAMLOPT ocamldoc/odoc_texi.cmx
+  LINKOPT lex/ocamllex.opt
   OCAMLOPT toplevel/topdirs.cmx
   OCAMLOPT toplevel/native/topmain.cmx
-  OCAMLOPT ocamldoc/odoc_html.cmx
-  LINKOPT lex/ocamllex.opt
+  OCAMLOPT ocamldoc/odoc_latex.cmx
+  OCAMLOPT ocamldoc/odoc_texi.cmx
   OCAMLOPT toplevel/topstart.cmx
+  OCAMLOPT ocamldoc/odoc_html.cmx
 make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
 make tools-allopt.opt
 make[3]: Entering directory '/tmp/src/ocaml-5.3.0'
   LINKOPT compilerlibs/ocamltoplevel.cmxa
-  LINKOPT ocamlnat
   OCAMLOPT tools/ocamldep.cmx
   LINKOPT compilerlibs/ocamlmiddleend.cmxa
   OCAMLOPT tools/objinfo.cmx
-  OCAMLOPT ocamldoc/odoc_gen.cmx
+  LINKOPT ocamlnat
   LINKOPT tools/ocamldep.opt
+  OCAMLOPT ocamldoc/odoc_gen.cmx
   OCAMLOPT ocamldoc/odoc_args.cmx
+  LINKOPT tools/ocamlobjinfo.opt
   OCAMLOPT ocamldoc/odoc.cmx
   LINKOPT ocamldoc/ocamldoc.opt
-  LINKOPT tools/ocamlobjinfo.opt
 make[3]: Leaving directory '/tmp/src/ocaml-5.3.0'
 rm ocamltest/tsl_parser.ml ocamltest/tsl_parser.mli ocamltest/tsl_lexer.ml testsuite/tools/parsecmm.mli ocamldoc/odoc_parser.mli ocamldoc/odoc_text_parser.ml ocamldoc/odoc_lexer.ml testsuite/tools/lexcmm.ml ocamldoc/odoc_text_parser.mli ocamldoc/odoc_ocamlhtml.ml ocamldoc/odoc_see_lexer.ml ocamldoc/odoc_text_lexer.ml ocamldoc/odoc_parser.ml testsuite/tools/parsecmm.ml
 make[2]: Leaving directory '/tmp/src/ocaml-5.3.0'
@@ -3273,7 +3273,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-b0f758.response
+> Hook should write its response to /tmp/ocamltest-b718a1.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -3293,7 +3293,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-f7dea3.response
+> Hook should write its response to /tmp/ocamltest-3282cf.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -3313,7 +3313,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-a36404.response
+> Hook should write its response to /tmp/ocamltest-ffb3a2.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test native with 8 actions
 > 
@@ -3333,7 +3333,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/8 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-687e17.response
+> Hook should write its response to /tmp/ocamltest-b83ba7.response
 > Hook returned 1Action 4/8 (run) => failed ()
  ... testing 'pr6920_why_at.ml' => passed
  ... testing 'pr6920_why_swallow.ml' => passed
@@ -5140,7 +5140,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-9622af.response
+> Hook should write its response to /tmp/ocamltest-10aa9e.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -5160,7 +5160,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-672648.response
+> Hook should write its response to /tmp/ocamltest-132d1c.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -5180,7 +5180,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-b266c6.response
+> Hook should write its response to /tmp/ocamltest-ecb92a.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test native with 8 actions
 > 
@@ -5200,7 +5200,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/8 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-550ca5.response
+> Hook should write its response to /tmp/ocamltest-721327.response
 > Hook returned 1Action 4/8 (run) => failed ()
  ... testing 'pr6920_why_at.ml' => passed
  ... testing 'pr6920_why_swallow.ml' => passed
@@ -7007,7 +7007,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-766d42.response
+> Hook should write its response to /tmp/ocamltest-cf9095.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -7027,7 +7027,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-1ff67f.response
+> Hook should write its response to /tmp/ocamltest-0b005d.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -7047,7 +7047,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-8a4775.response
+> Hook should write its response to /tmp/ocamltest-bd2f77.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test native with 8 actions
 > 
@@ -7067,7 +7067,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/8 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-776810.response
+> Hook should write its response to /tmp/ocamltest-f126f6.response
 > Hook returned 1Action 4/8 (run) => failed ()
  ... testing 'pr6920_why_at.ml' => passed
  ... testing 'pr6920_why_swallow.ml' => passed
@@ -8874,7 +8874,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-101093.response
+> Hook should write its response to /tmp/ocamltest-f4e93b.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -8894,7 +8894,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-781129.response
+> Hook should write its response to /tmp/ocamltest-c51575.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -8914,7 +8914,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-481ce7.response
+> Hook should write its response to /tmp/ocamltest-17c38b.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test native with 8 actions
 > 
@@ -8934,7 +8934,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/8 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-65bc05.response
+> Hook should write its response to /tmp/ocamltest-30f594.response
 > Hook returned 1Action 4/8 (run) => failed ()
  ... testing 'pr6920_why_at.ml' => passed
  ... testing 'pr6920_why_swallow.ml' => passed
@@ -10739,7 +10739,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-7549a8.response
+> Hook should write its response to /tmp/ocamltest-13acda.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -10759,7 +10759,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-fd59bd.response
+> Hook should write its response to /tmp/ocamltest-318a79.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -10779,7 +10779,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-094afd.response
+> Hook should write its response to /tmp/ocamltest-f982a0.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test native with 8 actions
 > 
@@ -10799,7 +10799,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/8 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-d0a4d6.response
+> Hook should write its response to /tmp/ocamltest-6d5962.response
 > Hook returned 1Action 4/8 (run) => failed ()
  ... testing 'pr6920_why_at.ml' => passed
  ... testing 'pr6920_why_swallow.ml' => passed
@@ -12604,7 +12604,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-8c52e6.response
+> Hook should write its response to /tmp/ocamltest-15061f.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -12624,7 +12624,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-2fe72f.response
+> Hook should write its response to /tmp/ocamltest-03e04b.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test bytecode with 9 actions
 > 
@@ -12644,7 +12644,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/9 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-6102b7.response
+> Hook should write its response to /tmp/ocamltest-128b3c.response
 > Hook returned 1Action 4/9 (run) => failed ()
 > Running test native with 8 actions
 > 
@@ -12664,7 +12664,7 @@ Running tests from 'tests/backtrace' ...
 > 
 > Running action 4/8 (run)
 > Entering run_hook for hook /tmp/src/ocaml-5.3.0/testsuite/tests/backtrace/pr2195.run
-> Hook should write its response to /tmp/ocamltest-281aee.response
+> Hook should write its response to /tmp/ocamltest-55beb5.response
 > Hook returned 1Action 4/8 (run) => failed ()
  ... testing 'pr6920_why_at.ml' => passed
  ... testing 'pr6920_why_swallow.ml' => passed
@@ -12852,6 +12852,1507 @@ Running tests from 'tests/fma' ...
  ... testing 'fma.ml' => passed
 Running tests from 'tests/formats-transition' ...
  ... testing 'deprecated_unsigned_printers.ml' => passed
-Terminated
+ ... testing 'ignored_scan_counters.ml' => passed
+ ... testing 'legacy_incompatible_flags.ml' => passed
+ ... testing 'legacy_unfinished_modifiers.ml' => passed
+Running tests from 'tests/formatting' ...
+ ... testing 'errors_batch.ml' => passed
+ ... testing 'margins.ml' => passed
+ ... testing 'test_locations.ml' => passed
+Running tests from 'tests/frame-pointers' ...
+ ... testing 'c_call.ml' => skipped
+ ... testing 'effects.ml' => skipped
+ ... testing 'exception_handler.ml' => skipped
+ ... testing 'reperform.ml' => skipped
+ ... testing 'stack_realloc.ml' => skipped
+ ... testing 'stack_realloc2.ml' => skipped
+Running tests from 'tests/functors' ...
+ ... testing 'functors.ml' => passed
+Running tests from 'tests/gc-roots' ...
+ ... testing 'globroots.ml' => passed
+ ... testing 'globroots_parallel.ml' => passed
+ ... testing 'globroots_parallel_spawn_burn.ml' => passed
+ ... testing 'globroots_sequential.ml' => passed
+Running tests from 'tests/generalized-open' ...
+ ... testing 'accepted_batch.ml' => passed
+ ... testing 'accepted_expect.ml' => passed
+ ... testing 'clambda_optim.ml' => passed
+ ... testing 'expansiveness.ml' => passed
+ ... testing 'funct_body.ml' => passed
+ ... testing 'gpr1506.ml' => passed
+ ... testing 'pr10048.ml' => passed
+ ... testing 'shadowing.ml' => passed
+Running tests from 'tests/generated-parse-errors' ...
+ ... testing 'errors.ml' => passed
+Running tests from 'tests/hidden_includes' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/int64-unboxing' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lazy' ...
+ ... testing 'lazy1.ml' => passed
+ ... testing 'lazy2.ml' => passed
+ ... testing 'lazy3.ml' => passed
+ ... testing 'lazy4.ml' => passed
+ ... testing 'lazy5.ml' => passed
+ ... testing 'lazy6.ml' => passed
+ ... testing 'lazy7.ml' => passed
+ ... testing 'lazy8.ml' => passed
+ ... testing 'minor_major_force.ml' => passed
+Running tests from 'tests/let-syntax' ...
+ ... testing 'let_syntax.ml' => passed
+Running tests from 'tests/letrec-check' ...
+ ... testing 'basic.ml' => passed
+ ... testing 'extension_constructor.ml' => passed
+ ... testing 'flat_float_array.ml' => passed
+ ... testing 'float_unboxing.ml' => passed
+ ... testing 'labels.ml' => passed
+ ... testing 'lazy_.ml' => passed
+ ... testing 'modules.ml' => passed
+ ... testing 'no_flat_float_array.ml' => skipped
+ ... testing 'objects.ml' => passed
+ ... testing 'partial_application.ml' => passed
+ ... testing 'pr7215.ml' => passed
+ ... testing 'pr7231.ml' => passed
+ ... testing 'pr7706.ml' => passed
+ ... testing 'records.ml' => passed
+ ... testing 'unboxed.ml' => passed
+Running tests from 'tests/letrec-compilation' ...
+ ... testing 'backreferences.ml' => passed
+ ... testing 'class_1.ml' => passed
+ ... testing 'class_2.ml' => passed
+ ... testing 'evaluation_order_1.ml' => passed
+ ... testing 'evaluation_order_2.ml' => passed
+ ... testing 'evaluation_order_3.ml' => passed
+ ... testing 'float_block_1.ml' => passed
+ ... testing 'generic_array.ml' => passed
+ ... testing 'labels.ml' => passed
+ ... testing 'lazy_.ml' => passed
+ ... testing 'lists.ml' => passed
+ ... testing 'mixing_value_closures_1.ml' => passed
+ ... testing 'mixing_value_closures_2.ml' => passed
+ ... testing 'mutual_functions.ml' => passed
+ ... testing 'nested.ml' => passed
+ ... testing 'pr12153_miscompilation_of_recursive_atoms.ml' => passed
+ ... testing 'pr4989.ml' => passed
+ ... testing 'pr8681.ml' => passed
+ ... testing 'record_with.ml' => passed
+ ... testing 'ref.ml' => passed
+Running tests from 'tests/lexing' ...
+ ... testing 'comments.ml' => passed
+ ... testing 'escape.ml' => passed
+ ... testing 'newlines.ml' => passed
+ ... testing 'reject_bad_encoding.ml' => passed
+ ... testing 'uchar_esc.ml' => passed
+Running tests from 'tests/lf_skiplist' ...
+ ... testing 'test.ml' => passed
+ ... testing 'test_parallel.ml' => passed
+Running tests from 'tests/lib-arg' ...
+ ... testing 'test_rest_all.ml' => passed
+ ... testing 'testarg.ml' => passed
+ ... testing 'testerror.ml' => passed
+Running tests from 'tests/lib-array' ...
+ ... testing 'test_array.ml' => passed
+Running tests from 'tests/lib-atomic' ...
+ ... testing 'test_atomic.ml' => passed
+Running tests from 'tests/lib-bigarray' ...
+ ... testing 'bigarrays.ml' => passed
+ ... testing 'change_layout.ml' => passed
+ ... testing 'fftba.ml' => passed
+ ... testing 'pr5115.ml' => passed
+ ... testing 'specialized.ml' => passed
+ ... testing 'weak_bigarray.ml' => passed
+Running tests from 'tests/lib-bigarray-2' ...
+ ... testing 'bigarrcml.ml' => passed
+ ... testing 'bigarrfml.ml' => skipped
+Running tests from 'tests/lib-bigarray-file' ...
+ ... testing 'mapfile.ml' => passed
+Running tests from 'tests/lib-bool' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-buffer' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-bytes' ...
+ ... testing 'binary.ml' => passed
+ ... testing 'test_bytes.ml' => passed
+Running tests from 'tests/lib-bytes-utf' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-channels' ...
+ ... testing 'bigarrays.ml' => passed
+ ... testing 'buffered.ml' => passed
+ ... testing 'close_in.ml' => passed
+ ... testing 'close_out.ml' => passed
+ ... testing 'in_channel_length.ml' => passed
+ ... testing 'input_all.ml' => passed
+ ... testing 'input_lines.ml' => passed
+ ... testing 'refcounting.ml' => passed
+ ... testing 'seek_in.ml' => passed
+Running tests from 'tests/lib-digest' ...
+ ... testing 'blake2b_self_test.ml' => passed
+ ... testing 'digests.ml' => passed
+ ... testing 'md5.ml' => passed
+Running tests from 'tests/lib-domain' ...
+ ... testing 'DLS_thread_safety.ml' => passed
+Running tests from 'tests/lib-dynarray' ...
+ ... testing 'heap_sort.ml' => passed
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-dynlink-bytecode' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/lib-dynlink-csharp' ...
+ ... testing 'main.ml' => skipped
+Running tests from 'tests/lib-dynlink-domains' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/lib-dynlink-init-info' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-dynlink-initializers' ...
+ ... testing 'test10_main.ml' => passed
+ ... testing 'test1_main.ml' => passed
+ ... testing 'test2_main.ml' => passed
+ ... testing 'test3_main.ml' => passed
+ ... testing 'test5_main.ml' => passed
+ ... testing 'test6_main.ml' => passed
+ ... testing 'test7_main.ml' => passed
+ ... testing 'test8_main.ml' => passed
+ ... testing 'test9_main.ml' => passed
+Running tests from 'tests/lib-dynlink-native' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/lib-dynlink-packed' ...
+ ... testing 'loader.ml' => passed
+Running tests from 'tests/lib-dynlink-pr4229' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/lib-dynlink-pr4839' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-dynlink-pr6950' ...
+ ... testing 'loader.ml' => passed
+Running tests from 'tests/lib-dynlink-pr9209' ...
+ ... testing 'dyn.ml' => passed
+Running tests from 'tests/lib-dynlink-private' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-either' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-filename' ...
+ ... testing 'extension.ml' => passed
+ ... testing 'null.ml' => passed
+ ... testing 'quotecommand.ml' => passed
+ ... testing 'suffix.ml' => passed
+ ... testing 'temp.ml' => passed
+Running tests from 'tests/lib-float' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-floatarray' ...
+ ... testing 'floatarray.ml' => passed
+Running tests from 'tests/lib-format' ...
+ ... testing 'domains.ml' => passed
+ ... testing 'mc_pr586_par.ml' => passed
+ ... testing 'mc_pr586_par2.ml' => passed
+ ... testing 'pp_print_custom_break.ml' => passed
+ ... testing 'pr6824.ml' => passed
+ ... testing 'print_array.ml' => passed
+ ... testing 'print_if_newline.ml' => passed
+ ... testing 'print_seq.ml' => passed
+ ... testing 'tformat.ml' => passed
+Running tests from 'tests/lib-fun' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-hashtbl' ...
+ ... testing 'compatibility.ml' => passed
+ ... testing 'hfun.ml' => passed
+ ... testing 'htbl.ml' => passed
+Running tests from 'tests/lib-int' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-int64' ...
+ ... testing 'issue9460.ml' => passed
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-internalformat' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-lazy' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-list' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-marshal' ...
+ ... testing 'compressed.ml' => passed
+ ... testing 'intern_final.ml' => passed
+ ... testing 'intext.ml' => passed
+ ... testing 'intext_par.ml' => passed
+ ... testing 'marshal_bigarray.ml' => passed
+Running tests from 'tests/lib-obj' ...
+ ... testing 'new_obj.ml' => passed
+ ... testing 'reachable_words.ml' => passed
+ ... testing 'reachable_words_bug.ml' => passed
+ ... testing 'with_tag.ml' => passed
+Running tests from 'tests/lib-option' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-printf' ...
+ ... testing 'pr6534.ml' => passed
+ ... testing 'pr6938.ml' => passed
+ ... testing 'tprintf.ml' => passed
+Running tests from 'tests/lib-queue' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-random' ...
+ ... testing 'chi2.ml' => passed
+ ... testing 'compat_32_64.ml' => passed
+ ... testing 'defaultinit.ml' => passed
+ ... testing 'parallel.ml' => passed
+ ... testing 'selfinit.ml' => passed
+ ... testing 'testvectors.ml' => passed
+Running tests from 'tests/lib-result' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-runtime-events' ...
+ ... testing 'test.ml' => passed
+ ... testing 'test_caml.ml' => passed
+ ... testing 'test_caml_counters.ml' => passed
+ ... testing 'test_caml_exception.ml' => passed
+ ... testing 'test_caml_parallel.ml' => passed
+ ... testing 'test_caml_reentry.ml' => passed
+ ... testing 'test_caml_runparams.ml' => passed
+ ... testing 'test_caml_slot_reuse.ml' => passed
+ ... testing 'test_caml_stubs_gc.ml' => passed
+ ... testing 'test_compact.ml' => passed
+ ... testing 'test_corrupted.ml' => passed
+ ... testing 'test_create_cursor_failures.ml' => passed
+ ... testing 'test_dropped_events.ml' => passed
+ ... testing 'test_env_start.ml' => passed
+ ... testing 'test_external.ml' => passed
+ ... testing 'test_external_preserve.ml' => passed
+ ... testing 'test_fork.ml' => passed
+ ... testing 'test_instrumented.ml' => passed
+ ... testing 'test_user_event.ml' => passed
+ ... testing 'test_user_event_signal.ml' => passed
+ ... testing 'test_user_event_unknown.ml' => passed
+Running tests from 'tests/lib-scanf' ...
+ ... testing 'tscanf.ml' => passed
+Running tests from 'tests/lib-scanf-2' ...
+ ... testing 'tscanf2_master.ml' => passed
+Running tests from 'tests/lib-seq' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-set' ...
+ ... testing 'testmap.ml' => passed
+ ... testing 'testset.ml' => passed
+Running tests from 'tests/lib-stack' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-stdlabels' ...
+ ... testing 'test_stdlabels.ml' => passed
+Running tests from 'tests/lib-str' ...
+ ... testing 'parallel.ml' => passed
+ ... testing 't01.ml' => passed
+Running tests from 'tests/lib-string' ...
+ ... testing 'binary.ml' => passed
+ ... testing 'test_string.ml' => passed
+Running tests from 'tests/lib-sync' ...
+ ... testing 'prodcons.ml' => passed
+ ... testing 'trylock.ml' => passed
+ ... testing 'trylock2.ml' => passed
+Running tests from 'tests/lib-sys' ...
+ ... testing 'immediate64.ml' => passed
+ ... testing 'opaque.ml' => passed
+ ... testing 'rename.ml' => passed
+Running tests from 'tests/lib-systhreads' ...
+ ... testing 'boundscheck.ml' => passed
+ ... testing 'eintr.ml' => passed
+ ... testing 'multicore_lifecycle.ml' => passed
+ ... testing 'test_c_thread_register.ml' => passed
+ ... testing 'testfork.ml' => passed
+ ... testing 'testfork2.ml' => passed
+ ... testing 'testpreempt.ml' => passed
+ ... testing 'testyield.ml' => passed
+ ... testing 'threadsigmask.ml' => passed
+Running tests from 'tests/lib-threads' ...
+ ... testing 'backtrace_threads.ml' => passed
+ ... testing 'bank.ml' => passed
+ ... testing 'beat.ml' => passed
+ ... testing 'bufchan.ml' => passed
+ ... testing 'close.ml' => passed
+ ... testing 'delayintr.ml' => passed
+ ... testing 'fileio.ml' => passed
+ ... testing 'mutex_errors.ml' => passed
+ ... testing 'pr4466.ml' => passed
+ ... testing 'pr5325.ml' => passed
+ ... testing 'pr7638.ml' => passed
+ ... testing 'pr8857.ml' => passed
+ ... testing 'prodcons.ml' => passed
+ ... testing 'prodcons2.ml' => passed
+ ... testing 'sieve.ml' => passed
+ ... testing 'signal.ml' => passed
+ ... testing 'sockets.ml' => passed
+ ... testing 'swapchan.ml' => passed
+ ... testing 'tls.ml' => passed
+ ... testing 'torture.ml' => passed
+ ... testing 'uncaught_exception_handler.ml' => passed
+Running tests from 'tests/lib-uchar' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-unix/common' ...
+ ... testing 'append.ml' => passed
+ ... testing 'bigarrays.ml' => passed
+ ... testing 'channel_of.ml' => passed
+ ... testing 'cloexec.ml' => passed
+ ... testing 'dup.ml' => passed
+ ... testing 'dup2.ml' => passed
+ ... testing 'fork_cleanup.ml' => passed
+ ... testing 'fork_cleanup_systhreads.ml' => passed
+ ... testing 'getaddrinfo.ml' => passed
+ ... testing 'gethostbyaddr.ml' => passed
+ ... testing 'multicore_fork_domain_alone.ml' => passed
+ ... testing 'multicore_fork_domain_alone2.ml' => passed
+ ... testing 'pipe_eof.ml' => passed
+ ... testing 'process_pid.ml' => passed
+ ... testing 'redirections.ml' => passed
+ ... testing 'rename.ml' => passed
+ ... testing 'test_unix_cmdline.ml' => passed
+ ... testing 'test_unixlabels.ml' => passed
+ ... testing 'truncate.ml' => passed
+ ... testing 'uexit.ml' => passed
+ ... testing 'utimes.ml' => passed
+ ... testing 'wait_nohang.ml' => passed
+Running tests from 'tests/lib-unix/isatty' ...
+ ... testing 'isatty_std.ml' => passed
+ ... testing 'isatty_tty.ml' => skipped
+Running tests from 'tests/lib-unix/kill' ...
+ ... testing 'unix_kill.ml' => passed
+Running tests from 'tests/lib-unix/realpath' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/lib-unix/unix-execvpe' ...
+ ... testing 'exec.ml' => passed
+Running tests from 'tests/lib-unix/unix-socket' ...
+ ... testing 'recvfrom_linux.ml' => passed
+ ... testing 'recvfrom_unix.ml' => passed
+Running tests from 'tests/lib-unix/win-channel-of' ...
+ ... testing 'parallel_channel_of.ml' => skipped
+Running tests from 'tests/lib-unix/win-createprocess' ...
+ ... testing 'test.ml' => skipped
+Running tests from 'tests/lib-unix/win-env' ...
+ ... testing 'test_env.ml' => skipped
+Running tests from 'tests/lib-unix/win-socketpair' ...
+ ... testing 'test.ml' => skipped
+Running tests from 'tests/lib-unix/win-stat' ...
+ ... testing 'test.ml' => skipped
+Running tests from 'tests/lib-unix/win-symlink' ...
+ ... testing 'parallel_symlink.ml' => skipped
+ ... testing 'test.ml' => skipped
+Running tests from 'tests/link-test' ...
+ ... testing 'empty.ml' => passed
+ ... testing 'test.ml' => passed
+Running tests from 'tests/load_path' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/local-functions' ...
+ ... testing 'non_local.ml' => passed
+ ... testing 'tupled.ml' => passed
+ ... testing 'tupled2.ml' => passed
+Running tests from 'tests/locale' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/manual-intf-c' ...
+ ... testing 'prog.ml' => skipped
+Running tests from 'tests/match-exception' ...
+ ... testing 'allocation.ml' => passed
+ ... testing 'exception_propagation.ml' => passed
+ ... testing 'identifier_sharing.ml' => passed
+ ... testing 'match_failure.ml' => passed
+ ... testing 'nested_handlers.ml' => passed
+ ... testing 'raise_from_success_continuation.ml' => passed
+ ... testing 'streams.ml' => passed
+ ... testing 'tail_calls.ml' => passed
+Running tests from 'tests/match-exception-warnings' ...
+ ... testing 'exhaustiveness_warnings.ml' => passed
+ ... testing 'no_mixing_under_guard.ml' => passed
+ ... testing 'no_value_clauses.ml' => passed
+ ... testing 'placement.ml' => passed
+ ... testing 'pr7083.ml' => passed
+ ... testing 'reachability.ml' => passed
+Running tests from 'tests/match-side-effects' ...
+ ... testing 'check_partial.ml' => passed
+ ... testing 'partiality.ml' => passed
+ ... testing 'pr13152.ml' => passed
+ ... testing 'test_contexts_code.ml' => passed
+ ... testing 'test_contexts_results.ml' => passed
+Running tests from 'tests/memory-model' ...
+ ... testing 'forbidden.ml' => passed
+ ... testing 'publish.ml' => passed
+Running tests from 'tests/messages' ...
+ ... testing 'highlight_tabs.ml' => passed
+ ... testing 'precise_locations.ml' => passed
+ ... testing 'spellcheck.ml' => passed
+Running tests from 'tests/misc' ...
+ ... testing 'bdd.ml' => passed
+ ... testing 'boyer.ml' => passed
+ ... testing 'exotic.ml' => passed
+ ... testing 'fib.ml' => passed
+ ... testing 'gc_mark_stack_overflow.ml' => passed
+ ... testing 'gcwords.ml' => passed
+ ... testing 'gpr1370.ml' => passed
+ ... testing 'hamming.ml' => passed
+ ... testing 'nucleic.ml' => passed
+ ... testing 'pr7168.ml' => passed
+ ... testing 'sieve.ml' => passed
+ ... testing 'sorts.ml' => passed
+ ... testing 'takc.ml' => passed
+ ... testing 'taku.ml' => passed
+Running tests from 'tests/misc-kb' ...
+ ... testing 'kbmain.ml' => passed
+Running tests from 'tests/misc-unsafe' ...
+ ... testing 'almabench.ml' => passed
+ ... testing 'fft.ml' => passed
+ ... testing 'quicksort.ml' => passed
+ ... testing 'soli.ml' => passed
+Running tests from 'tests/no-alias-deps' ...
+ ... testing 'aliases.ml' => passed
+ ... testing 'gpr2235.ml' => passed
+Running tests from 'tests/opaque' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/output-complete-obj' ...
+ ... testing 'github9344.ml' => passed
+ ... testing 'test.ml' => passed
+ ... testing 'test2.ml' => passed
+Running tests from 'tests/parallel' ...
+ ... testing 'atomics.ml' => passed
+ ... testing 'backup_thread.ml' => passed
+ ... testing 'backup_thread_pipe.ml' => passed
+ ... testing 'catch_break.ml' => passed
+ ... testing 'constpromote.ml' => passed
+ ... testing 'deadcont.ml' => passed
+ ... testing 'domain_dls.ml' => passed
+ ... testing 'domain_dls2.ml' => passed
+ ... testing 'domain_id.ml' => passed
+ ... testing 'domain_parallel_spawn_burn.ml' => passed
+ ... testing 'domain_parallel_spawn_burn_gc_set.ml' => passed
+ ... testing 'domain_serial_spawn_burn.ml' => passed
+ ... testing 'fib_threads.ml' => passed
+ ... testing 'join.ml' => passed
+ ... testing 'major_gc_wait_backup.ml' => passed
+ ... testing 'max_domains1.ml' => passed
+ ... testing 'max_domains2.ml' => passed
+ ... testing 'mctest.ml' => passed
+ ... testing 'multicore_systhreads.ml' => passed
+ ... testing 'pingpong.ml' => passed
+ ... testing 'poll.ml' => passed
+ ... testing 'prodcons_domains.ml' => passed
+ ... testing 'recommended_domain_count.ml' => passed
+ ... testing 'recommended_domain_count_unix.ml' => passed
+ ... testing 'tak.ml' => passed
+ ... testing 'test_c_thread_register.ml' => passed
+ ... testing 'test_issue_11094.ml' => passed
+Running tests from 'tests/parse-errors' ...
+ ... testing 'escape_error.ml' => passed
+ ... testing 'expecting.ml' => passed
+ ... testing 'mismatch_struct_sig.ml' => passed
+ ... testing 'pr7847.ml' => passed
+ ... testing 'unclosed_class_signature.mli' => passed
+ ... testing 'unclosed_class_simpl_expr1.ml' => passed
+ ... testing 'unclosed_class_simpl_expr2.ml' => passed
+ ... testing 'unclosed_class_simpl_expr3.ml' => passed
+ ... testing 'unclosed_object.ml' => passed
+ ... testing 'unclosed_paren_module_expr1.ml' => passed
+ ... testing 'unclosed_paren_module_expr2.ml' => passed
+ ... testing 'unclosed_paren_module_expr3.ml' => passed
+ ... testing 'unclosed_paren_module_expr4.ml' => passed
+ ... testing 'unclosed_paren_module_expr5.ml' => passed
+ ... testing 'unclosed_paren_module_type.mli' => passed
+ ... testing 'unclosed_sig.mli' => passed
+ ... testing 'unclosed_simple_expr.ml' => passed
+ ... testing 'unclosed_simple_pattern.ml' => passed
+ ... testing 'unclosed_struct.ml' => passed
+Running tests from 'tests/parsetree' ...
+ ... testing 'locations_test.ml' => passed
+ ... testing 'test.ml' => passed
+Running tests from 'tests/parsing' ...
+ ... testing 'anonymous_class_parameter.ml' => passed
+ ... testing 'arrow_ambiguity.ml' => passed
+ ... testing 'assert_location.ml' => passed
+ ... testing 'attributes.ml' => passed
+ ... testing 'broken_invariants.ml' => passed
+ ... testing 'change_start_loc.ml' => passed
+ ... testing 'comments.ml' => passed
+ ... testing 'constructor_declarations.ml' => passed
+ ... testing 'docstrings.ml' => passed
+ ... testing 'extended_indexoperators.ml' => passed
+ ... testing 'extension_operators.ml' => passed
+ ... testing 'extensions.ml' => passed
+ ... testing 'hash_ambiguity.ml' => passed
+ ... testing 'int_and_float_with_modifier.ml' => passed
+ ... testing 'latin9.ml' => passed
+ ... testing 'multi_indices.ml' => passed
+ ... testing 'pr10468.ml' => passed
+ ... testing 'pr6604.ml' => passed
+ ... testing 'pr6604_2.ml' => passed
+ ... testing 'pr6604_3.ml' => passed
+ ... testing 'pr6865.ml' => passed
+ ... testing 'pr7165.ml' => passed
+ ... testing 'prefix_op.ml' => passed
+ ... testing 'quotedextensions.ml' => passed
+ ... testing 'rawidents.ml' => passed
+ ... testing 'reloc.ml' => passed
+ ... testing 'shortcut_ext_attr.ml' => passed
+Running tests from 'tests/ppx-attributes' ...
+ ... testing 'inline.ml' => passed
+ ... testing 'warning.ml' => passed
+Running tests from 'tests/ppx-contexts' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/prim-bigstring' ...
+ ... testing 'bigstring_access.ml' => passed
+ ... testing 'string_access.ml' => passed
+Running tests from 'tests/prim-bswap' ...
+ ... testing 'bswap.ml' => passed
+Running tests from 'tests/prim-revapply' ...
+ ... testing 'apply.ml' => passed
+ ... testing 'revapply.ml' => passed
+Running tests from 'tests/printing-types' ...
+ ... testing 'disambiguation.ml' => passed
+ ... testing 'existentials.ml' => passed
+ ... testing 'pr248.ml' => passed
+Running tests from 'tests/raise-counts' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/regression/gpr1623' ...
+ ... testing 'gpr1623.ml' => passed
+Running tests from 'tests/regression/missing_set_of_closures' ...
+ ... testing 'missing_set_of_closures.ml' => passed
+Running tests from 'tests/regression/pr10611' ...
+ ... testing 'pr10611.ml' => passed
+Running tests from 'tests/regression/pr11887' ...
+ ... testing 'pr11887.ml' => passed
+Running tests from 'tests/regression/pr1580' ...
+ ... testing 'pr1580.ml' => passed
+Running tests from 'tests/regression/pr3612' ...
+ ... testing 'pr3612.ml' => passed
+Running tests from 'tests/regression/pr5233' ...
+ ... testing 'pr5233.ml' => passed
+Running tests from 'tests/regression/pr5757' ...
+ ... testing 'pr5757.ml' => passed
+Running tests from 'tests/regression/pr6024' ...
+ ... testing 'pr6024.ml' => passed
+Running tests from 'tests/regression/pr7042' ...
+ ... testing 'pr7042.ml' => passed
+Running tests from 'tests/regression/pr7426' ...
+ ... testing 'pr7426.ml' => passed
+Running tests from 'tests/regression/pr7718' ...
+ ... testing 'pr7718.ml' => passed
+Running tests from 'tests/regression/pr7798' ...
+ ... testing 'pr7798.ml' => passed
+Running tests from 'tests/regression/pr7920' ...
+ ... testing 'pr7920.ml' => passed
+Running tests from 'tests/regression/pr8769' ...
+ ... testing 'pr8769.ml' => passed
+Running tests from 'tests/regression/pr9028' ...
+ ... testing 'pr9028.ml' => passed
+Running tests from 'tests/regression/pr9292' ...
+ ... testing 'pr9292.ml' => passed
+Running tests from 'tests/regression/pr9326' ...
+ ... testing 'gc_set.ml' => passed
+Running tests from 'tests/regression/pr9443' ...
+ ... testing 'pr9443.ml' => passed
+Running tests from 'tests/regression/pr9853' ...
+ ... testing 'compaction_corner_case.ml' => passed
+Running tests from 'tests/reproducibility' ...
+ ... testing 'cmis_on_file_system.ml' => passed
+Running tests from 'tests/required-external' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/runtime-C-exceptions' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/runtime-errors' ...
+ ... testing 'stackoverflow.ml' => passed
+ ... testing 'syserror.ml' => passed
+Running tests from 'tests/runtime-objects' ...
+ ... testing 'Tests.ml' => passed
+ ... testing 'toplevel_lets.ml' => passed
+Running tests from 'tests/self-contained-toplevel' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/shadow_include' ...
+ ... testing 'artificial.ml' => passed
+ ... testing 'cannot_shadow_error.ml' => passed
+ ... testing 'ghosts.ml' => passed
+ ... testing 'shadow_all.ml' => passed
+Running tests from 'tests/shape-index' ...
+ ... testing 'index.ml' => passed
+ ... testing 'index_aliases.ml' => passed
+ ... testing 'index_bindingops.ml' => passed
+ ... testing 'index_constrs.ml' => passed
+ ... testing 'index_constrs_records.ml' => passed
+ ... testing 'index_functor.ml' => passed
+ ... testing 'index_labels.ml' => passed
+ ... testing 'index_modules.ml' => passed
+ ... testing 'index_objects.ml' => passed
+ ... testing 'index_types.ml' => passed
+ ... testing 'index_vb.ml' => passed
+Running tests from 'tests/shapes' ...
+ ... testing 'aliases.ml' => passed
+ ... testing 'comp_units.ml' => passed
+ ... testing 'functors.ml' => passed
+ ... testing 'incl_md_typeof.ml' => passed
+ ... testing 'more_func.ml' => passed
+ ... testing 'nested_types.ml' => passed
+ ... testing 'open_arg.ml' => passed
+ ... testing 'open_struct.ml' => passed
+ ... testing 'recmodules.ml' => passed
+ ... testing 'rotor_example.ml' => passed
+ ... testing 'shape_size_blowup.ml' => passed
+ ... testing 'simple.ml' => passed
+ ... testing 'typeof_include.ml' => passed
+Running tests from 'tests/statmemprof' ...
+ ... testing 'alloc_counts.ml' => passed
+ ... testing 'arrays_in_major.ml' => passed
+ ... testing 'arrays_in_minor.ml' => passed
+ ... testing 'blocking_in_callback.ml' => passed
+ ... testing 'callstacks.ml' => passed
+ ... testing 'comballoc.ml' => passed
+ ... testing 'custom.ml' => passed
+ ... testing 'discard_in_callback.ml' => passed
+ ... testing 'exception_callback.ml' => passed
+ ... testing 'exception_callback_minor.ml' => passed
+ ... testing 'exception_comballoc.ml' => passed
+ ... testing 'intern.ml' => passed
+ ... testing 'lists_in_minor.ml' => passed
+ ... testing 'minor_heap_edge.ml' => passed
+ ... testing 'minor_no_postpone.ml' => passed
+ ... testing 'moved_while_blocking.ml' => passed
+ ... testing 'start_stop.ml' => passed
+ ... testing 'stop_start_in_callback.ml' => passed
+ ... testing 'thread_exit_in_callback.ml' => passed
+Running tests from 'tests/syntactic-arity' ...
+ ... testing 'alloc.ml' => passed
+ ... testing 'max_arity.ml' => passed
+ ... testing 'measure_arity.ml' => passed
+ ... testing 'measure_runtime_arity.ml' => passed
+ ... testing 'syntactic_arity.ml' => passed
+ ... testing 'warnings.ml' => passed
+Running tests from 'tests/tmc' ...
+ ... testing 'ambiguities.ml' => passed
+ ... testing 'other_features.ml' => passed
+ ... testing 'partial_application.ml' => passed
+ ... testing 'readable_output.ml' => passed
+ ... testing 'semantic.ml' => passed
+ ... testing 'shortcut.ml' => passed
+ ... testing 'stack_space.ml' => passed
+ ... testing 'try_with.ml' => passed
+ ... testing 'tupled_function.ml' => passed
+ ... testing 'tupled_function_calls.ml' => passed
+ ... testing 'usage_warnings.ml' => passed
+Running tests from 'tests/tool-caml-tex' ...
+ ... testing 'ellipses.ml' => passed
+ ... testing 'redirections.ml' => passed
+Running tests from 'tests/tool-command-line' ...
+ ... testing 'test-no-input-file.ml' => passed
+ ... testing 'test-o-one-c-file.ml' => passed
+ ... testing 'test-o-several-files.ml' => passed
+ ... testing 'test-unknown-file.ml' => passed
+Running tests from 'tests/tool-debugger/basic' ...
+ ... testing 'debuggee.ml' => passed
+Running tests from 'tests/tool-debugger/dynlink' ...
+ ... testing 'host.ml' => passed
+Running tests from 'tests/tool-debugger/find-artifacts' ...
+ ... testing 'debuggee.ml' => passed
+Running tests from 'tests/tool-debugger/module_named_main' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/tool-debugger/no_debug_event' ...
+ ... testing 'noev.ml' => passed
+Running tests from 'tests/tool-debugger/printer' ...
+ ... testing 'debuggee.ml' => passed
+Running tests from 'tests/tool-dumpobj' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/tool-expect-test' ...
+ ... testing 'clean_typer.ml' => passed
+Running tests from 'tests/tool-lexyacc' ...
+ ... testing 'calc.ml' => passed
+ ... testing 'chars.mll' => passed
+ ... testing 'csets.mll' => passed
+ ... testing 'mpr7760.mll' => passed
+ ... testing 'parsecheck.mly' => passed
+Running tests from 'tests/tool-ocaml' ...
+ ... testing 'directive_failure.ml' => passed
+ ... testing 'gpr12887.ml' => passed
+ ... testing 't000.ml' => passed
+ ... testing 't010-const0.ml' => passed
+ ... testing 't010-const1.ml' => passed
+ ... testing 't010-const2.ml' => passed
+ ... testing 't010-const3.ml' => passed
+ ... testing 't011-constint.ml' => passed
+ ... testing 't020.ml' => passed
+ ... testing 't021-pushconst1.ml' => passed
+ ... testing 't021-pushconst2.ml' => passed
+ ... testing 't021-pushconst3.ml' => passed
+ ... testing 't022-pushconstint.ml' => passed
+ ... testing 't040-makeblock1.ml' => passed
+ ... testing 't040-makeblock2.ml' => passed
+ ... testing 't040-makeblock3.ml' => passed
+ ... testing 't041-makeblock.ml' => passed
+ ... testing 't050-getglobal.ml' => passed
+ ... testing 't050-pushgetglobal.ml' => passed
+ ... testing 't051-getglobalfield.ml' => passed
+ ... testing 't051-pushgetglobalfield.ml' => passed
+ ... testing 't060-raise.ml' => passed
+ ... testing 't070-branch.ml' => passed
+ ... testing 't070-branchif.ml' => passed
+ ... testing 't070-branchifnot.ml' => passed
+ ... testing 't071-boolnot.ml' => passed
+ ... testing 't080-eq.ml' => passed
+ ... testing 't080-geint.ml' => passed
+ ... testing 't080-gtint.ml' => passed
+ ... testing 't080-leint.ml' => passed
+ ... testing 't080-ltint.ml' => passed
+ ... testing 't080-neq.ml' => passed
+ ... testing 't090-acc0.ml' => passed
+ ... testing 't090-acc1.ml' => passed
+ ... testing 't090-acc2.ml' => passed
+ ... testing 't090-acc3.ml' => passed
+ ... testing 't090-acc4.ml' => passed
+ ... testing 't090-acc5.ml' => passed
+ ... testing 't090-acc6.ml' => passed
+ ... testing 't090-acc7.ml' => passed
+ ... testing 't091-acc.ml' => passed
+ ... testing 't092-pushacc.ml' => passed
+ ... testing 't092-pushacc0.ml' => passed
+ ... testing 't092-pushacc1.ml' => passed
+ ... testing 't092-pushacc2.ml' => passed
+ ... testing 't092-pushacc3.ml' => passed
+ ... testing 't092-pushacc4.ml' => passed
+ ... testing 't092-pushacc5.ml' => passed
+ ... testing 't092-pushacc6.ml' => passed
+ ... testing 't092-pushacc7.ml' => passed
+ ... testing 't093-pushacc.ml' => passed
+ ... testing 't100-pushtrap.ml' => passed
+ ... testing 't101-poptrap.ml' => passed
+ ... testing 't110-addint.ml' => passed
+ ... testing 't110-andint.ml' => passed
+ ... testing 't110-asrint-1.ml' => passed
+ ... testing 't110-asrint-2.ml' => passed
+ ... testing 't110-divint-1.ml' => passed
+ ... testing 't110-divint-2.ml' => passed
+ ... testing 't110-divint-3.ml' => passed
+ ... testing 't110-lslint.ml' => passed
+ ... testing 't110-lsrint.ml' => passed
+ ... testing 't110-modint-1.ml' => passed
+ ... testing 't110-modint-2.ml' => passed
+ ... testing 't110-mulint.ml' => passed
+ ... testing 't110-negint.ml' => passed
+ ... testing 't110-offsetint.ml' => passed
+ ... testing 't110-orint.ml' => passed
+ ... testing 't110-subint.ml' => passed
+ ... testing 't110-xorint.ml' => passed
+ ... testing 't120-getstringchar.ml' => passed
+ ... testing 't121-setstringchar.ml' => passed
+ ... testing 't130-getvectitem.ml' => passed
+ ... testing 't130-vectlength.ml' => passed
+ ... testing 't131-setvectitem.ml' => passed
+ ... testing 't140-switch-1.ml' => passed
+ ... testing 't140-switch-2.ml' => passed
+ ... testing 't140-switch-3.ml' => passed
+ ... testing 't140-switch-4.ml' => passed
+ ... testing 't141-switch-5.ml' => passed
+ ... testing 't141-switch-6.ml' => passed
+ ... testing 't141-switch-7.ml' => passed
+ ... testing 't142-switch-8.ml' => passed
+ ... testing 't142-switch-9.ml' => passed
+ ... testing 't142-switch-A.ml' => passed
+ ... testing 't150-push-1.ml' => passed
+ ... testing 't150-push-2.ml' => passed
+ ... testing 't160-closure.ml' => passed
+ ... testing 't161-apply1.ml' => passed
+ ... testing 't162-return.ml' => passed
+ ... testing 't163.ml' => passed
+ ... testing 't164-apply2.ml' => passed
+ ... testing 't164-apply3.ml' => passed
+ ... testing 't165-apply.ml' => passed
+ ... testing 't170-envacc2.ml' => passed
+ ... testing 't170-envacc3.ml' => passed
+ ... testing 't170-envacc4.ml' => passed
+ ... testing 't171-envacc.ml' => passed
+ ... testing 't172-pushenvacc1.ml' => passed
+ ... testing 't172-pushenvacc2.ml' => passed
+ ... testing 't172-pushenvacc3.ml' => passed
+ ... testing 't172-pushenvacc4.ml' => passed
+ ... testing 't173-pushenvacc.ml' => passed
+ ... testing 't180-appterm1.ml' => passed
+ ... testing 't180-appterm2.ml' => passed
+ ... testing 't180-appterm3.ml' => passed
+ ... testing 't181-appterm.ml' => passed
+ ... testing 't190-makefloatblock-1.ml' => passed
+ ... testing 't190-makefloatblock-2.ml' => passed
+ ... testing 't190-makefloatblock-3.ml' => passed
+ ... testing 't191-vectlength.ml' => passed
+ ... testing 't192-getfloatfield-1.ml' => passed
+ ... testing 't192-getfloatfield-2.ml' => passed
+ ... testing 't193-setfloatfield-1.ml' => passed
+ ... testing 't193-setfloatfield-2.ml' => passed
+ ... testing 't200-getfield0.ml' => passed
+ ... testing 't200-getfield1.ml' => passed
+ ... testing 't200-getfield2.ml' => passed
+ ... testing 't200-getfield3.ml' => passed
+ ... testing 't201-getfield.ml' => passed
+ ... testing 't210-setfield0.ml' => passed
+ ... testing 't210-setfield1.ml' => passed
+ ... testing 't210-setfield2.ml' => passed
+ ... testing 't210-setfield3.ml' => passed
+ ... testing 't211-setfield.ml' => passed
+ ... testing 't220-assign.ml' => passed
+ ... testing 't230-check_signals.ml' => passed
+ ... testing 't240-c_call1.ml' => passed
+ ... testing 't240-c_call2.ml' => passed
+ ... testing 't240-c_call3.ml' => passed
+ ... testing 't240-c_call4.ml' => passed
+ ... testing 't240-c_call5.ml' => passed
+ ... testing 't250-closurerec-1.ml' => passed
+ ... testing 't250-closurerec-2.ml' => passed
+ ... testing 't251-pushoffsetclosure0.ml' => passed
+ ... testing 't251-pushoffsetclosure2.ml' => passed
+ ... testing 't251-pushoffsetclosurem2.ml' => passed
+ ... testing 't252-pushoffsetclosure.ml' => passed
+ ... testing 't253-offsetclosure0.ml' => passed
+ ... testing 't253-offsetclosure2.ml' => passed
+ ... testing 't253-offsetclosurem2.ml' => passed
+ ... testing 't254-offsetclosure.ml' => passed
+ ... testing 't260-offsetref.ml' => passed
+ ... testing 't270-push_retaddr.ml' => passed
+ ... testing 't300-getmethod.ml' => passed
+ ... testing 't301-object.ml' => passed
+ ... testing 't310-alloc-1.ml' => passed
+ ... testing 't310-alloc-2.ml' => passed
+ ... testing 't320-gc-1.ml' => passed
+ ... testing 't320-gc-2.ml' => passed
+ ... testing 't320-gc-3.ml' => passed
+ ... testing 't330-compact-1.ml' => passed
+ ... testing 't330-compact-2.ml' => passed
+ ... testing 't330-compact-3.ml' => passed
+ ... testing 't330-compact-4.ml' => passed
+ ... testing 't340-weak.ml' => passed
+ ... testing 't350-heapcheck.ml' => passed
+ ... testing 't360-stacks-1.ml' => passed
+ ... testing 't360-stacks-2.ml' => passed
+Running tests from 'tests/tool-ocaml-annot' ...
+ ... testing 'failure.ml' => passed
+ ... testing 'success.ml' => passed
+ ... testing 'typeonly.ml' => passed
+Running tests from 'tests/tool-ocamlc-compat32' ...
+ ... testing 'compat32.ml' => passed
+Running tests from 'tests/tool-ocamlc-error-cleanup' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/tool-ocamlc-locations' ...
+ ... testing 'marshalled.ml' => passed
+ ... testing 'test.ml' => passed
+Running tests from 'tests/tool-ocamlc-open' ...
+ ... testing 'tool-ocamlc-open-error.ml' => passed
+ ... testing 'tool-ocamlc-open.ml' => passed
+Running tests from 'tests/tool-ocamlc-stop-after' ...
+ ... testing 'stop_after_lambda.ml' => passed
+ ... testing 'stop_after_parsing_impl.ml' => passed
+ ... testing 'stop_after_parsing_intf.mli' => passed
+ ... testing 'stop_after_scheduling.ml' => passed
+ ... testing 'stop_after_typing_impl.ml' => passed
+Running tests from 'tests/tool-ocamldep-modalias' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/tool-ocamldep-shadowing' ...
+ ... testing 'a.ml' => passed
+Running tests from 'tests/tool-ocamldoc' ...
+ ... testing 'Alert_toplevel.mli' => passed
+ ... testing 'Alert_toplevel2.mli' => passed
+ ... testing 'Alerts.mli' => passed
+ ... testing 'Alerts_impl.ml' => passed
+ ... testing 'Documentation_tags.mli' => passed
+ ... testing 'Entities.ml' => passed
+ ... testing 'Extensible_variant.ml' => passed
+ ... testing 'Functions.ml' => passed
+ ... testing 'Include_module_type_of.mli' => passed
+ ... testing 'Inline_records.mli' => passed
+ ... testing 'Inline_records_bis.ml' => passed
+ ... testing 'Item_ids.mli' => passed
+ ... testing 'Latin9.ml' => passed
+ ... testing 'Level_0.mli' => passed
+ ... testing 'Linebreaks.mli' => passed
+ ... testing 'Loop.ml' => passed
+ ... testing 'Module_whitespace.ml' => passed
+ ... testing 'No_preamble.mli' => passed
+ ... testing 'Paragraph.mli' => passed
+ ... testing 'Short_description.txt' => passed
+ ... testing 'Test.mli' => passed
+ ... testing 'Variants.mli' => passed
+ ... testing 'latex_ref.mli' => passed
+ ... testing 't01.ml' => passed
+ ... testing 't02.ml' => passed
+ ... testing 't03.ml' => passed
+ ... testing 't04.ml' => passed
+ ... testing 't05.ml' => passed
+Running tests from 'tests/tool-ocamldoc-open' ...
+ ... testing 'main.ml' => passed
+Running tests from 'tests/tool-ocamlobjinfo' ...
+ ... testing 'question.ml' => passed
+Running tests from 'tests/tool-ocamlopt-save-ir' ...
+ ... testing 'check_for_pack.ml' => passed
+ ... testing 'save_ir_after_scheduling.ml' => passed
+ ... testing 'save_ir_after_typing.ml' => passed
+ ... testing 'start_from_emit.ml' => passed
+Running tests from 'tests/tool-ocamlopt-stop-after' ...
+ ... testing 'stop_after_lambda.ml' => passed
+ ... testing 'stop_after_scheduling.ml' => passed
+Running tests from 'tests/tool-ocamltest' ...
+ ... testing 'norm1.ml' => passed
+ ... testing 'norm2.ml' => passed
+ ... testing 'norm3.ml' => passed
+ ... testing 'norm4.ml' => passed
+Running tests from 'tests/tool-ocamltest-var-expansion' ...
+ ... testing 'subst1.ml' => passed
+ ... testing 'subst2.ml' => passed
+Running tests from 'tests/tool-toplevel' ...
+ ... testing 'error_highlighting.ml' => passed
+ ... testing 'exotic_lists.ml' => passed
+ ... testing 'install_printer.ml' => passed
+ ... testing 'mod_use.ml' => passed
+ ... testing 'multi_phrase_line.ml' => passed
+ ... testing 'pr6468.ml' => passed
+ ... testing 'pr7060.ml' => passed
+ ... testing 'pr7751.ml' => passed
+ ... testing 'pr9701.ml' => passed
+ ... testing 'printval.ml' => passed
+ ... testing 'redefinition_hints.ml' => passed
+ ... testing 'show.ml' => passed
+ ... testing 'show_short_paths.ml' => passed
+ ... testing 'strings.ml' => passed
+ ... testing 'topeval.ml' => passed
+ ... testing 'tracing.ml' => passed
+ ... testing 'uncaught_exceptions.ml' => passed
+ ... testing 'use_command.ml' => passed
+Running tests from 'tests/tool-toplevel-invocation' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/tool-toplevel/known-bugs' ...
+ ... testing 'broken_rec_in_show.ml' => passed
+Running tests from 'tests/translprim' ...
+ ... testing 'array_spec.ml' => passed
+ ... testing 'comparison_optim.ml' => passed
+ ... testing 'comparison_table.ml' => passed
+ ... testing 'locs.ml' => passed
+ ... testing 'module_coercion.ml' => passed
+ ... testing 'ref_spec.ml' => passed
+ ... testing 'sendcache.ml' => passed
+Running tests from 'tests/tsan' ...
+ ... testing 'array_elt.ml' => skipped
+ ... testing 'exn_from_c.ml' => skipped
+ ... testing 'exn_in_callback.ml' => skipped
+ ... testing 'exn_reraise.ml' => skipped
+ ... testing 'handlers_at_tail.ml' => skipped
+ ... testing 'norace_atomics.ml' => skipped
+ ... testing 'perform.ml' => skipped
+ ... testing 'raise_through_handler.ml' => skipped
+ ... testing 'record_field.ml' => skipped
+ ... testing 'reperform.ml' => skipped
+ ... testing 'unhandled.ml' => skipped
+Running tests from 'tests/typing-core-bugs' ...
+ ... testing 'const_int_hint.ml' => passed
+ ... testing 'missing_rec_hint.ml' => passed
+ ... testing 'repeated_did_you_mean.ml' => passed
+ ... testing 'type_expected_explanation.ml' => passed
+ ... testing 'unit_fun_hints.ml' => passed
+Running tests from 'tests/typing-deprecated' ...
+ ... testing 'alerts.ml' => passed
+ ... testing 'deprecated.ml' => passed
+Running tests from 'tests/typing-extension-constructor' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/typing-extensions' ...
+ ... testing 'cast.ml' => passed
+ ... testing 'disambiguation.ml' => passed
+ ... testing 'extensions.ml' => passed
+ ... testing 'msg.ml' => passed
+ ... testing 'open_types.ml' => passed
+Running tests from 'tests/typing-external' ...
+ ... testing 'pr11392.ml' => passed
+Running tests from 'tests/typing-fstclassmod' ...
+ ... testing 'aliases.ml' => passed
+ ... testing 'fstclassmod.ml' => passed
+ ... testing 'nondep_instance.ml' => passed
+ ... testing 'scope_escape.ml' => passed
+Running tests from 'tests/typing-gadts' ...
+ ... testing 'ambiguity.ml' => passed
+ ... testing 'ambivalent_apply.ml' => passed
+ ... testing 'didier.ml' => passed
+ ... testing 'dynamic_frisch.ml' => passed
+ ... testing 'gadthead.ml' => passed
+ ... testing 'name_existentials.ml' => passed
+ ... testing 'nested_equations.ml' => passed
+ ... testing 'omega07.ml' => passed
+ ... testing 'optional_args.ml' => passed
+ ... testing 'or_patterns.ml' => passed
+ ... testing 'packed-module-recasting.ml' => passed
+ ... testing 'pr10189.ml' => passed
+ ... testing 'pr10271.ml' => passed
+ ... testing 'pr10348.ml' => passed
+ ... testing 'pr10735.ml' => passed
+ ... testing 'pr10907.ml' => passed
+ ... testing 'pr11888.ml' => passed
+ ... testing 'pr13579.ml' => passed
+ ... testing 'pr5332.ml' => passed
+ ... testing 'pr5689.ml' => passed
+ ... testing 'pr5785.ml' => passed
+ ... testing 'pr5848.ml' => passed
+ ... testing 'pr5906.ml' => passed
+ ... testing 'pr5948.ml' => passed
+ ... testing 'pr5981.ml' => passed
+ ... testing 'pr5985.ml' => passed
+ ... testing 'pr5989.ml' => passed
+ ... testing 'pr5997.ml' => passed
+ ... testing 'pr6158.ml' => passed
+ ... testing 'pr6163.ml' => passed
+ ... testing 'pr6174.ml' => passed
+ ... testing 'pr6241.ml' => passed
+ ... testing 'pr6690.ml' => passed
+ ... testing 'pr6817.ml' => passed
+ ... testing 'pr6934.ml' => passed
+ ... testing 'pr6980.ml' => passed
+ ... testing 'pr6993_bad.ml' => passed
+ ... testing 'pr7016.ml' => passed
+ ... testing 'pr7160.ml' => passed
+ ... testing 'pr7214.ml' => passed
+ ... testing 'pr7222.ml' => passed
+ ... testing 'pr7230.ml' => passed
+ ... testing 'pr7234.ml' => passed
+ ... testing 'pr7260.ml' => passed
+ ... testing 'pr7269.ml' => passed
+ ... testing 'pr7298.ml' => passed
+ ... testing 'pr7374.ml' => passed
+ ... testing 'pr7378.ml' => passed
+ ... testing 'pr7381.ml' => passed
+ ... testing 'pr7390.ml' => passed
+ ... testing 'pr7391.ml' => passed
+ ... testing 'pr7397.ml' => passed
+ ... testing 'pr7421.ml' => passed
+ ... testing 'pr7432.ml' => passed
+ ... testing 'pr7520.ml' => passed
+ ... testing 'pr7618.ml' => passed
+ ... testing 'pr7747.ml' => passed
+ ... testing 'pr7902.ml' => passed
+ ... testing 'pr9019.ml' => passed
+ ... testing 'pr9759.ml' => passed
+ ... testing 'pr9799.ml' => passed
+ ... testing 'principality-and-gadts.ml' => passed
+ ... testing 'return_type.ml' => passed
+ ... testing 'syntactic-arity.ml' => passed
+ ... testing 'term-conv.ml' => passed
+ ... testing 'test.ml' => passed
+ ... testing 'unexpected_existentials.ml' => passed
+ ... testing 'unify_mb.ml' => passed
+ ... testing 'variables_in_mcomp.ml' => passed
+ ... testing 'yallop_bugs.ml' => passed
+Running tests from 'tests/typing-immediate' ...
+ ... testing 'immediate.ml' => passed
+Running tests from 'tests/typing-implicit_unpack' ...
+ ... testing 'implicit_unpack.ml' => passed
+Running tests from 'tests/typing-kind' ...
+ ... testing 'kind_mismatch.ml' => passed
+Running tests from 'tests/typing-labels' ...
+ ... testing 'mixin.ml' => passed
+ ... testing 'mixin2.ml' => passed
+ ... testing 'mixin3.ml' => passed
+Running tests from 'tests/typing-misc' ...
+ ... testing 'apply_non_function.ml' => passed
+ ... testing 'automatic_generalize.ml' => passed
+ ... testing 'build_as_type.ml' => passed
+ ... testing 'constraints.ml' => passed
+ ... testing 'deep.ml' => passed
+ ... testing 'disambiguate_principality.ml' => passed
+ ... testing 'distant_errors.ml' => passed
+ ... testing 'empty_variant.ml' => passed
+ ... testing 'enrich_typedecl.ml' => passed
+ ... testing 'exotic_unifications.ml' => passed
+ ... testing 'exp_denom.ml' => passed
+ ... testing 'external_arity.ml' => passed
+ ... testing 'filter_params.ml' => passed
+ ... testing 'gpr2277.ml' => passed
+ ... testing 'includeclass_errors.ml' => passed
+ ... testing 'injectivity.ml' => passed
+ ... testing 'inside_out.ml' => passed
+ ... testing 'is_expansive.ml' => passed
+ ... testing 'labels.ml' => passed
+ ... testing 'let_rec_approx.ml' => passed
+ ... testing 'normalize_type.ml' => passed
+ ... testing 'occur_check.ml' => passed
+ ... testing 'open.ml' => passed
+ ... testing 'optbinders.ml' => passed
+ ... testing 'pat_type_sharing.ml' => passed
+ ... testing 'pattern_open.ml' => passed
+ ... testing 'polyvars.ml' => passed
+ ... testing 'pr6416.ml' => passed
+ ... testing 'pr6634.ml' => passed
+ ... testing 'pr6939-flat-float-array.ml' => passed
+ ... testing 'pr6939-no-flat-float-array.ml' => skipped
+ ... testing 'pr7103.ml' => passed
+ ... testing 'pr7228.ml' => passed
+ ... testing 'pr7668_bad.ml' => passed
+ ... testing 'pr7712.ml' => passed
+ ... testing 'pr7937.ml' => passed
+ ... testing 'pr8548.ml' => passed
+ ... testing 'pr8548_split.ml' => passed
+ ... testing 'printing.ml' => passed
+ ... testing 'records.ml' => passed
+ ... testing 'scope_escape.ml' => passed
+ ... testing 'typecore_empty_polyvariant_error.ml' => passed
+ ... testing 'typecore_errors.ml' => passed
+ ... testing 'typecore_nolabel_errors.ml' => passed
+ ... testing 'typetexp_errors.ml' => passed
+ ... testing 'unbound_type_variables.ml' => passed
+ ... testing 'unique_names_in_unification.ml' => passed
+ ... testing 'variance.ml' => passed
+ ... testing 'variant.ml' => passed
+ ... testing 'wellfounded.ml' => passed
+ ... testing 'wrong_kind.ml' => passed
+Running tests from 'tests/typing-misc-bugs' ...
+ ... testing 'core_array_reduced_ok.ml' => passed
+ ... testing 'gadt_declaration_check.ml' => passed
+ ... testing 'pr6303_bad.ml' => passed
+ ... testing 'pr6946_bad.ml' => passed
+Running tests from 'tests/typing-missing-cmi' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/typing-missing-cmi-2' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/typing-missing-cmi-3' ...
+ ... testing 'user.ml' => passed
+Running tests from 'tests/typing-modules' ...
+ ... testing 'Test.ml' => passed
+ ... testing 'aliases.ml' => passed
+ ... testing 'anonymous.ml' => passed
+ ... testing 'applicative_functor_type.ml' => passed
+ ... testing 'extension_constructors_errors_test.ml' => passed
+ ... testing 'firstclass.ml' => passed
+ ... testing 'functors.ml' => passed
+ ... testing 'generative.ml' => passed
+ ... testing 'illegal_permutation.ml' => passed
+ ... testing 'inclusion_errors.ml' => passed
+ ... testing 'inclusion_errors_elision.ml' => passed
+ ... testing 'merge_constraint.ml' => passed
+ ... testing 'mixmod5.ml' => passed
+ ... testing 'module_type_substitution.ml' => passed
+ ... testing 'nondep.ml' => passed
+ ... testing 'nondep_private_abbrev.ml' => passed
+ ... testing 'nongen.ml' => passed
+ ... testing 'normalize_path.ml' => passed
+ ... testing 'package_constraint.ml' => passed
+ ... testing 'packed_module_levels.ml' => passed
+ ... testing 'pr10298.ml' => passed
+ ... testing 'pr10399.ml' => passed
+ ... testing 'pr13185.ml' => passed
+ ... testing 'pr5911.ml' => passed
+ ... testing 'pr6394.ml' => passed
+ ... testing 'pr6633.ml' => passed
+ ... testing 'pr7207.ml' => passed
+ ... testing 'pr7348.ml' => passed
+ ... testing 'pr7726.ml' => passed
+ ... testing 'pr7787.ml' => passed
+ ... testing 'pr7818.ml' => passed
+ ... testing 'pr7851.ml' => passed
+ ... testing 'pr8810.ml' => passed
+ ... testing 'pr9384.ml' => passed
+ ... testing 'pr9695.ml' => passed
+ ... testing 'printing.ml' => passed
+ ... testing 'private.ml' => passed
+ ... testing 'records_errors_test.ml' => passed
+ ... testing 'recursive.ml' => passed
+ ... testing 'struct_include_optimisation.ml' => passed
+ ... testing 'unroll_private_abbrev.ml' => passed
+ ... testing 'variants_errors_test.ml' => passed
+ ... testing 'with_ghosts.ml' => passed
+Running tests from 'tests/typing-modules-bugs' ...
+ ... testing 'gatien_baron_20131019_ok.ml' => passed
+ ... testing 'pr10661_ok.ml' => passed
+ ... testing 'pr10693_bad.ml' => passed
+ ... testing 'pr5164_ok.ml' => passed
+ ... testing 'pr51_ok.ml' => passed
+ ... testing 'pr5663_ok.ml' => passed
+ ... testing 'pr5914_ok.ml' => passed
+ ... testing 'pr6240_ok.ml' => passed
+ ... testing 'pr6293_bad.ml' => passed
+ ... testing 'pr6427_bad.ml' => passed
+ ... testing 'pr6485_ok.ml' => passed
+ ... testing 'pr6513_ok.ml' => passed
+ ... testing 'pr6572_ok.ml' => passed
+ ... testing 'pr6651_ok.ml' => passed
+ ... testing 'pr6752_bad.ml' => passed
+ ... testing 'pr6752_ok.ml' => passed
+ ... testing 'pr6899_first_bad.ml' => passed
+ ... testing 'pr6899_ok.ml' => passed
+ ... testing 'pr6899_second_bad.ml' => passed
+ ... testing 'pr6944_ok.ml' => passed
+ ... testing 'pr6954_ok.ml' => passed
+ ... testing 'pr6981_ok.ml' => passed
+ ... testing 'pr6982_ok.ml' => passed
+ ... testing 'pr6985_extended.ml' => passed
+ ... testing 'pr6985_ok.ml' => passed
+ ... testing 'pr6992_bad.ml' => passed
+ ... testing 'pr7036_ok.ml' => passed
+ ... testing 'pr7082_ok.ml' => passed
+ ... testing 'pr7112_bad.ml' => passed
+ ... testing 'pr7112_ok.ml' => passed
+ ... testing 'pr7152_ok.ml' => passed
+ ... testing 'pr7182_ok.ml' => passed
+ ... testing 'pr7305_principal.ml' => passed
+ ... testing 'pr7321_ok.ml' => passed
+ ... testing 'pr7414_2_bad.ml' => passed
+ ... testing 'pr7414_bad.ml' => passed
+ ... testing 'pr7519_ok.ml' => passed
+ ... testing 'pr7601_ok.ml' => passed
+ ... testing 'pr7601a_ok.ml' => passed
+ ... testing 'pr9695_bad.ml' => passed
+Running tests from 'tests/typing-modules/pr13099' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/typing-multifile' ...
+ ... testing 'pr6372.ml' => passed
+ ... testing 'pr7325.ml' => passed
+ ... testing 'pr7563.ml' => passed
+ ... testing 'pr9218.ml' => passed
+Running tests from 'tests/typing-objects' ...
+ ... testing 'Exemples.ml' => passed
+ ... testing 'Tests.ml' => passed
+ ... testing 'abstract_rows.ml' => passed
+ ... testing 'class_2.ml' => passed
+ ... testing 'dummy.ml' => passed
+ ... testing 'errors.ml' => passed
+ ... testing 'field_kind.ml' => passed
+ ... testing 'nongen.ml' => passed
+ ... testing 'open_in_classes.ml' => passed
+ ... testing 'pr11569.ml' => passed
+ ... testing 'pr13495.ml' => passed
+ ... testing 'pr5545.ml' => passed
+ ... testing 'pr5619_bad.ml' => passed
+ ... testing 'pr5858.ml' => passed
+ ... testing 'pr6123_bad.ml' => passed
+ ... testing 'pr6383.ml' => passed
+ ... testing 'pr6907_bad.ml' => passed
+ ... testing 'pr7711_ok.ml' => passed
+ ... testing 'self_cannot_be_closed.ml' => passed
+ ... testing 'self_cannot_escape_pr7865.ml' => passed
+ ... testing 'unbound-type-var.ml' => passed
+Running tests from 'tests/typing-objects-bugs' ...
+ ... testing 'pr3968_bad.ml' => passed
+ ... testing 'pr4018_bad.ml' => passed
+ ... testing 'pr4435_bad.ml' => passed
+ ... testing 'pr4766_ok.ml' => passed
+ ... testing 'pr4824_ok.ml' => passed
+ ... testing 'pr4824a_bad.ml' => passed
+ ... testing 'pr5156_ok.ml' => passed
+ ... testing 'pr7284_bad.ml' => passed
+ ... testing 'pr7293_ok.ml' => passed
+ ... testing 'woodyatt_ok.ml' => passed
+ ... testing 'yamagata021012_ok.ml' => passed
+Running tests from 'tests/typing-ocamlc-i' ...
+ ... testing 'pervasives_leitmotiv.ml' => passed
+ ... testing 'pr4791.ml' => passed
+ ... testing 'pr6323.ml' => passed
+ ... testing 'pr7402.ml' => passed
+ ... testing 'pr7620_bad.ml' => passed
+Running tests from 'tests/typing-poly' ...
+ ... testing 'error_messages.ml' => passed
+ ... testing 'poly.ml' => passed
+ ... testing 'pr7636.ml' => passed
+ ... testing 'pr9603.ml' => passed
+Running tests from 'tests/typing-poly-bugs' ...
+ ... testing 'pr5322_ok.ml' => passed
+ ... testing 'pr5673_ok.ml' => passed
+ ... testing 'pr6922_ok.ml' => passed
+Running tests from 'tests/typing-polyvariants-bugs' ...
+ ... testing 'pr10664.ml' => passed
+ ... testing 'pr10664a.ml' => passed
+ ... testing 'pr4775_ok.ml' => passed
+ ... testing 'pr4933_ok.ml' => passed
+ ... testing 'pr5057_ok.ml' => passed
+ ... testing 'pr5057a_bad.ml' => passed
+ ... testing 'pr7199_ok.ml' => passed
+ ... testing 'pr7817_bad.ml' => passed
+ ... testing 'pr7824.ml' => passed
+ ... testing 'pr8575.ml' => passed
+ ... testing 'privrowsabate_ok.ml' => passed
+Running tests from 'tests/typing-polyvariants-bugs-2' ...
+ ... testing 'pr3918c.ml' => passed
+Running tests from 'tests/typing-private' ...
+ ... testing 'invalid_private_row.ml' => passed
+ ... testing 'private.ml' => passed
+Running tests from 'tests/typing-private-bugs' ...
+ ... testing 'pr5026_bad.ml' => passed
+ ... testing 'pr5469_ok.ml' => passed
+Running tests from 'tests/typing-recmod' ...
+ ... testing 'gpr1626.ml' => passed
+ ... testing 'inconsistent_types.ml' => passed
+ ... testing 'pr13514.ml' => passed
+ ... testing 'pr6491.ml' => passed
+ ... testing 'pr9494.ml' => passed
+ ... testing 't01bad.ml' => passed
+ ... testing 't02bad.ml' => passed
+ ... testing 't03ok.ml' => passed
+ ... testing 't04bad.ml' => passed
+ ... testing 't05bad.ml' => passed
+ ... testing 't06ok.ml' => passed
+ ... testing 't07bad.ml' => passed
+ ... testing 't08bad.ml' => passed
+ ... testing 't09bad.ml' => passed
+ ... testing 't10ok.ml' => passed
+ ... testing 't11bad.ml' => passed
+ ... testing 't12bad.ml' => passed
+ ... testing 't13ok.ml' => passed
+ ... testing 't14bad.ml' => passed
+ ... testing 't15bad.ml' => passed
+ ... testing 't16ok.ml' => passed
+ ... testing 't17ok.ml' => passed
+ ... testing 't18ok.ml' => passed
+ ... testing 't20ok.ml' => passed
+ ... testing 't21ok.ml' => passed
+ ... testing 't22ok.ml' => passed
+Running tests from 'tests/typing-recordarg' ...
+ ... testing 'recordarg.ml' => passed
+Running tests from 'tests/typing-rectypes-bugs' ...
+ ... testing 'pr5343_bad.ml' => passed
+ ... testing 'pr6174_bad.ml' => passed
+ ... testing 'pr6870_bad.ml' => passed
+Running tests from 'tests/typing-safe-linking' ...
+ ... testing 'b_bad.ml' => passed
+Running tests from 'tests/typing-shadowing-of-pervasives-submodules' ...
+ ... testing 'redefine_largefile.ml' => passed
+ ... testing 'redefine_largefile_top.ml' => passed
+Running tests from 'tests/typing-short-paths' ...
+ ... testing 'errors.ml' => passed
+ ... testing 'gpr1223.ml' => passed
+ ... testing 'pr5918.ml' => passed
+ ... testing 'pr6836.ml' => passed
+ ... testing 'pr7543.ml' => passed
+ ... testing 'short-paths.ml' => passed
+Running tests from 'tests/typing-signatures' ...
+ ... testing 'els.ml' => passed
+ ... testing 'nondep_regression.ml' => passed
+ ... testing 'pr6371.ml' => passed
+ ... testing 'pr6672.ml' => passed
+ ... testing 'regression_tsubst_error.ml' => passed
+Running tests from 'tests/typing-sigsubst' ...
+ ... testing 'sig_local_aliases.ml' => passed
+ ... testing 'sig_local_aliases_syntax_errors.ml' => passed
+ ... testing 'sigsubst.ml' => passed
+ ... testing 'test_locations.ml' => passed
+Running tests from 'tests/typing-typeparam' ...
+ ... testing 'newtype.ml' => passed
+Running tests from 'tests/typing-unboxed' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/typing-unboxed-types' ...
+ ... testing 'test.ml' => passed
+ ... testing 'test_flat.ml' => passed
+ ... testing 'test_no_flat.ml' => skipped
+Running tests from 'tests/typing-unicode' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/typing-warnings' ...
+ ... testing 'ambiguous_guarded_disjunction.ml' => passed
+ ... testing 'application.ml' => passed
+ ... testing 'coercions.ml' => passed
+ ... testing 'disable_warnings_classes.ml' => passed
+ ... testing 'exhaustiveness.ml' => passed
+ ... testing 'fragile_matching.ml' => passed
+ ... testing 'never_returns.ml' => passed
+ ... testing 'open_warnings.ml' => passed
+ ... testing 'pr5892.ml' => passed
+ ... testing 'pr6587.ml' => passed
+ ... testing 'pr6872.ml' => passed
+ ... testing 'pr7085.ml' => passed
+ ... testing 'pr7115.ml' => passed
+ ... testing 'pr7261.ml' => passed
+ ... testing 'pr7297.ml' => passed
+ ... testing 'pr7553.ml' => passed
+ ... testing 'pr9244.ml' => passed
+ ... testing 'records.ml' => passed
+ ... testing 'unused_functor_parameter.ml' => passed
+ ... testing 'unused_rec.ml' => passed
+ ... testing 'unused_recmodule.ml' => passed
+ ... testing 'unused_types.ml' => passed
+ ... testing 'warning16.ml' => passed
+Running tests from 'tests/uid-deps' ...
+ ... testing 'link_intf_impl.ml' => passed
+Running tests from 'tests/uids' ...
+ ... testing 'intf_uids_test.ml' => passed
+Running tests from 'tests/unboxed-primitive-args' ...
+ ... testing 'test.ml' => passed
+Running tests from 'tests/unicode' ...
+ ... testing '見.ml' => passed
+Running tests from 'tests/unwind' ...
+ ... testing 'driver.ml' => skipped
+Running tests from 'tests/utils' ...
+ ... testing 'edit_distance.ml' => passed
+ ... testing 'find_first_mono.ml' => passed
+ ... testing 'magic_number.ml' => passed
+ ... testing 'overflow_detection.ml' => passed
+ ... testing 'test_strongly_connected_components.ml' => passed
+Running tests from 'tests/warnings' ...
+ ... testing 'deprecated_module.ml' => passed
+ ... testing 'deprecated_module_assigment.ml' => passed
+ ... testing 'deprecated_module_use.ml' => passed
+ ... testing 'deprecated_mutable.ml' => passed
+ ... testing 'deprecated_warning_specs.ml' => passed
+ ... testing 'mnemonics.mll' => passed
+ ... testing 'w01.ml' => passed
+ ... testing 'w03.ml' => passed
+ ... testing 'w04.ml' => passed
+ ... testing 'w04_failure.ml' => passed
+ ... testing 'w06.ml' => passed
+ ... testing 'w26_alias.ml' => passed
+ ... testing 'w32.ml' => passed
+ ... testing 'w32b.ml' => passed
+ ... testing 'w33.ml' => passed
+ ... testing 'w44.ml' => passed
+ ... testing 'w45.ml' => passed
+ ... testing 'w47_inline.ml' => passed
+ ... testing 'w47_ppwarning.ml' => passed
+ ... testing 'w50.ml' => passed
+ ... testing 'w51.ml' => passed
+ ... testing 'w51_bis.ml' => passed
+ ... testing 'w52.ml' => passed
+ ... testing 'w53.ml' => passed
+ ... testing 'w53_across_cmi.ml' => passed
+ ... testing 'w53_flags.ml' => passed
+ ... testing 'w53_marshalled.ml' => passed
+ ... testing 'w54.ml' => passed
+ ... testing 'w55.ml' => passed
+ ... testing 'w58.ml' => passed
+ ... testing 'w59.ml' => passed
+ ... testing 'w60.ml' => passed
+ ... testing 'w74.ml' => passed
+Running tests from 'tests/weak-ephe-final' ...
+ ... testing 'ephe_infix.ml' => passed
+ ... testing 'ephetest.ml' => passed
+ ... testing 'ephetest2.ml' => passed
+ ... testing 'ephetest3.ml' => passed
+ ... testing 'ephetest_par.ml' => passed
+ ... testing 'finaliser.ml' => passed
+ ... testing 'finaliser2.ml' => passed
+ ... testing 'finaliser_handover.ml' => passed
+ ... testing 'pr12001.ml' => passed
+ ... testing 'weaklifetime.ml' => passed
+ ... testing 'weaklifetime2.ml' => passed
+ ... testing 'weaktest.ml' => passed
+ ... testing 'weaktest_par_load.ml' => passed
+Running tests from 'tests/win-unicode' ...
+ ... testing 'mltest.ml' => passed
+
+
+List of skipped tests:
+    tests/arch-power
+    tests/asmcomp/lift_mutable_let_flambda.ml
+    tests/asmcomp/unrolling_flambda.ml
+    tests/asmcomp/unrolling_flambda2.ml
+    tests/asmgen/integr.cmm
+    tests/ephe-c-api
+    tests/flambda/afl_lazy.ml
+    tests/flambda/specialise.ml
+    tests/frame-pointers
+    tests/letrec-check/no_flat_float_array.ml
+    tests/lib-bigarray-2/bigarrfml.ml
+    tests/lib-dynlink-csharp
+    tests/lib-unix/isatty/isatty_tty.ml
+    tests/lib-unix/win-channel-of
+    tests/lib-unix/win-createprocess
+    tests/lib-unix/win-env
+    tests/lib-unix/win-socketpair
+    tests/lib-unix/win-stat
+    tests/lib-unix/win-symlink
+    tests/manual-intf-c
+    tests/tsan
+    tests/typing-misc/pr6939-no-flat-float-array.ml
+    tests/typing-unboxed-types/test_no_flat.ml
+    tests/unwind
+
+List of failed tests:
+    tests/backtrace/pr2195.ml
+
+Summary:
+  1421 tests passed
+    40 tests skipped
+     1 tests failed
+     0 tests not started (parent test skipped or failed)
+     0 unexpected errors
+  1462 tests considered
+#### Something failed. Exiting with error status.
+
+make[1]: *** [Makefile:329: report] Error 4
+make: *** [Makefile:166: all] Error 2
+make: Leaving directory '/tmp/src/ocaml-5.3.0/testsuite'
+>>> ERROR: ocaml5: check failed
 >>> ERROR: ocaml5: rootbld failed
 >>> ocaml5: Cleaning up build chroot

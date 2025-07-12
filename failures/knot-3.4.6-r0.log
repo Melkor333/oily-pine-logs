@@ -11,77 +11,613 @@ knotd.initd: OK
 >>> knot: Preparing build chroot...
 installing oils!
 fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
-WARNING: updating and opening http://dl-cdn.alpinelinux.org/alpine/edge/main: temporary error (try again later)
 WARNING: opening /home/packager/packages//# for oils: No such file or directory
-ERROR: unable to select packages:
-  abuild (no such package):
-    required by: world[abuild]
-  gnutls-dev (no such package):
-    required by: world[gnutls-dev]
-  libedit-dev (no such package):
-    required by: world[libedit-dev]
-  libidn2-dev (no such package):
-    required by: world[libidn2-dev]
-  libtool (no such package):
-    required by: world[libtool]
-  protobuf-c-dev (no such package):
-    required by: world[protobuf-c-dev]
-  userspace-rcu-dev (no such package):
-    required by: world[userspace-rcu-dev]
-  busybox (no such package):
-    required by: oils-for-unix-0.28.0-r0[busybox]
-                 alpine-base-3.22.0_alpha20250108-r1[busybox]
-  so:libgcc_s.so.1 (no such package):
-    required by: oils-for-unix-0.28.0-r0[so:libgcc_s.so.1]
-                 binutils-2.44-r0[so:libgcc_s.so.1]
-                 softhsm-2.6.1-r5[so:libgcc_s.so.1]
-                 botan-libs-2.19.5-r0[so:libgcc_s.so.1]
-  so:libstdc++.so.6 (no such package):
-    required by: oils-for-unix-0.28.0-r0[so:libstdc++.so.6]
-                 binutils-2.44-r0[so:libstdc++.so.6]
-                 softhsm-2.6.1-r5[so:libstdc++.so.6]
-                 botan-libs-2.19.5-r0[so:libstdc++.so.6]
-  ifupdown-any (no such package):
-    required by: openrc-0.62.2-r1[ifupdown-any]
-  alpine-conf (no such package):
-    required by: alpine-base-3.22.0_alpha20250108-r1[alpine-conf]
-  busybox-mdev-openrc (no such package):
-    required by: alpine-base-3.22.0_alpha20250108-r1[busybox-mdev-openrc]
-  busybox-openrc (no such package):
-    required by: alpine-base-3.22.0_alpha20250108-r1[busybox-openrc]
-  busybox-suid (no such package):
-    required by: alpine-base-3.22.0_alpha20250108-r1[busybox-suid]
-  file (no such package):
-    required by: build-base-0.5-r3[file]
-  gcc (no such package):
-    required by: build-base-0.5-r3[gcc]
-  g++ (no such package):
-    required by: build-base-0.5-r3[g++]
-  make (no such package):
-    required by: build-base-0.5-r3[make]
-  fortify-headers (no such package):
-    required by: build-base-0.5-r3[fortify-headers]
-  patch (no such package):
-    required by: build-base-0.5-r3[patch]
-  pkgconfig (no such package):
-    required by: openssl-dev-3.5.0-r0[pkgconfig]
-                 lmdb-dev-0.9.33-r0[pkgconfig]
-                 fstrm-dev-0.6.1-r4[pkgconfig]
-                 libcap-ng-dev-0.8.5-r0[pkgconfig]
-                 zlib-dev-1.3.1-r2[pkgconfig]
-                 jansson-dev-2.14-r4[pkgconfig]
-                 ngtcp2-dev-1.12.0-r0[pkgconfig]
-                 libmaxminddb-dev-1.9.1-r0[pkgconfig]
-                 nghttp2-dev-1.65.0-r0[pkgconfig]
-  so:libcurl.so.4 (no such package):
-    required by: git-2.49.0-r0[so:libcurl.so.4]
-  so:libpcre2-8.so.0 (no such package):
-    required by: git-2.49.0-r0[so:libpcre2-8.so.0]
-  so:libgnutls.so.30 (no such package):
-    required by: ngtcp2-gnutls-1.12.0-r0[so:libgnutls.so.30]
-  so:libgomp.so.1 (no such package):
-    required by: botan-libs-2.19.5-r0[so:libgomp.so.1]
-  so:liblzma.so.5 (no such package):
-    required by: botan-libs-2.19.5-r0[so:liblzma.so.5]
+(1/179) Installing musl (1.2.5-r13)
+(2/179) Installing libcrypto3 (3.5.1-r0)
+(3/179) Installing libssl3 (3.5.1-r0)
+(4/179) Installing zlib (1.3.1-r2)
+(5/179) Installing zstd-libs (1.5.7-r1)
+(6/179) Installing libapk (3.0.0_rc5_git20250613-r0)
+(7/179) Installing ca-certificates-bundle (20241121-r2)
+(8/179) Installing apk-tools (3.0.0_rc5_git20250613-r0)
+(9/179) Installing libcap2 (2.76-r0)
+(10/179) Installing libcap-getcap (2.76-r0)
+(11/179) Installing fakeroot (1.37.1.2-r0)
+(12/179) Installing scanelf (1.3.8-r1)
+(13/179) Installing musl-utils (1.2.5-r13)
+(14/179) Installing libgcc (14.3.0-r5)
+(15/179) Installing libstdc++ (14.3.0-r5)
+(16/179) Installing lzip (1.25-r0)
+(17/179) Installing openssl (3.5.1-r0)
+(18/179) Installing patch (2.8-r0)
+(19/179) Installing pkgconf (2.5.1-r0)
+(20/179) Installing acl-libs (2.3.2-r1)
+(21/179) Installing tar (1.35-r4)
+(22/179) Installing alpine-baselayout-data (3.7.0-r0)
+(23/179) Installing busybox (1.37.0-r19)
+Executing busybox-1.37.0-r19.post-install
+(24/179) Installing ssl_client (1.37.0-r19)
+(25/179) Installing ncurses-terminfo-base (6.5_p20250705-r0)
+(26/179) Installing libncursesw (6.5_p20250705-r0)
+(27/179) Installing readline (8.3.0-r1)
+(28/179) Installing oils-for-unix (0.28.0-r0)
+(29/179) Installing oils-for-unix-binsh (0.28.0-r0)
+(30/179) Installing abuild (3.15.0-r2)
+Executing abuild-3.15.0-r2.pre-install
+(31/179) Installing abuild-sudo (3.15.0-r2)
+(32/179) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(33/179) Installing bridge (1.5-r5)
+(34/179) Installing ifupdown-ng (0.12.1-r7)
+(35/179) Installing openrc-user (0.62.5-r0)
+(36/179) Installing openrc (0.62.5-r0)
+Executing openrc-0.62.5-r0.post-install
+(37/179) Installing mdev-conf (4.8-r0)
+(38/179) Installing busybox-mdev-openrc (1.37.0-r19)
+(39/179) Installing alpine-conf (3.20.0-r0)
+(40/179) Installing alpine-keys (2.5-r0)
+(41/179) Installing alpine-release (3.23.0_alpha20250612-r0)
+(42/179) Installing busybox-openrc (1.37.0-r19)
+(43/179) Installing busybox-suid (1.37.0-r19)
+(44/179) Installing alpine-base (3.23.0_alpha20250612-r0)
+(45/179) Installing m4 (1.4.20-r0)
+(46/179) Installing bison (3.8.2-r2)
+(47/179) Installing bsd-compat-headers (0.7.2-r6)
+(48/179) Installing jansson (2.14.1-r0)
+(49/179) Installing binutils (2.44-r0)
+(50/179) Installing libmagic (5.46-r2)
+(51/179) Installing file (5.46-r2)
+(52/179) Installing libgomp (14.3.0-r5)
+(53/179) Installing libatomic (14.3.0-r5)
+(54/179) Installing gmp (6.3.0-r4)
+(55/179) Installing isl26 (0.26-r1)
+(56/179) Installing mpfr4 (4.2.2-r0)
+(57/179) Installing mpc1 (1.3.1-r1)
+(58/179) Installing gcc (14.3.0-r5)
+(59/179) Installing libstdc++-dev (14.3.0-r5)
+(60/179) Installing musl-dev (1.2.5-r13)
+(61/179) Installing g++ (14.3.0-r5)
+(62/179) Installing make (4.4.1-r3)
+(63/179) Installing fortify-headers (1.1-r5)
+(64/179) Installing build-base (0.5-r3)
+(65/179) Installing flex (2.6.4-r7)
+(66/179) Installing fstrm (0.6.1-r4)
+(67/179) Installing fstrm-dev (0.6.1-r4)
+(68/179) Installing brotli-libs (1.1.0-r2)
+(69/179) Installing c-ares (1.34.5-r0)
+(70/179) Installing libunistring (1.3-r0)
+(71/179) Installing libidn2 (2.3.8-r0)
+(72/179) Installing nghttp2-libs (1.66.0-r0)
+(73/179) Installing libpsl (0.21.5-r3)
+(74/179) Installing libcurl (8.14.1-r2)
+(75/179) Installing libexpat (2.7.1-r0)
+(76/179) Installing pcre2 (10.43-r1)
+(77/179) Installing git (2.50.1-r0)
+(78/179) Installing git-init-template (2.50.1-r0)
+(79/179) Installing nettle (3.10.1-r0)
+(80/179) Installing libffi (3.5.1-r0)
+(81/179) Installing libtasn1 (4.20.0-r0)
+(82/179) Installing p11-kit (0.25.5-r2)
+(83/179) Installing gnutls (3.8.8-r0)
+(84/179) Installing gnutls-c++ (3.8.8-r0)
+(85/179) Installing libgmpxx (6.3.0-r4)
+(86/179) Installing gmp-dev (6.3.0-r4)
+(87/179) Installing nettle-dev (3.10.1-r0)
+(88/179) Installing libidn2-dev (2.3.8-r0)
+(89/179) Installing libtasn1-progs (4.20.0-r0)
+(90/179) Installing libtasn1-dev (4.20.0-r0)
+(91/179) Installing p11-kit-dev (0.25.5-r2)
+(92/179) Installing zlib-dev (1.3.1-r2)
+(93/179) Installing gnutls-dev (3.8.8-r0)
+(94/179) Installing jansson-dev (2.14.1-r0)
+(95/179) Installing linux-headers (6.15.5-r0)
+(96/179) Installing libcap-ng (0.8.5-r0)
+(97/179) Installing libcap-ng-dev (0.8.5-r0)
+(98/179) Installing libformw (6.5_p20250705-r0)
+(99/179) Installing libmenuw (6.5_p20250705-r0)
+(100/179) Installing libpanelw (6.5_p20250705-r0)
+(101/179) Installing libncurses++ (6.5_p20250705-r0)
+(102/179) Installing ncurses-dev (6.5_p20250705-r0)
+(103/179) Installing libedit (20250104.3.1-r1)
+(104/179) Installing libedit-dev (20250104.3.1-r1)
+(105/179) Installing libmaxminddb-libs (1.9.1-r0)
+(106/179) Installing libmaxminddb-dev (1.9.1-r0)
+(107/179) Installing libltdl (2.5.4-r1)
+(108/179) Installing libtool (2.5.4-r1)
+(109/179) Installing lmdb (0.9.33-r0)
+(110/179) Installing lmdb-dev (0.9.33-r0)
+(111/179) Installing nghttp2-dev (1.66.0-r0)
+(112/179) Installing ngtcp2 (1.12.0-r0)
+(113/179) Installing ngtcp2-gnutls (1.12.0-r0)
+(114/179) Installing ngtcp2-dev (1.12.0-r0)
+(115/179) Installing openssl-dev (3.5.1-r0)
+(116/179) Installing libbz2 (1.0.8-r6)
+(117/179) Installing perl (5.42.0-r0)
+(118/179) Installing perl-error (0.17030-r0)
+(119/179) Installing perl-git (2.50.1-r0)
+(120/179) Installing git-perl (2.50.1-r0)
+(121/179) Installing abseil-cpp-city (20240722.1-r2)
+(122/179) Installing abseil-cpp-low-level-hash (20240722.1-r2)
+(123/179) Installing abseil-cpp-hash (20240722.1-r2)
+(124/179) Installing abseil-cpp-log-internal-nullguard (20240722.1-r2)
+(125/179) Installing abseil-cpp-raw-logging-internal (20240722.1-r2)
+(126/179) Installing abseil-cpp-strings-internal (20240722.1-r2)
+(127/179) Installing abseil-cpp-strings (20240722.1-r2)
+(128/179) Installing abseil-cpp-log-internal-check-op (20240722.1-r2)
+(129/179) Installing abseil-cpp-spinlock-wait (20240722.1-r2)
+(130/179) Installing abseil-cpp-base (20240722.1-r2)
+(131/179) Installing abseil-cpp-debugging-internal (20240722.1-r2)
+(132/179) Installing abseil-cpp-stacktrace (20240722.1-r2)
+(133/179) Installing abseil-cpp-symbolize (20240722.1-r2)
+(134/179) Installing abseil-cpp-examine-stack (20240722.1-r2)
+(135/179) Installing abseil-cpp-log-globals (20240722.1-r2)
+(136/179) Installing abseil-cpp-log-internal-globals (20240722.1-r2)
+(137/179) Installing abseil-cpp-int128 (20240722.1-r2)
+(138/179) Installing abseil-cpp-str-format-internal (20240722.1-r2)
+(139/179) Installing abseil-cpp-time-zone (20240722.1-r2)
+(140/179) Installing abseil-cpp-time (20240722.1-r2)
+(141/179) Installing abseil-cpp-log-internal-format (20240722.1-r2)
+(142/179) Installing abseil-cpp-log-sink (20240722.1-r2)
+(143/179) Installing abseil-cpp-kernel-timeout-internal (20240722.1-r2)
+(144/179) Installing abseil-cpp-malloc-internal (20240722.1-r2)
+(145/179) Installing abseil-cpp-synchronization (20240722.1-r2)
+(146/179) Installing abseil-cpp-log-internal-log-sink-set (20240722.1-r2)
+(147/179) Installing abseil-cpp-log-internal-proto (20240722.1-r2)
+(148/179) Installing abseil-cpp-strerror (20240722.1-r2)
+(149/179) Installing abseil-cpp-log-internal-message (20240722.1-r2)
+(150/179) Installing abseil-cpp-raw-hash-set (20240722.1-r2)
+(151/179) Installing abseil-cpp-crc-internal (20240722.1-r2)
+(152/179) Installing abseil-cpp-crc32c (20240722.1-r2)
+(153/179) Installing abseil-cpp-crc-cord-state (20240722.1-r2)
+(154/179) Installing abseil-cpp-cord-internal (20240722.1-r2)
+(155/179) Installing abseil-cpp-exponential-biased (20240722.1-r2)
+(156/179) Installing abseil-cpp-cordz-functions (20240722.1-r2)
+(157/179) Installing abseil-cpp-cordz-handle (20240722.1-r2)
+(158/179) Installing abseil-cpp-cordz-info (20240722.1-r2)
+(159/179) Installing abseil-cpp-cord (20240722.1-r2)
+(160/179) Installing abseil-cpp-die-if-null (20240722.1-r2)
+(161/179) Installing abseil-cpp-log-internal-conditions (20240722.1-r2)
+(162/179) Installing abseil-cpp-status (20240722.1-r2)
+(163/179) Installing abseil-cpp-statusor (20240722.1-r2)
+(164/179) Installing abseil-cpp-throw-delegate (20240722.1-r2)
+(165/179) Installing abseil-cpp-log-initialize (20240722.1-r2)
+(166/179) Installing libprotoc (31.1-r0)
+(167/179) Installing protoc (31.1-r0)
+(168/179) Installing libprotobuf-lite (31.1-r0)
+(169/179) Installing protobuf (31.1-r0)
+(170/179) Installing libprotobuf (31.1-r0)
+(171/179) Installing protobuf-c-compiler (1.5.2-r1)
+(172/179) Installing protobuf-c (1.5.2-r1)
+(173/179) Installing protobuf-c-dev (1.5.2-r1)
+(174/179) Installing sed (4.9-r2)
+(175/179) Installing sqlite (3.50.2-r0)
+(176/179) Installing sqlite-libs (3.50.2-r0)
+(177/179) Installing softhsm (2.6.1-r6)
+(178/179) Installing userspace-rcu (0.15.2-r0)
+(179/179) Installing userspace-rcu-dev (0.15.2-r0)
+Executing busybox-1.37.0-r19.trigger
+OK: 350 MiB in 179 packages
+>>> knot: Fetching https://secure.nic.cz/files/knot-dns/knot-3.4.6.tar.xz
+>>> knot: Checking sha512sums...
+knot-3.4.6.tar.xz: OK
+knotd.confd: OK
+knotd.initd: OK
+>>> knot: Unpacking /var/cache/distfiles/knot-3.4.6.tar.xz...
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for pthread_np.h... no
+checking for sys/uio.h... yes
+checking for bsd/string.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking dependency style of cc... (cached) gcc3
+checking how to run the C preprocessor... cc -E
+checking whether C compiler accepts "-fpredictive-commoning"... yes
+checking whether the linker accepts "-Wl,--exclude-libs,ALL"... yes
+checking whether byte ordering is bigendian... no
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-file... no
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for sphinx-build... false
+checking for cc options needed to detect all undeclared functions... none needed
+checking for gnutls >= 3.6.10... yes
+checking for gnutls_pkcs11_copy_pubkey... yes
+checking whether GNUTLS_SIGN_EDDSA_ED448 is declared... yes
+checking for gnutls_early_cipher_get... yes
+checking for recvmmsg... yes
+checking for sendmmsg... yes
+checking for libbpf... no
+checking whether SO_REUSEPORT is declared... yes
+checking for libsystemd... no
+checking for libsystemd-daemon libsystemd-journal... no
+checking for dbus-1... no
+checking for kqueue... no
+checking for epoll_create... yes
+checking for liburcu... yes
+checking for protoc-c... /usr/bin/protoc-c
+checking for libfstrm... yes
+checking for libprotobuf-c >= 1.0.0... yes
+checking for libmaxminddb... yes
+checking for lmdb >= 0.9.15... yes
+checking for libedit... yes
+checking for libngtcp2 >= 0.17.0 libngtcp2_crypto_gnutls... yes
+checking for libidn2 >= 2.0.0... yes
+checking for libnghttp2... yes
+checking for cap-ng... no
+checking for cap-ng.h... yes
+checking for library containing capng_apply... -lcap-ng
+checking for library containing pthread_create... none required
+checking for library containing dlopen... none required
+checking for library containing pow... none required
+checking for library containing pthread_setaffinity_np... none required
+checking for sys/types.h... (cached) yes
+checking for netinet/in.h... yes
+checking for arpa/nameser.h... yes
+checking for netdb.h... yes
+checking for resolv.h... yes
+checking for accept4... yes
+checking for fgetln... yes
+checking for getline... yes
+checking for initgroups... yes
+checking for malloc_trim... no
+checking for setgroups... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for sysctlbyname... no
+checking for explicit_bzero... yes
+checking for explicit_memset... no
+checking for vasprintf... yes
+checking whether the -Werror option is usable... yes
+checking for simple visibility declarations... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating src/libknot/version.h
+config.status: creating src/libdnssec/version.h
+config.status: creating src/libzscanner/version.h
+config.status: creating src/knotd.pc
+config.status: creating src/libknot.pc
+config.status: creating src/libdnssec.pc
+config.status: creating src/libzscanner.pc
+config.status: creating Makefile
+config.status: creating Doxyfile
+config.status: creating doc/Makefile
+config.status: creating tests/Makefile
+config.status: creating tests-fuzz/Makefile
+config.status: creating samples/Makefile
+config.status: creating distro/Makefile
+config.status: creating python/Makefile
+config.status: creating python/knot_exporter/Makefile
+config.status: creating python/knot_exporter/pyproject.toml
+config.status: creating python/knot_exporter/setup.py
+config.status: creating python/libknot/Makefile
+config.status: creating python/libknot/pyproject.toml
+config.status: creating python/libknot/setup.py
+config.status: creating python/libknot/libknot/__init__.py
+config.status: creating src/Makefile
+config.status: creating src/libknot/xdp/Makefile
+config.status: creating src/knot/modules/static_modules.h
+config.status: creating doc/modules.rst
+config.status: creating src/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+  Knot DNS 3.4.6
+
+    Target:   linux-musl x86_64 little-endian
+    Compiler: cc
+    CFLAGS:   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning 
+    LIBS:      -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+    LibURCU:  -lurcu-common -lurcu 
+    GnuTLS:   -lgnutls -I/usr/include/p11-kit-1
+    Libedit:  -ledit -I/usr/include/editline
+    LMDB:     -llmdb 
+    Config:   500 MiB default mapsize
+
+    Prefix:      /usr
+    Run dir:     /run/knot
+    Storage dir: /var/lib/knot
+    Config dir:  /etc/knot
+    Module dir:  /usr/lib/knot/modules-3.4
+
+    Static modules: authsignal cookies dnsproxy noudp onlinesign probe queryacl rrl stats synthrecord whoami 
+    Shared modules: dnstap geoip 
+
+    Knot DNS libraries:     yes
+    Knot DNS daemon:        yes
+    Knot DNS utilities:     yes
+    Knot DNS documentation: yes
+
+    Use recvmmsg:           yes
+    Use SO_REUSEPORT(_LB):  yes
+    XDP support:            no
+    DoQ support:            yes
+    Socket polling:         epoll
+    Atomic support:         C11
+    Memory allocator:       auto
+    Fast zone parser:       yes
+    Utilities with IDN:     libidn2
+    Utilities with DoH:     libnghttp2
+    Utilities with Dnstap:  no
+    MaxMind DB support:     yes
+    Systemd integration:    no
+    D-Bus support:          no
+    POSIX capabilities:     yes
+    PKCS #11 support:       yes
+    Ed448 support:          yes
+
+    Code coverage:          no
+    Sanitizer:              no
+    LibFuzzer:              no
+    OSS-Fuzz:               no
+
+Making all in src
+make[1]: Entering directory '/tmp/src/knot-3.4.6/src'
+/usr/bin/protoc-c --c_out=. -I. contrib/dnstap/dnstap.proto
+/usr/bin/protoc-c --c_out=. -I. contrib/dnstap/dnstap.proto
+NOTE: Compilation of scanner.c can take several minutes!
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1752122974.719346    3956 main.cc:45] `protoc-c` is deprecated. Please use `protoc` instead!
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1752122974.720161    3955 main.cc:45] `protoc-c` is deprecated. Please use `protoc` instead!
+make  all-recursive
+make[2]: Entering directory '/tmp/src/knot-3.4.6/src'
+make[3]: Entering directory '/tmp/src/knot-3.4.6/src'
+cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline          -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/kdig/khost-kdig_exec.o -MD -MP -MF utils/kdig/.deps/khost-kdig_exec.Tpo -c -o utils/kdig/khost-kdig_exec.o `test -f 'utils/kdig/kdig_exec.c' || echo './'`utils/kdig/kdig_exec.c
+cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline          -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/kdig/khost-kdig_params.o -MD -MP -MF utils/kdig/.deps/khost-kdig_params.Tpo -c -o utils/kdig/khost-kdig_params.o `test -f 'utils/kdig/kdig_params.c' || echo './'`utils/kdig/kdig_params.c
+cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline          -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/kdig/kdig-kdig_exec.o -MD -MP -MF utils/kdig/.deps/kdig-kdig_exec.Tpo -c -o utils/kdig/kdig-kdig_exec.o `test -f 'utils/kdig/kdig_exec.c' || echo './'`utils/kdig/kdig_exec.c
+cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline          -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/kdig/kdig-kdig_main.o -MD -MP -MF utils/kdig/.deps/kdig-kdig_main.Tpo -c -o utils/kdig/kdig-kdig_main.o `test -f 'utils/kdig/kdig_main.c' || echo './'`utils/kdig/kdig_main.c
+cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline          -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/kdig/kdig-kdig_params.o -MD -MP -MF utils/kdig/.deps/kdig-kdig_params.Tpo -c -o utils/kdig/kdig-kdig_params.o `test -f 'utils/kdig/kdig_params.c' || echo './'`utils/kdig/kdig_params.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-exec.lo -MD -MP -MF utils/common/.deps/libknotus_la-exec.Tpo -c -o utils/common/libknotus_la-exec.lo `test -f 'utils/common/exec.c' || echo './'`utils/common/exec.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-hex.lo -MD -MP -MF utils/common/.deps/libknotus_la-hex.Tpo -c -o utils/common/libknotus_la-hex.lo `test -f 'utils/common/hex.c' || echo './'`utils/common/hex.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-https.lo -MD -MP -MF utils/common/.deps/libknotus_la-https.Tpo -c -o utils/common/libknotus_la-https.lo `test -f 'utils/common/https.c' || echo './'`utils/common/https.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-lookup.lo -MD -MP -MF utils/common/.deps/libknotus_la-lookup.Tpo -c -o utils/common/libknotus_la-lookup.lo `test -f 'utils/common/lookup.c' || echo './'`utils/common/lookup.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-msg.lo -MD -MP -MF utils/common/.deps/libknotus_la-msg.Tpo -c -o utils/common/libknotus_la-msg.lo `test -f 'utils/common/msg.c' || echo './'`utils/common/msg.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-netio.lo -MD -MP -MF utils/common/.deps/libknotus_la-netio.Tpo -c -o utils/common/libknotus_la-netio.lo `test -f 'utils/common/netio.c' || echo './'`utils/common/netio.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-params.lo -MD -MP -MF utils/common/.deps/libknotus_la-params.Tpo -c -o utils/common/libknotus_la-params.lo `test -f 'utils/common/params.c' || echo './'`utils/common/params.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-quic.lo -MD -MP -MF utils/common/.deps/libknotus_la-quic.Tpo -c -o utils/common/libknotus_la-quic.lo `test -f 'utils/common/quic.c' || echo './'`utils/common/quic.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-resolv.lo -MD -MP -MF utils/common/.deps/libknotus_la-resolv.Tpo -c -o utils/common/libknotus_la-resolv.lo `test -f 'utils/common/resolv.c' || echo './'`utils/common/resolv.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-sign.lo -MD -MP -MF utils/common/.deps/libknotus_la-sign.Tpo -c -o utils/common/libknotus_la-sign.lo `test -f 'utils/common/sign.c' || echo './'`utils/common/sign.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.   -include ../src/config.h -DCONFIG_DIR='"/etc/knot"' -DSTORAGE_DIR='"/var/lib/knot"' -DRUN_DIR='"/run/knot"' -DMODULE_DIR='"/usr/lib/knot/modules-3.4"' -DMODULE_INSTDIR='"/usr/lib/knot/modules-3.4"' -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline         -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-signal.lo -MD -MP -MF utils/common/.deps/libknotus_la-signal.Tpo -c -o utils/common/libknotus_la-signal.lo `test -f 'utils/common/signal.c' || echo './'`utils/common/signal.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-netio.lo -MD -MP -MF utils/common/.deps/libknotus_la-netio.Tpo -c utils/common/netio.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-netio.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-exec.lo -MD -MP -MF utils/common/.deps/libknotus_la-exec.Tpo -c utils/common/exec.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-exec.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-params.lo -MD -MP -MF utils/common/.deps/libknotus_la-params.Tpo -c utils/common/params.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-params.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-msg.lo -MD -MP -MF utils/common/.deps/libknotus_la-msg.Tpo -c utils/common/msg.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-msg.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-hex.lo -MD -MP -MF utils/common/.deps/libknotus_la-hex.Tpo -c utils/common/hex.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-hex.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-resolv.lo -MD -MP -MF utils/common/.deps/libknotus_la-resolv.Tpo -c utils/common/resolv.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-resolv.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-https.lo -MD -MP -MF utils/common/.deps/libknotus_la-https.Tpo -c utils/common/https.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-https.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-lookup.lo -MD -MP -MF utils/common/.deps/libknotus_la-lookup.Tpo -c utils/common/lookup.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-lookup.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-signal.lo -MD -MP -MF utils/common/.deps/libknotus_la-signal.Tpo -c utils/common/signal.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-signal.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-sign.lo -MD -MP -MF utils/common/.deps/libknotus_la-sign.Tpo -c utils/common/sign.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-sign.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -include ../src/config.h "\\\\\\-DCONFIG_DIR=\"/etc/knot" "\\\\\\-DSTORAGE_DIR=\"/var/lib/knot" "\\\\\\-DRUN_DIR=\"/run/knot" "\\\\\\-DMODULE_DIR=\"/usr/lib/knot/modules-3.4" "\\\\\\-DMODULE_INSTDIR=\"/usr/lib/knot/modules-3.4" -fvisibility=hidden -I/usr/include/p11-kit-1 -I/usr/include/editline -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wshadow -Werror=format-security -Werror=implicit -Werror=attributes -Wstrict-prototypes -fpredictive-commoning -MT utils/common/libknotus_la-quic.lo -MD -MP -MF utils/common/.deps/libknotus_la-quic.Tpo -c utils/common/quic.c  -fPIC -DPIC -o utils/common/.libs/libknotus_la-quic.o
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6634: utils/common/libknotus_la-msg.lo] Error 1
+make[3]: *** Waiting for unfinished jobs....
+mv -f utils/kdig/.deps/kdig-kdig_main.Tpo utils/kdig/.deps/kdig-kdig_main.Po
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6613: utils/common/libknotus_la-hex.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6669: utils/common/libknotus_la-sign.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6662: utils/common/libknotus_la-resolv.lo] Error 1
+make[3]: *** [Makefile:6676: utils/common/libknotus_la-signal.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6648: utils/common/libknotus_la-params.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6620: utils/common/libknotus_la-https.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6627: utils/common/libknotus_la-lookup.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6655: utils/common/libknotus_la-quic.lo] Error 1
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6641: utils/common/libknotus_la-netio.lo] Error 1
+mv -f utils/kdig/.deps/khost-kdig_exec.Tpo utils/kdig/.deps/khost-kdig_exec.Po
+mv -f utils/kdig/.deps/kdig-kdig_exec.Tpo utils/kdig/.deps/kdig-kdig_exec.Po
+mv -f utils/kdig/.deps/khost-kdig_params.Tpo utils/kdig/.deps/khost-kdig_params.Po
+mv -f utils/kdig/.deps/kdig-kdig_params.Tpo utils/kdig/.deps/kdig-kdig_params.Po
+cc: warning: \\\-DCONFIG_DIR="/etc/knot: linker input file unused because linking not done
+cc: error: \\\-DCONFIG_DIR="/etc/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file unused because linking not done
+cc: error: \\\-DSTORAGE_DIR="/var/lib/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DRUN_DIR="/run/knot: linker input file unused because linking not done
+cc: error: \\\-DRUN_DIR="/run/knot: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_DIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+cc: warning: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file unused because linking not done
+cc: error: \\\-DMODULE_INSTDIR="/usr/lib/knot/modules-3.4: linker input file not found: No such file or directory
+make[3]: *** [Makefile:6606: utils/common/libknotus_la-exec.lo] Error 1
+make[3]: Leaving directory '/tmp/src/knot-3.4.6/src'
+make[2]: *** [Makefile:7337: all-recursive] Error 1
+make[2]: Leaving directory '/tmp/src/knot-3.4.6/src'
+make[1]: *** [Makefile:2551: all] Error 2
+make[1]: Leaving directory '/tmp/src/knot-3.4.6/src'
+make: *** [Makefile:495: all-recursive] Error 1
+>>> ERROR: knot: build failed
 >>> ERROR: knot: rootbld failed
 >>> knot: Cleaning up build chroot
