@@ -1,0 +1,844 @@
+>>> ulogd: Validating /home/packager/oily-pine/main/ulogd/APKBUILD...
+>>> ulogd: Cleaning up srcdir
+>>> ulogd: Cleaning up pkgdir
+>>> ulogd: Cleaning up tmpdir
+>>> ulogd: Fetching https://www.netfilter.org/projects/ulogd/files/ulogd-2.0.8.tar.bz2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  425k  100  425k    0     0  1338k      0 --:--:-- --:--:-- --:--:-- 1341k
+>>> ulogd: Fetching https://www.netfilter.org/projects/ulogd/files/ulogd-2.0.8.tar.bz2
+>>> ulogd: Checking sha512sums...
+ulogd-2.0.8.tar.bz2: OK
+ulogd.initd: OK
+ulogd.confd: OK
+ulogd.logrotate: OK
+>>> ulogd: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/95) Installing musl (1.2.5-r10)
+(2/95) Installing libcrypto3 (3.5.0-r0)
+(3/95) Installing ca-certificates-bundle (20241121-r2)
+(4/95) Installing libssl3 (3.5.0-r0)
+(5/95) Installing zlib (1.3.1-r2)
+(6/95) Installing libapk2 (2.14.9-r2)
+(7/95) Installing apk-tools (2.14.9-r2)
+(8/95) Installing libcap2 (2.76-r0)
+(9/95) Installing libcap-getcap (2.76-r0)
+(10/95) Installing fakeroot (1.37.1.1-r0)
+(11/95) Installing scanelf (1.3.8-r1)
+(12/95) Installing musl-utils (1.2.5-r10)
+(13/95) Installing libgcc (14.3.0-r1)
+(14/95) Installing libstdc++ (14.3.0-r1)
+(15/95) Installing lzip (1.25-r0)
+(16/95) Installing openssl (3.5.0-r0)
+(17/95) Installing patch (2.8-r0)
+(18/95) Installing pkgconf (2.4.3-r0)
+(19/95) Installing acl-libs (2.3.2-r1)
+(20/95) Installing tar (1.35-r3)
+(21/95) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/95) Installing ssl_client (1.37.0-r18)
+(23/95) Installing busybox-binsh (1.37.0-r18)
+(24/95) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/95) Installing abuild-sudo (3.15.0-r0)
+(26/95) Installing alpine-baselayout-data (3.7.0-r0)
+(27/95) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/95) Installing bridge (1.5-r5)
+(29/95) Installing ifupdown-ng (0.12.1-r7)
+(30/95) Installing openrc-user (0.62.2-r2)
+(31/95) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/95) Installing mdev-conf (4.8-r0)
+(33/95) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/95) Installing alpine-conf (3.20.0-r0)
+(35/95) Installing alpine-keys (2.5-r0)
+(36/95) Installing alpine-release (3.22.0-r0)
+(37/95) Installing busybox-openrc (1.37.0-r18)
+(38/95) Installing busybox-suid (1.37.0-r18)
+(39/95) Installing alpine-base (3.22.0-r0)
+(40/95) Installing bsd-compat-headers (0.7.2-r6)
+(41/95) Installing jansson (2.14.1-r0)
+(42/95) Installing zstd-libs (1.5.7-r0)
+(43/95) Installing binutils (2.44-r0)
+(44/95) Installing libmagic (5.46-r2)
+(45/95) Installing file (5.46-r2)
+(46/95) Installing libgomp (14.3.0-r1)
+(47/95) Installing libatomic (14.3.0-r1)
+(48/95) Installing gmp (6.3.0-r3)
+(49/95) Installing isl26 (0.26-r1)
+(50/95) Installing mpfr4 (4.2.1_p1-r0)
+(51/95) Installing mpc1 (1.3.1-r1)
+(52/95) Installing gcc (14.3.0-r1)
+(53/95) Installing libstdc++-dev (14.3.0-r1)
+(54/95) Installing musl-dev (1.2.5-r10)
+(55/95) Installing g++ (14.3.0-r1)
+(56/95) Installing make (4.4.1-r3)
+(57/95) Installing fortify-headers (1.1-r5)
+(58/95) Installing build-base (0.5-r3)
+(59/95) Installing brotli-libs (1.1.0-r2)
+(60/95) Installing c-ares (1.34.5-r0)
+(61/95) Installing libunistring (1.3-r0)
+(62/95) Installing libidn2 (2.3.7-r0)
+(63/95) Installing nghttp2-libs (1.65.0-r0)
+(64/95) Installing libpsl (0.21.5-r3)
+(65/95) Installing libcurl (8.14.0-r2)
+(66/95) Installing libexpat (2.7.1-r0)
+(67/95) Installing pcre2 (10.43-r1)
+(68/95) Installing git (2.49.0-r0)
+(69/95) Installing git-init-template (2.49.0-r0)
+(70/95) Installing jansson-dev (2.14.1-r0)
+(71/95) Installing linux-headers (6.14.2-r0)
+(72/95) Installing libmnl (1.0.5-r2)
+(73/95) Installing libmnl-dev (1.0.5-r2)
+(74/95) Installing libnetfilter_acct (1.0.3-r3)
+(75/95) Installing libnetfilter_acct-dev (1.0.3-r3)
+(76/95) Installing libnfnetlink (1.0.2-r3)
+(77/95) Installing libnetfilter_conntrack (1.1.0-r0)
+(78/95) Installing libnfnetlink-dev (1.0.2-r3)
+(79/95) Installing libnetfilter_conntrack-dev (1.1.0-r0)
+(80/95) Installing libnetfilter_log (1.0.2-r2)
+(81/95) Installing libnetfilter_log-dev (1.0.2-r2)
+(82/95) Installing libpcap (1.10.5-r1)
+(83/95) Installing libpcap-dev (1.10.5-r1)
+(84/95) Installing libpq (17.5-r0)
+(85/95) Installing openssl-dev (3.5.0-r0)
+(86/95) Installing libpq-dev (17.5-r0)
+(87/95) Installing zlib-dev (1.3.1-r2)
+(88/95) Installing mariadb-connector-c (3.3.10-r0)
+(89/95) Installing mariadb-connector-c-dev (3.3.10-r0)
+(90/95) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(91/95) Installing libncursesw (6.5_p20250503-r0)
+(92/95) Installing readline (8.2.13-r1)
+(93/95) Installing sqlite (3.50.0-r0)
+(94/95) Installing sqlite-libs (3.50.0-r0)
+(95/95) Installing sqlite-dev (3.50.0-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 276 MiB in 95 packages
+>>> ulogd: Fetching https://www.netfilter.org/projects/ulogd/files/ulogd-2.0.8.tar.bz2
+>>> ulogd: Checking sha512sums...
+ulogd-2.0.8.tar.bz2: OK
+ulogd.initd: OK
+ulogd.confd: OK
+ulogd.logrotate: OK
+>>> ulogd: Unpacking /var/cache/distfiles/ulogd-2.0.8.tar.bz2...
+>>> ulogd: Updating ./build-aux/config.sub
+configure: WARNING: unrecognized options: --with-pgsql, --with-mysql
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... build-aux/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking how to create a pax tar archive... gnutar
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking whether make supports nested variables... (cached) yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether we are using the GNU C compiler... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to accept ISO C89... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking dependency style of cc... (cached) gcc3
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking how to run the C preprocessor... cc -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for library containing dlopen... none required
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for vprintf... yes
+checking for _doprnt... no
+checking for socket... yes
+checking for strerror... yes
+checking for library containing pthread_create... none required
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libnfnetlink >= 1.0.1... yes
+checking for libnetfilter_log >= 1.0.2... yes
+checking for libnetfilter_conntrack >= 1.0.2... yes
+checking for libmnl >= 1.0.3... yes
+checking for libnetfilter_acct >= 1.0.1... yes
+checking for libpq... yes
+checking for mysql_config... mysql_config
+checking mysql.h usability... yes
+checking mysql.h presence... yes
+checking for mysql.h... yes
+checking for sqlite3... yes
+checking for dbi... no
+checking for libpcap... yes
+checking for jansson... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating filter/Makefile
+config.status: creating filter/raw2packet/Makefile
+config.status: creating include/Makefile
+config.status: creating include/libipulog/Makefile
+config.status: creating include/linux/Makefile
+config.status: creating include/linux/netfilter/Makefile
+config.status: creating include/linux/netfilter_ipv4/Makefile
+config.status: creating include/ulogd/Makefile
+config.status: creating input/Makefile
+config.status: creating input/flow/Makefile
+config.status: creating input/packet/Makefile
+config.status: creating input/sum/Makefile
+config.status: creating libipulog/Makefile
+config.status: creating output/Makefile
+config.status: creating output/dbi/Makefile
+config.status: creating output/ipfix/Makefile
+config.status: creating output/mysql/Makefile
+config.status: creating output/pcap/Makefile
+config.status: creating output/pgsql/Makefile
+config.status: creating output/sqlite3/Makefile
+config.status: creating src/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --with-pgsql, --with-mysql
+
+Ulogd configuration:
+  Default plugins directory:		/usr/lib/ulogd
+  Input plugins:
+    NFLOG plugin:			yes
+    NFCT plugin:			yes
+    NFACCT plugin:			yes
+    ULOG plugin:			yes
+  Output plugins:
+    PCAP plugin:			yes
+    PGSQL plugin:			yes
+    MySQL plugin:			yes
+    SQLITE3 plugin:			yes
+    DBI plugin:				no
+    JSON plugin:			yes
+
+You can now run 'make' and 'make install'
+make  all-recursive
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8'
+Making all in include
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/include'
+Making all in ulogd
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/ulogd'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/ulogd'
+Making all in libipulog
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/libipulog'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/libipulog'
+Making all in linux
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux'
+Making all in netfilter
+make[4]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter'
+Making all in netfilter_ipv4
+make[4]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter_ipv4'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter_ipv4'
+make[4]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/include'
+Making all in libipulog
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/libipulog'
+  CC       libipulog.lo
+  CCLD     libipulog.la
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/libipulog'
+Making all in src
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/src'
+  CC       ulogd.o
+  CC       select.o
+  CC       timer.o
+  CC       rbtree.o
+  CC       conffile.o
+  CC       hash.o
+  CC       addr.o
+ulogd.c: In function 'parse_conffile':
+ulogd.c:1137:29: warning: the comparison will always evaluate as 'true' for the address of 'key' will never be NULL [-Waddress]
+ 1137 |                         if (config_errce->key)
+      |                             ^~~~~~~~~~~~
+In file included from ulogd.c:69:
+../include/ulogd/conffile.h:47:14: note: 'key' declared here
+   47 |         char key[CONFIG_KEY_LEN];       /* name of config directive */
+      |              ^~~
+  CCLD     ulogd
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/src'
+Making all in input
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/input'
+Making all in packet
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input/packet'
+  CC       ulogd_inppkt_UNIXSOCK.lo
+  CC       ulogd_inppkt_ULOG.lo
+  CC       ulogd_inppkt_NFLOG.lo
+  CCLD     ulogd_inppkt_ULOG.la
+  CCLD     ulogd_inppkt_NFLOG.la
+  CCLD     ulogd_inppkt_UNIXSOCK.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input/packet'
+Making all in flow
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input/flow'
+  CC       ulogd_inpflow_NFCT.lo
+ulogd_inpflow_NFCT.c: In function 'event_handler_hashtable':
+ulogd_inpflow_NFCT.c:663:36: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  663 |                 ts = calloc(sizeof(struct ct_timestamp), 1);
+      |                                    ^~~~~~
+ulogd_inpflow_NFCT.c:663:36: note: earlier argument should specify number of elements, later size of each element
+ulogd_inpflow_NFCT.c:684:44: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  684 |                         ts = calloc(sizeof(struct ct_timestamp), 1);
+      |                                            ^~~~~~
+ulogd_inpflow_NFCT.c:684:44: note: earlier argument should specify number of elements, later size of each element
+ulogd_inpflow_NFCT.c: In function 'polling_handler':
+ulogd_inpflow_NFCT.c:774:44: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  774 |                         ts = calloc(sizeof(struct ct_timestamp), 1);
+      |                                            ^~~~~~
+ulogd_inpflow_NFCT.c:774:44: note: earlier argument should specify number of elements, later size of each element
+ulogd_inpflow_NFCT.c: In function 'overrun_handler':
+ulogd_inpflow_NFCT.c:911:36: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  911 |                 ts = calloc(sizeof(struct ct_timestamp), 1);
+      |                                    ^~~~~~
+ulogd_inpflow_NFCT.c:911:36: note: earlier argument should specify number of elements, later size of each element
+ulogd_inpflow_NFCT.c: In function 'dump_reset_handler':
+ulogd_inpflow_NFCT.c:974:44: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  974 |                         ts = calloc(sizeof(struct ct_timestamp), 1);
+      |                                            ^~~~~~
+ulogd_inpflow_NFCT.c:974:44: note: earlier argument should specify number of elements, later size of each element
+  CCLD     ulogd_inpflow_NFCT.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input/flow'
+Making all in sum
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input/sum'
+  CC       ulogd_inpflow_NFACCT.lo
+  CCLD     ulogd_inpflow_NFACCT.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input/sum'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/input'
+Making all in filter
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/filter'
+Making all in raw2packet
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/filter/raw2packet'
+  CC       ulogd_raw2packet_BASE.lo
+  CCLD     ulogd_raw2packet_BASE.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/filter/raw2packet'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/filter'
+  CC       ulogd_filter_IFINDEX.lo
+  CC       ulogd_filter_PWSNIFF.lo
+  CC       ulogd_filter_PRINTPKT.lo
+  CC       ulogd_filter_PRINTFLOW.lo
+  CC       ulogd_filter_IP2STR.lo
+  CC       ulogd_filter_IP2BIN.lo
+  CC       ulogd_filter_HWHDR.lo
+  CC       ulogd_filter_MARK.lo
+  CC       ulogd_filter_IP2HBIN.lo
+  CC       ../util/printpkt.lo
+  CC       ../util/printflow.lo
+  CCLD     ulogd_filter_MARK.la
+  CCLD     ulogd_filter_PWSNIFF.la
+  CCLD     ulogd_filter_IP2STR.la
+  CCLD     ulogd_filter_IFINDEX.la
+  CCLD     ulogd_filter_IP2BIN.la
+  CCLD     ulogd_filter_HWHDR.la
+  CCLD     ulogd_filter_IP2HBIN.la
+  CCLD     ulogd_filter_PRINTFLOW.la
+  CCLD     ulogd_filter_PRINTPKT.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/filter'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/filter'
+Making all in output
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output'
+Making all in pcap
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/pcap'
+  CC       ulogd_output_PCAP.lo
+  CCLD     ulogd_output_PCAP.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/pcap'
+Making all in mysql
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/mysql'
+  CC       ulogd_output_MYSQL.lo
+  CC       ../../util/db.lo
+  CCLD     ulogd_output_MYSQL.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/mysql'
+Making all in pgsql
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/pgsql'
+  CC       ulogd_output_PGSQL.lo
+  CCLD     ulogd_output_PGSQL.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/pgsql'
+Making all in sqlite3
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/sqlite3'
+  CC       ulogd_output_SQLITE3.lo
+  CCLD     ulogd_output_SQLITE3.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/sqlite3'
+Making all in ipfix
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/ipfix'
+  CC       ulogd_output_IPFIX.lo
+  CC       ipfix.lo
+  CCLD     ulogd_output_IPFIX.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/ipfix'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output'
+  CC       ulogd_output_LOGEMU.lo
+  CC       ulogd_output_SYSLOG.lo
+  CC       ulogd_output_OPRINT.lo
+  CC       ulogd_output_GPRINT.lo
+  CC       ulogd_output_NACCT.lo
+  CC       ulogd_output_XML.lo
+  CC       ulogd_output_GRAPHITE.lo
+  CC       ulogd_output_JSON.lo
+ulogd_output_JSON.c: In function 'json_interp':
+ulogd_output_JSON.c:338:13: warning: the comparison will always evaluate as 'true' for the address of 'string' will never be NULL [-Waddress]
+  338 |         if (upi->config_kset->ces[JSON_CONF_DEVICE].u.string) {
+      |             ^~~
+In file included from ../include/ulogd/ulogd.h:15,
+                 from ulogd_output_JSON.c:32:
+../include/ulogd/conffile.h:53:22: note: 'string' declared here
+   53 |                 char string[CONFIG_VAL_STRING_LEN];
+      |                      ^~~~~~
+  CCLD     ulogd_output_NACCT.la
+  CCLD     ulogd_output_GPRINT.la
+  CCLD     ulogd_output_OPRINT.la
+  CCLD     ulogd_output_SYSLOG.la
+  CCLD     ulogd_output_XML.la
+  CCLD     ulogd_output_LOGEMU.la
+  CCLD     ulogd_output_GRAPHITE.la
+  CCLD     ulogd_output_JSON.la
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8'
+sed -e 's,@pkglibdir\@,/usr/lib/ulogd,g' ./ulogd.conf.in >ulogd.conf
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8'
+>>> ulogd: Entering fakeroot...
+Making install in include
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8/include'
+Making install in ulogd
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/include/ulogd'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/ulogd'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/ulogd'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/include/ulogd'
+Making install in libipulog
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/include/libipulog'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/libipulog'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/libipulog'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/include/libipulog'
+Making install in linux
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux'
+Making install in netfilter
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter'
+make[4]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter'
+Making install in netfilter_ipv4
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter_ipv4'
+make[4]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter_ipv4'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter_ipv4'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux/netfilter_ipv4'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[4]: Entering directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/include/linux'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/include'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/include'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/include'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8/include'
+Making install in libipulog
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8/libipulog'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/libipulog'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/libipulog'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8/libipulog'
+Making install in src
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8/src'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/src'
+make[2]: Nothing to be done for 'install-data-am'.
+ ../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ulogd '/tmp/pkg/ulogd/usr/sbin'
+libtool: install: /usr/bin/install -c ulogd /tmp/pkg/ulogd/usr/sbin/ulogd
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/src'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8/src'
+Making install in input
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8/input'
+Making install in packet
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/input/packet'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input/packet'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_inppkt_UNIXSOCK.la ulogd_inppkt_ULOG.la ulogd_inppkt_NFLOG.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_inppkt_UNIXSOCK.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inppkt_UNIXSOCK.so
+libtool: install: /usr/bin/install -c .libs/ulogd_inppkt_UNIXSOCK.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inppkt_UNIXSOCK.la
+libtool: install: /usr/bin/install -c .libs/ulogd_inppkt_ULOG.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inppkt_ULOG.so
+libtool: install: /usr/bin/install -c .libs/ulogd_inppkt_ULOG.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inppkt_ULOG.la
+libtool: install: /usr/bin/install -c .libs/ulogd_inppkt_NFLOG.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inppkt_NFLOG.so
+libtool: install: /usr/bin/install -c .libs/ulogd_inppkt_NFLOG.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inppkt_NFLOG.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input/packet'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/input/packet'
+Making install in flow
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/input/flow'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input/flow'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_inpflow_NFCT.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_inpflow_NFCT.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inpflow_NFCT.so
+libtool: install: /usr/bin/install -c .libs/ulogd_inpflow_NFCT.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inpflow_NFCT.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input/flow'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/input/flow'
+Making install in sum
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/input/sum'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input/sum'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_inpflow_NFACCT.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_inpflow_NFACCT.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inpflow_NFACCT.so
+libtool: install: /usr/bin/install -c .libs/ulogd_inpflow_NFACCT.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_inpflow_NFACCT.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input/sum'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/input/sum'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/input'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/input'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/input'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/input'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8/input'
+Making install in filter
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8/filter'
+Making install in raw2packet
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/filter/raw2packet'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/filter/raw2packet'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_raw2packet_BASE.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_raw2packet_BASE.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_raw2packet_BASE.so
+libtool: install: /usr/bin/install -c .libs/ulogd_raw2packet_BASE.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_raw2packet_BASE.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/filter/raw2packet'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/filter/raw2packet'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/filter'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/filter'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   ulogd_filter_IFINDEX.la ulogd_filter_PWSNIFF.la ulogd_filter_PRINTPKT.la ulogd_filter_PRINTFLOW.la ulogd_filter_IP2STR.la ulogd_filter_IP2BIN.la ulogd_filter_HWHDR.la ulogd_filter_MARK.la ulogd_filter_IP2HBIN.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IFINDEX.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IFINDEX.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IFINDEX.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IFINDEX.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_PWSNIFF.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_PWSNIFF.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_PWSNIFF.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_PWSNIFF.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_PRINTPKT.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_PRINTPKT.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_PRINTPKT.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_PRINTPKT.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_PRINTFLOW.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_PRINTFLOW.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_PRINTFLOW.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_PRINTFLOW.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IP2STR.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IP2STR.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IP2STR.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IP2STR.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IP2BIN.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IP2BIN.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IP2BIN.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IP2BIN.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_HWHDR.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_HWHDR.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_HWHDR.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_HWHDR.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_MARK.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_MARK.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_MARK.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_MARK.la
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IP2HBIN.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IP2HBIN.so
+libtool: install: /usr/bin/install -c .libs/ulogd_filter_IP2HBIN.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_filter_IP2HBIN.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/filter'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/filter'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8/filter'
+Making install in output
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8/output'
+Making install in pcap
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output/pcap'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/pcap'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_output_PCAP.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_output_PCAP.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_PCAP.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_PCAP.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_PCAP.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/pcap'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output/pcap'
+Making install in mysql
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output/mysql'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/mysql'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_output_MYSQL.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_output_MYSQL.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_MYSQL.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_MYSQL.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_MYSQL.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/mysql'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output/mysql'
+Making install in pgsql
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output/pgsql'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/pgsql'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_output_PGSQL.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_output_PGSQL.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_PGSQL.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_PGSQL.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_PGSQL.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/pgsql'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output/pgsql'
+Making install in sqlite3
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output/sqlite3'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/sqlite3'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_output_SQLITE3.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_output_SQLITE3.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_SQLITE3.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_SQLITE3.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_SQLITE3.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/sqlite3'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output/sqlite3'
+Making install in ipfix
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output/ipfix'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output/ipfix'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   ulogd_output_IPFIX.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_output_IPFIX.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_IPFIX.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_IPFIX.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_IPFIX.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output/ipfix'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output/ipfix'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8/output'
+make[3]: Entering directory '/tmp/src/ulogd-2.0.8/output'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/lib/ulogd'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   ulogd_output_LOGEMU.la ulogd_output_SYSLOG.la ulogd_output_OPRINT.la ulogd_output_GPRINT.la ulogd_output_NACCT.la ulogd_output_XML.la ulogd_output_GRAPHITE.la ulogd_output_JSON.la '/tmp/pkg/ulogd/usr/lib/ulogd'
+libtool: install: /usr/bin/install -c .libs/ulogd_output_LOGEMU.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_LOGEMU.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_LOGEMU.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_LOGEMU.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_SYSLOG.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_SYSLOG.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_SYSLOG.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_SYSLOG.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_OPRINT.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_OPRINT.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_OPRINT.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_OPRINT.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_GPRINT.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_GPRINT.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_GPRINT.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_GPRINT.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_NACCT.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_NACCT.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_NACCT.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_NACCT.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_XML.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_XML.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_XML.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_XML.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_GRAPHITE.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_GRAPHITE.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_GRAPHITE.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_GRAPHITE.la
+libtool: install: /usr/bin/install -c .libs/ulogd_output_JSON.so /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_JSON.so
+libtool: install: /usr/bin/install -c .libs/ulogd_output_JSON.lai /tmp/pkg/ulogd/usr/lib/ulogd/ulogd_output_JSON.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/ulogd'
+make[3]: Leaving directory '/tmp/src/ulogd-2.0.8/output'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8/output'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8/output'
+make[1]: Entering directory '/tmp/src/ulogd-2.0.8'
+make[2]: Entering directory '/tmp/src/ulogd-2.0.8'
+make[2]: Nothing to be done for 'install-exec-am'.
+ build-aux/install-sh -c -d '/tmp/pkg/ulogd/usr/share/man/man8'
+ /usr/bin/install -c -m 644 ulogd.8 '/tmp/pkg/ulogd/usr/share/man/man8'
+make[2]: Leaving directory '/tmp/src/ulogd-2.0.8'
+make[1]: Leaving directory '/tmp/src/ulogd-2.0.8'
+>>> ulogd-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/ulogd-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/ulogd-doc/usr/share/man'
+>>> ulogd-doc*: Preparing subpackage ulogd-doc...
+>>> ulogd-doc*: Running postcheck for ulogd-doc
+>>> ulogd-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/ulogd-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/ulogd-openrc/etc/init.d'
+>>> ulogd-openrc*: Preparing subpackage ulogd-openrc...
+>>> ulogd-openrc*: Running postcheck for ulogd-openrc
+>>> ulogd-mysql*: Running split function _plugin...
+>>> ulogd-mysql*: Preparing subpackage ulogd-mysql...
+>>> ulogd-mysql*: Stripping binaries
+>>> ulogd-mysql*: Running postcheck for ulogd-mysql
+>>> ulogd-pgsql*: Running split function _plugin...
+>>> ulogd-pgsql*: Preparing subpackage ulogd-pgsql...
+>>> ulogd-pgsql*: Stripping binaries
+>>> ulogd-pgsql*: Running postcheck for ulogd-pgsql
+>>> ulogd-json*: Running split function _plugin...
+>>> ulogd-json*: Preparing subpackage ulogd-json...
+>>> ulogd-json*: Stripping binaries
+>>> ulogd-json*: Running postcheck for ulogd-json
+>>> ulogd-xml*: Running split function _plugin...
+>>> ulogd-xml*: Preparing subpackage ulogd-xml...
+>>> ulogd-xml*: Stripping binaries
+>>> ulogd-xml*: Running postcheck for ulogd-xml
+>>> ulogd-sqlite3*: Running split function _plugin...
+>>> ulogd-sqlite3*: Preparing subpackage ulogd-sqlite3...
+>>> ulogd-sqlite3*: Stripping binaries
+>>> ulogd-sqlite3*: Running postcheck for ulogd-sqlite3
+>>> ulogd*: Running postcheck for ulogd
+>>> ulogd*: Preparing package ulogd...
+>>> ulogd*: Stripping binaries
+>>> ulogd-doc*: Scanning shared objects
+>>> ulogd-json*: Scanning shared objects
+>>> ulogd-mysql*: Scanning shared objects
+>>> ulogd-openrc*: Scanning shared objects
+>>> ulogd-pgsql*: Scanning shared objects
+>>> ulogd-sqlite3*: Scanning shared objects
+>>> ulogd-xml*: Scanning shared objects
+>>> ulogd*: Scanning shared objects
+>>> ulogd-doc*: Tracing dependencies...
+>>> ulogd-doc*: Package size: 35.2 KB
+>>> ulogd-doc*: Compressing data...
+>>> ulogd-doc*: Create checksum...
+>>> ulogd-doc*: Create ulogd-doc-2.0.8-r3.apk
+>>> ulogd-json*: Tracing dependencies...
+	ulogd=2.0.8-r3
+	so:libc.musl-x86_64.so.1
+	so:libjansson.so.4
+>>> ulogd-json*: Package size: 16.2 KB
+>>> ulogd-json*: Compressing data...
+>>> ulogd-json*: Create checksum...
+>>> ulogd-json*: Create ulogd-json-2.0.8-r3.apk
+>>> ulogd-mysql*: Tracing dependencies...
+	ulogd=2.0.8-r3
+	so:libc.musl-x86_64.so.1
+	so:libmariadb.so.3
+>>> ulogd-mysql*: Package size: 73.4 KB
+>>> ulogd-mysql*: Compressing data...
+>>> ulogd-mysql*: Create checksum...
+>>> ulogd-mysql*: Create ulogd-mysql-2.0.8-r3.apk
+>>> ulogd-openrc*: Tracing dependencies...
+>>> ulogd-openrc*: Package size: 858.0 B
+>>> ulogd-openrc*: Compressing data...
+>>> ulogd-openrc*: Create checksum...
+>>> ulogd-openrc*: Create ulogd-openrc-2.0.8-r3.apk
+>>> ulogd-pgsql*: Tracing dependencies...
+	ulogd=2.0.8-r3
+	so:libc.musl-x86_64.so.1
+	so:libpq.so.5
+>>> ulogd-pgsql*: Package size: 63.8 KB
+>>> ulogd-pgsql*: Compressing data...
+>>> ulogd-pgsql*: Create checksum...
+>>> ulogd-pgsql*: Create ulogd-pgsql-2.0.8-r3.apk
+>>> ulogd-sqlite3*: Tracing dependencies...
+	ulogd=2.0.8-r3
+	so:libc.musl-x86_64.so.1
+	so:libsqlite3.so.0
+>>> ulogd-sqlite3*: Package size: 22.3 KB
+>>> ulogd-sqlite3*: Compressing data...
+>>> ulogd-sqlite3*: Create checksum...
+>>> ulogd-sqlite3*: Create ulogd-sqlite3-2.0.8-r3.apk
+>>> ulogd-xml*: Tracing dependencies...
+	ulogd=2.0.8-r3
+	so:libc.musl-x86_64.so.1
+	so:libnetfilter_acct.so.1
+	so:libnetfilter_conntrack.so.3
+	so:libnetfilter_log.so.1
+>>> ulogd-xml*: Package size: 15.0 KB
+>>> ulogd-xml*: Compressing data...
+>>> ulogd-xml*: Create checksum...
+>>> ulogd-xml*: Create ulogd-xml-2.0.8-r3.apk
+>>> ulogd*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libmnl.so.0
+	so:libnetfilter_acct.so.1
+	so:libnetfilter_conntrack.so.3
+	so:libnetfilter_log.so.1
+	so:libnfnetlink.so.0
+>>> ulogd*: Package size: 419.3 KB
+>>> ulogd*: Compressing data...
+>>> ulogd*: Create checksum...
+>>> ulogd*: Create ulogd-2.0.8-r3.apk
+>>> ulogd: Updating the main/x86_64 repository index...
+>>> ulogd: Signing the index...
+>>> ulogd: Cleaning up srcdir
+>>> ulogd: Cleaning up build chroot
+>>> ulogd: Cleaning up pkgdir

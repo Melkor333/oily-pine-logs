@@ -1,0 +1,1876 @@
+>>> cups: Validating /home/packager/oily-pine/main/cups/APKBUILD...
+>>> cups: Cleaning up srcdir
+>>> cups: Cleaning up pkgdir
+>>> cups: Cleaning up tmpdir
+>>> cups: Fetching cups-2.4.11.tar.gz::https://github.com/OpenPrinting/cups/archive/v2.4.11.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 1201k    0 1201k    0     0  1291k      0 --:--:-- --:--:-- --:--:-- 1291k100 7999k    0 7999k    0     0  6448k      0 --:--:--  0:00:01 --:--:-- 21.4M
+>>> cups: Fetching cups-2.4.11.tar.gz::https://github.com/OpenPrinting/cups/archive/v2.4.11.tar.gz
+>>> cups: Checking sha512sums...
+cups-2.4.11.tar.gz: OK
+cups.logrotate: OK
+cupsd.initd: OK
+cups-no-export-ssllibs.patch: OK
+cups-nostrip.patch: OK
+default-config-no-gssapi.patch: OK
+>>> cups: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/189) Installing musl (1.2.5-r10)
+(2/189) Installing libcrypto3 (3.5.0-r0)
+(3/189) Installing ca-certificates-bundle (20241121-r2)
+(4/189) Installing libssl3 (3.5.0-r0)
+(5/189) Installing zlib (1.3.1-r2)
+(6/189) Installing libapk2 (2.14.9-r2)
+(7/189) Installing apk-tools (2.14.9-r2)
+(8/189) Installing libcap2 (2.76-r0)
+(9/189) Installing libcap-getcap (2.76-r0)
+(10/189) Installing fakeroot (1.37.1.1-r0)
+(11/189) Installing scanelf (1.3.8-r1)
+(12/189) Installing musl-utils (1.2.5-r10)
+(13/189) Installing libgcc (14.3.0-r0)
+(14/189) Installing libstdc++ (14.3.0-r0)
+(15/189) Installing lzip (1.25-r0)
+(16/189) Installing openssl (3.5.0-r0)
+(17/189) Installing patch (2.8-r0)
+(18/189) Installing pkgconf (2.4.3-r0)
+(19/189) Installing acl-libs (2.3.2-r1)
+(20/189) Installing tar (1.35-r3)
+(21/189) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/189) Installing ssl_client (1.37.0-r18)
+(23/189) Installing busybox-binsh (1.37.0-r18)
+(24/189) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/189) Installing abuild-sudo (3.15.0-r0)
+(26/189) Installing alpine-baselayout-data (3.7.0-r0)
+(27/189) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/189) Installing bridge (1.5-r5)
+(29/189) Installing ifupdown-ng (0.12.1-r7)
+(30/189) Installing openrc-user (0.62.2-r2)
+(31/189) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/189) Installing mdev-conf (4.8-r0)
+(33/189) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/189) Installing alpine-conf (3.20.0-r0)
+(35/189) Installing alpine-keys (2.5-r0)
+(36/189) Installing alpine-release (3.22.0-r0)
+(37/189) Installing busybox-openrc (1.37.0-r18)
+(38/189) Installing busybox-suid (1.37.0-r18)
+(39/189) Installing alpine-base (3.22.0-r0)
+(40/189) Installing gdbm (1.24-r0)
+(41/189) Installing gdbm-tools (1.24-r0)
+(42/189) Installing gdbm-dev (1.24-r0)
+(43/189) Installing dbus-libs (1.16.2-r1)
+(44/189) Installing libintl (0.24.1-r0)
+(45/189) Installing avahi-libs (0.8-r20)
+(46/189) Installing avahi-compat-howl (0.8-r20)
+(47/189) Installing avahi-compat-libdns_sd (0.8-r20)
+(48/189) Installing libffi (3.4.8-r0)
+(49/189) Installing libeconf (0.6.3-r0)
+(50/189) Installing libblkid (2.41-r9)
+(51/189) Installing libmount (2.41-r9)
+(52/189) Installing pcre2 (10.43-r1)
+(53/189) Installing glib (2.84.2-r1)
+(54/189) Installing avahi-glib (0.8-r20)
+(55/189) Installing libdaemon (0.14-r6)
+(56/189) Installing libevent (2.1.12-r8)
+(57/189) Installing libexpat (2.7.1-r0)
+(58/189) Installing avahi (0.8-r20)
+Executing avahi-0.8-r20.pre-install
+(59/189) Installing dbus (1.16.2-r1)
+Executing dbus-1.16.2-r1.pre-install
+Executing dbus-1.16.2-r1.post-install
+(60/189) Installing dbus-openrc (1.16.2-r1)
+(61/189) Installing dbus-daemon-launch-helper (1.16.2-r1)
+(62/189) Installing avahi-openrc (0.8-r20)
+(63/189) Installing libbz2 (1.0.8-r6)
+(64/189) Installing bzip2-dev (1.0.8-r6)
+(65/189) Installing xz-libs (5.8.1-r0)
+(66/189) Installing libxml2 (2.13.8-r0)
+(67/189) Installing libxml2-utils (2.13.8-r0)
+(68/189) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(69/189) Installing libxslt (1.1.43-r3)
+(70/189) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(71/189) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(72/189) Installing docbook-xsl (1.79.2-r11)
+(73/189) Installing xz (5.8.1-r0)
+(74/189) Installing gettext-asprintf (0.24.1-r0)
+(75/189) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(76/189) Installing libncursesw (6.5_p20250503-r0)
+(77/189) Installing libunistring (1.3-r0)
+(78/189) Installing gettext-libs (0.24.1-r0)
+(79/189) Installing gettext-envsubst (0.24.1-r0)
+(80/189) Installing libgomp (14.3.0-r0)
+(81/189) Installing gettext (0.24.1-r0)
+(82/189) Installing gettext-dev (0.24.1-r0)
+(83/189) Installing mpdecimal (4.0.1-r0)
+(84/189) Installing libpanelw (6.5_p20250503-r0)
+(85/189) Installing readline (8.2.13-r1)
+(86/189) Installing sqlite-libs (3.50.0-r0)
+(87/189) Installing python3 (3.12.10-r1)
+(88/189) Installing python3-pycache-pyc0 (3.12.10-r1)
+(89/189) Installing pyc (3.12.10-r1)
+(90/189) Installing python3-pyc (3.12.10-r1)
+(91/189) Installing py3-parsing (3.2.3-r0)
+(92/189) Installing py3-parsing-pyc (3.2.3-r0)
+(93/189) Installing py3-packaging (25.0-r0)
+(94/189) Installing py3-packaging-pyc (25.0-r0)
+(95/189) Installing linux-headers (6.14.2-r0)
+(96/189) Installing libffi-dev (3.4.8-r0)
+(97/189) Installing bsd-compat-headers (0.7.2-r6)
+(98/189) Installing libformw (6.5_p20250503-r0)
+(99/189) Installing libmenuw (6.5_p20250503-r0)
+(100/189) Installing libncurses++ (6.5_p20250503-r0)
+(101/189) Installing ncurses-dev (6.5_p20250503-r0)
+(102/189) Installing libedit (20250104.3.1-r1)
+(103/189) Installing libedit-dev (20250104.3.1-r1)
+(104/189) Installing zlib-dev (1.3.1-r2)
+(105/189) Installing libpcre2-16 (10.43-r1)
+(106/189) Installing libpcre2-32 (10.43-r1)
+(107/189) Installing pcre2-dev (10.43-r1)
+(108/189) Installing libuuid (2.41-r9)
+(109/189) Installing libfdisk (2.41-r9)
+(110/189) Installing liblastlog2 (2.41-r9)
+(111/189) Installing libsmartcols (2.41-r9)
+(112/189) Installing sqlite (3.50.0-r0)
+(113/189) Installing sqlite-dev (3.50.0-r0)
+(114/189) Installing util-linux-dev (2.41-r9)
+(115/189) Installing glib-dev (2.84.2-r1)
+(116/189) Installing libevent-dev (2.1.12-r8)
+(117/189) Installing avahi-dev (0.8-r20)
+(118/189) Installing jansson (2.14.1-r0)
+(119/189) Installing zstd-libs (1.5.7-r0)
+(120/189) Installing binutils (2.44-r0)
+(121/189) Installing libmagic (5.46-r2)
+(122/189) Installing file (5.46-r2)
+(123/189) Installing libatomic (14.3.0-r0)
+(124/189) Installing gmp (6.3.0-r3)
+(125/189) Installing isl26 (0.26-r1)
+(126/189) Installing mpfr4 (4.2.1_p1-r0)
+(127/189) Installing mpc1 (1.3.1-r1)
+(128/189) Installing gcc (14.3.0-r0)
+(129/189) Installing libstdc++-dev (14.3.0-r0)
+(130/189) Installing musl-dev (1.2.5-r10)
+(131/189) Installing g++ (14.3.0-r0)
+(132/189) Installing make (4.4.1-r3)
+(133/189) Installing fortify-headers (1.1-r5)
+(134/189) Installing build-base (0.5-r3)
+(135/189) Installing dbus-dev (1.16.2-r1)
+(136/189) Installing brotli-libs (1.1.0-r2)
+(137/189) Installing c-ares (1.34.5-r0)
+(138/189) Installing libidn2 (2.3.7-r0)
+(139/189) Installing nghttp2-libs (1.65.0-r0)
+(140/189) Installing libpsl (0.21.5-r3)
+(141/189) Installing libcurl (8.14.0-r2)
+(142/189) Installing git (2.49.0-r0)
+(143/189) Installing git-init-template (2.49.0-r0)
+(144/189) Installing nettle (3.10.1-r0)
+(145/189) Installing libtasn1 (4.20.0-r0)
+(146/189) Installing p11-kit (0.25.5-r2)
+(147/189) Installing gnutls (3.8.8-r0)
+(148/189) Installing gnutls-c++ (3.8.8-r0)
+(149/189) Installing libgmpxx (6.3.0-r3)
+(150/189) Installing gmp-dev (6.3.0-r3)
+(151/189) Installing nettle-dev (3.10.1-r0)
+(152/189) Installing libidn2-dev (2.3.7-r0)
+(153/189) Installing libtasn1-progs (4.20.0-r0)
+(154/189) Installing libtasn1-dev (4.20.0-r0)
+(155/189) Installing p11-kit-dev (0.25.5-r2)
+(156/189) Installing gnutls-dev (3.8.8-r0)
+(157/189) Installing libgpg-error (1.55-r0)
+(158/189) Installing libgcrypt (1.10.3-r1)
+(159/189) Installing libgpg-error-dev (1.55-r0)
+(160/189) Installing libgcrypt-dev (1.10.3-r1)
+(161/189) Installing libjpeg-turbo (3.1.0-r0)
+(162/189) Installing libturbojpeg (3.1.0-r0)
+(163/189) Installing libjpeg-turbo-dev (3.1.0-r0)
+(164/189) Installing libpaper (2.2.5-r0)
+(165/189) Installing libpaper-dev (2.2.5-r0)
+(166/189) Installing libusb (1.0.28-r0)
+(167/189) Installing libusb-dev (1.0.28-r0)
+(168/189) Installing libxau (1.0.12-r0)
+(169/189) Installing libmd (1.1.0-r0)
+(170/189) Installing libbsd (0.12.2-r0)
+(171/189) Installing libxdmcp (1.1.5-r1)
+(172/189) Installing libxcb (1.17.0-r0)
+(173/189) Installing libx11 (1.8.11-r0)
+(174/189) Installing libxext (1.3.6-r2)
+(175/189) Installing libxrender (0.9.12-r0)
+(176/189) Installing libpng (1.6.47-r0)
+(177/189) Installing freetype (2.13.3-r0)
+(178/189) Installing fontconfig (2.15.0-r3)
+(179/189) Installing pixman (0.46.0-r0)
+(180/189) Installing cairo (1.18.2-r1)
+(181/189) Installing lcms2 (2.16-r0)
+(182/189) Installing nspr (4.36-r0)
+(183/189) Installing nss (3.112-r0)
+(184/189) Installing openjpeg (2.5.3-r0)
+(185/189) Installing libsharpyuv (1.5.0-r0)
+(186/189) Installing libwebp (1.5.0-r0)
+(187/189) Installing tiff (4.7.0-r0)
+(188/189) Installing poppler (25.04.0-r0)
+(189/189) Installing poppler-utils (25.04.0-r0)
+Executing busybox-1.37.0-r18.trigger
+Executing glib-2.84.2-r1.trigger
+No schema files found: doing nothing.
+Executing dbus-1.16.2-r1.trigger
+OK: 391 MiB in 189 packages
+>>> cups: Fetching cups-2.4.11.tar.gz::https://github.com/OpenPrinting/cups/archive/v2.4.11.tar.gz
+>>> cups: Checking sha512sums...
+cups-2.4.11.tar.gz: OK
+cups.logrotate: OK
+cupsd.initd: OK
+cups-no-export-ssllibs.patch: OK
+cups-nostrip.patch: OK
+default-config-no-gssapi.patch: OK
+>>> cups: Unpacking /var/cache/distfiles/cups-2.4.11.tar.gz...
+>>> cups: cups-no-export-ssllibs.patch
+patching file config-scripts/cups-tls.m4
+Hunk #1 succeeded at 150 (offset 43 lines).
+>>> cups: cups-nostrip.patch
+patching file config-scripts/cups-compiler.m4
+patching file configure
+Hunk #2 succeeded at 7936 (offset 35 lines).
+Hunk #3 succeeded at 7989 (offset 35 lines).
+patching file Makedefs.in
+>>> cups: default-config-no-gssapi.patch
+patching file conf/cupsd.conf.in
+Hunk #1 succeeded at 168 (offset 14 lines).
+Hunk #2 succeeded at 194 (offset 14 lines).
+configure: WARNING: unrecognized options: --without-php, --enable-ssl, --enable-gnutls, --disable-launchd
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for codesign... no
+checking for true... /bin/true
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking how to run the C preprocessor... cc -E
+checking whether the compiler supports GNU C++... yes
+checking whether c++ accepts -g... yes
+checking for c++ option to enable C++11 features... none needed
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for ar... /usr/bin/ar
+checking for chmod... /bin/chmod
+checking for gzip... /bin/gzip
+checking for install-sh script... using /tmp/src/cups-2.4.11/install-sh
+checking for ld... /usr/bin/ld
+checking for ln... /bin/ln
+checking for mkdir... /bin/mkdir
+checking for mv... /bin/mv
+checking for rm... /bin/rm
+checking for rmdir... /bin/rmdir
+checking for sed... /bin/sed
+checking for xdg-open... no
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking for library containing abs... none required
+checking for library containing crypt... none required
+checking for library containing fmod... none required
+checking for library containing getspent... none required
+checking for systempapername in -lpaper... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for crypt.h... yes
+checking for langinfo.h... yes
+checking for malloc.h... yes
+checking for shadow.h... yes
+checking for stdint.h... (cached) yes
+checking for sys/ioctl.h... yes
+checking for sys/param.h... yes
+checking for sys/ucred.h... no
+checking for iconv.h... yes
+checking for library containing iconv_open... none required
+checking for library containing libiconv_open... no
+checking for sys/mount.h... yes
+checking for sys/statfs.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/vfs.h... yes
+checking for statfs... yes
+checking for statvfs... yes
+checking for strdup... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for random... yes
+checking for lrand48... yes
+checking for arc4random... no
+checking for geteuid... yes
+checking for setpgid... yes
+checking for vsyslog... yes
+checking for sigaction... yes
+checking for waitpid... yes
+checking for wait3... yes
+checking for posix_spawn... yes
+checking for getgrouplist... yes
+checking for tm_gmtoff member in tm structure... yes
+checking for st_gen member in stat structure... no
+checking for removefile... no
+checking for libusb-1.0... yes
+checking for zlib.h... yes
+checking for gzgets in -lz... yes
+checking for inflateCopy in -lz... yes
+checking for library containing acl_init... no
+checking for DBUS... yes
+checking for dbus_message_iter_init_append... yes
+checking for dbus_threads_init_default... yes
+checking whether compiler supports -fstack-protector-strong... yes
+checking whether compiler supports -fPIE... yes
+checking whether compiler supports -Wno-char-subscripts... no
+checking whether compiler supports -Wno-deprecated-declarations... no
+checking whether compiler supports -Wno-format-truncation... no
+checking whether compiler supports -Wno-format-y2k... no
+checking whether compiler supports -Wno-switch... no
+checking whether compiler supports -Wno-unused-result... no
+checking for resolv.h... yes
+checking for library containing socket... none required
+checking for library containing gethostbyaddr... none required
+checking for library containing getifaddrs... none required
+checking for library containing hstrerror... none required
+checking for library containing rresvport_af... no
+checking for library containing __res_init... no
+checking for library containing res_9_init... no
+checking for library containing res_init... none required
+checking for library containing getaddrinfo... none required
+checking for library containing getnameinfo... none required
+checking for struct sockaddr.sa_len... no
+checking for sys/sockio.h... no
+checking for poll... yes
+checking for epoll_create... yes
+checking for kqueue... no
+checking for pthread.h... yes
+checking for pthread_create using -lpthreads... no
+checking for pthread_create using -lpthread... yes
+checking for openssl package... no
+checking for x86_64-alpine-linux-musl-libgnutls-config... no
+checking for libgnutls-config... no
+checking for gnutls package... yes
+checking for gnutls_transport_set_pull_timeout_function... yes
+checking for gnutls_priority_set_direct... yes
+configure:     Using TLSLIBS="-lgnutls"
+configure:     Using TLSFLAGS="-I/usr/include/p11-kit-1"
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for long long int... yes
+checking for strtoll... yes
+checking for dns_sd.h... yes
+checking for current version of dns_sd library... no
+checking for Avahi client... yes
+checking for libapparmor... checking for libsystemd... no
+configure: creating ./config.status
+config.status: creating Makedefs
+config.status: creating conf/cups-files.conf
+config.status: creating conf/cupsd.conf
+config.status: creating conf/mime.convs
+config.status: creating conf/pam.std
+config.status: creating conf/snmp.conf
+config.status: creating cups.pc
+config.status: creating cups-config
+config.status: creating desktop/cups.desktop
+config.status: creating doc/index.html
+config.status: creating scheduler/cups-lpd.xinetd
+config.status: creating scheduler/cups.sh
+config.status: creating scheduler/cups.xml
+config.status: creating scheduler/org.cups.cups-lpd.plist
+config.status: creating scheduler/cups-lpdAT.service
+config.status: creating scheduler/cups.path
+config.status: creating scheduler/cups.service
+config.status: creating scheduler/cups.socket
+config.status: creating templates/header.tmpl
+config.status: creating packaging/cups.list
+config.status: creating doc/da/index.html
+config.status: creating templates/da/header.tmpl
+config.status: creating doc/de/index.html
+config.status: creating templates/de/header.tmpl
+config.status: creating doc/es/index.html
+config.status: creating templates/es/header.tmpl
+config.status: creating doc/fr/index.html
+config.status: creating templates/fr/header.tmpl
+config.status: creating doc/ja/index.html
+config.status: creating templates/ja/header.tmpl
+config.status: creating doc/pt_BR/index.html
+config.status: creating templates/pt_BR/header.tmpl
+config.status: creating doc/ru/index.html
+config.status: creating templates/ru/header.tmpl
+config.status: creating config.h
+configure: WARNING: unrecognized options: --without-php, --enable-ssl, --enable-gnutls, --disable-launchd
+Using ARCHFLAGS=
+Using ALL_CFLAGS=-I.. -D_CUPS_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I/usr/include/libusb-1.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -DDBUS_API_SUBJECT_TO_CHANGE -D_FORTIFY_SOURCE=3 -D_REENTRANT -I/usr/include/p11-kit-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT  -Wall -Wunused
+Using ALL_CXXFLAGS=-I.. -D_CUPS_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -D_FORTIFY_SOURCE=3 -I/usr/include/p11-kit-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT  -Wall -Wunused
+Using CC=cc
+Using CXX=cc
+Using DSOFLAGS=-Wl,-soname,all -shared
+Using LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+Using LIBS= -lavahi-common -lavahi-client -lgnutls -lz -lpthread   -lz
+Making all in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling raster-interstub.c...
+Compiling raster-stubs.c...
+Compiling array.c...
+Compiling auth.c...
+Compiling debug.c...
+Compiling dest.c...
+Compiling dest-job.c...
+Compiling dest-localization.c...
+Compiling dest-options.c...
+Compiling dir.c...
+Compiling encode.c...
+Compiling file.c...
+Compiling getputfile.c...
+Compiling globals.c...
+Compiling hash.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling http.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling http-addr.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling http-addrlist.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling http-support.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ipp.c...
+Compiling ipp-file.c...
+Compiling ipp-vars.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ipp-support.c...
+Compiling langprintf.c...
+Compiling language.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling md5.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling md5passwd.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling notify.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling options.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling pwg-media.c...
+Compiling raster-error.c...
+Compiling raster-stream.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling request.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling snprintf.c...
+Compiling string.c...
+Compiling tempfile.c...
+Compiling thread.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling tls.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling transcode.c...
+Compiling usersys.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling util.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling adminutil.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling backchannel.c...
+Compiling backend.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling getdevices.c...
+Compiling getifaddrs.c...
+Compiling ppd.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppd-attr.c...
+Compiling ppd-cache.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppd-conflicts.c...
+Compiling ppd-custom.c...
+Compiling ppd-emit.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppd-localize.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppd-mark.c...
+Compiling ppd-page.c...
+Compiling ppd-util.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling raster-interpret.c...
+Compiling sidechannel.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling snmp.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Archiving libcupsimage.a...
+a - raster-interstub.o
+a - raster-stubs.o
+Linking libcups.so.2...
+Archiving libcups.a...
+a - array.o
+a - auth.o
+a - debug.o
+a - dest.o
+a - dest-job.o
+a - dest-localization.o
+a - dest-options.o
+a - dir.o
+a - encode.o
+a - file.o
+a - getputfile.o
+a - globals.o
+a - hash.o
+a - http.o
+a - http-addr.o
+a - http-addrlist.o
+a - http-support.o
+a - ipp.o
+a - ipp-file.o
+a - ipp-vars.o
+a - ipp-support.o
+a - langprintf.o
+a - language.o
+a - md5.o
+a - md5passwd.o
+a - notify.o
+a - options.o
+a - pwg-media.o
+a - raster-error.o
+a - raster-stream.o
+a - raster-stubs.o
+a - request.o
+a - snprintf.o
+a - string.o
+a - tempfile.o
+a - thread.o
+a - tls.o
+a - transcode.o
+a - usersys.o
+a - util.o
+a - adminutil.o
+a - backchannel.o
+a - backend.o
+a - getdevices.o
+a - getifaddrs.o
+a - ppd.o
+a - ppd-attr.o
+a - ppd-cache.o
+a - ppd-conflicts.o
+a - ppd-custom.o
+a - ppd-emit.o
+a - ppd-localize.o
+a - ppd-mark.o
+a - ppd-page.o
+a - ppd-util.o
+a - raster-interpret.o
+a - raster-interstub.o
+a - sidechannel.o
+a - snmp.o
+Linking libcupsimage.so.2...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Making all in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling ippevepcl.c...
+Compiling ippeveps.c...
+Compiling ippeveprinter.c...
+Compiling ippfind.c...
+Compiling ipptool.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking ippevepcl...
+Linking ippeveps...
+Linking ippfind...
+Linking ipptool...
+Linking ipptool-static...
+Linking ippeveprinter...
+Linking ippeveprinter-static...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Making all in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling commandtops.c...
+Compiling gziptoany.c...
+Compiling pstops.c...
+Compiling common.c...
+Compiling rastertoepson.c...
+Compiling rastertohp.c...
+Compiling rastertolabel.c...
+Compiling rastertopwg.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking gziptoany...
+Linking rastertopwg...
+Linking commandtops...
+Linking rastertoepson...
+Linking rastertolabel...
+Linking rastertohp...
+Linking pstops...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Making all in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling ieee1284.c...
+Compiling network.c...
+Compiling runloop.c...
+Compiling snmp-supplies.c...
+Compiling ipp.c...
+Compiling lpd.c...
+Compiling usb.c...
+Compiling dnssd.c...
+Compiling snmp.c...
+Compiling socket.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Archiving libbackend.a...
+a - ieee1284.o
+a - network.o
+a - runloop.o
+a - snmp-supplies.o
+Linking usb...
+Linking dnssd...
+Linking socket...
+Linking lpd...
+Linking snmp...
+Linking ipp...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Making all in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling lpc.c...
+Compiling lpq.c...
+Compiling lpr.c...
+Compiling lprm.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking lprm...
+Linking lpc...
+Linking lpr...
+Linking lpq...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Making all in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling help-index.c...
+Compiling html.c...
+Compiling ipp-var.c...
+Compiling search.c...
+Compiling template.c...
+Compiling var.c...
+Compiling admin.c...
+Compiling classes.c...
+Compiling help.c...
+Compiling jobs.c...
+Compiling printers.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+search.c: In function 'cgiCompileSearch':
+search.c:191:29: warning: pointer 's_56' may be used after 'realloc' [-Wuse-after-free]
+  191 |         sptr = temp + (sptr - s);
+      |                       ~~~~~~^~~~
+search.c:179:24: note: call to 'realloc' here
+  179 |         temp = (char *)realloc(s, slen);
+      |                        ^~~~~~~~~~~~~~~~
+Archiving libcupscgi.a...
+a - help-index.o
+a - html.o
+a - ipp-var.o
+a - search.o
+a - template.o
+a - var.o
+Linking classes.cgi...
+Linking help.cgi...
+Linking jobs.cgi...
+Linking printers.cgi...
+Linking admin.cgi...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Making all in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling bcp.c...
+Compiling tbcp.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+Linking tbcp...
+Linking bcp...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Making all in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling dbus.c...
+Compiling mailto.c...
+Compiling rss.c...
+Compiling testnotify.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking testnotify...
+Linking dbus...
+Linking rss...
+Linking mailto...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Making all in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling ppdc-array.cxx...
+Compiling ppdc-attr.cxx...
+Compiling ppdc-catalog.cxx...
+Compiling ppdc-choice.cxx...
+Compiling ppdc-constraint.cxx...
+Compiling ppdc-driver.cxx...
+Compiling ppdc-file.cxx...
+Compiling ppdc-filter.cxx...
+Compiling ppdc-font.cxx...
+Compiling ppdc-group.cxx...
+Compiling ppdc-import.cxx...
+Compiling ppdc-mediasize.cxx...
+Compiling ppdc-message.cxx...
+Compiling ppdc-option.cxx...
+Compiling ppdc-profile.cxx...
+Compiling ppdc-shared.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppdc-source.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppdc-string.cxx...
+Compiling ppdc-variable.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+Compiling ppdc.cxx...
+Compiling ppdhtml.cxx...
+Compiling ppdi.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppdmerge.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling ppdpo.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling genstrings.cxx...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking ppdmerge...
+Archiving libcupsppdc.a...
+a - ppdc-array.o
+a - ppdc-attr.o
+a - ppdc-catalog.o
+a - ppdc-choice.o
+a - ppdc-constraint.o
+a - ppdc-driver.o
+a - ppdc-file.o
+a - ppdc-filter.o
+a - ppdc-font.o
+a - ppdc-group.o
+a - ppdc-import.o
+a - ppdc-mediasize.o
+a - ppdc-message.o
+a - ppdc-option.o
+a - ppdc-profile.o
+a - ppdc-shared.o
+a - ppdc-source.o
+a - ppdc-string.o
+a - ppdc-variable.o
+Linking ppdc...
+Linking ppdhtml...
+Linking ppdi...
+Linking ppdpo...
+Linking genstrings...
+Generating localization strings...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Making all in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling filter.c...
+Compiling mime.c...
+Compiling type.c...
+Compiling auth.c...
+Compiling banners.c...
+Compiling cert.c...
+Compiling classes.c...
+Compiling client.c...
+Compiling colorman.c...
+Compiling conf.c...
+Compiling dirsvc.c...
+Compiling env.c...
+Compiling file.c...
+Compiling main.c...
+Compiling ipp.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling listen.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling job.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling log.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling network.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling policy.c...
+Compiling printers.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling process.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling quotas.c...
+Compiling select.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling server.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling statbuf.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling subscriptions.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling sysman.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling cupsfilter.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling cups-deviced.c...
+Compiling util.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling cups-driverd.cxx...
+Compiling cups-exec.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Compiling cups-lpd.c...
+Archiving libcupsmime.a...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking cups-exec...
+a - filter.o
+a - mime.o
+a - type.o
+Linking cupsfilter...
+Linking cups-deviced...
+Linking cups-lpd...
+Linking cups-driverd...
+Linking cupsd...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Making all in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling cancel.c...
+Compiling cupsaccept.c...
+Compiling cupsctl.c...
+Compiling cupstestppd.c...
+Compiling lp.c...
+Compiling lpadmin.c...
+Compiling lpinfo.c...
+Compiling lpmove.c...
+Compiling lpoptions.c...
+Compiling lpstat.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+Linking cupsaccept...
+Linking cancel...
+Linking lpinfo...
+Linking lpoptions...
+Linking lp...
+Linking lpmove...
+Linking cupsctl...
+Linking lpadmin...
+Linking lpstat...
+Linking cupstestppd...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Making all in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Making all in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Making all in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Making all in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Compiling checkpo.c...
+Compiling po2strings.c...
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<command-line>: warning: "_FORTIFY_SOURCE" redefined
+<built-in>: note: this is the location of the previous definition
+<built-in>: note: this is the location of the previous definition
+Linking po2strings...
+Linking checkpo...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Making all in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Making all in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Making all in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Making all in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+>>> cups: Entering fakeroot...
+Making all in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Installing data files in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Installing data files in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Installing data files in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Installing data files in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing USB quirks in /tmp/pkg/cups/usr/share/cups/usb
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Installing data files in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Installing data files in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Installing data files in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Installing data files in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Installing data files in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Installing data files in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Creating /tmp/pkg/cups/usr/lib/cups/driver...
+Creating /tmp/pkg/cups/etc/cups...
+Creating /tmp/pkg/cups/etc/cups/ppd...
+Creating /tmp/pkg/cups/etc/cups/ssl...
+Creating /tmp/pkg/cups/run/cups...
+Creating /tmp/pkg/cups/run/cups/certs...
+Creating /tmp/pkg/cups/var/log/cups...
+Creating /tmp/pkg/cups/var/spool/cups...
+Creating /tmp/pkg/cups/var/spool/cups/tmp...
+Creating /tmp/pkg/cups/var/cache/cups...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Installing data files in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Installing data files in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+libfakeroot internal error: payload not recognized!
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Installing data files in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Installing data files in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing cups.conf in /usr/share/dbus-1...
+Installing desktop menu...
+Installing desktop icons...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Installing data files in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Installing data files in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing man pages in /tmp/pkg/cups/usr/share/man/man1...
+Installing man pages in /tmp/pkg/cups/usr/share/man/man5...
+Installing man pages in /tmp/pkg/cups/usr/share/man/man7...
+Installing man pages in /tmp/pkg/cups/usr/share/man/man8...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Installing data files in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Installing data files in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing sample PPD compiler files in /tmp/pkg/cups/usr/share/cups/examples...
+Installing sample ipptool files in /tmp/pkg/cups/usr/share/cups/ipptool...
+libfakeroot internal error: payload not recognized!
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Installing data files in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+Installing cups-config script...
+Installing cups.pc file...
+Installing header files in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing header files into /tmp/pkg/cups/usr/include/cups...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Installing header files in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Installing header files in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Installing header files in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Installing header files in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Installing header files in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Installing header files in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Installing header files in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Installing header files in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Installing header files in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Installing header files in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Installing header files in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Installing header files in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Installing header files in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Installing header files in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Installing header files in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Installing header files in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Installing header files in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Installing header files in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+Using ARCHFLAGS=
+Using ALL_CFLAGS=-I.. -D_CUPS_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I/usr/include/libusb-1.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -DDBUS_API_SUBJECT_TO_CHANGE -D_FORTIFY_SOURCE=3 -D_REENTRANT -I/usr/include/p11-kit-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT  -Wall -Wunused
+Using ALL_CXXFLAGS=-I.. -D_CUPS_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -D_FORTIFY_SOURCE=3 -I/usr/include/p11-kit-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT  -Wall -Wunused
+Using CC=cc
+Using CXX=cc
+Using DSOFLAGS=-Wl,-soname,libs -shared
+Using LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+Using LIBS= -lavahi-common -lavahi-client -lgnutls -lz -lpthread   -lz
+Making libraries in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Making libraries in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Making libraries in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Making libraries in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Making libraries in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Making libraries in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Making libraries in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Making libraries in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Making libraries in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Making libraries in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Making libraries in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Making libraries in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Making libraries in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Making libraries in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Making libraries in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Making libraries in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Making libraries in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Making libraries in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Making libraries in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+Installing libraries in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing libraries in /tmp/pkg/cups/usr/lib...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Installing libraries in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Installing libraries in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Installing libraries in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Installing libraries in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Installing libraries in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Installing libraries in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Installing libraries in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Installing libraries in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Installing libraries in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Installing libraries in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Installing libraries in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Installing libraries in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Installing libraries in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Installing libraries in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Installing libraries in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Installing libraries in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Installing libraries in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Installing libraries in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+Using ARCHFLAGS=
+Using ALL_CFLAGS=-I.. -D_CUPS_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I/usr/include/libusb-1.0 -I/usr/include/dbus-1.0 -I/usr/lib/dbus-1.0/include -DDBUS_API_SUBJECT_TO_CHANGE -D_FORTIFY_SOURCE=3 -D_REENTRANT -I/usr/include/p11-kit-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT  -Wall -Wunused
+Using ALL_CXXFLAGS=-I.. -D_CUPS_SOURCE -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -D_FORTIFY_SOURCE=3 -I/usr/include/p11-kit-1 -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_THREAD_SAFE -D_REENTRANT  -Wall -Wunused
+Using CC=cc
+Using CXX=cc
+Using DSOFLAGS=-Wl,-soname,all -shared
+Using LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+Using LIBS= -lavahi-common -lavahi-client -lgnutls -lz -lpthread   -lz
+Making all in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Making all in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Making all in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Making all in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Making all in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Making all in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Making all in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Making all in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Making all in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Making all in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Making all in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Making all in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Making all in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Making all in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Making all in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Making all in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Making all in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Making all in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Making all in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+Installing programs in cups...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cups'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cups'
+Installing programs in tools...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/tools'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing IPP tools in /tmp/pkg/cups/usr/bin...
+Installing printer commands in /tmp/pkg/cups/usr/lib/cups/command...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/tools'
+Installing programs in filter...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/filter'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/filter'
+Installing programs in backend...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/backend'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing backends in /tmp/pkg/cups/usr/lib/cups/backend
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/backend'
+Installing programs in berkeley...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/berkeley'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing Berkeley user printing commands in /tmp/pkg/cups/usr/bin...
+Installing Berkeley admin printing commands in /tmp/pkg/cups/usr/bin...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/berkeley'
+Installing programs in cgi-bin...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/cgi-bin'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/cgi-bin'
+Installing programs in monitor...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/monitor'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/monitor'
+Installing programs in notifier...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/notifier'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing notifiers in /tmp/pkg/cups/usr/lib/cups/notifier...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/notifier'
+Installing programs in ppdc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/ppdc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing PPD compiler programs...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/ppdc'
+Installing programs in scheduler...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/scheduler'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing programs in /tmp/pkg/cups/usr/sbin...
+Installing programs in /tmp/pkg/cups/usr/lib/cups/daemon...
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/scheduler'
+Installing programs in systemv...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/systemv'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+Installing System V admin printing commands in /tmp/pkg/cups/usr/sbin
+Installing System V user printing commands in /tmp/pkg/cups/usr/bin
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/systemv'
+Installing programs in conf...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/conf'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/conf'
+Installing programs in data...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/data'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/data'
+Installing programs in desktop...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/desktop'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/desktop'
+Installing programs in locale...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/locale'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/locale'
+Installing programs in man...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/man'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/man'
+Installing programs in doc...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/doc'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/doc'
+Installing programs in examples...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/examples'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/examples'
+Installing programs in templates...
+make[1]: Entering directory '/tmp/src/cups-2.4.11/templates'
+make[1]: warning: -j16 forced in submake: resetting jobserver mode.
+make[1]: Leaving directory '/tmp/src/cups-2.4.11/templates'
+>>> cups-dbg*: Running split function dbg...
+>>> cups-dbg*: Preparing subpackage cups-dbg...
+>>> cups-dbg*: Stripping binaries
+>>> cups-dbg*: Running postcheck for cups-dbg
+>>> cups-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/cups-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/cups-dev/usr/lib/pkgconfig'
+'usr/bin/cups-config' -> '/tmp/pkg/cups-dev/usr/bin/cups-config'
+'usr/share/cups/ppdc/label.h' -> '/tmp/pkg/cups-dev/usr/share/cups/ppdc/label.h'
+'usr/share/cups/ppdc/hp.h' -> '/tmp/pkg/cups-dev/usr/share/cups/ppdc/hp.h'
+'usr/share/cups/ppdc/epson.h' -> '/tmp/pkg/cups-dev/usr/share/cups/ppdc/epson.h'
+'usr/lib/libcups.so' -> '/tmp/pkg/cups-dev/usr/lib/libcups.so'
+'usr/lib/libcupsimage.so' -> '/tmp/pkg/cups-dev/usr/lib/libcupsimage.so'
+>>> cups-dev*: Preparing subpackage cups-dev...
+>>> cups-dev*: Stripping binaries
+>>> cups-dev*: Running postcheck for cups-dev
+>>> cups-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/cups-doc/usr/share/man'
+'usr/share/cups/help' -> '/tmp/pkg/cups-doc/usr/share/cups/help'
+>>> cups-doc*: Preparing subpackage cups-doc...
+>>> cups-doc*: Running postcheck for cups-doc
+>>> cups-libs*: Running split function libs...
+'usr/lib/libcups.so.2' -> '/tmp/pkg/cups-libs/usr/lib/libcups.so.2'
+'usr/lib/libcupsimage.so.2' -> '/tmp/pkg/cups-libs/usr/lib/libcupsimage.so.2'
+>>> cups-libs*: Preparing subpackage cups-libs...
+>>> cups-libs*: Stripping binaries
+>>> cups-libs*: Running postcheck for cups-libs
+>>> ipptool*: Running split function ipptool...
+'usr/bin/ipptool' -> '/tmp/pkg/ipptool/usr/bin/ipptool'
+'usr/share/cups/ipptool' -> '/tmp/pkg/ipptool/usr/share/cups/ipptool'
+>>> ipptool*: Preparing subpackage ipptool...
+>>> ipptool*: Stripping binaries
+>>> ipptool*: Running postcheck for ipptool
+>>> cups-client*: Running split function client...
+'usr/bin' -> '/tmp/pkg/cups-client/usr/bin'
+'usr/sbin/cupsaccept' -> '/tmp/pkg/cups-client/usr/sbin/cupsaccept'
+'usr/sbin/cupsctl' -> '/tmp/pkg/cups-client/usr/sbin/cupsctl'
+'usr/sbin/cupsdisable' -> '/tmp/pkg/cups-client/usr/sbin/cupsdisable'
+'usr/sbin/cupsenable' -> '/tmp/pkg/cups-client/usr/sbin/cupsenable'
+'usr/sbin/lpadmin' -> '/tmp/pkg/cups-client/usr/sbin/lpadmin'
+'usr/sbin/lpc' -> '/tmp/pkg/cups-client/usr/sbin/lpc'
+'usr/sbin/lpinfo' -> '/tmp/pkg/cups-client/usr/sbin/lpinfo'
+'usr/sbin/lpmove' -> '/tmp/pkg/cups-client/usr/sbin/lpmove'
+>>> cups-client*: Preparing subpackage cups-client...
+>>> cups-client*: Stripping binaries
+>>> cups-client*: Running postcheck for cups-client
+>>> cups-lang*: Running split function lang...
+'usr/share/locale' -> '/tmp/pkg/cups-lang/usr/share/locale'
+>>> cups-lang*: Preparing subpackage cups-lang...
+>>> cups-lang*: Running postcheck for cups-lang
+>>> cups-openrc*: Running split function openrc...
+'etc/init.d' -> '/tmp/pkg/cups-openrc/etc/init.d'
+>>> cups-openrc*: Preparing subpackage cups-openrc...
+>>> cups-openrc*: Running postcheck for cups-openrc
+>>> cups*: Running postcheck for cups
+>>> cups*: Preparing package cups...
+>>> cups*: Stripping binaries
+>>> cups*: Script found. /bin/sh added as a dependency for cups-2.4.11-r0.apk
+>>> cups*: Adding .pre-install
+>>> cups-client*: Scanning shared objects
+>>> cups-dbg*: Scanning shared objects
+>>> cups-dev*: Scanning shared objects
+>>> cups-doc*: Scanning shared objects
+>>> cups-lang*: Scanning shared objects
+>>> cups-libs*: Scanning shared objects
+>>> cups-openrc*: Scanning shared objects
+>>> cups*: Scanning shared objects
+>>> ipptool*: Scanning shared objects
+>>> cups-client*: Tracing dependencies...
+	so:libavahi-client.so.3
+	so:libavahi-common.so.3
+	so:libc.musl-x86_64.so.1
+	so:libcups.so.2
+	so:libgcc_s.so.1
+	so:libstdc++.so.6
+>>> cups-client*: Package size: 736.3 KB
+>>> cups-client*: Compressing data...
+>>> cups-client*: Create checksum...
+>>> cups-client*: Create cups-client-2.4.11-r0.apk
+>>> cups-dbg*: Tracing dependencies...
+	cups-client
+	poppler-utils
+	openssl
+	dbus
+	!cups-client<2.4.11-r0
+	!cups-client>2.4.11-r0
+	!cups-libs<2.4.11-r0
+	!cups-libs>2.4.11-r0
+	!cups<2.4.11-r0
+	!cups>2.4.11-r0
+	!ipptool<2.4.11-r0
+	!ipptool>2.4.11-r0
+>>> cups-dbg*: Package size: 6.5 MB
+>>> cups-dbg*: Compressing data...
+>>> cups-dbg*: Create checksum...
+>>> cups-dbg*: Create cups-dbg-2.4.11-r0.apk
+>>> cups-dev*: Tracing dependencies...
+>>> WARNING: cups-dev*: gnutls-dev should be removed from depends_dev
+	libgcrypt-dev
+	gnutls-dev
+	zlib-dev
+	cups-libs=2.4.11-r0
+	pc:avahi-client
+	pc:gnutls
+	pkgconfig
+>>> cups-dev*: Package size: 184.3 KB
+>>> cups-dev*: Compressing data...
+>>> cups-dev*: Create checksum...
+>>> cups-dev*: Create cups-dev-2.4.11-r0.apk
+>>> cups-doc*: Tracing dependencies...
+>>> cups-doc*: Package size: 1.4 MB
+>>> cups-doc*: Compressing data...
+>>> cups-doc*: Create checksum...
+>>> cups-doc*: Create cups-doc-2.4.11-r0.apk
+>>> cups-lang*: Tracing dependencies...
+>>> cups-lang*: Package size: 4.0 MB
+>>> cups-lang*: Compressing data...
+>>> cups-lang*: Create checksum...
+>>> cups-lang*: Create cups-lang-2.4.11-r0.apk
+>>> cups-libs*: Tracing dependencies...
+	so:libavahi-client.so.3
+	so:libavahi-common.so.3
+	so:libc.musl-x86_64.so.1
+	so:libgnutls.so.30
+	so:libz.so.1
+>>> cups-libs*: Package size: 559.3 KB
+>>> cups-libs*: Compressing data...
+>>> cups-libs*: Create checksum...
+>>> cups-libs*: Create cups-libs-2.4.11-r0.apk
+>>> cups-openrc*: Tracing dependencies...
+>>> cups-openrc*: Package size: 843.0 B
+>>> cups-openrc*: Compressing data...
+>>> cups-openrc*: Create checksum...
+>>> cups-openrc*: Create cups-openrc-2.4.11-r0.apk
+>>> cups*: Tracing dependencies...
+	cups-client
+	poppler-utils
+	openssl
+	dbus
+	/bin/sh
+	cups-client=2.4.11-r0
+	so:libavahi-client.so.3
+	so:libavahi-common.so.3
+	so:libc.musl-x86_64.so.1
+	so:libcups.so.2
+	so:libdbus-1.so.3
+	so:libgcc_s.so.1
+	so:libpaper.so.2
+	so:libstdc++.so.6
+	so:libusb-1.0.so.0
+>>> cups*: Package size: 1.9 MB
+>>> cups*: Compressing data...
+>>> cups*: Create checksum...
+>>> cups*: Create cups-2.4.11-r0.apk
+>>> ipptool*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcups.so.2
+>>> ipptool*: Package size: 4.3 MB
+>>> ipptool*: Compressing data...
+>>> ipptool*: Create checksum...
+>>> ipptool*: Create ipptool-2.4.11-r0.apk
+>>> cups: Updating the main/x86_64 repository index...
+>>> cups: Signing the index...
+>>> cups: Cleaning up srcdir
+>>> cups: Cleaning up build chroot
+>>> cups: Cleaning up pkgdir

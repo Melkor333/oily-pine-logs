@@ -1,0 +1,1547 @@
+>>> mbedtls: Validating /home/packager/oily-pine/main/mbedtls/APKBUILD...
+>>> mbedtls: Cleaning up srcdir
+>>> mbedtls: Cleaning up pkgdir
+>>> mbedtls: Cleaning up tmpdir
+>>> mbedtls: Fetching mbedtls-3.6.3.tar.gz::https://github.com/ARMmbed/mbedtls/archive/v3.6.3.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100   839    0   839    0     0   1036      0 --:--:-- --:--:-- --:--:--  1036100 1330k    0 1330k    0     0   733k      0 --:--:--  0:00:01 --:--:-- 1324k100 5369k    0 5369k    0     0  1925k      0 --:--:--  0:00:02 --:--:-- 2711k100 6218k    0 6218k    0     0  2147k      0 --:--:--  0:00:02 --:--:-- 2980k
+>>> mbedtls: Fetching mbedtls-3.6.3.tar.gz::https://github.com/ARMmbed/mbedtls/archive/v3.6.3.tar.gz
+>>> mbedtls: Checking sha512sums...
+mbedtls-3.6.3.tar.gz: OK
+gcc14.patch: OK
+>>> mbedtls: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/92) Installing musl (1.2.5-r10)
+(2/92) Installing libcrypto3 (3.5.0-r0)
+(3/92) Installing ca-certificates-bundle (20241121-r2)
+(4/92) Installing libssl3 (3.5.0-r0)
+(5/92) Installing zlib (1.3.1-r2)
+(6/92) Installing libapk2 (2.14.9-r2)
+(7/92) Installing apk-tools (2.14.9-r2)
+(8/92) Installing libcap2 (2.76-r0)
+(9/92) Installing libcap-getcap (2.76-r0)
+(10/92) Installing fakeroot (1.37.1.1-r0)
+(11/92) Installing scanelf (1.3.8-r1)
+(12/92) Installing musl-utils (1.2.5-r10)
+(13/92) Installing libgcc (14.3.0-r0)
+(14/92) Installing libstdc++ (14.3.0-r0)
+(15/92) Installing lzip (1.25-r0)
+(16/92) Installing openssl (3.5.0-r0)
+(17/92) Installing patch (2.8-r0)
+(18/92) Installing pkgconf (2.4.3-r0)
+(19/92) Installing acl-libs (2.3.2-r1)
+(20/92) Installing tar (1.35-r3)
+(21/92) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/92) Installing ssl_client (1.37.0-r18)
+(23/92) Installing busybox-binsh (1.37.0-r18)
+(24/92) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/92) Installing abuild-sudo (3.15.0-r0)
+(26/92) Installing alpine-baselayout-data (3.7.0-r0)
+(27/92) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/92) Installing bridge (1.5-r5)
+(29/92) Installing ifupdown-ng (0.12.1-r7)
+(30/92) Installing openrc-user (0.62.2-r2)
+(31/92) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/92) Installing mdev-conf (4.8-r0)
+(33/92) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/92) Installing alpine-conf (3.20.0-r0)
+(35/92) Installing alpine-keys (2.5-r0)
+(36/92) Installing alpine-release (3.22.0-r0)
+(37/92) Installing busybox-openrc (1.37.0-r18)
+(38/92) Installing busybox-suid (1.37.0-r18)
+(39/92) Installing alpine-base (3.22.0-r0)
+(40/92) Installing jansson (2.14.1-r0)
+(41/92) Installing zstd-libs (1.5.7-r0)
+(42/92) Installing binutils (2.44-r0)
+(43/92) Installing libmagic (5.46-r2)
+(44/92) Installing file (5.46-r2)
+(45/92) Installing libgomp (14.3.0-r0)
+(46/92) Installing libatomic (14.3.0-r0)
+(47/92) Installing gmp (6.3.0-r3)
+(48/92) Installing isl26 (0.26-r1)
+(49/92) Installing mpfr4 (4.2.1_p1-r0)
+(50/92) Installing mpc1 (1.3.1-r1)
+(51/92) Installing gcc (14.3.0-r0)
+(52/92) Installing libstdc++-dev (14.3.0-r0)
+(53/92) Installing musl-dev (1.2.5-r10)
+(54/92) Installing g++ (14.3.0-r0)
+(55/92) Installing make (4.4.1-r3)
+(56/92) Installing fortify-headers (1.1-r5)
+(57/92) Installing build-base (0.5-r3)
+(58/92) Installing libbz2 (1.0.8-r6)
+(59/92) Installing libexpat (2.7.1-r0)
+(60/92) Installing lz4-libs (1.10.0-r0)
+(61/92) Installing xz-libs (5.8.1-r0)
+(62/92) Installing libarchive (3.8.0-r0)
+(63/92) Installing rhash-libs (1.4.5-r0)
+(64/92) Installing libuv (1.51.0-r0)
+(65/92) Installing cmake (4.0.2-r0)
+(66/92) Installing brotli-libs (1.1.0-r2)
+(67/92) Installing c-ares (1.34.5-r0)
+(68/92) Installing libunistring (1.3-r0)
+(69/92) Installing libidn2 (2.3.7-r0)
+(70/92) Installing nghttp2-libs (1.65.0-r0)
+(71/92) Installing libpsl (0.21.5-r3)
+(72/92) Installing libcurl (8.14.0-r2)
+(73/92) Installing pcre2 (10.43-r1)
+(74/92) Installing git (2.49.0-r0)
+(75/92) Installing git-init-template (2.49.0-r0)
+(76/92) Installing perl (5.40.2-r0)
+(77/92) Installing perl-error (0.17030-r0)
+(78/92) Installing perl-git (2.49.0-r0)
+(79/92) Installing git-perl (2.49.0-r0)
+(80/92) Installing libffi (3.4.8-r0)
+(81/92) Installing gdbm (1.24-r0)
+(82/92) Installing mpdecimal (4.0.1-r0)
+(83/92) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(84/92) Installing libncursesw (6.5_p20250503-r0)
+(85/92) Installing libpanelw (6.5_p20250503-r0)
+(86/92) Installing readline (8.2.13-r1)
+(87/92) Installing sqlite-libs (3.50.0-r0)
+(88/92) Installing python3 (3.12.10-r1)
+(89/92) Installing python3-pycache-pyc0 (3.12.10-r1)
+(90/92) Installing pyc (3.12.10-r1)
+(91/92) Installing python3-pyc (3.12.10-r1)
+(92/92) Installing samurai (1.2-r7)
+Executing busybox-1.37.0-r18.trigger
+OK: 385 MiB in 92 packages
+>>> mbedtls: Fetching mbedtls-3.6.3.tar.gz::https://github.com/ARMmbed/mbedtls/archive/v3.6.3.tar.gz
+>>> mbedtls: Checking sha512sums...
+mbedtls-3.6.3.tar.gz: OK
+gcc14.patch: OK
+>>> mbedtls: Unpacking /var/cache/distfiles/mbedtls-3.6.3.tar.gz...
+>>> mbedtls: gcc14.patch
+patching file library/common.h
+CMake Deprecation Warning at CMakeLists.txt:21 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 14.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found Python3: /usr/bin/python3.12 (found version "3.12.10") found components: Interpreter
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS
+-- Performing Test C_COMPILER_SUPPORTS_WFORMAT_SIGNEDNESS - Success
+-- USING O3
+-- Configuring done (0.7s)
+-- Generating done (0.4s)
+-- Build files have been written to: /tmp/src/mbedtls-3.6.3/build
+[1/813] Building C object programs/x509/CMakeFiles/req_app.dir/req_app.c.o
+[2/813] Building C object programs/x509/CMakeFiles/load_roots.dir/load_roots.c.o
+[3/813] Building C object programs/x509/CMakeFiles/crl_app.dir/crl_app.c.o
+[4/813] Building C object programs/x509/CMakeFiles/cert_write.dir/cert_write.c.o
+[5/813] Building C object programs/x509/CMakeFiles/cert_req.dir/cert_req.c.o
+[6/813] Building C object programs/x509/CMakeFiles/cert_app.dir/cert_app.c.o
+[7/813] Building C object programs/util/CMakeFiles/strerror.dir/strerror.c.o
+[8/813] Building C object programs/util/CMakeFiles/pem2der.dir/pem2der.c.o
+[9/813] Building C object programs/test/CMakeFiles/zeroize.dir/__/__/framework/tests/programs/zeroize.c.o
+[10/813] Building C object programs/test/CMakeFiles/query_compile_time_config.dir/query_config.c.o
+[11/813] Building C object programs/test/CMakeFiles/query_compile_time_config.dir/__/__/framework/tests/programs/query_compile_time_config.c.o
+[12/813] Building C object programs/test/CMakeFiles/benchmark.dir/benchmark.c.o
+[13/813] Building C object programs/test/CMakeFiles/udp_proxy.dir/udp_proxy.c.o
+[14/813] Building C object programs/test/CMakeFiles/selftest.dir/selftest.c.o
+[15/813] Building C object programs/test/CMakeFiles/query_included_headers.dir/__/__/framework/tests/programs/query_included_headers.c.o
+[16/813] Building C object programs/test/CMakeFiles/metatest.dir/__/__/framework/tests/programs/metatest.c.o
+[17/813] Building C object programs/test/CMakeFiles/dlopen.dir/dlopen.c.o
+[18/813] Building C object programs/ssl/CMakeFiles/ssl_pthread_server.dir/ssl_pthread_server.c.o
+[19/813] Building C object programs/ssl/CMakeFiles/ssl_server2.dir/__/test/query_config.c.o
+[20/813] Building C object programs/ssl/CMakeFiles/ssl_server2.dir/ssl_test_lib.c.o
+[21/813] Building C object programs/ssl/CMakeFiles/ssl_server2.dir/ssl_server2.c.o
+[22/813] Building C object programs/ssl/CMakeFiles/ssl_server.dir/ssl_server.c.o
+[23/813] Building C object programs/ssl/CMakeFiles/ssl_mail_client.dir/ssl_mail_client.c.o
+[24/813] Building C object programs/ssl/CMakeFiles/ssl_fork_server.dir/ssl_fork_server.c.o
+[25/813] Linking C executable programs/test/dlopen
+[26/813] Building C object programs/ssl/CMakeFiles/ssl_context_info.dir/ssl_context_info.c.o
+[27/813] Building C object programs/ssl/CMakeFiles/ssl_client2.dir/__/test/query_config.c.o
+[28/813] Building C object programs/ssl/CMakeFiles/ssl_client2.dir/ssl_test_lib.c.o
+[29/813] Building C object programs/ssl/CMakeFiles/ssl_client2.dir/ssl_client2.c.o
+[30/813] Building C object programs/ssl/CMakeFiles/ssl_client1.dir/ssl_client1.c.o
+[31/813] Building C object programs/ssl/CMakeFiles/mini_client.dir/mini_client.c.o
+[32/813] Building C object programs/ssl/CMakeFiles/dtls_server.dir/dtls_server.c.o
+[33/813] Building C object programs/ssl/CMakeFiles/dtls_client.dir/dtls_client.c.o
+[34/813] Building C object programs/random/CMakeFiles/gen_random_ctr_drbg.dir/gen_random_ctr_drbg.c.o
+[35/813] Building C object programs/random/CMakeFiles/gen_entropy.dir/gen_entropy.c.o
+[36/813] Building C object programs/psa/CMakeFiles/psa_hash.dir/psa_hash.c.o
+[37/813] Building C object programs/psa/CMakeFiles/psa_constant_names.dir/psa_constant_names.c.o
+[38/813] Building C object programs/psa/CMakeFiles/key_ladder_demo.dir/key_ladder_demo.c.o
+[39/813] Building C object programs/psa/CMakeFiles/hmac_demo.dir/hmac_demo.c.o
+[40/813] Building C object programs/psa/CMakeFiles/crypto_examples.dir/crypto_examples.c.o
+[41/813] Building C object programs/psa/CMakeFiles/aead_demo.dir/aead_demo.c.o
+[42/813] Building C object programs/pkey/CMakeFiles/rsa_verify_pss.dir/rsa_verify_pss.c.o
+[43/813] Building C object programs/pkey/CMakeFiles/rsa_verify.dir/rsa_verify.c.o
+[44/813] Building C object programs/pkey/CMakeFiles/rsa_sign_pss.dir/rsa_sign_pss.c.o
+[45/813] Building C object programs/pkey/CMakeFiles/rsa_sign.dir/rsa_sign.c.o
+[46/813] Building C object programs/pkey/CMakeFiles/rsa_genkey.dir/rsa_genkey.c.o
+[47/813] Building C object programs/pkey/CMakeFiles/rsa_encrypt.dir/rsa_encrypt.c.o
+[48/813] Building C object programs/pkey/CMakeFiles/rsa_decrypt.dir/rsa_decrypt.c.o
+[49/813] Building C object programs/pkey/CMakeFiles/pk_verify.dir/pk_verify.c.o
+[50/813] Building C object programs/pkey/CMakeFiles/pk_sign.dir/pk_sign.c.o
+[51/813] Building C object programs/pkey/CMakeFiles/pk_decrypt.dir/pk_decrypt.c.o
+[52/813] Building C object programs/pkey/CMakeFiles/pk_encrypt.dir/pk_encrypt.c.o
+[53/813] Building C object programs/pkey/CMakeFiles/mpi_demo.dir/mpi_demo.c.o
+[54/813] Building C object programs/pkey/CMakeFiles/key_app_writer.dir/key_app_writer.c.o
+[55/813] Building C object programs/pkey/CMakeFiles/key_app.dir/key_app.c.o
+[56/813] Building C object programs/pkey/CMakeFiles/gen_key.dir/gen_key.c.o
+[57/813] Building C object programs/pkey/CMakeFiles/ecdsa.dir/ecdsa.c.o
+[58/813] Building C object programs/pkey/CMakeFiles/ecdh_curve25519.dir/ecdh_curve25519.c.o
+[59/813] Building C object programs/pkey/CMakeFiles/dh_genprime.dir/dh_genprime.c.o
+[60/813] Building C object programs/pkey/CMakeFiles/dh_server.dir/dh_server.c.o
+[61/813] Building C object programs/pkey/CMakeFiles/dh_client.dir/dh_client.c.o
+[62/813] Building C object programs/hash/CMakeFiles/md_hmac_demo.dir/md_hmac_demo.c.o
+[63/813] Building C object programs/hash/CMakeFiles/hello.dir/hello.c.o
+[64/813] Building C object programs/hash/CMakeFiles/generic_sum.dir/generic_sum.c.o
+[65/813] Building C object programs/fuzz/CMakeFiles/fuzz_server.dir/common.c.o
+[66/813] Building C object programs/fuzz/CMakeFiles/fuzz_server.dir/onefile.c.o
+[67/813] Building C object programs/fuzz/CMakeFiles/fuzz_server.dir/fuzz_server.c.o
+[68/813] Building C object programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/common.c.o
+[69/813] Building C object programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/onefile.c.o
+[70/813] Building C object programs/fuzz/CMakeFiles/fuzz_dtlsserver.dir/fuzz_dtlsserver.c.o
+[71/813] Building C object programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/common.c.o
+[72/813] Building C object programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/onefile.c.o
+[73/813] Building C object programs/fuzz/CMakeFiles/fuzz_dtlsclient.dir/fuzz_dtlsclient.c.o
+[74/813] Building C object programs/fuzz/CMakeFiles/fuzz_client.dir/common.c.o
+[75/813] Building C object programs/fuzz/CMakeFiles/fuzz_client.dir/onefile.c.o
+[76/813] Building C object programs/fuzz/CMakeFiles/fuzz_client.dir/fuzz_client.c.o
+[77/813] Building C object programs/fuzz/CMakeFiles/fuzz_privkey.dir/common.c.o
+[78/813] Building C object programs/fuzz/CMakeFiles/fuzz_privkey.dir/onefile.c.o
+[79/813] Building C object programs/fuzz/CMakeFiles/fuzz_privkey.dir/fuzz_privkey.c.o
+[80/813] Building C object programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/onefile.c.o
+[81/813] Building C object programs/fuzz/CMakeFiles/fuzz_pkcs7.dir/fuzz_pkcs7.c.o
+[82/813] Building C object programs/fuzz/CMakeFiles/fuzz_x509csr.dir/onefile.c.o
+[83/813] Building C object programs/fuzz/CMakeFiles/fuzz_x509csr.dir/fuzz_x509csr.c.o
+[84/813] Building C object programs/fuzz/CMakeFiles/fuzz_x509crt.dir/onefile.c.o
+[85/813] Building C object programs/fuzz/CMakeFiles/fuzz_x509crt.dir/fuzz_x509crt.c.o
+[86/813] Building C object programs/fuzz/CMakeFiles/fuzz_x509crl.dir/onefile.c.o
+[87/813] Building C object programs/fuzz/CMakeFiles/fuzz_x509crl.dir/fuzz_x509crl.c.o
+[88/813] Building C object programs/fuzz/CMakeFiles/fuzz_pubkey.dir/onefile.c.o
+[89/813] Building C object programs/fuzz/CMakeFiles/fuzz_pubkey.dir/fuzz_pubkey.c.o
+[90/813] Building C object programs/cipher/CMakeFiles/cipher_aead_demo.dir/cipher_aead_demo.c.o
+[91/813] Building C object programs/aes/CMakeFiles/crypt_and_hash.dir/crypt_and_hash.c.o
+[92/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls13_generic.c.o
+[93/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls13_client.c.o
+[94/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls13_server.c.o
+[95/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls13_keys.c.o
+[96/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls12_server.c.o
+[97/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls12_client.c.o
+[98/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_tls.c.o
+[99/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_ticket.c.o
+[100/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_msg.c.o
+[101/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_debug_helpers_generated.c.o
+[102/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_cookie.c.o
+[103/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_client.c.o
+[104/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_ciphersuites.c.o
+[105/813] Building C object library/CMakeFiles/mbedtls.dir/ssl_cache.c.o
+[106/813] Building C object library/CMakeFiles/mbedtls.dir/net_sockets.c.o
+[107/813] Building C object library/CMakeFiles/mbedtls.dir/mps_trace.c.o
+[108/813] Building C object library/CMakeFiles/mbedtls.dir/mps_reader.c.o
+[109/813] Building C object library/CMakeFiles/mbedtls.dir/debug.c.o
+[110/813] Building C object library/CMakeFiles/mbedx509.dir/x509write_csr.c.o
+[111/813] Building C object library/CMakeFiles/mbedx509.dir/x509write_crt.c.o
+[112/813] Building C object library/CMakeFiles/mbedx509.dir/x509write.c.o
+[113/813] Building C object library/CMakeFiles/mbedx509.dir/x509_csr.c.o
+[114/813] Building C object library/CMakeFiles/mbedx509.dir/x509_crt.c.o
+[115/813] Building C object library/CMakeFiles/mbedx509.dir/x509_crl.c.o
+[116/813] Building C object library/CMakeFiles/mbedx509.dir/x509_create.c.o
+[117/813] Building C object library/CMakeFiles/mbedx509.dir/x509.c.o
+[118/813] Building C object library/CMakeFiles/mbedx509.dir/pkcs7.c.o
+[119/813] Building C object library/CMakeFiles/mbedcrypto.dir/version_features.c.o
+[120/813] Building C object library/CMakeFiles/mbedcrypto.dir/version.c.o
+[121/813] Building C object library/CMakeFiles/mbedcrypto.dir/timing.c.o
+[122/813] Building C object library/CMakeFiles/mbedcrypto.dir/threading.c.o
+[123/813] Building C object library/CMakeFiles/mbedcrypto.dir/sha3.c.o
+[124/813] Building C object library/CMakeFiles/mbedcrypto.dir/sha512.c.o
+[125/813] Building C object library/CMakeFiles/mbedcrypto.dir/sha256.c.o
+[126/813] Building C object library/CMakeFiles/mbedcrypto.dir/sha1.c.o
+[127/813] Building C object library/CMakeFiles/mbedcrypto.dir/rsa_alt_helpers.c.o
+[128/813] Building C object library/CMakeFiles/mbedcrypto.dir/rsa.c.o
+[129/813] Building C object library/CMakeFiles/mbedcrypto.dir/ripemd160.c.o
+[130/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_util.c.o
+[131/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_its_file.c.o
+[132/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_storage.c.o
+[133/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_slot_management.c.o
+[134/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_se.c.o
+[135/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_rsa.c.o
+[136/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_pake.c.o
+[137/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_mac.c.o
+[138/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_hash.c.o
+[139/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_ffdh.c.o
+[140/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_ecp.c.o
+[141/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_driver_wrappers_no_static.c.o
+[142/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_client.c.o
+[143/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_cipher.c.o
+[144/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto_aead.c.o
+[145/813] Building C object library/CMakeFiles/mbedcrypto.dir/psa_crypto.c.o
+[146/813] Building C object library/CMakeFiles/mbedcrypto.dir/poly1305.c.o
+[147/813] Building C object library/CMakeFiles/mbedcrypto.dir/platform_util.c.o
+[148/813] Building C object library/CMakeFiles/mbedcrypto.dir/platform.c.o
+[149/813] Building C object library/CMakeFiles/mbedcrypto.dir/pkwrite.c.o
+[150/813] Building C object library/CMakeFiles/mbedcrypto.dir/pkparse.c.o
+[151/813] Building C object library/CMakeFiles/mbedcrypto.dir/pkcs5.c.o
+[152/813] Building C object library/CMakeFiles/mbedcrypto.dir/pkcs12.c.o
+[153/813] Building C object library/CMakeFiles/mbedcrypto.dir/pk_wrap.c.o
+[154/813] Building C object library/CMakeFiles/mbedcrypto.dir/pk_ecc.c.o
+[155/813] Building C object library/CMakeFiles/mbedcrypto.dir/pk.c.o
+[156/813] Building C object library/CMakeFiles/mbedcrypto.dir/pem.c.o
+[157/813] Building C object library/CMakeFiles/mbedcrypto.dir/padlock.c.o
+[158/813] Building C object library/CMakeFiles/mbedcrypto.dir/oid.c.o
+[159/813] Building C object library/CMakeFiles/mbedcrypto.dir/nist_kw.c.o
+[160/813] Building C object library/CMakeFiles/mbedcrypto.dir/memory_buffer_alloc.c.o
+[161/813] Building C object library/CMakeFiles/mbedcrypto.dir/md5.c.o
+[162/813] Building C object library/CMakeFiles/mbedcrypto.dir/md.c.o
+[163/813] Building C object library/CMakeFiles/mbedcrypto.dir/lms.c.o
+[164/813] Building C object library/CMakeFiles/mbedcrypto.dir/lmots.c.o
+[165/813] Building C object library/CMakeFiles/mbedcrypto.dir/hmac_drbg.c.o
+[166/813] Building C object library/CMakeFiles/mbedcrypto.dir/hkdf.c.o
+[167/813] Building C object library/CMakeFiles/mbedcrypto.dir/gcm.c.o
+[168/813] Building C object library/CMakeFiles/mbedcrypto.dir/error.c.o
+[169/813] Building C object library/CMakeFiles/mbedcrypto.dir/entropy_poll.c.o
+[170/813] Building C object library/CMakeFiles/mbedcrypto.dir/entropy.c.o
+[171/813] Building C object library/CMakeFiles/mbedcrypto.dir/ecp_curves_new.c.o
+[172/813] Building C object library/CMakeFiles/mbedcrypto.dir/ecp_curves.c.o
+[173/813] Building C object library/CMakeFiles/mbedcrypto.dir/ecp.c.o
+[174/813] Building C object library/CMakeFiles/mbedcrypto.dir/ecjpake.c.o
+[175/813] Building C object library/CMakeFiles/mbedcrypto.dir/ecdsa.c.o
+[176/813] Building C object library/CMakeFiles/mbedcrypto.dir/ecdh.c.o
+[177/813] Building C object library/CMakeFiles/mbedcrypto.dir/dhm.c.o
+[178/813] Building C object library/CMakeFiles/mbedcrypto.dir/des.c.o
+[179/813] Building C object library/CMakeFiles/mbedcrypto.dir/ctr_drbg.c.o
+[180/813] Building C object library/CMakeFiles/mbedcrypto.dir/cmac.c.o
+[181/813] Building C object library/CMakeFiles/mbedcrypto.dir/constant_time.c.o
+[182/813] Building C object library/CMakeFiles/mbedcrypto.dir/cipher_wrap.c.o
+[183/813] Building C object library/CMakeFiles/mbedcrypto.dir/cipher.c.o
+[184/813] Building C object library/CMakeFiles/mbedcrypto.dir/chachapoly.c.o
+[185/813] Building C object library/CMakeFiles/mbedcrypto.dir/chacha20.c.o
+[186/813] Building C object library/CMakeFiles/mbedcrypto.dir/ccm.c.o
+[187/813] Building C object library/CMakeFiles/mbedcrypto.dir/camellia.c.o
+[188/813] Building C object library/CMakeFiles/mbedcrypto.dir/block_cipher.c.o
+[189/813] Building C object library/CMakeFiles/mbedcrypto.dir/bignum_mod_raw.c.o
+[190/813] Building C object library/CMakeFiles/mbedcrypto.dir/bignum_mod.c.o
+[191/813] Building C object library/CMakeFiles/mbedcrypto.dir/bignum_core.c.o
+[192/813] Building C object library/CMakeFiles/mbedcrypto.dir/bignum.c.o
+[193/813] Building C object library/CMakeFiles/mbedcrypto.dir/base64.c.o
+[194/813] Building C object library/CMakeFiles/mbedcrypto.dir/asn1write.c.o
+[195/813] Building C object library/CMakeFiles/mbedcrypto.dir/asn1parse.c.o
+[196/813] Building C object library/CMakeFiles/mbedcrypto.dir/aria.c.o
+[197/813] Building C object library/CMakeFiles/mbedcrypto.dir/aesce.c.o
+[198/813] Building C object library/CMakeFiles/mbedcrypto.dir/aesni.c.o
+[199/813] Building C object library/CMakeFiles/mbedcrypto.dir/aes.c.o
+[200/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls13_generic.c.o
+[201/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls13_client.c.o
+[202/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls13_server.c.o
+[203/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls13_keys.c.o
+[204/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls12_server.c.o
+[205/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls12_client.c.o
+[206/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_tls.c.o
+[207/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_ticket.c.o
+[208/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_msg.c.o
+[209/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_debug_helpers_generated.c.o
+[210/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_cookie.c.o
+[211/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_client.c.o
+[212/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_ciphersuites.c.o
+[213/813] Building C object library/CMakeFiles/mbedtls_static.dir/ssl_cache.c.o
+[214/813] Building C object library/CMakeFiles/mbedtls_static.dir/net_sockets.c.o
+[215/813] Building C object library/CMakeFiles/mbedtls_static.dir/mps_trace.c.o
+[216/813] Building C object library/CMakeFiles/mbedtls_static.dir/mps_reader.c.o
+[217/813] Building C object library/CMakeFiles/mbedtls_static.dir/debug.c.o
+[218/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509write_csr.c.o
+[219/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509write_crt.c.o
+[220/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509write.c.o
+[221/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509_csr.c.o
+[222/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509_crt.c.o
+[223/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509_crl.c.o
+[224/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509_create.c.o
+[225/813] Building C object library/CMakeFiles/mbedx509_static.dir/x509.c.o
+[226/813] Building C object library/CMakeFiles/mbedx509_static.dir/pkcs7.c.o
+[227/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/version_features.c.o
+[228/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/version.c.o
+[229/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/timing.c.o
+[230/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/threading.c.o
+[231/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/sha3.c.o
+[232/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/sha512.c.o
+[233/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/sha256.c.o
+[234/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/sha1.c.o
+[235/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/rsa_alt_helpers.c.o
+[236/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/rsa.c.o
+[237/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ripemd160.c.o
+[238/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_util.c.o
+[239/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_its_file.c.o
+[240/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_storage.c.o
+[241/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_slot_management.c.o
+[242/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_se.c.o
+[243/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_rsa.c.o
+[244/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_pake.c.o
+[245/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_mac.c.o
+[246/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_hash.c.o
+[247/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_ffdh.c.o
+[248/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_ecp.c.o
+[249/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_driver_wrappers_no_static.c.o
+[250/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_client.c.o
+[251/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_cipher.c.o
+[252/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto_aead.c.o
+[253/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/psa_crypto.c.o
+[254/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/poly1305.c.o
+[255/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/platform_util.c.o
+[256/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/platform.c.o
+[257/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pkwrite.c.o
+[258/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pkparse.c.o
+[259/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pkcs5.c.o
+[260/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pkcs12.c.o
+[261/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pk_wrap.c.o
+[262/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pk_ecc.c.o
+[263/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pk.c.o
+[264/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/pem.c.o
+[265/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/padlock.c.o
+[266/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/oid.c.o
+[267/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/nist_kw.c.o
+[268/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/memory_buffer_alloc.c.o
+[269/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/md5.c.o
+[270/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/md.c.o
+[271/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/lms.c.o
+[272/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/lmots.c.o
+[273/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/hmac_drbg.c.o
+[274/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/hkdf.c.o
+[275/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/gcm.c.o
+[276/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/error.c.o
+[277/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/entropy_poll.c.o
+[278/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/entropy.c.o
+[279/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ecp_curves_new.c.o
+[280/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ecp_curves.c.o
+[281/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ecp.c.o
+[282/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ecjpake.c.o
+[283/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ecdsa.c.o
+[284/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ecdh.c.o
+[285/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/dhm.c.o
+[286/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/des.c.o
+[287/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ctr_drbg.c.o
+[288/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/cmac.c.o
+[289/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/constant_time.c.o
+[290/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/cipher_wrap.c.o
+[291/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/cipher.c.o
+[292/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/chachapoly.c.o
+[293/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/chacha20.c.o
+[294/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/ccm.c.o
+[295/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/camellia.c.o
+[296/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/block_cipher.c.o
+[297/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/bignum_mod_raw.c.o
+[298/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/bignum_mod.c.o
+[299/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/bignum_core.c.o
+[300/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/bignum.c.o
+[301/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/base64.c.o
+[302/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/asn1write.c.o
+[303/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/asn1parse.c.o
+[304/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/aria.c.o
+[305/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/aesce.c.o
+[306/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/aesni.c.o
+[307/813] Building C object library/CMakeFiles/mbedcrypto_static.dir/aes.c.o
+[308/813] Building C object 3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.o
+[309/813] Building C object 3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entrypoints.c.o
+[310/813] Building C object 3rdparty/everest/CMakeFiles/everest.dir/library/Hacl_Curve25519_joined.c.o
+[311/813] Building C object 3rdparty/everest/CMakeFiles/everest.dir/library/x25519.c.o
+[312/813] Building C object 3rdparty/everest/CMakeFiles/everest.dir/library/everest.c.o
+[313/813] Building C object CMakeFiles/mbedtls_test_helpers.dir/tests/src/test_helpers/ssl_helpers.c.o
+[314/813] Building C object CMakeFiles/mbedtls_test.dir/tests/src/psa_test_wrappers.c.o
+[315/813] Building C object CMakeFiles/mbedtls_test.dir/tests/src/certs.c.o
+[316/813] Linking C static library 3rdparty/p256-m/libp256m.a
+[317/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/threading_helpers.c.o
+[318/813] Linking C static library 3rdparty/everest/libeverest.a
+[319/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/test_memory.c.o
+[320/813] Linking C shared library library/libmbedcrypto.so.3.6.3
+[321/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/random.c.o
+[322/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/psa_memory_poisoning_wrappers.c.o
+[323/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/psa_exercise_key.c.o
+[324/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/psa_crypto_stubs.c.o
+[325/813] Creating library symlink library/libmbedcrypto.so.16 library/libmbedcrypto.so
+[326/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/psa_crypto_helpers.c.o
+[327/813] Linking C shared library library/libmbedx509.so.3.6.3
+[328/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/helpers.c.o
+[329/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/fake_external_rng_for_test.c.o
+[330/813] Creating library symlink library/libmbedx509.so.7 library/libmbedx509.so
+[331/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_signature.c.o
+[332/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_pake.c.o
+[333/813] Linking C shared library library/libmbedtls.so.3.6.3
+[334/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_mac.c.o
+[335/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_key_management.c.o
+[336/813] Creating library symlink library/libmbedtls.so.21 library/libmbedtls.so
+[337/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_key_agreement.c.o
+[338/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_cipher.c.o
+[339/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_asymmetric_encryption.c.o
+[340/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/test_driver_aead.c.o
+[341/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/platform_builtin_keys.c.o
+[342/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/drivers/hash.c.o
+[343/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/bignum_helpers.c.o
+[344/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/bignum_codepath_check.c.o
+[345/813] Building C object CMakeFiles/mbedtls_test.dir/framework/tests/src/asn1_helpers.c.o
+[346/813] Generating test_suite_x509write.c
+[347/813] Generating test_suite_x509parse.c
+[348/813] Generating test_suite_version.c
+[349/813] Generating test_suite_timing.c
+[350/813] Generating test_suite_test_helpers.c
+[351/813] Generating test_suite_ssl_decrypt.misc.c
+[352/813] Generating test_suite_ssl.tls-defrag.c
+[353/813] Generating test_suite_ssl.c
+[354/813] Generating test_suite_shax.c
+[355/813] Generating test_suite_rsa.c
+[356/813] Generating test_suite_random.c
+[357/813] Generating test_suite_psa_its.c
+[358/813] Generating test_suite_psa_crypto_util.c
+[359/813] Generating test_suite_psa_crypto_storage_format.v0.c
+[360/813] Generating test_suite_psa_crypto_storage_format.misc.c
+[361/813] Building C object tests/CMakeFiles/test_suite_version.dir/test_suite_version.c.o
+[362/813] Building C object tests/CMakeFiles/test_suite_rsa.dir/test_suite_rsa.c.o
+[363/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_util.dir/test_suite_psa_crypto_util.c.o
+[364/813] Building C object tests/CMakeFiles/test_suite_test_helpers.dir/test_suite_test_helpers.c.o
+[365/813] Building C object tests/CMakeFiles/test_suite_timing.dir/test_suite_timing.c.o
+[366/813] Building C object tests/CMakeFiles/test_suite_ssl.dir/test_suite_ssl.c.o
+[367/813] Building C object tests/CMakeFiles/test_suite_shax.dir/test_suite_shax.c.o
+[368/813] Building C object tests/CMakeFiles/test_suite_random.dir/test_suite_random.c.o
+[369/813] Building C object tests/CMakeFiles/test_suite_psa_its.dir/test_suite_psa_its.c.o
+[370/813] Building C object tests/CMakeFiles/test_suite_x509write.dir/test_suite_x509write.c.o
+[371/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_storage_format.misc.dir/test_suite_psa_crypto_storage_format.misc.c.o
+[372/813] Building C object tests/CMakeFiles/test_suite_ssl_decrypt.misc.dir/test_suite_ssl_decrypt.misc.c.o
+[373/813] Building C object tests/CMakeFiles/test_suite_x509parse.dir/test_suite_x509parse.c.o
+[374/813] Building C object tests/CMakeFiles/test_suite_ssl.tls-defrag.dir/test_suite_ssl.tls-defrag.c.o
+[375/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_storage_format.v0.dir/test_suite_psa_crypto_storage_format.v0.c.o
+[376/813] Linking C executable tests/test_suite_version
+[377/813] Linking C static library library/libmbedcrypto.a
+[378/813] Generating test_suite_psa_crypto_storage_format.current.c
+[379/813] Linking C executable tests/test_suite_psa_crypto_util
+[380/813] Linking C static library library/libmbedx509.a
+[381/813] Linking C static library library/libmbedtls.a
+[382/813] Generating test_suite_psa_crypto_slot_management.c
+[383/813] Generating test_suite_psa_crypto_se_driver_hal_mocks.c
+[384/813] Linking C executable tests/test_suite_test_helpers
+[385/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_se_driver_hal_mocks.dir/test_suite_psa_crypto_se_driver_hal_mocks.c.o
+[386/813] Generating test_suite_psa_crypto_se_driver_hal.c
+[387/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_slot_management.dir/test_suite_psa_crypto_slot_management.c.o
+[388/813] Linking C executable tests/test_suite_random
+[389/813] Generating test_suite_psa_crypto_persistent_key.c
+[390/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_se_driver_hal.dir/test_suite_psa_crypto_se_driver_hal.c.o
+[391/813] Linking C executable tests/test_suite_timing
+[392/813] Linking C executable tests/test_suite_psa_crypto_storage_format.v0
+[393/813] Linking C executable tests/test_suite_psa_its
+[394/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_persistent_key.dir/test_suite_psa_crypto_persistent_key.c.o
+[395/813] Generating test_suite_psa_crypto_pake.c
+[396/813] Generating test_suite_psa_crypto_op_fail.misc.c
+[397/813] Generating test_suite_psa_crypto_op_fail.generated.c
+[398/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_storage_format.current.dir/test_suite_psa_crypto_storage_format.current.c.o
+[399/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_pake.dir/test_suite_psa_crypto_pake.c.o
+[400/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_op_fail.misc.dir/test_suite_psa_crypto_op_fail.misc.c.o
+[401/813] Linking C executable tests/test_suite_psa_crypto_se_driver_hal_mocks
+[402/813] Linking C executable tests/test_suite_x509write
+[403/813] Linking C executable tests/test_suite_ssl_decrypt.misc
+[404/813] Generating test_suite_psa_crypto_not_supported.misc.c
+[405/813] Generating test_suite_psa_crypto_not_supported.generated.c
+[406/813] Linking C executable tests/test_suite_psa_crypto_storage_format.misc
+[407/813] Generating test_suite_psa_crypto_metadata.c
+[408/813] Generating test_suite_psa_crypto_memory.c
+[409/813] Linking C executable tests/test_suite_psa_crypto_se_driver_hal
+[410/813] Generating test_suite_psa_crypto_low_hash.generated.c
+[411/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_not_supported.misc.dir/test_suite_psa_crypto_not_supported.misc.c.o
+[412/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_memory.dir/test_suite_psa_crypto_memory.c.o
+[413/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_not_supported.generated.dir/test_suite_psa_crypto_not_supported.generated.c.o
+[414/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_low_hash.generated.dir/test_suite_psa_crypto_low_hash.generated.c.o
+[415/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_metadata.dir/test_suite_psa_crypto_metadata.c.o
+[416/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_op_fail.generated.dir/test_suite_psa_crypto_op_fail.generated.c.o
+[417/813] Linking C executable tests/test_suite_shax
+[418/813] Generating test_suite_psa_crypto_init.c
+[419/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_init.dir/test_suite_psa_crypto_init.c.o
+[420/813] Linking C executable tests/test_suite_psa_crypto_storage_format.current
+[421/813] Linking C executable tests/test_suite_psa_crypto_persistent_key
+[422/813] Generating test_suite_psa_crypto_hash.c
+[423/813] Generating test_suite_psa_crypto_generate_key.generated.c
+[424/813] Linking C executable tests/test_suite_psa_crypto_op_fail.misc
+[425/813] Generating test_suite_psa_crypto_entropy.c
+[426/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_hash.dir/test_suite_psa_crypto_hash.c.o
+[427/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_generate_key.generated.dir/test_suite_psa_crypto_generate_key.generated.c.o
+[428/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_entropy.dir/test_suite_psa_crypto_entropy.c.o
+[429/813] Linking C executable tests/test_suite_psa_crypto_memory
+[430/813] Generating test_suite_psa_crypto_ecp.c
+[431/813] Linking C executable tests/test_suite_psa_crypto_not_supported.generated
+[432/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_ecp.dir/test_suite_psa_crypto_ecp.c.o
+[433/813] Linking C executable tests/test_suite_rsa
+[434/813] Generating test_suite_psa_crypto_driver_wrappers.c
+[435/813] Generating test_suite_psa_crypto_attributes.c
+[436/813] Linking C executable tests/test_suite_psa_crypto_not_supported.misc
+[437/813] Linking C executable tests/test_suite_psa_crypto_op_fail.generated
+[438/813] Linking C executable tests/test_suite_psa_crypto_low_hash.generated
+[439/813] Generating test_suite_psa_crypto.pbkdf2.c
+[440/813] Generating test_suite_psa_crypto.c
+[441/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_driver_wrappers.dir/test_suite_psa_crypto_driver_wrappers.c.o
+[442/813] Generating test_suite_poly1305.c
+[443/813] Building C object tests/CMakeFiles/test_suite_psa_crypto_attributes.dir/test_suite_psa_crypto_attributes.c.o
+[444/813] Linking C executable tests/test_suite_psa_crypto_generate_key.generated
+[445/813] Linking C executable tests/test_suite_psa_crypto_hash
+[446/813] Linking C executable tests/test_suite_psa_crypto_entropy
+[447/813] Generating test_suite_platform_util.c
+[448/813] Generating test_suite_platform_printf.c
+[449/813] Generating test_suite_platform.c
+[450/813] Building C object tests/CMakeFiles/test_suite_poly1305.dir/test_suite_poly1305.c.o
+[451/813] Linking C executable tests/test_suite_psa_crypto_slot_management
+[452/813] Generating test_suite_pkwrite.c
+[453/813] Building C object tests/CMakeFiles/test_suite_psa_crypto.pbkdf2.dir/test_suite_psa_crypto.pbkdf2.c.o
+[454/813] Building C object tests/CMakeFiles/test_suite_platform_printf.dir/test_suite_platform_printf.c.o
+[455/813] Linking C executable tests/test_suite_psa_crypto_init
+[456/813] Building C object tests/CMakeFiles/test_suite_platform_util.dir/test_suite_platform_util.c.o
+[457/813] Building C object tests/CMakeFiles/test_suite_platform.dir/test_suite_platform.c.o
+[458/813] Building C object tests/CMakeFiles/test_suite_pkwrite.dir/test_suite_pkwrite.c.o
+[459/813] Generating test_suite_pkparse.c
+[460/813] Linking C executable tests/test_suite_psa_crypto_driver_wrappers
+[461/813] Generating test_suite_pkcs7.c
+[462/813] Linking C executable tests/test_suite_psa_crypto_ecp
+[463/813] Linking C executable tests/test_suite_x509parse
+[464/813] Generating test_suite_pkcs5.c
+[465/813] Generating test_suite_pkcs1_v21.c
+[466/813] Building C object tests/CMakeFiles/test_suite_pkparse.dir/test_suite_pkparse.c.o
+[467/813] Building C object tests/CMakeFiles/test_suite_pkcs7.dir/test_suite_pkcs7.c.o
+[468/813] Building C object tests/CMakeFiles/test_suite_psa_crypto.dir/test_suite_psa_crypto.c.o
+[469/813] Building C object tests/CMakeFiles/test_suite_pkcs1_v21.dir/test_suite_pkcs1_v21.c.o
+[470/813] Building C object tests/CMakeFiles/test_suite_pkcs5.dir/test_suite_pkcs5.c.o
+[471/813] Linking C executable tests/test_suite_platform_util
+[472/813] Generating test_suite_pkcs1_v15.c
+[473/813] Linking C executable tests/test_suite_psa_crypto_attributes
+[474/813] Linking C executable tests/test_suite_pkwrite
+[475/813] Building C object tests/CMakeFiles/test_suite_pkcs1_v15.dir/test_suite_pkcs1_v15.c.o
+[476/813] Generating test_suite_pkcs12.c
+[477/813] Generating test_suite_pk.c
+[478/813] Linking C executable tests/test_suite_platform_printf
+[479/813] Generating test_suite_pem.c
+[480/813] Building C object tests/CMakeFiles/test_suite_pkcs12.dir/test_suite_pkcs12.c.o
+[481/813] Building C object tests/CMakeFiles/test_suite_pk.dir/test_suite_pk.c.o
+[482/813] Linking C executable tests/test_suite_poly1305
+[483/813] Generating test_suite_oid.c
+[484/813] Building C object tests/CMakeFiles/test_suite_pem.dir/test_suite_pem.c.o
+[485/813] Linking C executable tests/test_suite_platform
+[486/813] Linking C executable tests/test_suite_pkcs7
+[487/813] Generating test_suite_nist_kw.c
+[488/813] Generating test_suite_net.c
+[489/813] Building C object tests/CMakeFiles/test_suite_oid.dir/test_suite_oid.c.o
+[490/813] Building C object tests/CMakeFiles/test_suite_nist_kw.dir/test_suite_nist_kw.c.o
+[491/813] Building C object tests/CMakeFiles/test_suite_net.dir/test_suite_net.c.o
+[492/813] Linking C executable tests/test_suite_pkcs1_v15
+[493/813] Linking C executable tests/test_suite_psa_crypto_pake
+[494/813] Generating test_suite_mps.c
+[495/813] Linking C executable tests/test_suite_pkcs5
+[496/813] Linking C executable tests/test_suite_pkcs1_v21
+[497/813] Generating test_suite_memory_buffer_alloc.c
+[498/813] Generating test_suite_mdx.c
+[499/813] Linking C executable tests/test_suite_pkparse
+[500/813] Generating test_suite_md.psa.c
+[501/813] Generating test_suite_md.c
+[502/813] Building C object tests/CMakeFiles/test_suite_mps.dir/test_suite_mps.c.o
+[503/813] Building C object tests/CMakeFiles/test_suite_mdx.dir/test_suite_mdx.c.o
+[504/813] Linking C executable tests/test_suite_pkcs12
+[505/813] Building C object tests/CMakeFiles/test_suite_memory_buffer_alloc.dir/test_suite_memory_buffer_alloc.c.o
+[506/813] Generating test_suite_lms.c
+[507/813] Linking C executable tests/test_suite_pem
+[508/813] Building C object tests/CMakeFiles/test_suite_md.psa.dir/test_suite_md.psa.c.o
+[509/813] Building C object tests/CMakeFiles/test_suite_md.dir/test_suite_md.c.o
+[510/813] Generating test_suite_lmots.c
+[511/813] Linking C executable tests/test_suite_nist_kw
+[512/813] Generating test_suite_hmac_drbg.pr.c
+[513/813] Building C object tests/CMakeFiles/test_suite_lms.dir/test_suite_lms.c.o
+[514/813] Building C object tests/CMakeFiles/test_suite_lmots.dir/test_suite_lmots.c.o
+[515/813] Building C object tests/CMakeFiles/test_suite_hmac_drbg.pr.dir/test_suite_hmac_drbg.pr.c.o
+[516/813] Linking C executable tests/test_suite_oid
+[517/813] Generating test_suite_hmac_drbg.nopr.c
+[518/813] Linking C executable tests/test_suite_net
+[519/813] Linking C executable tests/test_suite_pk
+[520/813] Generating test_suite_hmac_drbg.no_reseed.c
+[521/813] Linking C executable tests/test_suite_ssl.tls-defrag
+[522/813] Generating test_suite_hmac_drbg.misc.c
+[523/813] Generating test_suite_hkdf.c
+[524/813] Building C object tests/CMakeFiles/test_suite_hmac_drbg.misc.dir/test_suite_hmac_drbg.misc.c.o
+[525/813] Building C object tests/CMakeFiles/test_suite_hkdf.dir/test_suite_hkdf.c.o
+[526/813] Linking C executable tests/test_suite_mdx
+[527/813] Building C object tests/CMakeFiles/test_suite_hmac_drbg.nopr.dir/test_suite_hmac_drbg.nopr.c.o
+[528/813] Linking C executable tests/test_suite_memory_buffer_alloc
+[529/813] Generating test_suite_gcm.misc.c
+[530/813] Building C object tests/CMakeFiles/test_suite_hmac_drbg.no_reseed.dir/test_suite_hmac_drbg.no_reseed.c.o
+[531/813] Linking C executable tests/test_suite_hmac_drbg.pr
+[532/813] Generating test_suite_gcm.camellia.c
+[533/813] Generating test_suite_gcm.aes256_en.c
+[534/813] Linking C executable tests/test_suite_lms
+[535/813] Generating test_suite_gcm.aes256_de.c
+[536/813] Linking C executable tests/test_suite_lmots
+[537/813] Building C object tests/CMakeFiles/test_suite_gcm.misc.dir/test_suite_gcm.misc.c.o
+[538/813] Building C object tests/CMakeFiles/test_suite_gcm.camellia.dir/test_suite_gcm.camellia.c.o
+[539/813] Generating test_suite_gcm.aes192_en.c
+[540/813] Building C object tests/CMakeFiles/test_suite_gcm.aes256_en.dir/test_suite_gcm.aes256_en.c.o
+[541/813] Linking C executable tests/test_suite_psa_crypto_metadata
+[542/813] Building C object tests/CMakeFiles/test_suite_gcm.aes256_de.dir/test_suite_gcm.aes256_de.c.o
+[543/813] Generating test_suite_gcm.aes192_de.c
+[544/813] Linking C executable tests/test_suite_md
+[545/813] Generating test_suite_gcm.aes128_en.c
+[546/813] Building C object tests/CMakeFiles/test_suite_gcm.aes192_en.dir/test_suite_gcm.aes192_en.c.o
+[547/813] Building C object tests/CMakeFiles/test_suite_gcm.aes192_de.dir/test_suite_gcm.aes192_de.c.o
+[548/813] Linking C executable tests/test_suite_hmac_drbg.misc
+[549/813] Linking C executable tests/test_suite_hmac_drbg.nopr
+[550/813] Linking C executable tests/test_suite_ssl
+[551/813] Generating test_suite_gcm.aes128_de.c
+[552/813] Building C object tests/CMakeFiles/test_suite_gcm.aes128_en.dir/test_suite_gcm.aes128_en.c.o
+[553/813] Generating test_suite_error.c
+[554/813] Generating test_suite_entropy.c
+[555/813] Building C object tests/CMakeFiles/test_suite_gcm.aes128_de.dir/test_suite_gcm.aes128_de.c.o
+[556/813] Linking C executable tests/test_suite_md.psa
+[557/813] Linking C executable tests/test_suite_mps
+[558/813] Generating test_suite_ecp.generated.c
+[559/813] Building C object tests/CMakeFiles/test_suite_error.dir/test_suite_error.c.o
+[560/813] Generating test_suite_ecp.c
+[561/813] Linking C executable tests/test_suite_hkdf
+[562/813] Building C object tests/CMakeFiles/test_suite_entropy.dir/test_suite_entropy.c.o
+[563/813] Generating test_suite_ecjpake.c
+[564/813] Building C object tests/CMakeFiles/test_suite_ecp.dir/test_suite_ecp.c.o
+[565/813] Building C object tests/CMakeFiles/test_suite_ecp.generated.dir/test_suite_ecp.generated.c.o
+[566/813] Building C object tests/CMakeFiles/test_suite_ecjpake.dir/test_suite_ecjpake.c.o
+[567/813] Linking C executable tests/test_suite_gcm.camellia
+[568/813] Generating test_suite_ecdsa.c
+[569/813] Linking C executable tests/test_suite_hmac_drbg.no_reseed
+[570/813] Building C object tests/CMakeFiles/test_suite_ecdsa.dir/test_suite_ecdsa.c.o
+[571/813] Generating test_suite_ecdh.c
+[572/813] Linking C executable tests/test_suite_error
+[573/813] Linking C executable tests/test_suite_gcm.aes192_en
+[574/813] Generating test_suite_dhm.c
+[575/813] Generating test_suite_des.c
+[576/813] Building C object tests/CMakeFiles/test_suite_ecdh.dir/test_suite_ecdh.c.o
+[577/813] Building C object tests/CMakeFiles/test_suite_dhm.dir/test_suite_dhm.c.o
+[578/813] Building C object tests/CMakeFiles/test_suite_des.dir/test_suite_des.c.o
+[579/813] Linking C executable tests/test_suite_gcm.aes128_de
+[580/813] Generating test_suite_debug.c
+[581/813] Building C object tests/CMakeFiles/test_suite_debug.dir/test_suite_debug.c.o
+[582/813] Linking C executable tests/test_suite_ecjpake
+[583/813] Generating test_suite_ctr_drbg.c
+[584/813] Linking C executable tests/test_suite_entropy
+[585/813] Linking C executable tests/test_suite_ecdsa
+[586/813] Generating test_suite_constant_time_hmac.c
+[587/813] Generating test_suite_constant_time.c
+[588/813] Linking C executable tests/test_suite_gcm.misc
+[589/813] Building C object tests/CMakeFiles/test_suite_ctr_drbg.dir/test_suite_ctr_drbg.c.o
+[590/813] Generating test_suite_config.tls_combinations.c
+[591/813] Linking C executable tests/test_suite_gcm.aes128_en
+[592/813] Linking C executable tests/test_suite_gcm.aes256_de
+[593/813] Linking C executable tests/test_suite_gcm.aes256_en
+[594/813] Linking C executable tests/test_suite_dhm
+[595/813] Generating test_suite_config.psa_combinations.c
+[596/813] Building C object tests/CMakeFiles/test_suite_constant_time.dir/test_suite_constant_time.c.o
+[597/813] Building C object tests/CMakeFiles/test_suite_constant_time_hmac.dir/test_suite_constant_time_hmac.c.o
+[598/813] Generating test_suite_config.psa_boolean.c
+[599/813] Generating test_suite_config.mbedtls_boolean.c
+[600/813] Generating test_suite_config.crypto_combinations.c
+[601/813] Building C object tests/CMakeFiles/test_suite_config.psa_combinations.dir/test_suite_config.psa_combinations.c.o
+[602/813] Building C object tests/CMakeFiles/test_suite_config.tls_combinations.dir/test_suite_config.tls_combinations.c.o
+[603/813] Building C object tests/CMakeFiles/test_suite_config.mbedtls_boolean.dir/test_suite_config.mbedtls_boolean.c.o
+[604/813] Building C object tests/CMakeFiles/test_suite_config.psa_boolean.dir/test_suite_config.psa_boolean.c.o
+[605/813] Building C object tests/CMakeFiles/test_suite_config.crypto_combinations.dir/test_suite_config.crypto_combinations.c.o
+[606/813] Linking C executable tests/test_suite_gcm.aes192_de
+[607/813] Linking C executable tests/test_suite_debug
+[608/813] Generating test_suite_common.c
+[609/813] Linking C executable tests/test_suite_des
+[610/813] Generating test_suite_cmac.c
+[611/813] Building C object tests/CMakeFiles/test_suite_common.dir/test_suite_common.c.o
+[612/813] Generating test_suite_cipher.padding.c
+[613/813] Linking C executable tests/test_suite_config.psa_combinations
+[614/813] Generating test_suite_cipher.null.c
+[615/813] Building C object tests/CMakeFiles/test_suite_cipher.padding.dir/test_suite_cipher.padding.c.o
+[616/813] Building C object tests/CMakeFiles/test_suite_cmac.dir/test_suite_cmac.c.o
+[617/813] Building C object tests/CMakeFiles/test_suite_cipher.null.dir/test_suite_cipher.null.c.o
+[618/813] Linking C executable tests/test_suite_config.mbedtls_boolean
+[619/813] Linking C executable tests/test_suite_ecdh
+[620/813] Linking C executable tests/test_suite_constant_time_hmac
+[621/813] Generating test_suite_cipher.nist_kw.c
+[622/813] Generating test_suite_cipher.misc.c
+[623/813] Generating test_suite_cipher.gcm.c
+[624/813] Building C object tests/CMakeFiles/test_suite_cipher.nist_kw.dir/test_suite_cipher.nist_kw.c.o
+[625/813] Building C object tests/CMakeFiles/test_suite_cipher.misc.dir/test_suite_cipher.misc.c.o
+[626/813] Linking C executable tests/test_suite_config.tls_combinations
+[627/813] Linking C executable tests/test_suite_config.crypto_combinations
+[628/813] Generating test_suite_cipher.des.c
+[629/813] Building C object tests/CMakeFiles/test_suite_cipher.gcm.dir/test_suite_cipher.gcm.c.o
+[630/813] Generating test_suite_cipher.chachapoly.c
+[631/813] Linking C executable tests/test_suite_config.psa_boolean
+[632/813] Linking C executable tests/test_suite_common
+[633/813] Generating test_suite_cipher.chacha20.c
+[634/813] Generating test_suite_cipher.ccm.c
+[635/813] Linking C executable tests/test_suite_constant_time
+[636/813] Generating test_suite_cipher.camellia.c
+[637/813] Building C object tests/CMakeFiles/test_suite_cipher.chachapoly.dir/test_suite_cipher.chachapoly.c.o
+[638/813] Building C object tests/CMakeFiles/test_suite_cipher.des.dir/test_suite_cipher.des.c.o
+[639/813] Building C object tests/CMakeFiles/test_suite_cipher.chacha20.dir/test_suite_cipher.chacha20.c.o
+[640/813] Building C object tests/CMakeFiles/test_suite_cipher.camellia.dir/test_suite_cipher.camellia.c.o
+[641/813] Building C object tests/CMakeFiles/test_suite_cipher.ccm.dir/test_suite_cipher.ccm.c.o
+[642/813] Linking C executable tests/test_suite_ctr_drbg
+[643/813] Linking C executable tests/test_suite_ecp.generated
+[644/813] Generating test_suite_cipher.aria.c
+[645/813] Generating test_suite_cipher.aes.c
+[646/813] Building C object tests/CMakeFiles/test_suite_cipher.aria.dir/test_suite_cipher.aria.c.o
+[647/813] Linking C executable tests/test_suite_ecp
+[648/813] Generating test_suite_chachapoly.c
+[649/813] Linking C executable tests/test_suite_cipher.null
+[650/813] Linking C executable tests/test_suite_cmac
+[651/813] Building C object tests/CMakeFiles/test_suite_cipher.aes.dir/test_suite_cipher.aes.c.o
+[652/813] Generating test_suite_chacha20.c
+[653/813] Generating test_suite_ccm.c
+[654/813] Building C object tests/CMakeFiles/test_suite_chachapoly.dir/test_suite_chachapoly.c.o
+[655/813] Building C object tests/CMakeFiles/test_suite_chacha20.dir/test_suite_chacha20.c.o
+[656/813] Linking C executable tests/test_suite_cipher.nist_kw
+[657/813] Generating test_suite_camellia.c
+[658/813] Building C object tests/CMakeFiles/test_suite_ccm.dir/test_suite_ccm.c.o
+[659/813] Building C object tests/CMakeFiles/test_suite_camellia.dir/test_suite_camellia.c.o
+[660/813] Linking C executable tests/test_suite_cipher.padding
+[661/813] Generating test_suite_block_cipher.psa.c
+[662/813] Building C object tests/CMakeFiles/test_suite_block_cipher.psa.dir/test_suite_block_cipher.psa.c.o
+[663/813] Linking C executable tests/test_suite_chacha20
+[664/813] Generating test_suite_block_cipher.c
+[665/813] Linking C executable tests/test_suite_cipher.camellia
+[666/813] Building C object tests/CMakeFiles/test_suite_block_cipher.dir/test_suite_block_cipher.c.o
+[667/813] Generating test_suite_bignum_random.c
+[668/813] Linking C executable tests/test_suite_camellia
+[669/813] Linking C executable tests/test_suite_cipher.misc
+[670/813] Generating test_suite_bignum_mod_raw.generated.c
+[671/813] Generating test_suite_bignum_mod_raw.c
+[672/813] Building C object tests/CMakeFiles/test_suite_bignum_random.dir/test_suite_bignum_random.c.o
+[673/813] Linking C executable tests/test_suite_chachapoly
+[674/813] Building C object tests/CMakeFiles/test_suite_bignum_mod_raw.dir/test_suite_bignum_mod_raw.c.o
+[675/813] Linking C executable tests/test_suite_block_cipher.psa
+[676/813] Generating test_suite_bignum_mod.misc.c
+[677/813] Generating test_suite_bignum_mod.generated.c
+[678/813] Linking C executable tests/test_suite_block_cipher
+[679/813] Building C object tests/CMakeFiles/test_suite_bignum_mod.misc.dir/test_suite_bignum_mod.misc.c.o
+[680/813] Generating test_suite_bignum_core.misc.c
+[681/813] Building C object tests/CMakeFiles/test_suite_bignum_mod_raw.generated.dir/test_suite_bignum_mod_raw.generated.c.o
+[682/813] Building C object tests/CMakeFiles/test_suite_bignum_core.misc.dir/test_suite_bignum_core.misc.c.o
+[683/813] Linking C executable tests/test_suite_bignum_mod_raw
+[684/813] Generating test_suite_bignum_core.generated.c
+[685/813] Linking C executable tests/test_suite_cipher.chachapoly
+[686/813] Building C object tests/CMakeFiles/test_suite_bignum_mod.generated.dir/test_suite_bignum_mod.generated.c.o
+[687/813] Generating test_suite_bignum.misc.c
+[688/813] Linking C executable tests/test_suite_cipher.gcm
+[689/813] Generating test_suite_bignum.generated.c
+[690/813] Linking C executable tests/test_suite_bignum_mod.misc
+[691/813] Linking C executable tests/test_suite_cipher.chacha20
+[692/813] Linking C executable tests/test_suite_cipher.aria
+[693/813] Generating test_suite_base64.c
+[694/813] Generating test_suite_asn1write.c
+[695/813] Generating test_suite_asn1parse.c
+[696/813] Linking C executable tests/test_suite_cipher.des
+[697/813] Linking C executable tests/test_suite_bignum_random
+[698/813] Building C object tests/CMakeFiles/test_suite_bignum.generated.dir/test_suite_bignum.generated.c.o
+[699/813] Linking C executable tests/test_suite_bignum_mod_raw.generated
+[700/813] Generating test_suite_aria.c
+[701/813] Building C object tests/CMakeFiles/test_suite_bignum.misc.dir/test_suite_bignum.misc.c.o
+[702/813] Building C object tests/CMakeFiles/test_suite_base64.dir/test_suite_base64.c.o
+[703/813] Generating test_suite_alignment.c
+[704/813] Generating test_suite_aes.xts.c
+[705/813] Linking C executable tests/test_suite_psa_crypto.pbkdf2
+[706/813] Building C object tests/CMakeFiles/test_suite_asn1parse.dir/test_suite_asn1parse.c.o
+[707/813] Building C object tests/CMakeFiles/test_suite_aria.dir/test_suite_aria.c.o
+[708/813] Linking C executable tests/test_suite_cipher.ccm
+[709/813] Generating test_suite_aes.rest.c
+[710/813] Building C object tests/CMakeFiles/test_suite_alignment.dir/test_suite_alignment.c.o
+[711/813] Generating test_suite_aes.ofb.c
+[712/813] Building C object tests/CMakeFiles/test_suite_asn1write.dir/test_suite_asn1write.c.o
+[713/813] Building C object tests/CMakeFiles/test_suite_bignum_core.generated.dir/test_suite_bignum_core.generated.c.o
+[714/813] Building C object tests/CMakeFiles/test_suite_aes.rest.dir/test_suite_aes.rest.c.o
+[715/813] Building C object tests/CMakeFiles/test_suite_aes.ofb.dir/test_suite_aes.ofb.c.o
+[716/813] Building C object tests/CMakeFiles/test_suite_aes.xts.dir/test_suite_aes.xts.c.o
+[717/813] Linking C executable tests/test_suite_cipher.aes
+[718/813] Generating test_suite_aes.ecb.c
+[719/813] Linking C executable tests/test_suite_bignum_mod.generated
+[720/813] Generating test_suite_aes.ctr.c
+[721/813] Building C object tests/CMakeFiles/test_suite_aes.ecb.dir/test_suite_aes.ecb.c.o
+[722/813] Building C object tests/CMakeFiles/test_suite_aes.ctr.dir/test_suite_aes.ctr.c.o
+[723/813] Linking C executable tests/test_suite_ccm
+[724/813] Generating test_suite_aes.cfb.c
+[725/813] Linking C executable tests/test_suite_bignum_core.misc
+[726/813] Generating test_suite_aes.cbc.c
+[727/813] Linking C executable tests/test_suite_base64
+[728/813] Building C object tests/CMakeFiles/test_suite_aes.cfb.dir/test_suite_aes.cfb.c.o
+[729/813] Building C object tests/CMakeFiles/test_suite_aes.cbc.dir/test_suite_aes.cbc.c.o
+[730/813] Linking C executable tests/test_suite_aria
+[731/813] Linking C executable tests/test_suite_alignment
+[732/813] Linking C executable programs/x509/req_app
+[733/813] Linking C executable programs/x509/load_roots
+[734/813] Linking C executable tests/test_suite_aes.ofb
+[735/813] Linking C executable tests/test_suite_aes.rest
+[736/813] Linking C executable programs/x509/crl_app
+[737/813] Linking C executable programs/x509/cert_write
+[738/813] Linking C executable programs/x509/cert_req
+[739/813] Linking C executable programs/x509/cert_app
+[740/813] Linking C executable programs/util/strerror
+[741/813] Linking C executable programs/util/pem2der
+[742/813] Linking C executable programs/test/zeroize
+[743/813] Linking C executable programs/test/query_compile_time_config
+[744/813] Linking C executable programs/test/benchmark
+[745/813] Linking C executable programs/test/udp_proxy
+[746/813] Linking C executable programs/test/selftest
+[747/813] Linking C executable programs/test/query_included_headers
+[748/813] Linking C executable programs/test/metatest
+[749/813] Linking C executable programs/ssl/ssl_pthread_server
+[750/813] Linking C executable programs/ssl/ssl_server2
+[751/813] Linking C executable programs/ssl/ssl_server
+[752/813] Linking C executable programs/ssl/ssl_mail_client
+[753/813] Linking C executable programs/ssl/ssl_fork_server
+[754/813] Linking C executable programs/ssl/ssl_context_info
+[755/813] Linking C executable programs/ssl/ssl_client2
+[756/813] Linking C executable programs/ssl/ssl_client1
+[757/813] Linking C executable programs/ssl/mini_client
+[758/813] Linking C executable programs/ssl/dtls_server
+[759/813] Linking C executable programs/ssl/dtls_client
+[760/813] Linking C executable programs/random/gen_random_ctr_drbg
+[761/813] Linking C executable programs/random/gen_entropy
+[762/813] Linking C executable programs/psa/psa_hash
+[763/813] Linking C executable programs/psa/psa_constant_names
+[764/813] Linking C executable programs/psa/key_ladder_demo
+[765/813] Linking C executable programs/psa/hmac_demo
+[766/813] Linking C executable programs/psa/crypto_examples
+[767/813] Linking C executable programs/psa/aead_demo
+[768/813] Linking C executable programs/pkey/rsa_verify_pss
+[769/813] Linking C executable programs/pkey/rsa_verify
+[770/813] Linking C executable programs/pkey/rsa_sign_pss
+[771/813] Linking C executable programs/pkey/rsa_sign
+[772/813] Linking C executable programs/pkey/rsa_genkey
+[773/813] Linking C executable programs/pkey/rsa_encrypt
+[774/813] Linking C executable programs/pkey/rsa_decrypt
+[775/813] Linking C executable programs/pkey/pk_verify
+[776/813] Linking C executable programs/pkey/pk_sign
+[777/813] Linking C executable programs/pkey/pk_decrypt
+[778/813] Linking C executable programs/pkey/pk_encrypt
+[779/813] Linking C executable programs/pkey/mpi_demo
+[780/813] Linking C executable programs/pkey/key_app_writer
+[781/813] Linking C executable programs/pkey/key_app
+[782/813] Linking C executable programs/pkey/gen_key
+[783/813] Linking C executable programs/pkey/ecdsa
+[784/813] Linking C executable programs/pkey/ecdh_curve25519
+[785/813] Linking C executable programs/pkey/dh_genprime
+[786/813] Linking C executable tests/test_suite_asn1parse
+[787/813] Linking C executable programs/pkey/dh_server
+[788/813] Linking C executable programs/pkey/dh_client
+[789/813] Linking C executable programs/hash/md_hmac_demo
+[790/813] Linking C executable programs/hash/hello
+[791/813] Linking C executable programs/hash/generic_sum
+[792/813] Linking C executable tests/test_suite_bignum_core.generated
+[793/813] Linking C executable programs/fuzz/fuzz_server
+[794/813] Linking C executable programs/fuzz/fuzz_dtlsserver
+[795/813] Linking C executable programs/fuzz/fuzz_dtlsclient
+[796/813] Linking C executable programs/fuzz/fuzz_client
+[797/813] Linking C executable programs/fuzz/fuzz_privkey
+[798/813] Linking C executable programs/fuzz/fuzz_pkcs7
+[799/813] Linking C executable programs/fuzz/fuzz_x509csr
+[800/813] Linking C executable programs/fuzz/fuzz_x509crt
+[801/813] Linking C executable programs/fuzz/fuzz_x509crl
+[802/813] Linking C executable programs/fuzz/fuzz_pubkey
+[803/813] Linking C executable programs/cipher/cipher_aead_demo
+[804/813] Linking C executable programs/aes/crypt_and_hash
+[805/813] Linking C executable tests/test_suite_asn1write
+[806/813] Linking C executable tests/test_suite_bignum.generated
+[807/813] Linking C executable tests/test_suite_aes.xts
+[808/813] Linking C executable tests/test_suite_aes.cbc
+[809/813] Linking C executable tests/test_suite_aes.ctr
+[810/813] Linking C executable tests/test_suite_aes.ecb
+[811/813] Linking C executable tests/test_suite_aes.cfb
+[812/813] Linking C executable tests/test_suite_bignum.misc
+[813/813] Linking C executable tests/test_suite_psa_crypto
+Test project /tmp/src/mbedtls-3.6.3/build
+        Start   1: aes.cbc-suite
+  1/132 Test   #1: aes.cbc-suite ..............................   Passed    0.00 sec
+        Start   2: aes.cfb-suite
+  2/132 Test   #2: aes.cfb-suite ..............................   Passed    0.00 sec
+        Start   3: aes.ctr-suite
+  3/132 Test   #3: aes.ctr-suite ..............................   Passed    0.00 sec
+        Start   4: aes.ecb-suite
+  4/132 Test   #4: aes.ecb-suite ..............................   Passed    0.00 sec
+        Start   5: aes.ofb-suite
+  5/132 Test   #5: aes.ofb-suite ..............................   Passed    0.00 sec
+        Start   6: aes.rest-suite
+  6/132 Test   #6: aes.rest-suite .............................   Passed    0.00 sec
+        Start   7: aes.xts-suite
+  7/132 Test   #7: aes.xts-suite ..............................   Passed    0.00 sec
+        Start   8: alignment-suite
+  8/132 Test   #8: alignment-suite ............................   Passed    0.00 sec
+        Start   9: aria-suite
+  9/132 Test   #9: aria-suite .................................   Passed    0.00 sec
+        Start  10: asn1parse-suite
+ 10/132 Test  #10: asn1parse-suite ............................   Passed    0.02 sec
+        Start  11: asn1write-suite
+ 11/132 Test  #11: asn1write-suite ............................   Passed    0.00 sec
+        Start  12: base64-suite
+ 12/132 Test  #12: base64-suite ...............................   Passed    0.00 sec
+        Start  13: bignum.generated-suite
+ 13/132 Test  #13: bignum.generated-suite .....................   Passed    0.00 sec
+        Start  14: bignum.misc-suite
+ 14/132 Test  #14: bignum.misc-suite ..........................   Passed    0.75 sec
+        Start  15: bignum_core.generated-suite
+ 15/132 Test  #15: bignum_core.generated-suite ................   Passed    0.45 sec
+        Start  16: bignum_core.misc-suite
+ 16/132 Test  #16: bignum_core.misc-suite .....................   Passed    0.00 sec
+        Start  17: bignum_mod.generated-suite
+ 17/132 Test  #17: bignum_mod.generated-suite .................   Passed    0.01 sec
+        Start  18: bignum_mod.misc-suite
+ 18/132 Test  #18: bignum_mod.misc-suite ......................   Passed    0.00 sec
+        Start  19: bignum_mod_raw-suite
+ 19/132 Test  #19: bignum_mod_raw-suite .......................   Passed    0.00 sec
+        Start  20: bignum_mod_raw.generated-suite
+ 20/132 Test  #20: bignum_mod_raw.generated-suite .............   Passed    0.01 sec
+        Start  21: bignum_random-suite
+ 21/132 Test  #21: bignum_random-suite ........................   Passed    0.01 sec
+        Start  22: block_cipher-suite
+ 22/132 Test  #22: block_cipher-suite .........................   Passed    0.00 sec
+        Start  23: block_cipher.psa-suite
+ 23/132 Test  #23: block_cipher.psa-suite .....................   Passed    0.00 sec
+        Start  24: camellia-suite
+ 24/132 Test  #24: camellia-suite .............................   Passed    0.00 sec
+        Start  25: ccm-suite
+ 25/132 Test  #25: ccm-suite ..................................   Passed    0.06 sec
+        Start  26: chacha20-suite
+ 26/132 Test  #26: chacha20-suite .............................   Passed    0.00 sec
+        Start  27: chachapoly-suite
+ 27/132 Test  #27: chachapoly-suite ...........................   Passed    0.00 sec
+        Start  28: cipher.aes-suite
+ 28/132 Test  #28: cipher.aes-suite ...........................   Passed    0.00 sec
+        Start  29: cipher.aria-suite
+ 29/132 Test  #29: cipher.aria-suite ..........................   Passed    0.00 sec
+        Start  30: cipher.camellia-suite
+ 30/132 Test  #30: cipher.camellia-suite ......................   Passed    0.00 sec
+        Start  31: cipher.ccm-suite
+ 31/132 Test  #31: cipher.ccm-suite ...........................   Passed    0.00 sec
+        Start  32: cipher.chacha20-suite
+ 32/132 Test  #32: cipher.chacha20-suite ......................   Passed    0.00 sec
+        Start  33: cipher.chachapoly-suite
+ 33/132 Test  #33: cipher.chachapoly-suite ....................   Passed    0.00 sec
+        Start  34: cipher.des-suite
+ 34/132 Test  #34: cipher.des-suite ...........................   Passed    0.00 sec
+        Start  35: cipher.gcm-suite
+ 35/132 Test  #35: cipher.gcm-suite ...........................   Passed    0.02 sec
+        Start  36: cipher.misc-suite
+ 36/132 Test  #36: cipher.misc-suite ..........................   Passed    0.00 sec
+        Start  37: cipher.nist_kw-suite
+ 37/132 Test  #37: cipher.nist_kw-suite .......................   Passed    0.00 sec
+        Start  38: cipher.null-suite
+ 38/132 Test  #38: cipher.null-suite ..........................   Passed    0.00 sec
+        Start  39: cipher.padding-suite
+ 39/132 Test  #39: cipher.padding-suite .......................   Passed    0.00 sec
+        Start  40: cmac-suite
+ 40/132 Test  #40: cmac-suite .................................   Passed    0.00 sec
+        Start  41: common-suite
+ 41/132 Test  #41: common-suite ...............................   Passed    0.00 sec
+        Start  42: config.crypto_combinations-suite
+ 42/132 Test  #42: config.crypto_combinations-suite ...........   Passed    0.00 sec
+        Start  43: config.mbedtls_boolean-suite
+ 43/132 Test  #43: config.mbedtls_boolean-suite ...............   Passed    0.00 sec
+        Start  44: config.psa_boolean-suite
+ 44/132 Test  #44: config.psa_boolean-suite ...................   Passed    0.00 sec
+        Start  45: config.psa_combinations-suite
+ 45/132 Test  #45: config.psa_combinations-suite ..............   Passed    0.00 sec
+        Start  46: config.tls_combinations-suite
+ 46/132 Test  #46: config.tls_combinations-suite ..............   Passed    0.00 sec
+        Start  47: constant_time-suite
+ 47/132 Test  #47: constant_time-suite ........................   Passed    0.00 sec
+        Start  48: constant_time_hmac-suite
+ 48/132 Test  #48: constant_time_hmac-suite ...................   Passed    0.00 sec
+        Start  49: ctr_drbg-suite
+ 49/132 Test  #49: ctr_drbg-suite .............................   Passed    0.00 sec
+        Start  50: debug-suite
+ 50/132 Test  #50: debug-suite ................................   Passed    0.00 sec
+        Start  51: des-suite
+ 51/132 Test  #51: des-suite ..................................   Passed    0.00 sec
+        Start  52: dhm-suite
+ 52/132 Test  #52: dhm-suite ..................................   Passed    0.25 sec
+        Start  53: ecdh-suite
+ 53/132 Test  #53: ecdh-suite .................................   Passed    0.04 sec
+        Start  54: ecdsa-suite
+ 54/132 Test  #54: ecdsa-suite ................................   Passed    0.09 sec
+        Start  55: ecjpake-suite
+ 55/132 Test  #55: ecjpake-suite ..............................   Passed    0.05 sec
+        Start  56: ecp-suite
+ 56/132 Test  #56: ecp-suite ..................................   Passed    0.09 sec
+        Start  57: ecp.generated-suite
+ 57/132 Test  #57: ecp.generated-suite ........................   Passed    0.00 sec
+        Start  58: entropy-suite
+ 58/132 Test  #58: entropy-suite ..............................   Passed    0.00 sec
+        Start  59: error-suite
+ 59/132 Test  #59: error-suite ................................   Passed    0.00 sec
+        Start  60: gcm.aes128_de-suite
+ 60/132 Test  #60: gcm.aes128_de-suite ........................   Passed    1.91 sec
+        Start  61: gcm.aes128_en-suite
+ 61/132 Test  #61: gcm.aes128_en-suite ........................   Passed    3.50 sec
+        Start  62: gcm.aes192_de-suite
+ 62/132 Test  #62: gcm.aes192_de-suite ........................   Passed    2.02 sec
+        Start  63: gcm.aes192_en-suite
+ 63/132 Test  #63: gcm.aes192_en-suite ........................   Passed    3.52 sec
+        Start  64: gcm.aes256_de-suite
+ 64/132 Test  #64: gcm.aes256_de-suite ........................   Passed    1.71 sec
+        Start  65: gcm.aes256_en-suite
+ 65/132 Test  #65: gcm.aes256_en-suite ........................   Passed    3.54 sec
+        Start  66: gcm.camellia-suite
+ 66/132 Test  #66: gcm.camellia-suite .........................   Passed    0.05 sec
+        Start  67: gcm.misc-suite
+ 67/132 Test  #67: gcm.misc-suite .............................   Passed    0.00 sec
+        Start  68: hkdf-suite
+ 68/132 Test  #68: hkdf-suite .................................   Passed    0.00 sec
+        Start  69: hmac_drbg.misc-suite
+ 69/132 Test  #69: hmac_drbg.misc-suite .......................   Passed    0.02 sec
+        Start  70: hmac_drbg.no_reseed-suite
+ 70/132 Test  #70: hmac_drbg.no_reseed-suite ..................   Passed    0.01 sec
+        Start  71: hmac_drbg.nopr-suite
+ 71/132 Test  #71: hmac_drbg.nopr-suite .......................   Passed    0.01 sec
+        Start  72: hmac_drbg.pr-suite
+ 72/132 Test  #72: hmac_drbg.pr-suite .........................   Passed    0.01 sec
+        Start  73: lmots-suite
+ 73/132 Test  #73: lmots-suite ................................   Passed    0.03 sec
+        Start  74: lms-suite
+ 74/132 Test  #74: lms-suite ..................................   Passed    0.07 sec
+        Start  75: md-suite
+ 75/132 Test  #75: md-suite ...................................   Passed    0.01 sec
+        Start  76: md.psa-suite
+ 76/132 Test  #76: md.psa-suite ...............................   Passed    0.00 sec
+        Start  77: mdx-suite
+ 77/132 Test  #77: mdx-suite ..................................   Passed    0.00 sec
+        Start  78: memory_buffer_alloc-suite
+ 78/132 Test  #78: memory_buffer_alloc-suite ..................   Passed    0.00 sec
+        Start  79: mps-suite
+ 79/132 Test  #79: mps-suite ..................................   Passed    0.01 sec
+        Start  80: net-suite
+ 80/132 Test  #80: net-suite ..................................   Passed    0.00 sec
+        Start  81: nist_kw-suite
+ 81/132 Test  #81: nist_kw-suite ..............................   Passed    0.00 sec
+        Start  82: oid-suite
+ 82/132 Test  #82: oid-suite ..................................   Passed    0.00 sec
+        Start  83: pem-suite
+ 83/132 Test  #83: pem-suite ..................................   Passed    0.00 sec
+        Start  84: pk-suite
+ 84/132 Test  #84: pk-suite ...................................   Passed    0.19 sec
+        Start  85: pkcs12-suite
+ 85/132 Test  #85: pkcs12-suite ...............................   Passed    0.00 sec
+        Start  86: pkcs1_v15-suite
+ 86/132 Test  #86: pkcs1_v15-suite ............................   Passed    0.02 sec
+        Start  87: pkcs1_v21-suite
+ 87/132 Test  #87: pkcs1_v21-suite ............................   Passed    0.33 sec
+        Start  88: pkcs5-suite
+ 88/132 Test  #88: pkcs5-suite ................................   Passed    0.26 sec
+        Start  89: pkcs7-suite
+ 89/132 Test  #89: pkcs7-suite ................................   Passed    0.01 sec
+        Start  90: pkparse-suite
+ 90/132 Test  #90: pkparse-suite ..............................   Passed    2.66 sec
+        Start  91: pkwrite-suite
+ 91/132 Test  #91: pkwrite-suite ..............................   Passed    0.02 sec
+        Start  92: platform-suite
+ 92/132 Test  #92: platform-suite .............................   Passed    0.00 sec
+        Start  93: platform_printf-suite
+ 93/132 Test  #93: platform_printf-suite ......................   Passed    0.00 sec
+        Start  94: platform_util-suite
+ 94/132 Test  #94: platform_util-suite ........................   Passed    0.00 sec
+        Start  95: poly1305-suite
+ 95/132 Test  #95: poly1305-suite .............................   Passed    0.00 sec
+        Start  96: psa_crypto-suite
+ 96/132 Test  #96: psa_crypto-suite ...........................   Passed    7.52 sec
+        Start  97: psa_crypto.pbkdf2-suite
+ 97/132 Test  #97: psa_crypto.pbkdf2-suite ....................   Passed    0.00 sec
+        Start  98: psa_crypto_attributes-suite
+ 98/132 Test  #98: psa_crypto_attributes-suite ................   Passed    0.00 sec
+        Start  99: psa_crypto_driver_wrappers-suite
+ 99/132 Test  #99: psa_crypto_driver_wrappers-suite ...........   Passed    0.00 sec
+        Start 100: psa_crypto_ecp-suite
+100/132 Test #100: psa_crypto_ecp-suite .......................   Passed    0.00 sec
+        Start 101: psa_crypto_entropy-suite
+101/132 Test #101: psa_crypto_entropy-suite ...................   Passed    0.00 sec
+        Start 102: psa_crypto_generate_key.generated-suite
+102/132 Test #102: psa_crypto_generate_key.generated-suite ....   Passed    0.04 sec
+        Start 103: psa_crypto_hash-suite
+103/132 Test #103: psa_crypto_hash-suite ......................   Passed    0.03 sec
+        Start 104: psa_crypto_init-suite
+104/132 Test #104: psa_crypto_init-suite ......................   Passed    0.00 sec
+        Start 105: psa_crypto_low_hash.generated-suite
+105/132 Test #105: psa_crypto_low_hash.generated-suite ........   Passed    0.00 sec
+        Start 106: psa_crypto_memory-suite
+106/132 Test #106: psa_crypto_memory-suite ....................   Passed    0.00 sec
+        Start 107: psa_crypto_metadata-suite
+107/132 Test #107: psa_crypto_metadata-suite ..................   Passed    0.00 sec
+        Start 108: psa_crypto_not_supported.generated-suite
+108/132 Test #108: psa_crypto_not_supported.generated-suite ...   Passed    0.00 sec
+        Start 109: psa_crypto_not_supported.misc-suite
+109/132 Test #109: psa_crypto_not_supported.misc-suite ........   Passed    0.00 sec
+        Start 110: psa_crypto_op_fail.generated-suite
+110/132 Test #110: psa_crypto_op_fail.generated-suite .........   Passed    0.14 sec
+        Start 111: psa_crypto_op_fail.misc-suite
+111/132 Test #111: psa_crypto_op_fail.misc-suite ..............   Passed    0.00 sec
+        Start 112: psa_crypto_pake-suite
+112/132 Test #112: psa_crypto_pake-suite ......................   Passed    0.20 sec
+        Start 113: psa_crypto_persistent_key-suite
+113/132 Test #113: psa_crypto_persistent_key-suite ............   Passed    0.00 sec
+        Start 114: psa_crypto_se_driver_hal-suite
+114/132 Test #114: psa_crypto_se_driver_hal-suite .............   Passed    0.00 sec
+        Start 115: psa_crypto_se_driver_hal_mocks-suite
+115/132 Test #115: psa_crypto_se_driver_hal_mocks-suite .......   Passed    0.00 sec
+        Start 116: psa_crypto_slot_management-suite
+116/132 Test #116: psa_crypto_slot_management-suite ...........   Passed    0.01 sec
+        Start 117: psa_crypto_storage_format.current-suite
+117/132 Test #117: psa_crypto_storage_format.current-suite ....   Passed    0.08 sec
+        Start 118: psa_crypto_storage_format.misc-suite
+118/132 Test #118: psa_crypto_storage_format.misc-suite .......   Passed    0.00 sec
+        Start 119: psa_crypto_storage_format.v0-suite
+119/132 Test #119: psa_crypto_storage_format.v0-suite .........   Passed    4.77 sec
+        Start 120: psa_crypto_util-suite
+120/132 Test #120: psa_crypto_util-suite ......................   Passed    0.00 sec
+        Start 121: psa_its-suite
+121/132 Test #121: psa_its-suite ..............................   Passed    0.01 sec
+        Start 122: random-suite
+122/132 Test #122: random-suite ...............................   Passed    0.00 sec
+        Start 123: rsa-suite
+123/132 Test #123: rsa-suite ..................................   Passed    0.80 sec
+        Start 124: shax-suite
+124/132 Test #124: shax-suite .................................   Passed    0.11 sec
+        Start 125: ssl-suite
+125/132 Test #125: ssl-suite ..................................   Passed    0.90 sec
+        Start 126: ssl.tls-defrag-suite
+126/132 Test #126: ssl.tls-defrag-suite .......................   Passed    0.03 sec
+        Start 127: ssl_decrypt.misc-suite
+127/132 Test #127: ssl_decrypt.misc-suite .....................   Passed    0.85 sec
+        Start 128: test_helpers-suite
+128/132 Test #128: test_helpers-suite .........................   Passed    0.00 sec
+        Start 129: timing-suite
+129/132 Test #129: timing-suite ...............................   Passed    0.00 sec
+        Start 130: version-suite
+130/132 Test #130: version-suite ..............................   Passed    0.00 sec
+        Start 131: x509parse-suite
+131/132 Test #131: x509parse-suite ............................   Passed    0.20 sec
+        Start 132: x509write-suite
+132/132 Test #132: x509write-suite ............................   Passed    0.18 sec
+
+100% tests passed, 0 tests failed out of 132
+
+Total Test time (real) =  37.73 sec
+>>> mbedtls: Entering fakeroot...
+-- Install configuration: "MinSizeRel"
+-- Installing: /tmp/pkg/mbedtls/usr/lib/cmake/MbedTLS/MbedTLSConfig.cmake
+-- Installing: /tmp/pkg/mbedtls/usr/lib/cmake/MbedTLS/MbedTLSConfigVersion.cmake
+-- Installing: /tmp/pkg/mbedtls/usr/lib/cmake/MbedTLS/MbedTLSTargets.cmake
+-- Installing: /tmp/pkg/mbedtls/usr/lib/cmake/MbedTLS/MbedTLSTargets-minsizerel.cmake
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/aes.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/aria.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/asn1.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/asn1write.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/base64.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/bignum.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/block_cipher.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/build_info.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/camellia.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ccm.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/chacha20.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/chachapoly.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/check_config.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/cipher.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/cmac.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/compat-2.x.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_adjust_legacy_crypto.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_adjust_legacy_from_psa.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_adjust_psa_from_legacy.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_adjust_psa_superset_legacy.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_adjust_ssl.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_adjust_x509.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/config_psa.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/constant_time.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ctr_drbg.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/debug.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/des.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/dhm.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ecdh.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ecdsa.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ecjpake.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ecp.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/entropy.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/error.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/gcm.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/hkdf.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/hmac_drbg.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/lms.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/mbedtls_config.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/md.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/md5.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/memory_buffer_alloc.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/net_sockets.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/nist_kw.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/oid.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/pem.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/pk.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/pkcs12.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/pkcs5.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/pkcs7.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/platform.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/platform_time.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/platform_util.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/poly1305.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/private_access.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/psa_util.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ripemd160.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/rsa.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/sha1.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/sha256.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/sha3.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/sha512.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ssl.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ssl_cache.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ssl_ciphersuites.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ssl_cookie.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/ssl_ticket.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/threading.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/timing.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/version.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/x509.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/x509_crl.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/x509_crt.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/mbedtls/x509_csr.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/build_info.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_adjust_auto_enabled.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_adjust_config_dependencies.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_adjust_config_key_pair_types.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_adjust_config_synonyms.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_builtin_composites.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_builtin_key_derivation.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_builtin_primitives.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_compat.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_config.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_driver_common.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_driver_contexts_composites.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_driver_contexts_key_derivation.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_driver_contexts_primitives.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_extra.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_legacy.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_platform.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_se_driver.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_sizes.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_struct.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_types.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/psa/crypto_values.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/x25519.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlib.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/Hacl_Curve25519.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/c_endianness.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/compat.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/target.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/callconv.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/builtin.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/types.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/wasmsupport.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlin/internal/debug.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/everest.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlib
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlib/FStar_UInt64_FStar_UInt32_FStar_UInt16_FStar_UInt8.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/kremlib/FStar_UInt128.h
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/vs2013
+-- Installing: /tmp/pkg/mbedtls/usr/include/everest/vs2013/Hacl_Curve25519.h
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libeverest.a
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libp256m.a
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedcrypto.so.3.6.3
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedcrypto.so.16
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedcrypto.so
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedx509.so.3.6.3
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedx509.so.7
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/lib/libmbedx509.so.3.6.3" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedx509.so
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedtls.so.3.6.3
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedtls.so.21
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/lib/libmbedtls.so.3.6.3" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedtls.so
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedcrypto.a
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedx509.a
+-- Installing: /tmp/pkg/mbedtls/usr/lib/libmbedtls.a
+-- Installing: /tmp/pkg/mbedtls/usr/lib/pkgconfig/mbedcrypto.pc
+-- Installing: /tmp/pkg/mbedtls/usr/lib/pkgconfig/mbedtls.pc
+-- Installing: /tmp/pkg/mbedtls/usr/lib/pkgconfig/mbedx509.pc
+-- Installing: /tmp/pkg/mbedtls/usr/bin/crypt_and_hash
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/crypt_and_hash" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/cipher_aead_demo
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/cipher_aead_demo" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/generic_sum
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/generic_sum" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/hello
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/hello" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/md_hmac_demo
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/md_hmac_demo" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/dh_client
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/dh_client" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/dh_server
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/dh_server" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/dh_genprime
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/dh_genprime" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ecdh_curve25519
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ecdh_curve25519" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ecdsa
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ecdsa" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/gen_key
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/gen_key" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/key_app
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/key_app" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/key_app_writer
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/key_app_writer" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/mpi_demo
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/mpi_demo" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/pk_encrypt
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/pk_encrypt" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/pk_decrypt
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/pk_decrypt" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/pk_sign
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/pk_sign" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/pk_verify
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/pk_verify" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_decrypt
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_decrypt" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_encrypt
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_encrypt" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_genkey
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_genkey" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_sign
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_sign" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_sign_pss
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_sign_pss" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_verify
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_verify" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/rsa_verify_pss
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/rsa_verify_pss" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/aead_demo
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/aead_demo" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/crypto_examples
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/crypto_examples" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/hmac_demo
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/hmac_demo" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/key_ladder_demo
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/key_ladder_demo" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/psa_constant_names
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/psa_constant_names" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/psa_hash
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/psa_hash" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/key_ladder_demo.sh
+-- Installing: /tmp/pkg/mbedtls/usr/bin/gen_entropy
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/gen_entropy" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/gen_random_ctr_drbg
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/gen_random_ctr_drbg" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/dtls_client
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/dtls_client" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/dtls_server
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/dtls_server" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/mini_client
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/mini_client" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_client1
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_client1" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_client2
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_client2" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_context_info
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_context_info" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_fork_server
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_fork_server" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_mail_client
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_mail_client" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_server
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_server" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_server2
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_server2" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/ssl_pthread_server
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/ssl_pthread_server" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/metatest
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/metatest" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/query_included_headers
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/query_included_headers" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/selftest
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/selftest" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/udp_proxy
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/udp_proxy" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/benchmark
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/benchmark" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/query_compile_time_config
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/query_compile_time_config" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/zeroize
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/zeroize" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/pem2der
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/pem2der" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/strerror
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/strerror" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/cert_app
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/cert_app" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/cert_req
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/cert_req" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/cert_write
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/cert_write" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/crl_app
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/crl_app" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/load_roots
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/load_roots" to ""
+-- Installing: /tmp/pkg/mbedtls/usr/bin/req_app
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/mbedtls/usr/bin/req_app" to ""
+>>> mbedtls-static*: Running split function static...
+>>> mbedtls-static*: Preparing subpackage mbedtls-static...
+>>> mbedtls-static*: Stripping binaries
+>>> mbedtls-static*: Running postcheck for mbedtls-static
+>>> mbedtls-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/mbedtls-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/mbedtls-dev/usr/lib/pkgconfig'
+'usr/lib/cmake' -> '/tmp/pkg/mbedtls-dev/usr/lib/cmake'
+'usr/lib/libmbedcrypto.so' -> '/tmp/pkg/mbedtls-dev/usr/lib/libmbedcrypto.so'
+'usr/lib/libmbedtls.so' -> '/tmp/pkg/mbedtls-dev/usr/lib/libmbedtls.so'
+'usr/lib/libmbedx509.so' -> '/tmp/pkg/mbedtls-dev/usr/lib/libmbedx509.so'
+>>> mbedtls-dev*: Preparing subpackage mbedtls-dev...
+>>> mbedtls-dev*: Stripping binaries
+>>> mbedtls-dev*: Running postcheck for mbedtls-dev
+>>> mbedtls-utils*: Running split function utils...
+>>> mbedtls-utils*: Preparing subpackage mbedtls-utils...
+>>> mbedtls-utils*: Stripping binaries
+>>> mbedtls-utils*: Running postcheck for mbedtls-utils
+>>> mbedtls*: Running postcheck for mbedtls
+>>> mbedtls*: Preparing package mbedtls...
+>>> mbedtls*: Stripping binaries
+>>> mbedtls-dev*: Scanning shared objects
+>>> mbedtls-static*: Scanning shared objects
+>>> mbedtls-utils*: Scanning shared objects
+>>> mbedtls*: Scanning shared objects
+>>> mbedtls-dev*: Tracing dependencies...
+	mbedtls=3.6.3-r0
+	pkgconfig
+>>> mbedtls-dev*: Package size: 2.2 MB
+>>> mbedtls-dev*: Compressing data...
+>>> mbedtls-dev*: Create checksum...
+>>> mbedtls-dev*: Create mbedtls-dev-3.6.3-r0.apk
+>>> mbedtls-static*: Tracing dependencies...
+>>> mbedtls-static*: Package size: 1.5 MB
+>>> mbedtls-static*: Compressing data...
+>>> mbedtls-static*: Create checksum...
+>>> mbedtls-static*: Create mbedtls-static-3.6.3-r0.apk
+>>> mbedtls-utils*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libmbedcrypto.so.16
+	so:libmbedtls.so.21
+	so:libmbedx509.so.7
+>>> mbedtls-utils*: Package size: 5.9 MB
+>>> mbedtls-utils*: Compressing data...
+>>> mbedtls-utils*: Create checksum...
+>>> mbedtls-utils*: Create mbedtls-utils-3.6.3-r0.apk
+>>> mbedtls*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> mbedtls*: Package size: 849.7 KB
+>>> mbedtls*: Compressing data...
+>>> mbedtls*: Create checksum...
+>>> mbedtls*: Create mbedtls-3.6.3-r0.apk
+>>> mbedtls: Updating the main/x86_64 repository index...
+>>> mbedtls: Signing the index...
+>>> mbedtls: Cleaning up srcdir
+>>> mbedtls: Cleaning up build chroot
+>>> mbedtls: Cleaning up pkgdir

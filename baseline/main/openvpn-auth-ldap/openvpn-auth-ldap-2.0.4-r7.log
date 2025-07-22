@@ -1,0 +1,499 @@
+>>> openvpn-auth-ldap: Validating /home/packager/oily-pine/main/openvpn-auth-ldap/APKBUILD...
+>>> openvpn-auth-ldap: Cleaning up srcdir
+>>> openvpn-auth-ldap: Cleaning up pkgdir
+>>> openvpn-auth-ldap: Cleaning up tmpdir
+>>> openvpn-auth-ldap: Fetching https://github.com/threerings/openvpn-auth-ldap/archive/auth-ldap-2.0.4.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 32768    0 32768    0     0  46441      0 --:--:-- --:--:-- --:--:-- 46441100  204k    0  204k    0     0   247k      0 --:--:-- --:--:-- --:--:-- 1417k
+>>> openvpn-auth-ldap: Fetching https://github.com/threerings/openvpn-auth-ldap/archive/auth-ldap-2.0.4.tar.gz
+>>> openvpn-auth-ldap: Checking sha512sums...
+auth-ldap-2.0.4.tar.gz: OK
+CVE-2024-28820.patch: OK
+default-config.patch: OK
+fix-make-install.patch: OK
+stdio.patch: OK
+>>> openvpn-auth-ldap: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/121) Installing musl (1.2.5-r10)
+(2/121) Installing libcrypto3 (3.5.0-r0)
+(3/121) Installing ca-certificates-bundle (20241121-r2)
+(4/121) Installing libssl3 (3.5.0-r0)
+(5/121) Installing zlib (1.3.1-r2)
+(6/121) Installing libapk2 (2.14.9-r2)
+(7/121) Installing apk-tools (2.14.9-r2)
+(8/121) Installing libcap2 (2.76-r0)
+(9/121) Installing libcap-getcap (2.76-r0)
+(10/121) Installing fakeroot (1.37.1.1-r0)
+(11/121) Installing scanelf (1.3.8-r1)
+(12/121) Installing musl-utils (1.2.5-r10)
+(13/121) Installing libgcc (14.3.0-r1)
+(14/121) Installing libstdc++ (14.3.0-r1)
+(15/121) Installing lzip (1.25-r0)
+(16/121) Installing openssl (3.5.0-r0)
+(17/121) Installing patch (2.8-r0)
+(18/121) Installing pkgconf (2.4.3-r0)
+(19/121) Installing acl-libs (2.3.2-r1)
+(20/121) Installing tar (1.35-r3)
+(21/121) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/121) Installing ssl_client (1.37.0-r18)
+(23/121) Installing busybox-binsh (1.37.0-r18)
+(24/121) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/121) Installing abuild-sudo (3.15.0-r0)
+(26/121) Installing alpine-baselayout-data (3.7.0-r0)
+(27/121) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/121) Installing bridge (1.5-r5)
+(29/121) Installing ifupdown-ng (0.12.1-r7)
+(30/121) Installing openrc-user (0.62.2-r2)
+(31/121) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/121) Installing mdev-conf (4.8-r0)
+(33/121) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/121) Installing alpine-conf (3.20.0-r0)
+(35/121) Installing alpine-keys (2.5-r0)
+(36/121) Installing alpine-release (3.22.0-r0)
+(37/121) Installing busybox-openrc (1.37.0-r18)
+(38/121) Installing busybox-suid (1.37.0-r18)
+(39/121) Installing alpine-base (3.22.0-r0)
+(40/121) Installing m4 (1.4.20-r0)
+(41/121) Installing libbz2 (1.0.8-r6)
+(42/121) Installing perl (5.40.2-r0)
+(43/121) Installing autoconf (2.72-r1)
+(44/121) Installing automake (1.18-r0)
+(45/121) Installing jansson (2.14.1-r0)
+(46/121) Installing zstd-libs (1.5.7-r0)
+(47/121) Installing binutils (2.44-r0)
+(48/121) Installing libmagic (5.46-r2)
+(49/121) Installing file (5.46-r2)
+(50/121) Installing libgomp (14.3.0-r1)
+(51/121) Installing libatomic (14.3.0-r1)
+(52/121) Installing gmp (6.3.0-r3)
+(53/121) Installing isl26 (0.26-r1)
+(54/121) Installing mpfr4 (4.2.1_p1-r0)
+(55/121) Installing mpc1 (1.3.1-r1)
+(56/121) Installing gcc (14.3.0-r1)
+(57/121) Installing libstdc++-dev (14.3.0-r1)
+(58/121) Installing musl-dev (1.2.5-r10)
+(59/121) Installing g++ (14.3.0-r1)
+(60/121) Installing make (4.4.1-r3)
+(61/121) Installing fortify-headers (1.1-r5)
+(62/121) Installing build-base (0.5-r3)
+(63/121) Installing libobjc (14.3.0-r1)
+(64/121) Installing gcc-objc (14.3.0-r1)
+(65/121) Installing brotli-libs (1.1.0-r2)
+(66/121) Installing c-ares (1.34.5-r0)
+(67/121) Installing libunistring (1.3-r0)
+(68/121) Installing libidn2 (2.3.7-r0)
+(69/121) Installing nghttp2-libs (1.65.0-r0)
+(70/121) Installing libpsl (0.21.5-r3)
+(71/121) Installing libcurl (8.14.0-r2)
+(72/121) Installing libexpat (2.7.1-r0)
+(73/121) Installing pcre2 (10.43-r1)
+(74/121) Installing git (2.49.0-r0)
+(75/121) Installing git-init-template (2.49.0-r0)
+(76/121) Installing perl-error (0.17030-r0)
+(77/121) Installing perl-git (2.49.0-r0)
+(78/121) Installing git-perl (2.49.0-r0)
+(79/121) Installing gdbm (1.24-r0)
+(80/121) Installing libsasl (2.1.28-r8)
+(81/121) Installing cyrus-sasl-dev (2.1.28-r8)
+(82/121) Installing libffi (3.4.8-r0)
+(83/121) Installing xz-libs (5.8.1-r0)
+(84/121) Installing mpdecimal (4.0.1-r0)
+(85/121) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(86/121) Installing libncursesw (6.5_p20250503-r0)
+(87/121) Installing libpanelw (6.5_p20250503-r0)
+(88/121) Installing readline (8.2.13-r1)
+(89/121) Installing sqlite-libs (3.50.0-r0)
+(90/121) Installing python3 (3.12.10-r1)
+(91/121) Installing python3-pycache-pyc0 (3.12.10-r1)
+(92/121) Installing pyc (3.12.10-r1)
+(93/121) Installing python3-pyc (3.12.10-r1)
+(94/121) Installing libevent (2.1.12-r8)
+(95/121) Installing libevent-dev (2.1.12-r8)
+(96/121) Installing libsodium (1.0.20-r0)
+(97/121) Installing libsodium-dev (1.0.20-r0)
+(98/121) Installing libeconf (0.6.3-r0)
+(99/121) Installing libblkid (2.41-r9)
+(100/121) Installing libuuid (2.41-r9)
+(101/121) Installing libfdisk (2.41-r9)
+(102/121) Installing liblastlog2 (2.41-r9)
+(103/121) Installing libmount (2.41-r9)
+(104/121) Installing libsmartcols (2.41-r9)
+(105/121) Installing sqlite (3.50.0-r0)
+(106/121) Installing sqlite-dev (3.50.0-r0)
+(107/121) Installing util-linux-dev (2.41-r9)
+(108/121) Installing libldap (2.6.8-r0)
+(109/121) Installing openldap-dev (2.6.8-r0)
+(110/121) Installing libelf (0.193-r0)
+(111/121) Installing libmnl (1.0.5-r2)
+(112/121) Installing iproute2-minimal (6.15.0-r0)
+(113/121) Installing ifupdown-ng-iproute2 (0.12.1-r7)
+(114/121) Installing libcap-ng (0.8.5-r0)
+(115/121) Installing lz4-libs (1.10.0-r0)
+(116/121) Installing lzo (2.10-r5)
+(117/121) Installing openvpn (2.6.14-r0)
+Executing openvpn-2.6.14-r0.pre-install
+(118/121) Installing openvpn-openrc (2.6.14-r0)
+(119/121) Installing openssl-dev (3.5.0-r0)
+(120/121) Installing openvpn-dev (2.6.14-r0)
+(121/121) Installing re2c (4.2-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 392 MiB in 121 packages
+>>> openvpn-auth-ldap: Fetching https://github.com/threerings/openvpn-auth-ldap/archive/auth-ldap-2.0.4.tar.gz
+>>> openvpn-auth-ldap: Checking sha512sums...
+auth-ldap-2.0.4.tar.gz: OK
+CVE-2024-28820.patch: OK
+default-config.patch: OK
+fix-make-install.patch: OK
+stdio.patch: OK
+>>> openvpn-auth-ldap: Unpacking /var/cache/distfiles/auth-ldap-2.0.4.tar.gz...
+>>> openvpn-auth-ldap: CVE-2024-28820.patch
+patching file src/openvpn-cr.c
+>>> openvpn-auth-ldap: default-config.patch
+patching file auth-ldap.conf
+>>> openvpn-auth-ldap: fix-make-install.patch
+patching file src/Makefile.in
+>>> openvpn-auth-ldap: stdio.patch
+patching file aclocal.m4
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: configure.ac: not using aclocal
+autoreconf: configure.ac: tracing
+autoreconf: configure.ac: not using Libtool
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:6: warning: The macro 'AC_CANONICAL_SYSTEM' is obsolete.
+configure.ac:6: You should run autoupdate.
+./lib/autoconf/general.m4:2081: AC_CANONICAL_SYSTEM is expanded from...
+configure.ac:6: the top level
+configure.ac:10: warning: The macro 'AC_PROG_CC_C99' is obsolete.
+configure.ac:10: You should run autoupdate.
+./lib/autoconf/c.m4:1662: AC_PROG_CC_C99 is expanded from...
+configure.ac:10: the top level
+configure.ac:12: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:12: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+aclocal.m4:508: TR_WERROR is expanded from...
+configure.ac:12: the top level
+configure.ac:44: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:44: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:44: the top level
+configure.ac:48: warning: The macro 'AC_LANG_C' is obsolete.
+configure.ac:48: You should run autoupdate.
+./lib/autoconf/c.m4:72: AC_LANG_C is expanded from...
+pthread.m4:51: ACX_PTHREAD is expanded from...
+configure.ac:48: the top level
+configure.ac:48: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:48: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+pthread.m4:51: ACX_PTHREAD is expanded from...
+configure.ac:48: the top level
+configure.ac:62: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:62: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+aclocal.m4:240: OD_OPENLDAP is expanded from...
+configure.ac:62: the top level
+configure.ac:63: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:63: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+aclocal.m4:436: TR_OPENSSL is expanded from...
+configure.ac:63: the top level
+configure.ac:71: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:71: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+aclocal.m4:316: OD_OPENVPN_HEADER is expanded from...
+configure.ac:71: the top level
+configure.ac:75: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:75: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+aclocal.m4:31: OD_OBJC_RUNTIME is expanded from...
+configure.ac:75: the top level
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: configure.ac: not using Automake
+autoreconf: './config.sub' is updated
+autoreconf: './config.guess' is updated
+autoreconf: './install-sh' is updated
+autoreconf: Leaving directory '.'
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for x86_64-alpine-linux-musl-clang... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking for x86_64-alpine-linux-musl-clang... no
+checking for x86_64-alpine-linux-musl-gcc... x86_64-alpine-linux-musl-gcc
+checking whether the compiler supports GNU Objective C... yes
+checking whether x86_64-alpine-linux-musl-gcc accepts -g... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for re2c... /usr/bin/re2c
+checking for doxygen... no
+checking for dot... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for the pthreads library -lpthreads... no
+checking whether pthreads work without any flags... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking if more special flags are required for pthreads... no
+checking for BSD pf(4) support... no
+configure: WARNING: pf(4) table support will not be included.
+checking for strlcpy... yes
+checking for openldap... yes
+checking for openssl... yes
+checking for NSStringFromSelector in Foundation framework... no
+checking for openvpn-plugin.h... yes
+checking for objc/objc.h... yes
+checking if linking libobjc requires pthreads... no
+checking for GNU Objective C runtime... yes
+configure: Using GNU Objective-C runtime
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating docs/Makefile
+config.status: creating docs/doxyfile
+config.status: creating Mk/autoconf.mk
+config.status: creating Mk/compile.mk
+config.status: creating Mk/subdir.mk
+config.status: creating src/Makefile
+config.status: creating tests/Makefile
+config.status: creating tools/Makefile
+config.status: creating config.h
+===> making all in tools
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tools'
+cc  -c lemon.c -o lemon.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc  -c makeheaders.c -o makeheaders.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc  -o makeheaders makeheaders.o  -export-dynamic
+cc  -o lemon lemon.o  -export-dynamic
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tools'
+===> making all in src
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/src'
+../tools/lemon -T../tools/lempar.c -m -q TRConfigParser.lemon -OTRConfigParser.m
+/usr/bin/re2c -o TRConfigLexer.m TRConfigLexer.re
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRArray.m -o TRArray.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRAutoreleasePool.m -o TRAutoreleasePool.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+../tools/makeheaders TRConfigParser.m
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRConfig.m -o TRConfig.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRConfigToken.m -o TRConfigToken.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRAuthLDAPConfig.m -o TRAuthLDAPConfig.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TREnumerator.m -o TREnumerator.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+TRConfigLexer.re:184:12: warning: control flow is undefined for strings that match 
+	'[\x0-\x9\xB-\x2C\x2E\x3A-\x40\x5B-\x5E\x60\x7B-\xFF]'
+	'[\x2D\x30-\x39\x41-\x5A\x5F\x61-\x7A] [\x0-\x8\xA-\x1F\x21-\x2C\x2E-\x2F\x3A-\x3D\x3F-\x40\x5B-\x5E\x60\x7B-\xFF]'
+	'\x2F [\x0-\x2C\x2E-\x2F\x3A-\x40\x5B-\x5E\x60\x7B-\xFF]'
+	'\x2F [\x2D\x30-\x39\x41-\x5A\x5F\x61-\x7A] [\x0-\x2C\x2E-\x2F\x3A-\x3D\x3F-\x40\x5B-\x5E\x60\x7B-\xFF]'
+, use default rule '*' [-Wundefined-control-flow]
+TRConfigLexer.re:228:12: warning: control flow is undefined for strings that match 
+	'[\x0-\x8\xB-\x1F\x21-\x2C\x2E-\x2F\x3A-\x40\x5B-\x5E\x60\x7B-\xFF]'
+	'[\x2D\x30-\x39\x41-\x5A\x5F\x61-\x7A] [\x0-\x2C\x2E-\x2F\x3A-\x3D\x3F-\x40\x5B-\x5E\x60\x7B-\xFF]'
+, use default rule '*' [-Wundefined-control-flow]
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRHash.m -o TRHash.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+TRConfigLexer.re:293:12: warning: control flow is undefined for strings that match '\x22', use default rule '*' [-Wundefined-control-flow]
+TRConfigLexer.re:312:17: warning: unreachable rule (shadowed by rule at line 302) [-Wunreachable-rules]
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLDAPAccountRepository.m -o TRLDAPAccountRepository.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLDAPConnection.m -o TRLDAPConnection.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLDAPEntry.m -o TRLDAPEntry.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLDAPGroupConfig.m -o TRLDAPGroupConfig.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLDAPSearchFilter.m -o TRLDAPSearchFilter.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLocalPacketFilter.m -o TRLocalPacketFilter.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRLog.m -o TRLog.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRObject.m -o TRObject.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRPFAddress.m -o TRPFAddress.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRPacketFilter.m -o TRPacketFilter.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+TRObject.m:51:1: warning: class 'TRObject' defined without specifying a base class [-Wobjc-root-class]
+   51 | + (id) alloc {
+      | ^
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRString.m -o TRString.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRVPNSession.m -o TRVPNSession.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr -c hash.c -o hash.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr -c strlcpy.c -o strlcpy.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr -c xmalloc.c -o xmalloc.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr -c base64.c -o base64.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr -c openvpn-cr.c -o openvpn-cr.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c auth-ldap.m -o auth-ldap.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRConfigLexer.m -o TRConfigLexer.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr  -I/usr -c TRConfigParser.m -o TRConfigParser.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall  -I/usr -c testplugin.c -o testplugin.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+auth-ldap.m: In function 'find_ldap_group':
+auth-ldap.m:382:9: warning: unused variable 'userNameLength' [-Wunused-variable]
+  382 |     int userNameLength;
+      |         ^~~~~~~~~~~~~~
+ar -r libauth-ldap.a TRArray.o TRAutoreleasePool.o TRConfig.o TRConfigLexer.o TRConfigParser.o TRConfigToken.o TRAuthLDAPConfig.o TREnumerator.o TRHash.o TRLDAPAccountRepository.o TRLDAPConnection.o TRLDAPEntry.o TRLDAPGroupConfig.o TRLDAPSearchFilter.o TRLocalPacketFilter.o TRLog.o TRObject.o TRPFAddress.o TRPacketFilter.o TRString.o TRVPNSession.o hash.o strlcpy.o xmalloc.o base64.o openvpn-cr.o
+ar: creating libauth-ldap.a
+cc -shared -o openvpn-auth-ldap.so  auth-ldap.o -L. -lauth-ldap -lldap -llber -fPIC  -lobjc -fobjc-exceptions 
+cc -o testplugin testplugin.o auth-ldap.o -export-dynamic -L. -lauth-ldap -lldap -llber -fPIC  -lobjc -fobjc-exceptions 
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/src'
+===> making all in tests
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tests'
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c tests.m -o tests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c PXTestAssert.m -o PXTestAssert.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c PXTestCase.m -o PXTestCase.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c PXTestCaseRunner.m -o PXTestCaseRunner.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c PXTestConsoleResultHandler.m -o PXTestConsoleResultHandler.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c PXTestException.m -o PXTestException.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRArrayTests.m -o TRArrayTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRAuthLDAPConfigTests.m -o TRAuthLDAPConfigTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRAutoreleasePoolTests.m -o TRAutoreleasePoolTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRConfigLexerTests.m -o TRConfigLexerTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRConfigTests.m -o TRConfigTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRConfigTokenTests.m -o TRConfigTokenTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRHashTests.m -o TRHashTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRLDAPAccountRepositoryTests.m -o TRLDAPAccountRepositoryTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRLDAPConnectionTests.m -o TRLDAPConnectionTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRLDAPEntryTests.m -o TRLDAPEntryTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRLDAPGroupConfigTests.m -o TRLDAPGroupConfigTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRLDAPSearchFilterTests.m -o TRLDAPSearchFilterTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRLocalPacketFilterTests.m -o TRLocalPacketFilterTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRObjectTests.m -o TRObjectTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -c mockpf.c -o mockpf.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRPFAddressTests.m -o TRPFAddressTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRStringTests.m -o TRStringTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -fPIC -std=gnu11 -fpermissive  -fobjc-exceptions -fno-strict-aliasing -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -DHAVE_CONFIG_H -Wall -DTEST_DATA=\"./data\" -DTEST_DATA=\"./data\" -c TRVPNSessionTests.m -o TRVPNSessionTests.o -I. -I../src -I.. -I../src -I. -I../tests -I../tests
+cc -o tests tests.o PXTestAssert.o PXTestCase.o PXTestCaseRunner.o PXTestConsoleResultHandler.o PXTestException.o TRArrayTests.o TRAuthLDAPConfigTests.o TRAutoreleasePoolTests.o TRConfigLexerTests.o TRConfigTests.o TRConfigTokenTests.o TRHashTests.o TRLDAPAccountRepositoryTests.o TRLDAPConnectionTests.o TRLDAPEntryTests.o TRLDAPGroupConfigTests.o TRLDAPSearchFilterTests.o TRLocalPacketFilterTests.o TRObjectTests.o mockpf.o TRPFAddressTests.o TRStringTests.o TRVPNSessionTests.o -export-dynamic -L../src -lauth-ldap -fPIC  -lobjc -fobjc-exceptions -lldap -llber
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tests'
+===> making all in docs
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/docs'
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/docs'
+make: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tests'
+./tests
+Test suite 'TRHashTests' started at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests test_keyEnumerator] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests test_valueForKey] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests test_removeObjectForKey] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests test_setObjectForKey_replacement] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests test_setObjectForKey] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests testIsFull] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRHashTests testInitWithCapacity] completed at Sun Jun  1 02:07:44 2025
+Test suite 'TRHashTests' finished at Sun Jun  1 02:07:44 2025
+Test suite 'TRLDAPGroupConfigTests' started at Sun Jun  1 02:07:44 2025
+Test suite 'TRLDAPGroupConfigTests' finished at Sun Jun  1 02:07:44 2025
+Test suite 'TRConfigTokenTests' started at Sun Jun  1 02:07:44 2025
+Test case -[TRConfigTokenTests test_boolValue] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRConfigTokenTests test_intValue] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRConfigTokenTests test_initWithBytes] completed at Sun Jun  1 02:07:44 2025
+Test suite 'TRConfigTokenTests' finished at Sun Jun  1 02:07:44 2025
+Test suite 'TRPFAddressTests' started at Sun Jun  1 02:07:44 2025
+Test case -[TRPFAddressTests test_initWithPortableAddress] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRPFAddressTests test_initWithPresentationAddress] completed at Sun Jun  1 02:07:44 2025
+Test suite 'TRPFAddressTests' finished at Sun Jun  1 02:07:44 2025
+Test suite 'TRConfigLexerTests' started at Sun Jun  1 02:07:44 2025
+Test case -[TRConfigLexerTests testParse] completed at Sun Jun  1 02:07:44 2025
+Test suite 'TRConfigLexerTests' finished at Sun Jun  1 02:07:44 2025
+Test suite 'TRAuthLDAPConfigTests' started at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithBadSection] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithMissingTrailingNewline] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithMissingKey] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithDuplicateKeys] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithMismatchedSection] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithIncorrectlyNamedSection] completed at Sun Jun  1 02:07:44 2025
+Test case -[TRAuthLDAPConfigTests test_initWithConfigFile] completed at Sun Jun  1 02:07:44 2025
+Test suite 'TRAuthLDAPConfigTests' finished at Sun Jun  1 02:07:44 2025
+Test suite 'TRLDAPConnectionTests' started at Sun Jun  1 02:07:44 2025
+Test case -[TRLDAPConnectionTests testInit] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPConnectionTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRConfigTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRConfigTests testInitWithFD] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRConfigTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPEntryTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRLDAPEntryTests testInitWithDN] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPEntryTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRObjectTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRObjectTests testIsEqual] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRObjectTests testRetainRelease] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRObjectTests testIsKindOfClass] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRObjectTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRVPNSessionTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRVPNSessionTests test_initWithUsername] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRVPNSessionTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPAccountRepositoryTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRLDAPAccountRepositoryTests test_initWithLDAPConnection] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPAccountRepositoryTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRStringTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_hash] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_intValue] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_length] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_stringWithCString] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_stringWithFormat] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_initWithBytes] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_initWithString] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRStringTests test_initWithCString] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRStringTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPSearchFilterTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRLDAPSearchFilterTests test_ldapEscaping] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRLDAPSearchFilterTests test_getFilter] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRLDAPSearchFilterTests test_initWithFormat] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRLDAPSearchFilterTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRAutoreleasePoolTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRAutoreleasePoolTests testAddObject] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRAutoreleasePoolTests' finished at Sun Jun  1 02:07:49 2025
+Test suite 'TRArrayTests' started at Sun Jun  1 02:07:49 2025
+Test case -[TRArrayTests test_objectEnumerator] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRArrayTests test_count] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRArrayTests test_containsObject] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRArrayTests test_removeObject] completed at Sun Jun  1 02:07:49 2025
+Test case -[TRArrayTests test_addObject] completed at Sun Jun  1 02:07:49 2025
+Test suite 'TRArrayTests' finished at Sun Jun  1 02:07:49 2025
+make: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tests'
+>>> openvpn-auth-ldap: Entering fakeroot...
+===> making install in tools
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tools'
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tools'
+===> making install in src
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/src'
+/usr/bin/install -c -m 755 -D openvpn-auth-ldap.so /tmp/pkg/openvpn-auth-ldap/usr/lib/openvpn/plugins/openvpn-auth-ldap.so
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/src'
+===> making install in tests
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tests'
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/tests'
+===> making install in docs
+make[1]: Entering directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/docs'
+make[1]: Leaving directory '/tmp/src/openvpn-auth-ldap-auth-ldap-2.0.4/docs'
+>>> openvpn-auth-ldap*: Running postcheck for openvpn-auth-ldap
+>>> openvpn-auth-ldap*: Preparing package openvpn-auth-ldap...
+>>> openvpn-auth-ldap*: Stripping binaries
+>>> openvpn-auth-ldap*: Script found. /bin/sh added as a dependency for openvpn-auth-ldap-2.0.4-r7.apk
+>>> openvpn-auth-ldap*: Adding .post-upgrade
+>>> openvpn-auth-ldap*: Scanning shared objects
+>>> openvpn-auth-ldap*: Tracing dependencies...
+	openvpn
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:liblber.so.2
+	so:libldap.so.2
+	so:libobjc.so.4
+>>> openvpn-auth-ldap*: Package size: 138.9 KB
+>>> openvpn-auth-ldap*: Compressing data...
+>>> openvpn-auth-ldap*: Create checksum...
+>>> openvpn-auth-ldap*: Create openvpn-auth-ldap-2.0.4-r7.apk
+>>> openvpn-auth-ldap: Updating the main/x86_64 repository index...
+>>> openvpn-auth-ldap: Signing the index...
+>>> openvpn-auth-ldap: Cleaning up srcdir
+>>> openvpn-auth-ldap: Cleaning up build chroot
+>>> openvpn-auth-ldap: Cleaning up pkgdir

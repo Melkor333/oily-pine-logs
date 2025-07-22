@@ -1,0 +1,1522 @@
+>>> apparmor: Validating /home/packager/oily-pine/main/apparmor/APKBUILD...
+>>> apparmor: Cleaning up srcdir
+>>> apparmor: Cleaning up pkgdir
+>>> apparmor: Cleaning up tmpdir
+>>> apparmor: Fetching https://launchpad.net/apparmor/3.1/3.1.7/+download/apparmor-3.1.7.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 96 7782k   96 7475k    0     0   9.8M      0 --:--:-- --:--:-- --:--:--  9.8M100 7782k  100 7782k    0     0  10.2M      0 --:--:-- --:--:-- --:--:-- 99.8M
+>>> apparmor: Fetching https://launchpad.net/apparmor/3.1/3.1.7/+download/apparmor-3.1.7.tar.gz
+>>> apparmor: Checking sha512sums...
+apparmor-3.1.7.tar.gz: OK
+apparmor.initd: OK
+0001-Fix-linking-against-gettext-on-musl-libc.patch: OK
+0006-utils-adjust-rc-functions-for-aa-remove-unknown.patch: OK
+libapparmor-basename.patch: OK
+fix-dnsmasq-profile.patch: OK
+>>> apparmor: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/118) Installing musl (1.2.5-r10)
+(2/118) Installing libcrypto3 (3.5.0-r0)
+(3/118) Installing ca-certificates-bundle (20241121-r2)
+(4/118) Installing libssl3 (3.5.0-r0)
+(5/118) Installing zlib (1.3.1-r2)
+(6/118) Installing libapk2 (2.14.9-r2)
+(7/118) Installing apk-tools (2.14.9-r2)
+(8/118) Installing libcap2 (2.76-r0)
+(9/118) Installing libcap-getcap (2.76-r0)
+(10/118) Installing fakeroot (1.37.1.1-r0)
+(11/118) Installing scanelf (1.3.8-r1)
+(12/118) Installing musl-utils (1.2.5-r10)
+(13/118) Installing libgcc (14.3.0-r0)
+(14/118) Installing libstdc++ (14.3.0-r0)
+(15/118) Installing lzip (1.25-r0)
+(16/118) Installing openssl (3.5.0-r0)
+(17/118) Installing patch (2.8-r0)
+(18/118) Installing pkgconf (2.4.3-r0)
+(19/118) Installing acl-libs (2.3.2-r1)
+(20/118) Installing tar (1.35-r3)
+(21/118) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/118) Installing ssl_client (1.37.0-r18)
+(23/118) Installing busybox-binsh (1.37.0-r18)
+(24/118) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/118) Installing abuild-sudo (3.15.0-r0)
+(26/118) Installing alpine-baselayout-data (3.7.0-r0)
+(27/118) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/118) Installing bridge (1.5-r5)
+(29/118) Installing ifupdown-ng (0.12.1-r7)
+(30/118) Installing openrc-user (0.62.2-r2)
+(31/118) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/118) Installing mdev-conf (4.8-r0)
+(33/118) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/118) Installing alpine-conf (3.20.0-r0)
+(35/118) Installing alpine-keys (2.5-r0)
+(36/118) Installing alpine-release (3.22.0-r0)
+(37/118) Installing busybox-openrc (1.37.0-r18)
+(38/118) Installing busybox-suid (1.37.0-r18)
+(39/118) Installing alpine-base (3.22.0-r0)
+(40/118) Installing m4 (1.4.20-r0)
+(41/118) Installing libbz2 (1.0.8-r6)
+(42/118) Installing perl (5.40.2-r0)
+(43/118) Installing autoconf (2.72-r1)
+(44/118) Installing automake (1.18-r0)
+(45/118) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(46/118) Installing libncursesw (6.5_p20250503-r0)
+(47/118) Installing readline (8.2.13-r1)
+(48/118) Installing bash (5.2.37-r0)
+Executing bash-5.2.37-r0.post-install
+(49/118) Installing bison (3.8.2-r2)
+(50/118) Installing jansson (2.14.1-r0)
+(51/118) Installing zstd-libs (1.5.7-r0)
+(52/118) Installing binutils (2.44-r0)
+(53/118) Installing libmagic (5.46-r2)
+(54/118) Installing file (5.46-r2)
+(55/118) Installing libgomp (14.3.0-r0)
+(56/118) Installing libatomic (14.3.0-r0)
+(57/118) Installing gmp (6.3.0-r3)
+(58/118) Installing isl26 (0.26-r1)
+(59/118) Installing mpfr4 (4.2.1_p1-r0)
+(60/118) Installing mpc1 (1.3.1-r1)
+(61/118) Installing gcc (14.3.0-r0)
+(62/118) Installing libstdc++-dev (14.3.0-r0)
+(63/118) Installing musl-dev (1.2.5-r10)
+(64/118) Installing g++ (14.3.0-r0)
+(65/118) Installing make (4.4.1-r3)
+(66/118) Installing fortify-headers (1.1-r5)
+(67/118) Installing build-base (0.5-r3)
+(68/118) Installing flex (2.6.4-r7)
+(69/118) Installing xz-libs (5.8.1-r0)
+(70/118) Installing xz (5.8.1-r0)
+(71/118) Installing gettext-asprintf (0.24.1-r0)
+(72/118) Installing libintl (0.24.1-r0)
+(73/118) Installing libunistring (1.3-r0)
+(74/118) Installing gettext-libs (0.24.1-r0)
+(75/118) Installing gettext-envsubst (0.24.1-r0)
+(76/118) Installing libxml2 (2.13.8-r0)
+(77/118) Installing gettext (0.24.1-r0)
+(78/118) Installing gettext-dev (0.24.1-r0)
+(79/118) Installing brotli-libs (1.1.0-r2)
+(80/118) Installing c-ares (1.34.5-r0)
+(81/118) Installing libidn2 (2.3.7-r0)
+(82/118) Installing nghttp2-libs (1.65.0-r0)
+(83/118) Installing libpsl (0.21.5-r3)
+(84/118) Installing libcurl (8.14.0-r2)
+(85/118) Installing libexpat (2.7.1-r0)
+(86/118) Installing pcre2 (10.43-r1)
+(87/118) Installing git (2.49.0-r0)
+(88/118) Installing git-init-template (2.49.0-r0)
+(89/118) Installing perl-error (0.17030-r0)
+(90/118) Installing perl-git (2.49.0-r0)
+(91/118) Installing git-perl (2.49.0-r0)
+(92/118) Installing libltdl (2.5.4-r1)
+(93/118) Installing libtool (2.5.4-r1)
+(94/118) Installing linux-headers (6.14.2-r0)
+(95/118) Installing skalibs-libs (2.14.4.0-r0)
+(96/118) Installing utmps-libs (0.1.3.1-r0)
+(97/118) Installing linux-pam (1.7.0-r4)
+(98/118) Installing linux-pam-dev (1.7.0-r4)
+(99/118) Installing perl-utils (5.40.2-r0)
+(100/118) Installing perl-dev (5.40.2-r0)
+(101/118) Installing libffi (3.4.8-r0)
+(102/118) Installing gdbm (1.24-r0)
+(103/118) Installing mpdecimal (4.0.1-r0)
+(104/118) Installing libpanelw (6.5_p20250503-r0)
+(105/118) Installing sqlite-libs (3.50.0-r0)
+(106/118) Installing python3 (3.12.10-r1)
+(107/118) Installing python3-pycache-pyc0 (3.12.10-r1)
+(108/118) Installing pyc (3.12.10-r1)
+(109/118) Installing py3-setuptools-pyc (80.9.0-r0)
+(110/118) Installing py3-parsing (3.2.3-r0)
+(111/118) Installing py3-parsing-pyc (3.2.3-r0)
+(112/118) Installing py3-packaging-pyc (25.0-r0)
+(113/118) Installing python3-pyc (3.12.10-r1)
+(114/118) Installing py3-packaging (25.0-r0)
+(115/118) Installing py3-setuptools (80.9.0-r0)
+(116/118) Installing python3-dev (3.12.10-r1)
+(117/118) Installing sed (4.9-r2)
+(118/118) Installing swig (4.3.0-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 420 MiB in 118 packages
+>>> apparmor: Fetching https://launchpad.net/apparmor/3.1/3.1.7/+download/apparmor-3.1.7.tar.gz
+>>> apparmor: Checking sha512sums...
+apparmor-3.1.7.tar.gz: OK
+apparmor.initd: OK
+0001-Fix-linking-against-gettext-on-musl-libc.patch: OK
+0006-utils-adjust-rc-functions-for-aa-remove-unknown.patch: OK
+libapparmor-basename.patch: OK
+fix-dnsmasq-profile.patch: OK
+>>> apparmor: Unpacking /var/cache/distfiles/apparmor-3.1.7.tar.gz...
+>>> apparmor: 0001-Fix-linking-against-gettext-on-musl-libc.patch
+patching file binutils/Makefile
+Hunk #1 succeeded at 53 with fuzz 2 (offset 1 line).
+patching file parser/Makefile
+Hunk #1 succeeded at 113 with fuzz 2 (offset 23 lines).
+>>> apparmor: 0006-utils-adjust-rc-functions-for-aa-remove-unknown.patch
+patching file utils/aa-remove-unknown
+>>> apparmor: libapparmor-basename.patch
+patching file libraries/libapparmor/testsuite/test_multi.c
+>>> apparmor: fix-dnsmasq-profile.patch
+patching file profiles/apparmor.d/usr.sbin.dnsmasq
+>>> apparmor: Building: libapparmor
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports the include directive... yes (GNU style)
+checking for gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking for library containing yywrap... no
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for a sed that does not truncate output... /bin/sed
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for swig... /usr/bin/swig
+checking whether the libapparmor debug output should be enabled... no
+checking whether the libapparmor man pages should be generated... yes
+checking for podchecker... podchecker
+checking for pod2man... pod2man
+checking whether python bindings are enabled... yes
+checking for python3... /usr/bin/python3
+checking for python3... (cached) /usr/bin/python3
+checking for python3-config... /usr/bin/python3-config
+checking for a version of Python >= '2.1.0'... yes
+checking for the setuptools Python package... yes
+checking for Python include path... /usr/bin/python3-config is /usr/bin/python3-config
+-I/usr/include/python3.12 -I/usr/include/python3.12
+checking for Python library path... /usr/bin/python3-config is /usr/bin/python3-config
+ -L/usr/lib  -ldl  -lm 
+checking for Python site-packages path... /usr/lib/python3.12/site-packages
+checking python extra libraries... /usr/bin/python3-config is /usr/bin/python3-config
+-lpython3.12 -ldl  -lm 
+checking python extra linking flags... /usr/bin/python3-config is /usr/bin/python3-config
+ -L/usr/lib -lpython3.12 -ldl  -lm 
+checking consistency of all components of python development environment... yes
+checking whether /usr/bin/python3 version is >= 3.0... yes
+checking for /usr/bin/python3 version... 3.12
+checking for /usr/bin/python3 platform... linux
+checking for GNU default /usr/bin/python3 prefix... ${prefix}
+checking for GNU default /usr/bin/python3 exec_prefix... ${exec_prefix}
+checking for /usr/bin/python3 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for /usr/bin/python3 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking whether perl bindings are enabled... yes
+checking for perl... /usr/bin/perl
+checking whether ruby bindings are enabled... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for unistd.h... (cached) yes
+checking for stdint.h... (cached) yes
+checking for syslog.h... yes
+checking for asprintf... yes
+checking for __secure_getenv... no
+checking for secure_getenv... yes
+checking for reallocarray... yes
+checking for an ANSI C-conforming const... yes
+checking build system type... x86_64-pc-linux-musl
+checking host system type... x86_64-pc-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-pc-linux-musl file names to x86_64-pc-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating src/Makefile
+config.status: creating swig/Makefile
+config.status: creating swig/perl/Makefile
+config.status: creating swig/perl/Makefile.PL
+config.status: creating swig/python/Makefile
+config.status: creating swig/python/setup.py
+config.status: creating swig/python/test/Makefile
+config.status: creating swig/ruby/Makefile
+config.status: creating testsuite/Makefile
+config.status: creating testsuite/config/Makefile
+config.status: creating testsuite/libaalogparse.test/Makefile
+config.status: creating testsuite/lib/Makefile
+config.status: creating include/Makefile
+config.status: creating include/sys/Makefile
+config.status: executing depfiles commands
+config.status: executing libtool commands
+Making all in doc
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/doc'
+podchecker -warnings -warnings aa_change_hat.pod
+podchecker -warnings -warnings aa_change_profile.pod
+podchecker -warnings -warnings aa_stack_profile.pod
+podchecker -warnings -warnings aa_getcon.pod
+podchecker -warnings -warnings aa_find_mountpoint.pod
+podchecker -warnings -warnings aa_splitcon.pod
+podchecker -warnings -warnings aa_query_label.pod
+podchecker -warnings -warnings aa_features.pod
+podchecker -warnings -warnings aa_kernel_interface.pod
+podchecker -warnings -warnings aa_policy_cache.pod
+*** WARNING: multiple occurrences (2) of link target 'EACCES' at line - in file aa_find_mountpoint.pod
+*** WARNING: multiple occurrences (2) of link target 'EBUSY' at line - in file aa_find_mountpoint.pod
+*** WARNING: multiple occurrences (2) of link target 'ENOENT' at line - in file aa_find_mountpoint.pod
+*** WARNING: multiple occurrences (2) of link target 'ENOMEM' at line - in file aa_find_mountpoint.pod
+aa_find_mountpoint.pod pod syntax OK.
+aa_query_label.pod pod syntax OK.
+aa_stack_profile.pod pod syntax OK.
+aa_change_profile.pod pod syntax OK.
+pod2man \
+	--section=2 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_find_mountpoint.pod > aa_find_mountpoint.2
+pod2man \
+	--section=2 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_stack_profile.pod > aa_stack_profile.2
+pod2man \
+	--section=2 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_query_label.pod > aa_query_label.2
+aa_change_hat.pod pod syntax OK.
+pod2man \
+	--section=2 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_change_profile.pod > aa_change_profile.2
+pod2man \
+	--section=2 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_change_hat.pod > aa_change_hat.2
+aa_policy_cache.pod pod syntax OK.
+pod2man \
+	--section=3 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_policy_cache.pod > aa_policy_cache.3
+aa_splitcon.pod pod syntax OK.
+pod2man \
+	--section=3 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_splitcon.pod > aa_splitcon.3
+aa_getcon.pod pod syntax OK.
+aa_kernel_interface.pod pod syntax OK.
+pod2man \
+	--section=2 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_getcon.pod > aa_getcon.2
+aa_features.pod pod syntax OK.
+pod2man \
+	--section=3 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_kernel_interface.pod > aa_kernel_interface.3
+pod2man \
+	--section=3 \
+	--release="AppArmor 3.1.7" \
+	--center="AppArmor" \
+	--stderr \
+	aa_features.pod > aa_features.3
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/doc'
+Making all in src
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+/bin/sh ../ylwrap grammar.y y.tab.c grammar.c y.tab.h `echo grammar.c | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output grammar.output -- bison -y -d -p aalogparse_ 
+flex -v scanner.l
+echo '#include <netinet/in.h>' | cc  -E -dM - | LC_ALL=C  sed  -n -e "/IPPROTO_MAX/d"  -e "s/^\#define[ \\t]\\+IPPROTO_\\([A-Z0-9_]\\+\\)\\(.*\\)$/AA_GEN_PROTO_ENT(\\UIPPROTO_\\1, \"\\L\\1\")/p" > af_protos.h
+flex version 2.6.4 usage statistics:
+  scanner options: ---reentrant--bison-bridgevI8 -Cem -oscanner.c -Paalogparse_
+  1320/2000 NFA states
+  676/1000 DFA states (2760 words)
+  137 rules
+  Compressed tables always back-up
+  12/40 start conditions
+  528 epsilon states, 208 double epsilon states
+  44/100 character classes needed 560/750 words of storage, 0 reused
+  25479 state/nextstate pairs created
+  1628/23851 unique/duplicate transitions
+  697/1000 base-def entries created
+  1654/2000 (peak 2605) nxt-chk entries created
+  189/2500 (peak 1407) template nxt-chk entries created
+  0 empty table entries
+  23 protos created
+  21 templates created, 489 uses
+  67/256 equivalence classes created
+  9/256 meta-equivalence classes created
+  2 (26 saved) hash collisions, 977 DFAs equal
+  2 sets of reallocations needed
+  5025 total table entries needed
+/tmp/src/apparmor-3.1.7/libraries/libapparmor/src/grammar.y:86.1-8: warning: POSIX Yacc does not support %defines [-Wyacc]
+   86 | %defines
+      | ^~~~~~~~
+/tmp/src/apparmor-3.1.7/libraries/libapparmor/src/grammar.y:92.1-7: warning: POSIX Yacc does not support %define [-Wyacc]
+   92 | %define api.pure
+      | ^~~~~~~
+/tmp/src/apparmor-3.1.7/libraries/libapparmor/src/grammar.y:196.1-11: warning: POSIX Yacc does not support %destructor [-Wyacc]
+  196 | %destructor { free($$); } TOK_QUOTED_STRING TOK_ID TOK_MODE TOK_DMESG...
+      | ^~~~~~~~~~~
+/tmp/src/apparmor-3.1.7/libraries/libapparmor/src/grammar.y:197.1-11: warning: POSIX Yacc does not support %destructor [-Wyacc]
+  197 | %destructor { free($$); } TOK_AUDIT_DIGITS TOK_DATE_MONTH TOK_DATE TO...
+      | ^~~~~~~~~~~
+/tmp/src/apparmor-3.1.7/libraries/libapparmor/src/grammar.y:198.1-11: warning: POSIX Yacc does not support %destructor [-Wyacc]
+  198 | %destructor { free($$); } TOK_HEXSTRING TOK_TYPE_OTHER TOK_MSG_REST
+      | ^~~~~~~~~~~
+/tmp/src/apparmor-3.1.7/libraries/libapparmor/src/grammar.y:199.1-11: warning: POSIX Yacc does not support %destructor [-Wyacc]
+  199 | %destructor { free($$); } TOK_IP_ADDR
+      | ^~~~~~~~~~~
+updating grammar.h
+make  all-am
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT grammar.lo -MD -MP -MF .deps/grammar.Tpo -c -o grammar.lo grammar.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libaalogparse.lo -MD -MP -MF .deps/libaalogparse.Tpo -c -o libaalogparse.lo libaalogparse.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT kernel.lo -MD -MP -MF .deps/kernel.Tpo -c -o kernel.lo kernel.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT scanner.lo -MD -MP -MF .deps/scanner.Tpo -c -o scanner.lo scanner.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT private.lo -MD -MP -MF .deps/private.Tpo -c -o private.lo private.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT features.lo -MD -MP -MF .deps/features.Tpo -c -o features.lo features.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT kernel_interface.lo -MD -MP -MF .deps/kernel_interface.Tpo -c -o kernel_interface.lo kernel_interface.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT policy_cache.lo -MD -MP -MF .deps/policy_cache.Tpo -c -o policy_cache.lo policy_cache.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I.  -D_GNU_SOURCE -I../include/  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT PMurHash.lo -MD -MP -MF .deps/PMurHash.Tpo -c -o PMurHash.lo PMurHash.c
+cd ".." && \
+/bin/sh ./config.status --file="src/libapparmor.pc"
+config.status: creating src/libapparmor.pc
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT private.lo -MD -MP -MF .deps/private.Tpo -c private.c  -fPIC -DPIC -o .libs/private.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT kernel_interface.lo -MD -MP -MF .deps/kernel_interface.Tpo -c kernel_interface.c  -fPIC -DPIC -o .libs/kernel_interface.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT grammar.lo -MD -MP -MF .deps/grammar.Tpo -c grammar.c  -fPIC -DPIC -o .libs/grammar.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT features.lo -MD -MP -MF .deps/features.Tpo -c features.c  -fPIC -DPIC -o .libs/features.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT kernel.lo -MD -MP -MF .deps/kernel.Tpo -c kernel.c  -fPIC -DPIC -o .libs/kernel.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT scanner.lo -MD -MP -MF .deps/scanner.Tpo -c scanner.c  -fPIC -DPIC -o .libs/scanner.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libaalogparse.lo -MD -MP -MF .deps/libaalogparse.Tpo -c libaalogparse.c  -fPIC -DPIC -o .libs/libaalogparse.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT policy_cache.lo -MD -MP -MF .deps/policy_cache.Tpo -c policy_cache.c  -fPIC -DPIC -o .libs/policy_cache.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT PMurHash.lo -MD -MP -MF .deps/PMurHash.Tpo -c PMurHash.c  -fPIC -DPIC -o .libs/PMurHash.o
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libaalogparse.lo -MD -MP -MF .deps/libaalogparse.Tpo -c libaalogparse.c -o libaalogparse.o >/dev/null 2>&1
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT PMurHash.lo -MD -MP -MF .deps/PMurHash.Tpo -c PMurHash.c -o PMurHash.o >/dev/null 2>&1
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT private.lo -MD -MP -MF .deps/private.Tpo -c private.c -o private.o >/dev/null 2>&1
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT kernel_interface.lo -MD -MP -MF .deps/kernel_interface.Tpo -c kernel_interface.c -o kernel_interface.o >/dev/null 2>&1
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT policy_cache.lo -MD -MP -MF .deps/policy_cache.Tpo -c policy_cache.c -o policy_cache.o >/dev/null 2>&1
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT grammar.lo -MD -MP -MF .deps/grammar.Tpo -c grammar.c -o grammar.o >/dev/null 2>&1
+mv -f .deps/libaalogparse.Tpo .deps/libaalogparse.Plo
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT features.lo -MD -MP -MF .deps/features.Tpo -c features.c -o features.o >/dev/null 2>&1
+mv -f .deps/PMurHash.Tpo .deps/PMurHash.Plo
+mv -f .deps/kernel_interface.Tpo .deps/kernel_interface.Plo
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT kernel.lo -MD -MP -MF .deps/kernel.Tpo -c kernel.c -o kernel.o >/dev/null 2>&1
+mv -f .deps/grammar.Tpo .deps/grammar.Plo
+libtool: compile:  cc "-DPACKAGE_NAME=\"\"" "-DPACKAGE_TARNAME=\"\"" "-DPACKAGE_VERSION=\"\"" "-DPACKAGE_STRING=\"\"" "-DPACKAGE_BUGREPORT=\"\"" "-DPACKAGE_URL=\"\"" "-DPACKAGE=\"libapparmor1\"" "-DVERSION=\"3.1.7\"" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 "-DLT_OBJDIR=\".libs/\"" -I. -D_GNU_SOURCE -I../include/ -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT scanner.lo -MD -MP -MF .deps/scanner.Tpo -c scanner.c -o scanner.o >/dev/null 2>&1
+mv -f .deps/policy_cache.Tpo .deps/policy_cache.Plo
+mv -f .deps/private.Tpo .deps/private.Plo
+mv -f .deps/features.Tpo .deps/features.Plo
+mv -f .deps/kernel.Tpo .deps/kernel.Plo
+mv -f .deps/scanner.Tpo .deps/scanner.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link cc -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -flto-partition=none -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -version-info 13:3:12 -XCClinker -dynamic -pthread -Wl,--version-script=../src/libapparmor.map -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libapparmor.la -rpath /usr/lib grammar.lo libaalogparse.lo kernel.lo scanner.lo private.lo features.lo kernel_interface.lo policy_cache.lo PMurHash.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/grammar.o .libs/libaalogparse.o .libs/kernel.o .libs/scanner.o .libs/private.o .libs/features.o .libs/kernel_interface.o .libs/policy_cache.o .libs/PMurHash.o    -flto-partition=none -Os -dynamic -pthread -Wl,--version-script=../src/libapparmor.map -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -pthread -Wl,-soname -Wl,libapparmor.so.1 -o .libs/libapparmor.so.1.12.3
+libtool: link: (cd ".libs" && rm -f "libapparmor.so.1" && ln -s "libapparmor.so.1.12.3" "libapparmor.so.1")
+libtool: link: (cd ".libs" && rm -f "libapparmor.so" && ln -s "libapparmor.so.1.12.3" "libapparmor.so")
+libtool: link: ar cr .libs/libapparmor.a  grammar.o libaalogparse.o kernel.o scanner.o private.o features.o kernel_interface.o policy_cache.o PMurHash.o
+libtool: link: ranlib .libs/libapparmor.a
+libtool: link: ( cd ".libs" && rm -f "libapparmor.la" && ln -s "../libapparmor.la" "libapparmor.la" )
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+Making all in include
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+Making all in sys
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include/sys'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include/sys'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+Making all in swig
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+Making all in perl
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+/usr/bin/swig -perl -I./../../include -module LibAppArmor -o libapparmor_wrap.c ./../SWIG/libapparmor.i
+./../../include/aalogparse.h:163: Warning 301: class keyword used, but not in C++ mode.
+/usr/bin/perl Makefile.PL PREFIX=/usr MAKEFILE=Makefile.perl
+Warning: -L../../src/.libs/ changed to -L/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl/../../src/.libs/
+Generating a Unix-style Makefile.perl
+Writing Makefile.perl for LibAppArmor
+Writing MYMETA.yml and MYMETA.json
+sed -ie 's/LD_RUN_PATH="\x24(LD_RUN_PATH)"//g' Makefile.perl
+sed -ie 's/^LD_RUN_PATH.*//g' Makefile.perl
+if test ! -f libapparmor_wrap.c; then cp ./libapparmor_wrap.c . ; fi
+make -fMakefile.perl
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+Running Mkbootstrap for LibAppArmor ()
+cc -c  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -D_REENTRANT -D_GNU_SOURCE -D_GNU_SOURCE -fwrapv -fno-strict-aliasing -pipe -fstack-protector-strong -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2   -DVERSION=\"3.1.7\" -DXS_VERSION=\"3.1.7\" -fPIC "-I/usr/lib/perl5/core_perl/CORE"   libapparmor_wrap.c
+chmod 644 "LibAppArmor.bs"
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LibAppArmor.bs blib/arch/auto/LibAppArmor/LibAppArmor.bs 644
+cp LibAppArmor.pm blib/lib/LibAppArmor.pm
+rm -f blib/arch/auto/LibAppArmor/LibAppArmor.so
+cc  -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -L/usr/local/lib -fstack-protector-strong  libapparmor_wrap.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o blib/arch/auto/LibAppArmor/LibAppArmor.so  \
+   -L/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl/../../src/.libs -lapparmor   \
+  
+chmod 755 blib/arch/auto/LibAppArmor/LibAppArmor.so
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+if test ../.. != ../.. ; then rm -f libapparmor_wrap.c ; fi
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+Making all in python
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+Making all in test
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python/test'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+/usr/bin/swig -python -I./../../include -module LibAppArmor -o libapparmor_wrap.c ./../SWIG/libapparmor.i
+./../../include/aalogparse.h:163: Warning 301: class keyword used, but not in C++ mode.
+./../../include/aalogparse.h:163: Warning 314: 'class' is a python keyword, renaming to '_class'
+if test ! -f libapparmor_wrap.c; then cp ./libapparmor_wrap.c . ; fi
+CC="cc" CFLAGS="-I/usr/include/python3.12 -I/usr/include/python3.12 -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough" LDSHARED="cc -shared" LDFLAGS="-L/usr/lib  -ldl  -lm  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs" /usr/bin/python3 setup.py build
+running build
+running build_py
+creating build/lib.linux-x86_64-cpython-312/LibAppArmor
+copying ./LibAppArmor.py -> build/lib.linux-x86_64-cpython-312/LibAppArmor
+copying ./__init__.py -> build/lib.linux-x86_64-cpython-312/LibAppArmor
+running build_ext
+building '_LibAppArmor' extension
+creating build/temp.linux-x86_64-cpython-312
+cc -I/usr/include/python3.12 -I/usr/include/python3.12 -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -fPIC -I../../include -I/usr/include/python3.12 -c libapparmor_wrap.c -o build/temp.linux-x86_64-cpython-312/libapparmor_wrap.o
+libapparmor_wrap.c: In function '_wrap_aa_change_hat_vargs__varargs__':
+libapparmor_wrap.c:6689:101: warning: unused parameter 'varargs' [-Wunused-parameter]
+ 6689 | SWIGINTERN PyObject *_wrap_aa_change_hat_vargs__varargs__(PyObject *self, PyObject *args, PyObject *varargs) {
+      |                                                                                           ~~~~~~~~~~^~~~~~~
+libapparmor_wrap.c: In function '_wrap_aa_change_hat_vargs':
+libapparmor_wrap.c:6728:58: warning: unused parameter 'self' [-Wunused-parameter]
+ 6728 | SWIGINTERN PyObject *_wrap_aa_change_hat_vargs(PyObject *self, PyObject *args) {
+      |                                                ~~~~~~~~~~^~~~
+libapparmor_wrap.c: In function '_wrap_aa_getpeercon_raw':
+libapparmor_wrap.c:7072:47: warning: pointer targets in passing argument 3 of 'aa_getpeercon_raw' differ in signedness [-Wpointer-sign]
+ 7072 |     result = (int)aa_getpeercon_raw(arg1,arg2,arg3,arg4);
+      |                                               ^~~~
+      |                                               |
+      |                                               int *
+In file included from libapparmor_wrap.c:3242:
+../../include/sys/apparmor.h:98:60: note: expected 'socklen_t *' {aka 'unsigned int *'} but argument is of type 'int *'
+   98 | extern int aa_getpeercon_raw(int fd, char *buf, socklen_t *len, char **mode);
+      |                                                 ~~~~~~~~~~~^~~
+cc -shared -L/usr/lib -ldl -lm -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -I/usr/include/python3.12 -I/usr/include/python3.12 -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough build/temp.linux-x86_64-cpython-312/libapparmor_wrap.o -L/usr/lib -o build/lib.linux-x86_64-cpython-312/LibAppArmor/_LibAppArmor.cpython-312-x86_64-linux-musl.so -L../../src/.libs -lapparmor
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+Making all in ruby
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/ruby'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/ruby'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+Making all in testsuite
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+Making all in lib
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/lib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/lib'
+Making all in config
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/config'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/config'
+Making all in libaalogparse.test
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/libaalogparse.test'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/libaalogparse.test'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+cc -DPACKAGE_NAME=\"\" -DPACKAGE_TARNAME=\"\" -DPACKAGE_VERSION=\"\" -DPACKAGE_STRING=\"\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DPACKAGE=\"libapparmor1\" -DVERSION=\"3.1.7\" -DYYTEXT_POINTER=1 -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DHAVE_UNISTD_H=1 -DHAVE_STDINT_H=1 -DHAVE_SYSLOG_H=1 -DHAVE_ASPRINTF=1 -DHAVE_SECURE_GETENV=1 -DHAVE_REALLOCARRAY=1 -DHAVE_DLFCN_H=1 -DLT_OBJDIR=\".libs/\" -I. -I. -I../include  -DLOCALEDIR=\"/usr/share/locale\"  -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT test_multi_multi-test_multi.o -MD -MP -MF .deps/test_multi_multi-test_multi.Tpo -c -o test_multi_multi-test_multi.o `test -f 'test_multi.c' || echo './'`test_multi.c
+mv -f .deps/test_multi_multi-test_multi.Tpo .deps/test_multi_multi-test_multi.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o test_multi.multi test_multi_multi-test_multi.o -L../src/.libs -lapparmor 
+libtool: link: cc -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/test_multi.multi test_multi_multi-test_multi.o  -L../src/.libs /tmp/src/apparmor-3.1.7/libraries/libapparmor/src/.libs/libapparmor.so -pthread
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+>>> apparmor: Building: apparmor parser
+make: Entering directory '/tmp/src/apparmor-3.1.7/parser'
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_common.o parser_common.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_include.o parser_include.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_interface.o parser_interface.c
+bison -d --define=parse.error=verbose -o parser_yacc.c parser_yacc.y
+../common/list_capabilities.sh | LC_ALL=C sed -n -e "s/[ \\t]\\?CAP_\\([A-Z0-9_]\\+\\)/\{\"\\L\\1\", \\UCAP_\\1, NO_BACKMAP_CAP, CAPFLAG_BASE_FEATURE\},\\n/pg" > generated_cap_names.h
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_merge.o parser_merge.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_symtab.o parser_symtab.c
+bison -d --define=parse.error=verbose -o parser_yacc.c parser_yacc.y
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_regex.o parser_regex.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_variable.o parser_variable.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_alias.o parser_alias.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o common_optarg.o common_optarg.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o lib.o lib.c
+../common/list_af_names.sh > generated_af_names.h
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o mount.o mount.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o profile.o profile.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o rule.o rule.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o policy_cache.o policy_cache.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o default_features.o default_features.c
+make -C libapparmor_re CFLAGS="-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x"
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/parser/libapparmor_re'
+bison -o parse.cc parse.y
+parse.y:63.1-21: warning: deprecated directive: ‘%name-prefix "regex_"’, use ‘%define api.prefix {regex_}’ [-Wdeprecated]
+   63 | %name-prefix "regex_"
+      | ^~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {regex_}
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/parser/po'
+msgfmt -c -o af.mo af.po
+msgfmt -c -o ar.mo ar.po
+msgfmt -c -o bg.mo bg.po
+msgfmt -c -o bn.mo bn.po
+msgfmt -c -o bo.mo bo.po
+bo.po:7: warning: header field 'Last-Translator' still has the initial default value
+bo.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o bs.mo bs.po
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x -I../../libraries/libapparmor/include   -c -o expr-tree.o expr-tree.cc
+msgfmt -c -o ca.mo ca.po
+msgfmt -c -o ce.mo ce.po
+msgfmt -c -o cs.mo cs.po
+msgfmt -c -o cy.mo cy.po
+msgfmt -c -o da.mo da.po
+msgfmt -c -o de.mo de.po
+msgfmt -c -o el.mo el.po
+msgfmt -c -o en_AU.mo en_AU.po
+msgfmt -c -o en_CA.mo en_CA.po
+msgfmt -c -o en_GB.mo en_GB.po
+msgfmt -c -o es.mo es.po
+msgfmt -c -o et.mo et.po
+msgfmt -c -o fa.mo fa.po
+fa.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o fi.mo fi.po
+msgfmt -c -o fr.mo fr.po
+msgfmt -c -o gl.mo gl.po
+parse.y: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x -I../../libraries/libapparmor/include   -c -o hfa.o hfa.cc
+msgfmt -c -o gu.mo gu.po
+msgfmt -c -o he.mo he.po
+msgfmt -c -o hi.mo hi.po
+msgfmt -c -o hr.mo hr.po
+msgfmt -c -o hu.mo hu.po
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x -I../../libraries/libapparmor/include   -c -o chfa.o chfa.cc
+msgfmt -c -o id.mo id.po
+msgfmt -c -o it.mo it.po
+msgfmt -c -o ja.mo ja.po
+msgfmt -c -o ka.mo ka.po
+msgfmt -c -o km.mo km.po
+msgfmt -c -o ko.mo ko.po
+msgfmt -c -o lo.mo lo.po
+msgfmt -c -o lt.mo lt.po
+msgfmt -c -o mk.mo mk.po
+msgfmt -c -o mr.mo mr.po
+msgfmt -c -o ms.mo ms.po
+msgfmt -c -o nb.mo nb.po
+msgfmt -c -o nl.mo nl.po
+msgfmt -c -o oc.mo oc.po
+msgfmt -c -o pa.mo pa.po
+msgfmt -c -o pl.mo pl.po
+msgfmt -c -o pt.mo pt.po
+msgfmt -c -o pt_BR.mo pt_BR.po
+msgfmt -c -o ro.mo ro.po
+msgfmt -c -o ru.mo ru.po
+msgfmt -c -o si.mo si.po
+msgfmt -c -o sk.mo sk.po
+msgfmt -c -o sl.mo sl.po
+msgfmt -c -o sq.mo sq.po
+msgfmt -c -o sr.mo sr.po
+msgfmt -c -o sv.mo sv.po
+msgfmt -c -o ta.mo ta.po
+msgfmt -c -o th.mo th.po
+msgfmt -c -o tr.mo tr.po
+msgfmt -c -o ug.mo ug.po
+msgfmt -c -o uk.mo uk.po
+msgfmt -c -o vi.mo vi.po
+msgfmt -c -o wa.mo wa.po
+msgfmt -c -o xh.mo xh.po
+msgfmt -c -o zh_CN.mo zh_CN.po
+msgfmt -c -o zh_TW.mo zh_TW.po
+msgfmt -c -o zu.mo zu.po
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_main.o parser_main.c
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/parser/po'
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x -I../../libraries/libapparmor/include   -c -o aare_rules.o aare_rules.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x -I../../libraries/libapparmor/include   -c -o parse.o parse.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_yacc.o parser_yacc.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_policy.o parser_policy.c
+cat base_af_names.h | diff -u - generated_af_names.h | grep -v '^.AF_MAX' | grep '^\+[^+]' ; \
+if [ $? -eq 1 ] ; then \
+	cat base_af_names.h | LC_ALL=C sed -n -e 's/[ \t]\?AF_MAX[ \t]\+[0-9]\+,//g'  -e 's/[ \t]\+\?AF_\([A-Z0-9_]\+\)[ \t]\+\([0-9]\+\),/#ifndef AF_\1\n#  define AF_\1 \2\n#endif\nAA_GEN_NET_ENT("\L\1", \UAF_\1)\n/pg' > af_names.h ; \
+	cat base_af_names.h | LC_ALL=C sed -n -e 's/AF_MAX[ \t]\+\([0-9]\+\),\?.*/\n#define AA_AF_MAX \1\n/p' >> af_names.h ; \
+else \
+	echo "Error: new AF names detected; please update base_af_names.h with values from generated_af_names.h" ; \
+	exit 1 ; \
+fi
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o dbus.o dbus.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o signal.o signal.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o ptrace.o ptrace.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o af_rule.o af_rule.cc
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o af_unix.o af_unix.cc
+flex -B -v --noyy_top_state -oparser_lex.c parser_lex.l
+flex version 2.6.4 usage statistics:
+  scanner options: -svB8 -Cem -oparser_lex.c
+  1197/2000 NFA states
+  501/1000 DFA states (5170 words)
+  82 rules
+  Compressed tables always back-up
+  22/40 start conditions
+  624 epsilon states, 455 double epsilon states
+  133/200 character classes needed 4635/4750 words of storage, 0 reused
+  21005 state/nextstate pairs created
+  2213/18792 unique/duplicate transitions
+  612/1000 base-def entries created
+  4079/6000 (peak 8206) nxt-chk entries created
+  2220/7500 (peak 6216) template nxt-chk entries created
+  346 empty table entries
+  127 protos created
+  111 templates created, 277 uses
+  56/256 equivalence classes created
+  20/256 meta-equivalence classes created
+  0 (71 saved) hash collisions, 1757 DFAs equal
+  22 sets of reallocations needed
+  9694 total table entries needed
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_misc.o parser_misc.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o network.o network.c
+c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -c -o parser_lex.o parser_lex.c
+ar -rcs libapparmor_re.a parse.o expr-tree.o hfa.o chfa.o aare_rules.o
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/parser/libapparmor_re'
+c++ -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x  -DHAVE_REALLOCARRAY=1 -DPACKAGE=\"apparmor-parser\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor/include -o apparmor_parser parser_common.o parser_include.o parser_interface.o parser_lex.o parser_main.o parser_misc.o parser_merge.o parser_symtab.o parser_yacc.o parser_regex.o parser_variable.o parser_policy.o parser_alias.o common_optarg.o lib.o network.o  mount.o  dbus.o  profile.o  rule.o  signal.o  ptrace.o  af_rule.o  af_unix.o policy_cache.o default_features.o  \
+        libapparmor_re/libapparmor_re.a -static-libgcc -static-libstdc++ -L. -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../libraries/libapparmor/src/.libs -Wl,-Bstatic -lapparmor -Wl,-Bdynamic -lpthread -lintl
+make: Leaving directory '/tmp/src/apparmor-3.1.7/parser'
+>>> apparmor: Building: apparmor-binutils
+make: Entering directory '/tmp/src/apparmor-3.1.7/binutils'
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../libraries/libapparmor//src/.libs -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -DPACKAGE=\"aa-binutils\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor//include -o aa-enabled aa_enabled.c  -Wl,-Bstatic -lapparmor  -Wl,-Bdynamic -lpthread -lintl 
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../libraries/libapparmor//src/.libs -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -DPACKAGE=\"aa-binutils\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor//include -o aa-exec aa_exec.c  -Wl,-Bstatic -lapparmor  -Wl,-Bdynamic -lpthread -lintl
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../libraries/libapparmor//src/.libs -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -DPACKAGE=\"aa-binutils\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor//include -o aa-features-abi aa_features_abi.c  -Wl,-Bstatic -lapparmor  -Wl,-Bdynamic -lpthread -lintl
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -DPACKAGE=\"aa-binutils\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor//include -c -o cJSON.o cJSON.c
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/binutils/po'
+msgfmt -c -o af.mo af.po
+msgfmt -c -o de.mo de.po
+msgfmt -c -o en_GB.mo en_GB.po
+af.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o es.mo es.po
+msgfmt -c -o fa.mo fa.po
+msgfmt -c -o fi.mo fi.po
+msgfmt -c -o id.mo id.po
+es.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o pt.mo pt.po
+msgfmt -c -o ro.mo ro.po
+msgfmt -c -o ru.mo ru.po
+fa.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o sv.mo sv.po
+fi.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o sw.mo sw.po
+ro.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o tr.mo tr.po
+sv.po:7: warning: header field 'Language' missing in header
+sw.po:7: warning: header field 'Language' missing in header
+tr.po:7: warning: header field 'Language' missing in header
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/binutils/po'
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../libraries/libapparmor//src/.libs -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt    -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -DPACKAGE=\"aa-binutils\" -DLOCALEDIR=\"/usr/share/locale\" -I../libraries/libapparmor//include -o aa-status aa_status.c  -Wl,-Bstatic -lapparmor  -Wl,-Bdynamic -lpthread -lintl cJSON.o
+make: Leaving directory '/tmp/src/apparmor-3.1.7/binutils'
+>>> apparmor: Building: apparmor-utils
+make: Entering directory '/tmp/src/apparmor-3.1.7/utils'
+make -C po all
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/utils/po'
+msgfmt -c -o af.mo af.po
+msgfmt -c -o bo.mo bo.po
+msgfmt -c -o bs.mo bs.po
+msgfmt -c -o de.mo de.po
+msgfmt -c -o en_GB.mo en_GB.po
+msgfmt -c -o es.mo es.po
+af.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o fa.mo fa.po
+msgfmt -c -o fr.mo fr.po
+msgfmt -c -o hi.mo hi.po
+msgfmt -c -o id.mo id.po
+bo.po:7: warning: header field 'Last-Translator' still has the initial default value
+bo.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o it.mo it.po
+es.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o ko.mo ko.po
+fa.po:7: warning: header field 'Language' missing in header
+msgfmt -c -o pl.mo pl.po
+msgfmt -c -o pt.mo pt.po
+msgfmt -c -o pt_BR.mo pt_BR.po
+msgfmt -c -o ru.mo ru.po
+msgfmt -c -o sv.mo sv.po
+msgfmt -c -o tr.mo tr.po
+msgfmt -c -o ug.mo ug.po
+msgfmt -c -o uk.mo uk.po
+msgfmt -c -o zh_CN.mo zh_CN.po
+pt_BR.po:7: warning: header field 'Last-Translator' still has the initial default value
+pt_BR.po:7: warning: header field 'Language' missing in header
+zh_CN.po:7: warning: header field 'Last-Translator' still has the initial default value
+zh_CN.po:7: warning: header field 'Language' missing in header
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/utils/po'
+make -C vim all
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/utils/vim'
+/usr/bin/python3 create-apparmor.vim.py > apparmor.vim || { rm -f apparmor.vim ; exit 1; }
+/usr/bin/pod2man apparmor.vim.pod --release="AppArmor 3.1.7" --center=AppArmor --stderr --section=5 > apparmor.vim.5
+/usr/bin/pod2html --header --css apparmor.css --infile=apparmor.vim.pod --outfile=apparmor.vim.5.html
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.8'.
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.7'.
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.6'.
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.4'.
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.3'.
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.2'.
+../../common//Make.rules:112: warning: pattern recipe did not update peer target 'apparmor.vim.1'.
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/utils/vim'
+make: Leaving directory '/tmp/src/apparmor-3.1.7/utils'
+>>> apparmor: Building: apparmor-profiles
+make: Entering directory '/tmp/src/apparmor-3.1.7/profiles'
+for profile in ./apparmor.d/bin.ping ./apparmor.d/lsb_release ./apparmor.d/nvidia_modprobe ./apparmor.d/php-fpm ./apparmor.d/samba-bgqd ./apparmor.d/samba-dcerpcd ./apparmor.d/samba-rpcd ./apparmor.d/samba-rpcd-classic ./apparmor.d/samba-rpcd-spoolss ./apparmor.d/sbin.klogd ./apparmor.d/sbin.syslog-ng ./apparmor.d/sbin.syslogd ./apparmor.d/usr.lib.apache2.mpm-prefork.apache2 ./apparmor.d/usr.lib.dovecot.anvil ./apparmor.d/usr.lib.dovecot.auth ./apparmor.d/usr.lib.dovecot.config ./apparmor.d/usr.lib.dovecot.deliver ./apparmor.d/usr.lib.dovecot.dict ./apparmor.d/usr.lib.dovecot.director ./apparmor.d/usr.lib.dovecot.doveadm-server ./apparmor.d/usr.lib.dovecot.dovecot-auth ./apparmor.d/usr.lib.dovecot.dovecot-lda ./apparmor.d/usr.lib.dovecot.imap ./apparmor.d/usr.lib.dovecot.imap-login ./apparmor.d/usr.lib.dovecot.lmtp ./apparmor.d/usr.lib.dovecot.log ./apparmor.d/usr.lib.dovecot.managesieve ./apparmor.d/usr.lib.dovecot.managesieve-login ./apparmor.d/usr.lib.dovecot.pop3 ./apparmor.d/usr.lib.dovecot.pop3-login ./apparmor.d/usr.lib.dovecot.replicator ./apparmor.d/usr.lib.dovecot.script-login ./apparmor.d/usr.lib.dovecot.ssl-params ./apparmor.d/usr.lib.dovecot.stats ./apparmor.d/usr.sbin.apache2 ./apparmor.d/usr.sbin.avahi-daemon ./apparmor.d/usr.sbin.dnsmasq ./apparmor.d/usr.sbin.dovecot ./apparmor.d/usr.sbin.identd ./apparmor.d/usr.sbin.mdnsd ./apparmor.d/usr.sbin.nmbd ./apparmor.d/usr.sbin.nscd ./apparmor.d/usr.sbin.ntpd ./apparmor.d/usr.sbin.smbd ./apparmor.d/usr.sbin.smbldap-useradd ./apparmor.d/usr.sbin.traceroute ./apparmor.d/usr.sbin.winbindd ./apparmor.d/zgrep; do \
+	fn=$(basename $profile); \
+	echo "# Site-specific additions and overrides for '$fn'" > ./apparmor.d/local/$fn; \
+	grep "include[[:space:]]\\+if[[:space:]]\\+exists[[:space:]]\\+<local/$fn>" "$profile" >/dev/null || { echo "$profile doesn't contain include if exists <local/$fn>" ; exit 1; } ; \
+done
+make: Leaving directory '/tmp/src/apparmor-3.1.7/profiles'
+>>> apparmor: Building: apparmor-pam
+make: Entering directory '/tmp/src/apparmor-3.1.7/changehat/pam_apparmor'
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -fPIC -shared -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -I../../libraries/libapparmor//include -c -o pam_apparmor.o pam_apparmor.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -fPIC -shared -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -I../../libraries/libapparmor//include -c -o get_options.o get_options.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -fPIC -shared -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -I../../libraries/libapparmor//include -Xlinker -x -L../../libraries/libapparmor//src/.libs/ -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pam_apparmor.so pam_apparmor.o get_options.o -lpam -lapparmor
+make: Leaving directory '/tmp/src/apparmor-3.1.7/changehat/pam_apparmor'
+>>> apparmor: Building: apparmor-vim
+make: Entering directory '/tmp/src/apparmor-3.1.7/utils/vim'
+make: Nothing to be done for 'all'.
+make: Leaving directory '/tmp/src/apparmor-3.1.7/utils/vim'
+>>> apparmor: Entering fakeroot...
+make: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+Making install in doc
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/doc'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ .././install-sh -c -d '/tmp/pkg/apparmor/usr/share/man/man2'
+ .././install-sh -c -d '/tmp/pkg/apparmor/usr/share/man/man3'
+ /usr/bin/install -c -m 644 aa_splitcon.3 aa_features.3 aa_kernel_interface.3 aa_policy_cache.3 '/tmp/pkg/apparmor/usr/share/man/man3'
+ /usr/bin/install -c -m 644 aa_change_hat.2 aa_change_profile.2 aa_stack_profile.2 aa_getcon.2 aa_find_mountpoint.2 aa_query_label.2 '/tmp/pkg/apparmor/usr/share/man/man2'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/doc'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/doc'
+Making install in src
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+make  install-am
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+ .././install-sh -c -d '/tmp/pkg/apparmor/usr/lib'
+ .././install-sh -c -d '/tmp/pkg/apparmor/usr/lib/pkgconfig'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libapparmor.la '/tmp/pkg/apparmor/usr/lib'
+ /usr/bin/install -c -m 644 libapparmor.pc '/tmp/pkg/apparmor/usr/lib/pkgconfig'
+libtool: install: /usr/bin/install -c .libs/libapparmor.so.1.12.3 /tmp/pkg/apparmor/usr/lib/libapparmor.so.1.12.3
+libtool: install: (cd /tmp/pkg/apparmor/usr/lib && { ln -s -f libapparmor.so.1.12.3 libapparmor.so.1 || { rm -f libapparmor.so.1 && ln -s libapparmor.so.1.12.3 libapparmor.so.1; }; })
+libtool: install: (cd /tmp/pkg/apparmor/usr/lib && { ln -s -f libapparmor.so.1.12.3 libapparmor.so || { rm -f libapparmor.so && ln -s libapparmor.so.1.12.3 libapparmor.so; }; })
+libtool: install: /usr/bin/install -c .libs/libapparmor.lai /tmp/pkg/apparmor/usr/lib/libapparmor.la
+libtool: install: /usr/bin/install -c .libs/libapparmor.a /tmp/pkg/apparmor/usr/lib/libapparmor.a
+libtool: install: chmod 644 /tmp/pkg/apparmor/usr/lib/libapparmor.a
+libtool: install: ranlib /tmp/pkg/apparmor/usr/lib/libapparmor.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/src'
+Making install in include
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+Making install in sys
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include/sys'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include/sys'
+make[3]: Nothing to be done for 'install-exec-am'.
+ ../.././install-sh -c -d '/tmp/pkg/apparmor/usr/include/sys'
+ /usr/bin/install -c -m 644 apparmor.h apparmor_private.h '/tmp/pkg/apparmor/usr/include/sys'
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include/sys'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include/sys'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+ .././install-sh -c -d '/tmp/pkg/apparmor/usr/include/aalogparse'
+ /usr/bin/install -c -m 644 aalogparse.h '/tmp/pkg/apparmor/usr/include/aalogparse'
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/include'
+Making install in swig
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+Making install in perl
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+if test ! -f libapparmor_wrap.c; then cp ./libapparmor_wrap.c . ; fi
+make -fMakefile.perl
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LibAppArmor.bs blib/arch/auto/LibAppArmor/LibAppArmor.bs 644
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+if test ../.. != ../.. ; then rm -f libapparmor_wrap.c ; fi
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+make -fMakefile.perl install_vendor
+make[3]: Nothing to be done for 'install-data-am'.
+make[4]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+"/usr/bin/perl" -MExtUtils::Command::MM -e 'cp_nonempty' -- LibAppArmor.bs blib/arch/auto/LibAppArmor/LibAppArmor.bs 644
+Appending installation info to /tmp/pkg/apparmor/usr/lib/perl5/core_perl/perllocal.pod
+Files found in blib/arch: installing files in blib/lib into architecture dependent library tree
+Installing /tmp/pkg/apparmor/usr/lib/perl5/vendor_perl/auto/LibAppArmor/LibAppArmor.so
+Installing /tmp/pkg/apparmor/usr/lib/perl5/vendor_perl/LibAppArmor.pm
+make[4]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/perl'
+Making install in python
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+Making install in test
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python/test'
+make[4]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python/test'
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python/test'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+if test ! -f libapparmor_wrap.c; then cp ./libapparmor_wrap.c . ; fi
+CC="cc" CFLAGS="-I/usr/include/python3.12 -I/usr/include/python3.12 -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough" LDSHARED="cc -shared" LDFLAGS="-L/usr/lib  -ldl  -lm  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs" /usr/bin/python3 setup.py build
+running build
+running build_py
+copying ./LibAppArmor.py -> build/lib.linux-x86_64-cpython-312/LibAppArmor
+running build_ext
+make[4]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+/usr/bin/python3 setup.py install --root="//tmp/pkg/apparmor" --prefix="/usr"
+make[4]: Nothing to be done for 'install-data-am'.
+running install
+/usr/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running build
+running build_py
+copying ./LibAppArmor.py -> build/lib.linux-x86_64-cpython-312/LibAppArmor
+running build_ext
+running install_lib
+creating //tmp/pkg/apparmor/usr/lib/python3.12/site-packages
+creating //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor
+copying build/lib.linux-x86_64-cpython-312/LibAppArmor/LibAppArmor.py -> //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor
+copying build/lib.linux-x86_64-cpython-312/LibAppArmor/__init__.py -> //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor
+copying build/lib.linux-x86_64-cpython-312/LibAppArmor/_LibAppArmor.cpython-312-x86_64-linux-musl.so -> //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor
+byte-compiling //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor/LibAppArmor.py to LibAppArmor.cpython-312.pyc
+byte-compiling //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor/__init__.py to __init__.cpython-312.pyc
+running install_egg_info
+running egg_info
+creating LibAppArmor.egg-info
+writing LibAppArmor.egg-info/PKG-INFO
+writing dependency_links to LibAppArmor.egg-info/dependency_links.txt
+writing top-level names to LibAppArmor.egg-info/top_level.txt
+writing manifest file 'LibAppArmor.egg-info/SOURCES.txt'
+reading manifest file 'LibAppArmor.egg-info/SOURCES.txt'
+writing manifest file 'LibAppArmor.egg-info/SOURCES.txt'
+Copying LibAppArmor.egg-info to //tmp/pkg/apparmor/usr/lib/python3.12/site-packages/LibAppArmor-3.1.7-py3.12.egg-info
+running install_scripts
+make[4]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/python'
+Making install in ruby
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/ruby'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/ruby'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/ruby'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig/ruby'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/swig'
+Making install in testsuite
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+Making install in lib
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/lib'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/lib'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/lib'
+Making install in config
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/config'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/config'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/config'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/config'
+Making install in libaalogparse.test
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/libaalogparse.test'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/libaalogparse.test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/libaalogparse.test'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite/libaalogparse.test'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[3]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor/testsuite'
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+make: Leaving directory '/tmp/src/apparmor-3.1.7/libraries/libapparmor'
+make: Entering directory '/tmp/src/apparmor-3.1.7/changehat/pam_apparmor'
+install -m 755 -d /tmp/pkg/apparmor/usr/lib/security
+install -m 755 pam_apparmor.so /tmp/pkg/apparmor/usr/lib/security/
+make: Leaving directory '/tmp/src/apparmor-3.1.7/changehat/pam_apparmor'
+make: Entering directory '/tmp/src/apparmor-3.1.7/binutils'
+install -m 755 -d /tmp/pkg/apparmor/usr/bin
+install -m 755 aa-enabled aa-exec aa-features-abi /tmp/pkg/apparmor/usr/bin
+install -m 755 -d /tmp/pkg/apparmor/usr/sbin
+ln -sf aa-status /tmp/pkg/apparmor/usr/sbin/apparmor_status
+install -m 755 aa-status /tmp/pkg/apparmor/usr/sbin
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/binutils/po'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/binutils/po'
+make -C po install NAME=aa-binutils DESTDIR=/tmp/pkg/apparmor
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/binutils/po'
+mkdir -p /tmp/pkg/apparmor//usr/share/locale
+for lang in  af  de  en_GB  es  fa  fi  id  pt  ro  ru  sv  sw  tr ; do \
+	mkdir -p /tmp/pkg/apparmor//usr/share/locale/${lang}/LC_MESSAGES ; \
+	install -m 644 ${lang}.mo /tmp/pkg/apparmor//usr/share/locale/${lang}/LC_MESSAGES/aa-binutils.mo ; \
+done
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/binutils/po'
+make install_manpages DESTDIR=/tmp/pkg/apparmor
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/binutils'
+install -d /tmp/pkg/apparmor//usr/share/man/man1 ; install -m 644 aa-enabled.1 aa-exec.1 aa-features-abi.1 /tmp/pkg/apparmor//usr/share/man/man1;   install -d /tmp/pkg/apparmor//usr/share/man/man8 ; install -m 644 aa-status.8 /tmp/pkg/apparmor//usr/share/man/man8; 
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/binutils'
+ln -sf aa-status.8 /tmp/pkg/apparmor//usr/share/man/man8/apparmor_status.8
+make: Leaving directory '/tmp/src/apparmor-3.1.7/binutils'
+make: Entering directory '/tmp/src/apparmor-3.1.7/parser'
+make install-indep
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/parser'
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/parser/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/parser/po'
+install -m 755 -d /tmp/pkg/apparmor/etc/apparmor
+install -m 644 parser.conf /tmp/pkg/apparmor/etc/apparmor
+install -m 755 -d /tmp/pkg/apparmor/var/lib/apparmor
+install -m 755 -d /tmp/pkg/apparmor/lib/apparmor
+install -m 755 rc.apparmor.functions /tmp/pkg/apparmor/lib/apparmor
+install -m 755 profile-load /tmp/pkg/apparmor/lib/apparmor
+make -C po install NAME=apparmor-parser DESTDIR=/tmp/pkg/apparmor
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/parser/po'
+mkdir -p /tmp/pkg/apparmor//usr/share/locale
+for lang in  af  ar  bg  bn  bo  bs  ca  ce  cs  cy  da  de  el  en_AU  en_CA  en_GB  es  et  fa  fi  fr  gl  gu  he  hi  hr  hu  id  it  ja  ka  km  ko  lo  lt  mk  mr  ms  nb  nl  oc  pa  pl  pt  pt_BR  ro  ru  si  sk  sl  sq  sr  sv  ta  th  tr  ug  uk  vi  wa  xh  zh_CN  zh_TW  zu ; do \
+	mkdir -p /tmp/pkg/apparmor//usr/share/locale/${lang}/LC_MESSAGES ; \
+	install -m 644 ${lang}.mo /tmp/pkg/apparmor//usr/share/locale/${lang}/LC_MESSAGES/apparmor-parser.mo ; \
+done
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/parser/po'
+make install_manpages DESTDIR=/tmp/pkg/apparmor
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/parser'
+install -d /tmp/pkg/apparmor//usr/share/man/man5 ; install -m 644 apparmor.d.5 /tmp/pkg/apparmor//usr/share/man/man5;   install -d /tmp/pkg/apparmor//usr/share/man/man7 ; install -m 644 apparmor.7 apparmor_xattrs.7 /tmp/pkg/apparmor//usr/share/man/man7;   install -d /tmp/pkg/apparmor//usr/share/man/man8 ; install -m 644 apparmor_parser.8 aa-teardown.8 /tmp/pkg/apparmor//usr/share/man/man8; 
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/parser'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/parser'
+make install-arch
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/parser'
+make -C libapparmor_re CFLAGS="-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto-partition=none -flto-partition=none -D_GNU_SOURCE -Wall -Wall -Wsign-compare -Wmissing-field-initializers -Wformat -Wformat-security -Wunused-parameter -Wimplicit-fallthrough -std=gnu++0x"
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/parser/libapparmor_re'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/parser/libapparmor_re'
+install -m 755 -d /tmp/pkg/apparmor/sbin
+install -m 755 apparmor_parser /tmp/pkg/apparmor/sbin
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/parser'
+make: Leaving directory '/tmp/src/apparmor-3.1.7/parser'
+make: Entering directory '/tmp/src/apparmor-3.1.7/profiles'
+for profile in ./apparmor.d/bin.ping ./apparmor.d/lsb_release ./apparmor.d/nvidia_modprobe ./apparmor.d/php-fpm ./apparmor.d/samba-bgqd ./apparmor.d/samba-dcerpcd ./apparmor.d/samba-rpcd ./apparmor.d/samba-rpcd-classic ./apparmor.d/samba-rpcd-spoolss ./apparmor.d/sbin.klogd ./apparmor.d/sbin.syslog-ng ./apparmor.d/sbin.syslogd ./apparmor.d/usr.lib.apache2.mpm-prefork.apache2 ./apparmor.d/usr.lib.dovecot.anvil ./apparmor.d/usr.lib.dovecot.auth ./apparmor.d/usr.lib.dovecot.config ./apparmor.d/usr.lib.dovecot.deliver ./apparmor.d/usr.lib.dovecot.dict ./apparmor.d/usr.lib.dovecot.director ./apparmor.d/usr.lib.dovecot.doveadm-server ./apparmor.d/usr.lib.dovecot.dovecot-auth ./apparmor.d/usr.lib.dovecot.dovecot-lda ./apparmor.d/usr.lib.dovecot.imap ./apparmor.d/usr.lib.dovecot.imap-login ./apparmor.d/usr.lib.dovecot.lmtp ./apparmor.d/usr.lib.dovecot.log ./apparmor.d/usr.lib.dovecot.managesieve ./apparmor.d/usr.lib.dovecot.managesieve-login ./apparmor.d/usr.lib.dovecot.pop3 ./apparmor.d/usr.lib.dovecot.pop3-login ./apparmor.d/usr.lib.dovecot.replicator ./apparmor.d/usr.lib.dovecot.script-login ./apparmor.d/usr.lib.dovecot.ssl-params ./apparmor.d/usr.lib.dovecot.stats ./apparmor.d/usr.sbin.apache2 ./apparmor.d/usr.sbin.avahi-daemon ./apparmor.d/usr.sbin.dnsmasq ./apparmor.d/usr.sbin.dovecot ./apparmor.d/usr.sbin.identd ./apparmor.d/usr.sbin.mdnsd ./apparmor.d/usr.sbin.nmbd ./apparmor.d/usr.sbin.nscd ./apparmor.d/usr.sbin.ntpd ./apparmor.d/usr.sbin.smbd ./apparmor.d/usr.sbin.smbldap-useradd ./apparmor.d/usr.sbin.traceroute ./apparmor.d/usr.sbin.winbindd ./apparmor.d/zgrep; do \
+	fn=$(basename $profile); \
+	echo "# Site-specific additions and overrides for '$fn'" > ./apparmor.d/local/$fn; \
+	grep "include[[:space:]]\\+if[[:space:]]\\+exists[[:space:]]\\+<local/$fn>" "$profile" >/dev/null || { echo "$profile doesn't contain include if exists <local/$fn>" ; exit 1; } ; \
+done
+install -m 755 -d /tmp/pkg/apparmor/etc/apparmor.d
+install -m 755 -d /tmp/pkg/apparmor/etc/apparmor.d/disable
+for dir in ./apparmor.d ./apparmor.d/abi ./apparmor.d/abstractions ./apparmor.d/abstractions/apparmor_api ./apparmor.d/abstractions/ubuntu-browsers.d ./apparmor.d/local ./apparmor.d/apache2.d ./apparmor.d/tunables ./apparmor.d/tunables/xdg-user-dirs.d ./apparmor.d/tunables/home.d ./apparmor.d/tunables/multiarch.d ; do \
+    	install -m 755 -d "/tmp/pkg/apparmor/etc/apparmor.d/${dir#./apparmor.d}" ; \
+done
+for file in $(find ./apparmor.d -type f -print) ; do \
+    	install -m 644 "${file}" "/tmp/pkg/apparmor/etc/apparmor.d/$(dirname ${file#./apparmor.d})" ; \
+done
+install -m 755 -d /tmp/pkg/apparmor/usr/share/apparmor/extra-profiles/
+install -m 644 ./apparmor/profiles/extras//* /tmp/pkg/apparmor/usr/share/apparmor/extra-profiles/
+make: Leaving directory '/tmp/src/apparmor-3.1.7/profiles'
+make: Entering directory '/tmp/src/apparmor-3.1.7/utils'
+install -d /tmp/pkg/apparmor/etc/apparmor
+install -m 644 logprof.conf severity.db notify.conf /tmp/pkg/apparmor/etc/apparmor
+install -d /tmp/pkg/apparmor/usr/bin
+# aa-easyprof is installed by python-tools-setup.py
+install -m 755 aa-genprof aa-logprof aa-cleanprof aa-mergeprof aa-autodep aa-audit aa-complain aa-enforce aa-disable aa-notify aa-unconfined aa-decode aa-remove-unknown /tmp/pkg/apparmor/usr/bin
+make -C po install DESTDIR=/tmp/pkg/apparmor NAME=apparmor-utils
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/utils/po'
+mkdir -p /tmp/pkg/apparmor//usr/share/locale
+for lang in  af  bo  bs  de  en_GB  es  fa  fr  hi  id  it  ko  pl  pt  pt_BR  ru  sv  tr  ug  uk  zh_CN ; do \
+	mkdir -p /tmp/pkg/apparmor//usr/share/locale/${lang}/LC_MESSAGES ; \
+	install -m 644 ${lang}.mo /tmp/pkg/apparmor//usr/share/locale/${lang}/LC_MESSAGES/apparmor-utils.mo ; \
+done
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/utils/po'
+make install_manpages DESTDIR=/tmp/pkg/apparmor
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/utils'
+install -d /tmp/pkg/apparmor//usr/share/man/man5 ; install -m 644 logprof.conf.5 /tmp/pkg/apparmor//usr/share/man/man5;   install -d /tmp/pkg/apparmor//usr/share/man/man8 ; install -m 644 aa-easyprof.8 aa-genprof.8 aa-logprof.8 aa-cleanprof.8 aa-mergeprof.8 aa-autodep.8 aa-audit.8 aa-complain.8 aa-enforce.8 aa-disable.8 aa-notify.8 aa-unconfined.8 aa-decode.8 aa-remove-unknown.8 /tmp/pkg/apparmor//usr/share/man/man8; 
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/utils'
+make -C vim install DESTDIR=/tmp/pkg/apparmor
+make[1]: Entering directory '/tmp/src/apparmor-3.1.7/utils/vim'
+install -d /tmp/pkg/apparmor/usr/share/vim/vimfiles/syntax
+install -m 644 apparmor.vim /tmp/pkg/apparmor/usr/share/vim/vimfiles/syntax
+make install_manpages DESTDIR=/tmp/pkg/apparmor
+make[2]: Entering directory '/tmp/src/apparmor-3.1.7/utils/vim'
+install -d /tmp/pkg/apparmor//usr/share/man/man5 ; install -m 644 apparmor.vim.5 /tmp/pkg/apparmor//usr/share/man/man5; 
+make[2]: Leaving directory '/tmp/src/apparmor-3.1.7/utils/vim'
+make[1]: Leaving directory '/tmp/src/apparmor-3.1.7/utils/vim'
+/usr/bin/python3 python-tools-setup.py install --prefix=/usr --root=/tmp/pkg/apparmor --version=3.1.7
+running install
+/usr/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+running build
+running build_py
+creating build/lib/apparmor
+copying staging/__init__.py -> build/lib/apparmor
+copying staging/easyprof.py -> build/lib/apparmor
+copying staging/notify.py -> build/lib/apparmor
+copying staging/fail.py -> build/lib/apparmor
+copying staging/common.py -> build/lib/apparmor
+copying staging/ui.py -> build/lib/apparmor
+copying staging/sandbox.py -> build/lib/apparmor
+copying staging/profile_list.py -> build/lib/apparmor
+copying staging/logparser.py -> build/lib/apparmor
+copying staging/aa.py -> build/lib/apparmor
+copying staging/config.py -> build/lib/apparmor
+copying staging/rules.py -> build/lib/apparmor
+copying staging/aare.py -> build/lib/apparmor
+copying staging/translations.py -> build/lib/apparmor
+copying staging/profile_storage.py -> build/lib/apparmor
+copying staging/tools.py -> build/lib/apparmor
+copying staging/regex.py -> build/lib/apparmor
+copying staging/cleanprofile.py -> build/lib/apparmor
+copying staging/severity.py -> build/lib/apparmor
+creating build/lib/apparmor/rule
+copying staging/rule/change_profile.py -> build/lib/apparmor/rule
+copying staging/rule/rlimit.py -> build/lib/apparmor/rule
+copying staging/rule/file.py -> build/lib/apparmor/rule
+copying staging/rule/capability.py -> build/lib/apparmor/rule
+copying staging/rule/network.py -> build/lib/apparmor/rule
+copying staging/rule/variable.py -> build/lib/apparmor/rule
+copying staging/rule/abi.py -> build/lib/apparmor/rule
+copying staging/rule/ptrace.py -> build/lib/apparmor/rule
+copying staging/rule/__init__.py -> build/lib/apparmor/rule
+copying staging/rule/include.py -> build/lib/apparmor/rule
+copying staging/rule/boolean.py -> build/lib/apparmor/rule
+copying staging/rule/alias.py -> build/lib/apparmor/rule
+copying staging/rule/dbus.py -> build/lib/apparmor/rule
+copying staging/rule/signal.py -> build/lib/apparmor/rule
+running install_lib
+creating /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/notify.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+creating /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/change_profile.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/rlimit.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/file.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/capability.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/network.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/variable.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/abi.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/ptrace.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/__init__.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/include.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/boolean.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/alias.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/dbus.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/rule/signal.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule
+copying build/lib/apparmor/fail.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/common.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/ui.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/sandbox.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/profile_list.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/logparser.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/aa.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/config.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/rules.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/easyprof.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/aare.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/__init__.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/translations.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/profile_storage.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/tools.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/regex.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/cleanprofile.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+copying build/lib/apparmor/severity.py -> /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/notify.py to notify.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/change_profile.py to change_profile.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/rlimit.py to rlimit.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/file.py to file.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/capability.py to capability.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/network.py to network.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/variable.py to variable.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/abi.py to abi.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/ptrace.py to ptrace.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/__init__.py to __init__.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/include.py to include.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/boolean.py to boolean.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/alias.py to alias.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/dbus.py to dbus.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rule/signal.py to signal.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/fail.py to fail.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/common.py to common.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/ui.py to ui.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/sandbox.py to sandbox.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/profile_list.py to profile_list.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/logparser.py to logparser.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/aa.py to aa.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/config.py to config.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/rules.py to rules.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/easyprof.py to easyprof.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/aare.py to aare.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/__init__.py to __init__.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/translations.py to translations.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/profile_storage.py to profile_storage.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/tools.py to tools.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/regex.py to regex.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/cleanprofile.py to cleanprofile.cpython-312.pyc
+byte-compiling /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor/severity.py to severity.cpython-312.pyc
+running install_egg_info
+running egg_info
+creating apparmor.egg-info
+writing apparmor.egg-info/PKG-INFO
+writing dependency_links to apparmor.egg-info/dependency_links.txt
+writing top-level names to apparmor.egg-info/top_level.txt
+writing manifest file 'apparmor.egg-info/SOURCES.txt'
+reading manifest file 'apparmor.egg-info/SOURCES.txt'
+writing manifest file 'apparmor.egg-info/SOURCES.txt'
+Copying apparmor.egg-info to /tmp/pkg/apparmor/usr/lib/python3.12/site-packages/apparmor-3.1.7-py3.12.egg-info
+running install_scripts
+copying aa-easyprof -> /tmp/pkg/apparmor/usr/bin
+copying easyprof/easyprof.conf -> /tmp/pkg/apparmor/etc/apparmor
+creating /tmp/pkg/apparmor/usr/share/apparmor/easyprof
+creating /tmp/pkg/apparmor/usr/share/apparmor/easyprof/templates
+copying easyprof/templates/sandbox -> /tmp/pkg/apparmor/usr/share/apparmor/easyprof/templates
+copying easyprof/templates/sandbox-x -> /tmp/pkg/apparmor/usr/share/apparmor/easyprof/templates
+copying easyprof/templates/default -> /tmp/pkg/apparmor/usr/share/apparmor/easyprof/templates
+copying easyprof/templates/user-application -> /tmp/pkg/apparmor/usr/share/apparmor/easyprof/templates
+creating /tmp/pkg/apparmor/usr/share/apparmor/easyprof/policygroups
+copying easyprof/policygroups/user-application -> /tmp/pkg/apparmor/usr/share/apparmor/easyprof/policygroups
+copying easyprof/policygroups/opt-application -> /tmp/pkg/apparmor/usr/share/apparmor/easyprof/policygroups
+make: Leaving directory '/tmp/src/apparmor-3.1.7/utils'
+>>> libapparmor*: Running split function _libapparmor...
+'usr/lib/libapparmor.so.1' -> '/tmp/pkg/libapparmor/usr/lib/libapparmor.so.1'
+'usr/lib/libapparmor.so.1.12.3' -> '/tmp/pkg/libapparmor/usr/lib/libapparmor.so.1.12.3'
+>>> libapparmor*: Preparing subpackage libapparmor...
+>>> libapparmor*: Stripping binaries
+>>> libapparmor*: Running postcheck for libapparmor
+>>> libapparmor-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/libapparmor-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/libapparmor-dev/usr/lib/pkgconfig'
+'usr/lib/libapparmor.a' -> '/tmp/pkg/libapparmor-dev/usr/lib/libapparmor.a'
+'usr/lib/libapparmor.so' -> '/tmp/pkg/libapparmor-dev/usr/lib/libapparmor.so'
+>>> libapparmor-dev*: Preparing subpackage libapparmor-dev...
+>>> libapparmor-dev*: Stripping binaries
+>>> libapparmor-dev*: Running postcheck for libapparmor-dev
+>>> py3-apparmor-pyc*: Running split function pyc...
+'usr/lib/python3.12/site-packages/apparmor/rule/__pycache__' -> '/tmp/pkg/py3-apparmor-pyc/usr/lib/python3.12/site-packages/apparmor/rule/__pycache__'
+'usr/lib/python3.12/site-packages/apparmor/__pycache__' -> '/tmp/pkg/py3-apparmor-pyc/usr/lib/python3.12/site-packages/apparmor/__pycache__'
+'usr/lib/python3.12/site-packages/LibAppArmor/__pycache__' -> '/tmp/pkg/py3-apparmor-pyc/usr/lib/python3.12/site-packages/LibAppArmor/__pycache__'
+>>> py3-apparmor-pyc*: Preparing subpackage py3-apparmor-pyc...
+>>> py3-apparmor-pyc*: Running postcheck for py3-apparmor-pyc
+>>> py3-apparmor*: Running split function _py3_apparmor...
+'usr/lib/python3.12/site-packages/LibAppArmor' -> '/tmp/pkg/py3-apparmor/usr/lib/python3.12/site-packages/LibAppArmor'
+'usr/lib/python3.12/site-packages/LibAppArmor-3.1.7-py3.12.egg-info' -> '/tmp/pkg/py3-apparmor/usr/lib/python3.12/site-packages/LibAppArmor-3.1.7-py3.12.egg-info'
+>>> py3-apparmor*: Preparing subpackage py3-apparmor...
+>>> py3-apparmor*: Stripping binaries
+>>> py3-apparmor*: Running postcheck for py3-apparmor
+>>> perl-apparmor*: Running split function _perl_apparmor...
+'usr/lib/perl5' -> '/tmp/pkg/perl-apparmor/usr/lib/perl5'
+>>> perl-apparmor*: Preparing subpackage perl-apparmor...
+>>> perl-apparmor*: Stripping binaries
+>>> perl-apparmor*: Running postcheck for perl-apparmor
+>>> apparmor-utils*: Running split function _apparmor_utils...
+'etc/apparmor/easyprof.conf' -> '/tmp/pkg/apparmor-utils/etc/apparmor/easyprof.conf'
+'etc/apparmor/logprof.conf' -> '/tmp/pkg/apparmor-utils/etc/apparmor/logprof.conf'
+'etc/apparmor/notify.conf' -> '/tmp/pkg/apparmor-utils/etc/apparmor/notify.conf'
+'etc/apparmor/severity.db' -> '/tmp/pkg/apparmor-utils/etc/apparmor/severity.db'
+'usr/bin' -> '/tmp/pkg/apparmor-utils/usr/bin'
+'usr/sbin' -> '/tmp/pkg/apparmor-utils/usr/sbin'
+'usr/lib/python3.12/site-packages/apparmor' -> '/tmp/pkg/apparmor-utils/usr/lib/python3.12/site-packages/apparmor'
+'usr/lib/python3.12/site-packages/apparmor-3.1.7-py3.12.egg-info' -> '/tmp/pkg/apparmor-utils/usr/lib/python3.12/site-packages/apparmor-3.1.7-py3.12.egg-info'
+'usr/share/apparmor/easyprof' -> '/tmp/pkg/apparmor-utils/usr/share/apparmor/easyprof'
+>>> apparmor-utils*: Preparing subpackage apparmor-utils...
+>>> apparmor-utils*: Stripping binaries
+>>> apparmor-utils*: Running postcheck for apparmor-utils
+>>> apparmor-utils-lang*: Running split function _apparmor_utils_lang...
+'usr/share/locale/af/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/af/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/af/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/af/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/bo/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/bo/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/bs/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/bs/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/de/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/de/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/de/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/de/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/en_GB/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/en_GB/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/en_GB/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/en_GB/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/es/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/es/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/es/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/es/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/fa/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/fa/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/fa/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/fa/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/fi/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/fi/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/fr/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/fr/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/hi/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/hi/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/id/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/id/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/id/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/id/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/it/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/it/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/ko/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/ko/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/pl/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/pl/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/pt/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/pt/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/pt/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/pt/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/pt_BR/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/pt_BR/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/ro/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/ro/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/ru/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/ru/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/ru/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/ru/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/sv/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/sv/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/sv/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/sv/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/sw/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/sw/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/tr/LC_MESSAGES/aa-binutils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/tr/LC_MESSAGES/aa-binutils.mo'
+'usr/share/locale/tr/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/tr/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/ug/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/ug/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/uk/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/uk/LC_MESSAGES/apparmor-utils.mo'
+'usr/share/locale/zh_CN/LC_MESSAGES/apparmor-utils.mo' -> '/tmp/pkg/apparmor-utils-lang/usr/share/locale/zh_CN/LC_MESSAGES/apparmor-utils.mo'
+>>> apparmor-utils-lang*: Preparing subpackage apparmor-utils-lang...
+>>> apparmor-utils-lang*: Running postcheck for apparmor-utils-lang
+>>> apparmor-profiles*: Running split function _apparmor_profiles...
+'etc/apparmor.d' -> '/tmp/pkg/apparmor-profiles/etc/apparmor.d'
+'usr/share/apparmor/extra-profiles' -> '/tmp/pkg/apparmor-profiles/usr/share/apparmor/extra-profiles'
+>>> apparmor-profiles*: Preparing subpackage apparmor-profiles...
+>>> apparmor-profiles*: Running postcheck for apparmor-profiles
+>>> apparmor-pam*: Running split function _apparmor_pam...
+'usr/lib/security' -> '/tmp/pkg/apparmor-pam/usr/lib/security'
+>>> apparmor-pam*: Preparing subpackage apparmor-pam...
+>>> apparmor-pam*: Stripping binaries
+>>> apparmor-pam*: Running postcheck for apparmor-pam
+>>> apparmor-vim*: Running split function _apparmor_vim...
+'usr/share/vim' -> '/tmp/pkg/apparmor-vim/usr/share/vim'
+>>> apparmor-vim*: Preparing subpackage apparmor-vim...
+>>> apparmor-vim*: Running postcheck for apparmor-vim
+>>> apparmor-openrc*: Running split function openrc...
+'etc/init.d' -> '/tmp/pkg/apparmor-openrc/etc/init.d'
+>>> apparmor-openrc*: Preparing subpackage apparmor-openrc...
+>>> apparmor-openrc*: Running postcheck for apparmor-openrc
+>>> apparmor-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/apparmor-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/apparmor-doc/usr/share/man'
+>>> apparmor-doc*: Preparing subpackage apparmor-doc...
+>>> apparmor-doc*: Running postcheck for apparmor-doc
+>>> apparmor-lang*: Running split function lang...
+'usr/share/locale' -> '/tmp/pkg/apparmor-lang/usr/share/locale'
+>>> apparmor-lang*: Preparing subpackage apparmor-lang...
+>>> apparmor-lang*: Running postcheck for apparmor-lang
+>>> apparmor*: Running postcheck for apparmor
+>>> WARNING: apparmor*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> apparmor*: Preparing package apparmor...
+>>> apparmor*: Stripping binaries
+>>> apparmor-doc*: Scanning shared objects
+>>> apparmor-lang*: Scanning shared objects
+>>> apparmor-openrc*: Scanning shared objects
+>>> apparmor-pam*: Scanning shared objects
+>>> apparmor-profiles*: Scanning shared objects
+>>> apparmor-utils-lang*: Scanning shared objects
+>>> apparmor-utils*: Scanning shared objects
+>>> apparmor-vim*: Scanning shared objects
+>>> apparmor*: Scanning shared objects
+>>> libapparmor-dev*: Scanning shared objects
+>>> libapparmor*: Scanning shared objects
+>>> perl-apparmor*: Scanning shared objects
+>>> py3-apparmor-pyc*: Scanning shared objects
+>>> py3-apparmor*: Scanning shared objects
+>>> apparmor-doc*: Tracing dependencies...
+>>> apparmor-doc*: Package size: 119.2 KB
+>>> apparmor-doc*: Compressing data...
+>>> apparmor-doc*: Create checksum...
+>>> apparmor-doc*: Create apparmor-doc-3.1.7-r4.apk
+>>> apparmor-lang*: Tracing dependencies...
+>>> apparmor-lang*: Package size: 457.6 KB
+>>> apparmor-lang*: Compressing data...
+>>> apparmor-lang*: Create checksum...
+>>> apparmor-lang*: Create apparmor-lang-3.1.7-r4.apk
+>>> apparmor-openrc*: Tracing dependencies...
+>>> apparmor-openrc*: Package size: 1.3 KB
+>>> apparmor-openrc*: Compressing data...
+>>> apparmor-openrc*: Create checksum...
+>>> apparmor-openrc*: Create apparmor-openrc-3.1.7-r4.apk
+>>> apparmor-pam*: Tracing dependencies...
+	libapparmor=3.1.7-r4
+	linux-pam
+	so:libapparmor.so.1
+	so:libc.musl-x86_64.so.1
+	so:libpam.so.0
+>>> apparmor-pam*: Package size: 13.8 KB
+>>> apparmor-pam*: Compressing data...
+>>> apparmor-pam*: Create checksum...
+>>> apparmor-pam*: Create apparmor-pam-3.1.7-r4.apk
+>>> apparmor-profiles*: Tracing dependencies...
+	apparmor
+>>> apparmor-profiles*: Package size: 389.8 KB
+>>> apparmor-profiles*: Compressing data...
+>>> apparmor-profiles*: Create checksum...
+>>> apparmor-profiles*: Create apparmor-profiles-3.1.7-r4.apk
+>>> apparmor-utils-lang*: Tracing dependencies...
+>>> apparmor-utils-lang*: Package size: 160.3 KB
+>>> apparmor-utils-lang*: Compressing data...
+>>> apparmor-utils-lang*: Create checksum...
+>>> apparmor-utils-lang*: Create apparmor-utils-lang-3.1.7-r4.apk
+>>> apparmor-utils*: Tracing dependencies...
+	py3-apparmor
+	libapparmor=3.1.7-r4
+	perl
+	python3
+	bash
+	python3~3.12
+	so:libc.musl-x86_64.so.1
+	so:libintl.so.8
+>>> apparmor-utils*: Package size: 635.3 KB
+>>> apparmor-utils*: Compressing data...
+>>> apparmor-utils*: Create checksum...
+>>> apparmor-utils*: Create apparmor-utils-3.1.7-r4.apk
+>>> apparmor-vim*: Tracing dependencies...
+>>> apparmor-vim*: Package size: 25.3 KB
+>>> apparmor-vim*: Compressing data...
+>>> apparmor-vim*: Create checksum...
+>>> apparmor-vim*: Create apparmor-vim-3.1.7-r4.apk
+>>> apparmor*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libintl.so.8
+>>> apparmor*: Package size: 1.4 MB
+>>> apparmor*: Compressing data...
+>>> apparmor*: Create checksum...
+>>> apparmor*: Create apparmor-3.1.7-r4.apk
+>>> libapparmor-dev*: Tracing dependencies...
+	libapparmor=3.1.7-r4
+	pkgconfig
+>>> libapparmor-dev*: Package size: 129.2 KB
+>>> libapparmor-dev*: Compressing data...
+>>> libapparmor-dev*: Create checksum...
+>>> libapparmor-dev*: Create libapparmor-dev-3.1.7-r4.apk
+>>> libapparmor*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> libapparmor*: Package size: 70.6 KB
+>>> libapparmor*: Compressing data...
+>>> libapparmor*: Create checksum...
+>>> libapparmor*: Create libapparmor-3.1.7-r4.apk
+>>> perl-apparmor*: Tracing dependencies...
+	libapparmor=3.1.7-r4
+	perl
+	so:libapparmor.so.1
+	so:libc.musl-x86_64.so.1
+>>> perl-apparmor*: Package size: 140.7 KB
+>>> perl-apparmor*: Compressing data...
+>>> perl-apparmor*: Create checksum...
+>>> perl-apparmor*: Create perl-apparmor-3.1.7-r4.apk
+>>> py3-apparmor-pyc*: Tracing dependencies...
+	python3~3.12
+>>> py3-apparmor-pyc*: Package size: 466.6 KB
+>>> py3-apparmor-pyc*: Compressing data...
+>>> py3-apparmor-pyc*: Create checksum...
+>>> py3-apparmor-pyc*: Create py3-apparmor-pyc-3.1.7-r4.apk
+>>> py3-apparmor*: Tracing dependencies...
+	libapparmor=3.1.7-r4
+	python3
+	python3~3.12
+	so:libapparmor.so.1
+	so:libc.musl-x86_64.so.1
+>>> py3-apparmor*: Package size: 134.0 KB
+>>> py3-apparmor*: Compressing data...
+>>> py3-apparmor*: Create checksum...
+>>> py3-apparmor*: Create py3-apparmor-3.1.7-r4.apk
+>>> apparmor: Updating the main/x86_64 repository index...
+>>> apparmor: Signing the index...
+>>> apparmor: Cleaning up srcdir
+>>> apparmor: Cleaning up build chroot
+>>> apparmor: Cleaning up pkgdir

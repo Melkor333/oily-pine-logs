@@ -1,0 +1,950 @@
+>>> libtheora: Validating /home/packager/oily-pine/main/libtheora/APKBUILD...
+>>> libtheora: Cleaning up srcdir
+>>> libtheora: Cleaning up pkgdir
+>>> libtheora: Cleaning up tmpdir
+>>> libtheora: Fetching https://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.bz2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   145  100   145    0     0    293      0 --:--:-- --:--:-- --:--:--   294
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0  8 1858k    8  156k    0     0  80870      0  0:00:23  0:00:01  0:00:22  171k 31 1858k   31  578k    0     0   188k      0  0:00:09  0:00:03  0:00:06  289k 47 1858k   47  890k    0     0   223k      0  0:00:08  0:00:03  0:00:05  306k 72 1858k   72 1351k    0     0   266k      0  0:00:06  0:00:05  0:00:01  337k 88 1858k   88 1640k    0     0   274k      0  0:00:06  0:00:05  0:00:01  334k100 1858k  100 1858k    0     0   285k      0  0:00:06  0:00:06 --:--:--  374k
+>>> libtheora: Fetching https://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.bz2
+>>> libtheora: Checking sha512sums...
+libtheora-1.1.1.tar.bz2: OK
+libtheora-flags.patch: OK
+enc.patch: OK
+fix-timeb.patch: OK
+fix-mmx.patch: OK
+automake.patch: OK
+>>> libtheora: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/83) Installing musl (1.2.5-r10)
+(2/83) Installing libcrypto3 (3.5.0-r0)
+(3/83) Installing ca-certificates-bundle (20241121-r2)
+(4/83) Installing libssl3 (3.5.0-r0)
+(5/83) Installing zlib (1.3.1-r2)
+(6/83) Installing libapk2 (2.14.9-r2)
+(7/83) Installing apk-tools (2.14.9-r2)
+(8/83) Installing libcap2 (2.76-r0)
+(9/83) Installing libcap-getcap (2.76-r0)
+(10/83) Installing fakeroot (1.37.1.1-r0)
+(11/83) Installing scanelf (1.3.8-r1)
+(12/83) Installing musl-utils (1.2.5-r10)
+(13/83) Installing libgcc (14.3.0-r0)
+(14/83) Installing libstdc++ (14.3.0-r0)
+(15/83) Installing lzip (1.25-r0)
+(16/83) Installing openssl (3.5.0-r0)
+(17/83) Installing patch (2.8-r0)
+(18/83) Installing pkgconf (2.4.3-r0)
+(19/83) Installing acl-libs (2.3.2-r1)
+(20/83) Installing tar (1.35-r3)
+(21/83) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/83) Installing ssl_client (1.37.0-r18)
+(23/83) Installing busybox-binsh (1.37.0-r18)
+(24/83) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/83) Installing abuild-sudo (3.15.0-r0)
+(26/83) Installing alpine-baselayout-data (3.7.0-r0)
+(27/83) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/83) Installing bridge (1.5-r5)
+(29/83) Installing ifupdown-ng (0.12.1-r7)
+(30/83) Installing openrc-user (0.62.2-r2)
+(31/83) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/83) Installing mdev-conf (4.8-r0)
+(33/83) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/83) Installing alpine-conf (3.20.0-r0)
+(35/83) Installing alpine-keys (2.5-r0)
+(36/83) Installing alpine-release (3.22.0-r0)
+(37/83) Installing busybox-openrc (1.37.0-r18)
+(38/83) Installing busybox-suid (1.37.0-r18)
+(39/83) Installing alpine-base (3.22.0-r0)
+(40/83) Installing m4 (1.4.20-r0)
+(41/83) Installing libbz2 (1.0.8-r6)
+(42/83) Installing perl (5.40.2-r0)
+(43/83) Installing autoconf (2.72-r1)
+(44/83) Installing automake (1.18-r0)
+(45/83) Installing jansson (2.14.1-r0)
+(46/83) Installing zstd-libs (1.5.7-r0)
+(47/83) Installing binutils (2.44-r0)
+(48/83) Installing libmagic (5.46-r2)
+(49/83) Installing file (5.46-r2)
+(50/83) Installing libgomp (14.3.0-r0)
+(51/83) Installing libatomic (14.3.0-r0)
+(52/83) Installing gmp (6.3.0-r3)
+(53/83) Installing isl26 (0.26-r1)
+(54/83) Installing mpfr4 (4.2.1_p1-r0)
+(55/83) Installing mpc1 (1.3.1-r1)
+(56/83) Installing gcc (14.3.0-r0)
+(57/83) Installing libstdc++-dev (14.3.0-r0)
+(58/83) Installing musl-dev (1.2.5-r10)
+(59/83) Installing g++ (14.3.0-r0)
+(60/83) Installing make (4.4.1-r3)
+(61/83) Installing fortify-headers (1.1-r5)
+(62/83) Installing build-base (0.5-r3)
+(63/83) Installing brotli-libs (1.1.0-r2)
+(64/83) Installing c-ares (1.34.5-r0)
+(65/83) Installing libunistring (1.3-r0)
+(66/83) Installing libidn2 (2.3.7-r0)
+(67/83) Installing nghttp2-libs (1.65.0-r0)
+(68/83) Installing libpsl (0.21.5-r3)
+(69/83) Installing libcurl (8.14.0-r2)
+(70/83) Installing libexpat (2.7.1-r0)
+(71/83) Installing pcre2 (10.43-r1)
+(72/83) Installing git (2.49.0-r0)
+(73/83) Installing git-init-template (2.49.0-r0)
+(74/83) Installing perl-error (0.17030-r0)
+(75/83) Installing perl-git (2.49.0-r0)
+(76/83) Installing git-perl (2.49.0-r0)
+(77/83) Installing libogg (1.3.5-r5)
+(78/83) Installing libogg-dev (1.3.5-r5)
+(79/83) Installing libltdl (2.5.4-r1)
+(80/83) Installing libtool (2.5.4-r1)
+(81/83) Installing libvorbis (1.3.7-r2)
+(82/83) Installing libvorbis-dev (1.3.7-r2)
+(83/83) Installing linux-headers (6.14.2-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 308 MiB in 83 packages
+>>> libtheora: Fetching https://downloads.xiph.org/releases/theora/libtheora-1.1.1.tar.bz2
+>>> libtheora: Checking sha512sums...
+libtheora-1.1.1.tar.bz2: OK
+libtheora-flags.patch: OK
+enc.patch: OK
+fix-timeb.patch: OK
+fix-mmx.patch: OK
+automake.patch: OK
+>>> libtheora: Unpacking /var/cache/distfiles/libtheora-1.1.1.tar.bz2...
+>>> libtheora: libtheora-flags.patch
+patching file configure.ac
+Hunk #1 succeeded at 168 (offset 66 lines).
+>>> libtheora: enc.patch
+patching file lib/Makefile.am
+>>> libtheora: fix-timeb.patch
+patching file examples/dump_psnr.c
+patching file examples/dump_video.c
+>>> libtheora: fix-mmx.patch
+patching file lib/encode.c
+patching file lib/decode.c
+>>> libtheora: automake.patch
+patching file configure.ac
+libtoolize: putting auxiliary files in '.'.
+libtoolize: linking file './ltmain.sh'
+libtoolize: You should add the contents of the following files to 'aclocal.m4':
+libtoolize:   '/usr/share/aclocal/libtool.m4'
+libtoolize:   '/usr/share/aclocal/ltoptions.m4'
+libtoolize:   '/usr/share/aclocal/ltversion.m4'
+libtoolize:   '/usr/share/aclocal/lt~obsolete.m4'
+libtoolize: Consider adding 'AC_CONFIG_MACRO_DIRS([m4])' to configure.ac,
+libtoolize: and rerunning libtoolize and aclocal.
+libtoolize: Consider adding '-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
+configure.ac:12: warning: The macro 'AC_CONFIG_HEADER' is obsolete.
+configure.ac:12: You should run autoupdate.
+./lib/autoconf/status.m4:719: AC_CONFIG_HEADER is expanded from...
+configure.ac:12: the top level
+configure.ac:60: warning: The macro 'AC_LIBTOOL_WIN32_DLL' is obsolete.
+configure.ac:60: You should run autoupdate.
+aclocal.m4:8636: AC_LIBTOOL_WIN32_DLL is expanded from...
+configure.ac:60: the top level
+configure.ac:60: warning: AC_LIBTOOL_WIN32_DLL: Remove this warning and the call to _LT_SET_OPTION when you
+configure.ac:60: put the 'win32-dll' option into LT_INIT's first parameter.
+./lib/autoconf/general.m4:2434: AC_DIAGNOSE is expanded from...
+aclocal.m4:8636: AC_LIBTOOL_WIN32_DLL is expanded from...
+configure.ac:60: the top level
+configure.ac:61: warning: The macro 'AM_PROG_LIBTOOL' is obsolete.
+configure.ac:61: You should run autoupdate.
+aclocal.m4:123: AM_PROG_LIBTOOL is expanded from...
+configure.ac:61: the top level
+configure.ac:208: warning: The macro 'AC_PROG_LD' is obsolete.
+configure.ac:208: You should run autoupdate.
+aclocal.m4:3473: AC_PROG_LD is expanded from...
+configure.ac:208: the top level
+configure.ac:276: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:276: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+m4/ogg.m4:8: XIPH_PATH_OGG is expanded from...
+configure.ac:276: the top level
+configure.ac:276: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:276: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+m4/ogg.m4:8: XIPH_PATH_OGG is expanded from...
+configure.ac:276: the top level
+configure.ac:276: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:276: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+m4/ogg.m4:8: XIPH_PATH_OGG is expanded from...
+configure.ac:276: the top level
+configure.ac:310: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:310: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+m4/vorbis.m4:9: XIPH_PATH_VORBIS is expanded from...
+configure.ac:310: the top level
+configure.ac:310: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:310: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+m4/vorbis.m4:9: XIPH_PATH_VORBIS is expanded from...
+configure.ac:310: the top level
+configure.ac:316: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:316: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+m4/sdl.m4:11: AM_PATH_SDL is expanded from...
+configure.ac:316: the top level
+configure.ac:316: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:316: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+m4/sdl.m4:11: AM_PATH_SDL is expanded from...
+configure.ac:316: the top level
+configure.ac:452: warning: AC_OUTPUT should be used without arguments.
+configure.ac:452: You should run autoupdate.
+configure.ac:55: installing './compile'
+configure.ac:14: installing './missing'
+doc/spec/Makefile.am: installing './depcomp'
+examples/Makefile.am:3: warning: 'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')
+lib/Makefile.am:1: warning: 'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')
+lib/Makefile.am:90: warning: source file 'x86/mmxidct.c' is in a subdirectory,
+lib/Makefile.am:90: but option 'subdir-objects' is disabled
+automake: warning: possible forward-incompatibility.
+automake: At least one source file is in a subdirectory, but the 'subdir-objects'
+automake: automake option hasn't been enabled.  For now, the corresponding output
+automake: object file(s) will be placed in the top-level directory.  However, this
+automake: behavior may change in a future Automake major version, with object
+automake: files being placed in the same subdirectory as the corresponding sources.
+automake: You are advised to start using 'subdir-objects' option throughout your
+automake: project, to avoid future incompatibility.
+lib/Makefile.am:90: warning: source file 'x86/mmxfrag.c' is in a subdirectory,
+lib/Makefile.am:90: but option 'subdir-objects' is disabled
+lib/Makefile.am:90: warning: source file 'x86/mmxstate.c' is in a subdirectory,
+lib/Makefile.am:90: but option 'subdir-objects' is disabled
+lib/Makefile.am:90: warning: source file 'x86/x86state.c' is in a subdirectory,
+lib/Makefile.am:90: but option 'subdir-objects' is disabled
+lib/Makefile.am:30: warning: source file 'x86/mmxencfrag.c' is in a subdirectory,
+lib/Makefile.am:30: but option 'subdir-objects' is disabled
+lib/Makefile.am:30: warning: source file 'x86/mmxfdct.c' is in a subdirectory,
+lib/Makefile.am:30: but option 'subdir-objects' is disabled
+lib/Makefile.am:30: warning: source file 'x86/x86enc.c' is in a subdirectory,
+lib/Makefile.am:30: but option 'subdir-objects' is disabled
+lib/Makefile.am:35: warning: source file 'x86/sse2fdct.c' is in a subdirectory,
+lib/Makefile.am:35: but option 'subdir-objects' is disabled
+lib/Makefile.am:38: warning: source file 'x86/mmxfrag.c' is in a subdirectory,
+lib/Makefile.am:38: but option 'subdir-objects' is disabled
+lib/Makefile.am:38: warning: source file 'x86/mmxidct.c' is in a subdirectory,
+lib/Makefile.am:38: but option 'subdir-objects' is disabled
+lib/Makefile.am:38: warning: source file 'x86/mmxstate.c' is in a subdirectory,
+lib/Makefile.am:38: but option 'subdir-objects' is disabled
+lib/Makefile.am:38: warning: source file 'x86/x86state.c' is in a subdirectory,
+lib/Makefile.am:38: but option 'subdir-objects' is disabled
+tests/Makefile.am:1: warning: 'INCLUDES' is the old name for 'AM_CPPFLAGS' (or '*_CPPFLAGS')
+parallel-tests: installing './test-driver'
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of cc... gcc3
+checking how to run the C preprocessor... cc -E
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... dlltool
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for doxygen... false
+configure: WARNING: *** doxygen not found, API documentation will not be built
+checking for pdflatex... no
+checking for bibtex... no
+checking for fig2dev... no
+configure: WARNING: *** Format Specification will not built.
+checking for ld used by cc... (cached) /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... (cached) yes
+checking how to control symbol export... --version-script
+checking for pkg-config... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for OGG... yes
+checking for VORBIS... yes
+checking for sdl-config... no
+checking for SDL - version >= 0.11.0... no
+*** The sdl-config script installed by SDL could not be found
+*** If SDL was installed in PREFIX, make sure PREFIX/bin is in
+*** your path, or set the SDL_CONFIG environment variable to the
+*** full path to sdl-config.
+configure: WARNING: *** Unable to find SDL -- Not compiling example players ***
+checking for sys/soundcard.h... yes
+checking for PNG... no
+checking for library containing ftime... none required
+checking for getopt_long... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating include/Makefile
+config.status: creating include/theora/Makefile
+config.status: creating examples/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/Doxyfile
+config.status: creating doc/spec/Makefile
+config.status: creating tests/Makefile
+config.status: creating m4/Makefile
+config.status: creating libtheora.spec
+config.status: creating theora.pc
+config.status: creating theora-uninstalled.pc
+config.status: creating theoradec.pc
+config.status: creating theoradec-uninstalled.pc
+config.status: creating theoraenc.pc
+config.status: creating theoraenc-uninstalled.pc
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+------------------------------------------------------------------------
+  libtheora 1.1.1:  Automatic configuration OK.
+
+  General configuration:
+
+    Encoding support: ........... yes
+    Floating point support: ..... yes
+    Assembly optimization: ...... 64 bit x86
+    Debugging telemetry: ........ no
+    Build example code: ......... yes
+    API Documentation: .......... no
+    Format Documentation: ....... no
+
+  Installation paths:
+
+    libtheora: ................... /usr/lib
+    C header files: .............. /usr/include/theora
+    Documentation: ............... /usr/share/doc/libtheora
+
+  Building:
+
+    Type 'make' to compile libtheora.
+
+    Type 'make install' to install libtheora.
+
+    Type 'make check' to run test suite (Valgrind testing not enabled)
+
+  Example programs will be built but not installed.
+------------------------------------------------------------------------
+
+make: Entering directory '/tmp/src/libtheora-1.1.1/lib'
+Makefile:1108: warning: ignoring prerequisites on suffix rule definition
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT apiwrapper.lo -MD -MP -MF .deps/apiwrapper.Tpo -c -o apiwrapper.lo apiwrapper.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT apiwrapper.lo -MD -MP -MF .deps/apiwrapper.Tpo -c apiwrapper.c  -fPIC -DPIC -o .libs/apiwrapper.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT apiwrapper.lo -MD -MP -MF .deps/apiwrapper.Tpo -c apiwrapper.c -o apiwrapper.o >/dev/null 2>&1
+mv -f .deps/apiwrapper.Tpo .deps/apiwrapper.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT bitpack.lo -MD -MP -MF .deps/bitpack.Tpo -c -o bitpack.lo bitpack.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT bitpack.lo -MD -MP -MF .deps/bitpack.Tpo -c bitpack.c  -fPIC -DPIC -o .libs/bitpack.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT bitpack.lo -MD -MP -MF .deps/bitpack.Tpo -c bitpack.c -o bitpack.o >/dev/null 2>&1
+mv -f .deps/bitpack.Tpo .deps/bitpack.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decapiwrapper.lo -MD -MP -MF .deps/decapiwrapper.Tpo -c -o decapiwrapper.lo decapiwrapper.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decapiwrapper.lo -MD -MP -MF .deps/decapiwrapper.Tpo -c decapiwrapper.c  -fPIC -DPIC -o .libs/decapiwrapper.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decapiwrapper.lo -MD -MP -MF .deps/decapiwrapper.Tpo -c decapiwrapper.c -o decapiwrapper.o >/dev/null 2>&1
+mv -f .deps/decapiwrapper.Tpo .deps/decapiwrapper.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decinfo.lo -MD -MP -MF .deps/decinfo.Tpo -c -o decinfo.lo decinfo.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decinfo.lo -MD -MP -MF .deps/decinfo.Tpo -c decinfo.c  -fPIC -DPIC -o .libs/decinfo.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decinfo.lo -MD -MP -MF .deps/decinfo.Tpo -c decinfo.c -o decinfo.o >/dev/null 2>&1
+mv -f .deps/decinfo.Tpo .deps/decinfo.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decode.lo -MD -MP -MF .deps/decode.Tpo -c -o decode.lo decode.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decode.lo -MD -MP -MF .deps/decode.Tpo -c decode.c  -fPIC -DPIC -o .libs/decode.o
+In function 'oc_dec_init',
+    inlined from 'th_decode_alloc' at decode.c:1960:17:
+decode.c:400:49: warning: iteration 2 invokes undefined behavior [-Waggressive-loop-optimizations]
+  400 |       qsum+=_dec->state.dequant_tables[qti][pli][qi][12]+
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~
+decode.c:396:14: note: within this loop
+  396 |   for(qi=0;qi<64;qi++){
+      |            ~~^~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT decode.lo -MD -MP -MF .deps/decode.Tpo -c decode.c -o decode.o >/dev/null 2>&1
+mv -f .deps/decode.Tpo .deps/decode.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT dequant.lo -MD -MP -MF .deps/dequant.Tpo -c -o dequant.lo dequant.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT dequant.lo -MD -MP -MF .deps/dequant.Tpo -c dequant.c  -fPIC -DPIC -o .libs/dequant.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT dequant.lo -MD -MP -MF .deps/dequant.Tpo -c dequant.c -o dequant.o >/dev/null 2>&1
+mv -f .deps/dequant.Tpo .deps/dequant.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT fragment.lo -MD -MP -MF .deps/fragment.Tpo -c -o fragment.lo fragment.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT fragment.lo -MD -MP -MF .deps/fragment.Tpo -c fragment.c  -fPIC -DPIC -o .libs/fragment.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT fragment.lo -MD -MP -MF .deps/fragment.Tpo -c fragment.c -o fragment.o >/dev/null 2>&1
+mv -f .deps/fragment.Tpo .deps/fragment.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT huffdec.lo -MD -MP -MF .deps/huffdec.Tpo -c -o huffdec.lo huffdec.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT huffdec.lo -MD -MP -MF .deps/huffdec.Tpo -c huffdec.c  -fPIC -DPIC -o .libs/huffdec.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT huffdec.lo -MD -MP -MF .deps/huffdec.Tpo -c huffdec.c -o huffdec.o >/dev/null 2>&1
+mv -f .deps/huffdec.Tpo .deps/huffdec.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT idct.lo -MD -MP -MF .deps/idct.Tpo -c -o idct.lo idct.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT idct.lo -MD -MP -MF .deps/idct.Tpo -c idct.c  -fPIC -DPIC -o .libs/idct.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT idct.lo -MD -MP -MF .deps/idct.Tpo -c idct.c -o idct.o >/dev/null 2>&1
+mv -f .deps/idct.Tpo .deps/idct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT info.lo -MD -MP -MF .deps/info.Tpo -c -o info.lo info.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT info.lo -MD -MP -MF .deps/info.Tpo -c info.c  -fPIC -DPIC -o .libs/info.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT info.lo -MD -MP -MF .deps/info.Tpo -c info.c -o info.o >/dev/null 2>&1
+mv -f .deps/info.Tpo .deps/info.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT internal.lo -MD -MP -MF .deps/internal.Tpo -c -o internal.lo internal.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT internal.lo -MD -MP -MF .deps/internal.Tpo -c internal.c  -fPIC -DPIC -o .libs/internal.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT internal.lo -MD -MP -MF .deps/internal.Tpo -c internal.c -o internal.o >/dev/null 2>&1
+mv -f .deps/internal.Tpo .deps/internal.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT quant.lo -MD -MP -MF .deps/quant.Tpo -c -o quant.lo quant.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT quant.lo -MD -MP -MF .deps/quant.Tpo -c quant.c  -fPIC -DPIC -o .libs/quant.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT quant.lo -MD -MP -MF .deps/quant.Tpo -c quant.c -o quant.o >/dev/null 2>&1
+mv -f .deps/quant.Tpo .deps/quant.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT state.lo -MD -MP -MF .deps/state.Tpo -c -o state.lo state.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT state.lo -MD -MP -MF .deps/state.Tpo -c state.c  -fPIC -DPIC -o .libs/state.o
+state.c:986:59: warning: argument 2 of type 'int[256]' with mismatched bound [-Warray-parameter=]
+  986 | int oc_state_loop_filter_init(oc_theora_state *_state,int _bv[256]){
+      |                                                       ~~~~^~~~~~~~
+In file included from state.c:20:
+internal.h:440:60: note: previously declared as 'int *'
+  440 | int oc_state_loop_filter_init(oc_theora_state *_state,int *_bv);
+      |                                                       ~~~~~^~~
+state.c:1015:74: warning: argument 2 of type 'int *' declared as a pointer [-Warray-parameter=]
+ 1015 | void oc_state_loop_filter_frag_rows_c(const oc_theora_state *_state,int *_bv,
+      |                                                                     ~~~~~^~~
+internal.h:483:6: note: previously declared as an array 'int[256]'
+  483 |  int _bv[256],int _refi,int _pli,int _fragy0,int _fragy_end);
+      |  ~~~~^~~~~~~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT state.lo -MD -MP -MF .deps/state.Tpo -c state.c -o state.o >/dev/null 2>&1
+mv -f .deps/state.Tpo .deps/state.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxidct.lo -MD -MP -MF .deps/mmxidct.Tpo -c -o mmxidct.lo `test -f 'x86/mmxidct.c' || echo './'`x86/mmxidct.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxidct.lo -MD -MP -MF .deps/mmxidct.Tpo -c x86/mmxidct.c  -fPIC -DPIC -o .libs/mmxidct.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxidct.lo -MD -MP -MF .deps/mmxidct.Tpo -c x86/mmxidct.c -o mmxidct.o >/dev/null 2>&1
+mv -f .deps/mmxidct.Tpo .deps/mmxidct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxfrag.lo -MD -MP -MF .deps/mmxfrag.Tpo -c -o mmxfrag.lo `test -f 'x86/mmxfrag.c' || echo './'`x86/mmxfrag.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxfrag.lo -MD -MP -MF .deps/mmxfrag.Tpo -c x86/mmxfrag.c  -fPIC -DPIC -o .libs/mmxfrag.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxfrag.lo -MD -MP -MF .deps/mmxfrag.Tpo -c x86/mmxfrag.c -o mmxfrag.o >/dev/null 2>&1
+mv -f .deps/mmxfrag.Tpo .deps/mmxfrag.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxstate.lo -MD -MP -MF .deps/mmxstate.Tpo -c -o mmxstate.lo `test -f 'x86/mmxstate.c' || echo './'`x86/mmxstate.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxstate.lo -MD -MP -MF .deps/mmxstate.Tpo -c x86/mmxstate.c  -fPIC -DPIC -o .libs/mmxstate.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxstate.lo -MD -MP -MF .deps/mmxstate.Tpo -c x86/mmxstate.c -o mmxstate.o >/dev/null 2>&1
+mv -f .deps/mmxstate.Tpo .deps/mmxstate.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT x86state.lo -MD -MP -MF .deps/x86state.Tpo -c -o x86state.lo `test -f 'x86/x86state.c' || echo './'`x86/x86state.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT x86state.lo -MD -MP -MF .deps/x86state.Tpo -c x86/x86state.c  -fPIC -DPIC -o .libs/x86state.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT x86state.lo -MD -MP -MF .deps/x86state.Tpo -c x86/x86state.c -o x86state.o >/dev/null 2>&1
+mv -f .deps/x86state.Tpo .deps/x86state.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link cc   -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -version-info 2:4:1 -Wl,--version-script=./Version_script-dec  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libtheoradec.la -rpath /usr/lib apiwrapper.lo bitpack.lo decapiwrapper.lo decinfo.lo decode.lo dequant.lo fragment.lo huffdec.lo idct.lo info.lo internal.lo quant.lo state.lo mmxidct.lo mmxfrag.lo mmxstate.lo x86state.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/apiwrapper.o .libs/bitpack.o .libs/decapiwrapper.o .libs/decinfo.o .libs/decode.o .libs/dequant.o .libs/fragment.o .libs/huffdec.o .libs/idct.o .libs/info.o .libs/internal.o .libs/quant.o .libs/state.o .libs/mmxidct.o .libs/mmxfrag.o .libs/mmxstate.o .libs/x86state.o    -O3 -Werror=format-security -Wl,--version-script=./Version_script-dec -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libtheoradec.so.1 -o .libs/libtheoradec.so.1.1.4
+libtool: link: (cd ".libs" && rm -f "libtheoradec.so.1" && ln -s "libtheoradec.so.1.1.4" "libtheoradec.so.1")
+libtool: link: (cd ".libs" && rm -f "libtheoradec.so" && ln -s "libtheoradec.so.1.1.4" "libtheoradec.so")
+libtool: link: ar cr .libs/libtheoradec.a  apiwrapper.o bitpack.o decapiwrapper.o decinfo.o decode.o dequant.o fragment.o huffdec.o idct.o info.o internal.o quant.o state.o mmxidct.o mmxfrag.o mmxstate.o x86state.o
+libtool: link: ranlib .libs/libtheoradec.a
+libtool: link: ( cd ".libs" && rm -f "libtheoradec.la" && ln -s "../libtheoradec.la" "libtheoradec.la" )
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT analyze.lo -MD -MP -MF .deps/analyze.Tpo -c -o analyze.lo analyze.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT analyze.lo -MD -MP -MF .deps/analyze.Tpo -c analyze.c  -fPIC -DPIC -o .libs/analyze.o
+analyze.c: In function 'oc_enc_sb_transform_quantize_intra_chroma':
+analyze.c:1198:20: warning: variable 'sb_flags' set but not used [-Wunused-but-set-variable]
+ 1198 |   oc_sb_flags     *sb_flags;
+      |                    ^~~~~~~~
+analyze.c: In function 'oc_enc_analyze_intra':
+analyze.c:1235:27: warning: variable 'embs' set but not used [-Wunused-but-set-variable]
+ 1235 |   oc_mb_enc_info         *embs;
+      |                           ^~~~
+analyze.c: In function 'oc_enc_analyze_inter':
+analyze.c:1879:27: warning: variable 'vdec' set but not used [-Wunused-but-set-variable]
+ 1879 |   int                     vdec;
+      |                           ^~~~
+analyze.c:1874:27: warning: variable 'qi' set but not used [-Wunused-but-set-variable]
+ 1874 |   int                     qi;
+      |                           ^~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT analyze.lo -MD -MP -MF .deps/analyze.Tpo -c analyze.c -o analyze.o >/dev/null 2>&1
+mv -f .deps/analyze.Tpo .deps/analyze.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT fdct.lo -MD -MP -MF .deps/fdct.Tpo -c -o fdct.lo fdct.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT fdct.lo -MD -MP -MF .deps/fdct.Tpo -c fdct.c  -fPIC -DPIC -o .libs/fdct.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT fdct.lo -MD -MP -MF .deps/fdct.Tpo -c fdct.c -o fdct.o >/dev/null 2>&1
+mv -f .deps/fdct.Tpo .deps/fdct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encfrag.lo -MD -MP -MF .deps/encfrag.Tpo -c -o encfrag.lo encfrag.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encfrag.lo -MD -MP -MF .deps/encfrag.Tpo -c encfrag.c  -fPIC -DPIC -o .libs/encfrag.o
+encfrag.c:43:41: warning: argument 1 of type 'ogg_int16_t *' {aka 'short int *'} declared as a pointer [-Warray-parameter=]
+   43 | void oc_enc_frag_sub_128_c(ogg_int16_t *_diff,
+      |                            ~~~~~~~~~~~~~^~~~~
+In file included from encfrag.c:19:
+encint.h:474:40: note: previously declared as an array 'ogg_int16_t[64]' {aka 'short int[64]'}
+  474 | void oc_enc_frag_sub_128_c(ogg_int16_t _diff[64],
+      |                            ~~~~~~~~~~~~^~~~~~~~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encfrag.lo -MD -MP -MF .deps/encfrag.Tpo -c encfrag.c -o encfrag.o >/dev/null 2>&1
+mv -f .deps/encfrag.Tpo .deps/encfrag.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encapiwrapper.lo -MD -MP -MF .deps/encapiwrapper.Tpo -c -o encapiwrapper.lo encapiwrapper.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encapiwrapper.lo -MD -MP -MF .deps/encapiwrapper.Tpo -c encapiwrapper.c  -fPIC -DPIC -o .libs/encapiwrapper.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encapiwrapper.lo -MD -MP -MF .deps/encapiwrapper.Tpo -c encapiwrapper.c -o encapiwrapper.o >/dev/null 2>&1
+mv -f .deps/encapiwrapper.Tpo .deps/encapiwrapper.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encinfo.lo -MD -MP -MF .deps/encinfo.Tpo -c -o encinfo.lo encinfo.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encinfo.lo -MD -MP -MF .deps/encinfo.Tpo -c encinfo.c  -fPIC -DPIC -o .libs/encinfo.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encinfo.lo -MD -MP -MF .deps/encinfo.Tpo -c encinfo.c -o encinfo.o >/dev/null 2>&1
+mv -f .deps/encinfo.Tpo .deps/encinfo.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encode.lo -MD -MP -MF .deps/encode.Tpo -c -o encode.lo encode.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encode.lo -MD -MP -MF .deps/encode.Tpo -c encode.c  -fPIC -DPIC -o .libs/encode.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encode.lo -MD -MP -MF .deps/encode.Tpo -c encode.c -o encode.o >/dev/null 2>&1
+mv -f .deps/encode.Tpo .deps/encode.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT enquant.lo -MD -MP -MF .deps/enquant.Tpo -c -o enquant.lo enquant.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT enquant.lo -MD -MP -MF .deps/enquant.Tpo -c enquant.c  -fPIC -DPIC -o .libs/enquant.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT enquant.lo -MD -MP -MF .deps/enquant.Tpo -c enquant.c -o enquant.o >/dev/null 2>&1
+mv -f .deps/enquant.Tpo .deps/enquant.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT huffenc.lo -MD -MP -MF .deps/huffenc.Tpo -c -o huffenc.lo huffenc.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT huffenc.lo -MD -MP -MF .deps/huffenc.Tpo -c huffenc.c  -fPIC -DPIC -o .libs/huffenc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT huffenc.lo -MD -MP -MF .deps/huffenc.Tpo -c huffenc.c -o huffenc.o >/dev/null 2>&1
+mv -f .deps/huffenc.Tpo .deps/huffenc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mathops.lo -MD -MP -MF .deps/mathops.Tpo -c -o mathops.lo mathops.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mathops.lo -MD -MP -MF .deps/mathops.Tpo -c mathops.c  -fPIC -DPIC -o .libs/mathops.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mathops.lo -MD -MP -MF .deps/mathops.Tpo -c mathops.c -o mathops.o >/dev/null 2>&1
+mv -f .deps/mathops.Tpo .deps/mathops.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mcenc.lo -MD -MP -MF .deps/mcenc.Tpo -c -o mcenc.lo mcenc.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mcenc.lo -MD -MP -MF .deps/mcenc.Tpo -c mcenc.c  -fPIC -DPIC -o .libs/mcenc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mcenc.lo -MD -MP -MF .deps/mcenc.Tpo -c mcenc.c -o mcenc.o >/dev/null 2>&1
+mv -f .deps/mcenc.Tpo .deps/mcenc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT rate.lo -MD -MP -MF .deps/rate.Tpo -c -o rate.lo rate.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT rate.lo -MD -MP -MF .deps/rate.Tpo -c rate.c  -fPIC -DPIC -o .libs/rate.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT rate.lo -MD -MP -MF .deps/rate.Tpo -c rate.c -o rate.o >/dev/null 2>&1
+mv -f .deps/rate.Tpo .deps/rate.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT tokenize.lo -MD -MP -MF .deps/tokenize.Tpo -c -o tokenize.lo tokenize.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT tokenize.lo -MD -MP -MF .deps/tokenize.Tpo -c tokenize.c  -fPIC -DPIC -o .libs/tokenize.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT tokenize.lo -MD -MP -MF .deps/tokenize.Tpo -c tokenize.c -o tokenize.o >/dev/null 2>&1
+mv -f .deps/tokenize.Tpo .deps/tokenize.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxencfrag.lo -MD -MP -MF .deps/mmxencfrag.Tpo -c -o mmxencfrag.lo `test -f 'x86/mmxencfrag.c' || echo './'`x86/mmxencfrag.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxencfrag.lo -MD -MP -MF .deps/mmxencfrag.Tpo -c x86/mmxencfrag.c  -fPIC -DPIC -o .libs/mmxencfrag.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxencfrag.lo -MD -MP -MF .deps/mmxencfrag.Tpo -c x86/mmxencfrag.c -o mmxencfrag.o >/dev/null 2>&1
+mv -f .deps/mmxencfrag.Tpo .deps/mmxencfrag.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxfdct.lo -MD -MP -MF .deps/mmxfdct.Tpo -c -o mmxfdct.lo `test -f 'x86/mmxfdct.c' || echo './'`x86/mmxfdct.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxfdct.lo -MD -MP -MF .deps/mmxfdct.Tpo -c x86/mmxfdct.c  -fPIC -DPIC -o .libs/mmxfdct.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT mmxfdct.lo -MD -MP -MF .deps/mmxfdct.Tpo -c x86/mmxfdct.c -o mmxfdct.o >/dev/null 2>&1
+mv -f .deps/mmxfdct.Tpo .deps/mmxfdct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT x86enc.lo -MD -MP -MF .deps/x86enc.Tpo -c -o x86enc.lo `test -f 'x86/x86enc.c' || echo './'`x86/x86enc.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT x86enc.lo -MD -MP -MF .deps/x86enc.Tpo -c x86/x86enc.c  -fPIC -DPIC -o .libs/x86enc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT x86enc.lo -MD -MP -MF .deps/x86enc.Tpo -c x86/x86enc.c -o x86enc.o >/dev/null 2>&1
+mv -f .deps/x86enc.Tpo .deps/x86enc.Plo
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT sse2fdct.lo -MD -MP -MF .deps/sse2fdct.Tpo -c -o sse2fdct.lo `test -f 'x86/sse2fdct.c' || echo './'`x86/sse2fdct.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT sse2fdct.lo -MD -MP -MF .deps/sse2fdct.Tpo -c x86/sse2fdct.c  -fPIC -DPIC -o .libs/sse2fdct.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I../include -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT sse2fdct.lo -MD -MP -MF .deps/sse2fdct.Tpo -c x86/sse2fdct.c -o sse2fdct.o >/dev/null 2>&1
+mv -f .deps/sse2fdct.Tpo .deps/sse2fdct.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link cc   -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -version-info 2:2:1 -ltheoradec  -Wl,--version-script=./Version_script-enc -logg -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libtheoraenc.la -rpath /usr/lib apiwrapper.lo fragment.lo idct.lo internal.lo state.lo quant.lo mmxfrag.lo mmxidct.lo mmxstate.lo x86state.lo  analyze.lo fdct.lo encfrag.lo encapiwrapper.lo encinfo.lo encode.lo enquant.lo huffenc.lo mathops.lo mcenc.lo rate.lo tokenize.lo mmxencfrag.lo mmxfdct.lo x86enc.lo sse2fdct.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/apiwrapper.o .libs/fragment.o .libs/idct.o .libs/internal.o .libs/state.o .libs/quant.o .libs/mmxfrag.o .libs/mmxidct.o .libs/mmxstate.o .libs/x86state.o .libs/analyze.o .libs/fdct.o .libs/encfrag.o .libs/encapiwrapper.o .libs/encinfo.o .libs/encode.o .libs/enquant.o .libs/huffenc.o .libs/mathops.o .libs/mcenc.o .libs/rate.o .libs/tokenize.o .libs/mmxencfrag.o .libs/mmxfdct.o .libs/x86enc.o .libs/sse2fdct.o   -Wl,-rpath -Wl,/tmp/src/libtheora-1.1.1/lib/.libs /tmp/src/libtheora-1.1.1/lib/.libs/libtheoradec.so -logg  -O3 -Werror=format-security -Wl,--version-script=./Version_script-enc -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libtheoraenc.so.1 -o .libs/libtheoraenc.so.1.1.2
+libtool: link: (cd ".libs" && rm -f "libtheoraenc.so.1" && ln -s "libtheoraenc.so.1.1.2" "libtheoraenc.so.1")
+libtool: link: (cd ".libs" && rm -f "libtheoraenc.so" && ln -s "libtheoraenc.so.1.1.2" "libtheoraenc.so")
+libtool: link: ar cr .libs/libtheoraenc.a  apiwrapper.o fragment.o idct.o internal.o state.o quant.o mmxfrag.o mmxidct.o mmxstate.o x86state.o analyze.o fdct.o encfrag.o encapiwrapper.o encinfo.o encode.o enquant.o huffenc.o mathops.o mcenc.o rate.o tokenize.o mmxencfrag.o mmxfdct.o x86enc.o sse2fdct.o
+libtool: link: ranlib .libs/libtheoraenc.a
+libtool: link: ( cd ".libs" && rm -f "libtheoraenc.la" && ln -s "../libtheoraenc.la" "libtheoraenc.la" )
+/bin/sh ../libtool  --tag=CC   --mode=link cc   -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -version-info 3:10:3 -Wl,--version-script=./Version_script  -logg -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libtheora.la -rpath /usr/lib apiwrapper.lo bitpack.lo decapiwrapper.lo decinfo.lo decode.lo dequant.lo fragment.lo huffdec.lo idct.lo info.lo internal.lo quant.lo state.lo mmxidct.lo mmxfrag.lo mmxstate.lo x86state.lo analyze.lo fdct.lo encfrag.lo encapiwrapper.lo encinfo.lo encode.lo enquant.lo huffenc.lo mathops.lo mcenc.lo rate.lo tokenize.lo mmxencfrag.lo mmxfdct.lo x86enc.lo sse2fdct.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/apiwrapper.o .libs/bitpack.o .libs/decapiwrapper.o .libs/decinfo.o .libs/decode.o .libs/dequant.o .libs/fragment.o .libs/huffdec.o .libs/idct.o .libs/info.o .libs/internal.o .libs/quant.o .libs/state.o .libs/mmxidct.o .libs/mmxfrag.o .libs/mmxstate.o .libs/x86state.o .libs/analyze.o .libs/fdct.o .libs/encfrag.o .libs/encapiwrapper.o .libs/encinfo.o .libs/encode.o .libs/enquant.o .libs/huffenc.o .libs/mathops.o .libs/mcenc.o .libs/rate.o .libs/tokenize.o .libs/mmxencfrag.o .libs/mmxfdct.o .libs/x86enc.o .libs/sse2fdct.o   -logg  -O3 -Werror=format-security -Wl,--version-script=./Version_script -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libtheora.so.0 -o .libs/libtheora.so.0.3.10
+libtool: link: (cd ".libs" && rm -f "libtheora.so.0" && ln -s "libtheora.so.0.3.10" "libtheora.so.0")
+libtool: link: (cd ".libs" && rm -f "libtheora.so" && ln -s "libtheora.so.0.3.10" "libtheora.so")
+libtool: link: ar cr .libs/libtheora.a  apiwrapper.o bitpack.o decapiwrapper.o decinfo.o decode.o dequant.o fragment.o huffdec.o idct.o info.o internal.o quant.o state.o mmxidct.o mmxfrag.o mmxstate.o x86state.o analyze.o fdct.o encfrag.o encapiwrapper.o encinfo.o encode.o enquant.o huffenc.o mathops.o mcenc.o rate.o tokenize.o mmxencfrag.o mmxfdct.o x86enc.o sse2fdct.o
+libtool: link: ranlib .libs/libtheora.a
+libtool: link: ( cd ".libs" && rm -f "libtheora.la" && ln -s "../libtheora.la" "libtheora.la" )
+make: Leaving directory '/tmp/src/libtheora-1.1.1/lib'
+make  all-recursive
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1'
+Making all in lib
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/lib'
+Makefile:1108: warning: ignoring prerequisites on suffix rule definition
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/lib'
+Making all in include
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+Making all in theora
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+Making all in doc
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+Making all in spec
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/doc/spec'
+cc -DHAVE_CONFIG_H -I. -I../..     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT vp3huff.o -MD -MP -MF .deps/vp3huff.Tpo -c -o vp3huff.o vp3huff.c
+mv -f .deps/vp3huff.Tpo .deps/vp3huff.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o vp3huff vp3huff.o  
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o vp3huff vp3huff.o 
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+echo "*** Warning: Doxygen not found; documentation will not be built."
+*** Warning: Doxygen not found; documentation will not be built.
+touch doxygen-build.stamp
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+Making all in tests
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+Making all in m4
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/m4'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/m4'
+Making all in examples
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/examples'
+cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT dump_video.o -MD -MP -MF .deps/dump_video.Tpo -c -o dump_video.o dump_video.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include     -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT dump_psnr.o -MD -MP -MF .deps/dump_psnr.Tpo -c -o dump_psnr.o dump_psnr.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include      -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT encoder_example-encoder_example.o -MD -MP -MF .deps/encoder_example-encoder_example.Tpo -c -o encoder_example-encoder_example.o `test -f 'encoder_example.c' || echo './'`encoder_example.c
+mv -f .deps/dump_video.Tpo .deps/dump_video.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o dump_video dump_video.o  ../lib/libtheoradec.la -logg 
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/dump_video dump_video.o  ../lib/.libs/libtheoradec.so -logg
+mv -f .deps/dump_psnr.Tpo .deps/dump_psnr.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o dump_psnr dump_psnr.o  ../lib/libtheoradec.la -logg -lm 
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/dump_psnr dump_psnr.o  ../lib/.libs/libtheoradec.so -logg -lm
+mv -f .deps/encoder_example-encoder_example.Tpo .deps/encoder_example-encoder_example.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc   -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o encoder_example encoder_example-encoder_example.o  ../lib/libtheoraenc.la ../lib/libtheoradec.la -logg -lvorbis -lvorbisenc -lm 
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/encoder_example encoder_example-encoder_example.o  ../lib/.libs/libtheoraenc.so /tmp/src/libtheora-1.1.1/lib/.libs/libtheoradec.so ../lib/.libs/libtheoradec.so -logg -lvorbis -lvorbisenc -lm
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/examples'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1'
+Making check in lib
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/lib'
+Makefile:1108: warning: ignoring prerequisites on suffix rule definition
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/lib'
+Making check in include
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+Making check in theora
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+Making check in doc
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+Making check in spec
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+Making check in tests
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+make  noop_theora comment comment_theoradec comment_theora noop noop_theoraenc granulepos granulepos_theoraenc granulepos_theora
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT noop_theora-noop_theora.o -MD -MP -MF .deps/noop_theora-noop_theora.Tpo -c -o noop_theora-noop_theora.o `test -f 'noop_theora.c' || echo './'`noop_theora.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT comment-comment.o -MD -MP -MF .deps/comment-comment.Tpo -c -o comment-comment.o `test -f 'comment.c' || echo './'`comment.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT comment_theoradec-comment.o -MD -MP -MF .deps/comment_theoradec-comment.Tpo -c -o comment_theoradec-comment.o `test -f 'comment.c' || echo './'`comment.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT comment_theora-comment_theora.o -MD -MP -MF .deps/comment_theora-comment_theora.Tpo -c -o comment_theora-comment_theora.o `test -f 'comment_theora.c' || echo './'`comment_theora.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT noop-noop.o -MD -MP -MF .deps/noop-noop.Tpo -c -o noop-noop.o `test -f 'noop.c' || echo './'`noop.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT noop_theoraenc-noop_theora.o -MD -MP -MF .deps/noop_theoraenc-noop_theora.Tpo -c -o noop_theoraenc-noop_theora.o `test -f 'noop_theora.c' || echo './'`noop_theora.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT granulepos-granulepos.o -MD -MP -MF .deps/granulepos-granulepos.Tpo -c -o granulepos-granulepos.o `test -f 'granulepos.c' || echo './'`granulepos.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT granulepos_theoraenc-granulepos_theora.o -MD -MP -MF .deps/granulepos_theoraenc-granulepos_theora.Tpo -c -o granulepos_theoraenc-granulepos_theora.o `test -f 'granulepos_theora.c' || echo './'`granulepos_theora.c
+cc -DHAVE_CONFIG_H -I. -I.. -I../include    -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT granulepos_theora-granulepos_theora.o -MD -MP -MF .deps/granulepos_theora-granulepos_theora.Tpo -c -o granulepos_theora-granulepos_theora.o `test -f 'granulepos_theora.c' || echo './'`granulepos_theora.c
+noop_theora.c:48:1: warning: 'noop_test_decode' defined but not used [-Wunused-function]
+   48 | noop_test_decode ()
+      | ^~~~~~~~~~~~~~~~
+granulepos_theora.c:24:12: warning: 'ilog' defined but not used [-Wunused-function]
+   24 | static int ilog(unsigned int v){
+      |            ^~~~
+noop_theora.c:48:1: warning: 'noop_test_decode' defined but not used [-Wunused-function]
+   48 | noop_test_decode ()
+      | ^~~~~~~~~~~~~~~~
+mv -f .deps/noop_theora-noop_theora.Tpo .deps/noop_theora-noop_theora.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o noop_theora noop_theora-noop_theora.o ../lib/libtheora.la -logg 
+granulepos_theora.c:24:12: warning: 'ilog' defined but not used [-Wunused-function]
+   24 | static int ilog(unsigned int v){
+      |            ^~~~
+mv -f .deps/noop-noop.Tpo .deps/noop-noop.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o noop noop-noop.o ../lib/libtheoraenc.la ../lib/libtheoradec.la -logg 
+mv -f .deps/comment_theoradec-comment.Tpo .deps/comment_theoradec-comment.Po
+mv -f .deps/comment-comment.Tpo .deps/comment-comment.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o comment_theoradec comment_theoradec-comment.o ../lib/libtheoradec.la -logg 
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o comment comment-comment.o ../lib/libtheoradec.la -logg 
+mv -f .deps/comment_theora-comment_theora.Tpo .deps/comment_theora-comment_theora.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o comment_theora comment_theora-comment_theora.o ../lib/libtheora.la -logg 
+mv -f .deps/noop_theoraenc-noop_theora.Tpo .deps/noop_theoraenc-noop_theora.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o noop_theoraenc noop_theoraenc-noop_theora.o ../lib/libtheoraenc.la ../lib/libtheoradec.la -logg 
+mv -f .deps/granulepos_theora-granulepos_theora.Tpo .deps/granulepos_theora-granulepos_theora.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o granulepos_theora granulepos_theora-granulepos_theora.o ../lib/libtheora.la -logg -lm 
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/noop_theora noop_theora-noop_theora.o  ../lib/.libs/libtheora.so -logg
+mv -f .deps/granulepos-granulepos.Tpo .deps/granulepos-granulepos.Po
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/comment_theoradec comment_theoradec-comment.o  ../lib/.libs/libtheoradec.so -logg
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o granulepos granulepos-granulepos.o ../lib/libtheoraenc.la ../lib/libtheoradec.la -logg -lm 
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/comment_theora comment_theora-comment_theora.o  ../lib/.libs/libtheora.so -logg
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/comment comment-comment.o  ../lib/.libs/libtheoradec.so -logg
+mv -f .deps/granulepos_theoraenc-granulepos_theora.Tpo .deps/granulepos_theoraenc-granulepos_theora.Po
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/noop noop-noop.o  ../lib/.libs/libtheoraenc.so /tmp/src/libtheora-1.1.1/lib/.libs/libtheoradec.so ../lib/.libs/libtheoradec.so -logg
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o granulepos_theoraenc granulepos_theoraenc-granulepos_theora.o ../lib/libtheoraenc.la ../lib/libtheoradec.la -logg -lm 
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/granulepos_theora granulepos_theora-granulepos_theora.o  ../lib/.libs/libtheora.so -logg -lm
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/noop_theoraenc noop_theoraenc-noop_theora.o  ../lib/.libs/libtheoraenc.so /tmp/src/libtheora-1.1.1/lib/.libs/libtheoradec.so ../lib/.libs/libtheoradec.so -logg
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/granulepos granulepos-granulepos.o  ../lib/.libs/libtheoraenc.so /tmp/src/libtheora-1.1.1/lib/.libs/libtheoradec.so ../lib/.libs/libtheoradec.so -logg -lm
+libtool: link: cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/granulepos_theoraenc granulepos_theoraenc-granulepos_theora.o  ../lib/.libs/libtheoraenc.so /tmp/src/libtheora-1.1.1/lib/.libs/libtheoradec.so ../lib/.libs/libtheoradec.so -logg -lm
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+make  check-TESTS
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+PASS: comment
+PASS: noop_theora
+PASS: comment_theora
+PASS: comment_theoradec
+PASS: noop_theoraenc
+PASS: noop
+PASS: granulepos_theora
+PASS: granulepos_theoraenc
+PASS: granulepos
+============================================================================
+Testsuite summary for libtheora 1.1.1
+============================================================================
+# TOTAL: 9
+# PASS:  9
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+Making check in m4
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/m4'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/m4'
+Making check in examples
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/examples'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/examples'
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1'
+>>> libtheora: Entering fakeroot...
+Making install in lib
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/lib'
+Makefile:1108: warning: ignoring prerequisites on suffix rule definition
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/lib'
+Makefile:1108: warning: ignoring prerequisites on suffix rule definition
+ /bin/mkdir -p '/tmp/pkg/libtheora/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libtheoradec.la libtheoraenc.la libtheora.la '/tmp/pkg/libtheora/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libtheoradec.so.1.1.4 /tmp/pkg/libtheora/usr/lib/libtheoradec.so.1.1.4
+libtool: install: (cd /tmp/pkg/libtheora/usr/lib && { ln -s -f libtheoradec.so.1.1.4 libtheoradec.so.1 || { rm -f libtheoradec.so.1 && ln -s libtheoradec.so.1.1.4 libtheoradec.so.1; }; })
+libtool: install: (cd /tmp/pkg/libtheora/usr/lib && { ln -s -f libtheoradec.so.1.1.4 libtheoradec.so || { rm -f libtheoradec.so && ln -s libtheoradec.so.1.1.4 libtheoradec.so; }; })
+libtool: install: /usr/bin/install -c .libs/libtheoradec.lai /tmp/pkg/libtheora/usr/lib/libtheoradec.la
+libtool: warning: relinking 'libtheoraenc.la'
+libtool: install: (cd /tmp/src/libtheora-1.1.1/lib; /bin/sh "/tmp/src/libtheora-1.1.1/libtool"  --tag CC --mode=relink cc -Wall -Wno-parentheses -O3 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -version-info 2:2:1 -ltheoradec -Wl,--version-script=./Version_script-enc -logg -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libtheoraenc.la -rpath /usr/lib apiwrapper.lo fragment.lo idct.lo internal.lo state.lo quant.lo mmxfrag.lo mmxidct.lo mmxstate.lo x86state.lo analyze.lo fdct.lo encfrag.lo encapiwrapper.lo encinfo.lo encode.lo enquant.lo huffenc.lo mathops.lo mcenc.lo rate.lo tokenize.lo mmxencfrag.lo mmxfdct.lo x86enc.lo sse2fdct.lo -inst-prefix-dir /tmp/pkg/libtheora)
+libtool: relink: cc -shared  -fPIC -DPIC  .libs/apiwrapper.o .libs/fragment.o .libs/idct.o .libs/internal.o .libs/state.o .libs/quant.o .libs/mmxfrag.o .libs/mmxidct.o .libs/mmxstate.o .libs/x86state.o .libs/analyze.o .libs/fdct.o .libs/encfrag.o .libs/encapiwrapper.o .libs/encinfo.o .libs/encode.o .libs/enquant.o .libs/huffenc.o .libs/mathops.o .libs/mcenc.o .libs/rate.o .libs/tokenize.o .libs/mmxencfrag.o .libs/mmxfdct.o .libs/x86enc.o .libs/sse2fdct.o   -L/tmp/pkg/libtheora/usr/lib -L/usr/lib -ltheoradec -logg  -O3 -Werror=format-security -Wl,--version-script=./Version_script-enc -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libtheoraenc.so.1 -o .libs/libtheoraenc.so.1.1.2
+libtool: install: /usr/bin/install -c .libs/libtheoraenc.so.1.1.2T /tmp/pkg/libtheora/usr/lib/libtheoraenc.so.1.1.2
+libtool: install: (cd /tmp/pkg/libtheora/usr/lib && { ln -s -f libtheoraenc.so.1.1.2 libtheoraenc.so.1 || { rm -f libtheoraenc.so.1 && ln -s libtheoraenc.so.1.1.2 libtheoraenc.so.1; }; })
+libtool: install: (cd /tmp/pkg/libtheora/usr/lib && { ln -s -f libtheoraenc.so.1.1.2 libtheoraenc.so || { rm -f libtheoraenc.so && ln -s libtheoraenc.so.1.1.2 libtheoraenc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libtheoraenc.lai /tmp/pkg/libtheora/usr/lib/libtheoraenc.la
+libtool: install: /usr/bin/install -c .libs/libtheora.so.0.3.10 /tmp/pkg/libtheora/usr/lib/libtheora.so.0.3.10
+libtool: install: (cd /tmp/pkg/libtheora/usr/lib && { ln -s -f libtheora.so.0.3.10 libtheora.so.0 || { rm -f libtheora.so.0 && ln -s libtheora.so.0.3.10 libtheora.so.0; }; })
+libtool: install: (cd /tmp/pkg/libtheora/usr/lib && { ln -s -f libtheora.so.0.3.10 libtheora.so || { rm -f libtheora.so && ln -s libtheora.so.0.3.10 libtheora.so; }; })
+libtool: install: /usr/bin/install -c .libs/libtheora.lai /tmp/pkg/libtheora/usr/lib/libtheora.la
+libtool: install: /usr/bin/install -c .libs/libtheoradec.a /tmp/pkg/libtheora/usr/lib/libtheoradec.a
+libtool: install: chmod 644 /tmp/pkg/libtheora/usr/lib/libtheoradec.a
+libtool: install: ranlib /tmp/pkg/libtheora/usr/lib/libtheoradec.a
+libtool: install: /usr/bin/install -c .libs/libtheoraenc.a /tmp/pkg/libtheora/usr/lib/libtheoraenc.a
+libtool: install: chmod 644 /tmp/pkg/libtheora/usr/lib/libtheoraenc.a
+libtool: install: ranlib /tmp/pkg/libtheora/usr/lib/libtheoraenc.a
+libtool: install: /usr/bin/install -c .libs/libtheora.a /tmp/pkg/libtheora/usr/lib/libtheora.a
+libtool: install: chmod 644 /tmp/pkg/libtheora/usr/lib/libtheora.a
+libtool: install: ranlib /tmp/pkg/libtheora/usr/lib/libtheora.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/lib'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/lib'
+Making install in include
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+Making install in theora
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/libtheora/usr/include/theora'
+ /usr/bin/install -c -m 644 theora.h theoradec.h theoraenc.h codec.h '/tmp/pkg/libtheora/usr/include/theora'
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/include/theora'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/include'
+Making install in doc
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+Making install in spec
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/doc/spec'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+make[3]: Entering directory '/tmp/src/libtheora-1.1.1/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+/bin/sh ../mkinstalldirs /tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1
+umask 22
+mkdir /tmp/pkg/libtheora/usr/share
+mkdir /tmp/pkg/libtheora/usr/share/doc
+mkdir /tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1
+if test -d libtheora; then \
+  for dir in libtheora/*; do \
+    if test -d $dir; then \
+      b=`basename $dir`; \
+      /bin/sh ../mkinstalldirs /tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1/$b; \
+      for f in $dir/*; do \
+	/usr/bin/install -c -m 644 $f /tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1/$b; \
+      done \
+    fi \
+  done \
+fi
+umask 22
+mkdir /tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1/html
+umask 22
+mkdir /tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1/latex
+ /bin/mkdir -p '/tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1'
+ /usr/bin/install -c -m 644 vp3-format.txt color.html draft-ietf-avt-rtp-theora-00.xml draft-ietf-avt-rtp-theora-00.txt doxygen-build.stamp '/tmp/pkg/libtheora/usr/share/doc/libtheora-1.1.1'
+make[3]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/doc'
+Making install in tests
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/tests'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/tests'
+Making install in m4
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/m4'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/m4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/m4'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/m4'
+Making install in examples
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1/examples'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1/examples'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1/examples'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1/examples'
+make[1]: Entering directory '/tmp/src/libtheora-1.1.1'
+make[2]: Entering directory '/tmp/src/libtheora-1.1.1'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/libtheora/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 theora.pc theoradec.pc theoraenc.pc '/tmp/pkg/libtheora/usr/lib/pkgconfig'
+make[2]: Leaving directory '/tmp/src/libtheora-1.1.1'
+make[1]: Leaving directory '/tmp/src/libtheora-1.1.1'
+>>> libtheora-static*: Running split function static...
+>>> libtheora-static*: Preparing subpackage libtheora-static...
+>>> libtheora-static*: Stripping binaries
+>>> libtheora-static*: Running postcheck for libtheora-static
+>>> libtheora-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/libtheora-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/libtheora-dev/usr/lib/pkgconfig'
+'usr/lib/libtheora.so' -> '/tmp/pkg/libtheora-dev/usr/lib/libtheora.so'
+'usr/lib/libtheoradec.so' -> '/tmp/pkg/libtheora-dev/usr/lib/libtheoradec.so'
+'usr/lib/libtheoraenc.so' -> '/tmp/pkg/libtheora-dev/usr/lib/libtheoraenc.so'
+>>> libtheora-dev*: Preparing subpackage libtheora-dev...
+>>> libtheora-dev*: Stripping binaries
+>>> libtheora-dev*: Running postcheck for libtheora-dev
+>>> libtheora-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/libtheora-doc/usr/share/doc'
+>>> libtheora-doc*: Preparing subpackage libtheora-doc...
+>>> libtheora-doc*: Running postcheck for libtheora-doc
+>>> libtheora*: Running postcheck for libtheora
+>>> libtheora*: Preparing package libtheora...
+>>> libtheora*: Stripping binaries
+>>> libtheora-dev*: Scanning shared objects
+>>> libtheora-doc*: Scanning shared objects
+>>> libtheora-static*: Scanning shared objects
+>>> libtheora*: Scanning shared objects
+>>> libtheora-dev*: Tracing dependencies...
+	libogg-dev
+	libtheora=1.1.1-r18
+	pc:ogg>=1.1
+	pkgconfig
+>>> libtheora-dev*: Package size: 98.7 KB
+>>> libtheora-dev*: Compressing data...
+>>> libtheora-dev*: Create checksum...
+>>> libtheora-dev*: Create libtheora-dev-1.1.1-r18.apk
+>>> libtheora-doc*: Tracing dependencies...
+>>> libtheora-doc*: Package size: 1020.7 KB
+>>> libtheora-doc*: Compressing data...
+>>> libtheora-doc*: Create checksum...
+>>> libtheora-doc*: Create libtheora-doc-1.1.1-r18.apk
+>>> libtheora-static*: Tracing dependencies...
+>>> libtheora-static*: Package size: 824.5 KB
+>>> libtheora-static*: Compressing data...
+>>> libtheora-static*: Create checksum...
+>>> libtheora-static*: Create libtheora-static-1.1.1-r18.apk
+>>> libtheora*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libogg.so.0
+>>> libtheora*: Package size: 617.6 KB
+>>> libtheora*: Compressing data...
+>>> libtheora*: Create checksum...
+>>> libtheora*: Create libtheora-1.1.1-r18.apk
+>>> libtheora: Updating the main/x86_64 repository index...
+>>> libtheora: Signing the index...
+>>> libtheora: Cleaning up srcdir
+>>> libtheora: Cleaning up build chroot
+>>> libtheora: Cleaning up pkgdir

@@ -1,0 +1,276 @@
+>>> dovecot: Validating /home/packager/oily-pine/main/dovecot/APKBUILD...
+>>> WARNING: dovecot: dovecot.post-install: found chmod
+             Permissions should be fixed in APKBUILD package()
+>>> dovecot: Cleaning up srcdir
+>>> dovecot: Cleaning up pkgdir
+>>> dovecot: Cleaning up tmpdir
+>>> dovecot: Fetching https://www.dovecot.org/releases/2.4/dovecot-2.4.0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 6029k  100 6029k    0     0  23.2M      0 --:--:-- --:--:-- --:--:-- 23.2M
+>>> dovecot: Fetching dovecot-pigeonhole-2.4.0.tar.gz::https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 1967k  100 1967k    0     0  24.1M      0 --:--:-- --:--:-- --:--:-- 24.3M
+>>> dovecot: Fetching https://www.dovecot.org/releases/2.4/dovecot-2.4.0.tar.gz
+>>> dovecot: Fetching dovecot-pigeonhole-2.4.0.tar.gz::https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.0.tar.gz
+>>> dovecot: Checking sha512sums...
+dovecot-2.4.0.tar.gz: OK
+dovecot-pigeonhole-2.4.0.tar.gz: OK
+skip-iconv-check.patch: OK
+headers.patch: OK
+setting-types.patch: OK
+setting-types-pigeonhole: OK
+dovecot.logrotate: OK
+dovecot.initd: OK
+>>> dovecot: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/190) Installing musl (1.2.5-r10)
+(2/190) Installing libcrypto3 (3.5.0-r0)
+(3/190) Installing ca-certificates-bundle (20241121-r2)
+(4/190) Installing libssl3 (3.5.0-r0)
+(5/190) Installing zlib (1.3.1-r2)
+(6/190) Installing libapk2 (2.14.9-r2)
+(7/190) Installing apk-tools (2.14.9-r2)
+(8/190) Installing libcap2 (2.76-r0)
+(9/190) Installing libcap-getcap (2.76-r0)
+(10/190) Installing fakeroot (1.37.1.1-r0)
+(11/190) Installing scanelf (1.3.8-r1)
+(12/190) Installing musl-utils (1.2.5-r10)
+(13/190) Installing libgcc (14.3.0-r1)
+(14/190) Installing libstdc++ (14.3.0-r1)
+(15/190) Installing lzip (1.25-r0)
+(16/190) Installing openssl (3.5.0-r0)
+(17/190) Installing patch (2.8-r0)
+(18/190) Installing pkgconf (2.4.3-r0)
+(19/190) Installing acl-libs (2.3.2-r1)
+(20/190) Installing tar (1.35-r3)
+(21/190) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/190) Installing ssl_client (1.37.0-r18)
+(23/190) Installing busybox-binsh (1.37.0-r18)
+(24/190) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/190) Installing abuild-sudo (3.15.0-r0)
+(26/190) Installing alpine-baselayout-data (3.7.0-r0)
+(27/190) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/190) Installing bridge (1.5-r5)
+(29/190) Installing ifupdown-ng (0.12.1-r7)
+(30/190) Installing openrc-user (0.62.2-r2)
+(31/190) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/190) Installing mdev-conf (4.8-r0)
+(33/190) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/190) Installing alpine-conf (3.20.0-r0)
+(35/190) Installing alpine-keys (2.5-r0)
+(36/190) Installing alpine-release (3.22.0-r0)
+(37/190) Installing busybox-openrc (1.37.0-r18)
+(38/190) Installing busybox-suid (1.37.0-r18)
+(39/190) Installing alpine-base (3.22.0-r0)
+(40/190) Installing m4 (1.4.20-r0)
+(41/190) Installing libbz2 (1.0.8-r6)
+(42/190) Installing perl (5.40.2-r0)
+(43/190) Installing autoconf (2.72-r1)
+(44/190) Installing automake (1.18-r0)
+(45/190) Installing jansson (2.14.1-r0)
+(46/190) Installing zstd-libs (1.5.7-r0)
+(47/190) Installing binutils (2.44-r0)
+(48/190) Installing libmagic (5.46-r2)
+(49/190) Installing file (5.46-r2)
+(50/190) Installing libgomp (14.3.0-r1)
+(51/190) Installing libatomic (14.3.0-r1)
+(52/190) Installing gmp (6.3.0-r3)
+(53/190) Installing isl26 (0.26-r1)
+(54/190) Installing mpfr4 (4.2.1_p1-r0)
+(55/190) Installing mpc1 (1.3.1-r1)
+(56/190) Installing gcc (14.3.0-r1)
+(57/190) Installing libstdc++-dev (14.3.0-r1)
+(58/190) Installing musl-dev (1.2.5-r10)
+(59/190) Installing g++ (14.3.0-r1)
+(60/190) Installing make (4.4.1-r3)
+(61/190) Installing fortify-headers (1.1-r5)
+(62/190) Installing build-base (0.5-r3)
+(63/190) Installing bzip2-dev (1.0.8-r6)
+(64/190) Installing zlib-dev (1.3.1-r2)
+(65/190) Installing boost1.84-atomic (1.84.0-r3)
+(66/190) Installing boost1.84-chrono (1.84.0-r3)
+(67/190) Installing boost1.84-container (1.84.0-r3)
+(68/190) Installing boost1.84-context (1.84.0-r3)
+(69/190) Installing boost1.84-contract (1.84.0-r3)
+(70/190) Installing boost1.84-coroutine (1.84.0-r3)
+(71/190) Installing boost1.84-date_time (1.84.0-r3)
+(72/190) Installing boost1.84-fiber (1.84.0-r3)
+(73/190) Installing boost1.84-filesystem (1.84.0-r3)
+(74/190) Installing boost1.84-graph (1.84.0-r3)
+(75/190) Installing xz-libs (5.8.1-r0)
+(76/190) Installing boost1.84-iostreams (1.84.0-r3)
+(77/190) Installing boost1.84-thread (1.84.0-r3)
+(78/190) Installing icu-data-en (76.1-r0)
+Executing icu-data-en-76.1-r0.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(79/190) Installing icu-libs (76.1-r0)
+(80/190) Installing boost1.84-locale (1.84.0-r3)
+(81/190) Installing boost1.84-log (1.84.0-r3)
+(82/190) Installing boost1.84-log_setup (1.84.0-r3)
+(83/190) Installing boost1.84-math (1.84.0-r3)
+(84/190) Installing boost1.84-prg_exec_monitor (1.84.0-r3)
+(85/190) Installing boost1.84-program_options (1.84.0-r3)
+(86/190) Installing libexpat (2.7.1-r0)
+(87/190) Installing libffi (3.4.8-r0)
+(88/190) Installing gdbm (1.24-r0)
+(89/190) Installing mpdecimal (4.0.1-r0)
+(90/190) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(91/190) Installing libncursesw (6.5_p20250503-r0)
+(92/190) Installing libpanelw (6.5_p20250503-r0)
+(93/190) Installing readline (8.2.13-r1)
+(94/190) Installing sqlite-libs (3.50.0-r0)
+(95/190) Installing python3 (3.12.10-r1)
+(96/190) Installing python3-pycache-pyc0 (3.12.10-r1)
+(97/190) Installing pyc (3.12.10-r1)
+(98/190) Installing python3-pyc (3.12.10-r1)
+(99/190) Installing boost1.84-python3 (1.84.0-r3)
+(100/190) Installing boost1.84-random (1.84.0-r3)
+(101/190) Installing boost1.84-regex (1.84.0-r3)
+(102/190) Installing boost1.84-serialization (1.84.0-r3)
+(103/190) Installing boost1.84-stacktrace_basic (1.84.0-r3)
+(104/190) Installing boost1.84-stacktrace_noop (1.84.0-r3)
+(105/190) Installing boost1.84-system (1.84.0-r3)
+(106/190) Installing boost1.84-timer (1.84.0-r3)
+(107/190) Installing boost1.84-type_erasure (1.84.0-r3)
+(108/190) Installing boost1.84-unit_test_framework (1.84.0-r3)
+(109/190) Installing boost1.84-url (1.84.0-r3)
+(110/190) Installing boost1.84-wave (1.84.0-r3)
+(111/190) Installing boost1.84-wserialization (1.84.0-r3)
+(112/190) Installing boost1.84-json (1.84.0-r3)
+(113/190) Installing boost1.84-nowide (1.84.0-r3)
+(114/190) Installing boost1.84-libs (1.84.0-r3)
+(115/190) Installing boost1.84 (1.84.0-r3)
+(116/190) Installing linux-headers (6.14.2-r0)
+(117/190) Installing icu (76.1-r0)
+(118/190) Installing icu-dev (76.1-r0)
+(119/190) Installing xz (5.8.1-r0)
+(120/190) Installing xz-dev (5.8.1-r0)
+(121/190) Installing zstd (1.5.7-r0)
+(122/190) Installing zstd-dev (1.5.7-r0)
+(123/190) Installing boost1.84-dev (1.84.0-r3)
+(124/190) Installing boost-dev (1.84.0-r3)
+(125/190) Installing clucene (2.3.3.4-r22)
+(126/190) Installing clucene-contribs (2.3.3.4-r22)
+(127/190) Installing clucene-dev (2.3.3.4-r22)
+(128/190) Installing expat (2.7.1-r0)
+(129/190) Installing expat-dev (2.7.1-r0)
+(130/190) Installing gettext-asprintf (0.24.1-r0)
+(131/190) Installing libintl (0.24.1-r0)
+(132/190) Installing libunistring (1.3-r0)
+(133/190) Installing gettext-libs (0.24.1-r0)
+(134/190) Installing gettext-envsubst (0.24.1-r0)
+(135/190) Installing libxml2 (2.13.8-r0)
+(136/190) Installing gettext (0.24.1-r0)
+(137/190) Installing gettext-dev (0.24.1-r0)
+(138/190) Installing brotli-libs (1.1.0-r2)
+(139/190) Installing c-ares (1.34.5-r0)
+(140/190) Installing libidn2 (2.3.7-r0)
+(141/190) Installing nghttp2-libs (1.65.0-r0)
+(142/190) Installing libpsl (0.21.5-r3)
+(143/190) Installing libcurl (8.14.0-r2)
+(144/190) Installing pcre2 (10.43-r1)
+(145/190) Installing git (2.49.0-r0)
+(146/190) Installing git-init-template (2.49.0-r0)
+(147/190) Installing perl-error (0.17030-r0)
+(148/190) Installing perl-git (2.49.0-r0)
+(149/190) Installing git-perl (2.49.0-r0)
+(150/190) Installing openssl-dev (3.5.0-r0)
+(151/190) Installing libeconf (0.6.3-r0)
+(152/190) Installing libblkid (2.41-r9)
+(153/190) Installing libuuid (2.41-r9)
+(154/190) Installing libfdisk (2.41-r9)
+(155/190) Installing liblastlog2 (2.41-r9)
+(156/190) Installing libmount (2.41-r9)
+(157/190) Installing libsmartcols (2.41-r9)
+(158/190) Installing sqlite (3.50.0-r0)
+(159/190) Installing sqlite-dev (3.50.0-r0)
+(160/190) Installing util-linux-dev (2.41-r9)
+(161/190) Installing gawk (5.3.2-r1)
+(162/190) Installing libcom_err (1.47.2-r2)
+(163/190) Installing e2fsprogs-libs (1.47.2-r2)
+(164/190) Installing e2fsprogs-dev (1.47.2-r2)
+(165/190) Installing krb5-conf (1.0-r2)
+(166/190) Installing heimdal-libs (7.8.0-r4)
+(167/190) Installing heimdal-dev (7.8.0-r4)
+(168/190) Installing libcap-dev (2.76-r0)
+(169/190) Installing libpq (17.5-r0)
+(170/190) Installing libpq-dev (17.5-r0)
+(171/190) Installing libsodium (1.0.20-r0)
+(172/190) Installing libsodium-dev (1.0.20-r0)
+(173/190) Installing libstemmer (2.2.0-r0)
+(174/190) Installing libstemmer-dev (2.2.0-r0)
+(175/190) Installing libltdl (2.5.4-r1)
+(176/190) Installing libtool (2.5.4-r1)
+(177/190) Installing linenoise (1.0-r5)
+(178/190) Installing lua5.3-libs (5.3.6-r6)
+(179/190) Installing lua5.3 (5.3.6-r6)
+(180/190) Installing lua5.3-dev (5.3.6-r6)
+(181/190) Installing lz4-libs (1.10.0-r0)
+(182/190) Installing lz4-dev (1.10.0-r0)
+(183/190) Installing mariadb-connector-c (3.3.10-r0)
+(184/190) Installing mariadb-connector-c-dev (3.3.10-r0)
+(185/190) Installing libsasl (2.1.28-r8)
+(186/190) Installing cyrus-sasl-dev (2.1.28-r8)
+(187/190) Installing libevent (2.1.12-r8)
+(188/190) Installing libevent-dev (2.1.12-r8)
+(189/190) Installing libldap (2.6.8-r0)
+(190/190) Installing openldap-dev (2.6.8-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 543 MiB in 190 packages
+>>> dovecot: Fetching https://www.dovecot.org/releases/2.4/dovecot-2.4.0.tar.gz
+>>> dovecot: Fetching dovecot-pigeonhole-2.4.0.tar.gz::https://pigeonhole.dovecot.org/releases/2.4/dovecot-pigeonhole-2.4.0.tar.gz
+>>> dovecot: Checking sha512sums...
+dovecot-2.4.0.tar.gz: OK
+dovecot-pigeonhole-2.4.0.tar.gz: OK
+skip-iconv-check.patch: OK
+headers.patch: OK
+setting-types.patch: OK
+setting-types-pigeonhole: OK
+dovecot.logrotate: OK
+dovecot.initd: OK
+>>> dovecot: Unpacking /var/cache/distfiles/dovecot-2.4.0.tar.gz...
+>>> dovecot: Unpacking /var/cache/distfiles/dovecot-pigeonhole-2.4.0.tar.gz...
+>>> dovecot: skip-iconv-check.patch
+patching file src/lib-charset/test-charset.c
+Hunk #1 succeeded at 215 (offset 56 lines).
+>>> dovecot: headers.patch
+patching file src/auth/mech-gssapi.c
+patching file src/lib/cpu-count.c
+>>> dovecot: setting-types.patch
+patching file src/lib-http/http-server.h
+>>> dovecot: Updating ./build-aux/config.sub
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal -I m4
+configure.ac:255: warning: macro 'AM_ICONV' not found in library
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: copying file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal -I m4
+configure.ac:255: warning: macro 'AM_ICONV' not found in library
+autoreconf: running: /usr/bin/autoconf
+configure.ac:255: error: possibly undefined macro: AM_ICONV
+      If this token and others are legitimate, please use m4_pattern_allow.
+      See the Autoconf documentation.
+autoreconf: error: /usr/bin/autoconf failed with exit status: 1
+>>> ERROR: dovecot: prepare failed
+>>> ERROR: dovecot: rootbld failed
+>>> dovecot: Cleaning up build chroot

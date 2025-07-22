@@ -1,0 +1,491 @@
+>>> shorewall: Validating /home/packager/oily-pine/main/shorewall/APKBUILD...
+>>> shorewall: Cleaning up srcdir
+>>> shorewall: Cleaning up pkgdir
+>>> shorewall: Cleaning up tmpdir
+>>> shorewall: Fetching https://shorewall.org/pub/shorewall/5.2/shorewall-5.2.8/shorewall-5.2.8.tar.bz2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  560k  100  560k    0     0  7663k      0 --:--:-- --:--:-- --:--:-- 7684k
+>>> shorewall: Fetching https://shorewall.org/pub/shorewall/5.2/shorewall-5.2.8/shorewall-5.2.8.tar.bz2
+>>> shorewall: Checking sha512sums...
+shorewall-5.2.8.tar.bz2: OK
+shorewall.initd: OK
+shorewallrc.alpine: OK
+shorewall-find.patch: OK
+>>> shorewall: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/96) Installing musl (1.2.5-r10)
+(2/96) Installing libcrypto3 (3.5.0-r0)
+(3/96) Installing ca-certificates-bundle (20241121-r2)
+(4/96) Installing libssl3 (3.5.0-r0)
+(5/96) Installing zlib (1.3.1-r2)
+(6/96) Installing libapk2 (2.14.9-r2)
+(7/96) Installing apk-tools (2.14.9-r2)
+(8/96) Installing libcap2 (2.76-r0)
+(9/96) Installing libcap-getcap (2.76-r0)
+(10/96) Installing fakeroot (1.37.1.1-r0)
+(11/96) Installing scanelf (1.3.8-r1)
+(12/96) Installing musl-utils (1.2.5-r10)
+(13/96) Installing libgcc (14.3.0-r1)
+(14/96) Installing libstdc++ (14.3.0-r1)
+(15/96) Installing lzip (1.25-r0)
+(16/96) Installing openssl (3.5.0-r0)
+(17/96) Installing patch (2.8-r0)
+(18/96) Installing pkgconf (2.4.3-r0)
+(19/96) Installing acl-libs (2.3.2-r1)
+(20/96) Installing tar (1.35-r3)
+(21/96) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/96) Installing ssl_client (1.37.0-r18)
+(23/96) Installing busybox-binsh (1.37.0-r18)
+(24/96) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/96) Installing abuild-sudo (3.15.0-r0)
+(26/96) Installing alpine-baselayout-data (3.7.0-r0)
+(27/96) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/96) Installing bridge (1.5-r5)
+(29/96) Installing ifupdown-ng (0.12.1-r7)
+(30/96) Installing openrc-user (0.62.2-r2)
+(31/96) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/96) Installing mdev-conf (4.8-r0)
+(33/96) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/96) Installing alpine-conf (3.20.0-r0)
+(35/96) Installing alpine-keys (2.5-r0)
+(36/96) Installing alpine-release (3.22.0-r0)
+(37/96) Installing busybox-openrc (1.37.0-r18)
+(38/96) Installing busybox-suid (1.37.0-r18)
+(39/96) Installing alpine-base (3.22.0-r0)
+(40/96) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(41/96) Installing libncursesw (6.5_p20250503-r0)
+(42/96) Installing readline (8.2.13-r1)
+(43/96) Installing bash (5.2.37-r0)
+Executing bash-5.2.37-r0.post-install
+(44/96) Installing jansson (2.14.1-r0)
+(45/96) Installing zstd-libs (1.5.7-r0)
+(46/96) Installing binutils (2.44-r0)
+(47/96) Installing libmagic (5.46-r2)
+(48/96) Installing file (5.46-r2)
+(49/96) Installing libgomp (14.3.0-r1)
+(50/96) Installing libatomic (14.3.0-r1)
+(51/96) Installing gmp (6.3.0-r3)
+(52/96) Installing isl26 (0.26-r1)
+(53/96) Installing mpfr4 (4.2.1_p1-r0)
+(54/96) Installing mpc1 (1.3.1-r1)
+(55/96) Installing gcc (14.3.0-r1)
+(56/96) Installing libstdc++-dev (14.3.0-r1)
+(57/96) Installing musl-dev (1.2.5-r10)
+(58/96) Installing g++ (14.3.0-r1)
+(59/96) Installing make (4.4.1-r3)
+(60/96) Installing fortify-headers (1.1-r5)
+(61/96) Installing build-base (0.5-r3)
+(62/96) Installing coreutils-env (9.7-r1)
+(63/96) Installing coreutils-fmt (9.7-r1)
+(64/96) Installing coreutils-sha512sum (9.7-r1)
+(65/96) Installing libattr (2.5.2-r2)
+(66/96) Installing skalibs-libs (2.14.4.0-r0)
+(67/96) Installing utmps-libs (0.1.3.1-r0)
+(68/96) Installing coreutils (9.7-r1)
+(69/96) Installing brotli-libs (1.1.0-r2)
+(70/96) Installing c-ares (1.34.5-r0)
+(71/96) Installing libunistring (1.3-r0)
+(72/96) Installing libidn2 (2.3.7-r0)
+(73/96) Installing nghttp2-libs (1.65.0-r0)
+(74/96) Installing libpsl (0.21.5-r3)
+(75/96) Installing libcurl (8.14.0-r2)
+(76/96) Installing libexpat (2.7.1-r0)
+(77/96) Installing pcre2 (10.43-r1)
+(78/96) Installing git (2.49.0-r0)
+(79/96) Installing git-init-template (2.49.0-r0)
+(80/96) Installing libelf (0.193-r0)
+(81/96) Installing libmnl (1.0.5-r2)
+(82/96) Installing iproute2-minimal (6.15.0-r0)
+(83/96) Installing ifupdown-ng-iproute2 (0.12.1-r7)
+(84/96) Installing libxtables (1.8.11-r1)
+(85/96) Installing iproute2-tc (6.15.0-r0)
+(86/96) Installing iproute2-ss (6.15.0-r0)
+(87/96) Installing iproute2 (6.15.0-r0)
+Executing iproute2-6.15.0-r0.post-install
+(88/96) Installing libnftnl (1.2.9-r0)
+(89/96) Installing iptables (1.8.11-r1)
+(90/96) Installing iptables-openrc (1.8.11-r1)
+(91/96) Installing libbz2 (1.0.8-r6)
+(92/96) Installing perl (5.40.2-r0)
+(93/96) Installing perl-error (0.17030-r0)
+(94/96) Installing perl-git (2.49.0-r0)
+(95/96) Installing git-perl (2.49.0-r0)
+(96/96) Installing shorewall-core (5.2.8-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 303 MiB in 96 packages
+>>> shorewall: Fetching https://shorewall.org/pub/shorewall/5.2/shorewall-5.2.8/shorewall-5.2.8.tar.bz2
+>>> shorewall: Checking sha512sums...
+shorewall-5.2.8.tar.bz2: OK
+shorewall.initd: OK
+shorewallrc.alpine: OK
+shorewall-find.patch: OK
+>>> shorewall: Unpacking /var/cache/distfiles/shorewall-5.2.8.tar.bz2...
+>>> shorewall: shorewall-find.patch
+patching file lib.cli-std
+INFO: Creating a alpine-specific installation -  Sun Jun 1 03:05:20 UTC 2025
+
+HOST=alpine
+PREFIX=/usr                             
+SHAREDIR=${PREFIX}/share                
+LIBEXECDIR=${PREFIX}/share              
+PERLLIBDIR=${PREFIX}/share/shorewall    
+CONFDIR=/etc                            
+SBINDIR=/usr/sbin                       
+MANDIR=${SHAREDIR}/man                  
+INITDIR=                                
+INITSOURCE=                             
+INITFILE=                               
+AUXINITSOURCE=
+AUXINITFILE=
+SERVICEDIR=                                
+SERVICEFILE=                            
+SYSCONFFILE=                            
+SYSCONFDIR=                             
+SPARSE=                                 
+ANNOTATED=                              
+VARLIB=/var/lib                         
+VARDIR=${VARLIB}/$PRODUCT               
+DEFAULT_PAGER=
+>>> shorewall: Entering fakeroot...
+Compiling the Shorewall Perl Modules with Digest::SHA
+Perl/compiler.pl syntax OK
+Installing Shorewall Version 5.2.8
+Helper modules file installed as /tmp/pkg/shorewall/usr/share/shorewall/helpers
+Default config path file installed as /tmp/pkg/shorewall/usr/share/shorewall/configpath
+Standard actions file installed as /tmp/pkg/shorewall/usr/share/shorewall/actions.std
+Config file installed as /tmp/pkg/shorewall/etc/shorewall/shorewall.conf
+Init file installed as /tmp/pkg/shorewall/etc/shorewall/init
+Zones file installed as /tmp/pkg/shorewall/etc/shorewall/zones
+Policy file installed as /tmp/pkg/shorewall/etc/shorewall/policy
+Interfaces file installed as /tmp/pkg/shorewall/etc/shorewall/interfaces
+Hosts file installed as /tmp/pkg/shorewall/etc/shorewall/hosts
+Rules file installed as /tmp/pkg/shorewall/etc/shorewall/rules
+NAT file installed as /tmp/pkg/shorewall/etc/shorewall/nat
+NETMAP file installed as /tmp/pkg/shorewall/etc/shorewall/netmap
+Parameter file installed as /tmp/pkg/shorewall/etc/shorewall/params
+Proxy ARP file installed as /tmp/pkg/shorewall/etc/shorewall/proxyarp
+Stopped Rules file installed as /tmp/pkg/shorewall/etc/shorewall/stoppedrules
+mac list file installed as /tmp/pkg/shorewall/etc/shorewall/maclist
+SNAT file installed as /tmp/pkg/shorewall/etc/shorewall/snat
+ARP rules file installed as /tmp/pkg/shorewall/etc/shorewall/arprules
+Conntrack file installed as /tmp/pkg/shorewall/etc/shorewall/conntrack
+Mangle file installed as /tmp/pkg/shorewall/etc/shorewall/mangle
+TC Interfaces file installed as /tmp/pkg/shorewall/etc/shorewall/tcinterfaces
+TC Priority file installed as /tmp/pkg/shorewall/etc/shorewall/tcpri
+Tunnels file installed as /tmp/pkg/shorewall/etc/shorewall/tunnels
+Blrules file installed as /tmp/pkg/shorewall/etc/shorewall/blrules
+Find GW file installed as /tmp/pkg/shorewall/etc/shorewall/findgw
+Providers file installed as /tmp/pkg/shorewall/etc/shorewall/providers
+Routing rules file installed as /tmp/pkg/shorewall/etc/shorewall/rtrules
+TC Classes file installed as /tmp/pkg/shorewall/etc/shorewall/tcclasses
+TC Devices file installed as /tmp/pkg/shorewall/etc/shorewall/tcdevices
+TC Filters file installed as /tmp/pkg/shorewall/etc/shorewall/tcfilters
+Secmarks file installed as /tmp/pkg/shorewall/etc/shorewall/secmarks
+Initdone file installed as /tmp/pkg/shorewall/etc/shorewall/initdone
+Start file installed as /tmp/pkg/shorewall/etc/shorewall/start
+Stop file installed as /tmp/pkg/shorewall/etc/shorewall/stop
+Stopped file installed as /tmp/pkg/shorewall/etc/shorewall/stopped
+ECN file installed as /tmp/pkg/shorewall/etc/shorewall/ecn
+Accounting file installed as /tmp/pkg/shorewall/etc/shorewall/accounting
+Private library file installed as /tmp/pkg/shorewall/etc/shorewall/lib.private
+Started file installed as /tmp/pkg/shorewall/etc/shorewall/started
+Restored file installed as /tmp/pkg/shorewall/etc/shorewall/restored
+Clear file installed as /tmp/pkg/shorewall/etc/shorewall/clear
+Refresh file installed as /tmp/pkg/shorewall/etc/shorewall/refresh
+Refreshed file installed as /tmp/pkg/shorewall/etc/shorewall/refreshed
+Tcclear file installed as /tmp/pkg/shorewall/etc/shorewall/tcclear
+Scfilter file installed as /tmp/pkg/shorewall/etc/shorewall/scfilter
+Actions file installed as /tmp/pkg/shorewall/etc/shorewall/actions
+Routes file installed as /tmp/pkg/shorewall/etc/shorewall/routes
+Action A_REJECT file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.A_REJECT
+Action A_REJECT! file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.A_REJECT!
+Action AllowICMPs file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.AllowICMPs
+Action AutoBL file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.AutoBL
+Action AutoBLL file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.AutoBLL
+Action BLACKLIST file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.BLACKLIST
+Action Broadcast file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Broadcast
+Action DNSAmp file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.DNSAmp
+Action DropDNSrep file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.DropDNSrep
+Action DropSmurfs file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.DropSmurfs
+Action Established file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Established
+Action FIN file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.FIN
+Action GlusterFS file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.GlusterFS
+Action IfEvent file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.IfEvent
+Action Invalid file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Invalid
+Action Limit file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Limit
+Action Multicast file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Multicast
+Action New file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.New
+Action NotSyn file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.NotSyn
+Action RST file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.RST
+Action Related file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Related
+Action ResetEvent file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.ResetEvent
+Action SetEvent file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.SetEvent
+Action TCPFlags file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.TCPFlags
+Action Untracked file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.Untracked
+Action allowBcast file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.allowBcast
+Action allowInvalid file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.allowInvalid
+Action allowMcast file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.allowMcast
+Action allowinUPnP file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.allowinUPnP
+Action dropBcast file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.dropBcast
+Action dropBcasts file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.dropBcasts
+Action dropInvalid file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.dropInvalid
+Action dropMcast file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.dropMcast
+Action dropNotSyn file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.dropNotSyn
+Action forwardUPnP file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.forwardUPnP
+Action mangletemplate file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.mangletemplate
+Action rejNotSyn file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.rejNotSyn
+Action template file installed as /tmp/pkg/shorewall/usr/share/shorewall/action.template
+Macro AMQP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.AMQP
+Macro A_AllowICMPs file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.A_AllowICMPs
+Macro A_DropDNSrep file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.A_DropDNSrep
+Macro A_DropUPnP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.A_DropUPnP
+Macro ActiveDir file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.ActiveDir
+Macro Amanda file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Amanda
+Macro Apcupsd file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Apcupsd
+Macro Auth file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Auth
+Macro BGP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BGP
+Macro BitTorrent file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitTorrent
+Macro BitTorrent32 file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitTorrent32
+Macro Bitcoin file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Bitcoin
+Macro BitcoinRPC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitcoinRPC
+Macro BitcoinRegtest file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitcoinRegtest
+Macro BitcoinTestnet file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitcoinTestnet
+Macro BitcoinTestnetRPC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitcoinTestnetRPC
+Macro BitcoinZMQ file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.BitcoinZMQ
+Macro CVS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.CVS
+Macro Citrix file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Citrix
+Macro Cockpit file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Cockpit
+Macro DAAP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.DAAP
+Macro DCC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.DCC
+Macro DHCPfwd file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.DHCPfwd
+Macro DNS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.DNS
+Macro Distcc file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Distcc
+Macro DropUPnP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.DropUPnP
+Macro Edonkey file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Edonkey
+Macro FTP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.FTP
+Macro Finger file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Finger
+Macro FreeIPA file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.FreeIPA
+Macro GNUnet file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.GNUnet
+Macro GRE file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.GRE
+Macro Git file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Git
+Macro Gnutella file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Gnutella
+Macro Goto-Meeting file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Goto-Meeting
+Macro HKP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.HKP
+Macro HTTP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.HTTP
+Macro HTTPS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.HTTPS
+Macro ICPV2 file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.ICPV2
+Macro ICQ file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.ICQ
+Macro ILO file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.ILO
+Macro IMAP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IMAP
+Macro IMAPS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IMAPS
+Macro IPFS-API file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPFS-API
+Macro IPFS-gateway file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPFS-gateway
+Macro IPFS-swarm file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPFS-swarm
+Macro IPIP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPIP
+Macro IPMI file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPMI
+Macro IPP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPP
+Macro IPPbrd file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPPbrd
+Macro IPPserver file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPPserver
+Macro IPsec file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPsec
+Macro IPsecah file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPsecah
+Macro IPsecnat file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IPsecnat
+Macro IRC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.IRC
+Macro JAP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.JAP
+Macro Jabber file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Jabber
+Macro JabberPlain file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.JabberPlain
+Macro JabberSecure file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.JabberSecure
+Macro Jabberd file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Jabberd
+Macro Jetdirect file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Jetdirect
+Macro Kerberos file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Kerberos
+Macro Kpasswd file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Kpasswd
+Macro L2TP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.L2TP
+Macro LDAP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.LDAP
+Macro LDAPS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.LDAPS
+Macro MSA file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.MSA
+Macro MSNP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.MSNP
+Macro MSSQL file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.MSSQL
+Macro Mail file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Mail
+Macro MongoDB file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.MongoDB
+Macro Munin file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Munin
+Macro MySQL file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.MySQL
+Macro NFS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.NFS
+Macro NNTP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.NNTP
+Macro NNTPS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.NNTPS
+Macro NTP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.NTP
+Macro NTPbi file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.NTPbi
+Macro NTPbrd file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.NTPbrd
+Macro ONCRPC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.ONCRPC
+Macro OSPF file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.OSPF
+Macro OpenVPN file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.OpenVPN
+Macro PCA file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.PCA
+Macro POP3 file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.POP3
+Macro POP3S file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.POP3S
+Macro PPtP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.PPtP
+Macro Ping file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Ping
+Macro PostgreSQL file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.PostgreSQL
+Macro Printer file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Printer
+Macro Puppet file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Puppet
+Macro QUIC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.QUIC
+Macro RDP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.RDP
+Macro RIPbi file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.RIPbi
+Macro RNDC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.RNDC
+Macro Razor file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Razor
+Macro Rdate file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Rdate
+Macro Redis file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Redis
+Macro RedisCluster file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.RedisCluster
+Macro RedisSecure file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.RedisSecure
+Macro RedisSentinel file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.RedisSentinel
+Macro Rfc1918 file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Rfc1918
+Macro Rsync file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Rsync
+Macro Rwhois file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Rwhois
+Macro SANE file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SANE
+Macro SIP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SIP
+Macro SMB file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SMB
+Macro SMBBI file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SMBBI
+Macro SMBswat file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SMBswat
+Macro SMTP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SMTP
+Macro SMTPS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SMTPS
+Macro SNMP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SNMP
+Macro SNMPtrap file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SNMPtrap
+Macro SPAMD file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SPAMD
+Macro SSDP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SSDP
+Macro SSDPserver file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SSDPserver
+Macro SSH file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SSH
+Macro SVN file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SVN
+Macro Sieve file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Sieve
+Macro SixXS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.SixXS
+Macro Squid file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Squid
+Macro Submission file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Submission
+Macro Syslog file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Syslog
+Macro TFTP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.TFTP
+Macro Telnet file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Telnet
+Macro Telnets file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Telnets
+Macro Teredo file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Teredo
+Macro Time file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Time
+Macro Tinc file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Tinc
+Macro Tor file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Tor
+Macro TorBrowserBundle file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.TorBrowserBundle
+Macro TorControl file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.TorControl
+Macro TorDirectory file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.TorDirectory
+Macro TorSocks file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.TorSocks
+Macro Trcrt file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Trcrt
+Macro VNC file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.VNC
+Macro VNCL file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.VNCL
+Macro VRRP file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.VRRP
+Macro WUDO file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.WUDO
+Macro Web file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Web
+Macro Webcache file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Webcache
+Macro Webmin file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Webmin
+Macro Whois file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Whois
+Macro Xymon file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Xymon
+Macro Zabbix file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.Zabbix
+Macro mDNS file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.mDNS
+Macro mDNSbi file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.mDNSbi
+Macro template file installed as /tmp/pkg/shorewall/usr/share/shorewall/macro.template
+Library cli-std file installed as /tmp/pkg/shorewall/usr/share/shorewall/lib.cli-std
+Library runtime file installed as /tmp/pkg/shorewall/usr/share/shorewall/Perl/lib.runtime
+
+Compiler installed in /tmp/pkg/shorewall/usr/share/shorewall/compiler.pl
+
+Params file helper installed in /tmp/pkg/shorewall/usr/share/shorewall/getparams
+Module Shorewall/ARP installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/ARP.pm
+Module Shorewall/Accounting installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Accounting.pm
+Module Shorewall/Chains installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Chains.pm
+Module Shorewall/Compiler installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Compiler.pm
+Module Shorewall/Config installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Config.pm
+Module Shorewall/IPAddrs installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/IPAddrs.pm
+Module Shorewall/Misc installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Misc.pm
+Module Shorewall/Nat installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Nat.pm
+Module Shorewall/Proc installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Proc.pm
+Module Shorewall/Providers installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Providers.pm
+Module Shorewall/Proxyarp installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Proxyarp.pm
+Module Shorewall/Raw installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Raw.pm
+Module Shorewall/Rules installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Rules.pm
+Module Shorewall/Tc installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Tc.pm
+Module Shorewall/Tunnels installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Tunnels.pm
+Module Shorewall/Zones installed as /tmp/pkg/shorewall/usr/share/shorewall/Shorewall/Zones.pm
+Program skeleton file footer installed as /tmp/pkg/shorewall/usr/share/shorewall/prog.footer
+Man page shorewall-accounting.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-accounting.5.gz
+Man page shorewall-actions.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-actions.5.gz
+Man page shorewall-addresses.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-addresses.5.gz
+Man page shorewall-arprules.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-arprules.5.gz
+Man page shorewall-blrules.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-blrules.5.gz
+Man page shorewall-conntrack.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-conntrack.5.gz
+Man page shorewall-ecn.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-ecn.5.gz
+Man page shorewall-exclusion.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-exclusion.5.gz
+Man page shorewall-files.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-files.5.gz
+Man page shorewall-hosts.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-hosts.5.gz
+Man page shorewall-interfaces.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-interfaces.5.gz
+Man page shorewall-ipsets.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-ipsets.5.gz
+Man page shorewall-logging.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-logging.5.gz
+Man page shorewall-maclist.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-maclist.5.gz
+Man page shorewall-mangle.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-mangle.5.gz
+Man page shorewall-modules.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-modules.5.gz
+Man page shorewall-names.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-names.5.gz
+Man page shorewall-nat.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-nat.5.gz
+Man page shorewall-nesting.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-nesting.5.gz
+Man page shorewall-netmap.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-netmap.5.gz
+Man page shorewall-params.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-params.5.gz
+Man page shorewall-policy.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-policy.5.gz
+Man page shorewall-providers.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-providers.5.gz
+Man page shorewall-proxyarp.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-proxyarp.5.gz
+Man page shorewall-proxyndp.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-proxyndp.5.gz
+Man page shorewall-routes.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-routes.5.gz
+Man page shorewall-rtrules.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-rtrules.5.gz
+Man page shorewall-rules.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-rules.5.gz
+Man page shorewall-secmarks.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-secmarks.5.gz
+Man page shorewall-snat.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-snat.5.gz
+Man page shorewall-stoppedrules.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-stoppedrules.5.gz
+Man page shorewall-tcclasses.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-tcclasses.5.gz
+Man page shorewall-tcdevices.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-tcdevices.5.gz
+Man page shorewall-tcfilters.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-tcfilters.5.gz
+Man page shorewall-tcinterfaces.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-tcinterfaces.5.gz
+Man page shorewall-tcpri.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-tcpri.5.gz
+Man page shorewall-tunnels.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-tunnels.5.gz
+Man page shorewall-vardir.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-vardir.5.gz
+Man page shorewall-zones.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall-zones.5.gz
+Man page shorewall.conf.5.gz installed to /tmp/pkg/shorewall/usr/share/man/man5/shorewall.conf.5.gz
+Man page shorewall-init.8.gz installed to /tmp/pkg/shorewall/usr/share/man/man8/shorewall-init.8.gz
+Man Pages Installed
+Logrotate file installed as /tmp/pkg/shorewall/etc/logrotate.d/shorewall
+Shorewall Version 5.2.8 Installed
+>>> shorewall-doc*: Running split function doc...
+renamed 'usr/share/man' -> '/tmp/pkg/shorewall-doc/usr/share/man'
+>>> shorewall-doc*: Preparing subpackage shorewall-doc...
+>>> shorewall-doc*: Running postcheck for shorewall-doc
+>>> shorewall-openrc*: Running split function openrc...
+renamed 'etc/init.d' -> '/tmp/pkg/shorewall-openrc/etc/init.d'
+>>> shorewall-openrc*: Preparing subpackage shorewall-openrc...
+>>> shorewall-openrc*: Running postcheck for shorewall-openrc
+>>> shorewall*: Running postcheck for shorewall
+>>> shorewall*: Preparing package shorewall...
+>>> shorewall-doc*: Tracing dependencies...
+>>> shorewall-doc*: Package size: 171.9 KB
+>>> shorewall-doc*: Compressing data...
+>>> shorewall-doc*: Create checksum...
+>>> shorewall-doc*: Create shorewall-doc-5.2.8-r1.apk
+>>> shorewall-openrc*: Tracing dependencies...
+>>> shorewall-openrc*: Package size: 1.5 KB
+>>> shorewall-openrc*: Compressing data...
+>>> shorewall-openrc*: Create checksum...
+>>> shorewall-openrc*: Create shorewall-openrc-5.2.8-r1.apk
+>>> shorewall*: Tracing dependencies...
+	shorewall-core
+	perl
+	iptables
+	iproute2
+>>> shorewall*: Package size: 1.7 MB
+>>> shorewall*: Compressing data...
+>>> shorewall*: Create checksum...
+>>> shorewall*: Create shorewall-5.2.8-r1.apk
+>>> shorewall: Updating the main/x86_64 repository index...
+>>> shorewall: Signing the index...
+>>> shorewall: Cleaning up srcdir
+>>> shorewall: Cleaning up build chroot
+>>> shorewall: Cleaning up pkgdir

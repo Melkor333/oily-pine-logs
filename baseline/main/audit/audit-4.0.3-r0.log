@@ -1,0 +1,1911 @@
+>>> audit: Validating /home/packager/oily-pine/main/audit/APKBUILD...
+>>> audit: Cleaning up srcdir
+>>> audit: Cleaning up pkgdir
+>>> audit: Cleaning up tmpdir
+>>> audit: Fetching https://github.com/linux-audit/audit-userspace/archive/v4.0.3/audit-4.0.3.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  590k    0  590k    0     0   619k      0 --:--:-- --:--:-- --:--:-- 1441k
+>>> audit: Fetching https://github.com/linux-audit/audit-userspace/archive/v4.0.3/audit-4.0.3.tar.gz
+>>> audit: Checking sha512sums...
+audit-4.0.3.tar.gz: OK
+0003-all-get-rid-of-strndupa.patch: OK
+usr-paths.patch: OK
+test-uid-42.patch: OK
+auditd.initd: OK
+auditd.confd: OK
+>>> audit: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/95) Installing musl (1.2.5-r10)
+(2/95) Installing libcrypto3 (3.5.0-r0)
+(3/95) Installing ca-certificates-bundle (20241121-r2)
+(4/95) Installing libssl3 (3.5.0-r0)
+(5/95) Installing zlib (1.3.1-r2)
+(6/95) Installing libapk2 (2.14.9-r2)
+(7/95) Installing apk-tools (2.14.9-r2)
+(8/95) Installing libcap2 (2.76-r0)
+(9/95) Installing libcap-getcap (2.76-r0)
+(10/95) Installing fakeroot (1.37.1.1-r0)
+(11/95) Installing scanelf (1.3.8-r1)
+(12/95) Installing musl-utils (1.2.5-r10)
+(13/95) Installing libgcc (14.3.0-r1)
+(14/95) Installing libstdc++ (14.3.0-r1)
+(15/95) Installing lzip (1.25-r0)
+(16/95) Installing openssl (3.5.0-r0)
+(17/95) Installing patch (2.8-r0)
+(18/95) Installing pkgconf (2.4.3-r0)
+(19/95) Installing acl-libs (2.3.2-r1)
+(20/95) Installing tar (1.35-r3)
+(21/95) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/95) Installing ssl_client (1.37.0-r18)
+(23/95) Installing busybox-binsh (1.37.0-r18)
+(24/95) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/95) Installing abuild-sudo (3.15.0-r0)
+(26/95) Installing alpine-baselayout-data (3.7.0-r0)
+(27/95) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/95) Installing bridge (1.5-r5)
+(29/95) Installing ifupdown-ng (0.12.1-r7)
+(30/95) Installing openrc-user (0.62.2-r2)
+(31/95) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/95) Installing mdev-conf (4.8-r0)
+(33/95) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/95) Installing alpine-conf (3.20.0-r0)
+(35/95) Installing alpine-keys (2.5-r0)
+(36/95) Installing alpine-release (3.22.0-r0)
+(37/95) Installing busybox-openrc (1.37.0-r18)
+(38/95) Installing busybox-suid (1.37.0-r18)
+(39/95) Installing alpine-base (3.22.0-r0)
+(40/95) Installing m4 (1.4.20-r0)
+(41/95) Installing libbz2 (1.0.8-r6)
+(42/95) Installing perl (5.40.2-r0)
+(43/95) Installing autoconf (2.72-r1)
+(44/95) Installing automake (1.18-r0)
+(45/95) Installing jansson (2.14.1-r0)
+(46/95) Installing zstd-libs (1.5.7-r0)
+(47/95) Installing binutils (2.44-r0)
+(48/95) Installing libmagic (5.46-r2)
+(49/95) Installing file (5.46-r2)
+(50/95) Installing libgomp (14.3.0-r1)
+(51/95) Installing libatomic (14.3.0-r1)
+(52/95) Installing gmp (6.3.0-r3)
+(53/95) Installing isl26 (0.26-r1)
+(54/95) Installing mpfr4 (4.2.1_p1-r0)
+(55/95) Installing mpc1 (1.3.1-r1)
+(56/95) Installing gcc (14.3.0-r1)
+(57/95) Installing libstdc++-dev (14.3.0-r1)
+(58/95) Installing musl-dev (1.2.5-r10)
+(59/95) Installing g++ (14.3.0-r1)
+(60/95) Installing make (4.4.1-r3)
+(61/95) Installing fortify-headers (1.1-r5)
+(62/95) Installing build-base (0.5-r3)
+(63/95) Installing brotli-libs (1.1.0-r2)
+(64/95) Installing c-ares (1.34.5-r0)
+(65/95) Installing libunistring (1.3-r0)
+(66/95) Installing libidn2 (2.3.7-r0)
+(67/95) Installing nghttp2-libs (1.65.0-r0)
+(68/95) Installing libpsl (0.21.5-r3)
+(69/95) Installing libcurl (8.14.0-r2)
+(70/95) Installing libexpat (2.7.1-r0)
+(71/95) Installing pcre2 (10.43-r1)
+(72/95) Installing git (2.49.0-r0)
+(73/95) Installing git-init-template (2.49.0-r0)
+(74/95) Installing perl-error (0.17030-r0)
+(75/95) Installing perl-git (2.49.0-r0)
+(76/95) Installing git-perl (2.49.0-r0)
+(77/95) Installing linux-headers (6.14.2-r0)
+(78/95) Installing libcap-ng (0.8.5-r0)
+(79/95) Installing libcap-ng-dev (0.8.5-r0)
+(80/95) Installing libltdl (2.5.4-r1)
+(81/95) Installing libtool (2.5.4-r1)
+(82/95) Installing libffi (3.4.8-r0)
+(83/95) Installing gdbm (1.24-r0)
+(84/95) Installing xz-libs (5.8.1-r0)
+(85/95) Installing mpdecimal (4.0.1-r0)
+(86/95) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(87/95) Installing libncursesw (6.5_p20250503-r0)
+(88/95) Installing libpanelw (6.5_p20250503-r0)
+(89/95) Installing readline (8.2.13-r1)
+(90/95) Installing sqlite-libs (3.50.0-r0)
+(91/95) Installing python3 (3.12.10-r1)
+(92/95) Installing python3-pycache-pyc0 (3.12.10-r1)
+(93/95) Installing pyc (3.12.10-r1)
+(94/95) Installing python3-pyc (3.12.10-r1)
+(95/95) Installing swig (4.3.0-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 348 MiB in 95 packages
+>>> audit: Fetching https://github.com/linux-audit/audit-userspace/archive/v4.0.3/audit-4.0.3.tar.gz
+>>> audit: Checking sha512sums...
+audit-4.0.3.tar.gz: OK
+0003-all-get-rid-of-strndupa.patch: OK
+usr-paths.patch: OK
+test-uid-42.patch: OK
+auditd.initd: OK
+auditd.confd: OK
+>>> audit: Unpacking /var/cache/distfiles/audit-4.0.3.tar.gz...
+>>> audit: 0003-all-get-rid-of-strndupa.patch
+patching file auparse/auparse.c
+Hunk #1 succeeded at 1225 (offset 123 lines).
+patching file src/ausearch-lol.c
+Hunk #1 succeeded at 181 (offset 46 lines).
+>>> audit: usr-paths.patch
+patching file audisp/plugins/remote/au-remote.conf
+patching file audisp/plugins/syslog/syslog.conf
+>>> audit: test-uid-42.patch
+patching file auparse/test/auparse_test.ref
++ autoreconf -fv --install
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force 
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+libtoolize: Consider adding '-I m4' to ACLOCAL_AMFLAGS in Makefile.am.
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force 
+autoreconf: running: /usr/bin/autoconf --force
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:42: installing './compile'
+configure.ac:40: installing './config.guess'
+configure.ac:40: installing './config.sub'
+configure.ac:41: installing './install-sh'
+configure.ac:41: installing './missing'
+Makefile.am: installing './INSTALL'
+audisp/Makefile.am: installing './depcomp'
+parallel-tests: installing './test-driver'
+bindings/swig/python3/Makefile.am:29: installing './py-compile'
+bindings/swig/src/Makefile.am:25: warning: variable 'SWIG_SOURCES' is defined but no program or
+bindings/swig/src/Makefile.am:25: library has 'SWIG' as canonical name (possible typo)
+init.d/Makefile.am:42: warning: '%'-style pattern rules are a GNU make extension
+autoreconf: Leaving directory '.'
++ cp INSTALL.tmp INSTALL
+Configuring auditd
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking how to print strings... printf
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for sys/inotify.h... yes
+checking for sys/epoll.h... yes
+checking for sys/event.h... no
+checking for port.h... no
+checking for poll.h... yes
+checking for sys/timerfd.h... yes
+checking for sys/select.h... yes
+checking for sys/eventfd.h... yes
+checking for sys/signalfd.h... yes
+checking for linux/aio_abi.h... yes
+checking for linux/fs.h... yes
+checking for inotify_init... yes
+checking for epoll_ctl... yes
+checking for kqueue... no
+checking for port_create... no
+checking for poll... yes
+checking for select... yes
+checking for eventfd... yes
+checking for signalfd... yes
+checking for clock_gettime... yes
+checking for nanosleep... yes
+checking for __kernel_rwf_t... yes
+checking for library containing floor... none required
+.
+Checking for programs
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking dependency style of cc... (cached) gcc3
+checking for gawk... (cached) awk
+checking how to run the C preprocessor... cc -E
+checking for gcc... gcc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether gcc accepts -g... yes
+checking for gcc option to enable C11 features... (cached) none needed
+checking whether gcc understands -c and -o together... (cached) yes
+checking dependency style of gcc... (cached) gcc3
+checking how to run the C preprocessor... gcc -E
+.
+Checking for header files
+checking size of unsigned int... 4
+checking size of unsigned long... 8
+checking size of long... 8
+checking size of time_t... 8
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether AUDIT_FEATURE_VERSION is declared... yes
+checking for struct audit_status.feature_bitmap... yes
+checking whether AUDIT_VERSION_BACKLOG_WAIT_TIME is declared... yes
+checking whether AUDIT_STATUS_BACKLOG_WAIT_TIME is declared... yes
+checking whether AUDIT_STATUS_BACKLOG_WAIT_TIME_ACTUAL is declared... yes
+checking whether ADDR_NO_RANDOMIZE is declared... yes
+checking for posix_fallocate... yes
+checking for signalfd... (cached) yes
+checking for rawmemchr... no
+checking for faccessat... yes
+checking for stdatomic.h... yes
+checking __attr_access support... no
+checking __attr_dealloc_free support... no
+checking for library containing pthread_yield... no
+checking whether to create python3 bindings... investigating
+checking for python3-config... no
+Python3 bindings will NOT be built
+checking whether to create Go language bindings... testing
+checking for go... no
+configure: WARNING: Go not found - go bindings will not be made
+checking whether to include auditd network listener support... yes
+checking whether to include audisp ZOS remote plugin... no
+checking whether to enable experimental options... no
+checking for linux/fanotify.h... yes
+checking for -Wformat-truncation... yes
+yes
+checking whether to include arm eabi processor support... yes
+checking whether to include aarch64 processor support... yes
+checking whether to include riscv processor support... no
+checking whether to use apparmor... no
+checking whether to use libwrap... no
+checking whether to include io_uring support... no
+checking for linux/ipx.h... no
+checking for cap-ng.h... yes
+checking for capng_clear in -lcap-ng... yes
+checking whether to use libcap-ng... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating common/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/audit.pc
+config.status: creating lib/test/Makefile
+config.status: creating auparse/Makefile
+config.status: creating auparse/test/Makefile
+config.status: creating auparse/auparse.pc
+config.status: creating src/Makefile
+config.status: creating src/libev/Makefile
+config.status: creating src/test/Makefile
+config.status: creating docs/Makefile
+config.status: creating rules/Makefile
+config.status: creating init.d/Makefile
+config.status: creating audisp/Makefile
+config.status: creating audisp/plugins/Makefile
+config.status: creating audisp/plugins/af_unix/Makefile
+config.status: creating audisp/plugins/remote/Makefile
+config.status: creating audisp/plugins/zos-remote/Makefile
+config.status: creating audisp/plugins/syslog/Makefile
+config.status: creating audisp/plugins/filter/Makefile
+config.status: creating audisp/plugins/ids/Makefile
+config.status: creating audisp/plugins/ids/rules/Makefile
+config.status: creating audisp/plugins/statsd/Makefile
+config.status: creating bindings/Makefile
+config.status: creating bindings/python/Makefile
+config.status: creating bindings/python/python3/Makefile
+config.status: creating bindings/golang/Makefile
+config.status: creating bindings/swig/Makefile
+config.status: creating bindings/swig/src/Makefile
+config.status: creating bindings/swig/python3/Makefile
+config.status: creating tools/Makefile
+config.status: creating tools/aulast/Makefile
+config.status: creating tools/aulastlog/Makefile
+config.status: creating tools/ausyscall/Makefile
+config.status: creating m4/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+.
+./configure: line 21284: fmt: not found
+
+
+  Auditd Version:         4.0.3
+  Target:                 x86_64-alpine-linux-musl
+  Installation prefix:    /usr
+  Compiler:               cc
+  Compiler flags:
+
+  __attr_access support:  no
+  __attr_dealloc_free support:  no
+
+make  all-recursive
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3'
+Making all in common
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/common'
+depbase=`echo audit-fgets.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib  -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audit-fgets.lo -MD -MP -MF $depbase.Tpo -c -o audit-fgets.lo audit-fgets.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo strsplit.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib  -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT strsplit.lo -MD -MP -MF $depbase.Tpo -c -o strsplit.lo strsplit.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo common.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib  -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT common.lo -MD -MP -MF $depbase.Tpo -c -o common.lo common.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I../lib -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT strsplit.lo -MD -MP -MF .deps/strsplit.Tpo -c strsplit.c  -fPIC -DPIC -o .libs/strsplit.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I../lib -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audit-fgets.lo -MD -MP -MF .deps/audit-fgets.Tpo -c audit-fgets.c  -fPIC -DPIC -o .libs/audit-fgets.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I../lib -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT common.lo -MD -MP -MF .deps/common.Tpo -c common.c  -fPIC -DPIC -o .libs/common.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I../lib -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT strsplit.lo -MD -MP -MF .deps/strsplit.Tpo -c strsplit.c -o strsplit.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I../lib -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT common.lo -MD -MP -MF .deps/common.Tpo -c common.c -o common.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I.. -I../lib -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audit-fgets.lo -MD -MP -MF .deps/audit-fgets.Tpo -c audit-fgets.c -o audit-fgets.o >/dev/null 2>&1
+/bin/sh ../libtool  --tag=CC   --mode=link cc -fPIC -DPIC -D_GNU_SOURCE -g -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libaucommon.la  audit-fgets.lo strsplit.lo common.lo  
+libtool: link: ar cr .libs/libaucommon.a .libs/audit-fgets.o .libs/strsplit.o .libs/common.o 
+libtool: link: ranlib .libs/libaucommon.a
+libtool: link: ( cd ".libs" && rm -f "libaucommon.la" && ln -s "../libaucommon.la" "libaucommon.la" )
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/common'
+Making all in lib
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="actiontab.h"' -g -O2 -MT gen_actiontabs_h-gen_tables.o -MD -MP -MF .deps/gen_actiontabs_h-gen_tables.Tpo -c -o gen_actiontabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="errtab.h"' -g -O2 -MT gen_errtabs_h-gen_tables.o -MD -MP -MF .deps/gen_errtabs_h-gen_tables.Tpo -c -o gen_errtabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="fieldtab.h"' -g -O2 -MT gen_fieldtabs_h-gen_tables.o -MD -MP -MF .deps/gen_fieldtabs_h-gen_tables.Tpo -c -o gen_fieldtabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="flagtab.h"' -g -O2 -MT gen_flagtabs_h-gen_tables.o -MD -MP -MF .deps/gen_flagtabs_h-gen_tables.Tpo -c -o gen_flagtabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="fstypetab.h"' -g -O2 -MT gen_fstypetabs_h-gen_tables.o -MD -MP -MF .deps/gen_fstypetabs_h-gen_tables.Tpo -c -o gen_fstypetabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="ftypetab.h"' -g -O2 -MT gen_ftypetabs_h-gen_tables.o -MD -MP -MF .deps/gen_ftypetabs_h-gen_tables.Tpo -c -o gen_ftypetabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="i386_table.h"' -g -O2 -MT gen_i386_tables_h-gen_tables.o -MD -MP -MF .deps/gen_i386_tables_h-gen_tables.Tpo -c -o gen_i386_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="machinetab.h"' -g -O2 -MT gen_machinetabs_h-gen_tables.o -MD -MP -MF .deps/gen_machinetabs_h-gen_tables.Tpo -c -o gen_machinetabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="msg_typetab.h"' -g -O2 -MT gen_msg_typetabs_h-gen_tables.o -MD -MP -MF .deps/gen_msg_typetabs_h-gen_tables.Tpo -c -o gen_msg_typetabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="optab.h"' -g -O2 -MT gen_optabs_h-gen_tables.o -MD -MP -MF .deps/gen_optabs_h-gen_tables.Tpo -c -o gen_optabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="permtab.h"' -g -O2 -MT gen_permtabs_h-gen_tables.o -MD -MP -MF .deps/gen_permtabs_h-gen_tables.Tpo -c -o gen_permtabs_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="ppc_table.h"' -g -O2 -MT gen_ppc_tables_h-gen_tables.o -MD -MP -MF .deps/gen_ppc_tables_h-gen_tables.Tpo -c -o gen_ppc_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="s390_table.h"' -g -O2 -MT gen_s390_tables_h-gen_tables.o -MD -MP -MF .deps/gen_s390_tables_h-gen_tables.Tpo -c -o gen_s390_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="s390x_table.h"' -g -O2 -MT gen_s390x_tables_h-gen_tables.o -MD -MP -MF .deps/gen_s390x_tables_h-gen_tables.Tpo -c -o gen_s390x_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="x86_64_table.h"' -g -O2 -MT gen_x86_64_tables_h-gen_tables.o -MD -MP -MF .deps/gen_x86_64_tables_h-gen_tables.Tpo -c -o gen_x86_64_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="uringop_table.h"' -g -O2 -MT gen_uringop_tables_h-gen_tables.o -MD -MP -MF .deps/gen_uringop_tables_h-gen_tables.Tpo -c -o gen_uringop_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+mv -f .deps/gen_flagtabs_h-gen_tables.Tpo .deps/gen_flagtabs_h-gen_tables.Po
+mv -f .deps/gen_ftypetabs_h-gen_tables.Tpo .deps/gen_ftypetabs_h-gen_tables.Po
+mv -f .deps/gen_permtabs_h-gen_tables.Tpo .deps/gen_permtabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="arm_table.h"' -g -O2 -MT gen_arm_tables_h-gen_tables.o -MD -MP -MF .deps/gen_arm_tables_h-gen_tables.Tpo -c -o gen_arm_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  '-DTABLE_H="aarch64_table.h"' -g -O2 -MT gen_aarch64_tables_h-gen_tables.o -MD -MP -MF .deps/gen_aarch64_tables_h-gen_tables.Tpo -c -o gen_aarch64_tables_h-gen_tables.o `test -f 'gen_tables.c' || echo './'`gen_tables.c
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="flagtab.h"' -g -O2   -o gen_flagtabs_h gen_flagtabs_h-gen_tables.o  
+mv -f .deps/gen_s390_tables_h-gen_tables.Tpo .deps/gen_s390_tables_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ftypetab.h"' -g -O2   -o gen_ftypetabs_h gen_ftypetabs_h-gen_tables.o  
+mv -f .deps/gen_optabs_h-gen_tables.Tpo .deps/gen_optabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="permtab.h"' -g -O2   -o gen_permtabs_h gen_permtabs_h-gen_tables.o  
+mv -f .deps/gen_i386_tables_h-gen_tables.Tpo .deps/gen_i386_tables_h-gen_tables.Po
+mv -f .deps/gen_msg_typetabs_h-gen_tables.Tpo .deps/gen_msg_typetabs_h-gen_tables.Po
+libtool: link: gcc "-DTABLE_H=\"flagtab.h\"" -g -O2 -o gen_flagtabs_h gen_flagtabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="s390_table.h"' -g -O2   -o gen_s390_tables_h gen_s390_tables_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="i386_table.h"' -g -O2   -o gen_i386_tables_h gen_i386_tables_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ftypetab.h\"" -g -O2 -o gen_ftypetabs_h gen_ftypetabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="msg_typetab.h"' -g -O2   -o gen_msg_typetabs_h gen_msg_typetabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="optab.h"' -g -O2   -o gen_optabs_h gen_optabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"permtab.h\"" -g -O2 -o gen_permtabs_h gen_permtabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"s390_table.h\"" -g -O2 -o gen_s390_tables_h gen_s390_tables_h-gen_tables.o 
+mv -f .deps/gen_actiontabs_h-gen_tables.Tpo .deps/gen_actiontabs_h-gen_tables.Po
+./gen_flagtabs_h --lowercase --i2s --s2i flag > flagtabs.h
+./gen_ftypetabs_h --lowercase --i2s --s2i ftype > ftypetabs.h
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="actiontab.h"' -g -O2   -o gen_actiontabs_h gen_actiontabs_h-gen_tables.o  
+./gen_permtabs_h --lowercase --i2s --s2i perm > permtabs.h
+libtool: link: gcc "-DTABLE_H=\"i386_table.h\"" -g -O2 -o gen_i386_tables_h gen_i386_tables_h-gen_tables.o 
+mv -f .deps/gen_ppc_tables_h-gen_tables.Tpo .deps/gen_ppc_tables_h-gen_tables.Po
+libtool: link: gcc "-DTABLE_H=\"optab.h\"" -g -O2 -o gen_optabs_h gen_optabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ppc_table.h"' -g -O2   -o gen_ppc_tables_h gen_ppc_tables_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"msg_typetab.h\"" -g -O2 -o gen_msg_typetabs_h gen_msg_typetabs_h-gen_tables.o 
+./gen_s390_tables_h --lowercase --i2s --s2i s390_syscall > s390_tables.h
+mv -f .deps/gen_fstypetabs_h-gen_tables.Tpo .deps/gen_fstypetabs_h-gen_tables.Po
+./gen_optabs_h --i2s op > optabs.h
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="fstypetab.h"' -g -O2   -o gen_fstypetabs_h gen_fstypetabs_h-gen_tables.o  
+./gen_i386_tables_h --duplicate-ints --lowercase --i2s --s2i \
+	i386_syscall > i386_tables.h
+mv -f .deps/gen_machinetabs_h-gen_tables.Tpo .deps/gen_machinetabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="machinetab.h"' -g -O2   -o gen_machinetabs_h gen_machinetabs_h-gen_tables.o  
+./gen_msg_typetabs_h --uppercase --i2s --s2i msg_type > msg_typetabs.h
+libtool: link: gcc "-DTABLE_H=\"actiontab.h\"" -g -O2 -o gen_actiontabs_h gen_actiontabs_h-gen_tables.o 
+mv -f .deps/gen_errtabs_h-gen_tables.Tpo .deps/gen_errtabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="errtab.h"' -g -O2   -o gen_errtabs_h gen_errtabs_h-gen_tables.o  
+mv -f .deps/gen_fieldtabs_h-gen_tables.Tpo .deps/gen_fieldtabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="fieldtab.h"' -g -O2   -o gen_fieldtabs_h gen_fieldtabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ppc_table.h\"" -g -O2 -o gen_ppc_tables_h gen_ppc_tables_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"fstypetab.h\"" -g -O2 -o gen_fstypetabs_h gen_fstypetabs_h-gen_tables.o 
+./gen_actiontabs_h --lowercase --i2s --s2i action > actiontabs.h
+mv -f .deps/gen_s390x_tables_h-gen_tables.Tpo .deps/gen_s390x_tables_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="s390x_table.h"' -g -O2   -o gen_s390x_tables_h gen_s390x_tables_h-gen_tables.o  
+mv -f .deps/gen_uringop_tables_h-gen_tables.Tpo .deps/gen_uringop_tables_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="uringop_table.h"' -g -O2   -o gen_uringop_tables_h gen_uringop_tables_h-gen_tables.o  
+mv -f .deps/gen_x86_64_tables_h-gen_tables.Tpo .deps/gen_x86_64_tables_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="x86_64_table.h"' -g -O2   -o gen_x86_64_tables_h gen_x86_64_tables_h-gen_tables.o  
+./gen_ppc_tables_h --lowercase --i2s --s2i ppc_syscall > ppc_tables.h
+libtool: link: gcc "-DTABLE_H=\"machinetab.h\"" -g -O2 -o gen_machinetabs_h gen_machinetabs_h-gen_tables.o 
+./gen_fstypetabs_h --lowercase --i2s --s2i fstype > fstypetabs.h
+libtool: link: gcc "-DTABLE_H=\"errtab.h\"" -g -O2 -o gen_errtabs_h gen_errtabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"fieldtab.h\"" -g -O2 -o gen_fieldtabs_h gen_fieldtabs_h-gen_tables.o 
+./gen_machinetabs_h --duplicate-ints --lowercase --i2s --s2i machine \
+	> machinetabs.h
+libtool: link: gcc "-DTABLE_H=\"s390x_table.h\"" -g -O2 -o gen_s390x_tables_h gen_s390x_tables_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"uringop_table.h\"" -g -O2 -o gen_uringop_tables_h gen_uringop_tables_h-gen_tables.o 
+mv -f .deps/gen_aarch64_tables_h-gen_tables.Tpo .deps/gen_aarch64_tables_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="aarch64_table.h"' -g -O2   -o gen_aarch64_tables_h gen_aarch64_tables_h-gen_tables.o  
+./gen_errtabs_h --duplicate-ints --uppercase --i2s --s2i err > errtabs.h
+libtool: link: gcc "-DTABLE_H=\"x86_64_table.h\"" -g -O2 -o gen_x86_64_tables_h gen_x86_64_tables_h-gen_tables.o 
+./gen_fieldtabs_h --duplicate-ints --lowercase --i2s --s2i field > fieldtabs.h
+./gen_s390x_tables_h --lowercase --i2s --s2i s390x_syscall > s390x_tables.h
+./gen_uringop_tables_h --lowercase --i2s --s2i uringop > uringop_tables.h
+./gen_x86_64_tables_h --lowercase --i2s --s2i x86_64_syscall > x86_64_tables.h
+libtool: link: gcc "-DTABLE_H=\"aarch64_table.h\"" -g -O2 -o gen_aarch64_tables_h gen_aarch64_tables_h-gen_tables.o 
+./gen_aarch64_tables_h --lowercase --i2s --s2i aarch64_syscall > aarch64_tables.h
+mv -f .deps/gen_arm_tables_h-gen_tables.Tpo .deps/gen_arm_tables_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="arm_table.h"' -g -O2   -o gen_arm_tables_h gen_arm_tables_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"arm_table.h\"" -g -O2 -o gen_arm_tables_h gen_arm_tables_h-gen_tables.o 
+./gen_arm_tables_h --lowercase --i2s --s2i arm_syscall > arm_tables.h
+make  all-recursive
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+Making all in test
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+depbase=`echo libaudit.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libaudit.lo -MD -MP -MF $depbase.Tpo -c -o libaudit.lo libaudit.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo message.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT message.lo -MD -MP -MF $depbase.Tpo -c -o message.lo message.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo netlink.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT netlink.lo -MD -MP -MF $depbase.Tpo -c -o netlink.lo netlink.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo lookup_table.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lookup_table.lo -MD -MP -MF $depbase.Tpo -c -o lookup_table.lo lookup_table.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo audit_logging.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audit_logging.lo -MD -MP -MF $depbase.Tpo -c -o audit_logging.lo audit_logging.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo deprecated.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../auparse -I../common  -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT deprecated.lo -MD -MP -MF $depbase.Tpo -c -o deprecated.lo deprecated.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT deprecated.lo -MD -MP -MF .deps/deprecated.Tpo -c deprecated.c  -fPIC -DPIC -o .libs/deprecated.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT netlink.lo -MD -MP -MF .deps/netlink.Tpo -c netlink.c  -fPIC -DPIC -o .libs/netlink.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audit_logging.lo -MD -MP -MF .deps/audit_logging.Tpo -c audit_logging.c  -fPIC -DPIC -o .libs/audit_logging.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT message.lo -MD -MP -MF .deps/message.Tpo -c message.c  -fPIC -DPIC -o .libs/message.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lookup_table.lo -MD -MP -MF .deps/lookup_table.Tpo -c lookup_table.c  -fPIC -DPIC -o .libs/lookup_table.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libaudit.lo -MD -MP -MF .deps/libaudit.Tpo -c libaudit.c  -fPIC -DPIC -o .libs/libaudit.o
+In file included from netlink.c:31:
+/usr/include/sys/poll.h:1:2: warning: #warning redirecting incorrect #include <sys/poll.h> to <poll.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/poll.h> to <poll.h>
+      |  ^~~~~~~
+In file included from libaudit.c:36:
+/usr/include/sys/poll.h:1:2: warning: #warning redirecting incorrect #include <sys/poll.h> to <poll.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/poll.h> to <poll.h>
+      |  ^~~~~~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT message.lo -MD -MP -MF .deps/message.Tpo -c message.c -o message.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT deprecated.lo -MD -MP -MF .deps/deprecated.Tpo -c deprecated.c -o deprecated.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT netlink.lo -MD -MP -MF .deps/netlink.Tpo -c netlink.c -o netlink.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audit_logging.lo -MD -MP -MF .deps/audit_logging.Tpo -c audit_logging.c -o audit_logging.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libaudit.lo -MD -MP -MF .deps/libaudit.Tpo -c libaudit.c -o libaudit.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../auparse -I../common -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lookup_table.lo -MD -MP -MF .deps/lookup_table.Tpo -c lookup_table.c -o lookup_table.o >/dev/null 2>&1
+/bin/sh ../libtool  --tag=CC   --mode=link cc -fPIC -DPIC -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,-z,relro -version-info 1:0 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libaudit.la -rpath /usr/lib libaudit.lo message.lo netlink.lo lookup_table.lo audit_logging.lo deprecated.lo    -lcap-ng ../common/libaucommon.la 
+libtool: link: cc -shared  -fPIC -DPIC  .libs/libaudit.o .libs/message.o .libs/netlink.o .libs/lookup_table.o .libs/audit_logging.o .libs/deprecated.o  -Wl,--whole-archive ../common/.libs/libaucommon.a -Wl,--no-whole-archive  -lcap-ng  -Os -Werror=format-security -Wl,-z -Wl,relro -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libaudit.so.1 -o .libs/libaudit.so.1.0.0
+libtool: link: (cd ".libs" && rm -f "libaudit.so.1" && ln -s "libaudit.so.1.0.0" "libaudit.so.1")
+libtool: link: (cd ".libs" && rm -f "libaudit.so" && ln -s "libaudit.so.1.0.0" "libaudit.so")
+libtool: link: (cd .libs/libaudit.lax/libaucommon.a && ar x "/tmp/src/audit-userspace-4.0.3/lib/../common/.libs/libaucommon.a")
+libtool: link: ar cr .libs/libaudit.a  libaudit.o message.o netlink.o lookup_table.o audit_logging.o deprecated.o  .libs/libaudit.lax/libaucommon.a/audit-fgets.o .libs/libaudit.lax/libaucommon.a/common.o .libs/libaudit.lax/libaucommon.a/strsplit.o 
+libtool: link: ranlib .libs/libaudit.a
+libtool: link: rm -fr .libs/libaudit.lax
+libtool: link: ( cd ".libs" && rm -f "libaudit.la" && ln -s "../libaudit.la" "libaudit.la" )
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+Making all in auparse
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="accesstab.h"' -g -O2 -MT ../lib/gen_accesstabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_accesstabs_h-gen_tables.Tpo -c -o ../lib/gen_accesstabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="captab.h"' -g -O2 -MT ../lib/gen_captabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_captabs_h-gen_tables.Tpo -c -o ../lib/gen_captabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="clocktab.h"' -g -O2 -MT ../lib/gen_clock_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_clock_h-gen_tables.Tpo -c -o ../lib/gen_clock_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="clone-flagtab.h"' -g -O2 -MT ../lib/gen_clone_flagtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_clone_flagtabs_h-gen_tables.Tpo -c -o ../lib/gen_clone_flagtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="epoll_ctl.h"' -g -O2 -MT ../lib/gen_epoll_ctls_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_epoll_ctls_h-gen_tables.Tpo -c -o ../lib/gen_epoll_ctls_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="famtab.h"' -g -O2 -MT ../lib/gen_famtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_famtabs_h-gen_tables.Tpo -c -o ../lib/gen_famtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="fcntl-cmdtab.h"' -g -O2 -MT ../lib/gen_fcntl_cmdtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_fcntl_cmdtabs_h-gen_tables.Tpo -c -o ../lib/gen_fcntl_cmdtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="fsconfig.h"' -g -O2 -MT ../lib/gen_fsconfigs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_fsconfigs_h-gen_tables.Tpo -c -o ../lib/gen_fsconfigs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="icmptypetab.h"' -g -O2 -MT ../lib/gen_icmptypetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_icmptypetabs_h-gen_tables.Tpo -c -o ../lib/gen_icmptypetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="ipctab.h"' -g -O2 -MT ../lib/gen_ipctabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_ipctabs_h-gen_tables.Tpo -c -o ../lib/gen_ipctabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="ipccmdtab.h"' -g -O2 -MT ../lib/gen_ipccmdtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_ipccmdtabs_h-gen_tables.Tpo -c -o ../lib/gen_ipccmdtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="ioctlreqtab.h"' -g -O2 -MT ../lib/gen_ioctlreqtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_ioctlreqtabs_h-gen_tables.Tpo -c -o ../lib/gen_ioctlreqtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="ipoptnametab.h"' -g -O2 -MT ../lib/gen_ipoptnametabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_ipoptnametabs_h-gen_tables.Tpo -c -o ../lib/gen_ipoptnametabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="ip6optnametab.h"' -g -O2 -MT ../lib/gen_ip6optnametabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_ip6optnametabs_h-gen_tables.Tpo -c -o ../lib/gen_ip6optnametabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="mmaptab.h"' -g -O2 -MT ../lib/gen_mmaptabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_mmaptabs_h-gen_tables.Tpo -c -o ../lib/gen_mmaptabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="mounttab.h"' -g -O2 -MT ../lib/gen_mounttabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_mounttabs_h-gen_tables.Tpo -c -o ../lib/gen_mounttabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+../lib/gen_tables.c:89:22: warning: overflow in conversion from 'long long unsigned int' to 'int' changes value from '4294967296' to '0' [-Woverflow]
+   89 | #define _S(VAL, S) { (VAL), (S), 0, 0 },
+      |                      ^
+./clone-flagtab.h:47:1: note: in expansion of macro '_S'
+   47 | _S(0x100000000ULL,      "CLONE_CLEAR_SIGHAND")
+      | ^~
+../lib/gen_tables.c:89:22: warning: overflow in conversion from 'long long unsigned int' to 'int' changes value from '8589934592' to '0' [-Woverflow]
+   89 | #define _S(VAL, S) { (VAL), (S), 0, 0 },
+      |                      ^
+./clone-flagtab.h:48:1: note: in expansion of macro '_S'
+   48 | _S(0x200000000ULL,      "CLONE_INTO_CGROUP")
+      | ^~
+mv -f ../lib/.deps/gen_ipccmdtabs_h-gen_tables.Tpo ../lib/.deps/gen_ipccmdtabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="nfprototab.h"' -g -O2 -MT ../lib/gen_nfprototabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_nfprototabs_h-gen_tables.Tpo -c -o ../lib/gen_nfprototabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_fsconfigs_h-gen_tables.Tpo ../lib/.deps/gen_fsconfigs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="open-flagtab.h"' -g -O2 -MT ../lib/gen_open_flagtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_open_flagtabs_h-gen_tables.Tpo -c -o ../lib/gen_open_flagtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_famtabs_h-gen_tables.Tpo ../lib/.deps/gen_famtabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_ip6optnametabs_h-gen_tables.Tpo ../lib/.deps/gen_ip6optnametabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="persontab.h"' -g -O2 -MT ../lib/gen_persontabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_persontabs_h-gen_tables.Tpo -c -o ../lib/gen_persontabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="prctl-opt-tab.h"' -g -O2 -MT ../lib/gen_prctl_opttabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_prctl_opttabs_h-gen_tables.Tpo -c -o ../lib/gen_prctl_opttabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_accesstabs_h-gen_tables.Tpo ../lib/.deps/gen_accesstabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="pktoptnametab.h"' -g -O2 -MT ../lib/gen_pktoptnametabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_pktoptnametabs_h-gen_tables.Tpo -c -o ../lib/gen_pktoptnametabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_ioctlreqtabs_h-gen_tables.Tpo ../lib/.deps/gen_ioctlreqtabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="prottab.h"' -g -O2 -MT ../lib/gen_prottabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_prottabs_h-gen_tables.Tpo -c -o ../lib/gen_prottabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_clock_h-gen_tables.Tpo ../lib/.deps/gen_clock_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="ptracetab.h"' -g -O2 -MT ../lib/gen_ptracetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_ptracetabs_h-gen_tables.Tpo -c -o ../lib/gen_ptracetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_epoll_ctls_h-gen_tables.Tpo ../lib/.deps/gen_epoll_ctls_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="rlimittab.h"' -g -O2 -MT ../lib/gen_rlimit_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_rlimit_h-gen_tables.Tpo -c -o ../lib/gen_rlimit_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_icmptypetabs_h-gen_tables.Tpo ../lib/.deps/gen_icmptypetabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="recvtab.h"' -g -O2 -MT ../lib/gen_recvtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_recvtabs_h-gen_tables.Tpo -c -o ../lib/gen_recvtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_captabs_h-gen_tables.Tpo ../lib/.deps/gen_captabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_clone_flagtabs_h-gen_tables.Tpo ../lib/.deps/gen_clone_flagtabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_fcntl_cmdtabs_h-gen_tables.Tpo ../lib/.deps/gen_fcntl_cmdtabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_ipoptnametabs_h-gen_tables.Tpo ../lib/.deps/gen_ipoptnametabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_mmaptabs_h-gen_tables.Tpo ../lib/.deps/gen_mmaptabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_mounttabs_h-gen_tables.Tpo ../lib/.deps/gen_mounttabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="schedtab.h"' -g -O2 -MT ../lib/gen_schedtabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_schedtabs_h-gen_tables.Tpo -c -o ../lib/gen_schedtabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="seccomptab.h"' -g -O2 -MT ../lib/gen_seccomptabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_seccomptabs_h-gen_tables.Tpo -c -o ../lib/gen_seccomptabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="seektab.h"' -g -O2 -MT ../lib/gen_seektabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_seektabs_h-gen_tables.Tpo -c -o ../lib/gen_seektabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="shm_modetab.h"' -g -O2 -MT ../lib/gen_shm_modetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_shm_modetabs_h-gen_tables.Tpo -c -o ../lib/gen_shm_modetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="signaltab.h"' -g -O2 -MT ../lib/gen_signals_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_signals_h-gen_tables.Tpo -c -o ../lib/gen_signals_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="sockoptnametab.h"' -g -O2 -MT ../lib/gen_sockoptnametabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_sockoptnametabs_h-gen_tables.Tpo -c -o ../lib/gen_sockoptnametabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_ipctabs_h-gen_tables.Tpo ../lib/.deps/gen_ipctabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="socktab.h"' -g -O2 -MT ../lib/gen_socktabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_socktabs_h-gen_tables.Tpo -c -o ../lib/gen_socktabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_open_flagtabs_h-gen_tables.Tpo ../lib/.deps/gen_open_flagtabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="sockleveltab.h"' -g -O2 -MT ../lib/gen_sockleveltabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_sockleveltabs_h-gen_tables.Tpo -c -o ../lib/gen_sockleveltabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_nfprototabs_h-gen_tables.Tpo ../lib/.deps/gen_nfprototabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="socktypetab.h"' -g -O2 -MT ../lib/gen_socktypetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_socktypetabs_h-gen_tables.Tpo -c -o ../lib/gen_socktypetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_prctl_opttabs_h-gen_tables.Tpo ../lib/.deps/gen_prctl_opttabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_persontabs_h-gen_tables.Tpo ../lib/.deps/gen_persontabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="tcpoptnametab.h"' -g -O2 -MT ../lib/gen_tcpoptnametabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_tcpoptnametabs_h-gen_tables.Tpo -c -o ../lib/gen_tcpoptnametabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="typetab.h"' -g -O2 -MT ../lib/gen_typetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_typetabs_h-gen_tables.Tpo -c -o ../lib/gen_typetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_pktoptnametabs_h-gen_tables.Tpo ../lib/.deps/gen_pktoptnametabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="umounttab.h"' -g -O2 -MT ../lib/gen_umounttabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_umounttabs_h-gen_tables.Tpo -c -o ../lib/gen_umounttabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_prottabs_h-gen_tables.Tpo ../lib/.deps/gen_prottabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="inethooktab.h"' -g -O2 -MT ../lib/gen_inethooktabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_inethooktabs_h-gen_tables.Tpo -c -o ../lib/gen_inethooktabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_rlimit_h-gen_tables.Tpo ../lib/.deps/gen_rlimit_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="netactiontab.h"' -g -O2 -MT ../lib/gen_netactiontabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_netactiontabs_h-gen_tables.Tpo -c -o ../lib/gen_netactiontabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_socktypetabs_h-gen_tables.Tpo ../lib/.deps/gen_socktypetabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="normalize_obj_kind_map.h"' -g -O2 -MT ../lib/gen_normalize_obj_kind_map-gen_tables.o -MD -MP -MF ../lib/.deps/gen_normalize_obj_kind_map-gen_tables.Tpo -c -o ../lib/gen_normalize_obj_kind_map-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_ptracetabs_h-gen_tables.Tpo ../lib/.deps/gen_ptracetabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="normalize_record_map.h"' -g -O2 -MT ../lib/gen_normalize_record_map-gen_tables.o -MD -MP -MF ../lib/.deps/gen_normalize_record_map-gen_tables.Tpo -c -o ../lib/gen_normalize_record_map-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_socktabs_h-gen_tables.Tpo ../lib/.deps/gen_socktabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_tcpoptnametabs_h-gen_tables.Tpo ../lib/.deps/gen_tcpoptnametabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_typetabs_h-gen_tables.Tpo ../lib/.deps/gen_typetabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_umounttabs_h-gen_tables.Tpo ../lib/.deps/gen_umounttabs_h-gen_tables.Po
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="normalize_syscall_map.h"' -g -O2 -MT ../lib/gen_normalize_syscall_map-gen_tables.o -MD -MP -MF ../lib/.deps/gen_normalize_syscall_map-gen_tables.Tpo -c -o ../lib/gen_normalize_syscall_map-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="normalize_evtypetab.h"' -g -O2 -MT ../lib/gen_normalize_evtypetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_normalize_evtypetabs_h-gen_tables.Tpo -c -o ../lib/gen_normalize_evtypetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="bpftab.h"' -g -O2 -MT ../lib/gen_bpftabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_bpftabs_h-gen_tables.Tpo -c -o ../lib/gen_bpftabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+gcc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  '-DTABLE_H="openat2-resolvetab.h"' -g -O2 -MT ../lib/gen_openat2_resolvetabs_h-gen_tables.o -MD -MP -MF ../lib/.deps/gen_openat2_resolvetabs_h-gen_tables.Tpo -c -o ../lib/gen_openat2_resolvetabs_h-gen_tables.o `test -f '../lib/gen_tables.c' || echo './'`../lib/gen_tables.c
+mv -f ../lib/.deps/gen_sockleveltabs_h-gen_tables.Tpo ../lib/.deps/gen_sockleveltabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="accesstab.h"' -g -O2   -o gen_accesstabs_h ../lib/gen_accesstabs_h-gen_tables.o  
+mv -f ../lib/.deps/gen_sockoptnametabs_h-gen_tables.Tpo ../lib/.deps/gen_sockoptnametabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="captab.h"' -g -O2   -o gen_captabs_h ../lib/gen_captabs_h-gen_tables.o  
+mv -f ../lib/.deps/gen_shm_modetabs_h-gen_tables.Tpo ../lib/.deps/gen_shm_modetabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="clocktab.h"' -g -O2   -o gen_clock_h ../lib/gen_clock_h-gen_tables.o  
+mv -f ../lib/.deps/gen_recvtabs_h-gen_tables.Tpo ../lib/.deps/gen_recvtabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="clone-flagtab.h"' -g -O2   -o gen_clone-flagtabs_h ../lib/gen_clone_flagtabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"accesstab.h\"" -g -O2 -o gen_accesstabs_h ../lib/gen_accesstabs_h-gen_tables.o 
+mv -f ../lib/.deps/gen_seektabs_h-gen_tables.Tpo ../lib/.deps/gen_seektabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="epoll_ctl.h"' -g -O2   -o gen_epoll_ctls_h ../lib/gen_epoll_ctls_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"captab.h\"" -g -O2 -o gen_captabs_h ../lib/gen_captabs_h-gen_tables.o 
+mv -f ../lib/.deps/gen_seccomptabs_h-gen_tables.Tpo ../lib/.deps/gen_seccomptabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="famtab.h"' -g -O2   -o gen_famtabs_h ../lib/gen_famtabs_h-gen_tables.o  
+mv -f ../lib/.deps/gen_signals_h-gen_tables.Tpo ../lib/.deps/gen_signals_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="fcntl-cmdtab.h"' -g -O2   -o gen_fcntl-cmdtabs_h ../lib/gen_fcntl_cmdtabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="fsconfig.h"' -g -O2   -o gen_fsconfigs_h ../lib/gen_fsconfigs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="icmptypetab.h"' -g -O2   -o gen_icmptypetabs_h ../lib/gen_icmptypetabs_h-gen_tables.o  
+mv -f ../lib/.deps/gen_schedtabs_h-gen_tables.Tpo ../lib/.deps/gen_schedtabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ipctab.h"' -g -O2   -o gen_ipctabs_h ../lib/gen_ipctabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"clocktab.h\"" -g -O2 -o gen_clock_h ../lib/gen_clock_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"clone-flagtab.h\"" -g -O2 -o gen_clone-flagtabs_h ../lib/gen_clone_flagtabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ipccmdtab.h"' -g -O2   -o gen_ipccmdtabs_h ../lib/gen_ipccmdtabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"epoll_ctl.h\"" -g -O2 -o gen_epoll_ctls_h ../lib/gen_epoll_ctls_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"famtab.h\"" -g -O2 -o gen_famtabs_h ../lib/gen_famtabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ioctlreqtab.h"' -g -O2   -o gen_ioctlreqtabs_h ../lib/gen_ioctlreqtabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"fcntl-cmdtab.h\"" -g -O2 -o gen_fcntl-cmdtabs_h ../lib/gen_fcntl_cmdtabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"fsconfig.h\"" -g -O2 -o gen_fsconfigs_h ../lib/gen_fsconfigs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"icmptypetab.h\"" -g -O2 -o gen_icmptypetabs_h ../lib/gen_icmptypetabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ipoptnametab.h"' -g -O2   -o gen_ipoptnametabs_h ../lib/gen_ipoptnametabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ip6optnametab.h"' -g -O2   -o gen_ip6optnametabs_h ../lib/gen_ip6optnametabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ipctab.h\"" -g -O2 -o gen_ipctabs_h ../lib/gen_ipctabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="mmaptab.h"' -g -O2   -o gen_mmaptabs_h ../lib/gen_mmaptabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="mounttab.h"' -g -O2   -o gen_mounttabs_h ../lib/gen_mounttabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="nfprototab.h"' -g -O2   -o gen_nfprototabs_h ../lib/gen_nfprototabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ipccmdtab.h\"" -g -O2 -o gen_ipccmdtabs_h ../lib/gen_ipccmdtabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="open-flagtab.h"' -g -O2   -o gen_open-flagtabs_h ../lib/gen_open_flagtabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ioctlreqtab.h\"" -g -O2 -o gen_ioctlreqtabs_h ../lib/gen_ioctlreqtabs_h-gen_tables.o 
+mv -f ../lib/.deps/gen_openat2_resolvetabs_h-gen_tables.Tpo ../lib/.deps/gen_openat2_resolvetabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_normalize_evtypetabs_h-gen_tables.Tpo ../lib/.deps/gen_normalize_evtypetabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="persontab.h"' -g -O2   -o gen_persontabs_h ../lib/gen_persontabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="prctl-opt-tab.h"' -g -O2   -o gen_prctl_opttabs_h ../lib/gen_prctl_opttabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="pktoptnametab.h"' -g -O2   -o gen_pktoptnametabs_h ../lib/gen_pktoptnametabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ipoptnametab.h\"" -g -O2 -o gen_ipoptnametabs_h ../lib/gen_ipoptnametabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"ip6optnametab.h\"" -g -O2 -o gen_ip6optnametabs_h ../lib/gen_ip6optnametabs_h-gen_tables.o 
+mv -f ../lib/.deps/gen_normalize_syscall_map-gen_tables.Tpo ../lib/.deps/gen_normalize_syscall_map-gen_tables.Po
+mv -f ../lib/.deps/gen_inethooktabs_h-gen_tables.Tpo ../lib/.deps/gen_inethooktabs_h-gen_tables.Po
+mv -f ../lib/.deps/gen_normalize_record_map-gen_tables.Tpo ../lib/.deps/gen_normalize_record_map-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="prottab.h"' -g -O2   -o gen_prottabs_h ../lib/gen_prottabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="ptracetab.h"' -g -O2   -o gen_ptracetabs_h ../lib/gen_ptracetabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="rlimittab.h"' -g -O2   -o gen_rlimit_h ../lib/gen_rlimit_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="recvtab.h"' -g -O2   -o gen_recvtabs_h ../lib/gen_recvtabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"mmaptab.h\"" -g -O2 -o gen_mmaptabs_h ../lib/gen_mmaptabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="schedtab.h"' -g -O2   -o gen_schedtabs_h ../lib/gen_schedtabs_h-gen_tables.o  
+mv -f ../lib/.deps/gen_bpftabs_h-gen_tables.Tpo ../lib/.deps/gen_bpftabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="seccomptab.h"' -g -O2   -o gen_seccomptabs_h ../lib/gen_seccomptabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"mounttab.h\"" -g -O2 -o gen_mounttabs_h ../lib/gen_mounttabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"nfprototab.h\"" -g -O2 -o gen_nfprototabs_h ../lib/gen_nfprototabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"prctl-opt-tab.h\"" -g -O2 -o gen_prctl_opttabs_h ../lib/gen_prctl_opttabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"open-flagtab.h\"" -g -O2 -o gen_open-flagtabs_h ../lib/gen_open_flagtabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"pktoptnametab.h\"" -g -O2 -o gen_pktoptnametabs_h ../lib/gen_pktoptnametabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="seektab.h"' -g -O2   -o gen_seektabs_h ../lib/gen_seektabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="shm_modetab.h"' -g -O2   -o gen_shm_modetabs_h ../lib/gen_shm_modetabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="signaltab.h"' -g -O2   -o gen_signals_h ../lib/gen_signals_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="sockoptnametab.h"' -g -O2   -o gen_sockoptnametabs_h ../lib/gen_sockoptnametabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="socktab.h"' -g -O2   -o gen_socktabs_h ../lib/gen_socktabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"persontab.h\"" -g -O2 -o gen_persontabs_h ../lib/gen_persontabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="sockleveltab.h"' -g -O2   -o gen_sockleveltabs_h ../lib/gen_sockleveltabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="socktypetab.h"' -g -O2   -o gen_socktypetabs_h ../lib/gen_socktypetabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"ptracetab.h\"" -g -O2 -o gen_ptracetabs_h ../lib/gen_ptracetabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"rlimittab.h\"" -g -O2 -o gen_rlimit_h ../lib/gen_rlimit_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"recvtab.h\"" -g -O2 -o gen_recvtabs_h ../lib/gen_recvtabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"schedtab.h\"" -g -O2 -o gen_schedtabs_h ../lib/gen_schedtabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"seccomptab.h\"" -g -O2 -o gen_seccomptabs_h ../lib/gen_seccomptabs_h-gen_tables.o 
+mv -f ../lib/.deps/gen_normalize_obj_kind_map-gen_tables.Tpo ../lib/.deps/gen_normalize_obj_kind_map-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="tcpoptnametab.h"' -g -O2   -o gen_tcpoptnametabs_h ../lib/gen_tcpoptnametabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="typetab.h"' -g -O2   -o gen_typetabs_h ../lib/gen_typetabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="umounttab.h"' -g -O2   -o gen_umounttabs_h ../lib/gen_umounttabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"prottab.h\"" -g -O2 -o gen_prottabs_h ../lib/gen_prottabs_h-gen_tables.o 
+mv -f ../lib/.deps/gen_netactiontabs_h-gen_tables.Tpo ../lib/.deps/gen_netactiontabs_h-gen_tables.Po
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="inethooktab.h"' -g -O2   -o gen_inethooktabs_h ../lib/gen_inethooktabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"seektab.h\"" -g -O2 -o gen_seektabs_h ../lib/gen_seektabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="netactiontab.h"' -g -O2   -o gen_netactiontabs_h ../lib/gen_netactiontabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="normalize_obj_kind_map.h"' -g -O2   -o gen_normalize_obj_kind_map ../lib/gen_normalize_obj_kind_map-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="normalize_record_map.h"' -g -O2   -o gen_normalize_record_map ../lib/gen_normalize_record_map-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"socktab.h\"" -g -O2 -o gen_socktabs_h ../lib/gen_socktabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"shm_modetab.h\"" -g -O2 -o gen_shm_modetabs_h ../lib/gen_shm_modetabs_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="normalize_syscall_map.h"' -g -O2   -o gen_normalize_syscall_map ../lib/gen_normalize_syscall_map-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="normalize_evtypetab.h"' -g -O2   -o gen_normalize_evtypetabs_h ../lib/gen_normalize_evtypetabs_h-gen_tables.o  
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="bpftab.h"' -g -O2   -o gen_bpftabs_h ../lib/gen_bpftabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"socktypetab.h\"" -g -O2 -o gen_socktypetabs_h ../lib/gen_socktypetabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"sockleveltab.h\"" -g -O2 -o gen_sockleveltabs_h ../lib/gen_sockleveltabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"signaltab.h\"" -g -O2 -o gen_signals_h ../lib/gen_signals_h-gen_tables.o 
+/bin/sh ../libtool  --tag=CC   --mode=link gcc '-DTABLE_H="openat2-resolvetab.h"' -g -O2   -o gen_openat2-resolvetabs_h ../lib/gen_openat2_resolvetabs_h-gen_tables.o  
+libtool: link: gcc "-DTABLE_H=\"sockoptnametab.h\"" -g -O2 -o gen_sockoptnametabs_h ../lib/gen_sockoptnametabs_h-gen_tables.o 
+./gen_accesstabs_h --i2s-transtab access > accesstabs.h
+libtool: link: gcc "-DTABLE_H=\"umounttab.h\"" -g -O2 -o gen_umounttabs_h ../lib/gen_umounttabs_h-gen_tables.o 
+./gen_captabs_h --i2s cap > captabs.h
+libtool: link: gcc "-DTABLE_H=\"tcpoptnametab.h\"" -g -O2 -o gen_tcpoptnametabs_h ../lib/gen_tcpoptnametabs_h-gen_tables.o 
+./gen_clock_h --i2s clock > clocktabs.h
+./gen_clone-flagtabs_h --i2s-transtab clone_flag > clone-flagtabs.h
+./gen_epoll_ctls_h --i2s epoll_ctl > epoll_ctls.h
+./gen_famtabs_h --i2s fam > famtabs.h
+./gen_fcntl-cmdtabs_h --i2s fcntl > fcntl-cmdtabs.h
+./gen_fsconfigs_h --i2s fsconfig > fsconfigs.h
+./gen_icmptypetabs_h --i2s icmptype > icmptypetabs.h
+./gen_ipctabs_h --i2s ipc > ipctabs.h
+./gen_ipccmdtabs_h --i2s-transtab ipccmd > ipccmdtabs.h
+./gen_ioctlreqtabs_h --i2s ioctlreq > ioctlreqtabs.h
+./gen_ipoptnametabs_h --i2s ipoptname > ipoptnametabs.h
+./gen_ip6optnametabs_h --i2s ip6optname > ip6optnametabs.h
+./gen_mmaptabs_h --i2s-transtab mmap > mmaptabs.h
+./gen_mounttabs_h --i2s-transtab mount > mounttabs.h
+./gen_nfprototabs_h --i2s nfproto > nfprototabs.h
+./gen_open-flagtabs_h --i2s-transtab open_flag > open-flagtabs.h
+./gen_persontabs_h --i2s person > persontabs.h
+./gen_prctl_opttabs_h --i2s prctl_opt > prctl_opttabs.h
+./gen_pktoptnametabs_h --i2s pktoptname > pktoptnametabs.h
+./gen_prottabs_h --i2s-transtab prot > prottabs.h
+./gen_ptracetabs_h --i2s ptrace > ptracetabs.h
+./gen_rlimit_h --i2s rlimit > rlimittabs.h
+./gen_recvtabs_h --i2s-transtab recv > recvtabs.h
+./gen_schedtabs_h --i2s sched > schedtabs.h
+./gen_seccomptabs_h --i2s seccomp > seccomptabs.h
+./gen_seektabs_h --i2s seek > seektabs.h
+./gen_shm_modetabs_h --i2s-transtab shm_mode > shm_modetabs.h
+./gen_signals_h --i2s signal > signaltabs.h
+libtool: link: gcc "-DTABLE_H=\"typetab.h\"" -g -O2 -o gen_typetabs_h ../lib/gen_typetabs_h-gen_tables.o 
+./gen_socktabs_h --i2s sock > socktabs.h
+./gen_sockleveltabs_h --i2s socklevel > sockleveltabs.h
+./gen_socktypetabs_h --i2s sock_type > socktypetabs.h
+libtool: link: gcc "-DTABLE_H=\"inethooktab.h\"" -g -O2 -o gen_inethooktabs_h ../lib/gen_inethooktabs_h-gen_tables.o 
+./gen_tcpoptnametabs_h --i2s tcpoptname > tcpoptnametabs.h
+./gen_sockoptnametabs_h --i2s sockoptname > sockoptnametabs.h
+./gen_umounttabs_h --i2s-transtab umount > umounttabs.h
+libtool: link: gcc "-DTABLE_H=\"normalize_record_map.h\"" -g -O2 -o gen_normalize_record_map ../lib/gen_normalize_record_map-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"netactiontab.h\"" -g -O2 -o gen_netactiontabs_h ../lib/gen_netactiontabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"normalize_syscall_map.h\"" -g -O2 -o gen_normalize_syscall_map ../lib/gen_normalize_syscall_map-gen_tables.o 
+./gen_netactiontabs_h --i2s netaction > netactiontabs.h
+libtool: link: gcc "-DTABLE_H=\"normalize_obj_kind_map.h\"" -g -O2 -o gen_normalize_obj_kind_map ../lib/gen_normalize_obj_kind_map-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"normalize_evtypetab.h\"" -g -O2 -o gen_normalize_evtypetabs_h ../lib/gen_normalize_evtypetabs_h-gen_tables.o 
+libtool: link: gcc "-DTABLE_H=\"bpftab.h\"" -g -O2 -o gen_bpftabs_h ../lib/gen_bpftabs_h-gen_tables.o 
+./gen_typetabs_h --s2i type > typetabs.h
+libtool: link: gcc "-DTABLE_H=\"openat2-resolvetab.h\"" -g -O2 -o gen_openat2-resolvetabs_h ../lib/gen_openat2_resolvetabs_h-gen_tables.o 
+./gen_inethooktabs_h --i2s inethook > inethooktabs.h
+./gen_normalize_record_map --lowercase --i2s normalize_record_map > normalize_record_maps.h
+./gen_normalize_obj_kind_map --lowercase --i2s normalize_obj_kind_map > normalize_obj_kind_maps.h
+./gen_normalize_syscall_map --lowercase --s2i normalize_syscall_map > normalize_syscall_maps.h
+./gen_bpftabs_h --i2s bpf > bpftabs.h
+./gen_normalize_evtypetabs_h --i2s evtype > normalize_evtypetabs.h
+./gen_openat2-resolvetabs_h --i2s-transtab openat2_resolve > openat2-resolvetabs.h
+make  all-recursive
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+Making all in test
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+depbase=`echo lru.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lru.lo -MD -MP -MF $depbase.Tpo -c -o lru.lo lru.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo interpret.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT interpret.lo -MD -MP -MF $depbase.Tpo -c -o interpret.lo interpret.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo nvlist.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT nvlist.lo -MD -MP -MF $depbase.Tpo -c -o nvlist.lo nvlist.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo ellist.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ellist.lo -MD -MP -MF $depbase.Tpo -c -o ellist.lo ellist.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo auparse.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auparse.lo -MD -MP -MF $depbase.Tpo -c -o auparse.lo auparse.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo auditd-config.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-config.lo -MD -MP -MF $depbase.Tpo -c -o auditd-config.lo auditd-config.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo message.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT message.lo -MD -MP -MF $depbase.Tpo -c -o message.lo message.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo data_buf.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT data_buf.lo -MD -MP -MF $depbase.Tpo -c -o data_buf.lo data_buf.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo expression.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT expression.lo -MD -MP -MF $depbase.Tpo -c -o expression.lo expression.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo normalize.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT normalize.lo -MD -MP -MF $depbase.Tpo -c -o normalize.lo normalize.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo normalize-llist.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -I. -I.. -I../src -I../lib -I../common  -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT normalize-llist.lo -MD -MP -MF $depbase.Tpo -c -o normalize-llist.lo normalize-llist.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT interpret.lo -MD -MP -MF .deps/interpret.Tpo -c interpret.c  -fPIC -DPIC -o .libs/interpret.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT expression.lo -MD -MP -MF .deps/expression.Tpo -c expression.c  -fPIC -DPIC -o .libs/expression.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auparse.lo -MD -MP -MF .deps/auparse.Tpo -c auparse.c  -fPIC -DPIC -o .libs/auparse.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ellist.lo -MD -MP -MF .deps/ellist.Tpo -c ellist.c  -fPIC -DPIC -o .libs/ellist.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT nvlist.lo -MD -MP -MF .deps/nvlist.Tpo -c nvlist.c  -fPIC -DPIC -o .libs/nvlist.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lru.lo -MD -MP -MF .deps/lru.Tpo -c lru.c  -fPIC -DPIC -o .libs/lru.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT normalize-llist.lo -MD -MP -MF .deps/normalize-llist.Tpo -c normalize-llist.c  -fPIC -DPIC -o .libs/normalize-llist.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT message.lo -MD -MP -MF .deps/message.Tpo -c message.c  -fPIC -DPIC -o .libs/message.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT normalize.lo -MD -MP -MF .deps/normalize.Tpo -c normalize.c  -fPIC -DPIC -o .libs/normalize.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT data_buf.lo -MD -MP -MF .deps/data_buf.Tpo -c data_buf.c  -fPIC -DPIC -o .libs/data_buf.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-config.lo -MD -MP -MF .deps/auditd-config.Tpo -c auditd-config.c  -fPIC -DPIC -o .libs/auditd-config.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT message.lo -MD -MP -MF .deps/message.Tpo -c message.c -o message.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT normalize-llist.lo -MD -MP -MF .deps/normalize-llist.Tpo -c normalize-llist.c -o normalize-llist.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT nvlist.lo -MD -MP -MF .deps/nvlist.Tpo -c nvlist.c -o nvlist.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lru.lo -MD -MP -MF .deps/lru.Tpo -c lru.c -o lru.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-config.lo -MD -MP -MF .deps/auditd-config.Tpo -c auditd-config.c -o auditd-config.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT data_buf.lo -MD -MP -MF .deps/data_buf.Tpo -c data_buf.c -o data_buf.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ellist.lo -MD -MP -MF .deps/ellist.Tpo -c ellist.c -o ellist.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT expression.lo -MD -MP -MF .deps/expression.Tpo -c expression.c -o expression.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auparse.lo -MD -MP -MF .deps/auparse.Tpo -c auparse.c -o auparse.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT normalize.lo -MD -MP -MF .deps/normalize.Tpo -c normalize.c -o normalize.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -I. -I.. -I../src -I../lib -I../common -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT interpret.lo -MD -MP -MF .deps/interpret.Tpo -c interpret.c -o interpret.o >/dev/null 2>&1
+/bin/sh ../libtool  --tag=CC   --mode=link cc -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,-z,relro -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libauparse.la -rpath /usr/lib lru.lo interpret.lo nvlist.lo ellist.lo auparse.lo auditd-config.lo message.lo data_buf.lo expression.lo normalize.lo normalize-llist.lo  ../lib/libaudit.la ../common/libaucommon.la 
+libtool: link: cc -shared  -fPIC -DPIC  .libs/lru.o .libs/interpret.o .libs/nvlist.o .libs/ellist.o .libs/auparse.o .libs/auditd-config.o .libs/message.o .libs/data_buf.o .libs/expression.o .libs/normalize.o .libs/normalize-llist.o  -Wl,--whole-archive ../common/.libs/libaucommon.a -Wl,--no-whole-archive  -Wl,-rpath -Wl,/tmp/src/audit-userspace-4.0.3/lib/.libs ../lib/.libs/libaudit.so -lcap-ng  -g -Os -Werror=format-security -Wl,-z -Wl,relro -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libauparse.so.0 -o .libs/libauparse.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libauparse.so.0" && ln -s "libauparse.so.0.0.0" "libauparse.so.0")
+libtool: link: (cd ".libs" && rm -f "libauparse.so" && ln -s "libauparse.so.0.0.0" "libauparse.so")
+libtool: link: (cd .libs/libauparse.lax/libaucommon.a && ar x "/tmp/src/audit-userspace-4.0.3/auparse/../common/.libs/libaucommon.a")
+libtool: link: ar cr .libs/libauparse.a  lru.o interpret.o nvlist.o ellist.o auparse.o auditd-config.o message.o data_buf.o expression.o normalize.o normalize-llist.o  .libs/libauparse.lax/libaucommon.a/audit-fgets.o .libs/libauparse.lax/libaucommon.a/common.o .libs/libauparse.lax/libaucommon.a/strsplit.o 
+libtool: link: ranlib .libs/libauparse.a
+libtool: link: rm -fr .libs/libauparse.lax
+libtool: link: ( cd ".libs" && rm -f "libauparse.la" && ln -s "../libauparse.la" "libauparse.la" )
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+Making all in audisp
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+Making all in plugins
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+Making all in af_unix
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common -I../../../audisp  -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audisp_af_unix-audisp-af_unix.o -MD -MP -MF .deps/audisp_af_unix-audisp-af_unix.Tpo -c -o audisp_af_unix-audisp-af_unix.o `test -f 'audisp-af_unix.c' || echo './'`audisp-af_unix.c
+mv -f .deps/audisp_af_unix-audisp-af_unix.Tpo .deps/audisp_af_unix-audisp-af_unix.Po
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o audisp-af_unix audisp_af_unix-audisp-af_unix.o -lcap-ng ../../../common/libaucommon.la ../../../lib/libaudit.la
+libtool: link: cc -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/audisp-af_unix audisp_af_unix-audisp-af_unix.o  ../../../common/.libs/libaucommon.a ../../../lib/.libs/libaudit.so -lcap-ng
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+Making all in remote
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audisp_remote-audisp-remote.o -MD -MP -MF .deps/audisp_remote-audisp-remote.Tpo -c -o audisp_remote-audisp-remote.o `test -f 'audisp-remote.c' || echo './'`audisp-remote.c
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audisp_remote-remote-config.o -MD -MP -MF .deps/audisp_remote-remote-config.Tpo -c -o audisp_remote-remote-config.o `test -f 'remote-config.c' || echo './'`remote-config.c
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audisp_remote-queue.o -MD -MP -MF .deps/audisp_remote-queue.Tpo -c -o audisp_remote-queue.o `test -f 'queue.c' || echo './'`queue.c
+mv -f .deps/audisp_remote-queue.Tpo .deps/audisp_remote-queue.Po
+mv -f .deps/audisp_remote-remote-config.Tpo .deps/audisp_remote-remote-config.Po
+mv -f .deps/audisp_remote-audisp-remote.Tpo .deps/audisp_remote-audisp-remote.Po
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o audisp-remote audisp_remote-audisp-remote.o audisp_remote-remote-config.o audisp_remote-queue.o -lcap-ng  ../../../common/libaucommon.la 
+libtool: link: cc -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o audisp-remote audisp_remote-audisp-remote.o audisp_remote-remote-config.o audisp_remote-queue.o  -lcap-ng ../../../common/.libs/libaucommon.a
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+Making all in syslog
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common -I../../../auparse  -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audisp_syslog-audisp-syslog.o -MD -MP -MF .deps/audisp_syslog-audisp-syslog.Tpo -c -o audisp_syslog-audisp-syslog.o `test -f 'audisp-syslog.c' || echo './'`audisp-syslog.c
+mv -f .deps/audisp_syslog-audisp-syslog.Tpo .deps/audisp_syslog-audisp-syslog.Po
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o audisp-syslog audisp_syslog-audisp-syslog.o -lcap-ng ../../../common/libaucommon.la ../../../auparse/libauparse.la 
+libtool: link: cc -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/audisp-syslog audisp_syslog-audisp-syslog.o  ../../../common/.libs/libaucommon.a ../../../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+Making all in filter
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common -I../../../auparse  -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT audisp_filter-audisp-filter.o -MD -MP -MF .deps/audisp_filter-audisp-filter.Tpo -c -o audisp_filter-audisp-filter.o `test -f 'audisp-filter.c' || echo './'`audisp-filter.c
+mv -f .deps/audisp_filter-audisp-filter.Tpo .deps/audisp_filter-audisp-filter.Po
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o audisp-filter audisp_filter-audisp-filter.o -lcap-ng ../../../common/libaucommon.la ../../../auparse/libauparse.la 
+libtool: link: cc -fPIE -DPIE -g -D_GNU_SOURCE -Wundef -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/audisp-filter audisp_filter-audisp-filter.o  ../../../common/.libs/libaucommon.a ../../../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common  -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd.lo -MD -MP -MF .deps/libdisp_la-audispd.Tpo -c -o libdisp_la-audispd.lo `test -f 'audispd.c' || echo './'`audispd.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common  -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd-pconfig.lo -MD -MP -MF .deps/libdisp_la-audispd-pconfig.Tpo -c -o libdisp_la-audispd-pconfig.lo `test -f 'audispd-pconfig.c' || echo './'`audispd-pconfig.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common  -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-queue.lo -MD -MP -MF .deps/libdisp_la-queue.Tpo -c -o libdisp_la-queue.lo `test -f 'queue.c' || echo './'`queue.c
+/bin/sh ../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I..  -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common  -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd-llist.lo -MD -MP -MF .deps/libdisp_la-audispd-llist.Tpo -c -o libdisp_la-audispd-llist.lo `test -f 'audispd-llist.c' || echo './'`audispd-llist.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd-llist.lo -MD -MP -MF .deps/libdisp_la-audispd-llist.Tpo -c audispd-llist.c  -fPIC -DPIC -o .libs/libdisp_la-audispd-llist.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-queue.lo -MD -MP -MF .deps/libdisp_la-queue.Tpo -c queue.c  -fPIC -DPIC -o .libs/libdisp_la-queue.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd.lo -MD -MP -MF .deps/libdisp_la-audispd.Tpo -c audispd.c  -fPIC -DPIC -o .libs/libdisp_la-audispd.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd-pconfig.lo -MD -MP -MF .deps/libdisp_la-audispd-pconfig.Tpo -c audispd-pconfig.c  -fPIC -DPIC -o .libs/libdisp_la-audispd-pconfig.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd-llist.lo -MD -MP -MF .deps/libdisp_la-audispd-llist.Tpo -c audispd-llist.c -o libdisp_la-audispd-llist.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-queue.lo -MD -MP -MF .deps/libdisp_la-queue.Tpo -c queue.c -o libdisp_la-queue.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd-pconfig.lo -MD -MP -MF .deps/libdisp_la-audispd-pconfig.Tpo -c audispd-pconfig.c -o libdisp_la-audispd-pconfig.o >/dev/null 2>&1
+mv -f .deps/libdisp_la-audispd-llist.Tpo .deps/libdisp_la-audispd-llist.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I.. -D_GNU_SOURCE -fPIC -DPIC -I.. -I../lib -I../src -I../src/libev -I../common -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT libdisp_la-audispd.lo -MD -MP -MF .deps/libdisp_la-audispd.Tpo -c audispd.c -o libdisp_la-audispd.o >/dev/null 2>&1
+mv -f .deps/libdisp_la-queue.Tpo .deps/libdisp_la-queue.Plo
+mv -f .deps/libdisp_la-audispd-pconfig.Tpo .deps/libdisp_la-audispd-pconfig.Plo
+mv -f .deps/libdisp_la-audispd.Tpo .deps/libdisp_la-audispd.Plo
+/bin/sh ../libtool  --tag=CC   --mode=link cc -fno-strict-aliasing -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -no-undefined -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libdisp.la  libdisp_la-audispd.lo libdisp_la-audispd-pconfig.lo libdisp_la-queue.lo libdisp_la-audispd-llist.lo  ../lib/libaudit.la
+libtool: link: ar cr .libs/libdisp.a  libdisp_la-audispd.o libdisp_la-audispd-pconfig.o libdisp_la-queue.o libdisp_la-audispd-llist.o
+libtool: link: ranlib .libs/libdisp.a
+libtool: link: ( cd ".libs" && rm -f "libdisp.la" && ln -s "../libdisp.la" "libdisp.la" )
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+Making all in src/libev
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+depbase=`echo ev.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..    -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ev.lo -MD -MP -MF $depbase.Tpo -c -o ev.lo ev.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo event.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..    -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT event.lo -MD -MP -MF $depbase.Tpo -c -o event.lo event.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT event.lo -MD -MP -MF .deps/event.Tpo -c event.c  -fPIC -DPIC -o .libs/event.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ev.lo -MD -MP -MF .deps/ev.Tpo -c ev.c  -fPIC -DPIC -o .libs/ev.o
+ev.c:2146:31: warning: 'ev_default_loop_ptr' initialized and declared 'extern'
+ 2146 |   EV_API_DECL struct ev_loop *ev_default_loop_ptr = 0; /* needs to be initialised to make it a definition despite extern */
+      |                               ^~~~~~~~~~~~~~~~~~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT event.lo -MD -MP -MF .deps/event.Tpo -c event.c -o event.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ev.lo -MD -MP -MF .deps/ev.Tpo -c ev.c -o ev.o >/dev/null 2>&1
+/bin/sh ../../libtool  --tag=CC   --mode=link cc -fPIC -DPIC -g -fno-strict-aliasing -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -no-undefined -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libev.la  ev.lo event.lo  
+libtool: link: ar cr .libs/libev.a  ev.o event.o
+libtool: link: ranlib .libs/libev.a
+libtool: link: ( cd ".libs" && rm -f "libev.la" && ln -s "../libev.la" "libev.la" )
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+Making all in src
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+Making all in test
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd.o -MD -MP -MF .deps/auditd-auditd.Tpo -c -o auditd-auditd.o `test -f 'auditd.c' || echo './'`auditd.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd-event.o -MD -MP -MF .deps/auditd-auditd-event.Tpo -c -o auditd-auditd-event.o `test -f 'auditd-event.c' || echo './'`auditd-event.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd-config.o -MD -MP -MF .deps/auditd-auditd-config.Tpo -c -o auditd-auditd-config.o `test -f 'auditd-config.c' || echo './'`auditd-config.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd-reconfig.o -MD -MP -MF .deps/auditd-auditd-reconfig.Tpo -c -o auditd-auditd-reconfig.o `test -f 'auditd-reconfig.c' || echo './'`auditd-reconfig.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd-sendmail.o -MD -MP -MF .deps/auditd-auditd-sendmail.Tpo -c -o auditd-auditd-sendmail.o `test -f 'auditd-sendmail.c' || echo './'`auditd-sendmail.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd-dispatch.o -MD -MP -MF .deps/auditd-auditd-dispatch.Tpo -c -o auditd-auditd-dispatch.o `test -f 'auditd-dispatch.c' || echo './'`auditd-dispatch.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-auditd-listen.o -MD -MP -MF .deps/auditd-auditd-listen.Tpo -c -o auditd-auditd-listen.o `test -f 'auditd-listen.c' || echo './'`auditd-listen.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditctl-auditctl.o -MD -MP -MF .deps/auditctl-auditctl.Tpo -c -o auditctl-auditctl.o `test -f 'auditctl.c' || echo './'`auditctl.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditctl-auditctl-llist.o -MD -MP -MF .deps/auditctl-auditctl-llist.Tpo -c -o auditctl-auditctl-llist.o `test -f 'auditctl-llist.c' || echo './'`auditctl-llist.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditctl-delete_all.o -MD -MP -MF .deps/auditctl-delete_all.Tpo -c -o auditctl-delete_all.o `test -f 'delete_all.c' || echo './'`delete_all.c
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -fPIE -DPIE -g -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditctl-auditctl-listing.o -MD -MP -MF .deps/auditctl-auditctl-listing.Tpo -c -o auditctl-auditctl-listing.o `test -f 'auditctl-listing.c' || echo './'`auditctl-listing.c
+depbase=`echo aureport.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aureport.o -MD -MP -MF $depbase.Tpo -c -o aureport.o aureport.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo auditd-config.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auditd-config.o -MD -MP -MF $depbase.Tpo -c -o auditd-config.o auditd-config.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-llist.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-llist.o -MD -MP -MF $depbase.Tpo -c -o ausearch-llist.o ausearch-llist.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo aureport-options.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aureport-options.o -MD -MP -MF $depbase.Tpo -c -o aureport-options.o aureport-options.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-string.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-string.o -MD -MP -MF $depbase.Tpo -c -o ausearch-string.o ausearch-string.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditd-auditd-reconfig.Tpo .deps/auditd-auditd-reconfig.Po
+depbase=`echo ausearch-parse.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-parse.o -MD -MP -MF $depbase.Tpo -c -o ausearch-parse.o ausearch-parse.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditd-auditd-dispatch.Tpo .deps/auditd-auditd-dispatch.Po
+depbase=`echo aureport-scan.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aureport-scan.o -MD -MP -MF $depbase.Tpo -c -o aureport-scan.o aureport-scan.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditd-auditd-sendmail.Tpo .deps/auditd-auditd-sendmail.Po
+depbase=`echo aureport-output.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aureport-output.o -MD -MP -MF $depbase.Tpo -c -o aureport-output.o aureport-output.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditctl-auditctl-llist.Tpo .deps/auditctl-auditctl-llist.Po
+depbase=`echo ausearch-lookup.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-lookup.o -MD -MP -MF $depbase.Tpo -c -o ausearch-lookup.o ausearch-lookup.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditctl-delete_all.Tpo .deps/auditctl-delete_all.Po
+depbase=`echo ausearch-int.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-int.o -MD -MP -MF $depbase.Tpo -c -o ausearch-int.o ausearch-int.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-time.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-time.o -MD -MP -MF $depbase.Tpo -c -o ausearch-time.o ausearch-time.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-nvpair.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-nvpair.o -MD -MP -MF $depbase.Tpo -c -o ausearch-nvpair.o ausearch-nvpair.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-avc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-avc.o -MD -MP -MF $depbase.Tpo -c -o ausearch-avc.o ausearch-avc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-lol.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-lol.o -MD -MP -MF $depbase.Tpo -c -o ausearch-lol.o ausearch-lol.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch.o -MD -MP -MF $depbase.Tpo -c -o ausearch.o ausearch.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-options.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-options.o -MD -MP -MF $depbase.Tpo -c -o ausearch-options.o ausearch-options.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditd-auditd-listen.Tpo .deps/auditd-auditd-listen.Po
+depbase=`echo ausearch-report.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-report.o -MD -MP -MF $depbase.Tpo -c -o ausearch-report.o ausearch-report.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-match.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-match.o -MD -MP -MF $depbase.Tpo -c -o ausearch-match.o ausearch-match.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ausearch-checkpt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I../lib -I../src/libev -I../auparse -I../audisp -I../common  -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausearch-checkpt.o -MD -MP -MF $depbase.Tpo -c -o ausearch-checkpt.o ausearch-checkpt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f .deps/auditctl-auditctl.Tpo .deps/auditctl-auditctl.Po
+mv -f .deps/auditctl-auditctl-listing.Tpo .deps/auditctl-auditctl-listing.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc -fPIE -DPIE -g -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o auditctl auditctl-auditctl.o auditctl-auditctl-llist.o auditctl-delete_all.o auditctl-auditctl-listing.o ../lib/libaudit.la ../auparse/libauparse.la ../common/libaucommon.la 
+mv -f .deps/auditd-auditd-event.Tpo .deps/auditd-auditd-event.Po
+mv -f .deps/auditd-auditd.Tpo .deps/auditd-auditd.Po
+libtool: link: cc -fPIE -DPIE -g -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/auditctl auditctl-auditctl.o auditctl-auditctl-llist.o auditctl-delete_all.o auditctl-auditctl-listing.o  ../lib/.libs/libaudit.so ../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng ../common/.libs/libaucommon.a
+mv -f .deps/auditd-auditd-config.Tpo .deps/auditd-auditd-config.Po
+/bin/sh ../libtool  --tag=CC   --mode=link cc -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -pthread -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z,relro -Wl,-z,now -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o auditd auditd-auditd.o auditd-auditd-event.o auditd-auditd-config.o auditd-auditd-reconfig.o auditd-auditd-sendmail.o auditd-auditd-dispatch.o auditd-auditd-listen.o ../src/libev/libev.la ../audisp/libdisp.la ../lib/libaudit.la ../auparse/libauparse.la -lpthread -lm  ../common/libaucommon.la 
+/bin/sh ../libtool  --tag=CC   --mode=link cc -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o aureport aureport.o auditd-config.o ausearch-llist.o aureport-options.o ausearch-string.o ausearch-parse.o aureport-scan.o aureport-output.o ausearch-lookup.o ausearch-int.o ausearch-time.o ausearch-nvpair.o ausearch-avc.o ausearch-lol.o ../lib/libaudit.la ../auparse/libauparse.la ../common/libaucommon.la 
+/bin/sh ../libtool  --tag=CC   --mode=link cc -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ausearch ausearch.o auditd-config.o ausearch-llist.o ausearch-options.o ausearch-report.o ausearch-match.o ausearch-string.o ausearch-parse.o ausearch-int.o ausearch-time.o ausearch-nvpair.o ausearch-lookup.o ausearch-avc.o ausearch-lol.o ausearch-checkpt.o ../lib/libaudit.la ../auparse/libauparse.la ../common/libaucommon.la 
+libtool: link: cc -fPIE -DPIE -g -D_REENTRANT -D_GNU_SOURCE -fno-strict-aliasing -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pie -Wl,-z -Wl,relro -Wl,-z -Wl,now -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/auditd auditd-auditd.o auditd-auditd-event.o auditd-auditd-config.o auditd-auditd-reconfig.o auditd-auditd-sendmail.o auditd-auditd-dispatch.o auditd-auditd-listen.o  ../src/libev/.libs/libev.a ../audisp/.libs/libdisp.a ../lib/.libs/libaudit.so ../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng -lpthread -lm ../common/.libs/libaucommon.a -pthread
+libtool: link: cc -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/aureport aureport.o auditd-config.o ausearch-llist.o aureport-options.o ausearch-string.o ausearch-parse.o aureport-scan.o aureport-output.o ausearch-lookup.o ausearch-int.o ausearch-time.o ausearch-nvpair.o ausearch-avc.o ausearch-lol.o  ../lib/.libs/libaudit.so ../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng ../common/.libs/libaucommon.a
+libtool: link: cc -D_GNU_SOURCE -Wno-pointer-sign -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/ausearch ausearch.o auditd-config.o ausearch-llist.o ausearch-options.o ausearch-report.o ausearch-match.o ausearch-string.o ausearch-parse.o ausearch-int.o ausearch-time.o ausearch-nvpair.o ausearch-lookup.o ausearch-avc.o ausearch-lol.o ausearch-checkpt.o  ../lib/.libs/libaudit.so ../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng ../common/.libs/libaucommon.a
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+Making all in tools
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+Making all in aulast
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+depbase=`echo aulast.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../lib -I../../auparse  -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aulast.o -MD -MP -MF $depbase.Tpo -c -o aulast.o aulast.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo aulast-llist.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../lib -I../../auparse  -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aulast-llist.o -MD -MP -MF $depbase.Tpo -c -o aulast-llist.o aulast-llist.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o aulast aulast.o aulast-llist.o  ../../auparse/libauparse.la
+libtool: link: cc -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/aulast aulast.o aulast-llist.o  ../../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+Making all in aulastlog
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+depbase=`echo aulastlog.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../auparse  -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aulastlog.o -MD -MP -MF $depbase.Tpo -c -o aulastlog.o aulastlog.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo aulastlog-llist.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../auparse  -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT aulastlog-llist.o -MD -MP -MF $depbase.Tpo -c -o aulastlog-llist.o aulastlog-llist.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o aulastlog aulastlog.o aulastlog-llist.o  ../../auparse/libauparse.la
+libtool: link: cc -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/aulastlog aulastlog.o aulastlog-llist.o  ../../auparse/.libs/libauparse.so /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.so -lcap-ng
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+Making all in ausyscall
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+depbase=`echo ausyscall.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../lib  -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ausyscall.o -MD -MP -MF $depbase.Tpo -c -o ausyscall.o ausyscall.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ausyscall ausyscall.o  ../../lib/libaudit.la
+libtool: link: cc -D_GNU_SOURCE -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/ausyscall ausyscall.o  ../../lib/.libs/libaudit.so -lcap-ng
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+Making all in bindings
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+Making all in python
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+Making all in golang
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+Making all in swig
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+Making all in src
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+Making all in init.d
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+sed \
+	-e 's![@]runstatedir[@]!/var/run!' \
+	-e 's![@]sbindir[@]!/usr/sbin!' \
+	-e 's![@]sysconfdir[@]!/etc!' \
+	auditd.service.in > auditd.service
+sed \
+	-e 's![@]runstatedir[@]!/var/run!' \
+	-e 's![@]sbindir[@]!/usr/sbin!' \
+	-e 's![@]sysconfdir[@]!/etc!' \
+	audit-rules.service.in > audit-rules.service
+make  all-am
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+Making all in m4
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/m4'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/m4'
+Making all in docs
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/docs'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/docs'
+Making all in rules
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3'
+Making check in common
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/common'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/common'
+Making check in lib
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+make  check-recursive
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+Making check in test
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make  lookup_test
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+depbase=`echo lookup_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../lib   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lookup_test.o -MD -MP -MF $depbase.Tpo -c -o lookup_test.o lookup_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o lookup_test lookup_test.o ../../lib/libaudit.la 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/lookup_test lookup_test.o  ../../lib/.libs/libaudit.so -lcap-ng
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make  check-TESTS
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[5]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+PASS: lookup_test
+============================================================================
+Testsuite summary for audit 4.0.3
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+Making check in auparse
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make  check-recursive
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+Making check in test
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make  auparse_test auparselol_test lookup_test \
+  auparse_test.py
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+depbase=`echo auparse_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../auparse -I../../lib   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auparse_test.o -MD -MP -MF $depbase.Tpo -c -o auparse_test.o auparse_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo auparselol_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../auparse -I../../lib   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT auparselol_test.o -MD -MP -MF $depbase.Tpo -c -o auparselol_test.o auparselol_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo lookup_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../auparse -I../../lib   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT lookup_test.o -MD -MP -MF $depbase.Tpo -c -o lookup_test.o lookup_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+make[4]: Nothing to be done for 'auparse_test.py'.
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o auparselol_test auparselol_test.o ../../auparse/libauparse.la ../../lib/libaudit.la ../../common/libaucommon.la 
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o auparse_test auparse_test.o ../../auparse/libauparse.la ../../lib/libaudit.la ../../common/libaucommon.la 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o auparselol_test auparselol_test.o  ../../auparse/.libs/libauparse.a /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.a ../../lib/.libs/libaudit.a -lcap-ng ../../common/.libs/libaucommon.a
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o auparse_test auparse_test.o  ../../auparse/.libs/libauparse.a /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.a ../../lib/.libs/libaudit.a -lcap-ng ../../common/.libs/libaucommon.a
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o lookup_test lookup_test.o ../../auparse/libauparse.la ../../lib/libaudit.la ../../common/libaucommon.la 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o lookup_test lookup_test.o  ../../auparse/.libs/libauparse.a /tmp/src/audit-userspace-4.0.3/lib/.libs/libaudit.a ../../lib/.libs/libaudit.a -lcap-ng ../../common/.libs/libaucommon.a
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make  check-local
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+test "../.." = "../.." || \
+		cp ../../auparse/test/test*.log .
+LC_ALL=C \
+./auparse_test > auparse_test.cur
+diff -u ../../auparse/test/auparse_test.ref auparse_test.cur
+./auparselol_test -f test3.log --check | sort > auparse_test.cur
+sed -f ../../auparse/test/auditd_raw.sed test3.log | sort > auparse_test.raw
+diff -u auparse_test.raw auparse_test.cur
+./lookup_test
+Testing captab...
+Testing clocktab...
+Testing epoll_ctl...
+Testing famtab...
+Testing fcntltab...
+Testing fsconfig...
+Testing icmptypetab...
+Testing inethooktab...
+Testing ioctlreqtab...
+Testing ip6optnametab...
+Testing ipctab...
+Testing ipoptnametab...
+Testing netactiontab...
+Testing nfprototab...
+Testing evtypetab...
+Testing normalize_obj_kind_map...
+Testing normalize_record_map...
+Testing persontab...
+Testing pktoptnametab...
+Testing prctl_opttab...
+Testing ptracetab...
+Testing rlimittab...
+Testing schedtab...
+Testing seccomptab...
+Testing seektab...
+Testing signaltab...
+Testing sockleveltab...
+Testing sockoptnametab...
+Testing socktab...
+Testing socktypetab...
+Testing tcpoptnametab...
+===============================
+Interpretation table tests pass
+===============================
+echo -e "===================\nAuparse Test Passes\n==================="
+===================
+Auparse Test Passes
+===================
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+Making check in audisp
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+Making check in plugins
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+Making check in af_unix
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+Making check in remote
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make  test-queue
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+depbase=`echo queue.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT queue.o -MD -MP -MF $depbase.Tpo -c -o queue.o queue.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo test-queue.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../../..  -I../../.. -I../../../lib -I../../../common   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT test-queue.o -MD -MP -MF $depbase.Tpo -c -o test-queue.o test-queue.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o test-queue queue.o test-queue.o  
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o test-queue queue.o test-queue.o 
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make  check-TESTS
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make[5]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+PASS: test-queue
+============================================================================
+Testsuite summary for audit 4.0.3
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+Making check in syslog
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+Making check in filter
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+Making check in src/libev
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+Making check in src
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+Making check in test
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make  ilist_test slist_test
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+depbase=`echo ilist_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../lib -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT ilist_test.o -MD -MP -MF $depbase.Tpo -c -o ilist_test.o ilist_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo slist_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I../..  -I../.. -I../../lib -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MT slist_test.o -MD -MP -MF $depbase.Tpo -c -o slist_test.o slist_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ilist_test ilist_test.o ../../src/ausearch-int.o 
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o slist_test slist_test.o ../../src/ausearch-string.o 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o ilist_test ilist_test.o ../../src/ausearch-int.o 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o slist_test slist_test.o ../../src/ausearch-string.o 
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make  check-TESTS
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+PASS: ilist_test
+PASS: slist_test
+============================================================================
+Testsuite summary for audit 4.0.3
+============================================================================
+# TOTAL: 2
+# PASS:  2
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+Making check in tools
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+Making check in aulast
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+Making check in aulastlog
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+Making check in ausyscall
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+Making check in bindings
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+Making check in python
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+Making check in golang
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make  test.go
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make[3]: Nothing to be done for 'test.go'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+Making check in swig
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+Making check in src
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+Making check in init.d
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make  check-am
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+Making check in m4
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/m4'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/m4'
+Making check in docs
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/docs'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/docs'
+Making check in rules
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3'
+>>> audit: Entering fakeroot...
+Making install in common
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/common'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/common'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/common'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/common'
+Making install in lib
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+make  install-recursive
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+Making install in test
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib/test'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/lib'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/lib'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/include'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libaudit.la '/tmp/pkg/audit/usr/lib'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 audit.pc '/tmp/pkg/audit/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 libaudit.h audit_logging.h audit-records.h '/tmp/pkg/audit/usr/include'
+libtool: install: /usr/bin/install -c .libs/libaudit.so.1.0.0 /tmp/pkg/audit/usr/lib/libaudit.so.1.0.0
+libtool: install: (cd /tmp/pkg/audit/usr/lib && { ln -s -f libaudit.so.1.0.0 libaudit.so.1 || { rm -f libaudit.so.1 && ln -s libaudit.so.1.0.0 libaudit.so.1; }; })
+libtool: install: (cd /tmp/pkg/audit/usr/lib && { ln -s -f libaudit.so.1.0.0 libaudit.so || { rm -f libaudit.so && ln -s libaudit.so.1.0.0 libaudit.so; }; })
+libtool: install: /usr/bin/install -c .libs/libaudit.lai /tmp/pkg/audit/usr/lib/libaudit.la
+libtool: install: /usr/bin/install -c .libs/libaudit.a /tmp/pkg/audit/usr/lib/libaudit.a
+libtool: install: chmod 644 /tmp/pkg/audit/usr/lib/libaudit.a
+libtool: install: ranlib /tmp/pkg/audit/usr/lib/libaudit.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/lib'
+Making install in auparse
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make  install-recursive
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+Making install in test
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse/test'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/auparse'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/lib'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/include'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/lib/pkgconfig'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libauparse.la '/tmp/pkg/audit/usr/lib'
+ /usr/bin/install -c -m 644 auparse.h auparse-defs.h '/tmp/pkg/audit/usr/include'
+ /usr/bin/install -c -m 644 auparse.pc '/tmp/pkg/audit/usr/lib/pkgconfig'
+libtool: warning: relinking 'libauparse.la'
+libtool: install: (cd /tmp/src/audit-userspace-4.0.3/auparse; /bin/sh "/tmp/src/audit-userspace-4.0.3/libtool"  --tag CC --mode=relink cc -fPIC -DPIC -D_GNU_SOURCE -g -DNDEBUG -Wno-pointer-sign -Wno-enum-compare -Wno-switch -Wno-format-truncation -Wno-unused-but-set-variable -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wl,-z,relro -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libauparse.la -rpath /usr/lib lru.lo interpret.lo nvlist.lo ellist.lo auparse.lo auditd-config.lo message.lo data_buf.lo expression.lo normalize.lo normalize-llist.lo ../lib/libaudit.la ../common/libaucommon.la -inst-prefix-dir /tmp/pkg/audit)
+libtool: relink: cc -shared  -fPIC -DPIC  .libs/lru.o .libs/interpret.o .libs/nvlist.o .libs/ellist.o .libs/auparse.o .libs/auditd-config.o .libs/message.o .libs/data_buf.o .libs/expression.o .libs/normalize.o .libs/normalize-llist.o  -Wl,--whole-archive ../common/.libs/libaucommon.a -Wl,--no-whole-archive  -L/tmp/pkg/audit/usr/lib -L/usr/lib -laudit -lcap-ng  -g -Os -Werror=format-security -Wl,-z -Wl,relro -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libauparse.so.0 -o .libs/libauparse.so.0.0.0
+libtool: install: /usr/bin/install -c .libs/libauparse.so.0.0.0T /tmp/pkg/audit/usr/lib/libauparse.so.0.0.0
+libtool: install: (cd /tmp/pkg/audit/usr/lib && { ln -s -f libauparse.so.0.0.0 libauparse.so.0 || { rm -f libauparse.so.0 && ln -s libauparse.so.0.0.0 libauparse.so.0; }; })
+libtool: install: (cd /tmp/pkg/audit/usr/lib && { ln -s -f libauparse.so.0.0.0 libauparse.so || { rm -f libauparse.so && ln -s libauparse.so.0.0.0 libauparse.so; }; })
+libtool: install: /usr/bin/install -c .libs/libauparse.lai /tmp/pkg/audit/usr/lib/libauparse.la
+libtool: install: /usr/bin/install -c .libs/libauparse.a /tmp/pkg/audit/usr/lib/libauparse.a
+libtool: install: chmod 644 /tmp/pkg/audit/usr/lib/libauparse.a
+libtool: install: ranlib /tmp/pkg/audit/usr/lib/libauparse.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/auparse'
+Making install in audisp
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+Making install in plugins
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+Making install in af_unix
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c audisp-af_unix '/tmp/pkg/audit/usr/sbin'
+ /usr/bin/install -c -m 644 audisp-af_unix.8 '/tmp/pkg/audit/usr/share/man/man8'
+make  install-data-hook
+make[5]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+mkdir -p -m 0750 /tmp/pkg/audit/etc/audit/plugins.d
+for i in af_unix.conf; do \
+	/usr/bin/install -c -m 644 -D -m 640 ./"$i" \
+		/tmp/pkg/audit/etc/audit/plugins.d; \
+done
+make[5]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+libtool: warning: '../../../lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/audisp-af_unix /tmp/pkg/audit/usr/sbin/audisp-af_unix
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/af_unix'
+Making install in remote
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man5'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c audisp-remote '/tmp/pkg/audit/usr/sbin'
+ /usr/bin/install -c -m 644 audisp-remote.conf.5 '/tmp/pkg/audit/usr/share/man/man5'
+ /usr/bin/install -c -m 644 audisp-remote.8 '/tmp/pkg/audit/usr/share/man/man8'
+make  install-data-hook
+make[5]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+mkdir -p -m 0750 /tmp/pkg/audit/etc/audit/plugins.d
+/usr/bin/install -c -m 644 -D -m 640 ./au-remote.conf /tmp/pkg/audit/etc/audit/plugins.d
+/usr/bin/install -c -m 644 -D -m 640 ./audisp-remote.conf /tmp/pkg/audit/etc/audit
+make[5]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+libtool: install: /usr/bin/install -c audisp-remote /tmp/pkg/audit/usr/sbin/audisp-remote
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/remote'
+Making install in syslog
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c audisp-syslog '/tmp/pkg/audit/usr/sbin'
+ /usr/bin/install -c -m 644 audisp-syslog.8 '/tmp/pkg/audit/usr/share/man/man8'
+make  install-data-hook
+make[5]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+mkdir -p -m 0750 /tmp/pkg/audit/etc/audit/plugins.d
+/usr/bin/install -c -m 644 -D -m 640 ./syslog.conf /tmp/pkg/audit/etc/audit/plugins.d
+make[5]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+libtool: warning: '../../../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/audisp-syslog /tmp/pkg/audit/usr/sbin/audisp-syslog
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/syslog'
+Making install in filter
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c audisp-filter '/tmp/pkg/audit/usr/sbin'
+ /usr/bin/install -c -m 644 audisp-filter.8 '/tmp/pkg/audit/usr/share/man/man8'
+make  install-data-hook
+make[5]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+mkdir -p -m 0750 /tmp/pkg/audit/etc/audit/plugins.d
+/usr/bin/install -c -m 644 -D -m 640 ./filter.conf /tmp/pkg/audit/etc/audit/plugins.d
+/usr/bin/install -c -m 644 -D -m 640 ./audisp-filter.conf /tmp/pkg/audit/etc/audit
+make[5]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+libtool: warning: '../../../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/audisp-filter /tmp/pkg/audit/usr/sbin/audisp-filter
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins/filter'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp/plugins'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/audisp'
+Making install in src/libev
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/libev'
+Making install in src
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+Making install in test
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src/test'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/src'
+make[3]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/audit/usr/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c auditd auditctl aureport ausearch '/tmp/pkg/audit/usr/sbin'
+libtool: warning: '../lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: warning: '../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/auditd /tmp/pkg/audit/usr/sbin/auditd
+libtool: warning: '../lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: warning: '../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/auditctl /tmp/pkg/audit/usr/sbin/auditctl
+libtool: warning: '../lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: warning: '../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/aureport /tmp/pkg/audit/usr/sbin/aureport
+libtool: warning: '../lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: warning: '../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ausearch /tmp/pkg/audit/usr/sbin/ausearch
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/src'
+Making install in tools
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+Making install in aulast
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c aulast '/tmp/pkg/audit/usr/bin'
+ /usr/bin/install -c -m 644 aulast.8 '/tmp/pkg/audit/usr/share/man/man8'
+libtool: warning: '../../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/aulast /tmp/pkg/audit/usr/bin/aulast
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulast'
+Making install in aulastlog
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c aulastlog '/tmp/pkg/audit/usr/bin'
+ /usr/bin/install -c -m 644 aulastlog.8 '/tmp/pkg/audit/usr/share/man/man8'
+libtool: warning: '../../auparse/libauparse.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/audit-userspace-4.0.3/lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/aulastlog /tmp/pkg/audit/usr/bin/aulastlog
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/aulastlog'
+Making install in ausyscall
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c ausyscall '/tmp/pkg/audit/usr/bin'
+ /usr/bin/install -c -m 644 ausyscall.8 '/tmp/pkg/audit/usr/share/man/man8'
+libtool: warning: '../../lib/libaudit.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ausyscall /tmp/pkg/audit/usr/bin/ausyscall
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools/ausyscall'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/tools'
+Making install in bindings
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+Making install in python
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/python'
+Making install in golang
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/golang'
+Making install in swig
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+Making install in src
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig/src'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings/swig'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/bindings'
+Making install in init.d
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make  install-am
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[3]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/audit/etc/audit'
+ /usr/bin/install -c augenrules '/tmp/pkg/audit/usr/sbin'
+ /usr/bin/install -c -m 644 auditd.conf audit-stop.rules '/tmp/pkg/audit/etc/audit'
+make  install-data-hook
+make  install-exec-hook
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+/usr/bin/install -c -m 644 -D -m 640 ./libaudit.conf /tmp/pkg/audit/etc
+make[4]: Entering directory '/tmp/src/audit-userspace-4.0.3/init.d'
+mkdir -p /tmp/pkg/audit/usr/lib/systemd/system
+mkdir -p /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd
+mkdir -p /tmp/pkg/audit/usr/lib/tmpfiles.d/
+/usr/bin/install -c -m 644 -m 640 ./audit-tmpfiles.conf /tmp/pkg/audit/usr/lib/tmpfiles.d/audit.conf
+/usr/bin/install -c -D -m 644 ./auditd.service /tmp/pkg/audit/usr/lib/systemd/system
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+/usr/bin/install -c -D -m 644 ./audit-rules.service /tmp/pkg/audit/usr/lib/systemd/system
+/usr/bin/install -c -D -m 750 ./auditd.rotate /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/rotate
+/usr/bin/install -c -D -m 750 ./auditd.resume /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/resume
+/usr/bin/install -c -D -m 750 ./auditd.reload /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/reload
+/usr/bin/install -c -D -m 750 ./auditd.state /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/state
+/usr/bin/install -c -D -m 750 ./auditd.stop /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/stop
+/usr/bin/install -c -D -m 750 ./auditd.restart /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/restart
+/usr/bin/install -c -D -m 750 ./auditd.condrestart /tmp/pkg/audit/usr/libexec/initscripts/legacy-actions/auditd/condrestart
+chmod 0755 /tmp/pkg/audit/usr/sbin/augenrules
+make[4]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[3]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/init.d'
+Making install in m4
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/m4'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/m4'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/aclocal'
+ /usr/bin/install -c -m 644 audit.m4 '/tmp/pkg/audit/usr/share/aclocal'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/m4'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/m4'
+Making install in docs
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/docs'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/docs'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man3'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man5'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man7'
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/man/man8'
+ /usr/bin/install -c -m 644 audit.rules.7 '/tmp/pkg/audit/usr/share/man/man7'
+ /usr/bin/install -c -m 644 auditd.conf.5 auditd-plugins.5 ausearch-expression.5 libaudit.conf.5 zos-remote.conf.5 '/tmp/pkg/audit/usr/share/man/man5'
+ /usr/bin/install -c -m 644 auditctl.8 auditd.8 aureport.8 ausearch.8 audispd-zos-remote.8 augenrules.8 '/tmp/pkg/audit/usr/share/man/man8'
+ /usr/bin/install -c -m 644 audit_add_rule_data.3 audit_add_watch.3 audit_delete_rule_data.3 audit_detect_machine.3 audit_encode_nv_string.3 audit_getloginuid.3 audit_get_reply.3 audit_get_session.3 audit_log_acct_message.3 audit_log_user_avc_message.3 audit_log_user_command.3 audit_log_user_comm_message.3 audit_log_user_message.3 audit_log_semanage_message.3 auparse_new_buffer.3 audit_open.3 audit_close.3 audit_is_enabled.3 audit_request_rules_list_data.3 audit_request_signal_info.3 audit_request_status.3 audit_set_backlog_limit.3 audit_set_enabled.3 audit_set_failure.3 audit_setloginuid.3 audit_set_pid.3 audit_set_rate_limit.3 audit_update_watch_perms.3 audit_value_needs_encoding.3 audit_encode_value.3 auparse_add_callback.3 audit_name_to_syscall.3 audit_syscall_to_name.3 audit_name_to_errno.3 audit_fstype_to_name.3 audit_name_to_fstype.3 audit_name_to_action.3 audit_flag_to_name.3 audit_name_to_flag.3 auparse_destroy.3 '/tmp/pkg/audit/usr/share/man/man3'
+ /usr/bin/install -c -m 644 auparse_feed.3 auparse_feed_age_events.3 auparse_feed_has_data.3 auparse_find_field.3 auparse_find_field_next.3 auparse_first_field.3 auparse_first_record.3 auparse_flush_feed.3 auparse_get_field_int.3 auparse_get_field_name.3 auparse_get_field_str.3 auparse_get_field_type.3 auparse_get_filename.3 auparse_get_line_number.3 auparse_get_milli.3 auparse_get_node.3 auparse_get_num_fields.3 auparse_get_num_records.3 auparse_get_record_text.3 auparse_get_serial.3 auparse_get_time.3 auparse_get_timestamp.3 auparse_get_type.3 auparse_get_type_name.3 auparse_get_field_num.3 auparse_get_record_num.3 auparse_goto_field_num.3 auparse_goto_record_num.3 auparse_init.3 auparse_interpret_field.3 auparse_metrics.3 auparse_next_event.3 auparse_next_field.3 auparse_next_record.3 auparse_node_compare.3 auparse_reset.3 auparse_set_escape_mode.3 auparse_normalize.3 auparse_normalize_functions.3 auparse_timestamp_compare.3 '/tmp/pkg/audit/usr/share/man/man3'
+ /usr/bin/install -c -m 644 auparse_set_eoe_timeout.3 ausearch_add_item.3 ausearch_add_interpreted_item.3 ausearch_add_expression.3 ausearch_add_timestamp_item.3 ausearch_add_regex.3 ausearch_add_timestamp_item_ex.3 ausearch_clear.3 ausearch_next_event.3 ausearch_cur_event.3 ausearch_set_stop.3 get_auditfail_action.3 set_aumessage_mode.3 audit_set_backlog_wait_time.3 '/tmp/pkg/audit/usr/share/man/man3'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/docs'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/docs'
+Making install in rules
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/audit/usr/share/audit-rules'
+ /usr/bin/install -c -m 644 10-base-config.rules 10-no-audit.rules 11-loginuid.rules 12-ignore-error.rules 12-cont-fail.rules 20-dont-audit.rules 21-no32bit.rules 22-ignore-chrony.rules 23-ignore-filesystems.rules 30-stig.rules 30-pci-dss-v31.rules 30-ospp-v42.rules 30-ospp-v42-1-create-failed.rules 30-ospp-v42-1-create-success.rules 30-ospp-v42-2-modify-failed.rules 30-ospp-v42-2-modify-success.rules 30-ospp-v42-3-access-failed.rules 30-ospp-v42-3-access-success.rules 30-ospp-v42-4-delete-failed.rules 30-ospp-v42-4-delete-success.rules 30-ospp-v42-5-perm-change-failed.rules 30-ospp-v42-5-perm-change-success.rules 30-ospp-v42-6-owner-change-failed.rules 30-ospp-v42-6-owner-change-success.rules 31-privileged.rules 32-power-abuse.rules 40-local.rules 41-containers.rules 42-injection.rules 43-module-load.rules 44-installers.rules 70-einval.rules 71-networking.rules 99-finalize.rules README-rules '/tmp/pkg/audit/usr/share/audit-rules'
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3/rules'
+make[1]: Entering directory '/tmp/src/audit-userspace-4.0.3'
+make[2]: Entering directory '/tmp/src/audit-userspace-4.0.3'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/audit-userspace-4.0.3'
+make[1]: Leaving directory '/tmp/src/audit-userspace-4.0.3'
+rmdir: removing directory, 'usr/lib/systemd'
+rmdir: removing directory, 'usr/lib'
+rmdir: removing directory, 'usr/libexec/initscripts/legacy-actions'
+rmdir: removing directory, 'usr/libexec/initscripts'
+rmdir: removing directory, 'usr/libexec'
+rmdir: removing directory, 'usr'
+>>> audit-static*: Running split function static...
+'usr/lib/libaudit.a' -> '/tmp/pkg/audit-static/usr/lib/libaudit.a'
+'usr/lib/libauparse.a' -> '/tmp/pkg/audit-static/usr/lib/libauparse.a'
+>>> audit-static*: Preparing subpackage audit-static...
+>>> audit-static*: Stripping binaries
+>>> audit-static*: Running postcheck for audit-static
+>>> audit-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/audit-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/audit-dev/usr/lib/pkgconfig'
+'usr/share/aclocal' -> '/tmp/pkg/audit-dev/usr/share/aclocal'
+'usr/lib/libaudit.so' -> '/tmp/pkg/audit-dev/usr/lib/libaudit.so'
+'usr/lib/libauparse.so' -> '/tmp/pkg/audit-dev/usr/lib/libauparse.so'
+>>> audit-dev*: Preparing subpackage audit-dev...
+>>> audit-dev*: Stripping binaries
+>>> audit-dev*: Running postcheck for audit-dev
+>>> audit-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/audit-doc/usr/share/man'
+>>> audit-doc*: Preparing subpackage audit-doc...
+>>> audit-doc*: Running postcheck for audit-doc
+>>> audit-libs*: Running split function libs...
+'usr/lib/libaudit.so.1' -> '/tmp/pkg/audit-libs/usr/lib/libaudit.so.1'
+'usr/lib/libaudit.so.1.0.0' -> '/tmp/pkg/audit-libs/usr/lib/libaudit.so.1.0.0'
+'usr/lib/libauparse.so.0' -> '/tmp/pkg/audit-libs/usr/lib/libauparse.so.0'
+'usr/lib/libauparse.so.0.0.0' -> '/tmp/pkg/audit-libs/usr/lib/libauparse.so.0.0.0'
+>>> audit-libs*: Preparing subpackage audit-libs...
+>>> audit-libs*: Stripping binaries
+>>> audit-libs*: Running postcheck for audit-libs
+>>> audit-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/audit-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/audit-openrc/etc/init.d'
+>>> audit-openrc*: Preparing subpackage audit-openrc...
+>>> audit-openrc*: Running postcheck for audit-openrc
+>>> audit*: Running postcheck for audit
+>>> audit*: Preparing package audit...
+>>> audit*: Stripping binaries
+>>> audit*: Script found. /bin/sh added as a dependency for audit-4.0.3-r0.apk
+>>> audit*: Adding .pre-install
+>>> audit-dev*: Scanning shared objects
+>>> audit-doc*: Scanning shared objects
+>>> audit-libs*: Scanning shared objects
+>>> audit-openrc*: Scanning shared objects
+>>> audit-static*: Scanning shared objects
+>>> audit*: Scanning shared objects
+>>> audit-dev*: Tracing dependencies...
+	linux-headers
+	audit-libs=4.0.3-r0
+	pc:libcap-ng
+	pkgconfig
+>>> audit-dev*: Package size: 39.6 KB
+>>> audit-dev*: Compressing data...
+>>> audit-dev*: Create checksum...
+>>> audit-dev*: Create audit-dev-4.0.3-r0.apk
+>>> audit-doc*: Tracing dependencies...
+>>> audit-doc*: Package size: 97.3 KB
+>>> audit-doc*: Compressing data...
+>>> audit-doc*: Create checksum...
+>>> audit-doc*: Create audit-doc-4.0.3-r0.apk
+>>> audit-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcap-ng.so.0
+>>> audit-libs*: Package size: 275.4 KB
+>>> audit-libs*: Compressing data...
+>>> audit-libs*: Create checksum...
+>>> audit-libs*: Create audit-libs-4.0.3-r0.apk
+>>> audit-openrc*: Tracing dependencies...
+>>> audit-openrc*: Package size: 2.7 KB
+>>> audit-openrc*: Compressing data...
+>>> audit-openrc*: Create checksum...
+>>> audit-openrc*: Create audit-openrc-4.0.3-r0.apk
+>>> audit-static*: Tracing dependencies...
+>>> audit-static*: Package size: 892.3 KB
+>>> audit-static*: Compressing data...
+>>> audit-static*: Create checksum...
+>>> audit-static*: Create audit-static-4.0.3-r0.apk
+>>> audit*: Tracing dependencies...
+	/bin/sh
+	so:libaudit.so.1
+	so:libauparse.so.0
+	so:libc.musl-x86_64.so.1
+	so:libcap-ng.so.0
+>>> audit*: Package size: 529.6 KB
+>>> audit*: Compressing data...
+>>> audit*: Create checksum...
+>>> audit*: Create audit-4.0.3-r0.apk
+>>> audit: Updating the main/x86_64 repository index...
+>>> audit: Signing the index...
+>>> audit: Cleaning up srcdir
+>>> audit: Cleaning up build chroot
+>>> audit: Cleaning up pkgdir

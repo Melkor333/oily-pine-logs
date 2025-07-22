@@ -1,0 +1,907 @@
+>>> perl-datetime-timezone: Validating /home/packager/oily-pine/main/perl-datetime-timezone/APKBUILD...
+>>> perl-datetime-timezone: Cleaning up srcdir
+>>> perl-datetime-timezone: Cleaning up pkgdir
+>>> perl-datetime-timezone: Cleaning up tmpdir
+>>> perl-datetime-timezone: Fetching https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.65.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  907k  100  907k    0     0  3225k      0 --:--:-- --:--:-- --:--:-- 3228k
+>>> perl-datetime-timezone: Fetching https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.65.tar.gz
+>>> perl-datetime-timezone: Checking sha512sums...
+DateTime-TimeZone-2.65.tar.gz: OK
+>>> perl-datetime-timezone: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/98) Installing musl (1.2.5-r10)
+(2/98) Installing libcrypto3 (3.5.0-r0)
+(3/98) Installing ca-certificates-bundle (20241121-r2)
+(4/98) Installing libssl3 (3.5.0-r0)
+(5/98) Installing zlib (1.3.1-r2)
+(6/98) Installing libapk2 (2.14.9-r2)
+(7/98) Installing apk-tools (2.14.9-r2)
+(8/98) Installing libcap2 (2.76-r0)
+(9/98) Installing libcap-getcap (2.76-r0)
+(10/98) Installing fakeroot (1.37.1.1-r0)
+(11/98) Installing scanelf (1.3.8-r1)
+(12/98) Installing musl-utils (1.2.5-r10)
+(13/98) Installing libgcc (14.3.0-r1)
+(14/98) Installing libstdc++ (14.3.0-r1)
+(15/98) Installing lzip (1.25-r0)
+(16/98) Installing openssl (3.5.0-r0)
+(17/98) Installing patch (2.8-r0)
+(18/98) Installing pkgconf (2.4.3-r0)
+(19/98) Installing acl-libs (2.3.2-r1)
+(20/98) Installing tar (1.35-r3)
+(21/98) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/98) Installing ssl_client (1.37.0-r18)
+(23/98) Installing busybox-binsh (1.37.0-r18)
+(24/98) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/98) Installing abuild-sudo (3.15.0-r0)
+(26/98) Installing alpine-baselayout-data (3.7.0-r0)
+(27/98) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/98) Installing bridge (1.5-r5)
+(29/98) Installing ifupdown-ng (0.12.1-r7)
+(30/98) Installing openrc-user (0.62.2-r2)
+(31/98) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/98) Installing mdev-conf (4.8-r0)
+(33/98) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/98) Installing alpine-conf (3.20.0-r0)
+(35/98) Installing alpine-keys (2.5-r0)
+(36/98) Installing alpine-release (3.22.0-r0)
+(37/98) Installing busybox-openrc (1.37.0-r18)
+(38/98) Installing busybox-suid (1.37.0-r18)
+(39/98) Installing alpine-base (3.22.0-r0)
+(40/98) Installing jansson (2.14.1-r0)
+(41/98) Installing zstd-libs (1.5.7-r0)
+(42/98) Installing binutils (2.44-r0)
+(43/98) Installing libmagic (5.46-r2)
+(44/98) Installing file (5.46-r2)
+(45/98) Installing libgomp (14.3.0-r1)
+(46/98) Installing libatomic (14.3.0-r1)
+(47/98) Installing gmp (6.3.0-r3)
+(48/98) Installing isl26 (0.26-r1)
+(49/98) Installing mpfr4 (4.2.1_p1-r0)
+(50/98) Installing mpc1 (1.3.1-r1)
+(51/98) Installing gcc (14.3.0-r1)
+(52/98) Installing libstdc++-dev (14.3.0-r1)
+(53/98) Installing musl-dev (1.2.5-r10)
+(54/98) Installing g++ (14.3.0-r1)
+(55/98) Installing make (4.4.1-r3)
+(56/98) Installing fortify-headers (1.1-r5)
+(57/98) Installing build-base (0.5-r3)
+(58/98) Installing brotli-libs (1.1.0-r2)
+(59/98) Installing c-ares (1.34.5-r0)
+(60/98) Installing libunistring (1.3-r0)
+(61/98) Installing libidn2 (2.3.7-r0)
+(62/98) Installing nghttp2-libs (1.65.0-r0)
+(63/98) Installing libpsl (0.21.5-r3)
+(64/98) Installing libcurl (8.14.0-r2)
+(65/98) Installing libexpat (2.7.1-r0)
+(66/98) Installing pcre2 (10.43-r1)
+(67/98) Installing git (2.49.0-r0)
+(68/98) Installing git-init-template (2.49.0-r0)
+(69/98) Installing libbz2 (1.0.8-r6)
+(70/98) Installing perl (5.40.2-r0)
+(71/98) Installing perl-error (0.17030-r0)
+(72/98) Installing perl-git (2.49.0-r0)
+(73/98) Installing git-perl (2.49.0-r0)
+(74/98) Installing perl-class-singleton (1.6-r2)
+(75/98) Installing perl-module-runtime (0.016-r6)
+(76/98) Installing perl-sub-exporter-progressive (0.001013-r4)
+(77/98) Installing perl-try-tiny (0.32-r0)
+(78/98) Installing perl-module-implementation (0.09-r5)
+(79/98) Installing perl-b-hooks-endofscope (0.28-r0)
+(80/98) Installing perl-dist-checkconflicts (0.11-r4)
+(81/98) Installing perl-package-stash (0.40-r1)
+(82/98) Installing perl-namespace-clean (0.27-r4)
+(83/98) Installing perl-namespace-autoclean (0.31-r0)
+(84/98) Installing perl-sub-quote (2.006008-r1)
+(85/98) Installing perl-devel-stacktrace (2.05-r0)
+(86/98) Installing perl-role-tiny (2.002004-r2)
+(87/98) Installing perl-mro-compat (0.15-r2)
+(88/98) Installing perl-test-fatal (0.017-r1)
+(89/98) Installing perl-eval-closure (0.14-r4)
+(90/98) Installing perl-clone (0.47-r0)
+(91/98) Installing perl-specio (0.50-r0)
+(92/98) Installing perl-test-simple (1.302209-r0)
+(93/98) Installing perl-test-without-module (0.23-r0)
+(94/98) Installing perl-class-data-inheritable (0.10-r0)
+(95/98) Installing perl-exception-class (1.45-r1)
+(96/98) Installing perl-test2-plugin-nowarnings (0.10-r1)
+(97/98) Installing perl-params-validationcompiler (0.31-r2)
+(98/98) Installing perl-test-requires (0.11-r3)
+Executing busybox-1.37.0-r18.trigger
+OK: 299 MiB in 98 packages
+>>> perl-datetime-timezone: Fetching https://cpan.metacpan.org/authors/id/D/DR/DROLSKY/DateTime-TimeZone-2.65.tar.gz
+>>> perl-datetime-timezone: Checking sha512sums...
+DateTime-TimeZone-2.65.tar.gz: OK
+>>> perl-datetime-timezone: Unpacking /var/cache/distfiles/DateTime-TimeZone-2.65.tar.gz...
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for DateTime::TimeZone
+Writing MYMETA.yml and MYMETA.json
+cp lib/DateTime/TimeZone/Asia/Ho_Chi_Minh.pm blib/lib/DateTime/TimeZone/Asia/Ho_Chi_Minh.pm
+cp lib/DateTime/TimeZone/Local/Unix.pm blib/lib/DateTime/TimeZone/Local/Unix.pm
+cp lib/DateTime/TimeZone/America/Argentina/Salta.pm blib/lib/DateTime/TimeZone/America/Argentina/Salta.pm
+cp lib/DateTime/TimeZone/America/Merida.pm blib/lib/DateTime/TimeZone/America/Merida.pm
+cp lib/DateTime/TimeZone/America/North_Dakota/Center.pm blib/lib/DateTime/TimeZone/America/North_Dakota/Center.pm
+cp lib/DateTime/TimeZone/America/Argentina/Mendoza.pm blib/lib/DateTime/TimeZone/America/Argentina/Mendoza.pm
+cp lib/DateTime/TimeZone/Antarctica/Casey.pm blib/lib/DateTime/TimeZone/Antarctica/Casey.pm
+cp lib/DateTime/TimeZone/America/Fortaleza.pm blib/lib/DateTime/TimeZone/America/Fortaleza.pm
+cp lib/DateTime/TimeZone/Asia/Qostanay.pm blib/lib/DateTime/TimeZone/Asia/Qostanay.pm
+cp lib/DateTime/TimeZone/America/Argentina/San_Juan.pm blib/lib/DateTime/TimeZone/America/Argentina/San_Juan.pm
+cp lib/DateTime/TimeZone/Antarctica/Davis.pm blib/lib/DateTime/TimeZone/Antarctica/Davis.pm
+cp lib/DateTime/TimeZone/Indian/Chagos.pm blib/lib/DateTime/TimeZone/Indian/Chagos.pm
+cp lib/DateTime/TimeZone/Europe/Budapest.pm blib/lib/DateTime/TimeZone/Europe/Budapest.pm
+cp lib/DateTime/TimeZone/Asia/Omsk.pm blib/lib/DateTime/TimeZone/Asia/Omsk.pm
+cp lib/DateTime/TimeZone/Africa/Khartoum.pm blib/lib/DateTime/TimeZone/Africa/Khartoum.pm
+cp lib/DateTime/TimeZone/Pacific/Kiritimati.pm blib/lib/DateTime/TimeZone/Pacific/Kiritimati.pm
+cp lib/DateTime/TimeZone/Europe/Lisbon.pm blib/lib/DateTime/TimeZone/Europe/Lisbon.pm
+cp lib/DateTime/TimeZone/Pacific/Kwajalein.pm blib/lib/DateTime/TimeZone/Pacific/Kwajalein.pm
+cp lib/DateTime/TimeZone/America/Swift_Current.pm blib/lib/DateTime/TimeZone/America/Swift_Current.pm
+cp lib/DateTime/TimeZone/America/Regina.pm blib/lib/DateTime/TimeZone/America/Regina.pm
+cp lib/DateTime/TimeZone/Pacific/Niue.pm blib/lib/DateTime/TimeZone/Pacific/Niue.pm
+cp lib/DateTime/TimeZone/America/Argentina/Tucuman.pm blib/lib/DateTime/TimeZone/America/Argentina/Tucuman.pm
+cp lib/DateTime/TimeZone/Asia/Tokyo.pm blib/lib/DateTime/TimeZone/Asia/Tokyo.pm
+cp lib/DateTime/TimeZone/America/Los_Angeles.pm blib/lib/DateTime/TimeZone/America/Los_Angeles.pm
+cp lib/DateTime/TimeZone/Pacific/Honolulu.pm blib/lib/DateTime/TimeZone/Pacific/Honolulu.pm
+cp lib/DateTime/TimeZone/America/Porto_Velho.pm blib/lib/DateTime/TimeZone/America/Porto_Velho.pm
+cp lib/DateTime/TimeZone/America/Bahia_Banderas.pm blib/lib/DateTime/TimeZone/America/Bahia_Banderas.pm
+cp lib/DateTime/TimeZone/Europe/Saratov.pm blib/lib/DateTime/TimeZone/Europe/Saratov.pm
+cp lib/DateTime/TimeZone/Pacific/Tahiti.pm blib/lib/DateTime/TimeZone/Pacific/Tahiti.pm
+cp lib/DateTime/TimeZone/America/Argentina/Catamarca.pm blib/lib/DateTime/TimeZone/America/Argentina/Catamarca.pm
+cp lib/DateTime/TimeZone/America/Detroit.pm blib/lib/DateTime/TimeZone/America/Detroit.pm
+cp lib/DateTime/TimeZone/Pacific/Galapagos.pm blib/lib/DateTime/TimeZone/Pacific/Galapagos.pm
+cp lib/DateTime/TimeZone/Asia/Ust_Nera.pm blib/lib/DateTime/TimeZone/Asia/Ust_Nera.pm
+cp lib/DateTime/TimeZone/Europe/Berlin.pm blib/lib/DateTime/TimeZone/Europe/Berlin.pm
+cp lib/DateTime/TimeZone/Africa/Tripoli.pm blib/lib/DateTime/TimeZone/Africa/Tripoli.pm
+cp lib/DateTime/TimeZone/Asia/Kamchatka.pm blib/lib/DateTime/TimeZone/Asia/Kamchatka.pm
+cp lib/DateTime/TimeZone/Asia/Pontianak.pm blib/lib/DateTime/TimeZone/Asia/Pontianak.pm
+cp lib/DateTime/TimeZone/Asia/Krasnoyarsk.pm blib/lib/DateTime/TimeZone/Asia/Krasnoyarsk.pm
+cp lib/DateTime/TimeZone/Europe/Malta.pm blib/lib/DateTime/TimeZone/Europe/Malta.pm
+cp lib/DateTime/TimeZone/Europe/Kaliningrad.pm blib/lib/DateTime/TimeZone/Europe/Kaliningrad.pm
+cp lib/DateTime/TimeZone/Antarctica/Mawson.pm blib/lib/DateTime/TimeZone/Antarctica/Mawson.pm
+cp lib/DateTime/TimeZone/Pacific/Auckland.pm blib/lib/DateTime/TimeZone/Pacific/Auckland.pm
+cp lib/DateTime/TimeZone/America/Argentina/Buenos_Aires.pm blib/lib/DateTime/TimeZone/America/Argentina/Buenos_Aires.pm
+cp lib/DateTime/TimeZone/America/Fort_Nelson.pm blib/lib/DateTime/TimeZone/America/Fort_Nelson.pm
+cp lib/DateTime/TimeZone/Asia/Macau.pm blib/lib/DateTime/TimeZone/Asia/Macau.pm
+cp lib/DateTime/TimeZone/UTC.pm blib/lib/DateTime/TimeZone/UTC.pm
+cp lib/DateTime/TimeZone/Africa/Cairo.pm blib/lib/DateTime/TimeZone/Africa/Cairo.pm
+cp lib/DateTime/TimeZone/Australia/Darwin.pm blib/lib/DateTime/TimeZone/Australia/Darwin.pm
+cp lib/DateTime/TimeZone/Pacific/Kosrae.pm blib/lib/DateTime/TimeZone/Pacific/Kosrae.pm
+cp lib/DateTime/TimeZone/Asia/Jayapura.pm blib/lib/DateTime/TimeZone/Asia/Jayapura.pm
+cp lib/DateTime/TimeZone/Africa/Nairobi.pm blib/lib/DateTime/TimeZone/Africa/Nairobi.pm
+cp lib/DateTime/TimeZone/Indian/Mauritius.pm blib/lib/DateTime/TimeZone/Indian/Mauritius.pm
+cp lib/DateTime/TimeZone/America/Indiana/Vevay.pm blib/lib/DateTime/TimeZone/America/Indiana/Vevay.pm
+cp lib/DateTime/TimeZone/Asia/Atyrau.pm blib/lib/DateTime/TimeZone/Asia/Atyrau.pm
+cp lib/DateTime/TimeZone/America/Lima.pm blib/lib/DateTime/TimeZone/America/Lima.pm
+cp lib/DateTime/TimeZone/America/Argentina/San_Luis.pm blib/lib/DateTime/TimeZone/America/Argentina/San_Luis.pm
+cp lib/DateTime/TimeZone/Asia/Srednekolymsk.pm blib/lib/DateTime/TimeZone/Asia/Srednekolymsk.pm
+cp lib/DateTime/TimeZone/Asia/Yangon.pm blib/lib/DateTime/TimeZone/Asia/Yangon.pm
+cp lib/DateTime/TimeZone/Asia/Vladivostok.pm blib/lib/DateTime/TimeZone/Asia/Vladivostok.pm
+cp lib/DateTime/TimeZone/America/Asuncion.pm blib/lib/DateTime/TimeZone/America/Asuncion.pm
+cp lib/DateTime/TimeZone/Europe/Dublin.pm blib/lib/DateTime/TimeZone/Europe/Dublin.pm
+cp lib/DateTime/TimeZone/Asia/Kabul.pm blib/lib/DateTime/TimeZone/Asia/Kabul.pm
+cp lib/DateTime/TimeZone/Pacific/Palau.pm blib/lib/DateTime/TimeZone/Pacific/Palau.pm
+cp lib/DateTime/TimeZone/Pacific/Nauru.pm blib/lib/DateTime/TimeZone/Pacific/Nauru.pm
+cp lib/DateTime/TimeZone/Europe/Zurich.pm blib/lib/DateTime/TimeZone/Europe/Zurich.pm
+cp lib/DateTime/TimeZone/America/Scoresbysund.pm blib/lib/DateTime/TimeZone/America/Scoresbysund.pm
+cp lib/DateTime/TimeZone/Australia/Adelaide.pm blib/lib/DateTime/TimeZone/Australia/Adelaide.pm
+cp lib/DateTime/TimeZone/America/Argentina/Jujuy.pm blib/lib/DateTime/TimeZone/America/Argentina/Jujuy.pm
+cp lib/DateTime/TimeZone/America/Dawson.pm blib/lib/DateTime/TimeZone/America/Dawson.pm
+cp lib/DateTime/TimeZone/Pacific/Noumea.pm blib/lib/DateTime/TimeZone/Pacific/Noumea.pm
+cp lib/DateTime/TimeZone/Asia/Urumqi.pm blib/lib/DateTime/TimeZone/Asia/Urumqi.pm
+cp lib/DateTime/TimeZone/Asia/Karachi.pm blib/lib/DateTime/TimeZone/Asia/Karachi.pm
+cp lib/DateTime/TimeZone/America/Vancouver.pm blib/lib/DateTime/TimeZone/America/Vancouver.pm
+cp lib/DateTime/TimeZone/Asia/Bangkok.pm blib/lib/DateTime/TimeZone/Asia/Bangkok.pm
+cp lib/DateTime/TimeZone/Asia/Yerevan.pm blib/lib/DateTime/TimeZone/Asia/Yerevan.pm
+cp lib/DateTime/TimeZone/Pacific/Norfolk.pm blib/lib/DateTime/TimeZone/Pacific/Norfolk.pm
+cp lib/DateTime/TimeZone/OlsonDB/Rule.pm blib/lib/DateTime/TimeZone/OlsonDB/Rule.pm
+cp lib/DateTime/TimeZone/America/Winnipeg.pm blib/lib/DateTime/TimeZone/America/Winnipeg.pm
+cp lib/DateTime/TimeZone/America/Whitehorse.pm blib/lib/DateTime/TimeZone/America/Whitehorse.pm
+cp lib/DateTime/TimeZone/Africa/Algiers.pm blib/lib/DateTime/TimeZone/Africa/Algiers.pm
+cp lib/DateTime/TimeZone/Pacific/Tongatapu.pm blib/lib/DateTime/TimeZone/Pacific/Tongatapu.pm
+cp lib/DateTime/TimeZone/America/Argentina/La_Rioja.pm blib/lib/DateTime/TimeZone/America/Argentina/La_Rioja.pm
+cp lib/DateTime/TimeZone/Africa/Monrovia.pm blib/lib/DateTime/TimeZone/Africa/Monrovia.pm
+cp lib/DateTime/TimeZone/Europe/Warsaw.pm blib/lib/DateTime/TimeZone/Europe/Warsaw.pm
+cp lib/DateTime/TimeZone/Europe/Chisinau.pm blib/lib/DateTime/TimeZone/Europe/Chisinau.pm
+cp lib/DateTime/TimeZone/Africa/Abidjan.pm blib/lib/DateTime/TimeZone/Africa/Abidjan.pm
+cp lib/DateTime/TimeZone/America/Puerto_Rico.pm blib/lib/DateTime/TimeZone/America/Puerto_Rico.pm
+cp lib/DateTime/TimeZone/Europe/Minsk.pm blib/lib/DateTime/TimeZone/Europe/Minsk.pm
+cp lib/DateTime/TimeZone/America/Santarem.pm blib/lib/DateTime/TimeZone/America/Santarem.pm
+cp lib/DateTime/TimeZone/Australia/Sydney.pm blib/lib/DateTime/TimeZone/Australia/Sydney.pm
+cp lib/DateTime/TimeZone/America/Goose_Bay.pm blib/lib/DateTime/TimeZone/America/Goose_Bay.pm
+cp lib/DateTime/TimeZone/America/Panama.pm blib/lib/DateTime/TimeZone/America/Panama.pm
+cp lib/DateTime/TimeZone/Asia/Barnaul.pm blib/lib/DateTime/TimeZone/Asia/Barnaul.pm
+cp lib/DateTime/TimeZone/OlsonDB.pm blib/lib/DateTime/TimeZone/OlsonDB.pm
+cp lib/DateTime/TimeZone/America/Guyana.pm blib/lib/DateTime/TimeZone/America/Guyana.pm
+cp lib/DateTime/TimeZone/America/Chicago.pm blib/lib/DateTime/TimeZone/America/Chicago.pm
+cp lib/DateTime/TimeZone/America/Eirunepe.pm blib/lib/DateTime/TimeZone/America/Eirunepe.pm
+cp lib/DateTime/TimeZone/America/Tijuana.pm blib/lib/DateTime/TimeZone/America/Tijuana.pm
+cp lib/DateTime/TimeZone/Africa/Ndjamena.pm blib/lib/DateTime/TimeZone/Africa/Ndjamena.pm
+cp lib/DateTime/TimeZone/Europe/Moscow.pm blib/lib/DateTime/TimeZone/Europe/Moscow.pm
+cp lib/DateTime/TimeZone/Catalog.pm blib/lib/DateTime/TimeZone/Catalog.pm
+cp lib/DateTime/TimeZone/America/Costa_Rica.pm blib/lib/DateTime/TimeZone/America/Costa_Rica.pm
+cp lib/DateTime/TimeZone/Asia/Bishkek.pm blib/lib/DateTime/TimeZone/Asia/Bishkek.pm
+cp lib/DateTime/TimeZone/Europe/Volgograd.pm blib/lib/DateTime/TimeZone/Europe/Volgograd.pm
+cp lib/DateTime/TimeZone/America/Montevideo.pm blib/lib/DateTime/TimeZone/America/Montevideo.pm
+cp lib/DateTime/TimeZone/America/Santo_Domingo.pm blib/lib/DateTime/TimeZone/America/Santo_Domingo.pm
+cp lib/DateTime/TimeZone/America/Caracas.pm blib/lib/DateTime/TimeZone/America/Caracas.pm
+cp lib/DateTime/TimeZone/Europe/London.pm blib/lib/DateTime/TimeZone/Europe/London.pm
+cp lib/DateTime/TimeZone/America/Inuvik.pm blib/lib/DateTime/TimeZone/America/Inuvik.pm
+cp lib/DateTime/TimeZone/Asia/Famagusta.pm blib/lib/DateTime/TimeZone/Asia/Famagusta.pm
+cp lib/DateTime/TimeZone/Australia/Lord_Howe.pm blib/lib/DateTime/TimeZone/Australia/Lord_Howe.pm
+cp lib/DateTime/TimeZone/America/Boise.pm blib/lib/DateTime/TimeZone/America/Boise.pm
+cp lib/DateTime/TimeZone/Asia/Sakhalin.pm blib/lib/DateTime/TimeZone/Asia/Sakhalin.pm
+cp lib/DateTime/TimeZone/Europe/Riga.pm blib/lib/DateTime/TimeZone/Europe/Riga.pm
+cp lib/DateTime/TimeZone/America/Phoenix.pm blib/lib/DateTime/TimeZone/America/Phoenix.pm
+cp lib/DateTime/TimeZone/America/Halifax.pm blib/lib/DateTime/TimeZone/America/Halifax.pm
+cp lib/DateTime/TimeZone/Asia/Pyongyang.pm blib/lib/DateTime/TimeZone/Asia/Pyongyang.pm
+cp lib/DateTime/TimeZone/America/Dawson_Creek.pm blib/lib/DateTime/TimeZone/America/Dawson_Creek.pm
+cp lib/DateTime/TimeZone/America/Havana.pm blib/lib/DateTime/TimeZone/America/Havana.pm
+cp lib/DateTime/TimeZone/Asia/Novosibirsk.pm blib/lib/DateTime/TimeZone/Asia/Novosibirsk.pm
+cp lib/DateTime/TimeZone/America/Jamaica.pm blib/lib/DateTime/TimeZone/America/Jamaica.pm
+cp lib/DateTime/TimeZone/America/Matamoros.pm blib/lib/DateTime/TimeZone/America/Matamoros.pm
+cp lib/DateTime/TimeZone/Asia/Novokuznetsk.pm blib/lib/DateTime/TimeZone/Asia/Novokuznetsk.pm
+cp lib/DateTime/TimeZone/Antarctica/Troll.pm blib/lib/DateTime/TimeZone/Antarctica/Troll.pm
+cp lib/DateTime/TimeZone/America/Martinique.pm blib/lib/DateTime/TimeZone/America/Martinique.pm
+cp lib/DateTime/TimeZone/Asia/Ulaanbaatar.pm blib/lib/DateTime/TimeZone/Asia/Ulaanbaatar.pm
+cp lib/DateTime/TimeZone/Asia/Ashgabat.pm blib/lib/DateTime/TimeZone/Asia/Ashgabat.pm
+cp lib/DateTime/TimeZone/America/Indiana/Tell_City.pm blib/lib/DateTime/TimeZone/America/Indiana/Tell_City.pm
+cp lib/DateTime/TimeZone/America/Campo_Grande.pm blib/lib/DateTime/TimeZone/America/Campo_Grande.pm
+cp lib/DateTime/TimeZone/Asia/Khandyga.pm blib/lib/DateTime/TimeZone/Asia/Khandyga.pm
+cp lib/DateTime/TimeZone/America/Noronha.pm blib/lib/DateTime/TimeZone/America/Noronha.pm
+cp lib/DateTime/TimeZone/Asia/Almaty.pm blib/lib/DateTime/TimeZone/Asia/Almaty.pm
+cp lib/DateTime/TimeZone/Asia/Aqtobe.pm blib/lib/DateTime/TimeZone/Asia/Aqtobe.pm
+cp lib/DateTime/TimeZone/America/Araguaina.pm blib/lib/DateTime/TimeZone/America/Araguaina.pm
+cp lib/DateTime/TimeZone/America/Punta_Arenas.pm blib/lib/DateTime/TimeZone/America/Punta_Arenas.pm
+cp lib/DateTime/TimeZone/Atlantic/Azores.pm blib/lib/DateTime/TimeZone/Atlantic/Azores.pm
+cp lib/DateTime/TimeZone/Antarctica/Palmer.pm blib/lib/DateTime/TimeZone/Antarctica/Palmer.pm
+cp lib/DateTime/TimeZone/America/Port_au_Prince.pm blib/lib/DateTime/TimeZone/America/Port_au_Prince.pm
+cp lib/DateTime/TimeZone/Asia/Dubai.pm blib/lib/DateTime/TimeZone/Asia/Dubai.pm
+cp lib/DateTime/TimeZone/Floating.pm blib/lib/DateTime/TimeZone/Floating.pm
+cp lib/DateTime/TimeZone/Pacific/Fiji.pm blib/lib/DateTime/TimeZone/Pacific/Fiji.pm
+cp lib/DateTime/TimeZone/America/Cayenne.pm blib/lib/DateTime/TimeZone/America/Cayenne.pm
+cp lib/DateTime/TimeZone/Europe/Prague.pm blib/lib/DateTime/TimeZone/Europe/Prague.pm
+cp lib/DateTime/TimeZone/Asia/Yakutsk.pm blib/lib/DateTime/TimeZone/Asia/Yakutsk.pm
+cp lib/DateTime/TimeZone/Pacific/Pitcairn.pm blib/lib/DateTime/TimeZone/Pacific/Pitcairn.pm
+cp lib/DateTime/TimeZone/Asia/Tbilisi.pm blib/lib/DateTime/TimeZone/Asia/Tbilisi.pm
+cp lib/DateTime/TimeZone/Asia/Qyzylorda.pm blib/lib/DateTime/TimeZone/Asia/Qyzylorda.pm
+cp lib/DateTime/TimeZone/America/Barbados.pm blib/lib/DateTime/TimeZone/America/Barbados.pm
+cp lib/DateTime/TimeZone/Europe/Gibraltar.pm blib/lib/DateTime/TimeZone/Europe/Gibraltar.pm
+cp lib/DateTime/TimeZone/Europe/Paris.pm blib/lib/DateTime/TimeZone/Europe/Paris.pm
+cp lib/DateTime/TimeZone/Africa/Johannesburg.pm blib/lib/DateTime/TimeZone/Africa/Johannesburg.pm
+cp lib/DateTime/TimeZone/Europe/Tirane.pm blib/lib/DateTime/TimeZone/Europe/Tirane.pm
+cp lib/DateTime/TimeZone/Asia/Thimphu.pm blib/lib/DateTime/TimeZone/Asia/Thimphu.pm
+cp lib/DateTime/TimeZone/Africa/Lagos.pm blib/lib/DateTime/TimeZone/Africa/Lagos.pm
+cp lib/DateTime/TimeZone/Asia/Anadyr.pm blib/lib/DateTime/TimeZone/Asia/Anadyr.pm
+cp lib/DateTime/TimeZone/America/Belize.pm blib/lib/DateTime/TimeZone/America/Belize.pm
+cp lib/DateTime/TimeZone/Asia/Oral.pm blib/lib/DateTime/TimeZone/Asia/Oral.pm
+cp lib/DateTime/TimeZone/America/Hermosillo.pm blib/lib/DateTime/TimeZone/America/Hermosillo.pm
+cp lib/DateTime/TimeZone/Antarctica/Macquarie.pm blib/lib/DateTime/TimeZone/Antarctica/Macquarie.pm
+cp lib/DateTime/TimeZone/America/Ciudad_Juarez.pm blib/lib/DateTime/TimeZone/America/Ciudad_Juarez.pm
+cp lib/DateTime/TimeZone/Pacific/Marquesas.pm blib/lib/DateTime/TimeZone/Pacific/Marquesas.pm
+cp lib/DateTime/TimeZone/Europe/Istanbul.pm blib/lib/DateTime/TimeZone/Europe/Istanbul.pm
+cp lib/DateTime/TimeZone/Pacific/Rarotonga.pm blib/lib/DateTime/TimeZone/Pacific/Rarotonga.pm
+cp lib/DateTime/TimeZone/Australia/Eucla.pm blib/lib/DateTime/TimeZone/Australia/Eucla.pm
+cp lib/DateTime/TimeZone/Africa/Casablanca.pm blib/lib/DateTime/TimeZone/Africa/Casablanca.pm
+cp lib/DateTime/TimeZone/Pacific/Tarawa.pm blib/lib/DateTime/TimeZone/Pacific/Tarawa.pm
+cp lib/DateTime/TimeZone/Asia/Dili.pm blib/lib/DateTime/TimeZone/Asia/Dili.pm
+cp lib/DateTime/TimeZone/OlsonDB/Zone.pm blib/lib/DateTime/TimeZone/OlsonDB/Zone.pm
+cp lib/DateTime/TimeZone/America/Argentina/Ushuaia.pm blib/lib/DateTime/TimeZone/America/Argentina/Ushuaia.pm
+cp lib/DateTime/TimeZone/Asia/Kathmandu.pm blib/lib/DateTime/TimeZone/Asia/Kathmandu.pm
+cp lib/DateTime/TimeZone/Asia/Seoul.pm blib/lib/DateTime/TimeZone/Asia/Seoul.pm
+cp lib/DateTime/TimeZone/America/Denver.pm blib/lib/DateTime/TimeZone/America/Denver.pm
+cp lib/DateTime/TimeZone/America/Edmonton.pm blib/lib/DateTime/TimeZone/America/Edmonton.pm
+cp lib/DateTime/TimeZone/Atlantic/Cape_Verde.pm blib/lib/DateTime/TimeZone/Atlantic/Cape_Verde.pm
+cp lib/DateTime/TimeZone.pm blib/lib/DateTime/TimeZone.pm
+cp lib/DateTime/TimeZone/Asia/Tashkent.pm blib/lib/DateTime/TimeZone/Asia/Tashkent.pm
+cp lib/DateTime/TimeZone/Asia/Hebron.pm blib/lib/DateTime/TimeZone/Asia/Hebron.pm
+cp lib/DateTime/TimeZone/Australia/Broken_Hill.pm blib/lib/DateTime/TimeZone/Australia/Broken_Hill.pm
+cp lib/DateTime/TimeZone/Atlantic/Bermuda.pm blib/lib/DateTime/TimeZone/Atlantic/Bermuda.pm
+cp lib/DateTime/TimeZone/America/North_Dakota/New_Salem.pm blib/lib/DateTime/TimeZone/America/North_Dakota/New_Salem.pm
+cp lib/DateTime/TimeZone/America/Indiana/Marengo.pm blib/lib/DateTime/TimeZone/America/Indiana/Marengo.pm
+cp lib/DateTime/TimeZone/America/Recife.pm blib/lib/DateTime/TimeZone/America/Recife.pm
+cp lib/DateTime/TimeZone/Australia/Melbourne.pm blib/lib/DateTime/TimeZone/Australia/Melbourne.pm
+cp lib/DateTime/TimeZone/Asia/Chita.pm blib/lib/DateTime/TimeZone/Asia/Chita.pm
+cp lib/DateTime/TimeZone/America/Cambridge_Bay.pm blib/lib/DateTime/TimeZone/America/Cambridge_Bay.pm
+cp lib/DateTime/TimeZone/Asia/Dhaka.pm blib/lib/DateTime/TimeZone/Asia/Dhaka.pm
+cp lib/DateTime/TimeZone/Africa/Juba.pm blib/lib/DateTime/TimeZone/Africa/Juba.pm
+cp lib/DateTime/TimeZone/Asia/Damascus.pm blib/lib/DateTime/TimeZone/Asia/Damascus.pm
+cp lib/DateTime/TimeZone/America/Bahia.pm blib/lib/DateTime/TimeZone/America/Bahia.pm
+cp lib/DateTime/TimeZone/OlsonDB/Change.pm blib/lib/DateTime/TimeZone/OlsonDB/Change.pm
+cp lib/DateTime/TimeZone/America/Guayaquil.pm blib/lib/DateTime/TimeZone/America/Guayaquil.pm
+cp lib/DateTime/TimeZone/America/Thule.pm blib/lib/DateTime/TimeZone/America/Thule.pm
+cp lib/DateTime/TimeZone/America/Grand_Turk.pm blib/lib/DateTime/TimeZone/America/Grand_Turk.pm
+cp lib/DateTime/TimeZone/Asia/Samarkand.pm blib/lib/DateTime/TimeZone/Asia/Samarkand.pm
+cp lib/DateTime/TimeZone/America/Cancun.pm blib/lib/DateTime/TimeZone/America/Cancun.pm
+cp lib/DateTime/TimeZone/Local.pm blib/lib/DateTime/TimeZone/Local.pm
+cp lib/DateTime/TimeZone/Europe/Helsinki.pm blib/lib/DateTime/TimeZone/Europe/Helsinki.pm
+cp lib/DateTime/TimeZone/America/Manaus.pm blib/lib/DateTime/TimeZone/America/Manaus.pm
+cp lib/DateTime/TimeZone/Pacific/Chatham.pm blib/lib/DateTime/TimeZone/Pacific/Chatham.pm
+cp lib/DateTime/TimeZone/Asia/Amman.pm blib/lib/DateTime/TimeZone/Asia/Amman.pm
+cp lib/DateTime/TimeZone/Asia/Singapore.pm blib/lib/DateTime/TimeZone/Asia/Singapore.pm
+cp lib/DateTime/TimeZone/Asia/Hong_Kong.pm blib/lib/DateTime/TimeZone/Asia/Hong_Kong.pm
+cp lib/DateTime/TimeZone/Pacific/Pago_Pago.pm blib/lib/DateTime/TimeZone/Pacific/Pago_Pago.pm
+cp lib/DateTime/TimeZone/Local/Android.pm blib/lib/DateTime/TimeZone/Local/Android.pm
+cp lib/DateTime/TimeZone/Asia/Baku.pm blib/lib/DateTime/TimeZone/Asia/Baku.pm
+cp lib/DateTime/TimeZone/America/Chihuahua.pm blib/lib/DateTime/TimeZone/America/Chihuahua.pm
+cp lib/DateTime/TimeZone/Europe/Samara.pm blib/lib/DateTime/TimeZone/Europe/Samara.pm
+cp lib/DateTime/TimeZone/Atlantic/Stanley.pm blib/lib/DateTime/TimeZone/Atlantic/Stanley.pm
+cp lib/DateTime/TimeZone/Asia/Kolkata.pm blib/lib/DateTime/TimeZone/Asia/Kolkata.pm
+cp lib/DateTime/TimeZone/America/Mazatlan.pm blib/lib/DateTime/TimeZone/America/Mazatlan.pm
+cp lib/DateTime/TimeZone/America/Moncton.pm blib/lib/DateTime/TimeZone/America/Moncton.pm
+cp lib/DateTime/TimeZone/Asia/Jerusalem.pm blib/lib/DateTime/TimeZone/Asia/Jerusalem.pm
+cp lib/DateTime/TimeZone/Europe/Astrakhan.pm blib/lib/DateTime/TimeZone/Europe/Astrakhan.pm
+cp lib/DateTime/TimeZone/America/Miquelon.pm blib/lib/DateTime/TimeZone/America/Miquelon.pm
+cp lib/DateTime/TimeZone/Europe/Sofia.pm blib/lib/DateTime/TimeZone/Europe/Sofia.pm
+cp lib/DateTime/TimeZone/America/Bogota.pm blib/lib/DateTime/TimeZone/America/Bogota.pm
+cp lib/DateTime/TimeZone/America/Yakutat.pm blib/lib/DateTime/TimeZone/America/Yakutat.pm
+cp lib/DateTime/TimeZone/Asia/Aqtau.pm blib/lib/DateTime/TimeZone/Asia/Aqtau.pm
+cp lib/DateTime/TimeZone/Australia/Brisbane.pm blib/lib/DateTime/TimeZone/Australia/Brisbane.pm
+cp lib/DateTime/TimeZone/Asia/Dushanbe.pm blib/lib/DateTime/TimeZone/Asia/Dushanbe.pm
+cp lib/DateTime/TimeZone/Pacific/Guam.pm blib/lib/DateTime/TimeZone/Pacific/Guam.pm
+cp lib/DateTime/TimeZone/Pacific/Easter.pm blib/lib/DateTime/TimeZone/Pacific/Easter.pm
+cp lib/DateTime/TimeZone/Europe/Andorra.pm blib/lib/DateTime/TimeZone/Europe/Andorra.pm
+cp lib/DateTime/TimeZone/Europe/Tallinn.pm blib/lib/DateTime/TimeZone/Europe/Tallinn.pm
+cp lib/DateTime/TimeZone/Pacific/Gambier.pm blib/lib/DateTime/TimeZone/Pacific/Gambier.pm
+cp lib/DateTime/TimeZone/America/Argentina/Cordoba.pm blib/lib/DateTime/TimeZone/America/Argentina/Cordoba.pm
+cp lib/DateTime/TimeZone/America/Danmarkshavn.pm blib/lib/DateTime/TimeZone/America/Danmarkshavn.pm
+cp lib/DateTime/TimeZone/America/La_Paz.pm blib/lib/DateTime/TimeZone/America/La_Paz.pm
+cp lib/DateTime/TimeZone/Asia/Irkutsk.pm blib/lib/DateTime/TimeZone/Asia/Irkutsk.pm
+cp lib/DateTime/TimeZone/Asia/Taipei.pm blib/lib/DateTime/TimeZone/Asia/Taipei.pm
+cp lib/DateTime/TimeZone/Asia/Tehran.pm blib/lib/DateTime/TimeZone/Asia/Tehran.pm
+cp lib/DateTime/TimeZone/Europe/Kirov.pm blib/lib/DateTime/TimeZone/Europe/Kirov.pm
+cp lib/DateTime/TimeZone/Europe/Athens.pm blib/lib/DateTime/TimeZone/Europe/Athens.pm
+cp lib/DateTime/TimeZone/Asia/Baghdad.pm blib/lib/DateTime/TimeZone/Asia/Baghdad.pm
+cp lib/DateTime/TimeZone/America/Kentucky/Monticello.pm blib/lib/DateTime/TimeZone/America/Kentucky/Monticello.pm
+cp lib/DateTime/TimeZone/Pacific/Bougainville.pm blib/lib/DateTime/TimeZone/Pacific/Bougainville.pm
+cp lib/DateTime/TimeZone/Pacific/Apia.pm blib/lib/DateTime/TimeZone/Pacific/Apia.pm
+cp lib/DateTime/TimeZone/Europe/Belgrade.pm blib/lib/DateTime/TimeZone/Europe/Belgrade.pm
+cp lib/DateTime/TimeZone/Local/VMS.pm blib/lib/DateTime/TimeZone/Local/VMS.pm
+cp lib/DateTime/TimeZone/Africa/Windhoek.pm blib/lib/DateTime/TimeZone/Africa/Windhoek.pm
+cp lib/DateTime/TimeZone/America/Kentucky/Louisville.pm blib/lib/DateTime/TimeZone/America/Kentucky/Louisville.pm
+cp lib/DateTime/TimeZone/Antarctica/Rothera.pm blib/lib/DateTime/TimeZone/Antarctica/Rothera.pm
+cp lib/DateTime/TimeZone/America/Rankin_Inlet.pm blib/lib/DateTime/TimeZone/America/Rankin_Inlet.pm
+cp lib/DateTime/TimeZone/America/Menominee.pm blib/lib/DateTime/TimeZone/America/Menominee.pm
+cp lib/DateTime/TimeZone/Asia/Beirut.pm blib/lib/DateTime/TimeZone/Asia/Beirut.pm
+cp lib/DateTime/TimeZone/America/Indiana/Petersburg.pm blib/lib/DateTime/TimeZone/America/Indiana/Petersburg.pm
+cp lib/DateTime/TimeZone/Pacific/Port_Moresby.pm blib/lib/DateTime/TimeZone/Pacific/Port_Moresby.pm
+cp lib/DateTime/TimeZone/Australia/Lindeman.pm blib/lib/DateTime/TimeZone/Australia/Lindeman.pm
+cp lib/DateTime/TimeZone/Europe/Simferopol.pm blib/lib/DateTime/TimeZone/Europe/Simferopol.pm
+cp lib/DateTime/TimeZone/Africa/Ceuta.pm blib/lib/DateTime/TimeZone/Africa/Ceuta.pm
+cp lib/DateTime/TimeZone/Atlantic/Canary.pm blib/lib/DateTime/TimeZone/Atlantic/Canary.pm
+cp lib/DateTime/TimeZone/America/Mexico_City.pm blib/lib/DateTime/TimeZone/America/Mexico_City.pm
+cp lib/DateTime/TimeZone/America/Indiana/Knox.pm blib/lib/DateTime/TimeZone/America/Indiana/Knox.pm
+cp lib/DateTime/TimeZone/America/Cuiaba.pm blib/lib/DateTime/TimeZone/America/Cuiaba.pm
+cp lib/DateTime/TimeZone/America/Santiago.pm blib/lib/DateTime/TimeZone/America/Santiago.pm
+cp lib/DateTime/TimeZone/America/El_Salvador.pm blib/lib/DateTime/TimeZone/America/El_Salvador.pm
+cp lib/DateTime/TimeZone/Asia/Jakarta.pm blib/lib/DateTime/TimeZone/Asia/Jakarta.pm
+cp lib/DateTime/TimeZone/Australia/Perth.pm blib/lib/DateTime/TimeZone/Australia/Perth.pm
+cp lib/DateTime/TimeZone/Pacific/Fakaofo.pm blib/lib/DateTime/TimeZone/Pacific/Fakaofo.pm
+cp lib/DateTime/TimeZone/Atlantic/Faroe.pm blib/lib/DateTime/TimeZone/Atlantic/Faroe.pm
+cp lib/DateTime/TimeZone/Asia/Hovd.pm blib/lib/DateTime/TimeZone/Asia/Hovd.pm
+cp lib/DateTime/TimeZone/Europe/Ulyanovsk.pm blib/lib/DateTime/TimeZone/Europe/Ulyanovsk.pm
+cp lib/DateTime/TimeZone/America/New_York.pm blib/lib/DateTime/TimeZone/America/New_York.pm
+cp lib/DateTime/TimeZone/Africa/El_Aaiun.pm blib/lib/DateTime/TimeZone/Africa/El_Aaiun.pm
+cp lib/DateTime/TimeZone/America/Paramaribo.pm blib/lib/DateTime/TimeZone/America/Paramaribo.pm
+cp lib/DateTime/TimeZone/America/Nuuk.pm blib/lib/DateTime/TimeZone/America/Nuuk.pm
+cp lib/DateTime/TimeZone/Europe/Rome.pm blib/lib/DateTime/TimeZone/Europe/Rome.pm
+cp lib/DateTime/TimeZone/Pacific/Efate.pm blib/lib/DateTime/TimeZone/Pacific/Efate.pm
+cp lib/DateTime/TimeZone/America/Managua.pm blib/lib/DateTime/TimeZone/America/Managua.pm
+cp lib/DateTime/TimeZone/Asia/Kuching.pm blib/lib/DateTime/TimeZone/Asia/Kuching.pm
+cp lib/DateTime/TimeZone/Pacific/Guadalcanal.pm blib/lib/DateTime/TimeZone/Pacific/Guadalcanal.pm
+cp lib/DateTime/TimeZone/Australia/Hobart.pm blib/lib/DateTime/TimeZone/Australia/Hobart.pm
+cp lib/DateTime/TimeZone/America/Tegucigalpa.pm blib/lib/DateTime/TimeZone/America/Tegucigalpa.pm
+cp lib/DateTime/TimeZone/Asia/Makassar.pm blib/lib/DateTime/TimeZone/Asia/Makassar.pm
+cp lib/DateTime/TimeZone/America/Toronto.pm blib/lib/DateTime/TimeZone/America/Toronto.pm
+cp lib/DateTime/TimeZone/Europe/Vienna.pm blib/lib/DateTime/TimeZone/Europe/Vienna.pm
+cp lib/DateTime/TimeZone/America/Argentina/Rio_Gallegos.pm blib/lib/DateTime/TimeZone/America/Argentina/Rio_Gallegos.pm
+cp lib/DateTime/TimeZone/America/Metlakatla.pm blib/lib/DateTime/TimeZone/America/Metlakatla.pm
+cp lib/DateTime/TimeZone/Africa/Tunis.pm blib/lib/DateTime/TimeZone/Africa/Tunis.pm
+cp lib/DateTime/TimeZone/OlsonDB/Observance.pm blib/lib/DateTime/TimeZone/OlsonDB/Observance.pm
+cp lib/DateTime/TimeZone/Europe/Vilnius.pm blib/lib/DateTime/TimeZone/Europe/Vilnius.pm
+cp lib/DateTime/TimeZone/America/St_Johns.pm blib/lib/DateTime/TimeZone/America/St_Johns.pm
+cp lib/DateTime/TimeZone/Europe/Madrid.pm blib/lib/DateTime/TimeZone/Europe/Madrid.pm
+cp lib/DateTime/TimeZone/Europe/Brussels.pm blib/lib/DateTime/TimeZone/Europe/Brussels.pm
+cp lib/DateTime/TimeZone/Africa/Sao_Tome.pm blib/lib/DateTime/TimeZone/Africa/Sao_Tome.pm
+cp lib/DateTime/TimeZone/America/Indiana/Vincennes.pm blib/lib/DateTime/TimeZone/America/Indiana/Vincennes.pm
+cp lib/DateTime/TimeZone/Asia/Riyadh.pm blib/lib/DateTime/TimeZone/Asia/Riyadh.pm
+cp lib/DateTime/TimeZone/Indian/Maldives.pm blib/lib/DateTime/TimeZone/Indian/Maldives.pm
+cp lib/DateTime/TimeZone/America/Nome.pm blib/lib/DateTime/TimeZone/America/Nome.pm
+cp lib/DateTime/TimeZone/Africa/Bissau.pm blib/lib/DateTime/TimeZone/Africa/Bissau.pm
+cp lib/DateTime/TimeZone/America/Indiana/Indianapolis.pm blib/lib/DateTime/TimeZone/America/Indiana/Indianapolis.pm
+cp lib/DateTime/TimeZone/America/Glace_Bay.pm blib/lib/DateTime/TimeZone/America/Glace_Bay.pm
+cp lib/DateTime/TimeZone/America/Sao_Paulo.pm blib/lib/DateTime/TimeZone/America/Sao_Paulo.pm
+cp lib/DateTime/TimeZone/Pacific/Kanton.pm blib/lib/DateTime/TimeZone/Pacific/Kanton.pm
+cp lib/DateTime/TimeZone/America/Boa_Vista.pm blib/lib/DateTime/TimeZone/America/Boa_Vista.pm
+cp lib/DateTime/TimeZone/Asia/Colombo.pm blib/lib/DateTime/TimeZone/Asia/Colombo.pm
+cp lib/DateTime/TimeZone/America/North_Dakota/Beulah.pm blib/lib/DateTime/TimeZone/America/North_Dakota/Beulah.pm
+cp lib/DateTime/TimeZone/Asia/Manila.pm blib/lib/DateTime/TimeZone/Asia/Manila.pm
+cp lib/DateTime/TimeZone/America/Ojinaga.pm blib/lib/DateTime/TimeZone/America/Ojinaga.pm
+cp lib/DateTime/TimeZone/Atlantic/South_Georgia.pm blib/lib/DateTime/TimeZone/Atlantic/South_Georgia.pm
+cp lib/DateTime/TimeZone/OffsetOnly.pm blib/lib/DateTime/TimeZone/OffsetOnly.pm
+cp lib/DateTime/TimeZone/Asia/Magadan.pm blib/lib/DateTime/TimeZone/Asia/Magadan.pm
+cp lib/DateTime/TimeZone/Asia/Yekaterinburg.pm blib/lib/DateTime/TimeZone/Asia/Yekaterinburg.pm
+cp lib/DateTime/TimeZone/America/Sitka.pm blib/lib/DateTime/TimeZone/America/Sitka.pm
+cp lib/DateTime/TimeZone/Asia/Shanghai.pm blib/lib/DateTime/TimeZone/Asia/Shanghai.pm
+cp lib/DateTime/TimeZone/Asia/Nicosia.pm blib/lib/DateTime/TimeZone/Asia/Nicosia.pm
+cp lib/DateTime/TimeZone/America/Rio_Branco.pm blib/lib/DateTime/TimeZone/America/Rio_Branco.pm
+cp lib/DateTime/TimeZone/Asia/Tomsk.pm blib/lib/DateTime/TimeZone/Asia/Tomsk.pm
+cp lib/DateTime/TimeZone/Antarctica/Vostok.pm blib/lib/DateTime/TimeZone/Antarctica/Vostok.pm
+cp lib/DateTime/TimeZone/Europe/Kyiv.pm blib/lib/DateTime/TimeZone/Europe/Kyiv.pm
+cp lib/DateTime/TimeZone/America/Anchorage.pm blib/lib/DateTime/TimeZone/America/Anchorage.pm
+cp lib/DateTime/TimeZone/Atlantic/Madeira.pm blib/lib/DateTime/TimeZone/Atlantic/Madeira.pm
+cp lib/DateTime/TimeZone/Africa/Maputo.pm blib/lib/DateTime/TimeZone/Africa/Maputo.pm
+cp lib/DateTime/TimeZone/America/Juneau.pm blib/lib/DateTime/TimeZone/America/Juneau.pm
+cp lib/DateTime/TimeZone/America/Iqaluit.pm blib/lib/DateTime/TimeZone/America/Iqaluit.pm
+cp lib/DateTime/TimeZone/Asia/Gaza.pm blib/lib/DateTime/TimeZone/Asia/Gaza.pm
+cp lib/DateTime/TimeZone/America/Adak.pm blib/lib/DateTime/TimeZone/America/Adak.pm
+cp lib/DateTime/TimeZone/America/Indiana/Winamac.pm blib/lib/DateTime/TimeZone/America/Indiana/Winamac.pm
+cp lib/DateTime/TimeZone/America/Guatemala.pm blib/lib/DateTime/TimeZone/America/Guatemala.pm
+cp lib/DateTime/TimeZone/America/Monterrey.pm blib/lib/DateTime/TimeZone/America/Monterrey.pm
+cp lib/DateTime/TimeZone/America/Resolute.pm blib/lib/DateTime/TimeZone/America/Resolute.pm
+cp lib/DateTime/TimeZone/Europe/Bucharest.pm blib/lib/DateTime/TimeZone/Europe/Bucharest.pm
+cp lib/DateTime/TimeZone/America/Coyhaique.pm blib/lib/DateTime/TimeZone/America/Coyhaique.pm
+cp lib/DateTime/TimeZone/America/Maceio.pm blib/lib/DateTime/TimeZone/America/Maceio.pm
+cp lib/DateTime/TimeZone/Asia/Qatar.pm blib/lib/DateTime/TimeZone/Asia/Qatar.pm
+cp lib/DateTime/TimeZone/America/Belem.pm blib/lib/DateTime/TimeZone/America/Belem.pm
+Manifying 9 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# 
+# Versions for all modules listed in MYMETA.json (including optional ones):
+# 
+# === Configure Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Build Requires ===
+# 
+#     Module              Want Have
+#     ------------------- ---- ----
+#     ExtUtils::MakeMaker  any 7.70
+# 
+# === Test Requires ===
+# 
+#     Module                Want     Have
+#     --------------------- ---- --------
+#     ExtUtils::MakeMaker    any     7.70
+#     File::Copy             any     2.41
+#     File::Path             any     2.18
+#     File::Spec             any     3.91
+#     File::Spec::Functions  any     3.91
+#     File::Temp             any   0.2311
+#     Storable               any     3.32
+#     Sys::Hostname          any     1.25
+#     Test::Fatal            any    0.017
+#     Test::More            0.96 1.302209
+#     Test::Requires         any     0.11
+#     base                   any     2.27
+#     lib                    any     0.65
+#     overload               any     1.37
+# 
+# === Test Recommends ===
+# 
+#     Module         Want     Have
+#     ---------- -------- --------
+#     CPAN::Meta 2.120900 2.150010
+# 
+# === Runtime Requires ===
+# 
+#     Module                         Want     Have
+#     -------------------------- -------- --------
+#     Class::Singleton               1.03      1.6
+#     Cwd                               3     3.91
+#     File::Basename                  any     2.86
+#     File::Compare                   any   1.1008
+#     File::Find                      any     1.44
+#     File::Spec                      any     3.91
+#     List::Util                     1.33     1.63
+#     Module::Runtime                 any    0.016
+#     Params::ValidationCompiler     0.13     0.31
+#     Specio::Library::Builtins       any     0.50
+#     Specio::Library::String         any     0.50
+#     Try::Tiny                       any     0.32
+#     constant                        any     1.33
+#     namespace::autoclean            any     0.31
+#     parent                          any    0.241
+#     perl                       5.008004 5.040002
+#     strict                          any     1.13
+#     warnings                        any     1.70
+# 
+t/00-report-prereqs.t ....... ok
+t/02basic.t ................. skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/03link.t .................. skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/04local.t ................. skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/05offset.t ................ ok
+t/06no-dst.t ................ skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/07offset-only.t ........... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/08name.t .................. skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/09changes.t ............... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/11valid-name.t ............ skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/12storable.t .............. skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/13short-name-has-slash.t .. skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/14invalid-name.t .......... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/15catalog.t ............... ok
+t/16has-dst-changes.t ....... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/17special-names.t ......... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/18olson-version-check.t ... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/20local-subclass.t ........ ok
+t/21stack-corruption.t ...... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/22taint-mode.t ............ skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+t/23etc_zones_offset.t ...... skipped: Cannot run tests before DateTime.pm 0.1501 is installed.
+All tests successful.
+Files=21, Tests=58,  1 wallclock secs ( 0.03 usr  0.00 sys +  0.73 cusr  0.14 csys =  0.90 CPU)
+Result: PASS
+>>> perl-datetime-timezone: Entering fakeroot...
+Manifying 9 pod documents
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/OffsetOnly.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/UTC.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/OlsonDB.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Local.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Catalog.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Floating.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Fakaofo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Kosrae.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Honolulu.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Port_Moresby.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Bougainville.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Guadalcanal.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Guam.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Easter.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Noumea.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Tahiti.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Norfolk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Marquesas.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Nauru.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Tongatapu.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Pitcairn.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Gambier.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Efate.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Tarawa.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Pago_Pago.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Kwajalein.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Apia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Niue.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Kiritimati.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Chatham.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Kanton.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Fiji.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Auckland.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Palau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Galapagos.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Pacific/Rarotonga.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Tirane.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Moscow.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Chisinau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Andorra.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Madrid.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Vienna.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Astrakhan.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Warsaw.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Samara.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Berlin.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Gibraltar.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Saratov.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Athens.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Zurich.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Budapest.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Riga.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Volgograd.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Istanbul.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Kirov.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Paris.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Brussels.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Belgrade.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Minsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Lisbon.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Kyiv.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Kaliningrad.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/London.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Ulyanovsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Rome.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Tallinn.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Prague.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Vilnius.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Malta.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Sofia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Dublin.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Simferopol.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Bucharest.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Europe/Helsinki.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Casey.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Macquarie.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Rothera.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Vostok.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Palmer.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Davis.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Mawson.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Antarctica/Troll.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Local/Unix.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Local/VMS.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Local/Android.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/New_York.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Manaus.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Santiago.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Edmonton.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Menominee.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Havana.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Mexico_City.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Fortaleza.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Monterrey.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Grand_Turk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Detroit.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Glace_Bay.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/El_Salvador.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Fort_Nelson.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Los_Angeles.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Boa_Vista.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Mazatlan.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Guayaquil.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Coyhaique.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Bahia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Resolute.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Rankin_Inlet.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Ciudad_Juarez.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Araguaina.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Tegucigalpa.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Punta_Arenas.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Port_au_Prince.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Recife.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Porto_Velho.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Nuuk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Cayenne.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/La_Paz.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Lima.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Barbados.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Caracas.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Chihuahua.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Yakutat.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Panama.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Danmarkshavn.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Costa_Rica.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Santo_Domingo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Asuncion.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Jamaica.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Chicago.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Juneau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Moncton.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Maceio.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Puerto_Rico.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Toronto.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Phoenix.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Belem.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Cancun.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Winnipeg.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Guyana.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Regina.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Dawson.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Sitka.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Merida.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Miquelon.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Cambridge_Bay.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Rio_Branco.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Eirunepe.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Vancouver.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Boise.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Goose_Bay.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/St_Johns.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Denver.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Matamoros.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Whitehorse.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Martinique.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Managua.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Noronha.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Metlakatla.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Bahia_Banderas.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Paramaribo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Anchorage.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Hermosillo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Tijuana.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Campo_Grande.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Nome.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Scoresbysund.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Thule.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Montevideo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Dawson_Creek.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Belize.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Swift_Current.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Bogota.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Santarem.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Inuvik.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Ojinaga.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Sao_Paulo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Halifax.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Cuiaba.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Guatemala.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Iqaluit.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Adak.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Kentucky/Monticello.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Kentucky/Louisville.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/North_Dakota/Beulah.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/North_Dakota/Center.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/North_Dakota/New_Salem.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Tell_City.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Marengo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Knox.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Winamac.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Vevay.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Vincennes.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Indianapolis.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Indiana/Petersburg.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Salta.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Ushuaia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/San_Luis.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/San_Juan.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Jujuy.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Catamarca.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Rio_Gallegos.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Cordoba.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Buenos_Aires.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/La_Rioja.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Tucuman.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/America/Argentina/Mendoza.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Adelaide.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Broken_Hill.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Brisbane.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Lord_Howe.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Perth.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Hobart.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Melbourne.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Eucla.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Sydney.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Darwin.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Australia/Lindeman.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Hong_Kong.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Yakutsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Pontianak.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Baghdad.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Tokyo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Ho_Chi_Minh.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Bangkok.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Kolkata.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Singapore.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Irkutsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Beirut.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Dubai.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Urumqi.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Krasnoyarsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Karachi.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Qostanay.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Ashgabat.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Famagusta.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Amman.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Qyzylorda.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Gaza.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Yangon.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Dili.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Jayapura.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Tehran.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Novokuznetsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Shanghai.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Hebron.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Bishkek.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Makassar.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Aqtobe.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Khandyga.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Tashkent.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Jerusalem.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Omsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Ust_Nera.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Tbilisi.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Kuching.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Samarkand.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Tomsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Thimphu.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Manila.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Yekaterinburg.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Magadan.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Seoul.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Damascus.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Oral.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Srednekolymsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Baku.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Pyongyang.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Nicosia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Atyrau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Taipei.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Dhaka.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Dushanbe.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Novosibirsk.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Yerevan.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Chita.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Jakarta.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Ulaanbaatar.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Qatar.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Colombo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Kathmandu.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Aqtau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Macau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Anadyr.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Barnaul.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Almaty.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Riyadh.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Sakhalin.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Hovd.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Vladivostok.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Kabul.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Asia/Kamchatka.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/OlsonDB/Rule.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/OlsonDB/Observance.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/OlsonDB/Change.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/OlsonDB/Zone.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Bissau.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Khartoum.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Windhoek.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Abidjan.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Juba.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Lagos.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/El_Aaiun.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Monrovia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Ceuta.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Ndjamena.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Sao_Tome.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Algiers.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Johannesburg.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Maputo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Nairobi.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Tunis.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Casablanca.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Tripoli.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Africa/Cairo.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Faroe.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Canary.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/South_Georgia.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Azores.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Cape_Verde.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Bermuda.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Stanley.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Atlantic/Madeira.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Indian/Mauritius.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Indian/Chagos.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/perl5/vendor_perl/DateTime/TimeZone/Indian/Maldives.pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::UTC.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::Floating.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::OffsetOnly.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::Local.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::OlsonDB.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::Catalog.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::Local::VMS.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone::Local::Unix.3pm
+Installing /tmp/pkg/perl-datetime-timezone/usr/share/man/man3/DateTime::TimeZone.3pm
+>>> perl-datetime-timezone-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/perl-datetime-timezone-doc/usr/share/man'
+>>> perl-datetime-timezone-doc*: Preparing subpackage perl-datetime-timezone-doc...
+>>> perl-datetime-timezone-doc*: Running postcheck for perl-datetime-timezone-doc
+>>> perl-datetime-timezone*: Running postcheck for perl-datetime-timezone
+>>> perl-datetime-timezone*: Preparing package perl-datetime-timezone...
+>>> perl-datetime-timezone-doc*: Tracing dependencies...
+>>> perl-datetime-timezone-doc*: Package size: 30.7 KB
+>>> perl-datetime-timezone-doc*: Compressing data...
+>>> perl-datetime-timezone-doc*: Create checksum...
+>>> perl-datetime-timezone-doc*: Create perl-datetime-timezone-doc-2.65-r0.apk
+>>> perl-datetime-timezone*: Tracing dependencies...
+	perl
+	perl-specio
+	perl-class-singleton
+	perl-module-runtime
+	perl-params-validationcompiler
+	perl-try-tiny
+	perl-namespace-autoclean
+>>> perl-datetime-timezone*: Package size: 6.0 MB
+>>> perl-datetime-timezone*: Compressing data...
+>>> perl-datetime-timezone*: Create checksum...
+>>> perl-datetime-timezone*: Create perl-datetime-timezone-2.65-r0.apk
+>>> perl-datetime-timezone: Updating the main/x86_64 repository index...
+>>> perl-datetime-timezone: Signing the index...
+>>> perl-datetime-timezone: Cleaning up srcdir
+>>> perl-datetime-timezone: Cleaning up build chroot
+>>> perl-datetime-timezone: Cleaning up pkgdir

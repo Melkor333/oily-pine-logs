@@ -1,0 +1,1581 @@
+>>> gawk: Validating /home/packager/oily-pine/main/gawk/APKBUILD...
+>>> gawk: Cleaning up srcdir
+>>> gawk: Cleaning up pkgdir
+>>> gawk: Cleaning up tmpdir
+>>> gawk: Fetching https://ftp.gnu.org/gnu/gawk/gawk-5.3.2.tar.xz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 24 3661k   24  882k    0     0   996k      0  0:00:03 --:--:--  0:00:03  995k100 3661k  100 3661k    0     0  3344k      0  0:00:01  0:00:01 --:--:-- 3346k
+>>> gawk: Fetching https://ftp.gnu.org/gnu/gawk/gawk-5.3.2.tar.xz
+>>> gawk: Checking sha512sums...
+gawk-5.3.2.tar.xz: OK
+echild-strerror.patch: OK
+>>> gawk: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/76) Installing musl (1.2.5-r10)
+(2/76) Installing libcrypto3 (3.5.0-r0)
+(3/76) Installing ca-certificates-bundle (20241121-r2)
+(4/76) Installing libssl3 (3.5.0-r0)
+(5/76) Installing zlib (1.3.1-r2)
+(6/76) Installing libapk2 (2.14.9-r2)
+(7/76) Installing apk-tools (2.14.9-r2)
+(8/76) Installing libcap2 (2.76-r0)
+(9/76) Installing libcap-getcap (2.76-r0)
+(10/76) Installing fakeroot (1.37.1.1-r0)
+(11/76) Installing scanelf (1.3.8-r1)
+(12/76) Installing musl-utils (1.2.5-r10)
+(13/76) Installing libgcc (14.3.0-r0)
+(14/76) Installing libstdc++ (14.3.0-r0)
+(15/76) Installing lzip (1.25-r0)
+(16/76) Installing openssl (3.5.0-r0)
+(17/76) Installing patch (2.8-r0)
+(18/76) Installing pkgconf (2.4.3-r0)
+(19/76) Installing acl-libs (2.3.2-r1)
+(20/76) Installing tar (1.35-r3)
+(21/76) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/76) Installing ssl_client (1.37.0-r18)
+(23/76) Installing busybox-binsh (1.37.0-r18)
+(24/76) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/76) Installing abuild-sudo (3.15.0-r0)
+(26/76) Installing alpine-baselayout-data (3.7.0-r0)
+(27/76) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/76) Installing bridge (1.5-r5)
+(29/76) Installing ifupdown-ng (0.12.1-r7)
+(30/76) Installing openrc-user (0.62.2-r2)
+(31/76) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/76) Installing mdev-conf (4.8-r0)
+(33/76) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/76) Installing alpine-conf (3.20.0-r0)
+(35/76) Installing alpine-keys (2.5-r0)
+(36/76) Installing alpine-release (3.22.0-r0)
+(37/76) Installing busybox-openrc (1.37.0-r18)
+(38/76) Installing busybox-suid (1.37.0-r18)
+(39/76) Installing alpine-base (3.22.0-r0)
+(40/76) Installing jansson (2.14.1-r0)
+(41/76) Installing zstd-libs (1.5.7-r0)
+(42/76) Installing binutils (2.44-r0)
+(43/76) Installing libmagic (5.46-r2)
+(44/76) Installing file (5.46-r2)
+(45/76) Installing libgomp (14.3.0-r0)
+(46/76) Installing libatomic (14.3.0-r0)
+(47/76) Installing gmp (6.3.0-r3)
+(48/76) Installing isl26 (0.26-r1)
+(49/76) Installing mpfr4 (4.2.1_p1-r0)
+(50/76) Installing mpc1 (1.3.1-r1)
+(51/76) Installing gcc (14.3.0-r0)
+(52/76) Installing libstdc++-dev (14.3.0-r0)
+(53/76) Installing musl-dev (1.2.5-r10)
+(54/76) Installing g++ (14.3.0-r0)
+(55/76) Installing make (4.4.1-r3)
+(56/76) Installing fortify-headers (1.1-r5)
+(57/76) Installing build-base (0.5-r3)
+(58/76) Installing coreutils-env (9.7-r1)
+(59/76) Installing coreutils-fmt (9.7-r1)
+(60/76) Installing coreutils-sha512sum (9.7-r1)
+(61/76) Installing libattr (2.5.2-r2)
+(62/76) Installing skalibs-libs (2.14.4.0-r0)
+(63/76) Installing utmps-libs (0.1.3.1-r0)
+(64/76) Installing coreutils (9.7-r1)
+(65/76) Installing diffutils (3.12-r0)
+(66/76) Installing brotli-libs (1.1.0-r2)
+(67/76) Installing c-ares (1.34.5-r0)
+(68/76) Installing libunistring (1.3-r0)
+(69/76) Installing libidn2 (2.3.7-r0)
+(70/76) Installing nghttp2-libs (1.65.0-r0)
+(71/76) Installing libpsl (0.21.5-r3)
+(72/76) Installing libcurl (8.14.0-r2)
+(73/76) Installing libexpat (2.7.1-r0)
+(74/76) Installing pcre2 (10.43-r1)
+(75/76) Installing git (2.49.0-r0)
+(76/76) Installing git-init-template (2.49.0-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 261 MiB in 76 packages
+>>> gawk: Fetching https://ftp.gnu.org/gnu/gawk/gawk-5.3.2.tar.xz
+>>> gawk: Checking sha512sums...
+gawk-5.3.2.tar.xz: OK
+echild-strerror.patch: OK
+>>> gawk: Unpacking /var/cache/distfiles/gawk-5.3.2.tar.xz...
+>>> gawk: echild-strerror.patch
+patching file test/testext.ok
+checking for a BSD-compatible install... ./build-aux/install-sh -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for stdbool.h... yes
+checking for sys/time.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for bison... no
+checking for byacc... no
+checking whether ln -s works... yes
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking dependency style of cc... (cached) gcc3
+checking how to run the C preprocessor... cc -E
+checking for variable-length arrays... yes
+checking how to run the C preprocessor... cc -E
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking whether make sets $(MAKE)... (cached) yes
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for special development options... no
+checking for z/OS USS compilation... no
+checking for library containing strerror... none required
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking if we are using EBCDIC... no
+checking for a sed that does not truncate output... /bin/sed
+checking whether NLS is requested... no
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking whether to use NLS... no
+checking for nl_langinfo and CODESET... yes
+checking for LC_MESSAGES... yes
+checking for arpa/inet.h... yes
+checking for fcntl.h... yes
+checking for locale.h... yes
+checking for libintl.h... no
+checking for mcheck.h... no
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for stddef.h... yes
+checking for string.h... (cached) yes
+checking for spawn.h... yes
+checking for sys/ioctl.h... yes
+checking for sys/param.h... yes
+checking for sys/personality.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for termios.h... yes
+checking for stropts.h... yes
+checking for wchar.h... (cached) yes
+checking for wctype.h... yes
+checking for bool, true, false... no
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for memory.h... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uid_t in sys/types.h... yes
+checking type of array argument to getgroups... gid_t
+checking for unsigned long long int... yes
+checking for long long int... yes
+checking for unsigned long long int... (cached) yes
+checking for intmax_t... yes
+checking for uintmax_t... yes
+checking for ssize_t... yes
+checking size of unsigned int... 4
+checking size of unsigned long... 8
+checking for socklen_t... yes
+checking for alarm... yes
+checking for working mktime... yes
+checking for getaddrinfo... yes
+checking for library containing fmod... none required
+checking for library containing isinf... no
+checking for library containing ismod... no
+checking for library containing isnan... no
+checking for __etoa_l... no
+checking for atexit... yes
+checking for btowc... yes
+checking for fmod... yes
+checking for fwrite_unlocked... yes
+checking for gai_strerror... yes
+checking for getgrent... yes
+checking for getgroups... yes
+checking for grantpt... yes
+checking for isascii... yes
+checking for isblank... yes
+checking for iswctype... yes
+checking for iswlower... yes
+checking for iswupper... yes
+checking for gettimeofday... yes
+checking for clock_gettime... yes
+checking for lstat... yes
+checking for getdtablesize... yes
+checking for mbrlen... yes
+checking for memcmp... yes
+checking for memcpy... yes
+checking for memmove... yes
+checking for memset... yes
+checking for _NSGetExecutablePath... no
+checking for mkstemp... yes
+checking for mtrace... no
+checking for personality... yes
+checking for posix_openpt... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for setsid... yes
+checking for sigprocmask... yes
+checking for snprintf... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strcoll... yes
+checking for strerror... yes
+checking for strftime... yes
+checking for strncasecmp... yes
+checking for strsignal... yes
+checking for strtod... yes
+checking for strtoul... yes
+checking for system... yes
+checking for timegm... yes
+checking for tmpfile... yes
+checking for towlower... yes
+checking for towupper... yes
+checking for tzset... yes
+checking for usleep... yes
+checking for waitpid... yes
+checking for wcrtomb... yes
+checking for wcscoll... yes
+checking for wctype... yes
+checking whether mbrtowc and mbstate_t are properly declared... yes
+checking whether C compiler accepts ... yes
+checking size of void *... 8
+checking for dlfcn.h... yes
+checking for library containing dlopen... none required
+checking whether getpgrp requires zero arguments... yes
+checking for printf %F format... yes
+checking for printf %a format... yes
+checking for gethostbyname... yes
+checking for connect... yes
+checking where to find the socket library calls... the standard library
+checking whether readline via "-lreadline" is present and sane... no
+checking whether readline via "-lreadline -ltermcap" is present and sane... no
+checking whether readline via "-lreadline -lcurses" is present and sane... no
+checking whether readline via "-lreadline -lncurses" is present and sane... no
+checking whether mpfr via "-lmpfr -lgmp" is present and usable... no
+checking for struct stat.st_blksize... yes
+checking for struct passwd.pw_passwd... yes
+checking for struct group.gr_passwd... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for cc options needed to detect all undeclared functions... none needed
+checking for struct tm.tm_zone... yes
+checking whether char is unsigned... no
+checking for an ANSI C-conforming const... yes
+checking for C/C++ restrict keyword... __restrict__
+checking for inline... inline
+checking for preprocessor stringizing operator... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating support/Makefile
+config.status: creating awklib/Makefile
+config.status: creating doc/Makefile
+config.status: creating extras/Makefile
+config.status: creating po/Makefile.in
+config.status: creating test/Makefile
+config.status: creating gawkbug
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+=== configuring in extension (/tmp/src/gawk-5.3.2/extension)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--mandir=/usr/share/man' '--infodir=/usr/share/info' '--disable-nls' '--disable-pma' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' --cache-file=/dev/null --srcdir=.
+checking for a BSD-compatible install... ./build-aux/install-sh -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for sys/time.h... yes
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for z/OS USS compilation... no
+checking for a sed that does not truncate output... /bin/sed
+checking whether NLS is requested... no
+checking for msgfmt... no
+checking for gmsgfmt... :
+checking for xgettext... no
+checking for msgmerge... no
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for shared library run path origin... done
+checking 32-bit host C ABI... no
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ELF binary format... yes
+checking for the common suffixes of directories in the library search path... lib,lib,lib
+checking for CFPreferencesCopyAppValue... no
+checking for CFLocaleCopyPreferredLanguages... no
+checking whether to use NLS... no
+checking for nl_langinfo and CODESET... yes
+checking for LC_MESSAGES... yes
+checking for struct stat.st_blksize... yes
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether C compiler accepts ... yes
+checking size of void *... 8
+checking how to print strings... printf
+checking for a sed that does not truncate output... (cached) /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-file... no
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for special development options... no
+checking for fnmatch.h... yes
+checking for limits.h... yes
+checking for sys/mkdev.h... no
+checking for sys/param.h... yes
+checking for sys/select.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/sysmacros.h... yes
+checking for sys/time.h... (cached) yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking whether mpfr via "-lmpfr -lgmp" is present and usable... no
+checking for library containing fmod... none required
+checking for fdopendir... yes
+checking for fmod... yes
+checking for fnmatch... yes
+checking for getdtablesize... yes
+checking for clock_gettime... yes
+checking for gettimeofday... yes
+checking for nanosleep... yes
+checking for select... yes
+checking for statvfs... yes
+checking for GetSystemTimeAsFileTime... no
+checking for strptime... yes
+checking for cc options needed to detect all undeclared functions... none needed
+checking for dirfd... yes
+checking whether dirfd is declared... yes
+checking whether dirfd is a macro... no
+checking how to get the file descriptor associated with an open DIR*... no_such_member
+checking for inline... inline
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating po/Makefile.in
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing po-directories commands
+config.status: creating po/POTFILES
+config.status: creating po/Makefile
+config.status: executing libtool commands
+/bin/mkdir -p "."/pc && \
+cat "."/pc/Makefile.tst.prologue > "."/pc/Makefile.tst && \
+awk -f "."/pc/GenMakefileTst.awk "."/test/Makefile.in >> "."/pc/Makefile.tst
+make  all-recursive
+make[1]: Entering directory '/tmp/src/gawk-5.3.2'
+Making all in support
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/support'
+depbase=`echo dfa.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT dfa.o -MD -MP -MF $depbase.Tpo -c -o dfa.o dfa.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo getopt.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT getopt.o -MD -MP -MF $depbase.Tpo -c -o getopt.o getopt.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo getopt1.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT getopt1.o -MD -MP -MF $depbase.Tpo -c -o getopt1.o getopt1.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo localeinfo.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT localeinfo.o -MD -MP -MF $depbase.Tpo -c -o localeinfo.o localeinfo.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo random.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT random.o -MD -MP -MF $depbase.Tpo -c -o random.o random.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo regex.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT regex.o -MD -MP -MF $depbase.Tpo -c -o regex.o regex.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloc/dynarray_at_failure.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT malloc/dynarray_at_failure.o -MD -MP -MF $depbase.Tpo -c -o malloc/dynarray_at_failure.o malloc/dynarray_at_failure.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloc/dynarray_emplace_enlarge.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT malloc/dynarray_emplace_enlarge.o -MD -MP -MF $depbase.Tpo -c -o malloc/dynarray_emplace_enlarge.o malloc/dynarray_emplace_enlarge.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloc/dynarray_finalize.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT malloc/dynarray_finalize.o -MD -MP -MF $depbase.Tpo -c -o malloc/dynarray_finalize.o malloc/dynarray_finalize.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloc/dynarray_resize.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT malloc/dynarray_resize.o -MD -MP -MF $depbase.Tpo -c -o malloc/dynarray_resize.o malloc/dynarray_resize.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo malloc/dynarray_resize_clear.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DGAWK -DHAVE_CONFIG_H -I"./.." -I. -I..    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT malloc/dynarray_resize_clear.o -MD -MP -MF $depbase.Tpo -c -o malloc/dynarray_resize_clear.o malloc/dynarray_resize_clear.c &&\
+mv -f $depbase.Tpo $depbase.Po
+rm -f libsupport.a
+ar cru libsupport.a dfa.o getopt.o getopt1.o localeinfo.o random.o regex.o malloc/dynarray_at_failure.o malloc/dynarray_emplace_enlarge.o malloc/dynarray_finalize.o malloc/dynarray_resize.o malloc/dynarray_resize_clear.o  
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libsupport.a
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/support'
+Making all in .
+make[2]: Entering directory '/tmp/src/gawk-5.3.2'
+depbase=`echo array.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT array.o -MD -MP -MF $depbase.Tpo -c -o array.o array.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo awkgram.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT awkgram.o -MD -MP -MF $depbase.Tpo -c -o awkgram.o awkgram.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo builtin.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT builtin.o -MD -MP -MF $depbase.Tpo -c -o builtin.o builtin.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo cint_array.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT cint_array.o -MD -MP -MF $depbase.Tpo -c -o cint_array.o cint_array.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo command.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT command.o -MD -MP -MF $depbase.Tpo -c -o command.o command.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo debug.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT debug.o -MD -MP -MF $depbase.Tpo -c -o debug.o debug.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo eval.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT eval.o -MD -MP -MF $depbase.Tpo -c -o eval.o eval.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo ext.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT ext.o -MD -MP -MF $depbase.Tpo -c -o ext.o ext.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo field.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT field.o -MD -MP -MF $depbase.Tpo -c -o field.o field.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo floatcomp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT floatcomp.o -MD -MP -MF $depbase.Tpo -c -o floatcomp.o floatcomp.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo gawkapi.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT gawkapi.o -MD -MP -MF $depbase.Tpo -c -o gawkapi.o gawkapi.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo gawkmisc.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT gawkmisc.o -MD -MP -MF $depbase.Tpo -c -o gawkmisc.o gawkmisc.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo int_array.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT int_array.o -MD -MP -MF $depbase.Tpo -c -o int_array.o int_array.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo io.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT io.o -MD -MP -MF $depbase.Tpo -c -o io.o io.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo main.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT main.o -MD -MP -MF $depbase.Tpo -c -o main.o main.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo mpfr.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT mpfr.o -MD -MP -MF $depbase.Tpo -c -o mpfr.o mpfr.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo msg.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT msg.o -MD -MP -MF $depbase.Tpo -c -o msg.o msg.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo node.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT node.o -MD -MP -MF $depbase.Tpo -c -o node.o node.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo printf.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT printf.o -MD -MP -MF $depbase.Tpo -c -o printf.o printf.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo profile.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT profile.o -MD -MP -MF $depbase.Tpo -c -o profile.o profile.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo re.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT re.o -MD -MP -MF $depbase.Tpo -c -o re.o re.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo replace.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT replace.o -MD -MP -MF $depbase.Tpo -c -o replace.o replace.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo str_array.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT str_array.o -MD -MP -MF $depbase.Tpo -c -o str_array.o str_array.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo symbol.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT symbol.o -MD -MP -MF $depbase.Tpo -c -o symbol.o symbol.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo version.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DDEFPATH='".:/usr/share/awk"' -DDEFLIBPATH="\"/usr/lib/gawk\"" -DSHLIBEXT="\"so"\" -DHAVE_CONFIG_H -DGAWK -DLOCALEDIR='"/usr/share/locale"' -I"./support" -I.    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT version.o -MD -MP -MF $depbase.Tpo -c -o version.o version.c &&\
+mv -f $depbase.Tpo $depbase.Po
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o gawk array.o awkgram.o builtin.o cint_array.o command.o debug.o eval.o ext.o field.o floatcomp.o gawkapi.o gawkmisc.o int_array.o io.o main.o mpfr.o msg.o node.o printf.o profile.o re.o replace.o str_array.o symbol.o version.o support/libsupport.a      -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs 
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2'
+Making all in extension
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+make  all-recursive
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+Making all in po
+make[4]: Entering directory '/tmp/src/gawk-5.3.2/extension/po'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/gawk-5.3.2/extension/po'
+make[4]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT testext.lo -MD -MP -MF .deps/testext.Tpo -c -o testext.lo testext.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT filefuncs.lo -MD -MP -MF .deps/filefuncs.Tpo -c -o filefuncs.lo filefuncs.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT stack.lo -MD -MP -MF .deps/stack.Tpo -c -o stack.lo stack.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT gawkfts.lo -MD -MP -MF .deps/gawkfts.Tpo -c -o gawkfts.lo gawkfts.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT fnmatch.lo -MD -MP -MF .deps/fnmatch.Tpo -c -o fnmatch.lo fnmatch.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT fork.lo -MD -MP -MF .deps/fork.Tpo -c -o fork.lo fork.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT inplace.lo -MD -MP -MF .deps/inplace.Tpo -c -o inplace.lo inplace.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT intdiv.lo -MD -MP -MF .deps/intdiv.Tpo -c -o intdiv.lo intdiv.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT ordchr.lo -MD -MP -MF .deps/ordchr.Tpo -c -o ordchr.lo ordchr.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT readdir.lo -MD -MP -MF .deps/readdir.Tpo -c -o readdir.lo readdir.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT readfile.lo -MD -MP -MF .deps/readfile.Tpo -c -o readfile.lo readfile.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT revoutput.lo -MD -MP -MF .deps/revoutput.Tpo -c -o revoutput.lo revoutput.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT revtwoway.lo -MD -MP -MF .deps/revtwoway.Tpo -c -o revtwoway.lo revtwoway.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT rwarray.lo -MD -MP -MF .deps/rwarray.Tpo -c -o rwarray.lo rwarray.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I.  -I./..   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT time.lo -MD -MP -MF .deps/time.Tpo -c -o time.lo time.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT filefuncs.lo -MD -MP -MF .deps/filefuncs.Tpo -c filefuncs.c  -fPIC -DPIC -o .libs/filefuncs.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT intdiv.lo -MD -MP -MF .deps/intdiv.Tpo -c intdiv.c  -fPIC -DPIC -o .libs/intdiv.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT testext.lo -MD -MP -MF .deps/testext.Tpo -c testext.c  -fPIC -DPIC -o .libs/testext.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT gawkfts.lo -MD -MP -MF .deps/gawkfts.Tpo -c gawkfts.c  -fPIC -DPIC -o .libs/gawkfts.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT readfile.lo -MD -MP -MF .deps/readfile.Tpo -c readfile.c  -fPIC -DPIC -o .libs/readfile.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT fnmatch.lo -MD -MP -MF .deps/fnmatch.Tpo -c fnmatch.c  -fPIC -DPIC -o .libs/fnmatch.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT ordchr.lo -MD -MP -MF .deps/ordchr.Tpo -c ordchr.c  -fPIC -DPIC -o .libs/ordchr.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT revtwoway.lo -MD -MP -MF .deps/revtwoway.Tpo -c revtwoway.c  -fPIC -DPIC -o .libs/revtwoway.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT fork.lo -MD -MP -MF .deps/fork.Tpo -c fork.c  -fPIC -DPIC -o .libs/fork.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT revoutput.lo -MD -MP -MF .deps/revoutput.Tpo -c revoutput.c  -fPIC -DPIC -o .libs/revoutput.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT readdir.lo -MD -MP -MF .deps/readdir.Tpo -c readdir.c  -fPIC -DPIC -o .libs/readdir.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT inplace.lo -MD -MP -MF .deps/inplace.Tpo -c inplace.c  -fPIC -DPIC -o .libs/inplace.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT stack.lo -MD -MP -MF .deps/stack.Tpo -c stack.c  -fPIC -DPIC -o .libs/stack.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT time.lo -MD -MP -MF .deps/time.Tpo -c time.c  -fPIC -DPIC -o .libs/time.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I./.. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -MT rwarray.lo -MD -MP -MF .deps/rwarray.Tpo -c rwarray.c  -fPIC -DPIC -o .libs/rwarray.o
+mv -f .deps/stack.Tpo .deps/stack.Plo
+mv -f .deps/fnmatch.Tpo .deps/fnmatch.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o fnmatch.la -rpath /usr/lib/gawk fnmatch.lo  
+mv -f .deps/intdiv.Tpo .deps/intdiv.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o intdiv.la -rpath /usr/lib/gawk intdiv.lo   -lm 
+mv -f .deps/revtwoway.Tpo .deps/revtwoway.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o revtwoway.la -rpath /usr/lib/gawk revtwoway.lo  
+mv -f .deps/readdir.Tpo .deps/readdir.Plo
+mv -f .deps/time.Tpo .deps/time.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o readdir.la -rpath /usr/lib/gawk readdir.lo  
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o time.la -rpath /usr/lib/gawk time.lo  
+mv -f .deps/revoutput.Tpo .deps/revoutput.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o revoutput.la -rpath /usr/lib/gawk revoutput.lo  
+mv -f .deps/ordchr.Tpo .deps/ordchr.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o ordchr.la -rpath /usr/lib/gawk ordchr.lo  
+mv -f .deps/readfile.Tpo .deps/readfile.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o readfile.la -rpath /usr/lib/gawk readfile.lo  
+mv -f .deps/fork.Tpo .deps/fork.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o fork.la -rpath /usr/lib/gawk fork.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/intdiv.o   -lm  -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,intdiv.so -o .libs/intdiv.so
+mv -f .deps/filefuncs.Tpo .deps/filefuncs.Plo
+mv -f .deps/inplace.Tpo .deps/inplace.Plo
+libtool: link: cc -shared  -fPIC -DPIC  .libs/revtwoway.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,revtwoway.so -o .libs/revtwoway.so
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o inplace.la -rpath /usr/lib/gawk inplace.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/fnmatch.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,fnmatch.so -o .libs/fnmatch.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/time.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,time.so -o .libs/time.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/readdir.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,readdir.so -o .libs/readdir.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/ordchr.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,ordchr.so -o .libs/ordchr.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/revoutput.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,revoutput.so -o .libs/revoutput.so
+mv -f .deps/rwarray.Tpo .deps/rwarray.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o rwarray.la -rpath /usr/lib/gawk rwarray.lo   
+mv -f .deps/gawkfts.Tpo .deps/gawkfts.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o filefuncs.la -rpath /usr/lib/gawk filefuncs.lo stack.lo gawkfts.lo  
+libtool: link: cc -shared  -fPIC -DPIC  .libs/fork.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,fork.so -o .libs/fork.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/readfile.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,readfile.so -o .libs/readfile.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/inplace.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,inplace.so -o .libs/inplace.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/rwarray.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,rwarray.so -o .libs/rwarray.so
+libtool: link: cc -shared  -fPIC -DPIC  .libs/filefuncs.o .libs/stack.o .libs/gawkfts.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,filefuncs.so -o .libs/filefuncs.so
+mv -f .deps/testext.Tpo .deps/testext.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -Wall -DNDEBUG -module -avoid-version -no-undefined -rpath /foo -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o testext.la  testext.lo   
+libtool: link: ( cd ".libs" && rm -f "fnmatch.la" && ln -s "../fnmatch.la" "fnmatch.la" )
+libtool: link: ( cd ".libs" && rm -f "time.la" && ln -s "../time.la" "time.la" )
+libtool: link: ( cd ".libs" && rm -f "ordchr.la" && ln -s "../ordchr.la" "ordchr.la" )
+libtool: link: ( cd ".libs" && rm -f "intdiv.la" && ln -s "../intdiv.la" "intdiv.la" )
+libtool: link: ( cd ".libs" && rm -f "revoutput.la" && ln -s "../revoutput.la" "revoutput.la" )
+libtool: link: ( cd ".libs" && rm -f "revtwoway.la" && ln -s "../revtwoway.la" "revtwoway.la" )
+libtool: link: cc -shared  -fPIC -DPIC  .libs/testext.o    -Os -flto=auto -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,testext.so -o .libs/testext.so
+libtool: link: ( cd ".libs" && rm -f "fork.la" && ln -s "../fork.la" "fork.la" )
+libtool: link: ( cd ".libs" && rm -f "inplace.la" && ln -s "../inplace.la" "inplace.la" )
+libtool: link: ( cd ".libs" && rm -f "readfile.la" && ln -s "../readfile.la" "readfile.la" )
+libtool: link: ( cd ".libs" && rm -f "readdir.la" && ln -s "../readdir.la" "readdir.la" )
+libtool: link: ( cd ".libs" && rm -f "rwarray.la" && ln -s "../rwarray.la" "rwarray.la" )
+libtool: link: ( cd ".libs" && rm -f "testext.la" && ln -s "../testext.la" "testext.la" )
+libtool: link: ( cd ".libs" && rm -f "filefuncs.la" && ln -s "../filefuncs.la" "filefuncs.la" )
+make[4]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+Making all in extras
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/extras'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/extras'
+Making all in doc
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/doc'
+Making all in awklib
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/awklib'
+rm -f pwcat.c
+rm -f grcat.c
+sed 's;/usr/local/libexec/awk;/usr/libexec/awk;' < ./eg/lib/passwdawk.in > passwd.awk
+sed 's;/usr/local/libexec/awk;/usr/libexec/awk;' < ./eg/lib/groupawk.in > group.awk
+ln -s ./eg/lib/pwcat.c .
+ln -s ./eg/lib/grcat.c .
+depbase=`echo pwcat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I.. -I../support   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT pwcat.o -MD -MP -MF $depbase.Tpo -c -o pwcat.o pwcat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo grcat.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H -I. -I..  -I.. -I.. -I../support   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG -MT grcat.o -MD -MP -MF $depbase.Tpo -c -o grcat.o grcat.c &&\
+mv -f $depbase.Tpo $depbase.Po
+cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pwcat pwcat.o  
+cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -flto=auto -DNDEBUG  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o grcat grcat.o  
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/awklib'
+Making all in po
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/po'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/po'
+Making all in test
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/test'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/test'
+make[1]: Leaving directory '/tmp/src/gawk-5.3.2'
+make  check-recursive
+make[1]: Entering directory '/tmp/src/gawk-5.3.2'
+Making check in support
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/support'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/support'
+Making check in .
+make[2]: Entering directory '/tmp/src/gawk-5.3.2'
+make  check-local
+make[3]: Entering directory '/tmp/src/gawk-5.3.2'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2'
+Making check in extension
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+Making check in po
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/extension/po'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/extension/po'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+Making check in extras
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/extras'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/extras'
+Making check in doc
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/doc'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/doc'
+Making check in awklib
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/awklib'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/awklib'
+Making check in po
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/po'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/po'
+Making check in test
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/test'
+======== Starting basic tests ========
+
+Locale environment:
+	LC_ALL="C" LANG="C"
+
+
+Any output from "cmp" is bad news, although some differences
+anchgsub
+addcomma
+argarray
+anchor
+in floating point values are probably benign -- in particular,
+arrayind1
+argcasfile
+some systems may omit a leading zero and the floating point
+arrayind2
+arrayind3
+precision may lead to slightly different output in a few cases.
+arrayparm
+arrayprm2
+arrayprm3
+arrymem1
+arrayref
+arryref2
+arryref3
+arryref4
+arryref5
+arynasty
+arynocls
+aryprm1
+aryprm2
+aryprm3
+aryprm4
+aryprm5
+aryprm6
+aryprm7
+aryprm8
+aryunasgn
+aryprm9
+asgext
+arysubnm
+assignnumfield
+assignnumfield2
+awkpath
+back89
+backgsub
+badbuild
+badassign1
+callparam
+childin
+clobber
+close_status
+closebad
+clsflnam
+cmdlinefsbacknl
+cmdlinefsbacknl2
+compare
+compare2
+concat1
+concat2
+concat3
+concat4
+convfmt
+concat5
+datanonl
+defref
+delarpm2
+delarprm
+delargv
+delfunc
+dfacheck2
+dfamb1
+dfastress
+divzero
+divzero2
+dynlj
+eofsplit
+escapebrace
+eofsrc1
+exit2
+exitval1
+exitval2
+exitval3
+fcall_exit2
+fcall_exit
+fieldassign
+fldchg
+fldchgnf
+fldterm
+fnamedat
+fnarray
+fnarray2
+fnaryscl
+fnmisc
+fordel
+fnasgnm
+forref
+fsbs
+forsimp
+fscaret
+fsnul1
+fsrs
+fsspcoln
+fstabplus
+funsmnam
+funsemnl
+funstack
+getline
+getline2
+getline3
+getline4
+getline5
+getlnbuf
+getlnfa
+getnr2tb
+getnr2tm
+gsubasgn
+gsubtest
+gsubtst2
+gsubnulli18n
+gsubtst3
+gsubtst4
+gsubtst6
+gsubtst7
+gsubtst5
+hex
+gsubtst8
+hex2
+hsprint
+inpref
+inputred
+intprec
+iobug1
+intest
+leaddig
+leadnl
+litoct
+longwrds
+longsub
+manglprm
+matchuninitialized
+match4
+membug1
+math
+memleak
+messages
+nasty
+minusstr
+mmap8k
+nasty2
+negexp
+negrange
+nested
+nfldstr
+nfloop
+nfneg
+nlfldsep
+nfset
+nlinstr
+noeffect
+nlstrina
+nofile
+nofmtch
+noloop2
+nonl
+noloop1
+noparms
+nors
+nulrsend
+nulinsrc
+numindex
+numstr1
+numrange
+ofmt
+numsubstr
+octsub
+ofmta
+ofmtfidl
+ofmtbig
+ofmts
+ofs1
+ofmtstrnum
+onlynl
+opasnslf
+paramasfunc1
+opasnidx
+paramasfunc2
+paramdup
+paramres
+paramuninitglobal
+paramtyp
+parsefld
+parseme
+parse1
+posix2008sub
+pcntplus
+posix_compare
+printf-corners
+printf0
+prdupval
+prec
+printf1
+printfchar
+prmreuse
+prmarscl
+prt1eval
+prtoeval
+rand
+randtest
+range2
+rebrackloc
+range1
+readbuf
+rebt8b1
+redfilnm
+rebuild
+regexpbad
+regeq
+regexpbrack
+regex3minus
+regexpbrack2
+regexprange
+regrange
+reindops
+reparse
+resplit
+rri1
+rs
+rscompat
+rsnul1nl
+rsnulbig
+rsnulbig2
+rsnullre
+rsnulw
+rstest3
+rstest1
+rstest2
+rstest4
+rstest5
+rswhite
+scalar
+sclforin
+setrec0
+sclifin
+sigpipe1
+setrec1
+sortglos
+sortempty
+splitargv
+spacere
+splitdef
+splitarr
+splitwht2
+splitvar
+status-close
+splitwht
+strcat1
+strnum1
+strfieldnum
+strnum2
+strsubscript
+subback
+strtod
+subamp
+subsepnm
+subi18n
+subslash
+substr
+swaplns
+synerr2
+synerr3
+synerr1
+tailrecurse
+trailbs
+tradanch
+uninit2
+uninit3
+tweakfld
+uninit4
+uninit5
+uninitialized
+unterm
+uplus
+uparrfs
+wideidx
+widesub
+wideidx2
+widesub2
+widesub3
+widesub4
+zero2
+wjposer1
+zeroe0
+======== Done with basic tests ========
+zeroflag
+======== Starting Unix tests ========
+getlnhd
+localenl
+pid
+fflush
+pipeio1
+pipeio2
+poundbang
+======== Done with Unix tests ========
+rtlen01
+======== Starting gawk extension tests ========
+space
+rtlen
+strftlng
+aadelete2
+aadelete1
+aarray1
+aasorti
+aasort
+ar2fn_elnew_sc2
+ar2fn_elnew_sc
+ar2fn_fmod
+ar2fn_unxptyp_aref
+ar2fn_unxptyp_val
+argtest
+arraysort
+arraysort2
+asortbool
+arraytype
+asortsymtab
+backw
+beginfile1
+badargs
+binmode1
+beginfile2
+charasbytes
+clos1way
+clos1way2
+clos1way3
+clos1way4
+dbugarray1
+clos1way5
+dbugarray2
+dbugarray3
+dbugarray4
+dbugeval
+dbugeval2
+dbugeval3
+dbugeval4
+dbugtypedre1
+dbugtypedre2
+delsub
+delmessy
+devfd
+devfd1
+dfacheck1
+devfd2
+elemnew2
+dumpvars
+elemnew1
+errno
+exit
+elemnew3
+fieldwdth
+fpat1
+forcenum
+fpat2
+fpat4
+fpat3
+fpat5
+fpat6
+fpat7
+fpat9
+fpat8
+fpatnull
+fsfwfs
+functab1
+functab2
+functab3
+funlen
+functab6
+fwtest2
+fwtest
+fwtest3
+fwtest5
+fwtest4
+fwtest6
+fwtest7
+fwtest8
+genpot
+gensub
+gensub3
+gensub2
+gensub4
+getlndir
+gnuops2
+gnuops3
+gnureops
+icasefs
+icasers
+gsubind
+id
+igncfs
+igncdym
+ignrcas2
+ignrcas4
+ignrcase
+incdupe
+incdupe2
+incdupe3
+incdupe4
+incdupe5
+incdupe6
+incdupe7
+include
+include2
+indirectbuiltin
+indirectbuiltin3
+indirectbuiltin4
+indirectbuiltin6
+indirectbuiltin5
+indirectcall
+indirectcall2
+indirectcall3
+intarray
+iolint
+isarrayunset
+lint
+lintexp
+lintindex
+lintlength
+lintold
+lintint
+lintplus
+lintplus2
+lintplus3
+lintset
+match1
+lintwarn
+manyfiles
+match3
+match2
+mbstr2
+mbstr1
+mdim1
+mdim2
+mdim3
+mdim4
+mdim5
+mdim6
+mdim8
+mdim7
+memleak2
+memleak3
+mixed1
+mktime
+muldimposix
+modifiers
+nastyparm
+negtime
+next
+nondec
+nondec2
+nonfatal1
+nonfatal2
+nonfatal3
+nsawk1a
+nsawk1b
+nsawk1c
+nsawk2a
+nsbad
+nsbad2
+nsawk2b
+nsbad3
+nsforloop
+nsbad_cmd
+nsfuncrecurse
+nsidentifier
+nsindirect1
+nsindirect2
+nsprof1
+nsprof2
+nsprof3
+octdec
+patsplit
+posix
+printfbad1
+printfbad2
+printfbad3
+printfbad4
+printhuge
+procinfs
+profile0
+profile2
+profile1
+profile4
+profile3
+profile6
+profile5
+profile7
+profile8
+profile9
+profile10
+profile12
+profile11
+profile13
+profile14
+profile15
+profile16
+profile17
+pty1
+pty2
+re_test
+rebuf
+regexsub
+reginttrad
+regnul1
+regx8bit
+regnul2
+reint
+reint2
+rsgetline
+rsglstdin
+rsstart1
+rsstart2
+rsstart3
+rstest6
+sandbox1
+shadow
+shadowbuiltin
+sortfor
+sourcesplit
+sortfor2
+sortu
+split_after_fpat
+strftfld
+splitarg4
+strftime
+strtonum
+strtonum1
+stupid1
+stupid2
+stupid4
+stupid3
+switch2
+stupid5
+symtab2
+symtab1
+symtab3
+symtab4
+symtab5
+symtab6
+symtab8
+symtab7
+symtab9
+symtab10
+symtab12
+symtab11
+timeout
+typedregex1
+typedregex2
+typedregex4
+typedregex3
+typedregex5
+typedregex6
+typeof2
+typeof1
+typeof3
+typeof5
+typeof4
+typeof7
+typeof6
+typeof8
+typeof9
+gawk is not compiled to support the array debug tests
+======== Done with gawk extension tests ========
+unicode1
+watchpoint1
+======== Starting shared library tests ========
+======== Done with shared library tests ========
+======== Starting MPFR tests ========
+/bin/sh: locale: not found
+======== Done with MPFR tests ========
+======== Starting PMA tests ========
+%%%%%%%%%% Inadequate locale support: skipping charset tests.
+%%%%%%%%%% At least en_US.UTF-8, fr_FR.UTF-8, ru_RU.UTF-8 and ja_JP.UTF-8 are needed.
+======== Done with PMA tests ========
+MPFR tests not supported on this system
+======== Starting machine-specific tests ========
+PMA tests not supported on this system
+If any of these tests fail, don't worry too much.
+double2
+======== Done with machine-specific tests ========
+double1
+inf-nan-torture
+intformat
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/test'
+filefuncs
+apiterm
+fnmatch
+fork
+fork2
+fts
+functab4
+getfile
+functab5
+indirectbuiltin2
+inplace1
+inplace2
+inplace2bcomp
+inplace3
+inplace3bcomp
+ordchr
+ordchr2
+readall
+readdir
+readdir_retest
+readdir_test
+readfile
+readfile2
+revout
+revtwoway
+rwarray
+testext
+time
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/test'
+clos1way5
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/test'
+ALL TESTS PASSED
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/test'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/test'
+make[1]: Leaving directory '/tmp/src/gawk-5.3.2'
+>>> gawk: Entering fakeroot...
+make  install-recursive
+make[1]: Entering directory '/tmp/src/gawk-5.3.2'
+Making install in support
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/support'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/support'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/support'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/support'
+Making install in .
+make[2]: Entering directory '/tmp/src/gawk-5.3.2'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2'
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/include'
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/bin'
+ ./build-aux/install-sh -c gawkbug '/tmp/pkg/gawk/usr/bin'
+ ./build-aux/install-sh -c -m 644 gawkapi.h '/tmp/pkg/gawk/usr/include'
+  ./build-aux/install-sh -c gawk '/tmp/pkg/gawk/usr/bin'
+make  install-exec-hook
+make[4]: Entering directory '/tmp/src/gawk-5.3.2'
+(cd /tmp/pkg/gawk/usr/bin; \
+name=`echo gawk | sed 's,x,x,'` ; \
+if [ ! -f gawk-5.3.2 ]; \
+then	ln ${name} gawk-5.3.2 2>/dev/null ; \
+fi; \
+if [ ! -f awk ]; \
+then	ln -s ${name} awk; \
+fi; exit 0)
+make[4]: Leaving directory '/tmp/src/gawk-5.3.2'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2'
+Making install in extension
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+Making install in po
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/extension/po'
+if test "gawk-extensions" = "gettext-tools"; then \
+  /bin/mkdir -p /tmp/pkg/gawk/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    .././../build-aux//install-sh -c -m 644 ./$file \
+		    /tmp/pkg/gawk/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /tmp/pkg/gawk/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/extension/po'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+make[4]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/share/man/man3'
+ ./../build-aux//install-sh -c -m 644 filefuncs.3am fnmatch.3am fork.3am inplace.3am ordchr.3am readdir.3am readfile.3am revoutput.3am revtwoway.3am rwarray.3am time.3am '/tmp/pkg/gawk/usr/share/man/man3'
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/lib/gawk'
+ /bin/sh ./libtool   --mode=install ./../build-aux//install-sh -c   filefuncs.la fnmatch.la fork.la inplace.la intdiv.la ordchr.la readdir.la readfile.la revoutput.la revtwoway.la rwarray.la time.la '/tmp/pkg/gawk/usr/lib/gawk'
+libtool: install: ./../build-aux//install-sh -c .libs/filefuncs.so /tmp/pkg/gawk/usr/lib/gawk/filefuncs.so
+libtool: install: ./../build-aux//install-sh -c .libs/filefuncs.lai /tmp/pkg/gawk/usr/lib/gawk/filefuncs.la
+libtool: install: ./../build-aux//install-sh -c .libs/fnmatch.so /tmp/pkg/gawk/usr/lib/gawk/fnmatch.so
+libtool: install: ./../build-aux//install-sh -c .libs/fnmatch.lai /tmp/pkg/gawk/usr/lib/gawk/fnmatch.la
+libtool: install: ./../build-aux//install-sh -c .libs/fork.so /tmp/pkg/gawk/usr/lib/gawk/fork.so
+libtool: install: ./../build-aux//install-sh -c .libs/fork.lai /tmp/pkg/gawk/usr/lib/gawk/fork.la
+libtool: install: ./../build-aux//install-sh -c .libs/inplace.so /tmp/pkg/gawk/usr/lib/gawk/inplace.so
+libtool: install: ./../build-aux//install-sh -c .libs/inplace.lai /tmp/pkg/gawk/usr/lib/gawk/inplace.la
+libtool: install: ./../build-aux//install-sh -c .libs/intdiv.so /tmp/pkg/gawk/usr/lib/gawk/intdiv.so
+libtool: install: ./../build-aux//install-sh -c .libs/intdiv.lai /tmp/pkg/gawk/usr/lib/gawk/intdiv.la
+libtool: install: ./../build-aux//install-sh -c .libs/ordchr.so /tmp/pkg/gawk/usr/lib/gawk/ordchr.so
+libtool: install: ./../build-aux//install-sh -c .libs/ordchr.lai /tmp/pkg/gawk/usr/lib/gawk/ordchr.la
+libtool: install: ./../build-aux//install-sh -c .libs/readdir.so /tmp/pkg/gawk/usr/lib/gawk/readdir.so
+libtool: install: ./../build-aux//install-sh -c .libs/readdir.lai /tmp/pkg/gawk/usr/lib/gawk/readdir.la
+libtool: install: ./../build-aux//install-sh -c .libs/readfile.so /tmp/pkg/gawk/usr/lib/gawk/readfile.so
+libtool: install: ./../build-aux//install-sh -c .libs/readfile.lai /tmp/pkg/gawk/usr/lib/gawk/readfile.la
+libtool: install: ./../build-aux//install-sh -c .libs/revoutput.so /tmp/pkg/gawk/usr/lib/gawk/revoutput.so
+libtool: install: ./../build-aux//install-sh -c .libs/revoutput.lai /tmp/pkg/gawk/usr/lib/gawk/revoutput.la
+libtool: install: ./../build-aux//install-sh -c .libs/revtwoway.so /tmp/pkg/gawk/usr/lib/gawk/revtwoway.so
+libtool: install: ./../build-aux//install-sh -c .libs/revtwoway.lai /tmp/pkg/gawk/usr/lib/gawk/revtwoway.la
+libtool: install: ./../build-aux//install-sh -c .libs/rwarray.so /tmp/pkg/gawk/usr/lib/gawk/rwarray.so
+libtool: install: ./../build-aux//install-sh -c .libs/rwarray.lai /tmp/pkg/gawk/usr/lib/gawk/rwarray.la
+libtool: install: ./../build-aux//install-sh -c .libs/time.so /tmp/pkg/gawk/usr/lib/gawk/time.so
+libtool: install: ./../build-aux//install-sh -c .libs/time.lai /tmp/pkg/gawk/usr/lib/gawk/time.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/gawk'
+make  install-data-hook
+make[5]: Entering directory '/tmp/src/gawk-5.3.2/extension'
+for i in filefuncs.la fnmatch.la fork.la inplace.la intdiv.la ordchr.la readdir.la readfile.la revoutput.la revtwoway.la rwarray.la time.la ; do \
+	rm -f /tmp/pkg/gawk/usr/lib/gawk/$i ; \
+done
+make[5]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+make[4]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/extension'
+Making install in extras
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/extras'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/extras'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/gawk/etc/profile.d'
+ .././build-aux/install-sh -c -m 644 gawk.sh gawk.csh '/tmp/pkg/gawk/etc/profile.d'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/extras'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/extras'
+Making install in doc
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/doc'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/share/info'
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/share/man/man1'
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/share/info'
+ .././build-aux/install-sh -c -m 644 gawk_api-figure1.png gawk_api-figure2.png gawk_api-figure3.png gawk_array-elements.png gawk_general-program.png gawk_process-flow.png gawk_statist.jpg '/tmp/pkg/gawk/usr/share/info'
+ .././build-aux/install-sh -c -m 644 gawk.1 gawkbug.1 pm-gawk.1 '/tmp/pkg/gawk/usr/share/man/man1'
+ .././build-aux/install-sh -c -m 644 ./gawk.info ./gawkinet.info ./gawkworkflow.info ./pm-gawk.info '/tmp/pkg/gawk/usr/share/info'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/doc'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/doc'
+Making install in awklib
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/awklib'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/awklib'
+make[3]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/gawk/usr/libexec/awk'
+  .././build-aux/install-sh -c pwcat grcat '/tmp/pkg/gawk/usr/libexec/awk'
+make  install-exec-hook
+make[4]: Entering directory '/tmp/src/gawk-5.3.2/awklib'
+/bin/sh /tmp/src/gawk-5.3.2/build-aux/install-sh -d /tmp/pkg/gawk/usr/share/awk
+for i in passwd.awk group.awk ./eg/lib/*.awk ; do \
+	progname=`echo $i | sed 's;.*/;;'` ; \
+	.././build-aux/install-sh -c -m 644 $i /tmp/pkg/gawk/usr/share/awk/$progname ; \
+done
+make[4]: Leaving directory '/tmp/src/gawk-5.3.2/awklib'
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/awklib'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/awklib'
+Making install in po
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/po'
+if test "gawk" = "gettext-tools"; then \
+  /bin/mkdir -p /tmp/pkg/gawk/usr/share/gettext/po; \
+  for file in Makefile.in.in remove-potcdate.sin quot.sed boldquot.sed en@quot.header en@boldquot.header insert-header.sin Rules-quot   Makevars.template; do \
+    .././build-aux/install-sh -c -m 644 ./$file \
+		    /tmp/pkg/gawk/usr/share/gettext/po/$file; \
+  done; \
+  for file in Makevars; do \
+    rm -f /tmp/pkg/gawk/usr/share/gettext/po/$file; \
+  done; \
+else \
+  : ; \
+fi
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/po'
+Making install in test
+make[2]: Entering directory '/tmp/src/gawk-5.3.2/test'
+make[3]: Entering directory '/tmp/src/gawk-5.3.2/test'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/gawk-5.3.2/test'
+make[2]: Leaving directory '/tmp/src/gawk-5.3.2/test'
+make[1]: Leaving directory '/tmp/src/gawk-5.3.2'
+>>> gawk-doc*: Running split function doc...
+renamed 'usr/share/man' -> '/tmp/pkg/gawk-doc/usr/share/man'
+renamed 'usr/share/info' -> '/tmp/pkg/gawk-doc/usr/share/info'
+>>> gawk-doc*: Preparing subpackage gawk-doc...
+>>> gawk-doc*: Running postcheck for gawk-doc
+>>> gawk*: Running postcheck for gawk
+>>> gawk*: Preparing package gawk...
+>>> gawk*: Stripping binaries
+>>> gawk-doc*: Scanning shared objects
+>>> gawk*: Scanning shared objects
+>>> WARNING: gawk-doc*: The -doc subpackage is unusually large, consider splitting it
+>>> gawk-doc*: Tracing dependencies...
+>>> gawk-doc*: Package size: 2.3 MB
+>>> gawk-doc*: Compressing data...
+>>> gawk-doc*: Create checksum...
+>>> gawk-doc*: Create gawk-doc-5.3.2-r0.apk
+>>> gawk*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> gawk*: Package size: 713.5 KB
+>>> gawk*: Compressing data...
+>>> gawk*: Create checksum...
+>>> gawk*: Create gawk-5.3.2-r0.apk
+>>> gawk: Updating the main/x86_64 repository index...
+>>> gawk: Signing the index...
+>>> gawk: Cleaning up srcdir
+>>> gawk: Cleaning up build chroot
+>>> gawk: Cleaning up pkgdir

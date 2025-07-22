@@ -1,0 +1,1289 @@
+>>> dmraid: Validating /home/packager/oily-pine/main/dmraid/APKBUILD...
+>>> dmraid: Cleaning up srcdir
+>>> dmraid: Cleaning up pkgdir
+>>> dmraid: Cleaning up tmpdir
+>>> dmraid: Fetching https://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-1.0.0.rc16-3.tar.bz2
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 65  227k   65  148k    0     0   154k      0  0:00:01 --:--:--  0:00:01  154k100  227k  100  227k    0     0   234k      0 --:--:-- --:--:-- --:--:--  233k
+>>> dmraid: Fetching https://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-1.0.0.rc16-3.tar.bz2
+>>> dmraid: Checking sha512sums...
+dmraid-1.0.0.rc16-3.tar.bz2: OK
+001-do_not_use_p_for_partition.patch: OK
+002-support_virtio_devices.patch: OK
+003-isw-probe-hpa.patch: OK
+004-activate_multiple_raid_sets.patch: OK
+005-fix_isw_sectors_calculation.patch: OK
+006-musl-libc.patch: OK
+007-fix-loff_t-musl.patch: OK
+lfs64.patch: OK
+>>> dmraid: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/76) Installing musl (1.2.5-r10)
+(2/76) Installing libcrypto3 (3.5.0-r0)
+(3/76) Installing ca-certificates-bundle (20241121-r2)
+(4/76) Installing libssl3 (3.5.0-r0)
+(5/76) Installing zlib (1.3.1-r2)
+(6/76) Installing libapk2 (2.14.9-r2)
+(7/76) Installing apk-tools (2.14.9-r2)
+(8/76) Installing libcap2 (2.76-r0)
+(9/76) Installing libcap-getcap (2.76-r0)
+(10/76) Installing fakeroot (1.37.1.1-r0)
+(11/76) Installing scanelf (1.3.8-r1)
+(12/76) Installing musl-utils (1.2.5-r10)
+(13/76) Installing libgcc (14.3.0-r1)
+(14/76) Installing libstdc++ (14.3.0-r1)
+(15/76) Installing lzip (1.25-r0)
+(16/76) Installing openssl (3.5.0-r0)
+(17/76) Installing patch (2.8-r0)
+(18/76) Installing pkgconf (2.4.3-r0)
+(19/76) Installing acl-libs (2.3.2-r1)
+(20/76) Installing tar (1.35-r3)
+(21/76) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/76) Installing ssl_client (1.37.0-r18)
+(23/76) Installing busybox-binsh (1.37.0-r18)
+(24/76) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/76) Installing abuild-sudo (3.15.0-r0)
+(26/76) Installing alpine-baselayout-data (3.7.0-r0)
+(27/76) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/76) Installing bridge (1.5-r5)
+(29/76) Installing ifupdown-ng (0.12.1-r7)
+(30/76) Installing openrc-user (0.62.2-r2)
+(31/76) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/76) Installing mdev-conf (4.8-r0)
+(33/76) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/76) Installing alpine-conf (3.20.0-r0)
+(35/76) Installing alpine-keys (2.5-r0)
+(36/76) Installing alpine-release (3.22.0-r0)
+(37/76) Installing busybox-openrc (1.37.0-r18)
+(38/76) Installing busybox-suid (1.37.0-r18)
+(39/76) Installing alpine-base (3.22.0-r0)
+(40/76) Installing jansson (2.14.1-r0)
+(41/76) Installing zstd-libs (1.5.7-r0)
+(42/76) Installing binutils (2.44-r0)
+(43/76) Installing libmagic (5.46-r2)
+(44/76) Installing file (5.46-r2)
+(45/76) Installing libgomp (14.3.0-r1)
+(46/76) Installing libatomic (14.3.0-r1)
+(47/76) Installing gmp (6.3.0-r3)
+(48/76) Installing isl26 (0.26-r1)
+(49/76) Installing mpfr4 (4.2.1_p1-r0)
+(50/76) Installing mpc1 (1.3.1-r1)
+(51/76) Installing gcc (14.3.0-r1)
+(52/76) Installing libstdc++-dev (14.3.0-r1)
+(53/76) Installing musl-dev (1.2.5-r10)
+(54/76) Installing g++ (14.3.0-r1)
+(55/76) Installing make (4.4.1-r3)
+(56/76) Installing fortify-headers (1.1-r5)
+(57/76) Installing build-base (0.5-r3)
+(58/76) Installing brotli-libs (1.1.0-r2)
+(59/76) Installing c-ares (1.34.5-r0)
+(60/76) Installing libunistring (1.3-r0)
+(61/76) Installing libidn2 (2.3.7-r0)
+(62/76) Installing nghttp2-libs (1.65.0-r0)
+(63/76) Installing libpsl (0.21.5-r3)
+(64/76) Installing libcurl (8.14.0-r2)
+(65/76) Installing libexpat (2.7.1-r0)
+(66/76) Installing pcre2 (10.43-r1)
+(67/76) Installing git (2.49.0-r0)
+(68/76) Installing git-init-template (2.49.0-r0)
+(69/76) Installing linux-headers (6.14.2-r0)
+(70/76) Installing device-mapper-libs (2.03.32-r0)
+(71/76) Installing device-mapper-event-libs (2.03.32-r0)
+(72/76) Installing libaio (0.3.113-r2)
+(73/76) Installing libeconf (0.6.3-r0)
+(74/76) Installing libblkid (2.41-r9)
+(75/76) Installing lvm2-libs (2.03.32-r0)
+(76/76) Installing lvm2-dev (2.03.32-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 268 MiB in 76 packages
+>>> dmraid: Fetching https://people.redhat.com/~heinzm/sw/dmraid/src/dmraid-1.0.0.rc16-3.tar.bz2
+>>> dmraid: Checking sha512sums...
+dmraid-1.0.0.rc16-3.tar.bz2: OK
+001-do_not_use_p_for_partition.patch: OK
+002-support_virtio_devices.patch: OK
+003-isw-probe-hpa.patch: OK
+004-activate_multiple_raid_sets.patch: OK
+005-fix_isw_sectors_calculation.patch: OK
+006-musl-libc.patch: OK
+007-fix-loff_t-musl.patch: OK
+lfs64.patch: OK
+>>> dmraid: Unpacking /var/cache/distfiles/dmraid-1.0.0.rc16-3.tar.bz2...
+>>> dmraid: 001-do_not_use_p_for_partition.patch
+patching file lib/format/partition/dos.c
+>>> dmraid: 002-support_virtio_devices.patch
+patching file lib/device/scan.c
+>>> dmraid: 003-isw-probe-hpa.patch
+patching file lib/format/ataraid/isw.c
+Hunk #1 succeeded at 360 (offset 7 lines).
+Hunk #2 succeeded at 555 (offset 7 lines).
+Hunk #3 succeeded at 574 (offset 7 lines).
+Hunk #4 succeeded at 593 (offset 7 lines).
+Hunk #5 succeeded at 606 (offset 7 lines).
+patching file lib/format/ataraid/isw.h
+>>> dmraid: 004-activate_multiple_raid_sets.patch
+patching file lib/metadata/metadata.c
+>>> dmraid: 005-fix_isw_sectors_calculation.patch
+patching file lib/format/ataraid/isw.c
+Hunk #1 succeeded at 783 (offset 7 lines).
+>>> dmraid: 006-musl-libc.patch
+patching file include/dmraid/misc.h
+patching file lib/device/scan.c
+>>> dmraid: 007-fix-loff_t-musl.patch
+patching file include/dmraid/misc.h
+>>> dmraid: lfs64.patch
+patching file lib/misc/file.c
+>>> dmraid: Updating ./autoconf/config.sub
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... yes
+checking for a thread-safe mkdir -p... autoconf/install-sh -c -d
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking mntent.h usability... yes
+checking mntent.h presence... yes
+checking for mntent.h... yes
+checking paths.h usability... yes
+checking paths.h presence... yes
+checking for paths.h... yes
+checking sys/file.h usability... yes
+checking sys/file.h presence... yes
+checking for sys/file.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking syslog.h usability... yes
+checking syslog.h presence... yes
+checking for syslog.h... yes
+checking for unistd.h... (cached) yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for int8_t... yes
+checking for mode_t... yes
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for uint8_t... yes
+checking for struct stat.st_rdev... yes
+checking whether to enable debugging... no
+checking whether to enable malloc debugging... no
+checking whether to disable native metadata logging... yes
+checking whether to disable testing with mapped devices... yes
+checking whether cc needs -traditional... no
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for _doprnt... no
+checking for library containing getmntent... none required
+checking whether lstat dereferences a symlink specified with a trailing slash... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for stdlib.h... (cached) yes
+checking for GNU libc compatible realloc... yes
+checking for working strtod... yes
+checking for getmntent... (cached) yes
+checking for memmove... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for rmdir... yes
+checking for uname... yes
+checking for strchr... yes
+checking for strerror... yes
+checking for strpbrk... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for dlopen in -ldl... yes
+checking for pthread_mutex_lock in -lpthread... yes
+checking for dm_event_handler_create in -ldevmapper-event... yes
+checking for dm_task_set_name in -ldevmapper... yes
+checking libdevmapper.h usability... yes
+checking libdevmapper.h presence... yes
+checking for libdevmapper.h... yes
+checking libdevmapper-event.h usability... yes
+checking libdevmapper-event.h presence... yes
+checking for libdevmapper-event.h... yes
+configure: creating ./config.status
+config.status: creating include/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/version.h
+config.status: creating man/Makefile
+config.status: creating tools/Makefile
+config.status: creating tools/version.h
+config.status: creating Makefile
+config.status: creating make.tmpl
+config.status: creating include/config.h
+make -C lib
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/lib'
+autoconf/install-sh -c -d activate/; \
+set -e; \
+FILE=`echo activate/activate.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o activate/activate.d activate/activate.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" activate/activate.d; \
+[ -s activate/activate.d ] || rm -f activate/activate.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d activate/; \
+set -e; \
+FILE=`echo activate/devmapper.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o activate/devmapper.d activate/devmapper.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" activate/devmapper.d; \
+[ -s activate/devmapper.d ] || rm -f activate/devmapper.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d device/; \
+set -e; \
+FILE=`echo device/ata.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o device/ata.d device/ata.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" device/ata.d; \
+[ -s device/ata.d ] || rm -f device/ata.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d device/; \
+set -e; \
+FILE=`echo device/partition.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o device/partition.d device/partition.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" device/partition.d; \
+[ -s device/partition.d ] || rm -f device/partition.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d device/; \
+set -e; \
+FILE=`echo device/scan.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o device/scan.d device/scan.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" device/scan.d; \
+[ -s device/scan.d ] || rm -f device/scan.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d device/; \
+set -e; \
+FILE=`echo device/scsi.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o device/scsi.d device/scsi.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" device/scsi.d; \
+[ -s device/scsi.d ] || rm -f device/scsi.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d display/; \
+set -e; \
+FILE=`echo display/display.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o display/display.d display/display.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" display/display.d; \
+[ -s display/display.d ] || rm -f display/display.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/; \
+set -e; \
+FILE=`echo format/format.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/format.d format/format.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/format.d; \
+[ -s format/format.d ] || rm -f format/format.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d locking/; \
+set -e; \
+FILE=`echo locking/locking.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o locking/locking.d locking/locking.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" locking/locking.d; \
+[ -s locking/locking.d ] || rm -f locking/locking.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d log/; \
+set -e; \
+FILE=`echo log/log.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o log/log.d log/log.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" log/log.d; \
+[ -s log/log.d ] || rm -f log/log.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d metadata/; \
+set -e; \
+FILE=`echo metadata/log_ops.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o metadata/log_ops.d metadata/log_ops.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" metadata/log_ops.d; \
+[ -s metadata/log_ops.d ] || rm -f metadata/log_ops.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d metadata/; \
+set -e; \
+FILE=`echo metadata/metadata.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o metadata/metadata.d metadata/metadata.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" metadata/metadata.d; \
+[ -s metadata/metadata.d ] || rm -f metadata/metadata.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d metadata/; \
+set -e; \
+FILE=`echo metadata/reconfig.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o metadata/reconfig.d metadata/reconfig.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" metadata/reconfig.d; \
+[ -s metadata/reconfig.d ] || rm -f metadata/reconfig.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d misc/; \
+set -e; \
+FILE=`echo misc/file.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o misc/file.d misc/file.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" misc/file.d; \
+[ -s misc/file.d ] || rm -f misc/file.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d misc/; \
+set -e; \
+FILE=`echo misc/init.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o misc/init.d misc/init.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" misc/init.d; \
+[ -s misc/init.d ] || rm -f misc/init.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d misc/; \
+set -e; \
+FILE=`echo misc/lib_context.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o misc/lib_context.d misc/lib_context.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" misc/lib_context.d; \
+[ -s misc/lib_context.d ] || rm -f misc/lib_context.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d misc/; \
+set -e; \
+FILE=`echo misc/misc.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o misc/misc.d misc/misc.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" misc/misc.d; \
+[ -s misc/misc.d ] || rm -f misc/misc.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d misc/; \
+set -e; \
+FILE=`echo misc/workaround.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o misc/workaround.d misc/workaround.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" misc/workaround.d; \
+[ -s misc/workaround.d ] || rm -f misc/workaround.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d mm/; \
+set -e; \
+FILE=`echo mm/dbg_malloc.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o mm/dbg_malloc.d mm/dbg_malloc.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" mm/dbg_malloc.d; \
+[ -s mm/dbg_malloc.d ] || rm -f mm/dbg_malloc.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/asr.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/asr.d format/ataraid/asr.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/asr.d; \
+[ -s format/ataraid/asr.d ] || rm -f format/ataraid/asr.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/hpt37x.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/hpt37x.d format/ataraid/hpt37x.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/hpt37x.d; \
+[ -s format/ataraid/hpt37x.d ] || rm -f format/ataraid/hpt37x.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/hpt45x.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/hpt45x.d format/ataraid/hpt45x.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/hpt45x.d; \
+[ -s format/ataraid/hpt45x.d ] || rm -f format/ataraid/hpt45x.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/isw.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/isw.d format/ataraid/isw.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/isw.d; \
+[ -s format/ataraid/isw.d ] || rm -f format/ataraid/isw.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/jm.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/jm.d format/ataraid/jm.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/jm.d; \
+[ -s format/ataraid/jm.d ] || rm -f format/ataraid/jm.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/lsi.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/lsi.d format/ataraid/lsi.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/lsi.d; \
+[ -s format/ataraid/lsi.d ] || rm -f format/ataraid/lsi.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/nv.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/nv.d format/ataraid/nv.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/nv.d; \
+[ -s format/ataraid/nv.d ] || rm -f format/ataraid/nv.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/pdc.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/pdc.d format/ataraid/pdc.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/pdc.d; \
+[ -s format/ataraid/pdc.d ] || rm -f format/ataraid/pdc.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/sil.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/sil.d format/ataraid/sil.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/sil.d; \
+[ -s format/ataraid/sil.d ] || rm -f format/ataraid/sil.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ataraid/; \
+set -e; \
+FILE=`echo format/ataraid/via.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ataraid/via.d format/ataraid/via.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ataraid/via.d; \
+[ -s format/ataraid/via.d ] || rm -f format/ataraid/via.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ddf/; \
+set -e; \
+FILE=`echo format/ddf/ddf1.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ddf/ddf1.d format/ddf/ddf1.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ddf/ddf1.d; \
+[ -s format/ddf/ddf1.d ] || rm -f format/ddf/ddf1.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ddf/; \
+set -e; \
+FILE=`echo format/ddf/ddf1_lib.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ddf/ddf1_lib.d format/ddf/ddf1_lib.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ddf/ddf1_lib.d; \
+[ -s format/ddf/ddf1_lib.d ] || rm -f format/ddf/ddf1_lib.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ddf/; \
+set -e; \
+FILE=`echo format/ddf/ddf1_crc.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ddf/ddf1_crc.d format/ddf/ddf1_crc.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ddf/ddf1_crc.d; \
+[ -s format/ddf/ddf1_crc.d ] || rm -f format/ddf/ddf1_crc.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ddf/; \
+set -e; \
+FILE=`echo format/ddf/ddf1_cvt.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ddf/ddf1_cvt.d format/ddf/ddf1_cvt.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ddf/ddf1_cvt.d; \
+[ -s format/ddf/ddf1_cvt.d ] || rm -f format/ddf/ddf1_cvt.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/ddf/; \
+set -e; \
+FILE=`echo format/ddf/ddf1_dump.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/ddf/ddf1_dump.d format/ddf/ddf1_dump.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/ddf/ddf1_dump.d; \
+[ -s format/ddf/ddf1_dump.d ] || rm -f format/ddf/ddf1_dump.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d format/partition/; \
+set -e; \
+FILE=`echo format/partition/dos.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o format/partition/dos.d format/partition/dos.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" format/partition/dos.d; \
+[ -s format/partition/dos.d ] || rm -f format/partition/dos.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d register/; \
+set -e; \
+FILE=`echo register/dmreg.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o register/dmreg.d register/dmreg.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" register/dmreg.d; \
+[ -s register/dmreg.d ] || rm -f register/dmreg.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d events/; \
+set -e; \
+FILE=`echo events/libdmraid-events-isw.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o events/libdmraid-events-isw.d events/libdmraid-events-isw.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" events/libdmraid-events-isw.d; \
+[ -s events/libdmraid-events-isw.d ] || rm -f events/libdmraid-events-isw.d
+/bin/sh: autoconf/install-sh: not found
+cc -o activate/activate.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 activate/activate.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from activate/activate.c:21:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o activate/devmapper.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 activate/devmapper.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from activate/devmapper.c:24:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o device/ata.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 device/ata.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from device/dev-io.h:13,
+                 from device/ata.c:15:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o device/partition.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 device/partition.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from device/partition.c:11:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o device/scan.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 device/scan.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from device/scan.c:21:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o device/scsi.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 device/scsi.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from device/dev-io.h:13,
+                 from device/scsi.c:21:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o display/display.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 display/display.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from display/display.c:8:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/format.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/format.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/format.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o locking/locking.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 locking/locking.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from locking/locking.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o log/log.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 log/log.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from log/log.c:9:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o metadata/log_ops.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 metadata/log_ops.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from metadata/log_ops.c:10:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o metadata/metadata.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 metadata/metadata.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from metadata/metadata.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+metadata/metadata.c: In function 'create_raidset':
+metadata/metadata.c:1436:24: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+ 1436 |         } while (end++ != '\0');
+      |                        ^~
+metadata/metadata.c:1436:18: note: did you mean to dereference the pointer?
+ 1436 |         } while (end++ != '\0');
+      |                  ^
+metadata/metadata.c: At top level:
+metadata/metadata.c:1463:1: warning: 'rebuild_config_raidset' defined but not used [-Wunused-function]
+ 1463 | rebuild_config_raidset(struct lib_context *lc, struct raid_set *rs)
+      | ^~~~~~~~~~~~~~~~~~~~~~
+metadata/metadata.c:765:1: warning: 'discover_raid_devices_spares' defined but not used [-Wunused-function]
+  765 | discover_raid_devices_spares(struct lib_context *lc, const char *format)
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc -o metadata/reconfig.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 metadata/reconfig.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from metadata/reconfig.c:19:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+metadata/reconfig.c: In function 'handle_dev':
+metadata/reconfig.c:460:29: warning: comparison between 'enum change_type' and 'enum type' [-Wenum-compare]
+  460 |                 if (h->type == rs->type)
+      |                             ^~
+metadata/reconfig.c:462:30: warning: comparison between 'enum change_type' and 'enum type' [-Wenum-compare]
+  462 |         } while ((++h)->type != t_undef);
+      |                              ^~
+cc -o misc/file.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 misc/file.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from misc/file.c:8:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o misc/init.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 misc/init.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from misc/init.c:8:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o misc/lib_context.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 misc/lib_context.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from misc/lib_context.c:9:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o misc/misc.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 misc/misc.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from misc/misc.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o misc/workaround.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 misc/workaround.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from misc/workaround.c:9:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o mm/dbg_malloc.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 mm/dbg_malloc.c
+cc -o format/ataraid/asr.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/asr.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/asr.c:20:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+format/ataraid/asr.c: In function 'check_rd':
+format/ataraid/asr.c:1036:25: warning: comparison between 'enum type' and 'enum status' [-Wenum-compare]
+ 1036 |         return rd->type != s_broken;
+      |                         ^~
+cc -o format/ataraid/hpt37x.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/hpt37x.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/hpt37x.c:16:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+format/ataraid/hpt37x.c: In function 'hpt37x_log':
+format/ataraid/hpt37x.c:353:19: warning: taking address of packed member of 'struct hpt37x' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  353 |         for (el = hpt->errorlog; el < hpt->errorlog + 32; el++) {
+      |                   ^~~
+cc -o format/ataraid/hpt45x.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/hpt45x.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/hpt45x.c:16:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ataraid/isw.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/isw.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/isw.c:28:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+format/ataraid/isw.c: In function '_get_disk':
+format/ataraid/isw.c:141:41: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  141 |                 struct isw_disk *disk = isw->disk;
+      |                                         ^~~
+format/ataraid/isw.c: In function 'name':
+format/ataraid/isw.c:210:33: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  210 |         struct isw_disk *disk = isw->disk;
+      |                                 ^~~
+format/ataraid/isw.c: In function 'get_rs_status':
+format/ataraid/isw.c:1194:24: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 1194 |                 disk = isw->disk;
+      |                        ^~~
+format/ataraid/isw.c:1174:26: warning: variable 'disk' set but not used [-Wunused-but-set-variable]
+ 1174 |         struct isw_disk *disk;
+      |                          ^~~~
+format/ataraid/isw.c: In function 'get_rebuild_state':
+format/ataraid/isw.c:1245:32: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 1245 |                         disk = isw->disk;
+      |                                ^~~
+format/ataraid/isw.c: In function 'isw_metadata_handler':
+format/ataraid/isw.c:1377:24: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 1377 |                 disk = isw->disk;
+      |                        ^~~
+format/ataraid/isw.c: In function '_isw_create_first_volume':
+format/ataraid/isw.c:1888:16: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 1888 |         disk = isw->disk;
+      |                ^~~
+format/ataraid/isw.c: In function '_isw_create_second_volume':
+format/ataraid/isw.c:1985:44: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 1985 |         total_size = _cal_array_size(isw_v1->disk, rs, dev1);
+      |                                      ~~~~~~^~~~~~
+format/ataraid/isw.c: In function '_isw_log':
+format/ataraid/isw.c:2225:28: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2225 |         for (d = 0, disk = isw->disk; d < isw->num_disks; d++, disk++) {
+      |                            ^~~
+format/ataraid/isw.c: In function 'update_metadata':
+format/ataraid/isw.c:2694:33: warning: taking address of packed member of 'struct isw' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 2694 |         struct isw_disk *disk = isw->disk, *new_disk = NULL;
+      |                                 ^~~
+cc -o format/ataraid/jm.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/jm.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/jm.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ataraid/lsi.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/lsi.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/lsi.c:16:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ataraid/nv.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/nv.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/nv.c:14:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ataraid/pdc.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/pdc.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/pdc.c:16:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+format/ataraid/pdc.c: In function '_pdc_log':
+format/ataraid/pdc.c:590:21: warning: taking address of packed member of 'struct pdc' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  590 |         for (disk = pdc->raid.disk, i = 0;
+      |                     ^~~
+cc -o format/ataraid/sil.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/sil.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/sil.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ataraid/via.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ataraid/via.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ataraid/via.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ddf/ddf1.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ddf/ddf1.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ddf/ddf1.c:13:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+format/ddf/ddf1.c: In function 'check_rd':
+format/ddf/ddf1.c:891:25: warning: comparison between 'enum type' and 'enum status' [-Wenum-compare]
+  891 |         return rd->type != s_broken;
+      |                         ^~
+cc -o format/ddf/ddf1_lib.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ddf/ddf1_lib.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ddf/ddf1_lib.c:13:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ddf/ddf1_crc.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ddf/ddf1_crc.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ddf/ddf1_crc.c:13:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+format/ddf/ddf1_crc.c: In function 'crc32_vd':
+format/ddf/ddf1_crc.c:100:24: warning: taking address of packed member of 'struct ddf1_config_record' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  100 |                 .crc = &r->crc, \
+      |                        ^~~~~~~
+format/ddf/ddf1_crc.c:108:1: note: in expansion of macro 'CRC32'
+  108 | CRC32(vd, ddf1_config_record, CR);
+      | ^~~~~
+format/ddf/ddf1_crc.c: In function 'crc32_spare':
+format/ddf/ddf1_crc.c:100:24: warning: taking address of packed member of 'struct ddf1_spare_header' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  100 |                 .crc = &r->crc, \
+      |                        ^~~~~~~
+format/ddf/ddf1_crc.c:109:1: note: in expansion of macro 'CRC32'
+  109 | CRC32(spare, ddf1_spare_header, SR);
+      | ^~~~~
+format/ddf/ddf1_crc.c: In function 'vd_check_crc':
+format/ddf/ddf1_crc.c:149:24: warning: taking address of packed member of 'struct ddf1_config_record' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  149 |                 .crc = &r->crc, \
+      |                        ^~~~~~~
+format/ddf/ddf1_crc.c:156:1: note: in expansion of macro 'CHECK_CRC'
+  156 | CHECK_CRC(vd, ddf1_config_record, CR, "VD CFG");
+      | ^~~~~~~~~
+format/ddf/ddf1_crc.c: In function 'spare_check_crc':
+format/ddf/ddf1_crc.c:149:24: warning: taking address of packed member of 'struct ddf1_spare_header' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  149 |                 .crc = &r->crc, \
+      |                        ^~~~~~~
+format/ddf/ddf1_crc.c:157:1: note: in expansion of macro 'CHECK_CRC'
+  157 | CHECK_CRC(spare, ddf1_spare_header, SR, "Spare CFG");
+      | ^~~~~~~~~
+format/ddf/ddf1_crc.c: In function 'all_crcs':
+format/ddf/ddf1_crc.c:182:33: warning: taking address of packed member of 'struct ddf1_header' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  182 |                 {ddf1->primary, &ddf1->primary->crc,
+      |                                 ^~~~~~~~~~~~~~~~~~~
+format/ddf/ddf1_crc.c:185:35: warning: taking address of packed member of 'struct ddf1_header' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  185 |                 {ddf1->secondary, &ddf1->secondary->crc,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~
+format/ddf/ddf1_crc.c:188:33: warning: taking address of packed member of 'struct ddf1_adapter' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  188 |                 {ddf1->adapter, &ddf1->adapter->crc,
+      |                                 ^~~~~~~~~~~~~~~~~~~
+format/ddf/ddf1_crc.c:191:35: warning: taking address of packed member of 'struct ddf1_disk_data' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  191 |                 {ddf1->disk_data, &ddf1->disk_data->crc,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~
+format/ddf/ddf1_crc.c:194:35: warning: taking address of packed member of 'struct ddf1_phys_drives' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  194 |                 {ddf1->pd_header, &ddf1->pd_header->crc,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~
+format/ddf/ddf1_crc.c:198:35: warning: taking address of packed member of 'struct ddf1_virt_drives' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  198 |                 {ddf1->vd_header, &ddf1->vd_header->crc,
+      |                                   ^~~~~~~~~~~~~~~~~~~~~
+cc -o format/ddf/ddf1_cvt.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ddf/ddf1_cvt.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ddf/ddf1_cvt.c:13:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/ddf/ddf1_dump.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/ddf/ddf1_dump.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/ddf/ddf1_dump.c:15:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o format/partition/dos.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 format/partition/dos.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from format/partition/dos.c:15:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o register/dmreg.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 register/dmreg.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ./internal.h:26,
+                 from register/dmreg.c:28:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+rm -f libdmraid.a
+ar r libdmraid.a activate/activate.o activate/devmapper.o device/ata.o device/partition.o device/scan.o device/scsi.o display/display.o format/format.o locking/locking.o log/log.o metadata/log_ops.o metadata/metadata.o metadata/reconfig.o misc/file.o misc/init.o misc/lib_context.o misc/misc.o misc/workaround.o mm/dbg_malloc.o format/ataraid/asr.o format/ataraid/hpt37x.o format/ataraid/hpt45x.o format/ataraid/isw.o format/ataraid/jm.o format/ataraid/lsi.o format/ataraid/nv.o format/ataraid/pdc.o format/ataraid/sil.o format/ataraid/via.o format/ddf/ddf1.o format/ddf/ddf1_lib.o format/ddf/ddf1_crc.o format/ddf/ddf1_cvt.o format/ddf/ddf1_dump.o format/partition/dos.o register/dmreg.o
+ar: creating libdmraid.a
+ranlib libdmraid.a
+cc -o libdmraid.so -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs activate/activate.o activate/devmapper.o device/ata.o device/partition.o device/scan.o device/scsi.o display/display.o format/format.o locking/locking.o log/log.o metadata/log_ops.o metadata/metadata.o metadata/reconfig.o misc/file.o misc/init.o misc/lib_context.o misc/misc.o misc/workaround.o mm/dbg_malloc.o format/ataraid/asr.o format/ataraid/hpt37x.o format/ataraid/hpt45x.o format/ataraid/isw.o format/ataraid/jm.o format/ataraid/lsi.o format/ataraid/nv.o format/ataraid/pdc.o format/ataraid/sil.o format/ataraid/via.o format/ddf/ddf1.o format/ddf/ddf1_lib.o format/ddf/ddf1_crc.o format/ddf/ddf1_cvt.o format/ddf/ddf1_dump.o format/partition/dos.o register/dmreg.o \
+	-shared -Wl,--discard-all -Wl,--no-undefined -Wl,--version-script,../lib/.export.sym \
+	-Wl,-soname,libdmraid.so.1 \
+	-ldevmapper-event -ldevmapper -ldl 
+cc -o events/libdmraid-events-isw.o -c -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 events/libdmraid-events-isw.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ../include/dmraid/dmraid.h:20,
+                 from events/libdmraid-events-isw.c:69:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+events/libdmraid-events-isw.c: In function '_snprintf_either':
+events/libdmraid-events-isw.c:793:35: warning: the comparison will always evaluate as 'true' for the address of 'name' will never be NULL [-Waddress]
+  793 |                         dev->name ? dev->name : "",
+      |                                   ^
+events/libdmraid-events-isw.c:118:14: note: 'name' declared here
+  118 |         char name[DEV_NAME];            /* sda, sdb, etc... */
+      |              ^~~~
+cc -o libdmraid-events-isw.so -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs events/libdmraid-events-isw.o \
+	-shared -Wl,--discard-all -Wl,--no-undefined -Wl,-soname,libdmraid-events-isw.so \
+	libdmraid.so -ldevmapper-event -ldevmapper -lpthread 
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/lib'
+make -C tools
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/tools'
+autoconf/install-sh -c -d ./; \
+set -e; \
+FILE=`echo dmraid.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o dmraid.d dmraid.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" dmraid.d; \
+[ -s dmraid.d ] || rm -f dmraid.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d ./; \
+set -e; \
+FILE=`echo commands.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o commands.d commands.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" commands.d; \
+[ -s commands.d ] || rm -f commands.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d ./; \
+set -e; \
+FILE=`echo toollib.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o toollib.d toollib.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" toollib.d; \
+[ -s toollib.d ] || rm -f toollib.d
+/bin/sh: autoconf/install-sh: not found
+autoconf/install-sh -c -d ./; \
+set -e; \
+FILE=`echo dmevent_tool.d | /bin/sed 's/\\//\\\\\\//g;s/\\.d//g'`; \
+DEPS=`echo Makefile ../make.tmpl ../tools/VERSION ../include/config.h | /bin/sed -e 's/\\//\\\\\\//g'`; \
+cc -MM -I -I. -I../include -I../lib -include ../include/config.h   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -o dmevent_tool.d dmevent_tool.c; \
+/bin/sed -i "s/\(.*\)\.o[ :]*/$FILE.o $FILE.d $FILE.pot: $DEPS /g" dmevent_tool.d; \
+[ -s dmevent_tool.d ] || rm -f dmevent_tool.d
+/bin/sh: autoconf/install-sh: not found
+cc -o dmraid.o -c -I -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 dmraid.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ../include/dmraid/dmraid.h:20,
+                 from dmraid.c:12:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o commands.o -c -I -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 commands.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ../include/dmraid/dmraid.h:20,
+                 from commands.c:20:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o toollib.o -c -I -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 toollib.c
+In file included from ../include/dmraid/lib_context.h:16,
+                 from ../include/dmraid/dmraid.h:20,
+                 from toollib.c:15:
+../include/dmraid/misc.h:13:9: warning: "_GNU_SOURCE" redefined
+   13 | #define _GNU_SOURCE
+      |         ^~~~~~~~~~~
+In file included from <command-line>:
+./../include/config.h:194:10: note: this is the location of the previous definition
+  194 | # define _GNU_SOURCE 1
+      |          ^~~~~~~~~~~
+cc -o dmraid dmraid.o commands.o toollib.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -rdynamic -L../lib -ldmraid 
+cc -o dmevent_tool.o -c -I -I. -I../include -I../lib -include ../include/config.h  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 -O2 -fPIC -Wall -Wundef -Wcast-align -Wwrite-strings -Winline -DDMRAID_AUTOREGISTER -O2 dmevent_tool.c
+cc -o dmevent_tool dmevent_tool.o -I -I. -I../include -I../lib -include ../include/config.h  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -rdynamic -L../lib \
+	 -ldmraid 
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/tools'
+make -C include
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/include'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/include'
+make -C man
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/man'
+>>> dmraid: Entering fakeroot...
+make -C lib
+make -C include
+make -C man
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/include'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/include'
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/man'
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/lib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/lib'
+make -C tools
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/tools'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/tools'
+make -C include install
+make -C lib install
+make -C man install
+make -C tools install
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/man'
+/usr/bin/install -c -d /tmp/pkg/dmraid/usr/share/man/man8
+/usr/bin/install -c -m 644 -p dmraid.8 dmevent_tool.8 /tmp/pkg/dmraid/usr/share/man/man8
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/include'
+/usr/bin/install -c -d /tmp/pkg/dmraid/usr/include/dmraid
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/man'
+/usr/bin/install -c -m 644 -p ../include/dmraid/display.h ../include/dmraid/dmraid.h ../include/dmraid/dmreg.h ../include/dmraid/format.h ../include/dmraid/lib_context.h ../include/dmraid/list.h ../include/dmraid/locking.h ../include/dmraid/metadata.h ../include/dmraid/misc.h ../include/dmraid/reconfig.h /tmp/pkg/dmraid/usr/include/dmraid/
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/tools'
+/usr/bin/install -c -d /tmp/pkg/dmraid/usr/sbin
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/include'
+/usr/bin/install -c  dmraid dmevent_tool /tmp/pkg/dmraid/usr/sbin
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/tools'
+make[1]: Entering directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/lib'
+/usr/bin/install -c -m 644 -p -D libdmraid.a /tmp/pkg/dmraid/usr/lib/libdmraid.a
+/usr/bin/install -c  -D libdmraid.so /tmp/pkg/dmraid/usr/lib/libdmraid.so.1.0.0
+/usr/bin/install -c  -D libdmraid-events-isw.so /tmp/pkg/dmraid/usr/lib/device-mapper/libdmraid-events-isw.so
+/usr/bin/install -c -d /tmp/pkg/dmraid/usr/lib
+ln -s -f device-mapper/libdmraid-events-isw.so /tmp/pkg/dmraid/usr/lib/libdmraid-events-isw.so
+ln -s -f libdmraid.so.1.0.0 /tmp/pkg/dmraid/usr/lib/libdmraid.so.1
+ln -s -f libdmraid.so.1.0.0 /tmp/pkg/dmraid/usr/lib/libdmraid.so
+make[1]: Leaving directory '/tmp/src/dmraid/1.0.0.rc16-3/dmraid/lib'
+>>> dmraid-static*: Running split function static...
+'usr/lib/libdmraid.a' -> '/tmp/pkg/dmraid-static/usr/lib/libdmraid.a'
+>>> dmraid-static*: Preparing subpackage dmraid-static...
+>>> dmraid-static*: Stripping binaries
+>>> dmraid-static*: Running postcheck for dmraid-static
+>>> dmraid-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/dmraid-dev/usr/include'
+'usr/lib/libdmraid-events-isw.so' -> '/tmp/pkg/dmraid-dev/usr/lib/libdmraid-events-isw.so'
+'usr/lib/libdmraid.so' -> '/tmp/pkg/dmraid-dev/usr/lib/libdmraid.so'
+>>> dmraid-dev*: Preparing subpackage dmraid-dev...
+>>> dmraid-dev*: Stripping binaries
+>>> dmraid-dev*: Running postcheck for dmraid-dev
+>>> dmraid-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/dmraid-doc/usr/share/man'
+>>> dmraid-doc*: Preparing subpackage dmraid-doc...
+>>> dmraid-doc*: Running postcheck for dmraid-doc
+>>> dmraid*: Running postcheck for dmraid
+>>> dmraid*: Preparing package dmraid...
+>>> dmraid*: Stripping binaries
+>>> dmraid-dev*: Scanning shared objects
+>>> dmraid-doc*: Scanning shared objects
+>>> dmraid-static*: Scanning shared objects
+>>> dmraid*: Scanning shared objects
+>>> dmraid-dev*: Tracing dependencies...
+	dmraid=1.0.0_rc16-r6
+>>> dmraid-dev*: Package size: 33.0 KB
+>>> dmraid-dev*: Compressing data...
+>>> dmraid-dev*: Create checksum...
+>>> dmraid-dev*: Create dmraid-dev-1.0.0_rc16-r6.apk
+>>> dmraid-doc*: Tracing dependencies...
+>>> dmraid-doc*: Package size: 5.7 KB
+>>> dmraid-doc*: Compressing data...
+>>> dmraid-doc*: Create checksum...
+>>> dmraid-doc*: Create dmraid-doc-1.0.0_rc16-r6.apk
+>>> dmraid-static*: Tracing dependencies...
+>>> dmraid-static*: Package size: 428.5 KB
+>>> dmraid-static*: Compressing data...
+>>> dmraid-static*: Create checksum...
+>>> dmraid-static*: Create dmraid-static-1.0.0_rc16-r6.apk
+>>> dmraid*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libdevmapper-event.so.1.02
+	so:libdevmapper.so.1.02
+>>> dmraid*: Package size: 285.8 KB
+>>> dmraid*: Compressing data...
+>>> dmraid*: Create checksum...
+>>> dmraid*: Create dmraid-1.0.0_rc16-r6.apk
+>>> dmraid: Updating the main/x86_64 repository index...
+>>> dmraid: Signing the index...
+>>> dmraid: Cleaning up srcdir
+>>> dmraid: Cleaning up build chroot
+>>> dmraid: Cleaning up pkgdir

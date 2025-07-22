@@ -1,0 +1,790 @@
+>>> efitools: Validating /home/packager/oily-pine/main/efitools/APKBUILD...
+>>> efitools: Cleaning up srcdir
+>>> efitools: Cleaning up pkgdir
+>>> efitools: Cleaning up tmpdir
+>>> efitools: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git/snapshot/efitools-1.9.2.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  113k    0  113k    0     0   526k      0 --:--:-- --:--:-- --:--:--  527k
+>>> efitools: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git/snapshot/efitools-1.9.2.tar.gz
+>>> efitools: Checking sha512sums...
+efitools-1.9.2.tar.gz: OK
+001-datatypes.patch: OK
+002-fix-parallel-make.patch: OK
+003-fix-wchar_t.patch: OK
+004-typo.patch: OK
+005-riscv64.patch: OK
+fix-build-on-aarch64.patch: OK
+>>> efitools: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/84) Installing musl (1.2.5-r10)
+(2/84) Installing libcrypto3 (3.5.0-r0)
+(3/84) Installing ca-certificates-bundle (20241121-r2)
+(4/84) Installing libssl3 (3.5.0-r0)
+(5/84) Installing zlib (1.3.1-r2)
+(6/84) Installing libapk2 (2.14.9-r2)
+(7/84) Installing apk-tools (2.14.9-r2)
+(8/84) Installing libcap2 (2.76-r0)
+(9/84) Installing libcap-getcap (2.76-r0)
+(10/84) Installing fakeroot (1.37.1.1-r0)
+(11/84) Installing scanelf (1.3.8-r1)
+(12/84) Installing musl-utils (1.2.5-r10)
+(13/84) Installing libgcc (14.3.0-r1)
+(14/84) Installing libstdc++ (14.3.0-r1)
+(15/84) Installing lzip (1.25-r0)
+(16/84) Installing openssl (3.5.0-r0)
+(17/84) Installing patch (2.8-r0)
+(18/84) Installing pkgconf (2.4.3-r0)
+(19/84) Installing acl-libs (2.3.2-r1)
+(20/84) Installing tar (1.35-r3)
+(21/84) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/84) Installing ssl_client (1.37.0-r18)
+(23/84) Installing busybox-binsh (1.37.0-r18)
+(24/84) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/84) Installing abuild-sudo (3.15.0-r0)
+(26/84) Installing alpine-baselayout-data (3.7.0-r0)
+(27/84) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/84) Installing bridge (1.5-r5)
+(29/84) Installing ifupdown-ng (0.12.1-r7)
+(30/84) Installing openrc-user (0.62.2-r2)
+(31/84) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/84) Installing mdev-conf (4.8-r0)
+(33/84) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/84) Installing alpine-conf (3.20.0-r0)
+(35/84) Installing alpine-keys (2.5-r0)
+(36/84) Installing alpine-release (3.22.0-r0)
+(37/84) Installing busybox-openrc (1.37.0-r18)
+(38/84) Installing busybox-suid (1.37.0-r18)
+(39/84) Installing alpine-base (3.22.0-r0)
+(40/84) Installing jansson (2.14.1-r0)
+(41/84) Installing zstd-libs (1.5.7-r0)
+(42/84) Installing binutils (2.44-r0)
+(43/84) Installing libmagic (5.46-r2)
+(44/84) Installing file (5.46-r2)
+(45/84) Installing libgomp (14.3.0-r1)
+(46/84) Installing libatomic (14.3.0-r1)
+(47/84) Installing gmp (6.3.0-r3)
+(48/84) Installing isl26 (0.26-r1)
+(49/84) Installing mpfr4 (4.2.1_p1-r0)
+(50/84) Installing mpc1 (1.3.1-r1)
+(51/84) Installing gcc (14.3.0-r1)
+(52/84) Installing libstdc++-dev (14.3.0-r1)
+(53/84) Installing musl-dev (1.2.5-r10)
+(54/84) Installing g++ (14.3.0-r1)
+(55/84) Installing make (4.4.1-r3)
+(56/84) Installing fortify-headers (1.1-r5)
+(57/84) Installing build-base (0.5-r3)
+(58/84) Installing brotli-libs (1.1.0-r2)
+(59/84) Installing c-ares (1.34.5-r0)
+(60/84) Installing libunistring (1.3-r0)
+(61/84) Installing libidn2 (2.3.7-r0)
+(62/84) Installing nghttp2-libs (1.65.0-r0)
+(63/84) Installing libpsl (0.21.5-r3)
+(64/84) Installing libcurl (8.14.0-r2)
+(65/84) Installing libexpat (2.7.1-r0)
+(66/84) Installing pcre2 (10.43-r1)
+(67/84) Installing git (2.49.0-r0)
+(68/84) Installing git-init-template (2.49.0-r0)
+(69/84) Installing gnu-efi (4.0.1-r0)
+(70/84) Installing gnu-efi-dev (4.0.1-r0)
+(71/84) Installing libbz2 (1.0.8-r6)
+(72/84) Installing perl (5.40.2-r0)
+(73/84) Installing perl-error (0.17030-r0)
+(74/84) Installing perl-git (2.49.0-r0)
+(75/84) Installing git-perl (2.49.0-r0)
+(76/84) Installing help2man (1.49.3-r1)
+(77/84) Installing libeconf (0.6.3-r0)
+(78/84) Installing libblkid (2.41-r9)
+(79/84) Installing libmount (2.41-r9)
+(80/84) Installing mount (2.41-r9)
+(81/84) Installing openssl-dev (3.5.0-r0)
+(82/84) Installing perl-file-slurp (9999.32-r3)
+(83/84) Installing libuuid (2.41-r9)
+(84/84) Installing sbsigntool (0.9.5-r2)
+Executing busybox-1.37.0-r18.trigger
+OK: 300 MiB in 84 packages
+>>> efitools: Fetching https://git.kernel.org/pub/scm/linux/kernel/git/jejb/efitools.git/snapshot/efitools-1.9.2.tar.gz
+>>> efitools: Checking sha512sums...
+efitools-1.9.2.tar.gz: OK
+001-datatypes.patch: OK
+002-fix-parallel-make.patch: OK
+003-fix-wchar_t.patch: OK
+004-typo.patch: OK
+005-riscv64.patch: OK
+fix-build-on-aarch64.patch: OK
+>>> efitools: Unpacking /var/cache/distfiles/efitools-1.9.2.tar.gz...
+>>> efitools: 001-datatypes.patch
+patching file lib/asn1/oid.h
+Hunk #1 succeeded at 10 (offset 2 lines).
+>>> efitools: 002-fix-parallel-make.patch
+patching file Make.rules
+>>> efitools: 003-fix-wchar_t.patch
+patching file cert-to-efi-hash-list.c
+patching file flash-var.c
+patching file hash-to-efi-sig-list.c
+patching file sign-efi-sig-list.c
+>>> efitools: 004-typo.patch
+patching file lib/console.c
+>>> efitools: 005-riscv64.patch
+patching file Make.rules
+>>> efitools: fix-build-on-aarch64.patch
+patching file Make.rules
+make -C lib lib-efi.a
+make[1]: Entering directory '/tmp/src/efitools-1.9.2/lib'
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c HelloWorld.c -o HelloWorld.o
+openssl req -new -x509 -newkey rsa:2048 -subj "/CN=DB/" -keyout DB.key -out DB.crt -days 3650 -nodes -sha256
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c simple_file.c -o simple_file.efi.o
+openssl req -new -x509 -newkey rsa:2048 -subj "/CN=PK/" -keyout PK.key -out PK.crt -days 3650 -nodes -sha256
+.+.........+...................+.....+....+...+.....+...+.+.....+.........+++++++++++++++++++++++++++++++++++++++*........+..+...+...+....+...+......+..+....+.........+...........+....+++++++++++++++++++++++++++++++++++++++*..............+...+......+...+........+...+.+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c pecoff.c -o pecoff.efi.o
+...+..+.+.................+..........+........+...+.........+.......+.....+.+.........+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c cert-to-efi-sig-list.c -o cert-to-efi-sig-list.o
+.....+.........+.+...........+...+......+......+......+.....+....+...+...+........+..+..+...+......+......+..........++++++++++.+....+++++++++++++++++++...+++++++++++*.........+..+...+.+..+..............+........++...........++++++++++++++++++++.++++++++++++++++++++*..........+.........+...+.....+.+.+..........++.+.+..............+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c guid.c -o guid.efi.o
+.....+.make -C lib lib.a
++.....+.+....+..+...........+.............+...............+.........+.+..............+.....+......+.........................+.+.........+..+..............+...+....+....+.....+...........++....+...........++...+.............+..+.+....................++cert-to-efi-sig-list.c:9:9: warning: "__STDC_VERSION__" redefined
+    9 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+.........+......+.......+......+.+............+...+..+..+.+......+....openssl req -new -x509 -newkey rsa:2048 -subj "/CN=KEK/" -keyout KEK.key -out KEK.crt -days 3650 -nodes -sha256
+.....+make[1]: Entering directory '/tmp/src/efitools-1.9.2/lib'
+......+.+.....+.............+..........+.........+..................++...+......+.......+.+...+..+..+...+.............+...+...........+.....................+......+...+.+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c sha256.c -o sha256.efi.o
+.+.........+.........................++..........+.......+......+...+............+...+...+..+..............+....+.+.........+...........+...........+...............+....+....+..+..+............+.........+...+.+...+......+.............++..+...+....+...+...+........+.....+......+...+......++.......+...+.....+.........+.....++...+......+....+.+++++++++++++++++cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c sign-efi-sig-list.c -o sign-efi-sig-list.o
+++++++++++++++..+...+++++++*...+...+..............................++.....+...+......+.+++++++++++.+++++++++++++++++++++++++++++++*.........+....++
+..+...............+.........+.........+.....++.....+...+......+.........+.+..........+....++.........+.......+...+...........+.+..+...+........++........+...+...+..........+.....................+......+..+.+......+.....+....++...+.......+..+.+.....+...++...+....+..+....+..+.............+.........+........+++++++++++++...+....+....+.+++++++++++++++++++++++++*.....+++++++++.+...+.++++++++++..+.+++++++++++++++++++*..+...+.....+....cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c simple_file.c -o simple_file.o
++.......+..............+.+....................+..+....+.+...+.......................+............++cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c console.c -o console.efi.o
+....+.....+............+..+.....+.+..+........+..+..........+.+.......+..+......+..+.+........+.........+..............+.+..............+.....+..........+......+.......+...+....+....+..+......+..+.+......+.........+...........................+....++......+..+....................++...+......+.+..+.........+.....+...+..........+..+.+....+............+......+...+...+.......++.+....+...+......+.....................+..+..+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c Loader.c -o Loader.o
+...+.......+.+.......+..............+...........+.+.........+.........+...+....+.........+............+...........+...+.........+.....................+..+...+sign-efi-sig-list.c:7:9: warning: "__STDC_VERSION__" redefined
+    7 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+.+...+..+..........................++.............++......cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c execute.c -o execute.efi.o
++......+....+.+...........+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c pecoff.c -o pecoff.o
+..+.........+...........................+........++...+.......+.............++...+.......+............++..+...........+..........+...+...............+......+...+......+..+.......+...+...............+..........+..++.........++..+....+++.....++
+....+......+......++make -C lib/asn1 libasn1-efi.a
+..+......+.......+.......++...+..+.....+.......-----
++...+.....................++............+....+...+.....+..+.........+...............+.........+...+......+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c configtable.c -o configtable.efi.o
+............+...+.......+.........++...+......+....+..........+.......+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c guid.c -o guid.o
+.........+...............+...+..+...+.+.+...+.................++...+........+.............+.........+....+...+...+.....+...+.+....make[1]: Entering directory '/tmp/src/efitools-1.9.2/lib/asn1'
+.+..+.........+....+...............+........+......+......+.+............+.......+..............+......+....+...............+...+..............++...+...+....+..++...++.+++......++
+.+......+......+.........+++++.+.++++++++++++++++++++++++++cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c ReadVars.c -o ReadVars.o
+++++++++*...........+..................+++...+++++++++++++++++++++++++++++++++++++*.........++.......+...+..+........+.+......+........+....+.+..+..............+...+......+.+.............+........+..+....+.+..+.....+.......+................++.........+....+...+.+.............++..........++........+..+.........+......+................+...........+..+....+...+......+...+..+.+....+...........+...+...+..+................+.............+.........+.....+.........+...+.....+...+................++.......++.+..++......++......++.....++
++++++
+....+...+..+.......+.....+.+..+......+.+...+...+........+....+......+..+.......+...+..+............+++++++++++++++++++++++++++++++++++++++*....+......+....+.....+..........+++++++++++++++++++++++++++++++++++++++*..............+In file included from pecoff.c:69:
+/tmp/src/efitools-1.9.2/include/buildefi.h:10:9: warning: "CopyMem" redefined
+   10 | #define CopyMem(d, s, l) memcpy(d, s, l)
+      |         ^~~~~~~
+In file included from /usr/include/efi/efilib.h:45,
+                 from pecoff.c:52:
+/usr/include/efi/legacy/efilib.h:64:9: note: this is the location of the previous definition
+   64 | #define CopyMem(a,b,c) CopyMem_1(a,b,c)
+      |         ^~~~~~~
+..+-----
+.......+..+.........+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c asn1.c -o asn1.efi.o
+.+...+......+.....+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c UpdateVars.c -o UpdateVars.o
+....+ReadVars.c: In function 'efi_main':
+ReadVars.c:177:73: warning: dangling pointer 'variables' to an unnamed temporary may be used [-Wdangling-pointer=]
+  177 |                         Print(L"Variable %s has no entries\n", variables[i]);
+      |                                                                         ^
+ReadVars.c:112:41: note: unnamed temporary defined here
+  112 |                 variables = (CHAR16 *[]){ L"PK", L"KEK", L"db", L"dbx", L"dbt", L"MokList" , NULL};
+      |                                         ^
+ReadVars.c:179:67: warning: dangling pointer 'variables' to an unnamed temporary may be used [-Wdangling-pointer=]
+  179 |                         Print(L"Failed to get %s: %d\n", variables[i], status);
+      |                                                                   ^
+ReadVars.c:112:41: note: unnamed temporary defined here
+  112 |                 variables = (CHAR16 *[]){ L"PK", L"KEK", L"db", L"dbx", L"dbt", L"MokList" , NULL};
+      |                                         ^
+ReadVars.c:184:61: warning: dangling pointer 'variables' to an unnamed temporary may be used [-Wdangling-pointer=]
+  184 |                         parse_db(data, len, image, variables[i], save_keys);
+      |                                                             ^
+ReadVars.c:112:41: note: unnamed temporary defined here
+  112 |                 variables = (CHAR16 *[]){ L"PK", L"KEK", L"db", L"dbx", L"dbt", L"MokList" , NULL};
+      |                                         ^
+.ReadVars.c:182:61: warning: dangling pointer 'variables' to an unnamed temporary may be used [-Wdangling-pointer=]
+  182 |                         parse_db(data, len, image, variables[i], save_keys);
+      |                                                             ^
+.ReadVars.c:112:41: note: unnamed temporary defined here
+  112 |                 variables = (CHAR16 *[]){ L"PK", L"KEK", L"db", L"dbx", L"dbt", L"MokList" , NULL};
+      |                                         ^
+.ReadVars.c:181:68: warning: dangling pointer 'variables' to an unnamed temporary may be used [-Wdangling-pointer=]
+  181 |                         Print(L"Variable %s length %d\n", variables[i], len);
+      |                                                                    ^
++ReadVars.c:112:41: note: unnamed temporary defined here
+  112 |                 variables = (CHAR16 *[]){ L"PK", L"KEK", L"db", L"dbx", L"dbt", L"MokList" , NULL};
+      |                                         ^
+.....+.......+.......................+....+...............+.....+.+........+.+...+..+......+...++++++
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c sha256.c -o sha256.o
+-----
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c KeyTool.c -o KeyTool.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c shell.c -o shell.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c asn1_parser.c -o asn1_parser.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c console.c -o console.o
+UpdateVars.c: In function 'efi_main':
+UpdateVars.c:24:49: warning: variable 'owner_guid' set but not used [-Wunused-but-set-variable]
+   24 |         CHAR16 **ARGV, *var, *name, *progname, *owner_guid;
+      |                                                 ^~~~~~~~~~
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c security_policy.c -o security_policy.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c HashTool.c -o HashTool.o
+asn1_parser.c: In function 'iterate':
+asn1_parser.c:82:15: warning: variable 'level' set but not used [-Wunused-but-set-variable]
+   82 |         u_int level;
+      |               ^~~~~
+In file included from sha256.c:35:
+/tmp/src/efitools-1.9.2/include/buildefi.h:10:9: warning: "CopyMem" redefined
+   10 | #define CopyMem(d, s, l) memcpy(d, s, l)
+      |         ^~~~~~~
+In file included from /usr/include/efi/efilib.h:45,
+                 from sha256.c:22:
+/usr/include/efi/legacy/efilib.h:64:9: note: this is the location of the previous definition
+   64 | #define CopyMem(a,b,c) CopyMem_1(a,b,c)
+      |         ^~~~~~~
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c enumerator.c -o enumerator.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c execute.c -o execute.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c shim_protocol.c -o shim_protocol.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c SetNull.c -o SetNull.o
+HashTool.c: In function 'efi_main':
+HashTool.c:187:25: warning: variable 'setup_mode_arg' set but not used [-Wunused-but-set-variable]
+  187 |                         setup_mode_arg = 0, keytool = NOSEL;
+      |                         ^~~~~~~~~~~~~~
+HashTool.c:185:28: warning: variable 'setup_mode' set but not used [-Wunused-but-set-variable]
+  185 |                 int c = 0, setup_mode = NOSEL, uefi_reboot = NOSEL,
+      |                            ^~~~~~~~~~
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c pkcs7verify.c -o pkcs7verify.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c ShimReplace.c -o ShimReplace.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c chunk.c -o chunk.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c variables.c -o variables.o
+ShimReplace.c: In function 'efi_main':
+ShimReplace.c:51:37: warning: passing argument 2 of 'execute' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   51 |         efi_status = execute(image, loader);
+      |                                     ^~~~~~
+In file included from ShimReplace.c:17:
+/tmp/src/efitools-1.9.2/include/execute.h:5:35: note: expected 'CHAR16 *' {aka 'short unsigned int *'} but argument is of type 'const CHAR16 *' {aka 'const short unsigned int *'}
+    5 | execute(EFI_HANDLE image, CHAR16 *name);
+      |                           ~~~~~~~~^~~~
+ShimReplace.c:57:37: warning: passing argument 2 of 'execute' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+   57 |         efi_status = execute(image, fallback);
+      |                                     ^~~~~~~~
+/tmp/src/efitools-1.9.2/include/execute.h:5:35: note: expected 'CHAR16 *' {aka 'short unsigned int *'} but argument is of type 'const CHAR16 *' {aka 'const short unsigned int *'}
+    5 | execute(EFI_HANDLE image, CHAR16 *name);
+      |                           ~~~~~~~~^~~~
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c configtable.c -o configtable.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c hash-to-efi-sig-list.c -o hash-to-efi-sig-list.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c oid.c -o oid.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c shell.c -o shell.o
+hash-to-efi-sig-list.c:7:9: warning: "__STDC_VERSION__" redefined
+    7 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c identification.c -o identification.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c sig-list-to-certs.c -o sig-list-to-certs.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c security_policy.c -o security_policy.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -fno-toplevel-reorder -DBUILD_EFI -c x509.c -o x509.efi.o
+sig-list-to-certs.c:7:9: warning: "__STDC_VERSION__" redefined
+    7 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c efi-readvar.c -o efi-readvar.o
+identification.c:33:24: warning: 'x501rdns' defined but not used [-Wunused-const-variable=]
+   33 | static const x501rdn_t x501rdns[] = {
+      |                        ^~~~~~~~
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c shim_protocol.c -o shim_protocol.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c efi-updatevar.c -o efi-updatevar.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c pkcs7verify.c -o pkcs7verify.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c cert-to-efi-hash-list.c -o cert-to-efi-hash-list.o
+ar rcv libasn1-efi.a asn1.efi.o asn1_parser.efi.o enumerator.efi.o chunk.efi.o oid.efi.o identification.efi.o x509.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c kernel_efivars.c -o kernel_efivars.o
+a - asn1.efi.o
+a - asn1_parser.efi.o
+a - enumerator.efi.o
+a - chunk.efi.o
+a - oid.efi.o
+a - identification.efi.o
+a - x509.efi.o
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c flash-var.c -o flash-var.o
+make[1]: Leaving directory '/tmp/src/efitools-1.9.2/lib/asn1'
+> noPK.esl
+openssl req -new -x509 -newkey rsa:2048 -subj "/CN=DB1/" -keyout DB1.key -out DB1.crt -days 3650 -nodes -sha256
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c openssl_sign.c -o openssl_sign.o
+flash-var.c:13:9: warning: "__STDC_VERSION__" redefined
+   13 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+kernel_efivars.c:19:9: warning: "__STDC_VERSION__" redefined
+   19 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+....+.....+++++++++++++++++++++++++++++++++++++++*..........+++++++++++++++++++++++++++++++++++++++*.+.+..........................+...+.......+..............+....+openssl req -new -x509 -newkey rsa:2048 -subj "/CN=DB2/" -keyout DB2.key -out DB2.crt -days 3650 -nodes -sha256
+..+...+............+......+....+........+......+......+.+..+.+......+.....+.+...+.........+........+...+..........+.........+efi-readvar.c:20:9: warning: "__STDC_VERSION__" redefined
+   20 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+..+.+....................+...................+.....+....+......+..++++++++++++++++++++++++..+...+++++++++++++++*...+...............+...+......+....+...+..+.......++.+++++++++++++++++++++++++++++++++++++..+*.+..........+..+...+...............+..+...+..........+.......+.....+...+..+....+..............+.+.....+...+....+.....+..........+.+.....+...+......+...........+.......++..+..................+.......+...+........+.+.....+.......+.........+...+............+..+......+.............+......+..+.+..................+...+.+.........+.++..........+++..+...++
+...............+..+++++++++++++++++++++++++++++++++++++++*.............+.......+....+......+.................++.....+............+.+++++++++++++++++++++++++++++++++++++++*...+...........+++...+++......++
+.+...+.........+..+....+......-----
++.........+......+...+...+In file included from flash-var.c:7:
+In function 'memset',
+    inlined from 'main' at flash-var.c:186:2:
+/usr/include/fortify/string.h:75:16: warning: '__builtin_memset' offset [0, 56] is out of the bounds [0, 0] [-Warray-bounds=]
+   75 |         return __builtin_memset(__d, __c, __n);
+      |                ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds SetNull.o -o SetNull.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+.....+...+....+..+...................+..+...+.+........................+............+...+......+...+..+....+.........+........+.........+....+............+.....+...+......+.+....................+...+....+..+...+............+...+.......+...+...........+......................+...+..+...+.+...+..+.+............+........+# check we have no undefined symbols
+nm -D SetNull.so | grep ' U ' && exit 1 || exit 0
+.........+efi-updatevar.c:23:9: warning: "__STDC_VERSION__" redefined
+   23 | #define __STDC_VERSION__ 199901L
+      |         ^~~~~~~~~~~~~~~~
+<built-in>: note: this is the location of the previous definition
+.............+..+......+...+.+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 SetNull.so SetNull.efi
+.........+..+....+........+.+......+........+......+....+...+...................................+....+.....+...+......+.......+.....+sbsign --key DB.key --cert DB.crt --output SetNull-signed.efi SetNull.efi
+....+.....+.........+......+...+..........+...+..+...+..........+............+warning: data remaining[39424 vs 48750]: gaps between PE/COFF sections?
+warning: data remaining[39424 vs 48752]: gaps between PE/COFF sections?
+...+............+......+.....+.+...+......+.....+.+Signing Unsigned original image
+...+..+.........+............+...+.+.....+.+.........+...+........+..........+..+.+..++++++
+...+....+.....+......+.........+....+..+.........+...+.......+++++++++++++++++++++++++++++++++++++++*..+...+..+....+..+...+............+...+.+++++++++++++++++++++++++++++++++++++++*.+.......+......+.................+.......+...............+......+.....+.......+.........+......+...+....................+.+...+...........+......+.+..+.......+..............+.........+...+...+.+.....+...+.............+..+..........+.....+...+....+.....+.+........................+...+..+....+.....+....+...+...+.........+.................+.+...+......+...+...........+............+...+.......+.....+.......+.....+...+....+.........+.....+................+......+...+...........+......+.......+...+...+.....+....+.....+...+............+.+......+......+..+.+.........+..+...+.+.....+..........+......+...........+...+.+......+...+..............................+..+....+...+......+..+++openssl_sign.c: In function 'read_engine_private_key':
+openssl_sign.c:118:9: warning: 'ENGINE_load_builtin_engines' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  118 |         ENGINE_load_builtin_engines();
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~
++In file included from openssl_sign.c:10:
+/usr/include/openssl/engine.h:358:28: note: declared here
+  358 | OSSL_DEPRECATEDIN_3_0 void ENGINE_load_builtin_engines(void);
+      |                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+openssl_sign.c:119:9: warning: 'ENGINE_by_id' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  119 |         e = ENGINE_by_id(engine);
+      |         ^
+/usr/include/openssl/engine.h:336:31: note: declared here
+  336 | OSSL_DEPRECATEDIN_3_0 ENGINE *ENGINE_by_id(const char *id);
+      |                               ^~~~~~~~~~~~
+openssl_sign.c:135:9: warning: 'ENGINE_init' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  135 |         if (!ENGINE_init(e)) {
+      |         ^~
+/usr/include/openssl/engine.h:620:27: note: declared here
+  620 | OSSL_DEPRECATEDIN_3_0 int ENGINE_init(ENGINE *e);
+      |                           ^~~~~~~~~~~
+openssl_sign.c:141:9: warning: 'ENGINE_load_private_key' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  141 |         pkey = ENGINE_load_private_key(e, keyfile, ui, NULL);
+      |         ^~~~
+/usr/include/openssl/engine.h:638:11: note: declared here
+  638 | EVP_PKEY *ENGINE_load_private_key(ENGINE *e, const char *key_id,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~
+openssl_sign.c:142:9: warning: 'ENGINE_finish' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  142 |         ENGINE_finish(e);
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/engine.h:628:27: note: declared here
+  628 | OSSL_DEPRECATEDIN_3_0 int ENGINE_finish(ENGINE *e);
+      |                           ^~~~~~~~~~~~~
+openssl_sign.c:145:9: warning: 'ENGINE_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  145 |         ENGINE_free(e);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/engine.h:493:27: note: declared here
+  493 | OSSL_DEPRECATEDIN_3_0 int ENGINE_free(ENGINE *e);
+      |                           ^~~~~~~~~~~
+++
+-----
+ar rcv lib-efi.a simple_file.efi.o pecoff.efi.o guid.efi.o sha256.efi.o console.efi.o execute.efi.o configtable.efi.o shell.efi.o security_policy.efi.o shim_protocol.efi.o pkcs7verify.efi.o variables.o
+a - simple_file.efi.o
+a - pecoff.efi.o
+a - guid.efi.o
+a - sha256.efi.o
+a - console.efi.o
+a - execute.efi.o
+a - configtable.efi.o
+a - shell.efi.o
+a - security_policy.efi.o
+a - shim_protocol.efi.o
+a - pkcs7verify.efi.o
+a - variables.o
+make[1]: Leaving directory '/tmp/src/efitools-1.9.2/lib'
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds HelloWorld.o lib/lib-efi.a -o HelloWorld.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds Loader.o lib/lib-efi.a -o Loader.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+# check we have no undefined symbols
+nm -D HelloWorld.so | grep ' U ' && exit 1 || exit 0
+# check we have no undefined symbols
+nm -D Loader.so | grep ' U ' && exit 1 || exit 0
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds ReadVars.o lib/lib-efi.a lib/asn1/libasn1-efi.a -o ReadVars.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+ar rcv lib.a simple_file.o pecoff.o guid.o sha256.o console.o execute.o configtable.o shell.o security_policy.o shim_protocol.o pkcs7verify.o kernel_efivars.o openssl_sign.o
+a - simple_file.o
+a - pecoff.o
+a - guid.o
+a - sha256.o
+a - console.o
+a - execute.o
+a - configtable.o
+a - shell.o
+a - security_policy.o
+a - shim_protocol.o
+a - pkcs7verify.o
+a - kernel_efivars.o
+a - openssl_sign.o
+make[1]: Leaving directory '/tmp/src/efitools-1.9.2/lib'
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds UpdateVars.o lib/lib-efi.a -o UpdateVars.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+# check we have no undefined symbols
+nm -D ReadVars.so | grep ' U ' && exit 1 || exit 0
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds KeyTool.o lib/lib-efi.a lib/asn1/libasn1-efi.a -o KeyTool.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+# check we have no undefined symbols
+nm -D UpdateVars.so | grep ' U ' && exit 1 || exit 0
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds HashTool.o lib/lib-efi.a -o HashTool.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+# check we have no undefined symbols
+nm -D KeyTool.so | grep ' U ' && exit 1 || exit 0
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds ShimReplace.o lib/lib-efi.a -o ShimReplace.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+# check we have no undefined symbols
+nm -D HashTool.so | grep ' U ' && exit 1 || exit 0
+cc  -o hash-to-efi-sig-list hash-to-efi-sig-list.o lib/lib.a
+cc  -o sig-list-to-certs sig-list-to-certs.o lib/lib.a -lcrypto
+cc  -o efi-readvar efi-readvar.o lib/lib.a -lcrypto
+# check we have no undefined symbols
+nm -D ShimReplace.so | grep ' U ' && exit 1 || exit 0
+cc  -o efi-updatevar efi-updatevar.o lib/lib.a -lcrypto
+cc  -o cert-to-efi-hash-list cert-to-efi-hash-list.o lib/lib.a -lcrypto
+cc  -o flash-var flash-var.o lib/lib.a
+help2man --no-info -i doc/hash-to-efi-sig-list.1.in -o doc/hash-to-efi-sig-list.1 ./hash-to-efi-sig-list
+help2man --no-info -i doc/sig-list-to-certs.1.in -o doc/sig-list-to-certs.1 ./sig-list-to-certs
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 HelloWorld.so HelloWorld.efi
+cc  -o cert-to-efi-sig-list cert-to-efi-sig-list.o lib/lib.a -lcrypto
+cc  -o sign-efi-sig-list sign-efi-sig-list.o lib/lib.a -lcrypto
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 Loader.so Loader.efi
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 ReadVars.so ReadVars.efi
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 UpdateVars.so UpdateVars.efi
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 KeyTool.so KeyTool.efi
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 HashTool.so HashTool.efi
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 ShimReplace.so ShimReplace.efi
+./hash-to-efi-sig-list HashTool.efi HashTool.hash
+help2man --no-info -i doc/cert-to-efi-hash-list.1.in -o doc/cert-to-efi-hash-list.1 ./cert-to-efi-hash-list
+HASH IS e88af66559dd1b7c1218b6b4786d5231f5a273516ad5a6f03849f7b445e8b818
+help2man --no-info -i doc/cert-to-efi-sig-list.1.in -o doc/cert-to-efi-sig-list.1 ./cert-to-efi-sig-list
+help2man --no-info -i doc/efi-readvar.1.in -o doc/efi-readvar.1 ./efi-readvar
+help2man --no-info -i doc/efi-updatevar.1.in -o doc/efi-updatevar.1 ./efi-updatevar
+help2man --no-info -i doc/sign-efi-sig-list.1.in -o doc/sign-efi-sig-list.1 ./sign-efi-sig-list
+date: invalid date '1 second'
+./sign-efi-sig-list -t "" -c PK.crt -k PK.key PK noPK.esl noPK.auth
+./cert-to-efi-sig-list -g 11111111-2222-3333-4444-123456789abc DB1.crt DB1.esl
+Timestamp is 1900-1-0 00:00:00
+Authentication Payload size 40
+Signature of size 1148
+Signature at: 40
+./cert-to-efi-sig-list -g 11111111-2222-3333-4444-123456789abc DB2.crt DB2.esl
+./cert-to-efi-sig-list -g 77FA9ABD-0359-4D32-BD60-28F4E78F784B ms-uefi.crt ms-uefi.esl
+./cert-to-efi-sig-list -g 77FA9ABD-0359-4D32-BD60-28F4E78F784B ms-kek.crt ms-kek.esl
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key db DB1.esl DB1-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 853
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key db DB2.esl DB2-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 853
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key db ms-uefi.esl ms-uefi-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 1640
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key db ms-kek.esl ms-kek-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 1600
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key db DB1.esl DB1-pkupdate.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 853
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key db DB2.esl DB2-pkupdate.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 853
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key db ms-uefi.esl ms-uefi-pkupdate.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 1640
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key db ms-kek.esl ms-kek-pkupdate.auth
+./cert-to-efi-sig-list PK.crt PK-blacklist.esl
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 1600
+Signature of size 1148
+Signature at: 40
+./cert-to-efi-sig-list KEK.crt KEK-blacklist.esl
+./cert-to-efi-sig-list DB.crt DB-blacklist.esl
+./cert-to-efi-sig-list DB1.crt DB1-blacklist.esl
+./cert-to-efi-sig-list DB2.crt DB2-blacklist.esl
+./cert-to-efi-sig-list ms-uefi.crt ms-uefi-blacklist.esl
+./cert-to-efi-sig-list ms-kek.crt ms-kek-blacklist.esl
+./cert-to-efi-hash-list PK.crt PK-hash-blacklist.esl
+./cert-to-efi-hash-list KEK.crt KEK-hash-blacklist.esl
+TimeOfRevocation is 0-0-0 00:00:00
+./cert-to-efi-hash-list DB.crt DB-hash-blacklist.esl
+TimeOfRevocation is 0-0-0 00:00:00
+./cert-to-efi-hash-list DB1.crt DB1-hash-blacklist.esl
+TimeOfRevocation is 0-0-0 00:00:00
+./cert-to-efi-hash-list DB2.crt DB2-hash-blacklist.esl
+TimeOfRevocation is 0-0-0 00:00:00
+./cert-to-efi-hash-list ms-uefi.crt ms-uefi-hash-blacklist.esl
+TimeOfRevocation is 0-0-0 00:00:00
+./cert-to-efi-hash-list ms-kek.crt ms-kek-hash-blacklist.esl
+TimeOfRevocation is 0-0-0 00:00:00
+sbsign --key DB.key --cert DB.crt --output HelloWorld-signed.efi HelloWorld.efi
+TimeOfRevocation is 0-0-0 00:00:00
+./cert-to-efi-sig-list -g 11111111-2222-3333-4444-123456789abc PK.crt PK.esl
+warning: data remaining[45056 vs 54868]: gaps between PE/COFF sections?
+warning: data remaining[45056 vs 54872]: gaps between PE/COFF sections?
+Signing Unsigned original image
+./cert-to-efi-sig-list -g 11111111-2222-3333-4444-123456789abc KEK.crt KEK.esl
+./cert-to-efi-sig-list -g 11111111-2222-3333-4444-123456789abc DB.crt DB.esl
+sbsign --key DB.key --cert DB.crt --output Loader-signed.efi Loader.efi
+sbsign --key DB.key --cert DB.crt --output ReadVars-signed.efi ReadVars.efi
+warning: data remaining[82432 vs 94545]: gaps between PE/COFF sections?
+warning: data remaining[82432 vs 94552]: gaps between PE/COFF sections?
+Signing Unsigned original image
+sbsign --key DB.key --cert DB.crt --output UpdateVars-signed.efi UpdateVars.efi
+warning: data remaining[106496 vs 119580]: gaps between PE/COFF sections?
+warning: data remaining[106496 vs 119584]: gaps between PE/COFF sections?
+Signing Unsigned original image
+sbsign --key DB.key --cert DB.crt --output KeyTool-signed.efi KeyTool.efi
+warning: data remaining[82432 vs 94555]: gaps between PE/COFF sections?
+warning: data remaining[82432 vs 94560]: gaps between PE/COFF sections?
+Signing Unsigned original image
+sbsign --key DB.key --cert DB.crt --output HashTool-signed.efi HashTool.efi
+warning: data remaining[114176 vs 127652]: gaps between PE/COFF sections?
+warning: data remaining[114176 vs 127656]: gaps between PE/COFF sections?
+Signing Unsigned original image
+sbsign --key DB.key --cert DB.crt --output ShimReplace-signed.efi ShimReplace.efi
+warning: data remaining[82432 vs 94595]: gaps between PE/COFF sections?
+warning: data remaining[82432 vs 94600]: gaps between PE/COFF sections?
+Signing Unsigned original image
+cat HashTool.hash > /tmp/tmp.hash
+warning: data remaining[83456 vs 96020]: gaps between PE/COFF sections?
+warning: data remaining[83456 vs 96024]: gaps between PE/COFF sections?
+Signing Unsigned original image
+./xxdi.pl /tmp/tmp.hash > hashlist.h
+./sign-efi-sig-list -c KEK.crt -k KEK.key db DB1.esl DB1.auth
+Timestamp is 2025-6-1 01:19:24
+Authentication Payload size 853
+Signature of size 1151
+Signature at: 40
+rm -f /tmp/tmp.hash
+./sign-efi-sig-list -c KEK.crt -k KEK.key db DB2.esl DB2.auth
+Timestamp is 2025-6-1 01:19:24
+Authentication Payload size 853
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -c KEK.crt -k KEK.key db ms-uefi.esl ms-uefi.auth
+Timestamp is 2025-6-1 01:19:24
+Authentication Payload size 1640
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -c KEK.crt -k KEK.key db ms-kek.esl ms-kek.auth
+Timestamp is 2025-6-1 01:19:24
+Authentication Payload size 1600
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key PK PK.esl PK-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 851
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key KEK KEK.esl KEK-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 855
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key db DB.esl DB-update.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 851
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key PK PK.esl PK-pkupdate.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 851
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key KEK KEK.esl KEK-pkupdate.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 855
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c PK.crt -k PK.key db DB.esl DB-pkupdate.auth
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx PK-blacklist.esl PK-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 851
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx KEK-blacklist.esl KEK-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 853
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx DB-blacklist.esl DB-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 855
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx DB1-blacklist.esl DB1-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 853
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx DB2-blacklist.esl DB2-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx ms-uefi-blacklist.esl ms-uefi-blacklist.auth
+Authentication Payload size 855
+Signature of size 1151
+Signature at: 40
+Timestamp is 0-0-0 00:00:00
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx ms-kek-blacklist.esl ms-kek-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 855
+Signature of size 1151
+Signature at: 40
+Authentication Payload size 1642
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx PK-hash-blacklist.esl PK-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 1602
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx KEK-hash-blacklist.esl KEK-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx DB-hash-blacklist.esl DB-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx DB1-hash-blacklist.esl DB1-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx DB2-hash-blacklist.esl DB2-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx ms-uefi-hash-blacklist.esl ms-uefi-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -a -c KEK.crt -k KEK.key dbx ms-kek-hash-blacklist.esl ms-kek-hash-blacklist.auth
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+Timestamp is 0-0-0 00:00:00
+Authentication Payload size 134
+Signature of size 1151
+Signature at: 40
+./sign-efi-sig-list -c PK.crt -k PK.key PK PK.esl PK.auth
+Timestamp is 2025-6-1 01:19:24
+Authentication Payload size 851
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -c PK.crt -k PK.key KEK KEK.esl KEK.auth
+Timestamp is 2025-6-1 01:19:24
+Authentication Payload size 855
+Signature of size 1148
+Signature at: 40
+./sign-efi-sig-list -c KEK.crt -k KEK.key db DB.esl DB.auth
+Timestamp is 2025-6-1 01:19:25
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c PreLoader.c -o PreLoader.o
+Authentication Payload size 851
+Signature of size 1151
+Signature at: 40
+./xxdi.pl PK.auth > PK.h
+./xxdi.pl KEK.auth > KEK.h
+./xxdi.pl DB.auth > DB.h
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds PreLoader.o lib/lib-efi.a -o PreLoader.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+cc -I/tmp/src/efitools-1.9.2/include/ -I/usr/include/efi -I/usr/include/efi/x86_64 -I/usr/include/efi/protocol -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wno-pointer-sign -O2 -g  -fpic -Wall -fshort-wchar -fno-strict-aliasing -fno-merge-constants -fno-stack-protector -ffreestanding -fno-stack-check -DGNU_EFI_USE_MS_ABI -DEFI_FUNCTION_WRAPPER -mno-red-zone -DCONFIG_x86_64 -c LockDown.c -o LockDown.o
+# check we have no undefined symbols
+nm -D PreLoader.so | grep ' U ' && exit 1 || exit 0
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 PreLoader.so PreLoader.efi
+sbsign --key DB.key --cert DB.crt --output PreLoader-signed.efi PreLoader.efi
+warning: data remaining[83968 vs 96685]: gaps between PE/COFF sections?
+warning: data remaining[83968 vs 96688]: gaps between PE/COFF sections?
+Signing Unsigned original image
+ld -nostdlib -shared -Bsymbolic /usr/lib/crt0-efi-x86_64.o -L /usr/lib -L /usr/lib -L /usr/lib64 -T elf_x86_64_efi.lds LockDown.o lib/lib-efi.a -o LockDown.so -lefi -lgnuefi /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/libgcc.a
+# check we have no undefined symbols
+nm -D LockDown.so | grep ' U ' && exit 1 || exit 0
+objcopy -j .text -j .sdata -j .data -j .dynamic -j .dynsym \
+	   -j .rel -j .rela -j .rel.* -j .rela.* -j .rel* -j .rela* \
+	   -j .reloc --target=efi-app-x86_64 LockDown.so LockDown.efi
+sbsign --key DB.key --cert DB.crt --output LockDown-signed.efi LockDown.efi
+warning: data remaining[48128 vs 58292]: gaps between PE/COFF sections?
+warning: data remaining[48128 vs 58296]: gaps between PE/COFF sections?
+Signing Unsigned original image
+rm KEK-blacklist.esl SetNull.so KeyTool.o ms-kek.esl DB1.crt DB1.esl PK-hash-blacklist.esl ShimReplace.o ReadVars.o DB2-blacklist.esl ms-kek-blacklist.esl SetNull.o ms-uefi-hash-blacklist.esl HelloWorld.o ms-uefi-blacklist.esl UpdateVars.o KEK-hash-blacklist.esl DB-blacklist.esl HashTool.o DB1-hash-blacklist.esl ms-uefi.esl DB2.esl Loader.o DB2.crt ms-kek-hash-blacklist.esl PK-blacklist.esl DB2-hash-blacklist.esl DB-hash-blacklist.esl DB1-blacklist.esl
+>>> efitools: Entering fakeroot...
+make -C lib lib-efi.a
+make -C lib lib.a
+make[1]: Entering directory '/tmp/src/efitools-1.9.2/lib'
+make[1]: Entering directory '/tmp/src/efitools-1.9.2/lib'
+make -C lib/asn1 libasn1-efi.a
+make[1]: 'lib-efi.a' is up to date.
+make[1]: Leaving directory '/tmp/src/efitools-1.9.2/lib'
+make[1]: Entering directory '/tmp/src/efitools-1.9.2/lib/asn1'
+make[1]: 'lib.a' is up to date.
+make[1]: Leaving directory '/tmp/src/efitools-1.9.2/lib'
+make[1]: 'libasn1-efi.a' is up to date.
+make[1]: Leaving directory '/tmp/src/efitools-1.9.2/lib/asn1'
+install -m 755 -d /tmp/pkg/efitools/usr/share/man/man1
+install -m 644 doc/cert-to-efi-hash-list.1 doc/cert-to-efi-sig-list.1 doc/efi-readvar.1 doc/efi-updatevar.1 doc/hash-to-efi-sig-list.1 doc/sig-list-to-certs.1 doc/sign-efi-sig-list.1 /tmp/pkg/efitools/usr/share/man/man1
+install -m 755 -d /tmp/pkg/efitools/usr/share/efitools/efi
+install -m 755 HelloWorld.efi LockDown.efi Loader.efi ReadVars.efi UpdateVars.efi KeyTool.efi HashTool.efi SetNull.efi ShimReplace.efi PreLoader.efi /tmp/pkg/efitools/usr/share/efitools/efi
+install -m 755 -d /tmp/pkg/efitools/usr/bin
+install -m 755 cert-to-efi-sig-list sig-list-to-certs sign-efi-sig-list hash-to-efi-sig-list efi-readvar efi-updatevar cert-to-efi-hash-list flash-var /tmp/pkg/efitools/usr/bin
+install -m 755 mkusb.sh /tmp/pkg/efitools/usr/bin/efitool-mkusb
+install -m 755 -d /tmp/pkg/efitools/usr/share/efitools
+install -m 644 README COPYING /tmp/pkg/efitools/usr/share/efitools
+>>> efitools-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/efitools-doc/usr/share/man'
+>>> efitools-doc*: Preparing subpackage efitools-doc...
+>>> efitools-doc*: Running postcheck for efitools-doc
+>>> efitools*: Running postcheck for efitools
+>>> efitools*: Preparing package efitools...
+>>> efitools*: Stripping binaries
+>>> efitools-doc*: Scanning shared objects
+>>> efitools*: Scanning shared objects
+>>> efitools-doc*: Tracing dependencies...
+>>> efitools-doc*: Package size: 6.1 KB
+>>> efitools-doc*: Compressing data...
+>>> efitools-doc*: Create checksum...
+>>> efitools-doc*: Create efitools-doc-1.9.2-r11.apk
+>>> efitools*: Tracing dependencies...
+	mount
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+>>> efitools*: Package size: 1.1 MB
+>>> efitools*: Compressing data...
+>>> efitools*: Create checksum...
+>>> efitools*: Create efitools-1.9.2-r11.apk
+>>> efitools: Updating the main/x86_64 repository index...
+>>> efitools: Signing the index...
+>>> efitools: Cleaning up srcdir
+>>> efitools: Cleaning up build chroot
+>>> efitools: Cleaning up pkgdir

@@ -1,0 +1,1788 @@
+>>> lvm2: Validating /home/packager/oily-pine/main/lvm2/APKBUILD...
+>>> lvm2: Cleaning up srcdir
+>>> lvm2: Cleaning up pkgdir
+>>> lvm2: Cleaning up tmpdir
+>>> lvm2: Fetching https://mirrors.kernel.org/sourceware/lvm2/LVM2.2.03.32.tgz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  3 2822k    3  111k    0     0   111k      0  0:00:25  0:00:01  0:00:24  111k100 2822k  100 2822k    0     0  1700k      0  0:00:01  0:00:01 --:--:-- 1701k
+>>> lvm2: Fetching https://mirrors.kernel.org/sourceware/lvm2/LVM2.2.03.32.tgz
+>>> lvm2: Checking sha512sums...
+LVM2.2.03.32.tgz: OK
+default-udev-sync.patch: OK
+fix-stdio-usage.patch: OK
+library_dir-default-config.patch: OK
+mlockall-default-config.patch: OK
+no-systemd.patch: OK
+0001-lvresize-use-POSIX-shell.patch: OK
+lvm.initd: OK
+lvm.confd: OK
+lvmlockd.initd: OK
+dmeventd.initd: OK
+>>> lvm2: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/91) Installing musl (1.2.5-r10)
+(2/91) Installing libcrypto3 (3.5.0-r0)
+(3/91) Installing ca-certificates-bundle (20241121-r2)
+(4/91) Installing libssl3 (3.5.0-r0)
+(5/91) Installing zlib (1.3.1-r2)
+(6/91) Installing libapk2 (2.14.9-r2)
+(7/91) Installing apk-tools (2.14.9-r2)
+(8/91) Installing libcap2 (2.76-r0)
+(9/91) Installing libcap-getcap (2.76-r0)
+(10/91) Installing fakeroot (1.37.1.1-r0)
+(11/91) Installing scanelf (1.3.8-r1)
+(12/91) Installing musl-utils (1.2.5-r10)
+(13/91) Installing libgcc (14.3.0-r0)
+(14/91) Installing libstdc++ (14.3.0-r0)
+(15/91) Installing lzip (1.25-r0)
+(16/91) Installing openssl (3.5.0-r0)
+(17/91) Installing patch (2.8-r0)
+(18/91) Installing pkgconf (2.4.3-r0)
+(19/91) Installing acl-libs (2.3.2-r1)
+(20/91) Installing tar (1.35-r3)
+(21/91) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/91) Installing ssl_client (1.37.0-r18)
+(23/91) Installing busybox-binsh (1.37.0-r18)
+(24/91) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/91) Installing abuild-sudo (3.15.0-r0)
+(26/91) Installing alpine-baselayout-data (3.7.0-r0)
+(27/91) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/91) Installing bridge (1.5-r5)
+(29/91) Installing ifupdown-ng (0.12.1-r7)
+(30/91) Installing openrc-user (0.62.2-r2)
+(31/91) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/91) Installing mdev-conf (4.8-r0)
+(33/91) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/91) Installing alpine-conf (3.20.0-r0)
+(35/91) Installing alpine-keys (2.5-r0)
+(36/91) Installing alpine-release (3.22.0-r0)
+(37/91) Installing busybox-openrc (1.37.0-r18)
+(38/91) Installing busybox-suid (1.37.0-r18)
+(39/91) Installing alpine-base (3.22.0-r0)
+(40/91) Installing jansson (2.14.1-r0)
+(41/91) Installing zstd-libs (1.5.7-r0)
+(42/91) Installing binutils (2.44-r0)
+(43/91) Installing libmagic (5.46-r2)
+(44/91) Installing file (5.46-r2)
+(45/91) Installing libgomp (14.3.0-r0)
+(46/91) Installing libatomic (14.3.0-r0)
+(47/91) Installing gmp (6.3.0-r3)
+(48/91) Installing isl26 (0.26-r1)
+(49/91) Installing mpfr4 (4.2.1_p1-r0)
+(50/91) Installing mpc1 (1.3.1-r1)
+(51/91) Installing gcc (14.3.0-r0)
+(52/91) Installing libstdc++-dev (14.3.0-r0)
+(53/91) Installing musl-dev (1.2.5-r10)
+(54/91) Installing g++ (14.3.0-r0)
+(55/91) Installing make (4.4.1-r3)
+(56/91) Installing fortify-headers (1.1-r5)
+(57/91) Installing build-base (0.5-r3)
+(58/91) Installing eudev-libs (3.2.14-r5)
+(59/91) Installing eudev-dev (3.2.14-r5)
+(60/91) Installing brotli-libs (1.1.0-r2)
+(61/91) Installing c-ares (1.34.5-r0)
+(62/91) Installing libunistring (1.3-r0)
+(63/91) Installing libidn2 (2.3.7-r0)
+(64/91) Installing nghttp2-libs (1.65.0-r0)
+(65/91) Installing libpsl (0.21.5-r3)
+(66/91) Installing libcurl (8.14.0-r2)
+(67/91) Installing libexpat (2.7.1-r0)
+(68/91) Installing pcre2 (10.43-r1)
+(69/91) Installing git (2.49.0-r0)
+(70/91) Installing git-init-template (2.49.0-r0)
+(71/91) Installing libaio (0.3.113-r2)
+(72/91) Installing libaio-dev (0.3.113-r2)
+(73/91) Installing linux-headers (6.14.2-r0)
+(74/91) Installing libeconf (0.6.3-r0)
+(75/91) Installing libblkid (2.41-r9)
+(76/91) Installing libuuid (2.41-r9)
+(77/91) Installing sanlock (4.0.0-r0)
+Executing sanlock-4.0.0-r0.pre-install
+(78/91) Installing sanlock-openrc (4.0.0-r0)
+(79/91) Installing sanlock-dev (4.0.0-r0)
+(80/91) Installing libfdisk (2.41-r9)
+(81/91) Installing sqlite-libs (3.50.0-r0)
+(82/91) Installing liblastlog2 (2.41-r9)
+(83/91) Installing libmount (2.41-r9)
+(84/91) Installing libsmartcols (2.41-r9)
+(85/91) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(86/91) Installing libncursesw (6.5_p20250503-r0)
+(87/91) Installing readline (8.2.13-r1)
+(88/91) Installing sqlite (3.50.0-r0)
+(89/91) Installing sqlite-dev (3.50.0-r0)
+(90/91) Installing util-linux-dev (2.41-r9)
+(91/91) Installing util-linux-static (2.41-r9)
+Executing busybox-1.37.0-r18.trigger
+OK: 285 MiB in 91 packages
+>>> lvm2: Fetching https://mirrors.kernel.org/sourceware/lvm2/LVM2.2.03.32.tgz
+>>> lvm2: Checking sha512sums...
+LVM2.2.03.32.tgz: OK
+default-udev-sync.patch: OK
+fix-stdio-usage.patch: OK
+library_dir-default-config.patch: OK
+mlockall-default-config.patch: OK
+no-systemd.patch: OK
+0001-lvresize-use-POSIX-shell.patch: OK
+lvm.initd: OK
+lvm.confd: OK
+lvmlockd.initd: OK
+dmeventd.initd: OK
+>>> lvm2: Unpacking /var/cache/distfiles/LVM2.2.03.32.tgz...
+>>> lvm2: default-udev-sync.patch
+patching file lib/config/defaults.h
+Hunk #1 succeeded at 206 (offset 7 lines).
+>>> lvm2: fix-stdio-usage.patch
+patching file lib/commands/toolcontext.c
+Hunk #1 succeeded at 1670 (offset 9 lines).
+Hunk #2 succeeded at 1714 (offset 9 lines).
+Hunk #3 succeeded at 2049 (offset 9 lines).
+Hunk #4 succeeded at 2073 (offset 9 lines).
+patching file tools/lvmcmdline.c
+Hunk #1 succeeded at 3407 (offset 29 lines).
+Hunk #2 succeeded at 3417 (offset 29 lines).
+Hunk #3 succeeded at 3425 (offset 29 lines).
+>>> lvm2: library_dir-default-config.patch
+patching file conf/example.conf.in
+Hunk #1 succeeded at 1061 with fuzz 2 (offset 79 lines).
+>>> lvm2: mlockall-default-config.patch
+patching file conf/example.conf.in
+Hunk #1 succeeded at 1835 (offset 57 lines).
+patching file lib/config/defaults.h
+>>> lvm2: no-systemd.patch
+patching file udev/69-dm-lvm.rules.in
+Hunk #1 succeeded at 85 (offset 9 lines).
+>>> lvm2: 0001-lvresize-use-POSIX-shell.patch
+patching file scripts/lvresize_fs_helper.sh
+>>> lvm2: Updating ./autoconf/config.sub
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether the compiler supports GNU C++... yes
+checking whether c++ accepts -g... yes
+checking for c++ option to enable C++11 features... none needed
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether ln -s works... yes
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking whether make sets $(MAKE)... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-readelf... no
+checking for readelf... readelf
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for x86_64-alpine-linux-musl-cflow... no
+checking for cflow... no
+checking for x86_64-alpine-linux-musl-cscope... no
+checking for cscope... no
+checking for x86_64-alpine-linux-musl-chmod... no
+checking for chmod... /bin/chmod
+checking for x86_64-alpine-linux-musl-wc... no
+checking for wc... /usr/bin/wc
+checking for x86_64-alpine-linux-musl-sort... no
+checking for sort... /usr/bin/sort
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for vfork.h... no
+checking for sys/time.h... yes
+checking for sys/param.h... yes
+checking for sys/mkdev.h... no
+checking for sys/sysmacros.h... yes
+checking for _Bool... yes
+checking for stdbool.h that conforms to C99 or later... yes
+checking for assert.h... yes
+checking for ctype.h... yes
+checking for dirent.h... yes
+checking for errno.h... yes
+checking for fcntl.h... yes
+checking for float.h... yes
+checking for getopt.h... yes
+checking for inttypes.h... (cached) yes
+checking for langinfo.h... yes
+checking for libgen.h... yes
+checking for limits.h... yes
+checking for locale.h... yes
+checking for paths.h... yes
+checking for signal.h... yes
+checking for stdarg.h... yes
+checking for stddef.h... yes
+checking for stdio.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/file.h... yes
+checking for sys/ioctl.h... yes
+checking for syslog.h... yes
+checking for sys/mman.h... yes
+checking for sys/param.h... (cached) yes
+checking for sys/resource.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/time.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/utsname.h... yes
+checking for sys/wait.h... yes
+checking for time.h... yes
+checking for unistd.h... (cached) yes
+checking for termios.h... yes
+checking for sys/statvfs.h... yes
+checking for sys/timerfd.h... yes
+checking for sys/vfs.h... yes
+checking for linux/magic.h... yes
+checking for linux/fiemap.h... yes
+checking for libaio.h... yes
+checking for asm/byteorder.h... yes
+checking for linux/fs.h... yes
+checking for malloc.h... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for struct stat.st_rdev... yes
+checking for ptrdiff_t... yes
+checking for struct stat.st_blocks... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for off_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for mode_t... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for ssize_t... yes
+checking for uid_t... yes
+checking for gid_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for __builtin_clz... yes
+checking for __builtin_clzll... yes
+checking for __builtin_ffs... yes
+checking for ftruncate... yes
+checking for gethostname... yes
+checking for getpagesize... yes
+checking for gettimeofday... yes
+checking for localtime_r... yes
+checking for memchr... yes
+checking for memset... yes
+checking for mkdir... yes
+checking for mkfifo... yes
+checking for munmap... yes
+checking for nl_langinfo... yes
+checking for pselect... yes
+checking for realpath... yes
+checking for rmdir... yes
+checking for setenv... yes
+checking for setlocale... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strrchr... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for uname... yes
+checking for ffs... yes
+checking for mallinfo2... no
+checking for prlimit... yes
+checking for versionsort... yes
+checking for working alloca.h... yes
+checking for alloca... yes
+checking whether closedir returns void... no
+checking for working chown... yes
+checking for fork... yes
+checking for vfork... yes
+checking for alarm... yes
+checking for getpagesize... (cached) yes
+checking for vprintf... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether lstat accepts an empty string... no
+checking for GNU libc compatible malloc... (cached) yes
+checking for working memcmp... yes
+checking for working mktime... yes
+checking for working mmap... yes
+checking for GNU libc compatible realloc... (cached) yes
+checking whether stat accepts an empty string... no
+checking for working strtod... yes
+checking whether to enable dependency tracking... no
+checking whether to build silently... yes
+checking whether to use static linking... yes
+checking whether to use dynamic linking... yes
+checking whether cc accepts -pie flag... yes
+checking whether cc accepts -Wl,-z,relro,-z,now,-z,pack-relative-relocs,--as-needed ld flags... yes
+checking file owner... 
+checking group owner... 
+checking device node uid... 0
+checking device node gid... 0
+checking device node mode... 0600
+checking when to create device nodes... on resume
+checking default for use_devicesfile... 0
+checking default name mangling... auto
+checking default for event_activation... 1
+checking whether to include snapshots... internal
+checking whether to include mirrors... internal
+checking whether to include thin provisioning... internal
+checking whether /usr/sbin/thin_check (.) supports the needs-check flag... no
+checking whether to include cache... internal
+checking whether /usr/sbin/cache_check (..) supports the needs-check flag... no
+checking whether to include vdo... internal
+checking for x86_64-alpine-linux-musl-vdoformat... no
+checking for vdoformat... no
+configure: WARNING: vdoformat not found in path /bin:/usr/bin:/sbin:/usr/sbin
+checking whether to include writecache... internal
+checking whether to include integrity... internal
+checking whether to enable realtime support... yes
+checking whether to enable OCF resource agents... no
+checking for default run directory... /run
+checking whether to build cluster mirror log daemon... no
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking whether to enable debugging... no
+checking whether cc accepts -Wjump-misses-init flag... yes
+checking whether cc accepts -Wclobbered flag... yes
+checking whether cc accepts -Wsync-nand flag... yes
+checking for C optimisation flag... 
+checking whether to use symbol versioning... gnu
+checking whether to gather gcov profiling data... no
+checking whether to enable valgrind awareness of pools... no
+checking for valgrind... no
+checking whether to use device-mapper... yes
+checking whether to build lvmpolld... no
+checking whether to build lvmlockdsanlock... yes
+checking for libsanlock_client >= 3.7.0... yes
+checking whether to build lvmlockddlm... no
+checking whether to build lvmlockddlmcontrol... no
+checking whether to build lvmlockdidm... no
+checking whether to build lvmlockd... yes
+configure: WARNING: Enabling lvmpolld - required by lvmlockd.
+checking defaults for use_lvmlockd... 1
+checking defaults for use_lvmpolld... 1
+checking whether to log to systemd journal... no
+checking whether to support systemd appmachineid... no
+checking whether to enable to sd_notify... no
+checking for app running udev background service... no
+checking for blkid >= 2.24... yes
+checking for blkid.h defines BLKID_SUBLKS_FSINFO.... yes
+checking whether to enable libblkid detection of signatures when wiping... yes
+checking for libnvme >= 1.4... no
+checking whether to use libnvme for alternate WWIDs... no
+checking whether to enable synchronization with udev processing... no
+checking whether to enable installation of udev rules required for synchronization... yes
+checking whether to enable executable path detection in udev rules... no
+checking whether udev supports built-in blkid... yes
+checking whether to enable O_DIRECT... yes
+checking whether to include Python D-Bus support... no
+checking whether to build notifydbus... no
+checking whether to install fsadm... yes
+checking whether to install lvm_import_vdo... yes
+checking whether to install blkdeactivate... yes
+checking whether to use dmeventd... yes
+checking whether to compile liblvm2cmd.so... yes
+checking whether to build dmfilemapd... no
+checking for getline in -lc... yes
+checking for canonicalize_file_name in -lc... no
+checking for dlopen in -ldl... yes
+checking for log10 in -lm... yes
+checking for pthread_mutex_lock in -lpthread... yes
+checking whether to enable selinux support... yes
+checking for sepol_check_context in -lsepol... no
+checking for is_selinux_enabled in -lselinux... no
+configure: WARNING: Disabling selinux
+checking for BLKZEROOUT in sys/ioctl.h.... yes
+checking whether to use BLKZEROOUT for device zeroing... yes
+checking for clock_gettime... yes
+checking for struct stat has st_ctim.... yes
+checking for getopt.h... (cached) yes
+checking whether to enable internationalisation... no
+checking for kernel modules directory... /lib/modules
+checking whether to enable readline... no
+checking whether to enable editline... no
+checking for strtoull... yes
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether strerror_r is declared... yes
+checking for strpbrk... yes
+checking whether strerror_r returns char *... no
+checking for arpa/inet.h... yes
+checking for dlfcn.h... yes
+checking for x86_64-alpine-linux-musl-modprobe... no
+checking for modprobe... /sbin/modprobe
+checking for default lock directory... /run/lock/lvm
+checking for kernel interface choice... ioctl
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating make.tmpl
+config.status: creating libdm/make.tmpl
+config.status: creating daemons/Makefile
+config.status: creating daemons/cmirrord/Makefile
+config.status: creating daemons/dmeventd/Makefile
+config.status: creating daemons/dmeventd/libdevmapper-event.pc
+config.status: creating daemons/dmeventd/plugins/Makefile
+config.status: creating daemons/dmeventd/plugins/lvm2/Makefile
+config.status: creating daemons/dmeventd/plugins/raid/Makefile
+config.status: creating daemons/dmeventd/plugins/mirror/Makefile
+config.status: creating daemons/dmeventd/plugins/snapshot/Makefile
+config.status: creating daemons/dmeventd/plugins/thin/Makefile
+config.status: creating daemons/dmeventd/plugins/vdo/Makefile
+config.status: creating daemons/lvmdbusd/Makefile
+config.status: creating daemons/lvmdbusd/lvmdbusd
+config.status: creating daemons/lvmdbusd/lvmdb.py
+config.status: creating daemons/lvmdbusd/lvm_shell_proxy.py
+config.status: creating daemons/lvmdbusd/path.py
+config.status: creating daemons/lvmpolld/Makefile
+config.status: creating daemons/lvmlockd/Makefile
+config.status: creating conf/Makefile
+config.status: creating conf/example.conf
+config.status: creating conf/lvmlocal.conf
+config.status: creating conf/command_profile_template.profile
+config.status: creating conf/metadata_profile_template.profile
+config.status: creating include/Makefile
+config.status: creating lib/Makefile
+config.status: creating include/lvm-version.h
+config.status: creating libdaemon/Makefile
+config.status: creating libdaemon/client/Makefile
+config.status: creating libdaemon/server/Makefile
+config.status: creating libdm/Makefile
+config.status: creating libdm/dm-tools/Makefile
+config.status: creating libdm/libdevmapper.pc
+config.status: creating man/Makefile
+config.status: creating po/Makefile
+config.status: creating scripts/lvm2-pvscan.service
+config.status: creating scripts/blkdeactivate.sh
+config.status: creating scripts/blk_availability_init_red_hat
+config.status: creating scripts/blk_availability_systemd_red_hat.service
+config.status: creating scripts/cmirrord_init_red_hat
+config.status: creating scripts/com.redhat.lvmdbus1.service
+config.status: creating scripts/dm_event_systemd_red_hat.service
+config.status: creating scripts/dm_event_systemd_red_hat.socket
+config.status: creating scripts/lvm2_cmirrord_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmdbusd_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmpolld_init_red_hat
+config.status: creating scripts/lvm2_lvmpolld_systemd_red_hat.service
+config.status: creating scripts/lvm2_lvmpolld_systemd_red_hat.socket
+config.status: creating scripts/lvmlockd.service
+config.status: creating scripts/lvmlocks.service
+config.status: creating scripts/lvm2_monitoring_init_red_hat
+config.status: creating scripts/lvm2_monitoring_systemd_red_hat.service
+config.status: creating scripts/lvm2_tmpfiles_red_hat.conf
+config.status: creating scripts/lvmdump.sh
+config.status: creating scripts/Makefile
+config.status: creating test/Makefile
+config.status: creating tools/Makefile
+config.status: creating udev/Makefile
+config.status: creating include/configure.h
+configure: WARNING: Unrecognized 'vdoformat' tool is REQUIRED for VDO logical volume creation!
+configure: WARNING: Building lvmlockd without sd-notify support may block!
+make -C libdm device-mapper
+make -C conf device-mapper
+make -C include device-mapper
+make -C lib device-mapper
+make -C libdaemon device-mapper
+make -C man device-mapper
+make -C scripts device-mapper
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/include'
+make -C udev device-mapper
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/lib'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/man'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon'
+    [CC] hash.c
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/udev'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/scripts'
+    [CC] list.c
+    [CC] radix-tree.c
+    [CC] bitset.c
+    [CC] libdm-iface.c
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/conf'
+    [CC] libdm-common.c
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/lib'
+    [CC] libdm-config.c
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/udev'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon'
+    [CC] bitset.c
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/scripts'
+    [CC] hash.c
+    [CC] list.c
+    [CC] libdm-deptree.c
+    [CC] libdm-common.c
+    [CC] libdm-file.c
+    [MAN] dmsetup.8
+    [MAN] dmstats.8
+    [CC] libdm-config.c
+    [CC] libdm-report.c
+    [MAN] blkdeactivate.8
+    [MAN] dmeventd.8
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/man'
+    [CC] libdm-string.c
+    [CC] libdm-deptree.c
+    [CC] libdm-targets.c
+    [CC] libdm-file.c
+    [CC] libdm-report.c
+    [CC] libdm-timestamp.c
+    [CC] pool.c
+    [CC] libdm-stats.c
+    [CC] libdm-string.c
+    [CC] matcher.c
+    [CC] parse_rx.c
+    [CC] libdm-targets.c
+    [CC] libdm-timestamp.c
+    [CC] dbg_malloc.c
+    [CC] pool.c
+    [CC] ttree.c
+    [CC] matcher.c
+    [CC] status.c
+    [CC] parse_rx.c
+    [CC] ttree.c
+    [CC] libdm-iface.c
+    [CC] vdo_reader.c
+    [CC] vdo_target.c
+    [AR] base/libbase.a
+ar: creating base/libbase.a
+    [CC] ioctl/libdevmapper.so.1.02
+    [AR] ioctl/libdevmapper.a
+ar: creating ioctl/libdevmapper.a
+    [LN] libdevmapper.so.1.02
+    [LN] ioctl/libdevmapper.so
+    [LN] ioctl/libdevmapper.so
+    [CHECK] ioctl/libdevmapper.so
+make -C daemons device-mapper
+make -C tools device-mapper
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/tools'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/daemons'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/tools'
+make -C dmeventd device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+    [CC] libdevmapper-event.c
+    [CC] dmeventd.c
+dmeventd.c: In function '_timeout_thread':
+dmeventd.c:791:51: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  791 |                                                   (int) thread->thread);
+      |                                                   ^
+dmeventd.c:116:67: note: in definition of macro 'LOG_MESG'
+  116 | #define LOG_MESG(l, f, ln, e, x...) _dmeventd_log(l, f, ln, e, ## x)
+      |                                                                   ^
+../../lib/log/log.h:88:25: note: in expansion of macro 'LOG_LINE'
+   88 | #define log_debug(x...) LOG_LINE(_LOG_DEBUG, x)
+      |                         ^~~~~~~~
+dmeventd.c:790:41: note: in expansion of macro 'log_debug'
+  790 |                                         log_debug("Skipping SIGALRM to processing Thr %x for timeout.",
+      |                                         ^~~~~~~~~
+dmeventd.c:798:59: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  798 |                                                           (int) thread->thread, strerror(ret));
+      |                                                           ^
+dmeventd.c:116:67: note: in definition of macro 'LOG_MESG'
+  116 | #define LOG_MESG(l, f, ln, e, x...) _dmeventd_log(l, f, ln, e, ## x)
+      |                                                                   ^
+../../lib/log/log.h:104:23: note: in expansion of macro 'LOG_LINE_WITH_ERRNO'
+  104 | #define log_err(x...) LOG_LINE_WITH_ERRNO(_LOG_ERR, EUNCLASSIFIED, x)
+      |                       ^~~~~~~~~~~~~~~~~~~
+../../lib/log/log.h:114:28: note: in expansion of macro 'log_err'
+  114 | #define log_error(args...) log_err(args)
+      |                            ^~~~~~~
+dmeventd.c:797:49: note: in expansion of macro 'log_error'
+  797 |                                                 log_error("Unable to wakeup Thr %x for timeout: %s.",
+      |                                                 ^~~~~~~~~
+dmeventd.c: In function '_do_process_event':
+dmeventd.c:959:52: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  959 |                 log_error("Lost event in Thr %x.", (int)thread->thread);
+      |                                                    ^
+dmeventd.c:116:67: note: in definition of macro 'LOG_MESG'
+  116 | #define LOG_MESG(l, f, ln, e, x...) _dmeventd_log(l, f, ln, e, ## x)
+      |                                                                   ^
+../../lib/log/log.h:104:23: note: in expansion of macro 'LOG_LINE_WITH_ERRNO'
+  104 | #define log_err(x...) LOG_LINE_WITH_ERRNO(_LOG_ERR, EUNCLASSIFIED, x)
+      |                       ^~~~~~~~~~~~~~~~~~~
+../../lib/log/log.h:114:28: note: in expansion of macro 'log_err'
+  114 | #define log_error(args...) log_err(args)
+      |                            ^~~~~~~
+dmeventd.c:959:17: note: in expansion of macro 'log_error'
+  959 |                 log_error("Lost event in Thr %x.", (int)thread->thread);
+      |                 ^~~~~~~~~
+libdevmapper-event.c: In function 'dm_event_log':
+libdevmapper-event.c:984:33: warning: cast from pointer to integer of different size [-Wpointer-to-int-cast]
+  984 |                                 (int)pthread_self(), subsys,
+      |                                 ^
+    [AR] device_mapper/libdevice-mapper.a
+ar: creating device_mapper/libdevice-mapper.a
+    [CC] libdevmapper-event.so.1.02
+    [AR] libdevmapper-event.a
+ar: creating libdevmapper-event.a
+    [LN] libdevmapper-event.so
+    [CC] dmeventd
+    [CC] dmeventd.static
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons'
+make -C libdm
+make -C conf
+make -C include
+make -C libdaemon
+make -C udev
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/udev'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/conf'
+make -C client device-mapper
+make -C server device-mapper
+    [GEN] cmds.h
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make -C dm-tools device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+    [CC] dmsetup.c
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make -C client
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/include'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/udev'
+    [CC] daemon-io.c
+    [CC] config-util.c
+    [CC] daemon-client.c
+    [AR] libdaemonclient.a
+ar: creating libdaemonclient.a
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make -C server
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+    [CC] daemon-server.c
+    [CC] daemon-log.c
+    [AR] libdaemonserver.a
+ar: creating libdaemonserver.a
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make -C lib
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/lib'
+    [CC] activate.c
+    [CC] lvmcache.c
+    [CC] writecache.c
+    [CC] integrity.c
+    [CC] cache.c
+    [CC] toolcontext.c
+    [CC] config.c
+    [CC] btree.c
+    [CC] str_list.c
+    [CC] bcache.c
+    [CC] bcache-utils.c
+    [CC] dev-cache.c
+    [CC] device_id.c
+    [CC] dev-ext.c
+    [CC] dev-io.c
+    [CC] dev-md.c
+    [CC] dev-mpath.c
+    [CC] dev-swap.c
+    [CC] dev-type.c
+    [CC] dev-luks.c
+    [CC] dev-dasd.c
+    [CC] dev-lvm1-pool.c
+    [CC] filesystem.c
+    [CC] online.c
+    [CC] parse_vpd.c
+    [CC] nvme.c
+    [CC] dev_util.c
+    [CC] display.c
+    [CC] errseg.c
+    [CC] unknown.c
+    [CC] filter-composite.c
+    [CC] filter-persistent.c
+    [CC] filter-regex.c
+    [CC] filter-sysfs.c
+    [CC] filter-md.c
+    [CC] filter-fwraid.c
+    [CC] filter-mpath.c
+    [CC] filter-partitioned.c
+    [CC] filter-type.c
+    [CC] filter-usable.c
+    [CC] filter-signature.c
+    [CC] filter-deviceid.c
+    [CC] archive.c
+    [CC] archiver.c
+    [CC] export.c
+    [CC] flags.c
+    [CC] format-text.c
+    [CC] import.c
+    [CC] import_vsn1.c
+    [CC] text_label.c
+    [CC] freeseg.c
+    [CC] label.c
+    [CC] hints.c
+    [CC] file_locking.c
+    [CC] locking.c
+    [CC] log.c
+    [CC] cache_manip.c
+    [CC] writecache_manip.c
+    [CC] integrity_manip.c
+    [CC] lv.c
+    [CC] lv_manip.c
+    [CC] merge.c
+    [CC] metadata.c
+    [CC] mirror.c
+    [CC] pool_manip.c
+    [CC] dmsetup
+    [CC] pv.c
+    [CC] pv_list.c
+    [CC] dmsetup.static
+    [CC] pv_manip.c
+    [CC] pv_map.c
+    [CC] raid_manip.c
+make -C dm-tools
+make[2]: Nothing to be done for 'all'.
+    [CC] segtype.c
+    [CC] snapshot_manip.c
+    [CC] thin_manip.c
+    [CC] vdo_manip.c
+    [CC] vg.c
+    [CC] mirrored.c
+    [CC] crc.c
+    [CC] lvm-exec.c
+    [CC] lvm-file.c
+    [CC] lvm-flock.c
+    [CC] lvm-globals.c
+    [CC] lvm-maths.c
+    [CC] lvm-signal.c
+    [CC] lvm-string.c
+    [CC] lvm-wrappers.c
+    [CC] lvm-percent.c
+    [CC] sharedlib.c
+    [CC] memlock.c
+    [CC] lvmnotify.c
+    [CC] raid.c
+    [CC] prop_common.c
+    [CC] properties.c
+    [CC] report.c
+    [CC] snapshot.c
+    [CC] striped.c
+    [CC] thin.c
+    [CC] uuid.c
+    [CC] zero.c
+    [CC] dev_manager.c
+    [CC] fs.c
+    [CC] lvmpolld-client.c
+    [CC] lvmlockd.c
+    [CC] vdo.c
+    [AR] liblvm-internal.a
+ar: creating liblvm-internal.a
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/lib'
+make -C tools
+make -C scripts
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/tools'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/scripts'
+    [CC] cmdnames.h
+    [GEN] command-lines-input.h
+    [GEN] command-count.h
+    [CC] lvm-static.c
+    [CC] command.c
+    [CC] formats.c
+    [CC] dumpconfig.c
+    [CC] lvchange.c
+    [CC] lvconvert.c
+    [CC] lvconvert_poll.c
+    [CC] lvcreate.c
+    [CC] lvdisplay.c
+    [CC] lvextend.c
+    [CC] lvmcmdline.c
+    [CC] lvmdevices.c
+    [CC] lvmdiskscan.c
+    [CC] lvpoll.c
+    [CC] lvreduce.c
+    [CC] lvremove.c
+    [CC] lvrename.c
+    [CC] lvresize.c
+    [CC] lvscan.c
+    [CC] polldaemon.c
+    [CC] pvchange.c
+    [CC] pvck.c
+    [CC] pvcreate.c
+    [CC] pvdisplay.c
+    [CC] pvmove.c
+    [CC] pvmove_poll.c
+    [CC] pvremove.c
+    [CC] pvresize.c
+    [CC] pvscan.c
+    [CC] reporter.c
+    [CC] segtypes.c
+    [CC] tags.c
+    [CC] toollib.c
+    [CC] vgcfgbackup.c
+    [CC] vgcfgrestore.c
+    [CC] vgchange.c
+    [CC] vgck.c
+    [CC] vgcreate.c
+    [CC] vgdisplay.c
+    [CC] vgexport.c
+    [CC] vgextend.c
+    [CC] vgimport.c
+    [CC] vgimportclone.c
+    [CC] vgimportdevices.c
+    [CC] vgmerge.c
+    [CC] vgmknodes.c
+    [CC] vgreduce.c
+    [CC] vgremove.c
+    [CC] vgrename.c
+    [CC] vgscan.c
+    [CC] vgsplit.c
+    [CC] lvmcmdlib.c
+    [CC] lvm2cmd.c
+    [CC] lvm.c
+    [CC] man-generator.c
+    [CC] man-generator
+    [AR] liblvm2cmd.a
+    [CC] lvm
+    [CC] lvm.static
+    [CC] liblvm2cmd.so
+    [LN] liblvm2cmd.so.2.03
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/tools'
+make -C daemons
+make -C man
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/man'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/daemons'
+make -C dmeventd device-mapper
+    [MAN] lvm.conf.5
+make -C lvmpolld device-mapper
+make -C lvmlockd device-mapper
+    [MAN] lvmsystemid.7
+    [MAN] lvmreport.7
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+    [MAN] lvmraid.7
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+    [MAN] lvmautoactivation.7
+    [MAN] lvmcache.7
+    [MAN] lvmthin.7
+    [MAN] lvmvdo.7
+    [MAN] lvm.8
+    [MAN] lvmdump.8
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make -C dmeventd
+    [TSTMAN] test.gen
+make -C lvmpolld
+make -C lvmlockd
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+    [MAN] lvmsar.8
+    [MAN] lvmsadc.8
+make -C plugins device-mapper
+    [CC] lvmpolld-core.c
+    [CC] lvmpolld-data-utils.c
+    [CC] lvmlockd-core.c
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+    [CC] lvmlockd-sanlock.c
+    [MAN] fsadm.8
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+    [MAN] lvm_import_vdo.8
+make -C plugins
+    [MAN] lvmpolld.8
+    [CC] lvmpolld-cmd-utils.c
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+    [MAN] lvmlockd.8
+    [MAN] lvmlockctl.8
+make -C lvm2 device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C snapshot device-mapper
+    [CC] lvmlockctl.c
+make -C raid device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C thin device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make -C mirror device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make -C vdo device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make -C lvm2
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+    [CC] dmeventd_lvm.c
+In file included from lvmpolld-core.c:23:
+/usr/include/wait.h:1:2: warning: #warning redirecting incorrect #include <wait.h> to <sys/wait.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <wait.h> to <sys/wait.h>
+      |  ^~~~~~~
+lvmpolld-core.c: In function '_strerror_r':
+lvmpolld-core.c:60:9: warning: #warning "Can't decide proper strerror_r implementation. lvmpolld will not issue specific system error messages" [-Wcpp]
+   60 | #       warning "Can't decide proper strerror_r implementation. lvmpolld will not issue specific system error messages"
+      |         ^~~~~~~
+    [MAN] lvm-fullreport.8
+    [MAN] lvm-lvpoll.8
+    [MAN] lvcreate.8
+    [MAN] lvchange.8
+    [MAN] lvmconfig.8
+    [MAN] lvconvert.8
+    [MAN] lvdisplay.8
+    [MAN] lvextend.8
+    [MAN] lvreduce.8
+    [MAN] lvremove.8
+    [MAN] lvrename.8
+    [MAN] lvresize.8
+    [MAN] lvs.8
+    [MAN] lvscan.8
+    [MAN] pvchange.8
+    [MAN] pvck.8
+    [MAN] pvcreate.8
+    [MAN] pvdisplay.8
+    [MAN] pvmove.8
+    [MAN] pvremove.8
+    [MAN] pvresize.8
+    [MAN] pvs.8
+    [MAN] pvscan.8
+    [MAN] vgcfgbackup.8
+    [MAN] vgcfgrestore.8
+    [MAN] vgchange.8
+    [MAN] vgck.8
+    [MAN] vgcreate.8
+    [MAN] vgconvert.8
+    [MAN] vgdisplay.8
+    [MAN] vgexport.8
+    [MAN] vgextend.8
+    [MAN] vgimport.8
+    [MAN] vgimportclone.8
+    [MAN] vgmerge.8
+    [CC] libdevmapper-event-lvm2.so.2.03
+    [MAN] vgmknodes.8
+    [MAN] vgreduce.8
+    [MAN] vgremove.8
+    [MAN] vgrename.8
+    [MAN] vgs.8
+    [MAN] vgscan.8
+    [MAN] vgsplit.8
+    [MAN] lvmdiskscan.8
+    [MAN] lvmdevices.8
+    [MAN] vgimportdevices.8
+    [MAN] lvm-config.8
+    [MAN] lvm-dumpconfig.8
+    [LN] libdevmapper-event-lvm2.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C snapshot
+make -C raid
+make -C thin
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make -C mirror
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make -C vdo
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+    [CC] dmeventd_snapshot.c
+    [CC] dmeventd_raid.c
+    [CC] dmeventd_vdo.c
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/man'
+    [CC] dmeventd_thin.c
+    [CC] dmeventd_mirror.c
+    [CC] libdevmapper-event-lvm2raid.so.2.03
+    [CC] lvmlockctl
+    [CC] libdevmapper-event-lvm2mirror.so.2.03
+    [LN] libdevmapper-event-lvm2raid.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+    [LN] libdevmapper-event-lvm2mirror.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+    [CC] libdevmapper-event-lvm2snapshot.so.2.03
+    [LN] libdevmapper-event-lvm2snapshot.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+    [CC] lvmpolld
+    [CC] libdevmapper-event-lvm2vdo.so.2.03
+    [CC] libdevmapper-event-lvm2thin.so.2.03
+    [LN] libdevmapper-event-lvm2vdo.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+    [LN] libdevmapper-event-lvm2thin.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+    [CC] lvmlockd
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons'
+>>> lvm2: Entering fakeroot...
+make -C libdm device-mapper
+make -C conf device-mapper
+make -C include device-mapper
+make -C lib device-mapper
+make -C libdaemon device-mapper
+make -C man device-mapper
+make -C scripts device-mapper
+make -C udev device-mapper
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/lib'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/scripts'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/man'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/udev'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/lib'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/scripts'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/man'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/udev'
+make[1]: Nothing to be done for 'device-mapper'.
+make -C daemons device-mapper
+make -C tools device-mapper
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/tools'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/daemons'
+make[1]: Nothing to be done for 'device-mapper'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/tools'
+make -C dmeventd device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons'
+make -C libdm
+make -C conf
+make -C include
+make -C libdaemon
+make -C udev
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/udev'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/udev'
+make -C client device-mapper
+make -C server device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make -C dm-tools device-mapper
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make -C client
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[2]: Nothing to be done for 'device-mapper'.
+make -C dm-tools
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make -C server
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[2]: Nothing to be done for 'all'.
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make -C lib
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/lib'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/lib'
+make -C tools
+make -C scripts
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/tools'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/scripts'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/tools'
+make -C daemons
+make -C man
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/daemons'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/man'
+make -C dmeventd device-mapper
+make -C lvmpolld device-mapper
+make -C lvmlockd device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make -C dmeventd
+make -C lvmpolld
+make -C lvmlockd
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/man'
+make -C plugins device-mapper
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C plugins
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C lvm2 device-mapper
+make -C snapshot device-mapper
+make -C raid device-mapper
+make -C thin device-mapper
+make -C mirror device-mapper
+make -C vdo device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make -C lvm2
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C snapshot
+make -C raid
+make -C thin
+make -C mirror
+make -C vdo
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons'
+make -C libdm install
+make -C conf install
+make -C daemons install
+make -C include install
+make -C lib install
+make -C libdaemon install
+make -C man install
+make -C scripts install
+make -C tools install
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/daemons'
+make -C udev install
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/lib'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/include'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/scripts'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/tools'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/man'
+make[1]: Entering directory '/tmp/src/LVM2.2.03.32/udev'
+libfakeroot internal error: payload not recognized!
+libfakeroot internal error: payload not recognized!
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/include'
+make -C dmeventd device-mapper
+make -C client device-mapper
+make -C lvmpolld device-mapper
+make[1]: Nothing to be done for 'install'.
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/lib'
+make -C server device-mapper
+/usr/bin/install -c -p -m 644 -D example.conf /tmp/pkg/lvm2/etc/lvm/lvm.conf
+make -C lvmlockd device-mapper
+/usr/bin/install -c -p -m 644 -D lvmlocal.conf /tmp/pkg/lvm2/etc/lvm/lvmlocal.conf
+    [INSTALL] 11-dm-lvm.rules
+    [INSTALL] lvresize_fs_helper.sh
+    [INSTALL] 69-dm-lvm.rules
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+    [INSTALL] lvmdump.sh
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+    [INSTALL] lvm.conf.5
+    [INSTALL] fsadm.sh
+    [INSTALL] 10-dm.rules
+    [INSTALL] command_profile_template.profile
+    [INSTALL] 13-dm-disk.rules
+    [INSTALL] lvm_import_vdo.sh
+    [INSTALL] blkdeactivate.sh
+    [INSTALL] 95-dm-notify.rules
+    [INSTALL] lvmsystemid.7 lvmreport.7 lvmraid.7 lvmautoactivation.7 lvmcache.7 lvmthin.7 lvmvdo.7
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make -C client
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/scripts'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/conf'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/udev'
+make[2]: Nothing to be done for 'device-mapper'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make -C dmeventd
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make -C lvmpolld
+make -C lvmlockd
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make -C dm-tools device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+    [INSTALL] ioctl/libdevmapper.so
+    [INSTALL] ioctl/libdevmapper.a
+    [INSTALL] libdevmapper.pc
+    [INSTALL] libdevmapper.h
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make -C server
+make -C plugins device-mapper
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[2]: Nothing to be done for 'device-mapper'.
+make -C dm-tools
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+    [INSTALL] lvm
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+    [INSTALL] lvm.static
+Creating symbolic links for individual commands in /tmp/pkg/lvm2/sbin
+    [INSTALL] liblvm2cmd.so
+    [INSTALL] lvm2cmd.h
+    [CC] lvm2cmd-static.c
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make -C client install
+make[2]: Nothing to be done for 'all'.
+make -C dm-tools install
+make -C server install
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C plugins
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+    [INSTALL] lvm.8 lvmdump.8 lvm-fullreport.8 lvm-lvpoll.8 lvcreate.8 lvchange.8 lvmconfig.8 lvconvert.8 lvdisplay.8 lvextend.8 lvreduce.8 lvremove.8 lvrename.8 lvresize.8 lvs.8 lvscan.8 pvchange.8 pvck.8 pvcreate.8 pvdisplay.8 pvmove.8 pvremove.8 pvresize.8 pvs.8 pvscan.8 vgcfgbackup.8 vgcfgrestore.8 vgchange.8 vgck.8 vgcreate.8 vgconvert.8 vgdisplay.8 vgexport.8 vgextend.8 vgimport.8 vgimportclone.8 vgmerge.8 vgmknodes.8 vgreduce.8 vgremove.8 vgrename.8 vgs.8 vgscan.8 vgsplit.8 lvmsar.8 lvmsadc.8 lvmdiskscan.8 lvmdevices.8 vgimportdevices.8 fsadm.8 lvm_import_vdo.8 lvmpolld.8 lvmlockd.8 lvmlockctl.8 lvm-config.8 lvm-dumpconfig.8
+    [INSTALL] dmsetup.8 dmstats.8 blkdeactivate.8 dmeventd.8
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/client'
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon/server'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/libdaemon'
+make -C lvm2 device-mapper
+make -C snapshot device-mapper
+    [INSTALL] dmsetup
+make -C raid device-mapper
+    [INSTALL] dmsetup.static
+make -C thin device-mapper
+make -C mirror device-mapper
+make -C vdo device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/man'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make -C lvm2
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C snapshot
+make -C raid
+make -C thin
+make -C mirror
+make -C vdo
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+    [AR] liblvm2cmd-static.a
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'all'.
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make -C dmeventd install
+make -C lvmpolld install
+make -C lvmlockd install
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+make[2]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+    [INSTALL] lvmpolld
+make -C plugins device-mapper
+    [INSTALL] lvmlockd
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmpolld'
+    [INSTALL] libdevmapper-event.h
+    [INSTALL] lvmlockctl
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/lvmlockd'
+    [INSTALL] libdevmapper-event.so
+    [INSTALL] libdevmapper-event.a
+    [INSTALL] libdevmapper-event.pc
+    [INSTALL] dmeventd
+    [INSTALL] dmeventd.static
+make[3]: Nothing to be done for 'device-mapper'.
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C plugins
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C lvm2 device-mapper
+make -C snapshot device-mapper
+make -C raid device-mapper
+make -C thin device-mapper
+make -C mirror device-mapper
+make -C vdo device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+    [INSTALL] liblvm2cmd-static.a
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make -C lvm2
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/tools'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C snapshot
+make -C raid
+make -C thin
+make -C mirror
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make -C vdo
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'all'.
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C plugins install
+make[3]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make -C lvm2 device-mapper
+make -C snapshot device-mapper
+make -C raid device-mapper
+make -C thin device-mapper
+make -C mirror device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make -C vdo device-mapper
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Nothing to be done for 'device-mapper'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make -C lvm2
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C snapshot
+make -C raid
+make -C thin
+make -C mirror
+make -C vdo
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make -C lvm2 install
+make -C snapshot install
+make -C raid install
+make -C thin install
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make -C mirror install
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+make -C vdo install
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Entering directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+    [INSTALL] libdevmapper-event-lvm2snapshot.so
+    [INSTALL] libdevmapper-event-lvm2mirror.so
+    [INSTALL] libdevmapper-event-lvm2raid.so
+    [INSTALL] libdevmapper-event-lvm2thin.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/mirror'
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/snapshot'
+    [INSTALL] libdevmapper-event-lvm2vdo.so
+    [INSTALL] libdevmapper-event-lvm2.so
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/raid'
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/thin'
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/vdo'
+make[4]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins/lvm2'
+make[3]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd/plugins'
+make[2]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons/dmeventd'
+make[1]: Leaving directory '/tmp/src/LVM2.2.03.32/daemons'
+>>> lvm2-static*: Running split function lvm2_static...
+'usr/lib/liblvm2cmd.a' -> '/tmp/pkg/lvm2-static/usr/lib/liblvm2cmd.a'
+'usr/sbin/lvm.static' -> '/tmp/pkg/lvm2-static/usr/sbin/lvm.static'
+>>> lvm2-static*: Preparing subpackage lvm2-static...
+>>> lvm2-static*: Stripping binaries
+>>> lvm2-static*: Running postcheck for lvm2-static
+>>> device-mapper-static*: Running split function dm_static...
+'usr/lib/libdevmapper-event.a' -> '/tmp/pkg/device-mapper-static/usr/lib/libdevmapper-event.a'
+'usr/lib/libdevmapper.a' -> '/tmp/pkg/device-mapper-static/usr/lib/libdevmapper.a'
+'usr/sbin/dmeventd.static' -> '/tmp/pkg/device-mapper-static/usr/sbin/dmeventd.static'
+'usr/sbin/dmsetup.static' -> '/tmp/pkg/device-mapper-static/usr/sbin/dmsetup.static'
+'usr/sbin/dmstats.static' -> '/tmp/pkg/device-mapper-static/usr/sbin/dmstats.static'
+>>> device-mapper-static*: Preparing subpackage device-mapper-static...
+>>> device-mapper-static*: Stripping binaries
+>>> device-mapper-static*: Running postcheck for device-mapper-static
+>>> device-mapper-libs*: Running split function dm_libs...
+'usr/lib/libdevmapper.so.1.02' -> '/tmp/pkg/device-mapper-libs/usr/lib/libdevmapper.so.1.02'
+>>> device-mapper-libs*: Preparing subpackage device-mapper-libs...
+>>> device-mapper-libs*: Stripping binaries
+>>> device-mapper-libs*: Running postcheck for device-mapper-libs
+>>> device-mapper-event-libs*: Running split function dm_event_libs...
+'usr/lib/libdevmapper-event.so.1.02' -> '/tmp/pkg/device-mapper-event-libs/usr/lib/libdevmapper-event.so.1.02'
+>>> device-mapper-event-libs*: Preparing subpackage device-mapper-event-libs...
+>>> device-mapper-event-libs*: Stripping binaries
+>>> device-mapper-event-libs*: Running postcheck for device-mapper-event-libs
+>>> lvm2-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/lvm2-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/lvm2-dev/usr/lib/pkgconfig'
+'usr/lib/libdevmapper-event-lvm2.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event-lvm2.so'
+'usr/lib/libdevmapper-event-lvm2mirror.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event-lvm2mirror.so'
+'usr/lib/libdevmapper-event-lvm2raid.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event-lvm2raid.so'
+'usr/lib/libdevmapper-event-lvm2snapshot.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event-lvm2snapshot.so'
+'usr/lib/libdevmapper-event-lvm2thin.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event-lvm2thin.so'
+'usr/lib/libdevmapper-event-lvm2vdo.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event-lvm2vdo.so'
+'usr/lib/libdevmapper-event.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper-event.so'
+'usr/lib/libdevmapper.so' -> '/tmp/pkg/lvm2-dev/usr/lib/libdevmapper.so'
+'usr/lib/liblvm2cmd.so' -> '/tmp/pkg/lvm2-dev/usr/lib/liblvm2cmd.so'
+>>> lvm2-dev*: Preparing subpackage lvm2-dev...
+>>> lvm2-dev*: Stripping binaries
+>>> lvm2-dev*: Running postcheck for lvm2-dev
+>>> lvm2-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/lvm2-doc/usr/share/man'
+>>> lvm2-doc*: Preparing subpackage lvm2-doc...
+>>> lvm2-doc*: Running postcheck for lvm2-doc
+>>> lvm2-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/lvm2-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/lvm2-openrc/etc/init.d'
+>>> lvm2-openrc*: Preparing subpackage lvm2-openrc...
+>>> lvm2-openrc*: Running postcheck for lvm2-openrc
+>>> lvm2-dmeventd*: Running split function dmeventd...
+'sbin/dmeventd' -> '/tmp/pkg/lvm2-dmeventd/sbin/dmeventd'
+>>> lvm2-dmeventd*: Preparing subpackage lvm2-dmeventd...
+>>> lvm2-dmeventd*: Stripping binaries
+>>> lvm2-dmeventd*: Running postcheck for lvm2-dmeventd
+>>> WARNING: lvm2-dmeventd*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> lvm2-dmeventd-openrc*: Running split function dmeventd_openrc...
+>>> lvm2-dmeventd-openrc*: Preparing subpackage lvm2-dmeventd-openrc...
+>>> lvm2-dmeventd-openrc*: Running postcheck for lvm2-dmeventd-openrc
+>>> device-mapper*: Running split function dm...
+'sbin/dmsetup' -> '/tmp/pkg/device-mapper/sbin/dmsetup'
+'sbin/dmstats' -> '/tmp/pkg/device-mapper/sbin/dmstats'
+>>> device-mapper*: Preparing subpackage device-mapper...
+>>> device-mapper*: Stripping binaries
+>>> device-mapper*: Running postcheck for device-mapper
+>>> WARNING: device-mapper*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> device-mapper-udev*: Running split function udev...
+'usr/lib/udev/rules.d' -> '/tmp/pkg/device-mapper-udev/usr/lib/udev/rules.d'
+>>> device-mapper-udev*: Preparing subpackage device-mapper-udev...
+>>> device-mapper-udev*: Script found. /bin/sh added as a dependency for device-mapper-udev-2.03.32-r0.apk
+>>> device-mapper-udev*: Adding .post-install
+>>> device-mapper-udev*: Adding .post-upgrade
+>>> device-mapper-udev*: Running postcheck for device-mapper-udev
+>>> lvm2-libs*: Running split function libs...
+'usr/lib/liblvm2cmd.so.2.03' -> '/tmp/pkg/lvm2-libs/usr/lib/liblvm2cmd.so.2.03'
+'usr/lib/libdevmapper-event-lvm2.so.2.03' -> '/tmp/pkg/lvm2-libs/usr/lib/libdevmapper-event-lvm2.so.2.03'
+'usr/lib/device-mapper' -> '/tmp/pkg/lvm2-libs/usr/lib/device-mapper'
+>>> lvm2-libs*: Preparing subpackage lvm2-libs...
+>>> lvm2-libs*: Stripping binaries
+>>> lvm2-libs*: Running postcheck for lvm2-libs
+>>> lvm2-extra*: Running split function extra...
+'sbin/lvmdump' -> '/tmp/pkg/lvm2-extra/sbin/lvmdump'
+'sbin/fsadm' -> '/tmp/pkg/lvm2-extra/sbin/fsadm'
+'sbin/blkdeactivate' -> '/tmp/pkg/lvm2-extra/sbin/blkdeactivate'
+'sbin/lvm_import_vdo' -> '/tmp/pkg/lvm2-extra/sbin/lvm_import_vdo'
+>>> lvm2-extra*: Preparing subpackage lvm2-extra...
+>>> lvm2-extra*: Running postcheck for lvm2-extra
+>>> WARNING: lvm2-extra*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> lvm2-lockd*: Running split function lockd...
+'sbin/lvmlockctl' -> '/tmp/pkg/lvm2-lockd/sbin/lvmlockctl'
+'sbin/lvmlockd' -> '/tmp/pkg/lvm2-lockd/sbin/lvmlockd'
+'sbin/lvmpolld' -> '/tmp/pkg/lvm2-lockd/sbin/lvmpolld'
+>>> lvm2-lockd*: Preparing subpackage lvm2-lockd...
+>>> lvm2-lockd*: Stripping binaries
+>>> lvm2-lockd*: Running postcheck for lvm2-lockd
+>>> WARNING: lvm2-lockd*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> lvm2-lockd-openrc*: Running split function lockd_openrc...
+>>> lvm2-lockd-openrc*: Preparing subpackage lvm2-lockd-openrc...
+>>> lvm2-lockd-openrc*: Running postcheck for lvm2-lockd-openrc
+>>> lvm2*: Running postcheck for lvm2
+>>> WARNING: lvm2*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> lvm2*: Preparing package lvm2...
+>>> lvm2*: Stripping binaries
+>>> device-mapper-event-libs*: Scanning shared objects
+>>> device-mapper-libs*: Scanning shared objects
+>>> device-mapper-static*: Scanning shared objects
+>>> device-mapper-udev*: Scanning shared objects
+>>> device-mapper*: Scanning shared objects
+>>> lvm2-dev*: Scanning shared objects
+>>> lvm2-dmeventd-openrc*: Scanning shared objects
+>>> lvm2-dmeventd*: Scanning shared objects
+>>> lvm2-doc*: Scanning shared objects
+>>> lvm2-extra*: Scanning shared objects
+>>> lvm2-libs*: Scanning shared objects
+>>> lvm2-lockd-openrc*: Scanning shared objects
+>>> lvm2-lockd*: Scanning shared objects
+>>> lvm2-openrc*: Scanning shared objects
+>>> lvm2-static*: Scanning shared objects
+>>> lvm2*: Scanning shared objects
+>>> device-mapper-event-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libdevmapper.so.1.02
+>>> device-mapper-event-libs*: Package size: 29.8 KB
+>>> device-mapper-event-libs*: Compressing data...
+>>> device-mapper-event-libs*: Create checksum...
+>>> device-mapper-event-libs*: Create device-mapper-event-libs-2.03.32-r0.apk
+>>> device-mapper-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> device-mapper-libs*: Package size: 294.1 KB
+>>> device-mapper-libs*: Compressing data...
+>>> device-mapper-libs*: Create checksum...
+>>> device-mapper-libs*: Create device-mapper-libs-2.03.32-r0.apk
+>>> device-mapper-static*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+>>> device-mapper-static*: Package size: 1.1 MB
+>>> device-mapper-static*: Compressing data...
+>>> device-mapper-static*: Create checksum...
+>>> device-mapper-static*: Create device-mapper-static-2.03.32-r0.apk
+>>> device-mapper-udev*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+	/bin/sh
+>>> device-mapper-udev*: Package size: 16.6 KB
+>>> device-mapper-udev*: Compressing data...
+>>> device-mapper-udev*: Create checksum...
+>>> device-mapper-udev*: Create device-mapper-udev-2.03.32-r0.apk
+>>> device-mapper*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+	so:libc.musl-x86_64.so.1
+	so:libdevmapper.so.1.02
+>>> device-mapper*: Package size: 114.1 KB
+>>> device-mapper*: Compressing data...
+>>> device-mapper*: Create checksum...
+>>> device-mapper*: Create device-mapper-2.03.32-r0.apk
+>>> lvm2-dev*: Tracing dependencies...
+	linux-headers
+	device-mapper-event-libs=2.03.32-r0
+	device-mapper-libs=2.03.32-r0
+	lvm2-libs=2.03.32-r0
+	pkgconfig
+>>> lvm2-dev*: Package size: 141.1 KB
+>>> lvm2-dev*: Compressing data...
+>>> lvm2-dev*: Create checksum...
+>>> lvm2-dev*: Create lvm2-dev-2.03.32-r0.apk
+>>> lvm2-dmeventd-openrc*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+>>> lvm2-dmeventd-openrc*: Package size: 684.0 B
+>>> lvm2-dmeventd-openrc*: Compressing data...
+>>> lvm2-dmeventd-openrc*: Create checksum...
+>>> lvm2-dmeventd-openrc*: Create lvm2-dmeventd-openrc-2.03.32-r0.apk
+>>> lvm2-dmeventd*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+	so:libc.musl-x86_64.so.1
+	so:libdevmapper-event.so.1.02
+	so:libdevmapper.so.1.02
+>>> lvm2-dmeventd*: Package size: 42.1 KB
+>>> lvm2-dmeventd*: Compressing data...
+>>> lvm2-dmeventd*: Create checksum...
+>>> lvm2-dmeventd*: Create lvm2-dmeventd-2.03.32-r0.apk
+>>> lvm2-doc*: Tracing dependencies...
+>>> lvm2-doc*: Package size: 326.3 KB
+>>> lvm2-doc*: Compressing data...
+>>> lvm2-doc*: Create checksum...
+>>> lvm2-doc*: Create lvm2-doc-2.03.32-r0.apk
+>>> lvm2-extra*: Tracing dependencies...
+	bash
+	coreutils
+>>> lvm2-extra*: Package size: 73.3 KB
+>>> lvm2-extra*: Compressing data...
+>>> lvm2-extra*: Create checksum...
+>>> lvm2-extra*: Create lvm2-extra-2.03.32-r0.apk
+>>> lvm2-libs*: Tracing dependencies...
+	so:libaio.so.1
+	so:libblkid.so.1
+	so:libc.musl-x86_64.so.1
+	so:libdevmapper-event.so.1.02
+	so:libdevmapper.so.1.02
+>>> lvm2-libs*: Package size: 2.1 MB
+>>> lvm2-libs*: Compressing data...
+>>> lvm2-libs*: Create checksum...
+>>> lvm2-libs*: Create lvm2-libs-2.03.32-r0.apk
+>>> lvm2-lockd-openrc*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+>>> lvm2-lockd-openrc*: Package size: 196.0 B
+>>> lvm2-lockd-openrc*: Compressing data...
+>>> lvm2-lockd-openrc*: Create checksum...
+>>> lvm2-lockd-openrc*: Create lvm2-lockd-openrc-2.03.32-r0.apk
+>>> lvm2-lockd*: Tracing dependencies...
+	sanlock
+	so:libc.musl-x86_64.so.1
+	so:libsanlock_client.so.1
+>>> lvm2-lockd*: Package size: 510.4 KB
+>>> lvm2-lockd*: Compressing data...
+>>> lvm2-lockd*: Create checksum...
+>>> lvm2-lockd*: Create lvm2-lockd-2.03.32-r0.apk
+>>> lvm2-openrc*: Tracing dependencies...
+>>> lvm2-openrc*: Package size: 1.0 KB
+>>> lvm2-openrc*: Compressing data...
+>>> lvm2-openrc*: Create checksum...
+>>> lvm2-openrc*: Create lvm2-openrc-2.03.32-r0.apk
+>>> lvm2-static*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+>>> lvm2-static*: Package size: 5.9 MB
+>>> lvm2-static*: Compressing data...
+>>> lvm2-static*: Create checksum...
+>>> lvm2-static*: Create lvm2-static-2.03.32-r0.apk
+>>> lvm2*: Tracing dependencies...
+	lvm2-libs=2.03.32-r0
+	so:libaio.so.1
+	so:libblkid.so.1
+	so:libc.musl-x86_64.so.1
+	so:libdevmapper-event.so.1.02
+>>> lvm2*: Package size: 2.2 MB
+>>> lvm2*: Compressing data...
+>>> lvm2*: Create checksum...
+>>> lvm2*: Create lvm2-2.03.32-r0.apk
+>>> lvm2: Updating the main/x86_64 repository index...
+>>> lvm2: Signing the index...
+>>> lvm2: Cleaning up srcdir
+>>> lvm2: Cleaning up build chroot
+>>> lvm2: Cleaning up pkgdir

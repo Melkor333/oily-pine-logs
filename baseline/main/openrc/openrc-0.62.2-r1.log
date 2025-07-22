@@ -1,0 +1,1429 @@
+>>> openrc: Validating /home/packager/oily-pine/main/openrc/APKBUILD...
+>>> WARNING: openrc: openrc.post-upgrade: found chmod
+             Permissions should be fixed in APKBUILD package()
+>>> openrc: Cleaning up srcdir
+>>> openrc: Cleaning up pkgdir
+>>> openrc: Cleaning up tmpdir
+>>> openrc: Fetching openrc-0.62.2.tar.gz::https://github.com/OpenRC/openrc/archive/0.62.2.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  7690    0  7690    0     0  12632      0 --:--:-- --:--:-- --:--:-- 12632100  256k    0  256k    0     0   330k      0 --:--:-- --:--:-- --:--:-- 1497k
+>>> openrc: Fetching openrc-0.62.2.tar.gz::https://github.com/OpenRC/openrc/archive/0.62.2.tar.gz
+>>> openrc: Checking sha512sums...
+openrc-0.62.2.tar.gz: OK
+0001-call-sbin-mkmntdirs-in-localmount-OpenRC-service.patch: OK
+0002-fsck-don-t-add-C0-to-busybox-fsck.patch: OK
+0003-rc-pull-in-sysinit-and-boot-as-stacked-levels-when-n.patch: OK
+0004-make-consolefont-service-compatible-with-busyboxs-se.patch: OK
+0005-Support-early-loading-of-keymap-if-kbd-is-installed.patch: OK
+0006-Add-support-for-starting-services-in-a-specified-VRF.patch: OK
+0007-Clean-up-staticroute-config-remove-irrelevant-parts-.patch: OK
+0008-bootmisc-switch-wipe_tmp-setting-to-no-by-default.patch: OK
+0009-Based-on-the-vrf-patch-it-adds-support-to-run-servic.patch: OK
+0010-init.d-user-add-a-respawn_delay-value.patch: OK
+supervise-daemon-defaults.patch: OK
+sysctl-readme.patch: OK
+openrc.logrotate: OK
+hostname.initd: OK
+hwdrivers.initd: OK
+modules.initd: OK
+modloop.initd: OK
+networking.initd: OK
+modloop.confd: OK
+sysfsconf.initd: OK
+firstboot.initd: OK
+sysctl.initd: OK
+machine-id.initd: OK
+test-networking.sh: OK
+modules.7.scd: OK
+openrc-user.pam: OK
+>>> openrc: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/94) Installing musl (1.2.5-r10)
+(2/94) Installing libcrypto3 (3.5.0-r0)
+(3/94) Installing ca-certificates-bundle (20241121-r2)
+(4/94) Installing libssl3 (3.5.0-r0)
+(5/94) Installing zlib (1.3.1-r2)
+(6/94) Installing libapk2 (2.14.9-r2)
+(7/94) Installing apk-tools (2.14.9-r2)
+(8/94) Installing libcap2 (2.76-r0)
+(9/94) Installing libcap-getcap (2.76-r0)
+(10/94) Installing fakeroot (1.37.1.1-r0)
+(11/94) Installing scanelf (1.3.8-r1)
+(12/94) Installing musl-utils (1.2.5-r10)
+(13/94) Installing libgcc (14.3.0-r1)
+(14/94) Installing libstdc++ (14.3.0-r1)
+(15/94) Installing lzip (1.25-r0)
+(16/94) Installing openssl (3.5.0-r0)
+(17/94) Installing patch (2.8-r0)
+(18/94) Installing pkgconf (2.4.3-r0)
+(19/94) Installing acl-libs (2.3.2-r1)
+(20/94) Installing tar (1.35-r3)
+(21/94) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/94) Installing ssl_client (1.37.0-r18)
+(23/94) Installing busybox-binsh (1.37.0-r18)
+(24/94) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/94) Installing abuild-sudo (3.15.0-r0)
+(26/94) Installing alpine-baselayout-data (3.7.0-r0)
+(27/94) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/94) Installing bridge (1.5-r5)
+(29/94) Installing ifupdown-ng (0.12.1-r7)
+(30/94) Installing openrc-user (0.62.2-r2)
+(31/94) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/94) Installing mdev-conf (4.8-r0)
+(33/94) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/94) Installing alpine-conf (3.20.0-r0)
+(35/94) Installing alpine-keys (2.5-r0)
+(36/94) Installing alpine-release (3.22.0-r0)
+(37/94) Installing busybox-openrc (1.37.0-r18)
+(38/94) Installing busybox-suid (1.37.0-r18)
+(39/94) Installing alpine-base (3.22.0-r0)
+(40/94) Installing bsd-compat-headers (0.7.2-r6)
+(41/94) Installing jansson (2.14.1-r0)
+(42/94) Installing zstd-libs (1.5.7-r0)
+(43/94) Installing binutils (2.44-r0)
+(44/94) Installing libmagic (5.46-r2)
+(45/94) Installing file (5.46-r2)
+(46/94) Installing libgomp (14.3.0-r1)
+(47/94) Installing libatomic (14.3.0-r1)
+(48/94) Installing gmp (6.3.0-r3)
+(49/94) Installing isl26 (0.26-r1)
+(50/94) Installing mpfr4 (4.2.1_p1-r0)
+(51/94) Installing mpc1 (1.3.1-r1)
+(52/94) Installing gcc (14.3.0-r1)
+(53/94) Installing libstdc++-dev (14.3.0-r1)
+(54/94) Installing musl-dev (1.2.5-r10)
+(55/94) Installing g++ (14.3.0-r1)
+(56/94) Installing make (4.4.1-r3)
+(57/94) Installing fortify-headers (1.1-r5)
+(58/94) Installing build-base (0.5-r3)
+(59/94) Installing brotli-libs (1.1.0-r2)
+(60/94) Installing c-ares (1.34.5-r0)
+(61/94) Installing libunistring (1.3-r0)
+(62/94) Installing libidn2 (2.3.7-r0)
+(63/94) Installing nghttp2-libs (1.65.0-r0)
+(64/94) Installing libpsl (0.21.5-r3)
+(65/94) Installing libcurl (8.14.0-r2)
+(66/94) Installing libexpat (2.7.1-r0)
+(67/94) Installing pcre2 (10.43-r1)
+(68/94) Installing git (2.49.0-r0)
+(69/94) Installing git-init-template (2.49.0-r0)
+(70/94) Installing linux-headers (6.14.2-r0)
+(71/94) Installing libcap-dev (2.76-r0)
+(72/94) Installing skalibs-libs (2.14.4.0-r0)
+(73/94) Installing utmps-libs (0.1.3.1-r0)
+(74/94) Installing linux-pam (1.7.0-r4)
+(75/94) Installing linux-pam-dev (1.7.0-r4)
+(76/94) Installing samurai (1.2-r7)
+(77/94) Installing libbz2 (1.0.8-r6)
+(78/94) Installing libffi (3.4.8-r0)
+(79/94) Installing gdbm (1.24-r0)
+(80/94) Installing xz-libs (5.8.1-r0)
+(81/94) Installing mpdecimal (4.0.1-r0)
+(82/94) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(83/94) Installing libncursesw (6.5_p20250503-r0)
+(84/94) Installing libpanelw (6.5_p20250503-r0)
+(85/94) Installing readline (8.2.13-r1)
+(86/94) Installing sqlite-libs (3.50.0-r0)
+(87/94) Installing python3 (3.12.10-r1)
+(88/94) Installing python3-pycache-pyc0 (3.12.10-r1)
+(89/94) Installing pyc (3.12.10-r1)
+(90/94) Installing meson-pyc (1.8.1-r0)
+(91/94) Installing python3-pyc (3.12.10-r1)
+(92/94) Installing meson (1.8.1-r0)
+(93/94) Installing abuild-meson (1.8.1-r0)
+(94/94) Installing scdoc (1.11.3-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 311 MiB in 94 packages
+>>> openrc: Fetching openrc-0.62.2.tar.gz::https://github.com/OpenRC/openrc/archive/0.62.2.tar.gz
+>>> openrc: Checking sha512sums...
+openrc-0.62.2.tar.gz: OK
+0001-call-sbin-mkmntdirs-in-localmount-OpenRC-service.patch: OK
+0002-fsck-don-t-add-C0-to-busybox-fsck.patch: OK
+0003-rc-pull-in-sysinit-and-boot-as-stacked-levels-when-n.patch: OK
+0004-make-consolefont-service-compatible-with-busyboxs-se.patch: OK
+0005-Support-early-loading-of-keymap-if-kbd-is-installed.patch: OK
+0006-Add-support-for-starting-services-in-a-specified-VRF.patch: OK
+0007-Clean-up-staticroute-config-remove-irrelevant-parts-.patch: OK
+0008-bootmisc-switch-wipe_tmp-setting-to-no-by-default.patch: OK
+0009-Based-on-the-vrf-patch-it-adds-support-to-run-servic.patch: OK
+0010-init.d-user-add-a-respawn_delay-value.patch: OK
+supervise-daemon-defaults.patch: OK
+sysctl-readme.patch: OK
+openrc.logrotate: OK
+hostname.initd: OK
+hwdrivers.initd: OK
+modules.initd: OK
+modloop.initd: OK
+networking.initd: OK
+modloop.confd: OK
+sysfsconf.initd: OK
+firstboot.initd: OK
+sysctl.initd: OK
+machine-id.initd: OK
+test-networking.sh: OK
+modules.7.scd: OK
+openrc-user.pam: OK
+>>> openrc: Unpacking /var/cache/distfiles/openrc-0.62.2.tar.gz...
+>>> openrc: 0001-call-sbin-mkmntdirs-in-localmount-OpenRC-service.patch
+patching file init.d/localmount.in
+patching file src/meson.build
+patching file src/mkmntdirs/meson.build
+patching file src/mkmntdirs/mkmntdirs.c
+>>> openrc: 0002-fsck-don-t-add-C0-to-busybox-fsck.patch
+patching file init.d/fsck.in
+>>> openrc: 0003-rc-pull-in-sysinit-and-boot-as-stacked-levels-when-n.patch
+patching file src/openrc/rc.c
+Hunk #1 succeeded at 746 (offset -5 lines).
+Hunk #5 succeeded at 1093 (offset 1 line).
+>>> openrc: 0004-make-consolefont-service-compatible-with-busyboxs-se.patch
+patching file conf.d/consolefont
+patching file init.d/consolefont.in
+>>> openrc: 0005-Support-early-loading-of-keymap-if-kbd-is-installed.patch
+patching file sh/init-early.sh.Linux.in
+Hunk #1 succeeded at 49 with fuzz 2 (offset 1 line).
+>>> openrc: 0006-Add-support-for-starting-services-in-a-specified-VRF.patch
+patching file sh/openrc-run.sh.in
+Hunk #1 succeeded at 262 with fuzz 2 (offset 26 lines).
+patching file sh/runit.sh
+patching file sh/s6.sh
+patching file sh/start-stop-daemon.sh
+Hunk #1 succeeded at 46 (offset 5 lines).
+patching file sh/supervise-daemon.sh
+Hunk #1 succeeded at 29 (offset 5 lines).
+>>> openrc: 0007-Clean-up-staticroute-config-remove-irrelevant-parts-.patch
+patching file conf.d/staticroute
+>>> openrc: 0008-bootmisc-switch-wipe_tmp-setting-to-no-by-default.patch
+patching file conf.d/bootmisc
+patching file init.d/bootmisc.in
+>>> openrc: 0009-Based-on-the-vrf-patch-it-adds-support-to-run-servic.patch
+patching file sh/openrc-run.sh.in
+Hunk #1 succeeded at 268 (offset 26 lines).
+>>> openrc: 0010-init.d-user-add-a-respawn_delay-value.patch
+patching file init.d/user.in
+>>> openrc: supervise-daemon-defaults.patch
+patching file etc/rc.conf
+>>> openrc: sysctl-readme.patch
+patching file sysctl.d/README
+The Meson build system
+Version: 1.8.1
+Source dir: /tmp/src/openrc-0.62.2
+Build dir: /tmp/src/openrc-0.62.2/output
+Build type: native build
+Project name: OpenRC
+Project version: 0.62.2
+C compiler for the host machine: cc (gcc 14.3.0 "cc (Alpine 14.3.0) 14.3.0")
+C linker for the host machine: cc ld.bfd 2.44
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 2.4.3
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency audit found: NO (tried pkgconfig and cmake)
+Run-time dependency libcap found: YES 2.76
+Run-time dependency pam found: YES 1.7.0
+Run-time dependency libselinux found: NO (tried pkgconfig and cmake)
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wcast-qual: YES 
+Compiler for C supports arguments -Wdeclaration-after-statement: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Winline: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Werror=implicit-int: YES 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES 
+Compiler for C supports arguments -Werror=int-conversion: YES 
+Compiler for C supports arguments -Werror=incompatible-function-pointer-types: NO 
+Checking if "malloc attribute with arguments" compiles: YES 
+Checking for function "close_range" : NO 
+Has header "linux/close_range.h" : YES 
+Checking for function "strlcpy" : NO 
+Checking for function "strlcpy" : YES 
+Checking for function "pipe2" : YES 
+Library dl found: YES
+Library util found: YES
+Configuring bootmisc using configuration
+Configuring fsck using configuration
+Configuring hostname using configuration
+Configuring local using configuration
+Configuring localmount using configuration
+Configuring loopback using configuration
+Configuring netmount using configuration
+Configuring osclock using configuration
+Configuring root using configuration
+Configuring savecache using configuration
+Configuring swap using configuration
+Configuring swclock using configuration
+Configuring sysctl using configuration
+Configuring runsvdir using configuration
+Configuring s6-svscan using configuration
+Configuring user using configuration
+Configuring network using configuration
+Configuring staticroute using configuration
+Configuring agetty using configuration
+Configuring binfmt using configuration
+Configuring cgroups using configuration
+Configuring consolefont using configuration
+Configuring devfs using configuration
+Configuring dmesg using configuration
+Configuring hwclock using configuration
+Configuring keymaps using configuration
+Configuring killprocs using configuration
+Configuring modules using configuration
+Configuring mount-ro using configuration
+Configuring mtab using configuration
+Configuring numlock using configuration
+Configuring procfs using configuration
+Configuring net-online using configuration
+Configuring save-keymaps using configuration
+Configuring save-termencoding using configuration
+Configuring seedrng using configuration
+Configuring sysfs using configuration
+Configuring termencoding using configuration
+Configuring functions.sh using configuration
+Configuring gendepends.sh using configuration
+Configuring openrc-run.sh using configuration
+Configuring openrc-user.sh using configuration
+Configuring binfmt.sh using configuration
+Configuring cgroup-release-agent.sh using configuration
+Configuring init-early.sh using configuration
+Configuring init.sh using configuration
+Configuring rc.h using configuration
+Run-time dependency threads found: YES
+Configuring avahi-dnsconfd using configuration
+Configuring avahid using configuration
+Configuring dhcpcd using configuration
+Configuring dbus using configuration
+Configuring hald using configuration
+Configuring named using configuration
+Configuring ntpd using configuration
+Configuring openvpn using configuration
+Configuring polkitd using configuration
+Configuring sshd using configuration
+Configuring wpa_supplicant using configuration
+Program check-obsolete-functions.sh found: YES (/tmp/src/openrc-0.62.2/test/check-obsolete-functions.sh)
+Program check-spacing-style.sh found: YES (/bin/sh /tmp/src/openrc-0.62.2/test/check-spacing-style.sh)
+Program check-trailing-newlines.sh found: YES (/tmp/src/openrc-0.62.2/test/check-trailing-newlines.sh)
+Program check-trailing-whitespace.sh found: YES (/tmp/src/openrc-0.62.2/test/check-trailing-whitespace.sh)
+Program check-xfunc-usage.sh found: YES (/tmp/src/openrc-0.62.2/test/check-xfunc-usage.sh)
+Program check-is-older-than.sh found: YES (/tmp/src/openrc-0.62.2/test/units/check-is-older-than.sh)
+Program check-sh-yesno.sh found: YES (/tmp/src/openrc-0.62.2/test/units/check-sh-yesno.sh)
+Build targets in project: 71
+
+OpenRC 0.62.2
+
+  User defined options
+    auto_features     : auto
+    b_lto             : true
+    b_pie             : true
+    b_staticpic       : true
+    bash-completions  : true
+    bindir            : /bin
+    buildtype         : plain
+    datadir           : /usr/share
+    default_library   : both
+    includedir        : /usr/include
+    infodir           : /usr/share/info
+    libdir            : /usr/lib
+    libexecdir        : /usr/libexec
+    localedir         : /usr/share/locale
+    localstatedir     : /var
+    mandir            : /usr/share/man
+    os                : Linux
+    pam               : false
+    pkgconfig         : true
+    prefix            : /
+    python.bytecompile: 0
+    sbindir           : /sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    werror            : false
+    wrap_mode         : nodownload
+    zsh-completions   : true
+
+Found ninja-1.9 at /usr/bin/ninja
+ninja: entering directory 'output'
+[1/215] Compiling C object src/shell_var/shell_var.p/shell_var.c.o
+[2/215] Compiling C object src/rc-abort/rc-abort.p/rc-abort.c.o
+[3/215] Compiling C object src/openrc-user/openrc-user.p/.._shared_rc_exec.c.o
+[4/215] Compiling C object src/openrc-user/openrc-user.p/openrc-user.c.o
+[5/215] Compiling C object src/mkmntdirs/mkmntdirs.p/mkmntdirs.c.o
+[6/215] Compiling C object src/librc/librc.so.1.p/librc-stringlist.c.o
+[7/215] Compiling C object src/librc/librc.so.1.p/librc-misc.c.o
+[8/215] Compiling C object src/librc/librc.so.1.p/librc-depend.c.o
+[9/215] Compiling C object src/librc/librc.so.1.p/librc-daemon.c.o
+[10/215] Compiling C object src/librc/librc.so.1.p/librc.c.o
+[11/215] Compiling C object src/libeinfo/libeinfo.so.1.p/libeinfo.c.o
+[12/215] Generating src/shared/version with a custom command
+[13/215] Generating src/shared/version.h with a custom command
+[14/215] Linking target src/shell_var/shell_var
+[15/215] Linking target src/mkmntdirs/mkmntdirs
+[16/215] Linking static target src/libeinfo/libeinfo.a
+[17/215] Linking target src/libeinfo/libeinfo.so.1
+[18/215] Compiling C object src/value/save_options.p/.._shared_misc.c.o
+[19/215] Compiling C object src/value/save_options.p/value.c.o
+[20/215] Compiling C object src/value/get_options.p/.._shared_misc.c.o
+[21/215] Compiling C object src/value/get_options.p/value.c.o
+[22/215] Compiling C object src/value/service_set_value.p/.._shared_misc.c.o
+[23/215] Compiling C object src/value/service_set_value.p/value.c.o
+[24/215] Compiling C object src/value/service_get_value.p/.._shared_misc.c.o
+[25/215] Compiling C object src/value/service_get_value.p/value.c.o
+[26/215] Compiling C object src/swclock/swclock.p/.._shared__usage.c.o
+[27/215] Compiling C object src/swclock/swclock.p/.._shared_misc.c.o
+[28/215] Compiling C object src/swclock/swclock.p/swclock.c.o
+[29/215] Compiling C object src/supervise-daemon/supervise-daemon.p/.._shared__usage.c.o
+[30/215] Compiling C object src/supervise-daemon/supervise-daemon.p/.._shared_timeutils.c.o
+[31/215] Linking static target src/librc/librc.a
+[32/215] Linking target src/librc/librc.so.1
+[33/215] Compiling C object src/supervise-daemon/supervise-daemon.p/.._shared_schedules.c.o
+[34/215] Compiling C object src/supervise-daemon/supervise-daemon.p/.._shared_plugin.c.o
+[35/215] Compiling C object src/supervise-daemon/supervise-daemon.p/.._shared_misc.c.o
+[36/215] Compiling C object src/supervise-daemon/supervise-daemon.p/.._shared_rc_exec.c.o
+[37/215] Compiling C object src/supervise-daemon/supervise-daemon.p/supervise-daemon.c.o
+[38/215] Compiling C object src/start-stop-daemon/start-stop-daemon.p/.._shared__usage.c.o
+[39/215] Compiling C object src/start-stop-daemon/start-stop-daemon.p/.._shared_schedules.c.o
+[40/215] Compiling C object src/start-stop-daemon/start-stop-daemon.p/.._shared_misc.c.o
+[41/215] Compiling C object src/start-stop-daemon/start-stop-daemon.p/.._shared_rc_exec.c.o
+[42/215] Compiling C object src/start-stop-daemon/start-stop-daemon.p/start-stop-daemon.c.o
+[43/215] Compiling C object src/seedrng/seedrng.p/.._shared__usage.c.o
+[44/215] Compiling C object src/seedrng/seedrng.p/seedrng.c.o
+[45/215] Compiling C object src/service/service_crashed.p/.._shared_misc.c.o
+[46/215] Compiling C object src/service/service_crashed.p/service.c.o
+[47/215] Compiling C object src/service/service_started_daemon.p/.._shared_misc.c.o
+[48/215] Compiling C object src/service/service_started_daemon.p/service.c.o
+[49/215] Compiling C object src/service/service_hotplugged.p/.._shared_misc.c.o
+[50/215] Compiling C object src/service/service_hotplugged.p/service.c.o
+[51/215] Compiling C object src/service/service_wasinactive.p/.._shared_misc.c.o
+[52/215] Compiling C object src/service/service_wasinactive.p/service.c.o
+[53/215] Compiling C object src/service/service_inactive.p/.._shared_misc.c.o
+[54/215] Compiling C object src/service/service_inactive.p/service.c.o
+[55/215] Compiling C object src/service/service_stopped.p/.._shared_misc.c.o
+[56/215] Compiling C object src/service/service_stopped.p/service.c.o
+[57/215] Compiling C object src/service/service_stopping.p/.._shared_misc.c.o
+[58/215] Compiling C object src/service/service_stopping.p/service.c.o
+[59/215] Compiling C object src/service/service_started.p/.._shared_misc.c.o
+[60/215] Compiling C object src/service/service_started.p/service.c.o
+[61/215] Compiling C object src/service/service_starting.p/.._shared_misc.c.o
+[62/215] Compiling C object src/service/service_starting.p/service.c.o
+[63/215] Compiling C object src/rc-update/rc-update.p/.._shared__usage.c.o
+[64/215] Compiling C object src/rc-update/rc-update.p/.._shared_misc.c.o
+[65/215] Compiling C object src/rc-update/rc-update.p/rc-update.c.o
+[66/215] Compiling C object src/rc-status/rc-status.p/.._shared__usage.c.o
+[67/215] Compiling C object src/rc-status/rc-status.p/.._shared_misc.c.o
+[68/215] Compiling C object src/rc-status/rc-status.p/rc-status.c.o
+[69/215] Compiling C object src/rc-service/rc-service.p/.._shared__usage.c.o
+[70/215] Compiling C object src/rc-service/rc-service.p/.._shared_misc.c.o
+[71/215] Compiling C object src/rc-service/rc-service.p/rc-service.c.o
+[72/215] Compiling C object src/rc-depend/rc-depend.p/.._shared__usage.c.o
+[73/215] Compiling C object src/rc-depend/rc-depend.p/.._shared_misc.c.o
+[74/215] Compiling C object src/rc-depend/rc-depend.p/rc-depend.c.o
+[75/215] Compiling C object src/openrc-shutdown/openrc-shutdown.p/.._shared_wtmp.c.o
+[76/215] Compiling C object src/openrc-shutdown/openrc-shutdown.p/.._shared__usage.c.o
+[77/215] Compiling C object src/openrc-shutdown/openrc-shutdown.p/.._shared_misc.c.o
+[78/215] Compiling C object src/openrc-shutdown/openrc-shutdown.p/sysvinit.c.o
+[79/215] Compiling C object src/openrc-shutdown/openrc-shutdown.p/broadcast.c.o
+[80/215] Generating symbol file src/libeinfo/libeinfo.so.1.p/libeinfo.so.1.symbols
+[81/215] Compiling C object src/openrc-shutdown/openrc-shutdown.p/openrc-shutdown.c.o
+[82/215] Compiling C object src/openrc-run/openrc-run.p/.._shared__usage.c.o
+[83/215] Compiling C object src/openrc-run/openrc-run.p/.._shared_rc_exec.c.o
+[84/215] Compiling C object src/openrc-run/openrc-run.p/.._shared_plugin.c.o
+[85/215] Compiling C object src/openrc-run/openrc-run.p/.._shared_timeutils.c.o
+[86/215] Compiling C object src/openrc-run/openrc-run.p/.._shared_misc.c.o
+[87/215] Compiling C object src/openrc-run/openrc-run.p/openrc-run.c.o
+[88/215] Compiling C object src/openrc-init/openrc-init.p/.._shared_wtmp.c.o
+[89/215] Compiling C object src/openrc-init/openrc-init.p/.._shared_rc_exec.c.o
+[90/215] Compiling C object src/openrc-init/openrc-init.p/openrc-init.c.o
+[91/215] Compiling C object src/openrc/openrc.p/.._shared__usage.c.o
+[92/215] Compiling C object src/openrc/openrc.p/.._shared_rc_exec.c.o
+[93/215] Compiling C object src/openrc/openrc.p/.._shared_plugin.c.o
+[94/215] Compiling C object src/openrc/openrc.p/.._shared_misc.c.o
+[95/215] Compiling C object src/openrc/openrc.p/rc-logger.c.o
+[96/215] Compiling C object src/openrc/openrc.p/rc.c.o
+[97/215] Compiling C object src/mountinfo/mountinfo.p/.._shared__usage.c.o
+[98/215] Compiling C object src/mountinfo/mountinfo.p/.._shared_misc.c.o
+[99/215] Compiling C object src/mountinfo/mountinfo.p/mountinfo.c.o
+[100/215] Compiling C object src/mark_service/mark_service_crashed.p/.._shared_misc.c.o
+[101/215] Compiling C object src/mark_service/mark_service_crashed.p/mark_service.c.o
+[102/215] Compiling C object src/mark_service/mark_service_failed.p/.._shared_misc.c.o
+[103/215] Compiling C object src/mark_service/mark_service_failed.p/mark_service.c.o
+[104/215] Compiling C object src/mark_service/mark_service_hotplugged.p/.._shared_misc.c.o
+[105/215] Compiling C object src/mark_service/mark_service_hotplugged.p/mark_service.c.o
+[106/215] Linking target src/rc-abort/rc-abort
+[107/215] Compiling C object src/mark_service/mark_service_wasinactive.p/.._shared_misc.c.o
+[108/215] Compiling C object src/mark_service/mark_service_wasinactive.p/mark_service.c.o
+[109/215] Compiling C object src/mark_service/mark_service_inactive.p/.._shared_misc.c.o
+[110/215] Compiling C object src/mark_service/mark_service_inactive.p/mark_service.c.o
+[111/215] Compiling C object src/mark_service/mark_service_stopped.p/.._shared_misc.c.o
+[112/215] Compiling C object src/mark_service/mark_service_stopped.p/mark_service.c.o
+[113/215] Compiling C object src/mark_service/mark_service_stopping.p/.._shared_misc.c.o
+[114/215] Compiling C object src/mark_service/mark_service_stopping.p/mark_service.c.o
+[115/215] Compiling C object src/mark_service/mark_service_started.p/.._shared_misc.c.o
+[116/215] Compiling C object src/mark_service/mark_service_started.p/mark_service.c.o
+[117/215] Compiling C object src/mark_service/mark_service_starting.p/.._shared_misc.c.o
+[118/215] Compiling C object src/mark_service/mark_service_starting.p/mark_service.c.o
+[119/215] Compiling C object src/kill_all/kill_all.p/.._shared__usage.c.o
+[120/215] Compiling C object src/kill_all/kill_all.p/.._shared_rc_exec.c.o
+[121/215] Compiling C object src/kill_all/kill_all.p/kill_all.c.o
+[122/215] Compiling C object src/is_older_than/is_older_than.p/.._shared_misc.c.o
+[123/215] Compiling C object src/is_older_than/is_older_than.p/is_older_than.c.o
+[124/215] Compiling C object src/is_newer_than/is_newer_than.p/.._shared_misc.c.o
+[125/215] Compiling C object src/is_newer_than/is_newer_than.p/is_newer_than.c.o
+[126/215] Compiling C object src/fstabinfo/fstabinfo.p/.._shared__usage.c.o
+[127/215] Compiling C object src/fstabinfo/fstabinfo.p/.._shared_misc.c.o
+[128/215] Compiling C object src/fstabinfo/fstabinfo.p/fstabinfo.c.o
+[129/215] Compiling C object src/einfo/veoutdent.p/einfo.c.o
+[130/215] Compiling C object src/einfo/veindent.p/einfo.c.o
+[131/215] Compiling C object src/einfo/vewend.p/einfo.c.o
+[132/215] Compiling C object src/einfo/veend.p/einfo.c.o
+[133/215] Compiling C object src/einfo/vebegin.p/einfo.c.o
+[134/215] Compiling C object src/einfo/vewarn.p/einfo.c.o
+[135/215] Compiling C object src/einfo/veinfo.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[136/215] Compiling C object src/einfo/ewaitfile.p/einfo.c.o
+[137/215] Compiling C object src/einfo/eval_ecolors.p/einfo.c.o
+[138/215] Compiling C object src/einfo/esyslog.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[139/215] Compiling C object src/einfo/eoutdent.p/einfo.c.o
+[140/215] Compiling C object src/einfo/eindent.p/einfo.c.o
+[141/215] Compiling C object src/einfo/ewend.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[142/215] Compiling C object src/einfo/eend.p/einfo.c.o
+[143/215] Compiling C object src/einfo/ebegin.p/einfo.c.o
+[144/215] Compiling C object src/einfo/eerror.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[145/215] Compiling C object src/einfo/eerrorn.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[146/215] Compiling C object src/einfo/ewarn.p/einfo.c.o
+[147/215] Compiling C object src/einfo/ewarnn.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[148/215] Compiling C object src/einfo/einfo.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[149/215] Compiling C object src/einfo/einfon.p/einfo.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[150/215] Compiling C object src/checkpath/checkpath.p/.._shared__usage.c.o
+[151/215] Compiling C object src/checkpath/checkpath.p/.._shared_misc.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[152/215] Compiling C object src/checkpath/checkpath.p/checkpath.c.o
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:[m[K In function '[01m[Kmain[m[K':
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+   98 |                             (level = syslog_decode(p + 1, [01;35m[Kprioritynames[m[K)) == -1)
+      |                                                           [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[01m[K../src/einfo/einfo.c:98:59:[m[K [01;35m[Kwarning: [m[Kinitialization discards '[01m[Kconst[m[K' qualifier from pointer target type [[01;35m[K-Wdiscarded-qualifiers[m[K]
+[153/215] Generating symbol file src/librc/librc.so.1.p/librc.so.1.symbols
+[154/215] Linking target src/value/save_options
+[155/215] Linking target src/value/get_options
+[156/215] Linking target src/value/service_set_value
+[157/215] Linking target src/value/service_get_value
+[158/215] Linking target src/swclock/swclock
+[159/215] Linking target src/supervise-daemon/supervise-daemon
+[160/215] Linking target src/start-stop-daemon/start-stop-daemon
+[161/215] Linking target src/seedrng/seedrng
+[162/215] Linking target src/service/service_crashed
+[163/215] Linking target src/service/service_started_daemon
+[164/215] Linking target src/service/service_hotplugged
+[165/215] Linking target src/service/service_wasinactive
+[166/215] Linking target src/service/service_inactive
+[167/215] Linking target src/service/service_stopped
+[168/215] Linking target src/service/service_stopping
+[169/215] Linking target src/service/service_started
+[170/215] Linking target src/service/service_starting
+[171/215] Linking target src/rc-update/rc-update
+[172/215] Linking target src/rc-status/rc-status
+[173/215] Linking target src/rc-service/rc-service
+[174/215] Linking target src/rc-depend/rc-depend
+[175/215] Linking target src/openrc-user/openrc-user
+[176/215] Linking target src/openrc-shutdown/openrc-shutdown
+[177/215] Linking target src/openrc-run/openrc-run
+[178/215] Linking target src/openrc-init/openrc-init
+[179/215] Linking target src/openrc/openrc
+[180/215] Linking target src/mountinfo/mountinfo
+[181/215] Linking target src/mark_service/mark_service_crashed
+[182/215] Linking target src/mark_service/mark_service_failed
+[183/215] Linking target src/mark_service/mark_service_hotplugged
+[184/215] Linking target src/mark_service/mark_service_wasinactive
+[185/215] Linking target src/mark_service/mark_service_inactive
+[186/215] Linking target src/mark_service/mark_service_stopped
+[187/215] Linking target src/mark_service/mark_service_stopping
+[188/215] Linking target src/mark_service/mark_service_started
+[189/215] Linking target src/mark_service/mark_service_starting
+[190/215] Linking target src/kill_all/kill_all
+[191/215] Linking target src/is_older_than/is_older_than
+[192/215] Linking target src/is_newer_than/is_newer_than
+[193/215] Linking target src/fstabinfo/fstabinfo
+[194/215] Linking target src/einfo/veoutdent
+[195/215] Linking target src/einfo/veindent
+[196/215] Linking target src/einfo/vewend
+[197/215] Linking target src/einfo/veend
+[198/215] Linking target src/einfo/vebegin
+[199/215] Linking target src/einfo/vewarn
+[200/215] Linking target src/einfo/veinfo
+[201/215] Linking target src/einfo/ewaitfile
+[202/215] Linking target src/einfo/eval_ecolors
+[203/215] Linking target src/einfo/esyslog
+[204/215] Linking target src/einfo/eoutdent
+[205/215] Linking target src/einfo/eindent
+[206/215] Linking target src/einfo/ewend
+[207/215] Linking target src/einfo/eend
+[208/215] Linking target src/einfo/ebegin
+[209/215] Linking target src/einfo/eerror
+[210/215] Linking target src/einfo/eerrorn
+[211/215] Linking target src/einfo/ewarn
+[212/215] Linking target src/einfo/ewarnn
+[213/215] Linking target src/einfo/einfo
+[214/215] Linking target src/einfo/einfon
+[215/215] Linking target src/checkpath/checkpath
+The Meson build system
+Version: 1.8.1
+Source dir: /tmp/src/openrc-0.62.2
+Build dir: /tmp/src/openrc-0.62.2/output-pam
+Build type: native build
+Project name: OpenRC
+Project version: 0.62.2
+C compiler for the host machine: cc (gcc 14.3.0 "cc (Alpine 14.3.0) 14.3.0")
+C linker for the host machine: cc ld.bfd 2.44
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Found pkg-config: YES (/usr/bin/pkg-config) 2.4.3
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency audit found: NO (tried pkgconfig and cmake)
+Run-time dependency libcap found: YES 2.76
+Run-time dependency pam found: YES 1.7.0
+Run-time dependency libselinux found: NO (tried pkgconfig and cmake)
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wcast-qual: YES 
+Compiler for C supports arguments -Wdeclaration-after-statement: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Winline: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-noreturn: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnested-externs: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports arguments -Werror=implicit-int: YES 
+Compiler for C supports arguments -Werror=implicit-function-declaration: YES 
+Compiler for C supports arguments -Werror=int-conversion: YES 
+Compiler for C supports arguments -Werror=incompatible-function-pointer-types: NO 
+Checking if "malloc attribute with arguments" compiles: YES 
+Checking for function "close_range" : NO 
+Has header "linux/close_range.h" : YES 
+Checking for function "strlcpy" : NO 
+Checking for function "strlcpy" : YES 
+Checking for function "pipe2" : YES 
+Library dl found: YES
+Library util found: YES
+Configuring bootmisc using configuration
+Configuring fsck using configuration
+Configuring hostname using configuration
+Configuring local using configuration
+Configuring localmount using configuration
+Configuring loopback using configuration
+Configuring netmount using configuration
+Configuring osclock using configuration
+Configuring root using configuration
+Configuring savecache using configuration
+Configuring swap using configuration
+Configuring swclock using configuration
+Configuring sysctl using configuration
+Configuring runsvdir using configuration
+Configuring s6-svscan using configuration
+Configuring user using configuration
+Configuring network using configuration
+Configuring staticroute using configuration
+Configuring agetty using configuration
+Configuring binfmt using configuration
+Configuring cgroups using configuration
+Configuring consolefont using configuration
+Configuring devfs using configuration
+Configuring dmesg using configuration
+Configuring hwclock using configuration
+Configuring keymaps using configuration
+Configuring killprocs using configuration
+Configuring modules using configuration
+Configuring mount-ro using configuration
+Configuring mtab using configuration
+Configuring numlock using configuration
+Configuring procfs using configuration
+Configuring net-online using configuration
+Configuring save-keymaps using configuration
+Configuring save-termencoding using configuration
+Configuring seedrng using configuration
+Configuring sysfs using configuration
+Configuring termencoding using configuration
+Configuring functions.sh using configuration
+Configuring gendepends.sh using configuration
+Configuring openrc-run.sh using configuration
+Configuring openrc-user.sh using configuration
+Configuring binfmt.sh using configuration
+Configuring cgroup-release-agent.sh using configuration
+Configuring init-early.sh using configuration
+Configuring init.sh using configuration
+Configuring rc.h using configuration
+Run-time dependency threads found: YES
+Configuring avahi-dnsconfd using configuration
+Configuring avahid using configuration
+Configuring dhcpcd using configuration
+Configuring dbus using configuration
+Configuring hald using configuration
+Configuring named using configuration
+Configuring ntpd using configuration
+Configuring openvpn using configuration
+Configuring polkitd using configuration
+Configuring sshd using configuration
+Configuring wpa_supplicant using configuration
+Program check-obsolete-functions.sh found: YES (/tmp/src/openrc-0.62.2/test/check-obsolete-functions.sh)
+Program check-spacing-style.sh found: YES (/bin/sh /tmp/src/openrc-0.62.2/test/check-spacing-style.sh)
+Program check-trailing-newlines.sh found: YES (/tmp/src/openrc-0.62.2/test/check-trailing-newlines.sh)
+Program check-trailing-whitespace.sh found: YES (/tmp/src/openrc-0.62.2/test/check-trailing-whitespace.sh)
+Program check-xfunc-usage.sh found: YES (/tmp/src/openrc-0.62.2/test/check-xfunc-usage.sh)
+Program check-is-older-than.sh found: YES (/tmp/src/openrc-0.62.2/test/units/check-is-older-than.sh)
+Program check-sh-yesno.sh found: YES (/tmp/src/openrc-0.62.2/test/units/check-sh-yesno.sh)
+Build targets in project: 72
+
+OpenRC 0.62.2
+
+  User defined options
+    auto_features     : auto
+    b_lto             : true
+    b_pie             : true
+    b_staticpic       : true
+    bash-completions  : true
+    bindir            : /bin
+    buildtype         : plain
+    datadir           : /usr/share
+    default_library   : both
+    includedir        : /usr/include
+    infodir           : /usr/share/info
+    libdir            : /usr/lib
+    libexecdir        : /usr/libexec
+    localedir         : /usr/share/locale
+    localstatedir     : /var
+    mandir            : /usr/share/man
+    os                : Linux
+    pam               : true
+    pkgconfig         : true
+    prefix            : /
+    python.bytecompile: 0
+    sbindir           : /sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    werror            : false
+    wrap_mode         : nodownload
+    zsh-completions   : true
+
+Found ninja-1.9 at /usr/bin/ninja
+ninja: entering directory 'output-pam'
+[1/17] Generating src/shared/version.h with a custom command
+[2/17] Compiling C object src/librc/librc.so.1.p/librc-stringlist.c.o
+[3/17] Compiling C object src/librc/librc.so.1.p/librc-misc.c.o
+[4/17] Compiling C object src/librc/librc.so.1.p/librc-depend.c.o
+[5/17] Compiling C object src/librc/librc.so.1.p/librc-daemon.c.o
+[6/17] Compiling C object src/librc/librc.so.1.p/librc.c.o
+[7/17] Compiling C object src/libeinfo/libeinfo.so.1.p/libeinfo.c.o
+[8/17] Compiling C object src/openrc-user/openrc-user.p/.._shared_rc_exec.c.o
+[9/17] Compiling C object src/openrc-user/openrc-user.p/openrc-user.c.o
+[10/17] Compiling C object src/pam_openrc/pam_openrc.so.p/.._shared_misc.c.o
+[11/17] Compiling C object src/pam_openrc/pam_openrc.so.p/pam_openrc.c.o
+[12/17] Linking target src/libeinfo/libeinfo.so.1
+[13/17] Linking target src/librc/librc.so.1
+[14/17] Generating symbol file src/libeinfo/libeinfo.so.1.p/libeinfo.so.1.symbols
+[15/17] Generating symbol file src/librc/librc.so.1.p/librc.so.1.symbols
+[16/17] Linking target src/pam_openrc/pam_openrc.so
+[17/17] Linking target src/openrc-user/openrc-user
+>>> openrc: Entering fakeroot...
+Installing src/libeinfo/libeinfo.so.1 to /tmp/pkg/openrc/usr/lib
+Installing src/libeinfo/libeinfo.a to /tmp/pkg/openrc/usr/lib
+Installing src/librc/librc.so.1 to /tmp/pkg/openrc/usr/lib
+Installing src/librc/librc.a to /tmp/pkg/openrc/usr/lib
+Installing src/checkpath/checkpath to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/einfon to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/einfo to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/ewarnn to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/ewarn to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/eerrorn to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/eerror to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/ebegin to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/eend to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/ewend to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/eindent to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/eoutdent to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/esyslog to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/eval_ecolors to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/ewaitfile to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/veinfo to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/vewarn to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/vebegin to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/veend to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/vewend to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/veindent to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/einfo/veoutdent to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/fstabinfo/fstabinfo to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/is_newer_than/is_newer_than to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/is_older_than/is_older_than to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/kill_all/kill_all to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/mark_service/mark_service_starting to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_started to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_stopping to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_stopped to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_inactive to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_wasinactive to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_hotplugged to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_failed to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mark_service/mark_service_crashed to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/mkmntdirs/mkmntdirs to /tmp/pkg/openrc/sbin
+Installing src/mountinfo/mountinfo to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/openrc/openrc to /tmp/pkg/openrc/sbin
+Installing src/openrc-init/openrc-init to /tmp/pkg/openrc/sbin
+Installing src/openrc-run/openrc-run to /tmp/pkg/openrc/sbin
+Installing src/openrc-shutdown/openrc-shutdown to /tmp/pkg/openrc/sbin
+Installing src/openrc-user/openrc-user to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/rc-abort/rc-abort to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/rc-depend/rc-depend to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/rc-service/rc-service to /tmp/pkg/openrc/sbin
+Installing src/rc-status/rc-status to /tmp/pkg/openrc/bin
+Installing src/rc-update/rc-update to /tmp/pkg/openrc/sbin
+Installing src/service/service_starting to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_started to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_stopping to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_stopped to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_inactive to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_wasinactive to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_hotplugged to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_started_daemon to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/service/service_crashed to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/seedrng/seedrng to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/shell_var/shell_var to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/start-stop-daemon/start-stop-daemon to /tmp/pkg/openrc/sbin
+Installing src/supervise-daemon/supervise-daemon to /tmp/pkg/openrc/sbin
+Installing src/swclock/swclock to /tmp/pkg/openrc/usr/libexec/rc/sbin
+Installing src/value/service_get_value to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/value/service_set_value to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/value/get_options to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing src/value/save_options to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing /tmp/src/openrc-0.62.2/src/libeinfo/einfo.h to /tmp/pkg/openrc/usr/include
+Installing /tmp/src/openrc-0.62.2/output/src/librc/rc.h to /tmp/pkg/openrc/usr/include
+Installing /tmp/src/openrc-0.62.2/bash-completion/openrc to /tmp/pkg/openrc/usr/share/bash-completion/completions
+Installing /tmp/src/openrc-0.62.2/bash-completion/rc-service to /tmp/pkg/openrc/usr/share/bash-completion/completions
+Installing /tmp/src/openrc-0.62.2/bash-completion/rc-status to /tmp/pkg/openrc/usr/share/bash-completion/completions
+Installing /tmp/src/openrc-0.62.2/bash-completion/rc-update to /tmp/pkg/openrc/usr/share/bash-completion/completions
+Installing /tmp/src/openrc-0.62.2/conf.d/bootmisc to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/fsck to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/hostname to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/localmount to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/netmount to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/swap to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/swclock to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/network to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/staticroute to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/agetty to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/consolefont to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/devfs to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/dmesg to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/hwclock to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/keymaps to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/killprocs to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/modules to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/mtab to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/net-online to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/conf.d/seedrng to /tmp/pkg/openrc/etc/conf.d
+Installing /tmp/src/openrc-0.62.2/etc/rc.conf to /tmp/pkg/openrc/etc
+Installing /tmp/src/openrc-0.62.2/output/init.d/bootmisc to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/fsck to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/hostname to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/local to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/localmount to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/loopback to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/netmount to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/osclock to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/root to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/savecache to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/swap to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/swclock to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/sysctl to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/runsvdir to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/s6-svscan to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/user to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/network to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/staticroute to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/agetty to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/binfmt to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/cgroups to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/consolefont to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/devfs to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/dmesg to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/hwclock to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/keymaps to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/killprocs to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/modules to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/mount-ro to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/mtab to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/numlock to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/procfs to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/net-online to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/save-keymaps to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/save-termencoding to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/seedrng to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/sysfs to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/output/init.d/termencoding to /tmp/pkg/openrc/etc/init.d
+Installing /tmp/src/openrc-0.62.2/local.d/README to /tmp/pkg/openrc/etc/local.d
+Installing /tmp/src/openrc-0.62.2/man/einfo.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_config.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_deptree.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_find_pids.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_plugin_hook.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_runlevel.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_service.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/rc_stringlist.3 to /tmp/pkg/openrc/usr/share/man/man3
+Installing /tmp/src/openrc-0.62.2/man/openrc.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/openrc-run.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/rc-service.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/rc-status.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/rc-update.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/start-stop-daemon.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/supervise-daemon.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/rc-sstat.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/openrc-init.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/man/openrc-shutdown.8 to /tmp/pkg/openrc/usr/share/man/man8
+Installing /tmp/src/openrc-0.62.2/sh/rc-functions.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/sh/rc-mount.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/sh/runit.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/sh/s6.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/sh/start-stop-daemon.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/sh/supervise-daemon.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/sh/rc-cgroup.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/functions.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/gendepends.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/openrc-run.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/openrc-user.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/binfmt.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/cgroup-release-agent.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/init-early.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/output/sh/init.sh to /tmp/pkg/openrc/usr/libexec/rc/sh
+Installing /tmp/src/openrc-0.62.2/src/on_ac_power/on_ac_power to /tmp/pkg/openrc/usr/libexec/rc/bin
+Installing /tmp/src/openrc-0.62.2/src/rc-sstat/rc-sstat to /tmp/pkg/openrc/sbin
+Installing /tmp/src/openrc-0.62.2/support/deptree2dot/deptree2dot to /tmp/pkg/openrc/usr/share/openrc/support/deptree2dot
+Installing /tmp/src/openrc-0.62.2/support/deptree2dot/README.md to /tmp/pkg/openrc/usr/share/openrc/support/deptree2dot
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/avahi-dnsconfd to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/avahid to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/dhcpcd to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/dbus to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/hald to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/named to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/ntpd to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/openvpn to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/polkitd to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/sshd to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/output/support/init.d.examples/wpa_supplicant to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/support/init.d.examples/README.md to /tmp/pkg/openrc/usr/share/openrc/support/init.d.examples
+Installing /tmp/src/openrc-0.62.2/support/openvpn/down.sh to /tmp/pkg/openrc/usr/share/openrc/support/openvpn
+Installing /tmp/src/openrc-0.62.2/support/openvpn/up.sh to /tmp/pkg/openrc/usr/share/openrc/support/openvpn
+Installing /tmp/src/openrc-0.62.2/support/openvpn/README.md to /tmp/pkg/openrc/usr/share/openrc/support/openvpn
+Installing /tmp/src/openrc-0.62.2/support/sysvinit/halt.sh to /tmp/pkg/openrc/usr/share/openrc/support/sysvinit
+Installing /tmp/src/openrc-0.62.2/support/sysvinit/inittab to /tmp/pkg/openrc/usr/share/openrc/support/sysvinit
+Installing /tmp/src/openrc-0.62.2/support/sysvinit/README.md to /tmp/pkg/openrc/usr/share/openrc/support/sysvinit
+Installing /tmp/src/openrc-0.62.2/sysctl.d/README to /tmp/pkg/openrc/etc/sysctl.d
+Installing /tmp/src/openrc-0.62.2/zsh-completion/_openrc to /tmp/pkg/openrc/usr/share/zsh/site-functions
+Installing /tmp/src/openrc-0.62.2/zsh-completion/_rc-service to /tmp/pkg/openrc/usr/share/zsh/site-functions
+Installing /tmp/src/openrc-0.62.2/zsh-completion/_rc-status to /tmp/pkg/openrc/usr/share/zsh/site-functions
+Installing /tmp/src/openrc-0.62.2/zsh-completion/_rc-update to /tmp/pkg/openrc/usr/share/zsh/site-functions
+Installing /tmp/src/openrc-0.62.2/output/meson-private/einfo.pc to /tmp/pkg/openrc/usr/lib/pkgconfig
+Installing /tmp/src/openrc-0.62.2/output/meson-private/openrc.pc to /tmp/pkg/openrc/usr/lib/pkgconfig
+Installing symlink pointing to libeinfo.so.1 to /tmp/pkg/openrc/usr/lib/libeinfo.so
+Installing symlink pointing to librc.so.1 to /tmp/pkg/openrc/usr/lib/librc.so
+Running custom install script '/tmp/src/openrc-0.62.2/man/meson_man_links.sh usr/share/man einfo.3 rc_config.3 rc_deptree.3 rc_find_pids.3 rc_plugin_hook.3 rc_runlevel.3 rc_service.3 rc_stringlist.3 openrc.8 openrc-run.8 rc-service.8 rc-status.8 rc-update.8 start-stop-daemon.8 supervise-daemon.8 rc-sstat.8 openrc-init.8 openrc-shutdown.8'
+Running custom install script '/tmp/src/openrc-0.62.2/tools/meson_runlevels.sh Linux yes /usr/libexec/rc /etc'
+Running custom install script '/tmp/src/openrc-0.62.2/tools/meson_final.sh /usr/libexec/rc Linux'
+>>> openrc-dbg*: Running split function dbg...
+>>> openrc-dbg*: Preparing subpackage openrc-dbg...
+>>> openrc-dbg*: Stripping binaries
+>>> openrc-dbg*: Running postcheck for openrc-dbg
+>>> openrc-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/openrc-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/openrc-doc/usr/share/man'
+'usr/share/openrc/support' -> '/tmp/pkg/openrc-doc/usr/share/openrc/support'
+>>> openrc-doc*: Preparing subpackage openrc-doc...
+>>> openrc-doc*: Running postcheck for openrc-doc
+>>> openrc-tools*: Running split function tools...
+'usr/bin/deptree2dot' -> '/tmp/pkg/openrc-tools/usr/bin/deptree2dot'
+>>> openrc-tools*: Preparing subpackage openrc-tools...
+>>> openrc-tools*: Running postcheck for openrc-tools
+>>> openrc-static*: Running split function static...
+'usr/lib/libeinfo.a' -> '/tmp/pkg/openrc-static/usr/lib/libeinfo.a'
+'usr/lib/librc.a' -> '/tmp/pkg/openrc-static/usr/lib/librc.a'
+>>> openrc-static*: Preparing subpackage openrc-static...
+>>> openrc-static*: Stripping binaries
+>>> openrc-static*: Running postcheck for openrc-static
+>>> openrc-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/openrc-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/openrc-dev/usr/lib/pkgconfig'
+'usr/lib/libeinfo.so' -> '/tmp/pkg/openrc-dev/usr/lib/libeinfo.so'
+'usr/lib/librc.so' -> '/tmp/pkg/openrc-dev/usr/lib/librc.so'
+>>> openrc-dev*: Preparing subpackage openrc-dev...
+>>> openrc-dev*: Stripping binaries
+>>> openrc-dev*: Running postcheck for openrc-dev
+>>> openrc-init*: Running split function openrc_init...
+'sbin/openrc-init' -> '/tmp/pkg/openrc-init/sbin/openrc-init'
+'sbin/openrc-shutdown' -> '/tmp/pkg/openrc-init/sbin/openrc-shutdown'
+>>> openrc-init*: Preparing subpackage openrc-init...
+>>> openrc-init*: Stripping binaries
+>>> openrc-init*: Running postcheck for openrc-init
+>>> WARNING: openrc-init*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> openrc-user*: Running split function _user...
+'usr/libexec/rc/bin/openrc-user' -> '/tmp/pkg/openrc-user/usr/libexec/rc/bin/openrc-user'
+>>> openrc-user*: Preparing subpackage openrc-user...
+>>> openrc-user*: Stripping binaries
+>>> openrc-user*: Running postcheck for openrc-user
+>>> agetty-openrc*: Running split function _agetty_openrc...
+'etc/init.d/agetty' -> '/tmp/pkg/agetty-openrc/etc/init.d/agetty'
+'etc/conf.d/agetty' -> '/tmp/pkg/agetty-openrc/etc/conf.d/agetty'
+>>> agetty-openrc*: Preparing subpackage agetty-openrc...
+>>> agetty-openrc*: Running postcheck for agetty-openrc
+>>> openrc-bash-completion*: Running split function bashcomp...
+'usr/share/bash-completion/completions' -> '/tmp/pkg/openrc-bash-completion/usr/share/bash-completion/completions'
+>>> openrc-bash-completion*: Preparing subpackage openrc-bash-completion...
+>>> openrc-bash-completion*: Running postcheck for openrc-bash-completion
+>>> openrc-zsh-completion*: Running split function zshcomp...
+'usr/share/zsh/site-functions' -> '/tmp/pkg/openrc-zsh-completion/usr/share/zsh/site-functions'
+>>> openrc-zsh-completion*: Preparing subpackage openrc-zsh-completion...
+>>> openrc-zsh-completion*: Running postcheck for openrc-zsh-completion
+>>> openrc-user-pam*: Running split function _user_pam...
+'etc/init.d/user' -> '/tmp/pkg/openrc-user-pam/etc/init.d/user'
+'usr/lib/security/pam_openrc.so' -> '/tmp/pkg/openrc-user-pam/usr/lib/security/pam_openrc.so'
+'usr/libexec/rc/bin/openrc-user-pam' -> '/tmp/pkg/openrc-user-pam/usr/libexec/rc/bin/openrc-user-pam'
+>>> openrc-user-pam*: Preparing subpackage openrc-user-pam...
+>>> openrc-user-pam*: Stripping binaries
+>>> openrc-user-pam*: Running postcheck for openrc-user-pam
+>>> WARNING: openrc-user-pam*: Found OpenRC directory (/etc/conf.d or /etc/init.d) but name doesn't end with -openrc
+>>> openrc*: Running postcheck for openrc
+>>> WARNING: openrc*: Packages must not put anything under /bin, use /usr/bin instead
+>>> WARNING: openrc*: Packages must not put anything under /sbin, use /usr/bin instead
+>>> WARNING: openrc*: Found OpenRC directory (/etc/conf.d or /etc/init.d) but name doesn't end with -openrc
+>>> openrc*: Preparing package openrc...
+>>> openrc*: Stripping binaries
+>>> openrc*: Script found. /bin/sh added as a dependency for openrc-0.62.2-r1.apk
+>>> openrc*: Adding .post-install
+>>> openrc*: Adding .post-upgrade
+>>> agetty-openrc*: Scanning shared objects
+>>> openrc-bash-completion*: Scanning shared objects
+>>> openrc-dbg*: Scanning shared objects
+>>> openrc-dev*: Scanning shared objects
+>>> openrc-doc*: Scanning shared objects
+>>> openrc-init*: Scanning shared objects
+>>> openrc-static*: Scanning shared objects
+>>> openrc-tools*: Scanning shared objects
+>>> openrc-user-pam*: Scanning shared objects
+>>> openrc-user*: Scanning shared objects
+>>> openrc-zsh-completion*: Scanning shared objects
+>>> openrc*: Scanning shared objects
+>>> agetty-openrc*: Tracing dependencies...
+	ifupdown-any
+	openrc-user=0.62.2-r1
+>>> agetty-openrc*: Package size: 1.4 KB
+>>> agetty-openrc*: Compressing data...
+>>> agetty-openrc*: Create checksum...
+>>> agetty-openrc*: Create agetty-openrc-0.62.2-r1.apk
+>>> openrc-bash-completion*: Tracing dependencies...
+>>> openrc-bash-completion*: Package size: 6.1 KB
+>>> openrc-bash-completion*: Compressing data...
+>>> openrc-bash-completion*: Create checksum...
+>>> openrc-bash-completion*: Create openrc-bash-completion-0.62.2-r1.apk
+>>> openrc-dbg*: Tracing dependencies...
+	ifupdown-any
+	openrc-user=0.62.2-r1
+	!openrc-init<0.62.2-r1
+	!openrc-init>0.62.2-r1
+	!openrc-user-pam<0.62.2-r1
+	!openrc-user-pam>0.62.2-r1
+	!openrc-user<0.62.2-r1
+	!openrc-user>0.62.2-r1
+	!openrc<0.62.2-r1
+	!openrc>0.62.2-r1
+>>> openrc-dbg*: Package size: 2.0 MB
+>>> openrc-dbg*: Compressing data...
+>>> openrc-dbg*: Create checksum...
+>>> openrc-dbg*: Create openrc-dbg-0.62.2-r1.apk
+>>> openrc-dev*: Tracing dependencies...
+	openrc=0.62.2-r1
+	pkgconfig
+>>> openrc-dev*: Package size: 26.4 KB
+>>> openrc-dev*: Compressing data...
+>>> openrc-dev*: Create checksum...
+>>> openrc-dev*: Create openrc-dev-0.62.2-r1.apk
+>>> openrc-doc*: Tracing dependencies...
+>>> openrc-doc*: Package size: 123.2 KB
+>>> openrc-doc*: Compressing data...
+>>> openrc-doc*: Create checksum...
+>>> openrc-doc*: Create openrc-doc-0.62.2-r1.apk
+>>> openrc-init*: Tracing dependencies...
+	ifupdown-any
+	openrc-user=0.62.2-r1
+	so:libc.musl-x86_64.so.1
+	so:libeinfo.so.1
+	so:librc.so.1
+>>> openrc-init*: Package size: 43.8 KB
+>>> openrc-init*: Compressing data...
+>>> openrc-init*: Create checksum...
+>>> openrc-init*: Create openrc-init-0.62.2-r1.apk
+>>> openrc-static*: Tracing dependencies...
+>>> openrc-static*: Package size: 407.4 KB
+>>> openrc-static*: Compressing data...
+>>> openrc-static*: Create checksum...
+>>> openrc-static*: Create openrc-static-0.62.2-r1.apk
+>>> openrc-tools*: Tracing dependencies...
+	perl
+>>> openrc-tools*: Package size: 1.2 KB
+>>> openrc-tools*: Compressing data...
+>>> openrc-tools*: Create checksum...
+>>> openrc-tools*: Create openrc-tools-0.62.2-r1.apk
+>>> openrc-user-pam*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libeinfo.so.1
+	so:libpam.so.0
+	so:librc.so.1
+>>> openrc-user-pam*: Package size: 45.2 KB
+>>> openrc-user-pam*: Compressing data...
+>>> openrc-user-pam*: Create checksum...
+>>> openrc-user-pam*: Create openrc-user-pam-0.62.2-r1.apk
+>>> openrc-user*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libeinfo.so.1
+>>> openrc-user*: Package size: 13.9 KB
+>>> openrc-user*: Compressing data...
+>>> openrc-user*: Create checksum...
+>>> openrc-user*: Create openrc-user-0.62.2-r1.apk
+>>> openrc-zsh-completion*: Tracing dependencies...
+>>> openrc-zsh-completion*: Package size: 2.7 KB
+>>> openrc-zsh-completion*: Compressing data...
+>>> openrc-zsh-completion*: Create checksum...
+>>> openrc-zsh-completion*: Create openrc-zsh-completion-0.62.2-r1.apk
+>>> openrc*: Tracing dependencies...
+	ifupdown-any
+	openrc-user=0.62.2-r1
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcap.so.2
+>>> openrc*: Package size: 1.3 MB
+>>> openrc*: Compressing data...
+>>> openrc*: Create checksum...
+>>> openrc*: Create openrc-0.62.2-r1.apk
+>>> openrc: Updating the main/x86_64 repository index...
+>>> openrc: Signing the index...
+>>> openrc: Cleaning up srcdir
+>>> openrc: Cleaning up build chroot
+>>> openrc: Cleaning up pkgdir

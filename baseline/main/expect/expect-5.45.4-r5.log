@@ -1,0 +1,965 @@
+>>> expect: Validating /home/packager/oily-pine/main/expect/APKBUILD...
+>>> expect: Cleaning up srcdir
+>>> expect: Cleaning up pkgdir
+>>> expect: Cleaning up tmpdir
+>>> expect: Fetching https://downloads.sourceforge.net/project/expect/Expect/5.45.4/expect5.45.4.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   371  100   371    0     0   1438      0 --:--:-- --:--:-- --:--:--  1443
+100  617k  100  617k    0     0  1023k      0 --:--:-- --:--:-- --:--:-- 1023k
+>>> expect: Fetching https://downloads.sourceforge.net/project/expect/Expect/5.45.4/expect5.45.4.tar.gz
+>>> expect: Checking sha512sums...
+expect5.45.4.tar.gz: OK
+07-file-handle.patch: OK
+09-unsafe-traps.patch: OK
+10-manpage.patch: OK
+12-fdout.patch: OK
+22-segfault-with-stubs.patch: OK
+24-format.patch: OK
+expect-5.45.4-covscan-fixes.patch: OK
+expect-c99.patch: OK
+expect-configure-c99.patch: OK
+>>> expect: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/80) Installing musl (1.2.5-r10)
+(2/80) Installing libcrypto3 (3.5.0-r0)
+(3/80) Installing ca-certificates-bundle (20241121-r2)
+(4/80) Installing libssl3 (3.5.0-r0)
+(5/80) Installing zlib (1.3.1-r2)
+(6/80) Installing libapk2 (2.14.9-r2)
+(7/80) Installing apk-tools (2.14.9-r2)
+(8/80) Installing libcap2 (2.76-r0)
+(9/80) Installing libcap-getcap (2.76-r0)
+(10/80) Installing fakeroot (1.37.1.1-r0)
+(11/80) Installing scanelf (1.3.8-r1)
+(12/80) Installing musl-utils (1.2.5-r10)
+(13/80) Installing libgcc (14.3.0-r0)
+(14/80) Installing libstdc++ (14.3.0-r0)
+(15/80) Installing lzip (1.25-r0)
+(16/80) Installing openssl (3.5.0-r0)
+(17/80) Installing patch (2.8-r0)
+(18/80) Installing pkgconf (2.4.3-r0)
+(19/80) Installing acl-libs (2.3.2-r1)
+(20/80) Installing tar (1.35-r3)
+(21/80) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/80) Installing ssl_client (1.37.0-r18)
+(23/80) Installing busybox-binsh (1.37.0-r18)
+(24/80) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/80) Installing abuild-sudo (3.15.0-r0)
+(26/80) Installing alpine-baselayout-data (3.7.0-r0)
+(27/80) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/80) Installing bridge (1.5-r5)
+(29/80) Installing ifupdown-ng (0.12.1-r7)
+(30/80) Installing openrc-user (0.62.2-r2)
+(31/80) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/80) Installing mdev-conf (4.8-r0)
+(33/80) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/80) Installing alpine-conf (3.20.0-r0)
+(35/80) Installing alpine-keys (2.5-r0)
+(36/80) Installing alpine-release (3.22.0-r0)
+(37/80) Installing busybox-openrc (1.37.0-r18)
+(38/80) Installing busybox-suid (1.37.0-r18)
+(39/80) Installing alpine-base (3.22.0-r0)
+(40/80) Installing m4 (1.4.20-r0)
+(41/80) Installing libbz2 (1.0.8-r6)
+(42/80) Installing perl (5.40.2-r0)
+(43/80) Installing autoconf (2.72-r1)
+(44/80) Installing automake (1.18-r0)
+(45/80) Installing jansson (2.14.1-r0)
+(46/80) Installing zstd-libs (1.5.7-r0)
+(47/80) Installing binutils (2.44-r0)
+(48/80) Installing libmagic (5.46-r2)
+(49/80) Installing file (5.46-r2)
+(50/80) Installing libgomp (14.3.0-r0)
+(51/80) Installing libatomic (14.3.0-r0)
+(52/80) Installing gmp (6.3.0-r3)
+(53/80) Installing isl26 (0.26-r1)
+(54/80) Installing mpfr4 (4.2.1_p1-r0)
+(55/80) Installing mpc1 (1.3.1-r1)
+(56/80) Installing gcc (14.3.0-r0)
+(57/80) Installing libstdc++-dev (14.3.0-r0)
+(58/80) Installing musl-dev (1.2.5-r10)
+(59/80) Installing g++ (14.3.0-r0)
+(60/80) Installing make (4.4.1-r3)
+(61/80) Installing fortify-headers (1.1-r5)
+(62/80) Installing build-base (0.5-r3)
+(63/80) Installing brotli-libs (1.1.0-r2)
+(64/80) Installing c-ares (1.34.5-r0)
+(65/80) Installing libunistring (1.3-r0)
+(66/80) Installing libidn2 (2.3.7-r0)
+(67/80) Installing nghttp2-libs (1.65.0-r0)
+(68/80) Installing libpsl (0.21.5-r3)
+(69/80) Installing libcurl (8.14.0-r2)
+(70/80) Installing libexpat (2.7.1-r0)
+(71/80) Installing pcre2 (10.43-r1)
+(72/80) Installing git (2.49.0-r0)
+(73/80) Installing git-init-template (2.49.0-r0)
+(74/80) Installing perl-error (0.17030-r0)
+(75/80) Installing perl-git (2.49.0-r0)
+(76/80) Installing git-perl (2.49.0-r0)
+(77/80) Installing tzdata (2025b-r0)
+(78/80) Installing tcl (8.6.16-r0)
+(79/80) Installing zlib-dev (1.3.1-r2)
+(80/80) Installing tcl-dev (8.6.16-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 305 MiB in 80 packages
+>>> expect: Fetching https://downloads.sourceforge.net/project/expect/Expect/5.45.4/expect5.45.4.tar.gz
+>>> expect: Checking sha512sums...
+expect5.45.4.tar.gz: OK
+07-file-handle.patch: OK
+09-unsafe-traps.patch: OK
+10-manpage.patch: OK
+12-fdout.patch: OK
+22-segfault-with-stubs.patch: OK
+24-format.patch: OK
+expect-5.45.4-covscan-fixes.patch: OK
+expect-c99.patch: OK
+expect-configure-c99.patch: OK
+>>> expect: Unpacking /var/cache/distfiles/expect5.45.4.tar.gz...
+>>> expect: 07-file-handle.patch
+patching file exp_clib.c
+patching file exp_command.c
+>>> expect: 09-unsafe-traps.patch
+patching file exp_trap.c
+>>> expect: 10-manpage.patch
+patching file expect.man
+>>> expect: 12-fdout.patch
+patching file exp_command.c
+>>> expect: 22-segfault-with-stubs.patch
+patching file exp_clib.c
+Hunk #1 succeeded at 114 (offset -3 lines).
+Hunk #2 succeeded at 393 (offset -3 lines).
+Hunk #3 succeeded at 403 (offset -3 lines).
+>>> expect: 24-format.patch
+patching file exp_clib.c
+Hunk #1 succeeded at 1480 (offset -3 lines).
+patching file exp_command.c
+>>> expect: expect-5.45.4-covscan-fixes.patch
+patching file exp_chan.c
+patching file exp_clib.c
+Hunk #2 succeeded at 1746 (offset -458 lines).
+Hunk #3 succeeded at 2267 (offset -457 lines).
+Hunk #4 succeeded at 2741 (offset -457 lines).
+Hunk #5 succeeded at 2807 (offset -457 lines).
+patching file exp_log.c
+Hunk #1 succeeded at 174 with fuzz 2.
+patching file exp_main_sub.c
+patching file pty_termios.c
+>>> expect: expect-c99.patch
+patching file exp_chan.c
+>>> expect: expect-configure-c99.patch
+patching file configure.in
+patching file tclconfig/tcl.m4
+>>> expect: Updating ./tclconfig/config.sub
+autoreconf: warning: autoconf input should be named 'configure.ac', not 'configure.in'
+configure.in:8: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:8: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+../tclconfig/tcl.m4:45: TEA_PATH_TCLCONFIG is expanded from...
+configure.in:8: the top level
+configure.in:11: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:11: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+../tclconfig/tcl.m4:3121: TEA_SETUP_COMPILER is expanded from...
+configure.in:11: the top level
+configure.in:11: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:11: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+../tclconfig/tcl.m4:2159: TEA_MISSING_POSIX_HEADERS is expanded from...
+../tclconfig/tcl.m4:3121: TEA_SETUP_COMPILER is expanded from...
+configure.in:11: the top level
+configure.in:11: warning: The macro 'AC_HAVE_HEADERS' is obsolete.
+configure.in:11: You should run autoupdate.
+./lib/autoconf/oldnames.m4:35: AC_HAVE_HEADERS is expanded from...
+../tclconfig/tcl.m4:2159: TEA_MISSING_POSIX_HEADERS is expanded from...
+../tclconfig/tcl.m4:3121: TEA_SETUP_COMPILER is expanded from...
+configure.in:11: the top level
+configure.in:14: warning: AC_OUTPUT should be used without arguments.
+configure.in:14: You should run autoupdate.
+configure.in:14: warning: AC_C_BIGENDIAN should be used with AC_CONFIG_HEADERS
+configure.in:21: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:21: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+tclconfig/tcl.m4:45: TEA_PATH_TCLCONFIG is expanded from...
+configure.in:21: the top level
+configure.in:46: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:46: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+tclconfig/tcl.m4:3121: TEA_SETUP_COMPILER is expanded from...
+configure.in:46: the top level
+configure.in:46: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:46: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+tclconfig/tcl.m4:2159: TEA_MISSING_POSIX_HEADERS is expanded from...
+tclconfig/tcl.m4:3121: TEA_SETUP_COMPILER is expanded from...
+configure.in:46: the top level
+configure.in:46: warning: The macro 'AC_HAVE_HEADERS' is obsolete.
+configure.in:46: You should run autoupdate.
+./lib/autoconf/oldnames.m4:35: AC_HAVE_HEADERS is expanded from...
+tclconfig/tcl.m4:2159: TEA_MISSING_POSIX_HEADERS is expanded from...
+tclconfig/tcl.m4:3121: TEA_SETUP_COMPILER is expanded from...
+configure.in:46: the top level
+configure.in:80: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:80: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+tclconfig/tcl.m4:738: TEA_ENABLE_THREADS is expanded from...
+configure.in:80: the top level
+configure.in:87: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:87: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+tclconfig/tcl.m4:680: TEA_ENABLE_SHARED is expanded from...
+configure.in:87: the top level
+configure.in:95: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+tclconfig/tcl.m4:2581: TEA_TCL_EARLY_FLAG is expanded from...
+tclconfig/tcl.m4:2594: TEA_TCL_EARLY_FLAGS is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+tclconfig/tcl.m4:2629: TEA_TCL_64BIT_FLAGS is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:95: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:95: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+tclconfig/tcl.m4:2629: TEA_TCL_64BIT_FLAGS is expanded from...
+tclconfig/tcl.m4:1051: TEA_CONFIG_CFLAGS is expanded from...
+configure.in:95: the top level
+configure.in:101: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.in:101: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+tclconfig/tcl.m4:867: TEA_ENABLE_SYMBOLS is expanded from...
+configure.in:101: the top level
+configure.in:141: warning: The macro 'AC_HAVE_HEADERS' is obsolete.
+configure.in:141: You should run autoupdate.
+./lib/autoconf/oldnames.m4:35: AC_HAVE_HEADERS is expanded from...
+configure.in:141: the top level
+configure.in:150: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.in:150: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.in:150: the top level
+configure.in:156: warning: The macro 'AC_HEADER_TIME' is obsolete.
+configure.in:156: You should run autoupdate.
+./lib/autoconf/headers.m4:702: AC_HEADER_TIME is expanded from...
+tclconfig/tcl.m4:2374: TEA_TIME_HANDLER is expanded from...
+configure.in:156: the top level
+configure.in:156: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.in:156: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+tclconfig/tcl.m4:2374: TEA_TIME_HANDLER is expanded from...
+configure.in:156: the top level
+configure.in:168: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:168: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+configure.in:168: the top level
+configure.in:254: warning: The macro 'AC_CANONICAL_SYSTEM' is obsolete.
+configure.in:254: You should run autoupdate.
+./lib/autoconf/general.m4:2081: AC_CANONICAL_SYSTEM is expanded from...
+configure.in:254: the top level
+configure.in:455: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.in:455: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+configure.in:455: the top level
+configure.in:474: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:474: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:474: the top level
+configure.in:494: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:494: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:494: the top level
+configure.in:536: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.in:536: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.in:536: the top level
+configure.in:540: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:540: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:540: the top level
+configure.in:654: warning: The macro 'AC_HEADER_EGREP' is obsolete.
+configure.in:654: You should run autoupdate.
+./lib/autoconf/oldnames.m4:37: AC_HEADER_EGREP is expanded from...
+configure.in:654: the top level
+configure.in:727: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:727: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:727: the top level
+configure.in:753: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:753: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:753: the top level
+configure.in:771: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:771: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:771: the top level
+configure.in:794: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:794: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:794: the top level
+configure.in:817: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:817: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:817: the top level
+configure.in:842: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:842: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:842: the top level
+configure.in:886: warning: The macro 'AC_HAVE_FUNCS' is obsolete.
+configure.in:886: You should run autoupdate.
+./lib/autoconf/functions.m4:230: AC_HAVE_FUNCS is expanded from...
+configure.in:886: the top level
+configure.in:887: warning: The macro 'AC_HAVE_FUNCS' is obsolete.
+configure.in:887: You should run autoupdate.
+./lib/autoconf/functions.m4:230: AC_HAVE_FUNCS is expanded from...
+configure.in:887: the top level
+configure.in:896: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.in:896: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+configure.in:896: the top level
+configure.in:1078: warning: AC_OUTPUT should be used without arguments.
+configure.in:1078: You should run autoupdate.
+configure.in:1078: warning: AC_C_BIGENDIAN should be used with AC_CONFIG_HEADERS
+checking for correct TEA configuration... ok (TEA 3.9)
+configure: configuring expect 5.45.4
+checking for Tcl configuration... found /usr/lib/tclConfig.sh
+checking for existence of /usr/lib/tclConfig.sh... loading
+configure: --exec-prefix defaulting to TCL_EXEC_PREFIX /usr
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking how to run the C preprocessor... cc -E
+checking whether make sets $(MAKE)... yes
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/time.h... yes
+checking for egrep -e... /bin/grep -E
+checking if the compiler understands -pipe... yes
+checking whether byte ordering is bigendian... no
+checking for sin... yes
+checking for main in -lieee... no
+checking for main in -linet... no
+checking for net/errno.h... no
+checking for connect... yes
+checking for gethostbyname... yes
+checking dirent.h... yes
+checking for errno.h... yes
+checking for float.h... yes
+checking for values.h... yes
+checking for limits.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/wait.h... yes
+checking for dlfcn.h... yes
+checking for sys/param.h... yes
+checking for Tcl public headers... /usr/include
+checking for Tcl private include files... private headers found with public headers
+checking for pthread_mutex_init in -lpthread... yes
+checking for building with threads... yes (default)
+checking how to build libraries... shared
+checking if 64bit support is requested... no
+checking if 64bit Sparc VIS support is requested... no
+checking if compiler supports visibility "hidden"... yes
+checking if rpath support is requested... no
+checking system version... Linux-6.12.30-0-lts
+checking for ar... ar
+checking for required early compiler flags...  _LARGEFILE64_SOURCE
+checking for 64-bit integer type... using long
+checking for build with symbols... no
+checking for sys/select.h... yes
+checking for sys/sysmacros.h... yes
+checking for varargs.h... no
+checking for sys/stropts.h... yes
+checking for sys/sysconfig.h... no
+checking for sys/fcntl.h... yes
+checking for sys/ptem.h... no
+checking for sys/strredir.h... no
+checking for sys/strpty.h... no
+checking for sys/bsdtypes.h... no
+checking return type of signal handlers... void
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for cc options needed to detect all undeclared functions... none needed
+checking for sys/time.h... (cached) yes
+checking for struct tm.tm_zone... yes
+checking for gmtime_r... yes
+checking for localtime_r... yes
+checking tm_tzadj in struct tm... no
+checking tm_gmtoff in struct tm... yes
+checking long timezone variable... yes
+checking union wait... no
+checking for gethostname... yes
+checking for socket... yes
+checking for select... yes
+checking for getpseudotty... no
+checking for getpseudotty in -lseq... no
+checking for openpty... yes
+checking if running Sequent running SVR4... no
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for pid_t... yes
+checking if running Mach... no
+checking if running MachTen... no
+checking if on Pyramid... no
+checking if on Apollo... no
+checking if on Interactive... no
+checking stty to use... /bin/stty
+checking if stty reads stdout... no
+checking if running Solaris... no
+checking for memmove... yes
+checking for sysconf... yes
+checking for strftime... yes
+checking for strchr... yes
+checking for timezone... yes
+checking for siglongjmp... yes
+checking for memcpy... yes
+checking if WNOHANG requires _POSIX_SOURCE... no
+checking if any value exists for WNOHANG... yes
+checking mask type of select... none
+checking return type of signal handlers... (cached) void
+checking if signals need to be re-armed... no
+checking if on Convex... no
+checking if on HP... no
+checking sane default stty arguments... 
+checking for HP style pty allocation... no
+checking for HP style pty trapping... no
+checking for AIX new-style pty allocation... no
+checking for SGI old-style pty allocation... no
+checking for SCO style pty allocation... no
+checking for SVR4 style pty allocation... yes
+checking for libpts="-lpt" in -lpt... no
+checking for ptsname... yes
+checking for OSF/1 style pty allocation... no
+checking for tcgetattr... yes
+checking for tcsetattr... yes
+checking for struct sgttyb... no
+checking for struct termio... no
+checking for struct termios... yes
+checking if TCGETS or TCGETA in termios.h... no
+checking if TIOCGWINSZ in termios.h... no
+checking for Cray-style ptys... no
+checking for select... yes
+checking for poll... yes
+checking event handling... via select
+checking for _getpty... no
+checking for getpty... no
+checking whether setpgrp requires zero arguments... yes
+checking for SV-style timezone... yes
+checking for long file names... yes
+checking for tclsh... /usr/bin/tclsh8.6
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: WARNING:  'Makefile.in' seems to ignore the --datarootdir setting
+config.status: executing default commands
+chmod: ./install-sh: No such file or directory
+=== configuring in testsuite (/tmp/src/expect5.45.4/testsuite)
+configure: running /bin/sh ./configure --disable-option-checking '--prefix=/usr'  '--build=x86_64-alpine-linux-musl' '--host=x86_64-alpine-linux-musl' '--sysconfdir=/etc' '--localstatedir=/var' '--mandir=/usr/share/man' '--with-tcl=/usr/lib' '--with-tclinclude=/usr/include' '--disable-rpath' 'build_alias=x86_64-alpine-linux-musl' 'host_alias=x86_64-alpine-linux-musl' 'CC=cc' 'CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt' 'LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs' --cache-file=/dev/null --srcdir=.
+checking for correct TEA configuration... ok (TEA 3.9)
+configure: configuring exp_test 0.43
+checking for Tcl configuration... found /usr/lib/tclConfig.sh
+checking for existence of /usr/lib/tclConfig.sh... loading
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking how to run the C preprocessor... cc -E
+checking whether make sets $(MAKE)... yes
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for egrep -e... /bin/grep -E
+checking if the compiler understands -pipe... yes
+checking whether byte ordering is bigendian... no
+checking for sin... yes
+checking for main in -lieee... no
+checking for main in -linet... no
+checking for net/errno.h... no
+checking for connect... yes
+checking for gethostbyname... yes
+checking dirent.h... yes
+checking for errno.h... yes
+checking for float.h... yes
+checking for values.h... yes
+checking for limits.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/wait.h... yes
+checking for dlfcn.h... yes
+checking for sys/param.h... yes
+configure: creating ./config.status
+config.status: creating Makefile
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_command.c` -o exp_command.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo expect.c` -o expect.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_inter.c` -o exp_inter.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_regexp.c` -o exp_regexp.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_tty.c` -o exp_tty.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_log.c` -o exp_log.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_main_sub.c` -o exp_main_sub.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_pty.c` -o exp_pty.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_trap.c` -o exp_trap.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_strf.c` -o exp_strf.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_console.c` -o exp_console.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_glob.c` -o exp_glob.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_win.c` -o exp_win.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_clib.c` -o exp_clib.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_closetcl.c` -o exp_closetcl.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_memmove.c` -o exp_memmove.o
+In file included from exp_pty.c:16:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+In file included from exp_console.c:31:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+In file included from exp_tty.c:9:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+In file included from exp_command.c:27:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_tty_comm.c` -o exp_tty_comm.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_chan.c` -o exp_chan.o
+exp_pty.c:138:21: warning: 'oldHupHandler' defined but not used [-Wunused-variable]
+  138 | static RETSIGTYPE (*oldHupHandler)();
+      |                     ^~~~~~~~~~~~~
+exp_win.c: In function 'exp_window_size_set':
+exp_win.c:90:1: warning: control reaches end of non-void function [-Wreturn-type]
+   90 | }
+      | ^
+exp_win.c: In function 'exp_window_size_get':
+exp_win.c:105:1: warning: control reaches end of non-void function [-Wreturn-type]
+  105 | }
+      | ^
+In file included from exp_clib.c:49:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+exp_win.c: In function 'exp_win2_size_set':
+exp_win.c:154:1: warning: control reaches end of non-void function [-Wreturn-type]
+  154 | }
+      | ^
+exp_win.c: In function 'exp_win2_size_get':
+exp_win.c:165:1: warning: control reaches end of non-void function [-Wreturn-type]
+  165 | }
+      | ^
+exp_tty.c: In function 'exec_stty':
+exp_tty.c:323:13: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+  323 |         int rc;
+      |             ^~
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo Dbg.c` -o Dbg.o
+exp_clib.c: In function 'exp_spawnv':
+exp_clib.c:1849:13: warning: unused variable 'ttyfd' [-Wunused-variable]
+ 1849 |         int ttyfd;
+      |             ^~~~~
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo pty_termios.c` -o pty_termios.o
+exp_clib.c: In function 'exp_disconnect':
+exp_clib.c:2873:13: warning: unused variable 'ttyfd' [-Wunused-variable]
+ 2873 |         int ttyfd;
+      |             ^~~~~
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_select.c` -o exp_select.o
+exp_log.c: In function 'expPrintf':
+exp_log.c:307:9: warning: variable 'fmt' set but not used [-Wunused-but-set-variable]
+  307 |   char *fmt;
+      |         ^~~
+exp_clib.c: At top level:
+exp_clib.c:1825:1: warning: 'exp_setpgrp' defined but not used [-Wunused-function]
+ 1825 | exp_setpgrp()
+      | ^~~~~~~~~~~
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_event.c` -o exp_event.o
+cc -DPACKAGE_NAME=\"expect\" -DPACKAGE_TARNAME=\"expect\" -DPACKAGE_VERSION=\"5.45.4\" -DPACKAGE_STRING=\"expect\ 5.45.4\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_expect=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DHAVE_SYS_TIME_H=1 -DSTDC_HEADERS=1 -DHAVE_LIMITS_H=1 -DHAVE_SYS_PARAM_H=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -D_LARGEFILE64_SOURCE=1 -DTCL_WIDE_INT_IS_LONG=1 -DUSE_TCL_STUBS=1 -DUSE_TCL_STUBS=1 -DHAVE_SYS_SELECT_H=1 -DHAVE_SYSMACROS_H=1 -DHAVE_STROPTS_H=1 -DHAVE_SYS_FCNTL_H=1 -DRETSIGTYPE=void -DHAVE_SYS_TIME_H=1 -DTIME_WITH_SYS_TIME=1 -DHAVE_STRUCT_TM_TM_ZONE=1 -DHAVE_TM_ZONE=1 -DHAVE_GMTIME_R=1 -DHAVE_LOCALTIME_R=1 -DHAVE_TM_GMTOFF=1 -DHAVE_TIMEZONE_VAR=1 -DNO_UNION_WAIT=1 -DHAVE_OPENPTY=1 -DHAVE_MEMMOVE=1 -DHAVE_SYSCONF=1 -DHAVE_STRFTIME=1 -DHAVE_STRCHR=1 -DHAVE_TIMEZONE=1 -DHAVE_SIGLONGJMP=1 -DHAVE_MEMCPY=1 -DWNOHANG_BACKUP_VALUE=1 -DSELECT_MASK_TYPE=fd_set -DRETSIGTYPE=void -DHAVE_PTMX=1 -DHAVE_TCSETATTR=1 -DPOSIX=1 -DHAVE_TERMIOS=1 -DSETPGRP_VOID=1 -DHAVE_SV_TIMEZONE=1 -DHAVE_LONG_FILE_NAMES=1 -DTCL_DEBUGGER -DUSE_NON_CONST -DSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DEXECSCRIPTDIR=\"/usr/lib/expect5.45.4\" -DSTTY_BIN=\"/bin/stty\" -DDFLT_STTY="\"sane\"" -I. -I"." -I"/usr/include"    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -c `echo exp_main_exp.c` -o exp_main_exp.o
+Dbg.c: In function 'debugger_trap':
+Dbg.c:632:9: warning: enumeration value 'none' not handled in switch [-Wswitch]
+  632 |         switch (debug_cmd) {
+      |         ^~~~~~
+Dbg.c:632:9: warning: enumeration value 'up' not handled in switch [-Wswitch]
+Dbg.c:632:9: warning: enumeration value 'down' not handled in switch [-Wswitch]
+Dbg.c:632:9: warning: enumeration value 'where' not handled in switch [-Wswitch]
+In file included from pty_termios.c:87:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+Dbg.c:698:9: warning: enumeration value 'none' not handled in switch [-Wswitch]
+  698 |         switch (debug_cmd) {
+      |         ^~~~~~
+Dbg.c:698:9: warning: enumeration value 'up' not handled in switch [-Wswitch]
+Dbg.c:698:9: warning: enumeration value 'down' not handled in switch [-Wswitch]
+(echo 'if {![package vsatisfies [package provide Tcl] 8.6]} {return}' ; \
+ echo 'package ifneeded Expect 5.45.4 \
+    [list load [file join $dir libexpect5.45.4.so]]'\
+) > pkgIndex.tcl
+exp_command.c: In function 'Exp_SpawnObjCmd':
+exp_command.c:998:30: warning: format '%ld' expects argument of type 'long int', but argument 3 has type 'int' [-Wformat=]
+  998 |             sprintf(value,"%ld",esPtr->fd_slave);
+      |                            ~~^  ~~~~~~~~~~~~~~~
+      |                              |       |
+      |                              |       int
+      |                              long int
+      |                            %d
+expect.c: In function 'exp_eval_with_one_arg':
+expect.c:287:9: warning: variable 'rc' set but not used [-Wunused-but-set-variable]
+  287 |     int rc;
+      |         ^~
+exp_inter.c:710:13: warning: 'interpreter_cmd' defined but not used [-Wunused-variable]
+  710 | static char interpreter_cmd[] = "interpreter";
+      |             ^~~~~~~~~~~~~~~
+exp_command.c:595:9: warning: unused variable 'ttyfd' [-Wunused-variable]
+  595 |     int ttyfd;
+      |         ^~~~~
+exp_inter.c:709:13: warning: 'return_cmd' defined but not used [-Wunused-variable]
+  709 | static char return_cmd[] = "return";
+      |             ^~~~~~~~~~
+expect.c: In function 'expIRead':
+expect.c:1765:9: warning: variable 'size' set but not used [-Wunused-but-set-variable]
+ 1765 |     int size;
+      |         ^~~~
+exp_chan.c: In function 'ExpGetHandleProc':
+exp_chan.c:442:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  442 |         *handlePtr = (ClientData) esPtr->fdin;
+      |                      ^
+exp_chan.c:445:22: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+  445 |         *handlePtr = (ClientData) esPtr->fdin;
+      |                      ^
+exp_event.c: In function 'exp_unblock_background_channelhandler':
+exp_event.c:116:5: warning: enumeration value 'armed' not handled in switch [-Wswitch]
+  116 |     switch (esPtr->bg_status) {
+      |     ^~~~~~
+exp_event.c:116:5: warning: enumeration value 'unarmed' not handled in switch [-Wswitch]
+exp_command.c: In function 'Exp_DisconnectObjCmd':
+pty_termios.c: In function 'exp_getptymaster':
+exp_command.c:3129:9: warning: unused variable 'ttyfd' [-Wunused-variable]
+ 3129 |     int ttyfd;
+      |         ^~~~~
+pty_termios.c:381:13: warning: unused variable 'num' [-Wunused-variable]
+  381 |         int num;
+      |             ^~~
+pty_termios.c:378:21: warning: unused variable 'stat_buf' [-Wunused-variable]
+  378 |         struct stat stat_buf;
+      |                     ^~~~~~~~
+pty_termios.c:377:21: warning: unused variable 'bank' [-Wunused-variable]
+  377 |         char *hex, *bank;
+      |                     ^~~~
+pty_termios.c:377:15: warning: unused variable 'hex' [-Wunused-variable]
+  377 |         char *hex, *bank;
+      |               ^~~
+pty_termios.c: In function 'exp_getptyslave':
+pty_termios.c:641:14: warning: unused variable 'buf' [-Wunused-variable]
+  641 |         char buf[10240];
+      |              ^~~
+pty_termios.c:640:20: warning: unused variable 'slave2' [-Wunused-variable]
+  640 |         int slave, slave2;
+      |                    ^~~~~~
+expect.c: In function 'Exp_ExpectObjCmd':
+expect.c:2547:12: warning: variable 'start_time' set but not used [-Wunused-but-set-variable]
+ 2547 |     time_t start_time = 0;      /* time when restart label hit */
+      |            ^~~~~~~~~~
+exp_log.c: In function 'expWriteBytesAndLogIfTtyU':
+exp_log.c:101:12: warning: 'wc' may be used uninitialized [-Wmaybe-uninitialized]
+  101 |     return wc;
+      |            ^~
+exp_log.c:88:9: note: 'wc' was declared here
+   88 |     int wc;
+      |         ^~
+exp_command.c: At top level:
+exp_command.c:545:1: warning: 'expSetpgrp' defined but not used [-Wunused-function]
+  545 | expSetpgrp()
+      | ^~~~~~~~~~
+In function 'TclGetFrame2',
+    inlined from 'debugger_trap' at Dbg.c:682:13:
+Dbg.c:292:24: warning: 'framePtr' may be used uninitialized [-Wmaybe-uninitialized]
+  292 |         for (;framePtr != NULL; framePtr = framePtr->callerVarPtr) {
+      |                        ^
+Dbg.c: In function 'debugger_trap':
+Dbg.c:242:16: note: 'framePtr' was declared here
+  242 |     CallFrame *framePtr;        /* frame currently being searched */
+      |                ^~~~~~~~
+exp_inter.c: In function 'Exp_InteractObjCmd':
+exp_inter.c:1412:38: warning: 'previous_time' may be used uninitialized [-Wmaybe-uninitialized]
+ 1412 |             time_diff = current_time - previous_time;
+      |                         ~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+exp_inter.c:1347:16: note: 'previous_time' was declared here
+ 1347 |         time_t previous_time;
+      |                ^~~~~~~~~~~~~
+exp_inter.c:1404:34: warning: 'soonest_input' may be used uninitialized [-Wmaybe-uninitialized]
+ 1404 |                 u = soonest_input->i_list->state_list->esPtr;
+      |                     ~~~~~~~~~~~~~^~~~~~~~
+exp_inter.c:1355:23: note: 'soonest_input' was declared here
+ 1355 |         struct input *soonest_input;
+      |                       ^~~~~~~~~~~~~
+In function 'intEcho',
+    inlined from 'Exp_InteractObjCmd' at exp_inter.c:1487:6:
+exp_inter.c:420:12: warning: 'echoBytes' may be used uninitialized [-Wmaybe-uninitialized]
+  420 |     (void) expWriteCharsUni(esPtr,
+      |            ^~~~~~~~~~~~~~~~~~~~~~~
+  421 |                             esPtr->input.buffer + offsetBytes,
+      |                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  422 |                    echoBytes);
+      |                    ~~~~~~~~~~
+exp_inter.c: In function 'Exp_InteractObjCmd':
+exp_inter.c:407:9: note: 'echoBytes' was declared here
+  407 |     int echoBytes;
+      |         ^~~~~~~~~
+In function 'intEcho',
+    inlined from 'Exp_InteractObjCmd' at exp_inter.c:1487:6:
+exp_inter.c:421:49: warning: 'offsetBytes' may be used uninitialized [-Wmaybe-uninitialized]
+  421 |                             esPtr->input.buffer + offsetBytes,
+      |                                                 ^
+exp_inter.c: In function 'Exp_InteractObjCmd':
+exp_inter.c:408:9: note: 'offsetBytes' was declared here
+  408 |     int offsetBytes;
+      |         ^~~~~~~~~~~
+expect.c: In function 'process_di.constprop':
+expect.c:2955:12: warning: 'esPtr' may be used uninitialized [-Wmaybe-uninitialized]
+ 2955 |     *esOut = esPtr;
+      |     ~~~~~~~^~~~~~~
+expect.c:2902:15: note: 'esPtr' was declared here
+ 2902 |     ExpState *esPtr;
+      |               ^~~~~
+exp_clib.c: In function 'expectv':
+exp_clib.c:2702:16: warning: 'return_val' may be used uninitialized [-Wmaybe-uninitialized]
+ 2702 |         return return_val;
+      |                ^~~~~~~~~~
+exp_clib.c:2459:13: note: 'return_val' was declared here
+ 2459 |         int return_val;
+      |             ^~~~~~~~~~
+exp_command.c: In function 'Exp_SpawnObjCmd':
+exp_command.c:925:44: warning: 'rfd' may be used uninitialized [-Wmaybe-uninitialized]
+  925 |         if (-1 == (write_master = master = dup(master))) {
+      |                                            ^~~~~~~~~~~
+exp_command.c:896:19: note: 'rfd' was declared here
+  896 |         int mode, rfd, wfd;
+      |                   ^~~
+exp_command.c:931:60: warning: 'wfd' may be used uninitialized [-Wmaybe-uninitialized]
+  931 |         if ((mode & TCL_READABLE) && (mode & TCL_WRITABLE) && (wfd != rfd)) {
+      |             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~
+exp_command.c:896:24: note: 'wfd' was declared here
+  896 |         int mode, rfd, wfd;
+      |                        ^~~
+exp_command.c: In function 'Exp_SendObjCmd':
+exp_command.c:2072:15: warning: 'string' may be used uninitialized [-Wmaybe-uninitialized]
+ 2072 |         len = strlen(string);
+      |               ^~~~~~~~~~~~~~
+exp_command.c:1988:11: note: 'string' was declared here
+ 1988 |     char *string;               /* string to send */
+      |           ^~~~~~
+rm -f libexpect5.45.4.so
+cc -shared -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--export-dynamic  -o libexpect5.45.4.so exp_command.o expect.o exp_inter.o exp_regexp.o exp_tty.o exp_log.o exp_main_sub.o exp_pty.o exp_trap.o exp_strf.o exp_console.o exp_glob.o exp_win.o exp_clib.o exp_closetcl.o exp_memmove.o exp_tty_comm.o exp_chan.o Dbg.o pty_termios.o exp_select.o exp_event.o  -L/usr/lib -ltclstub8.6 
+: libexpect5.45.4.so
+cc \
+	-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -pipe -O2 -fomit-frame-pointer -Wall -fPIC  \
+	-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--export-dynamic  \
+	-o expect exp_main_exp.o \
+	-L/tmp/src/expect5.45.4 -lexpect5.45.4 \
+	-L/usr/lib -ltcl8.6 \
+	-ldl   \
+	"-Wl,-rpath,/usr/lib" \
+	-Wl,-rpath,/usr/lib/expect5.45.4
+: expect
+(echo 'if {![package vsatisfies [package provide Tcl] 8.6]} {return}' ; \
+ echo 'package ifneeded Expect 5.45.4 \
+    [list load [file join $dir libexpect5.45.4.so]]'\
+) > pkgIndex.tcl
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 `echo ./tests/all.tcl` 
+cat.test
+expect.test
+logfile.test
+via sendvia send_uservia send_stdoutpid.test
+send.test
+spawn.test
+stty.test
+all.tcl:	Total	29	Passed	29	Skipped	0	Failed	0
+Sourced 0 Test Files.
+>>> expect: Entering fakeroot...
+(echo 'if {![package vsatisfies [package provide Tcl] 8.6]} {return}' ; \
+ echo 'package ifneeded Expect 5.45.4 \
+    [list load [file join $dir libexpect5.45.4.so]]'\
+) > pkgIndex.tcl
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/timed-run > timed-run
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/timed-read > timed-read
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/ftp-rfc > ftp-rfc
+ /usr/bin/install -c libexpect5.45.4.so /tmp/pkg/expect/usr/lib/expect5.45.4/libexpect5.45.4.so
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/autopasswd > autopasswd
+ /usr/bin/install -c expect /tmp/pkg/expect/usr/bin/expect
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/lpunlock > lpunlock
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/weather > weather
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/passmass > passmass
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/rftp > rftp
+ : /tmp/pkg/expect/usr/lib/expect5.45.4/libexpect5.45.4.so
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/kibitz > kibitz
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/rlogin-cwd > rlogin-cwd
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/xpstat > xpstat
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/tkpasswd > tkpasswd
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/dislocate > dislocate
+ Install pkgIndex.tcl /tmp/pkg/expect/usr/lib/expect5.45.4
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/xkibitz > xkibitz
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/tknewsbiff > tknewsbiff
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/unbuffer > unbuffer
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/mkpasswd > mkpasswd
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/cryptdir > cryptdir
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/decryptdir > decryptdir
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/autoexpect > autoexpect
+TCL_LIBRARY=`echo /usr/src/tcl8.6.16/library` LD_LIBRARY_PATH=".:/usr/lib:/usr/lib:/usr/lib64/libfakeroot:/usr/lib32/libfakeroot" PATH=".:/usr/lib:/bin:/usr/bin:/sbin:/usr/sbin" TCLLIBPATH="." /usr/bin/tclsh8.6 ./fixline1 /usr/bin < ./example/multixterm > multixterm
+Installing documentation in /tmp/pkg/expect/usr/share/man
+/usr/bin/install -c -m 644 ./expect.man /tmp/pkg/expect/usr/share/man/man1/expect.1
+/usr/bin/install -c -m 644 ./libexpect.man /tmp/pkg/expect/usr/share/man/man3/libexpect.3
+for i in kibitz dislocate xkibitz tknewsbiff unbuffer mkpasswd passmass cryptdir decryptdir autoexpect multixterm end_of_list ; do \
+  if [ -f ./example/$i.man ] ; then \
+    /usr/bin/install -c -m 644 ./example/$i.man /tmp/pkg/expect/usr/share/man/man1/$i.1 ; \
+  else true; fi ; \
+done
+Installing header files in /tmp/pkg/expect/usr/include
+Installing ./expect.h
+Installing ./expect_tcl.h
+Installing ./expect_comm.h
+Installing ./tcldbg.h
+for i in timed-run timed-read ftp-rfc autopasswd lpunlock weather passmass rftp kibitz rlogin-cwd xpstat tkpasswd dislocate xkibitz tknewsbiff unbuffer mkpasswd cryptdir decryptdir autoexpect multixterm end_of_list ; do \
+  if [ -f $i ] ; then \
+    /usr/bin/install -c $i /tmp/pkg/expect/usr/bin/$i ; \
+    rm -f $i ; \
+  else true; fi ; \
+done
+>>> expect-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/expect-dev/usr/include'
+>>> expect-dev*: Preparing subpackage expect-dev...
+>>> expect-dev*: Stripping binaries
+>>> expect-dev*: Running postcheck for expect-dev
+>>> expect-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/expect-doc/usr/share/man'
+>>> expect-doc*: Preparing subpackage expect-doc...
+>>> expect-doc*: Running postcheck for expect-doc
+>>> expect*: Running postcheck for expect
+>>> expect*: Preparing package expect...
+>>> expect*: Stripping binaries
+>>> WARNING: expect*: Redundant /usr/lib in rpath found
+>>> expect-dev*: Scanning shared objects
+>>> expect-doc*: Scanning shared objects
+>>> expect*: Scanning shared objects
+>>> expect-dev*: Tracing dependencies...
+>>> expect-dev*: Package size: 16.9 KB
+>>> expect-dev*: Compressing data...
+>>> expect-dev*: Create checksum...
+>>> expect-dev*: Create expect-dev-5.45.4-r5.apk
+>>> expect-doc*: Tracing dependencies...
+>>> expect-doc*: Package size: 57.7 KB
+>>> expect-doc*: Compressing data...
+>>> expect-doc*: Create checksum...
+>>> expect-doc*: Create expect-doc-5.45.4-r5.apk
+>>> expect*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libtcl8.6.so
+>>> expect*: Package size: 322.4 KB
+>>> expect*: Compressing data...
+>>> expect*: Create checksum...
+>>> expect*: Create expect-5.45.4-r5.apk
+>>> expect: Updating the main/x86_64 repository index...
+>>> expect: Signing the index...
+>>> expect: Cleaning up srcdir
+>>> expect: Cleaning up build chroot
+>>> expect: Cleaning up pkgdir

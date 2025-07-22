@@ -1,0 +1,2989 @@
+>>> varnish: Validating /home/packager/oily-pine/main/varnish/APKBUILD...
+>>> varnish: Cleaning up srcdir
+>>> varnish: Cleaning up pkgdir
+>>> varnish: Cleaning up tmpdir
+>>> varnish: Fetching https://varnish-cache.org/_downloads/varnish-7.7.0.tgz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 35 4217k   35 1503k    0     0  1326k      0  0:00:03  0:00:01  0:00:02 1325k100 4217k  100 4217k    0     0  2689k      0  0:00:01  0:00:01 --:--:-- 2689k
+>>> varnish: Fetching varnishreload-7.7.0::https://github.com/varnishcache/pkg-varnish-cache/raw/7d90347be31891b338dededb318594cebb668ba7/systemd/varnishreload
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  6620  100  6620    0     0  10969      0 --:--:-- --:--:-- --:--:--  359k
+>>> varnish: Fetching https://varnish-cache.org/_downloads/varnish-7.7.0.tgz
+>>> varnish: Fetching varnishreload-7.7.0::https://github.com/varnishcache/pkg-varnish-cache/raw/7d90347be31891b338dededb318594cebb668ba7/systemd/varnishreload
+>>> varnish: Checking sha512sums...
+varnish-7.7.0.tgz: OK
+varnishd.initd: OK
+varnishd.confd: OK
+varnishlog.initd: OK
+varnishlog.confd: OK
+varnishncsa.initd: OK
+varnishncsa.confd: OK
+varnishd.logrotate: OK
+varnishreload-7.7.0: OK
+>>> varnish: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/148) Installing musl (1.2.5-r10)
+(2/148) Installing libcrypto3 (3.5.0-r0)
+(3/148) Installing ca-certificates-bundle (20241121-r2)
+(4/148) Installing libssl3 (3.5.0-r0)
+(5/148) Installing zlib (1.3.1-r2)
+(6/148) Installing libapk2 (2.14.9-r2)
+(7/148) Installing apk-tools (2.14.9-r2)
+(8/148) Installing libcap2 (2.76-r0)
+(9/148) Installing libcap-getcap (2.76-r0)
+(10/148) Installing fakeroot (1.37.1.1-r0)
+(11/148) Installing scanelf (1.3.8-r1)
+(12/148) Installing musl-utils (1.2.5-r10)
+(13/148) Installing libgcc (14.3.0-r1)
+(14/148) Installing libstdc++ (14.3.0-r1)
+(15/148) Installing lzip (1.25-r0)
+(16/148) Installing openssl (3.5.0-r0)
+(17/148) Installing patch (2.8-r0)
+(18/148) Installing pkgconf (2.4.3-r0)
+(19/148) Installing acl-libs (2.3.2-r1)
+(20/148) Installing tar (1.35-r3)
+(21/148) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/148) Installing ssl_client (1.37.0-r18)
+(23/148) Installing busybox-binsh (1.37.0-r18)
+(24/148) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/148) Installing abuild-sudo (3.15.0-r0)
+(26/148) Installing alpine-baselayout-data (3.7.0-r0)
+(27/148) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/148) Installing bridge (1.5-r5)
+(29/148) Installing ifupdown-ng (0.12.1-r7)
+(30/148) Installing openrc-user (0.62.2-r2)
+(31/148) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/148) Installing mdev-conf (4.8-r0)
+(33/148) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/148) Installing alpine-conf (3.20.0-r0)
+(35/148) Installing alpine-keys (2.5-r0)
+(36/148) Installing alpine-release (3.22.0-r0)
+(37/148) Installing busybox-openrc (1.37.0-r18)
+(38/148) Installing busybox-suid (1.37.0-r18)
+(39/148) Installing alpine-base (3.22.0-r0)
+(40/148) Installing jansson (2.14.1-r0)
+(41/148) Installing zstd-libs (1.5.7-r0)
+(42/148) Installing binutils (2.44-r0)
+(43/148) Installing libmagic (5.46-r2)
+(44/148) Installing file (5.46-r2)
+(45/148) Installing libgomp (14.3.0-r1)
+(46/148) Installing libatomic (14.3.0-r1)
+(47/148) Installing gmp (6.3.0-r3)
+(48/148) Installing isl26 (0.26-r1)
+(49/148) Installing mpfr4 (4.2.1_p1-r0)
+(50/148) Installing mpc1 (1.3.1-r1)
+(51/148) Installing gcc (14.3.0-r1)
+(52/148) Installing libstdc++-dev (14.3.0-r1)
+(53/148) Installing musl-dev (1.2.5-r10)
+(54/148) Installing g++ (14.3.0-r1)
+(55/148) Installing make (4.4.1-r3)
+(56/148) Installing fortify-headers (1.1-r5)
+(57/148) Installing build-base (0.5-r3)
+(58/148) Installing brotli-libs (1.1.0-r2)
+(59/148) Installing c-ares (1.34.5-r0)
+(60/148) Installing libunistring (1.3-r0)
+(61/148) Installing libidn2 (2.3.7-r0)
+(62/148) Installing nghttp2-libs (1.65.0-r0)
+(63/148) Installing libpsl (0.21.5-r3)
+(64/148) Installing libcurl (8.14.0-r2)
+(65/148) Installing libexpat (2.7.1-r0)
+(66/148) Installing pcre2 (10.43-r1)
+(67/148) Installing git (2.49.0-r0)
+(68/148) Installing git-init-template (2.49.0-r0)
+(69/148) Installing bsd-compat-headers (0.7.2-r6)
+(70/148) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(71/148) Installing libncursesw (6.5_p20250503-r0)
+(72/148) Installing libformw (6.5_p20250503-r0)
+(73/148) Installing libmenuw (6.5_p20250503-r0)
+(74/148) Installing libpanelw (6.5_p20250503-r0)
+(75/148) Installing libncurses++ (6.5_p20250503-r0)
+(76/148) Installing ncurses-dev (6.5_p20250503-r0)
+(77/148) Installing libedit (20250104.3.1-r1)
+(78/148) Installing libedit-dev (20250104.3.1-r1)
+(79/148) Installing libucontext (1.3.2-r0)
+(80/148) Installing libucontext-dev (1.3.2-r0)
+(81/148) Installing xz-libs (5.8.1-r0)
+(82/148) Installing libunwind (1.8.1-r0)
+(83/148) Installing libunwind-dev (1.8.1-r0)
+(84/148) Installing linux-headers (6.14.2-r0)
+(85/148) Installing zlib-dev (1.3.1-r2)
+(86/148) Installing libpcre2-16 (10.43-r1)
+(87/148) Installing libpcre2-32 (10.43-r1)
+(88/148) Installing pcre2-dev (10.43-r1)
+(89/148) Installing libbz2 (1.0.8-r6)
+(90/148) Installing libffi (3.4.8-r0)
+(91/148) Installing gdbm (1.24-r0)
+(92/148) Installing mpdecimal (4.0.1-r0)
+(93/148) Installing readline (8.2.13-r1)
+(94/148) Installing sqlite-libs (3.50.0-r0)
+(95/148) Installing python3 (3.12.10-r1)
+(96/148) Installing python3-pycache-pyc0 (3.12.10-r1)
+(97/148) Installing pyc (3.12.10-r1)
+(98/148) Installing py3-docutils-pyc (0.21.2-r0)
+(99/148) Installing python3-pyc (3.12.10-r1)
+(100/148) Installing py3-docutils (0.21.2-r0)
+(101/148) Installing py3-tz (2025.2-r0)
+(102/148) Installing py3-tz-pyc (2025.2-r0)
+(103/148) Installing py3-parsing (3.2.3-r0)
+(104/148) Installing py3-parsing-pyc (3.2.3-r0)
+(105/148) Installing py3-packaging (25.0-r0)
+(106/148) Installing py3-packaging-pyc (25.0-r0)
+(107/148) Installing py3-setuptools (80.9.0-r0)
+(108/148) Installing py3-setuptools-pyc (80.9.0-r0)
+(109/148) Installing py3-babel (2.17.0-r0)
+(110/148) Installing py3-babel-pyc (2.17.0-r0)
+(111/148) Installing py3-imagesize (1.4.1-r4)
+(112/148) Installing py3-imagesize-pyc (1.4.1-r4)
+(113/148) Installing py3-markupsafe (3.0.2-r0)
+(114/148) Installing py3-markupsafe-pyc (3.0.2-r0)
+(115/148) Installing py3-jinja2 (3.1.6-r0)
+(116/148) Installing py3-jinja2-pyc (3.1.6-r0)
+(117/148) Installing py3-pygments (2.19.1-r1)
+(118/148) Installing py3-pygments-pyc (2.19.1-r1)
+(119/148) Installing py3-certifi (2025.4.26-r0)
+(120/148) Installing py3-certifi-pyc (2025.4.26-r0)
+(121/148) Installing py3-charset-normalizer (3.4.2-r0)
+(122/148) Installing py3-charset-normalizer-pyc (3.4.2-r0)
+(123/148) Installing py3-idna (3.10-r0)
+(124/148) Installing py3-idna-pyc (3.10-r0)
+(125/148) Installing py3-urllib3 (1.26.20-r0)
+(126/148) Installing py3-urllib3-pyc (1.26.20-r0)
+(127/148) Installing py3-requests (2.32.3-r0)
+(128/148) Installing py3-requests-pyc (2.32.3-r0)
+(129/148) Installing py3-snowballstemmer (2.2.0-r5)
+(130/148) Installing py3-snowballstemmer-pyc (2.2.0-r5)
+(131/148) Installing py3-alabaster (1.0.0-r0)
+(132/148) Installing py3-alabaster-pyc (1.0.0-r0)
+(133/148) Installing py3-roman-numerals (3.1.0-r0)
+(134/148) Installing py3-roman-numerals-pyc (3.1.0-r0)
+(135/148) Installing py3-sphinxcontrib-applehelp (1.0.4-r3)
+(136/148) Installing py3-sphinxcontrib-applehelp-pyc (1.0.4-r3)
+(137/148) Installing py3-sphinxcontrib-devhelp (1.0.5-r2)
+(138/148) Installing py3-sphinxcontrib-devhelp-pyc (1.0.5-r2)
+(139/148) Installing py3-sphinxcontrib-htmlhelp (2.0.1-r3)
+(140/148) Installing py3-sphinxcontrib-htmlhelp-pyc (2.0.1-r3)
+(141/148) Installing py3-sphinxcontrib-jsmath (1.0.1-r8)
+(142/148) Installing py3-sphinxcontrib-jsmath-pyc (1.0.1-r8)
+(143/148) Installing py3-sphinxcontrib-serializinghtml (1.1.9-r2)
+(144/148) Installing py3-sphinxcontrib-serializinghtml-pyc (1.1.9-r2)
+(145/148) Installing py3-sphinxcontrib-qthelp (2.0.0-r0)
+(146/148) Installing py3-sphinxcontrib-qthelp-pyc (2.0.0-r0)
+(147/148) Installing py3-sphinx (8.2.3-r1)
+(148/148) Installing py3-sphinx-pyc (8.2.3-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 383 MiB in 148 packages
+>>> varnish: Fetching https://varnish-cache.org/_downloads/varnish-7.7.0.tgz
+>>> varnish: Fetching varnishreload-7.7.0::https://github.com/varnishcache/pkg-varnish-cache/raw/7d90347be31891b338dededb318594cebb668ba7/systemd/varnishreload
+>>> varnish: Checking sha512sums...
+varnish-7.7.0.tgz: OK
+varnishd.initd: OK
+varnishd.confd: OK
+varnishlog.initd: OK
+varnishlog.confd: OK
+varnishncsa.initd: OK
+varnishncsa.confd: OK
+varnishd.logrotate: OK
+varnishreload-7.7.0: OK
+>>> varnish: Unpacking /var/cache/distfiles/varnish-7.7.0.tgz...
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./build-aux/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of cc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking how to run the C preprocessor... cc -E
+checking whether cc is Clang... no
+checking whether pthreads work with "-pthread" and "-lpthread"... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for rst2man-3.6... no
+checking for rst2man-3... no
+checking for rst2man... rst2man
+checking for sphinx-build-3.6... no
+checking for sphinx-build-3... no
+checking for sphinx-build... sphinx-build
+checking for rst2html-3.6... no
+checking for rst2html-3... no
+checking for rst2html... rst2html
+checking for dot... ${SHELL} '/tmp/src/varnish-7.7.0/build-aux/missing' dot
+checking for a Python interpreter with version >= 3.4... python3
+checking for python3... /usr/bin/python3
+checking for python3 version... 3.12
+checking for python3 platform... linux
+checking for GNU default python3 prefix... ${prefix}
+checking for GNU default python3 exec_prefix... ${exec_prefix}
+checking for python3 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for python3 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for library containing pthread_create... none required
+checking for dlopen in -ldl... yes
+checking for socket in -lsocket... no
+checking for getaddrinfo in -lnsl... no
+checking for stdatomic.h... yes
+checking for cos in -lm... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libpcre2-8... yes
+checking for pcre2_set_depth_limit_8... yes
+checking for edit/readline/readline.h... no
+checking for libedit... yes
+checking for editline/readline.h... yes
+checking for ncursesw... yes
+checking for ncursesw/curses.h... no
+checking for ncursesw.h... no
+checking for ncurses/curses.h... no
+checking for ncurses.h... yes
+checking for curses.h... yes
+checking for sys/filio.h... no
+checking for sys/personality.h... yes
+checking for pthread_np.h... no
+checking for priv.h... no
+checking for fnmatch.h... yes
+checking for setppriv... no
+checking for fallocate... yes
+checking for closefrom... no
+checking for getpeereid... no
+checking for getpeerucred... no
+checking for fnmatch... yes
+checking for pthread_setname_np... yes
+checking for pthread_mutex_isowned_np... no
+checking for pthread_getattr_np... yes
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether __SUNPRO_C is declared... no
+checking for setproctitle... no
+checking for library containing backtrace... no
+checking for libunwind... yes
+checking for daemon... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for clock_gettime... yes
+checking for gethrtime... no
+checking for kqueue... no
+checking for epoll_ctl... yes
+checking for port_create... no
+checking for struct sockaddr.sa_len... no
+checking whether SO_ACCEPTFILTER is declared... no
+checking whether SO_RCVTIMEO is declared... yes
+checking whether SO_SNDTIMEO is declared... yes
+checking for TCP_KEEP(CNT|IDLE|INTVL) socket options... yes
+checking for TCP_FASTOPEN socket option... yes
+checking for close_range... no
+checking if LD -Wl,--version-script works... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Werror... yes
+checking whether C compiler accepts -Werror=unused-result... yes
+cc cannot -Wstring-plus-int
+
+	cc: error: unrecognized command-line option '-Wstring-plus-int'
+
+cc cannot -Wunused-parameters
+
+	cc: error: unrecognized command-line option '-Wunused-parameters'; did you mean '-Wunused-parameter'?
+
+checking whether we have support for visibility attributes... yes
+checking whether C compiler accepts -fstack-protector... yes
+checking whether the linker accepts -fstack-protector... yes
+checking whether C compiler accepts -fno-var-tracking-assignments... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating bin/Makefile
+config.status: creating bin/varnishadm/Makefile
+config.status: creating bin/varnishd/Makefile
+config.status: creating bin/varnishlog/Makefile
+config.status: creating bin/varnishstat/Makefile
+config.status: creating bin/varnishtop/Makefile
+config.status: creating bin/varnishhist/Makefile
+config.status: creating bin/varnishtest/Makefile
+config.status: creating bin/varnishncsa/Makefile
+config.status: creating contrib/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/graphviz/Makefile
+config.status: creating doc/sphinx/Makefile
+config.status: creating doc/sphinx/conf.py
+config.status: creating etc/Makefile
+config.status: creating include/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/libvsc/Makefile
+config.status: creating lib/libvarnish/Makefile
+config.status: creating lib/libvarnishapi/Makefile
+config.status: creating lib/libvcc/Makefile
+config.status: creating lib/libvgz/Makefile
+config.status: creating man/Makefile
+config.status: creating varnishapi.pc
+config.status: creating varnishapi-uninstalled.pc
+config.status: creating vmod/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing mkdir commands
+make  all-recursive
+make[1]: Entering directory '/tmp/src/varnish-7.7.0'
+Making all in include
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make  all-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/include'
+  CC       vbm_test.o
+  CC       vrt_test-vrt_test.o
+  GEN      vrt_test
+  CCLD     vbm_test
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+Making all in lib
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+Making all in libvsc
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+  GEN      VSC_lck.c
+  GEN      VSC_main.c
+  GEN      VSC_mempool.c
+  GEN      VSC_mgt.c
+  GEN      VSC_sma.c
+  GEN      VSC_smf.c
+  GEN      VSC_smu.c
+  GEN      VSC_vbe.c
+  GEN      VSC_waiter.c
+  GEN      VSC_lck.h
+  GEN      VSC_main.h
+  GEN      VSC_mempool.h
+  GEN      VSC_mgt.h
+  GEN      VSC_sma.h
+  GEN      VSC_smf.h
+  GEN      VSC_smu.h
+  GEN      VSC_vbe.h
+  GEN      VSC_waiter.h
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+  CC       VSC_lck.lo
+  CC       VSC_main.lo
+  CC       VSC_mempool.lo
+  CC       VSC_mgt.lo
+  CC       VSC_sma.lo
+  CC       VSC_smf.lo
+  CC       VSC_smu.lo
+  CC       VSC_vbe.lo
+  CC       VSC_waiter.lo
+  GEN      VSC_lck.rst
+  GEN      VSC_main.rst
+  GEN      VSC_mempool.rst
+  GEN      VSC_mgt.rst
+  GEN      VSC_sma.rst
+  GEN      VSC_smf.rst
+  GEN      VSC_smu.rst
+  GEN      VSC_vbe.rst
+  GEN      VSC_waiter.rst
+  GEN      counters.rst
+  CCLD     libvsc.la
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+Making all in libvarnish
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+  CC       vav_test-vav.o
+  CC       libvarnish_la-vbh.lo
+  CC       libvarnish_la-vas.lo
+  CC       libvarnish_la-vav.lo
+  CC       libvarnish_la-vbt.lo
+  CC       libvarnish_la-vcli_proto.lo
+  CC       libvarnish_la-vcli_serve.lo
+  CC       libvarnish_la-vct.lo
+  CC       libvarnish_la-venc.lo
+  CC       libvarnish_la-version.lo
+  CC       libvarnish_la-vev.lo
+  CC       libvarnish_la-vfil.lo
+  CC       libvarnish_la-vfl.lo
+  CC       libvarnish_la-vin.lo
+  CC       libvarnish_la-vjsn.lo
+  CC       libvarnish_la-vlu.lo
+  CC       libvarnish_la-vmb.lo
+  CC       libvarnish_la-vnum.lo
+  CC       libvarnish_la-vpf.lo
+  CC       libvarnish_la-vre.lo
+  CC       libvarnish_la-vrnd.lo
+  CC       libvarnish_la-vsa.lo
+  CC       libvarnish_la-vsb.lo
+  CC       libvarnish_la-vsha256.lo
+  CC       libvarnish_la-vss.lo
+  CC       libvarnish_la-vsub.lo
+  CC       libvarnish_la-vtcp.lo
+  CC       libvarnish_la-vte.lo
+  CC       libvarnish_la-vtim.lo
+  CC       libvarnish_la-vus.lo
+  CC       vbh_test-vbh.o
+  CC       vct_test-vct.o
+  CC       vjsn_test-vjsn.o
+  CC       vnum_c_test-vnum.o
+  CC       vsb_test-vsb_test.o
+  CC       vte_test-vte.o
+  CC       vtim_test-vtim.o
+  CCLD     libvarnish.la
+  CCLD     vav_test
+  CCLD     vbh_test
+  CCLD     vjsn_test
+  CCLD     vct_test
+  CCLD     vnum_c_test
+  CCLD     vsb_test
+  CCLD     vte_test
+  CCLD     vtim_test
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+Making all in libvarnishapi
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+  CC       vsl2rst.o
+  CC       vxp_test-vsc.o
+  CC       vxp_test-vsig.o
+  CC       vxp_test-vsl.o
+  CC       vxp_test-vsl_arg.o
+  CC       vxp_test-vsl_cursor.o
+  CC       vxp_test-vsl_dispatch.o
+  CC       vxp_test-vsl_query.o
+  CC       vxp_test-vsm.o
+  CC       vxp_test-vut.o
+  CC       vxp_test-vxp.o
+  CC       vxp_test-vxp_fixed_token.o
+  CC       vxp_test-vxp_lexer.o
+  CC       vxp_test-vxp_parse.o
+  CC       vxp_test-vxp_test.o
+  CC       vsl_glob_test.o
+  CC       libvarnishapi_la-vsc.lo
+  CC       libvarnishapi_la-vsig.lo
+  CC       libvarnishapi_la-vsl.lo
+  CC       libvarnishapi_la-vsl_arg.lo
+  CC       libvarnishapi_la-vsl_cursor.lo
+  CC       libvarnishapi_la-vsl_dispatch.lo
+  CC       libvarnishapi_la-vsl_query.lo
+  CC       libvarnishapi_la-vsm.lo
+  CC       libvarnishapi_la-vut.lo
+  CC       libvarnishapi_la-vxp.lo
+  CC       libvarnishapi_la-vxp_fixed_token.lo
+  CC       libvarnishapi_la-vxp_lexer.lo
+  CC       libvarnishapi_la-vxp_parse.lo
+  CCLD     vsl2rst
+  CCLD     vxp_test
+  CCLD     libvarnishapi.la
+  CCLD     vsl_glob_test
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+Making all in libvcc
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+  CC       vcc_acl.lo
+  CC       vcc_action.lo
+  CC       vcc_backend.lo
+  CC       vcc_backend_util.lo
+  CC       vcc_compile.lo
+  CC       vcc_expr.lo
+  CC       vcc_fixed_token.lo
+  CC       vcc_obj.lo
+  CC       vcc_parse.lo
+  CC       vcc_source.lo
+  CC       vcc_storage.lo
+  CC       vcc_symb.lo
+  CC       vcc_token.lo
+  CC       vcc_types.lo
+  CC       vcc_utils.lo
+  CC       vcc_var.lo
+  CC       vcc_vmod.lo
+  CC       vcc_vmod_sym.lo
+  CC       vcc_xref.lo
+  CCLD     libvcc.la
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+Making all in libvgz
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+  CC       adler32.lo
+  CC       crc32.lo
+  CC       deflate.lo
+  CC       inffast.lo
+  CC       inflate.lo
+  CC       inftrees.lo
+  CC       trees.lo
+  CC       zutil.lo
+  CCLD     libvgz.la
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+Making all in bin
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+Making all in varnishadm
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+  CC       varnishadm-varnishadm.o
+  CCLD     varnishadm
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+Making all in varnishd
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+  CC       hpack/vhp_gen_hufdec.o
+  CCLD     vhp_gen_hufdec
+  GEN      vhp_hufdec.h
+mv -f vhp_hufdec.h_ vhp_hufdec.h
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+  CC       hpack/vhp_table_test-vhp_table.o
+  CC       hpack/vhp_decode_test-vhp_decode.o
+  CC       hpack/vhp_decode_test-vhp_table.o
+  CC       hpack/varnishd-vhp_decode.o
+  CC       hpack/varnishd-vhp_table.o
+  CC       cache/varnishd-cache_ws.o
+echo '/*' > builtin_vcl.c
+echo ' * NB:  This file is machine generated, DO NOT EDIT!' >> builtin_vcl.c
+echo ' *' >> builtin_vcl.c
+  CC       cache/esi_parse_fuzzer-cache_ws_emu.o
+  CC       cache/esi_parse_fuzzer-cache_ws_common.o
+echo ' * Edit builtin.vcl instead and run make' >> builtin_vcl.c
+  CC       cache/esi_parse_fuzzer-cache_esi_parse.o
+  CC       fuzzers/esi_parse_fuzzer-esi_parse_fuzzer.o
+echo ' *' >> builtin_vcl.c
+  CC       acceptor/varnishd-cache_acceptor.o
+  CC       acceptor/varnishd-cache_acceptor_tcp.o
+echo ' */' >> builtin_vcl.c
+  CC       acceptor/varnishd-cache_acceptor_uds.o
+  CC       acceptor/varnishd-mgt_acceptor.o
+echo '#include "config.h"' >> builtin_vcl.c
+  CC       acceptor/varnishd-mgt_acceptor_tcp.o
+echo '#include "mgt/mgt.h"' >> builtin_vcl.c
+echo '' >> builtin_vcl.c
+echo 'const char * const builtin_vcl =' >> builtin_vcl.c
+sed -e 's/"/\\"/g' \
+    -e 's/$/\\n"/' \
+    -e 's/^/ "/' ./builtin.vcl >> builtin_vcl.c
+echo ';' >> builtin_vcl.c
+  CC       acceptor/varnishd-mgt_acceptor_uds.o
+  CC       cache/varnishd-cache_backend.o
+  CC       cache/varnishd-cache_backend_probe.o
+  CC       cache/varnishd-cache_ban.o
+  CC       cache/varnishd-cache_ban_build.o
+  CC       cache/varnishd-cache_ban_lurker.o
+  CC       cache/varnishd-cache_busyobj.o
+  CC       cache/varnishd-cache_cli.o
+  CC       cache/varnishd-cache_conn_pool.o
+  CC       cache/varnishd-cache_deliver_proc.o
+  CC       cache/varnishd-cache_director.o
+  CC       cache/varnishd-cache_esi_deliver.o
+  CC       cache/varnishd-cache_esi_fetch.o
+  CC       cache/varnishd-cache_esi_parse.o
+  CC       cache/varnishd-cache_expire.o
+  CC       cache/varnishd-cache_fetch.o
+  CC       cache/varnishd-cache_fetch_proc.o
+  CC       cache/varnishd-cache_gzip.o
+  CC       cache/varnishd-cache_hash.o
+  CC       cache/varnishd-cache_http.o
+  CC       cache/varnishd-cache_lck.o
+  CC       cache/varnishd-cache_main.o
+  CC       cache/varnishd-cache_mempool.o
+  CC       cache/varnishd-cache_obj.o
+  CC       cache/varnishd-cache_panic.o
+  CC       cache/varnishd-cache_pool.o
+  CC       cache/varnishd-cache_range.o
+  CC       cache/varnishd-cache_req.o
+  CC       cache/varnishd-cache_req_body.o
+  CC       cache/varnishd-cache_req_fsm.o
+  CC       cache/varnishd-cache_rfc2616.o
+  CC       cache/varnishd-cache_session.o
+  CC       cache/varnishd-cache_shmlog.o
+  CC       cache/varnishd-cache_vary.o
+  CC       cache/varnishd-cache_vcl.o
+  CC       cache/varnishd-cache_vpi.o
+  CC       cache/varnishd-cache_vrt.o
+  CC       cache/varnishd-cache_vrt_filter.o
+  CC       cache/varnishd-cache_vrt_priv.o
+  CC       cache/varnishd-cache_vrt_re.o
+  CC       cache/varnishd-cache_vrt_var.o
+  CC       cache/varnishd-cache_vrt_vcl.o
+  CC       cache/varnishd-cache_vrt_vmod.o
+  CC       cache/varnishd-cache_wrk.o
+  CC       cache/varnishd-cache_ws_common.o
+  CC       common/varnishd-common_vsc.o
+  CC       common/varnishd-common_vsmw.o
+  CC       common/varnishd-common_vext.o
+  CC       hash/varnishd-hash_classic.o
+  CC       hash/varnishd-hash_critbit.o
+  CC       hash/varnishd-hash_simple_list.o
+  CC       hash/varnishd-mgt_hash.o
+  CC       http1/varnishd-cache_http1_deliver.o
+  CC       http1/varnishd-cache_http1_fetch.o
+  CC       http1/varnishd-cache_http1_fsm.o
+  CC       http1/varnishd-cache_http1_line.o
+  CC       http1/varnishd-cache_http1_pipe.o
+  CC       http1/varnishd-cache_http1_proto.o
+  CC       http1/varnishd-cache_http1_vfp.o
+  CC       http2/varnishd-cache_http2_deliver.o
+  CC       http2/varnishd-cache_http2_hpack.o
+  CC       http2/varnishd-cache_http2_panic.o
+  CC       http2/varnishd-cache_http2_proto.o
+  CC       http2/varnishd-cache_http2_send.o
+  CC       http2/varnishd-cache_http2_session.o
+  CC       mgt/varnishd-mgt_child.o
+  CC       mgt/varnishd-mgt_cli.o
+  CC       mgt/varnishd-mgt_jail.o
+  CC       mgt/varnishd-mgt_jail_solaris.o
+  CC       mgt/varnishd-mgt_jail_unix.o
+  CC       mgt/varnishd-mgt_jail_linux.o
+  CC       mgt/varnishd-mgt_main.o
+  CC       mgt/varnishd-mgt_param.o
+  CC       mgt/varnishd-mgt_param_tcp.o
+  CC       mgt/varnishd-mgt_param_tweak.o
+  CC       mgt/varnishd-mgt_shmem.o
+  CC       mgt/varnishd-mgt_symtab.o
+  CC       mgt/varnishd-mgt_util.o
+  CC       mgt/varnishd-mgt_vcc.o
+  CC       mgt/varnishd-mgt_vcl.o
+  CC       proxy/varnishd-cache_proxy_proto.o
+  CC       storage/varnishd-mgt_stevedore.o
+  CC       storage/varnishd-stevedore.o
+  CC       storage/varnishd-stevedore_utils.o
+  CC       storage/varnishd-storage_file.o
+  CC       storage/varnishd-storage_lru.o
+  CC       storage/varnishd-storage_malloc.o
+  CC       storage/varnishd-storage_debug.o
+  CC       storage/varnishd-storage_simple.o
+  CC       storage/varnishd-storage_umem.o
+  CC       waiter/varnishd-cache_waiter.o
+  CC       waiter/varnishd-cache_waiter_epoll.o
+  CC       waiter/varnishd-cache_waiter_kqueue.o
+  CC       waiter/varnishd-cache_waiter_poll.o
+  CC       waiter/varnishd-cache_waiter_ports.o
+  CC       waiter/varnishd-mgt_waiter.o
+  CC       varnishd-builtin_vcl.o
+  CCLD     vhp_table_test
+  CCLD     vhp_decode_test
+  CCLD     esi_parse_fuzzer
+  CCLD     varnishd
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+Making all in varnishhist
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+  CC       varnishhist.o
+  CCLD     varnishhist
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+Making all in varnishlog
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+  CC       varnishlog.o
+  CCLD     varnishlog
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+Making all in varnishncsa
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+  CC       varnishncsa.o
+  CCLD     varnishncsa
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+Making all in varnishstat
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+  CC       varnishstat_help_gen.o
+  CCLD     varnishstat_help_gen
+  GEN      varnishstat_curses_help.c
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+  CC       varnishstat.o
+  CC       varnishstat_curses.o
+  CC       varnishstat_curses_help.o
+  CCLD     varnishstat
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+Making all in varnishtop
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+  CC       varnishtop.o
+  CCLD     varnishtop
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+Making all in varnishtest
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+awk -f ./gensequences ./sequences \
+    > ./teken_state.h
+  CC       varnishtest-vtc.o
+  CC       varnishtest-vtc_barrier.o
+  CC       varnishtest-vtc_client.o
+  CC       varnishtest-vtc_gzip.o
+  CC       varnishtest-vtc_haproxy.o
+  CC       varnishtest-vtc_h2_hpack.o
+  CC       varnishtest-vtc_h2_tbl.o
+  CC       varnishtest-vtc_http.o
+  CC       varnishtest-vtc_http2.o
+  CC       varnishtest-vtc_log.o
+  CC       varnishtest-vtc_logexp.o
+  CC       varnishtest-vtc_misc.o
+  CC       varnishtest-vtc_main.o
+  CC       varnishtest-vtc_process.o
+  CC       varnishtest-vtc_proxy.o
+  CC       varnishtest-vtc_server.o
+  CC       varnishtest-vtc_sess.o
+  CC       varnishtest-vtc_subr.o
+  CC       varnishtest-vtc_syslog.o
+  CC       varnishtest-vtc_tunnel.o
+  CC       varnishtest-vtc_varnish.o
+  CC       varnishtest-vtc_vsm.o
+  CC       varnishtest-teken.o
+  CCLD     varnishtest
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+Making all in vmod
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+  GEN      VSC_debug.c
+  GEN      VSC_debug.h
+make  all-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_blob_if ./vmod_blob.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_h2_if ./vmod_h2.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_cookie_if ./vmod_cookie.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --boilerplate -o vcc_debug_if ./vmod_debug.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_directors_if ./vmod_directors.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_proxy_if ./vmod_proxy.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_purge_if ./vmod_purge.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_std_if ./vmod_std.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_unix_if ./vmod_unix.vcc
+/usr/bin/python3 ../lib/libvcc/vmodtool.py --strict --boilerplate -o vcc_vtc_if ./vmod_vtc.vcc
+touch vcc_purge_if.c
+touch vcc_unix_if.c
+  CC       libvmod_purge_la-vmod_purge.lo
+  CC       libvmod_purge_la-vcc_purge_if.lo
+  CC       libvmod_unix_la-vmod_unix.lo
+  CC       libvmod_unix_la-vcc_unix_if.lo
+touch vcc_proxy_if.c
+touch vcc_vtc_if.c
+touch vcc_cookie_if.c
+  CC       libvmod_proxy_la-vmod_proxy.lo
+  CC       libvmod_proxy_la-vcc_proxy_if.lo
+  CC       libvmod_vtc_la-vmod_vtc.lo
+  CC       libvmod_vtc_la-vcc_vtc_if.lo
+  CC       libvmod_cookie_la-vmod_cookie.lo
+  CC       libvmod_cookie_la-vcc_cookie_if.lo
+touch vcc_std_if.c
+  CC       libvmod_std_la-vmod_std.lo
+  CC       libvmod_std_la-vmod_std_conversions.lo
+WARNING: Not emitting .RST for $Event event_function
+
+WARNING: Not emitting .RST for $Event event_function
+
+  CC       libvmod_std_la-vmod_std_fileread.lo
+  CC       libvmod_std_la-vmod_std_querysort.lo
+touch vcc_h2_if.c
+touch vcc_blob_if.c
+  CC       libvmod_std_la-vcc_std_if.lo
+  CC       libvmod_h2_la-vmod_h2.lo
+  CC       libvmod_h2_la-vcc_h2_if.lo
+  CC       libvmod_blob_la-vmod_blob.lo
+touch vcc_directors_if.c
+  CC       libvmod_blob_la-vmod_blob_base64.lo
+  CC       libvmod_blob_la-vmod_blob_hex.lo
+touch vcc_debug_if.c
+  CC       libvmod_blob_la-vmod_blob_id.lo
+  CC       libvmod_blob_la-vmod_blob_url.lo
+  CC       libvmod_blob_la-vcc_blob_if.lo
+  CC       libvmod_debug_la-vmod_debug.lo
+  CC       libvmod_debug_la-vmod_debug_acl.lo
+  CC       libvmod_debug_la-vmod_debug_dyn.lo
+  CC       libvmod_debug_la-vmod_debug_filters.lo
+  CC       libvmod_debug_la-vmod_debug_obj.lo
+  CC       libvmod_debug_la-vmod_debug_transport_reembarking_http1.lo
+  CC       libvmod_debug_la-VSC_debug.lo
+  CC       libvmod_debug_la-vcc_debug_if.lo
+  CC       libvmod_directors_la-vmod_directors.lo
+  CC       libvmod_directors_la-vmod_directors_fall_back.lo
+  CC       libvmod_directors_la-vmod_directors_hash.lo
+  CC       libvmod_directors_la-vmod_directors_random.lo
+  CC       libvmod_directors_la-vmod_directors_round_robin.lo
+  CC       libvmod_directors_la-vmod_directors_shard.lo
+  CC       libvmod_directors_la-vmod_directors_shard_cfg.lo
+  CC       libvmod_directors_la-vmod_directors_shard_dir.lo
+  CC       libvmod_directors_la-vcc_directors_if.lo
+  CCLD     libvmod_proxy.la
+  CCLD     libvmod_purge.la
+  CCLD     libvmod_std.la
+  CCLD     libvmod_unix.la
+  CCLD     libvmod_vtc.la
+  CCLD     libvmod_h2.la
+  CCLD     libvmod_cookie.la
+  CCLD     libvmod_blob.la
+  CCLD     libvmod_directors.la
+  CCLD     libvmod_debug.la
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+Making all in etc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/etc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/etc'
+Making all in doc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+Making all in graphviz
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+Making all in sphinx
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+../../bin/varnishd/varnishd -x cli > include/cli.rst_
+../../bin/varnishd/varnishd -x parameter > include/params.rst_
+../../bin/varnishd/varnishd -x options > include/options.rst_
+../../bin/varnishncsa/varnishncsa --options > include/varnishncsa_options.rst_
+../../bin/varnishncsa/varnishncsa --synopsis > include/varnishncsa_synopsis.rst_
+../../bin/varnishlog/varnishlog --options > include/varnishlog_options.rst_
+../../bin/varnishlog/varnishlog --synopsis > include/varnishlog_synopsis.rst_
+../../bin/varnishtop/varnishtop --options > include/varnishtop_options.rst_
+../../bin/varnishtop/varnishtop --synopsis > include/varnishtop_synopsis.rst_
+../../bin/varnishhist/varnishhist --options > include/varnishhist_options.rst_
+../../bin/varnishhist/varnishhist --synopsis > include/varnishhist_synopsis.rst_
+../../bin/varnishstat/varnishstat --options > include/varnishstat_options.rst_
+mv -f include/options.rst_ include/options.rst
+../../bin/varnishstat/varnishstat --synopsis > include/varnishstat_synopsis.rst_
+../../bin/varnishstat/varnishstat --bindings > include/varnishstat_bindings.rst_
+mv -f include/cli.rst_ include/cli.rst
+../../lib/libvarnishapi/vsl2rst > include/vsl-tags.rst_
+cp ../../vmod/vmod_std.rst include/vmod_std.generated.rst
+mv -f include/vsl-tags.rst_ include/vsl-tags.rst
+cp ../../vmod/vmod_directors.rst include/vmod_directors.generated.rst
+cp ../../vmod/vmod_purge.rst include/vmod_purge.generated.rst
+cp ../../vmod/vmod_vtc.rst include/vmod_vtc.generated.rst
+mv -f include/params.rst_ include/params.rst
+mv -f include/varnishncsa_options.rst_ include/varnishncsa_options.rst
+cp ../../vmod/vmod_blob.rst include/vmod_blob.generated.rst
+mv -f include/varnishlog_options.rst_ include/varnishlog_options.rst
+cp ../../vmod/vmod_cookie.rst include/vmod_cookie.generated.rst
+mv -f include/varnishncsa_synopsis.rst_ include/varnishncsa_synopsis.rst
+cp ../../vmod/vmod_h2.rst include/vmod_h2.generated.rst
+mv -f include/varnishlog_synopsis.rst_ include/varnishlog_synopsis.rst
+mv -f include/varnishtop_options.rst_ include/varnishtop_options.rst
+mv -f include/varnishhist_options.rst_ include/varnishhist_options.rst
+mv -f include/varnishstat_bindings.rst_ include/varnishstat_bindings.rst
+cp ../../vmod/vmod_unix.rst include/vmod_unix.generated.rst
+mv -f include/varnishtop_synopsis.rst_ include/varnishtop_synopsis.rst
+cp ../../vmod/vmod_proxy.rst include/vmod_proxy.generated.rst
+mv -f include/varnishstat_options.rst_ include/varnishstat_options.rst
+mv -f include/varnishhist_synopsis.rst_ include/varnishhist_synopsis.rst
+cd ../graphviz && make html
+mv -f include/varnishstat_synopsis.rst_ include/varnishstat_synopsis.rst
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+if test "x." != "x." && \
+   test ! -f ./cache_http1_fsm.svg ; then \
+	d=`pwd`/. ; \
+	cd . && find . -name \*.svg -type f | \
+	cpio -dmp ${d} || true ; \
+fi
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+if test "x." != "x." && test ! -f index.rst; then \
+	s=`cd . && pwd`; \
+	for f in `cd $s && find . -type f`; do \
+		d=`dirname $f`; \
+		test -d $d || mkdir -p $d; \
+		test -f $f || ln -s $s/$f $f; \
+	done \
+fi
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+Making all in man
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/man'
+  GEN      varnish-cli.7
+  GEN      vsl.7
+  GEN      varnishd.1
+  GEN      varnishhist.1
+  GEN      varnishlog.1
+  GEN      varnishncsa.1
+  GEN      varnishstat.1
+  GEN      varnishtop.1
+  GEN      vmod_cookie.3
+  GEN      vmod_directors.3
+  GEN      vmod_purge.3
+  GEN      vmod_std.3
+  GEN      vmod_vtc.3
+  GEN      vmod_blob.3
+  GEN      vmod_unix.3
+  GEN      vmod_proxy.3
+  GEN      vmod_h2.3
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/man'
+Making all in contrib
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0'
+make  all-recursive
+make[1]: Entering directory '/tmp/src/varnish-7.7.0'
+Making all in include
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make  all-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+Making all in lib
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+Making all in libvsc
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+Making all in libvarnish
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+Making all in libvarnishapi
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+Making all in libvcc
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+Making all in libvgz
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+Making all in bin
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+Making all in varnishadm
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+Making all in varnishd
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+Making all in varnishhist
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+Making all in varnishlog
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+Making all in varnishncsa
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+Making all in varnishstat
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+Making all in varnishtop
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+Making all in varnishtest
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+Making all in vmod
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make  all-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+Making all in etc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/etc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/etc'
+Making all in doc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+Making all in graphviz
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+Making all in sphinx
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+cd ../graphviz && make html
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+if test "x." != "x." && \
+   test ! -f ./cache_http1_fsm.svg ; then \
+	d=`pwd`/. ; \
+	cd . && find . -name \*.svg -type f | \
+	cpio -dmp ${d} || true ; \
+fi
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+if test "x." != "x." && test ! -f index.rst; then \
+	s=`cd . && pwd`; \
+	for f in `cd $s && find . -type f`; do \
+		d=`dirname $f`; \
+		test -d $d || mkdir -p $d; \
+		test -f $f || ln -s $s/$f $f; \
+	done \
+fi
+make  all-am
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+Making all in man
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/man'
+Making all in contrib
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0'
+Making check in include
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make  check-am
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make  check-TESTS
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/include'
+PASS: vbm_test
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 1
+# PASS:  1
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+Making check in lib
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+Making check in libvsc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+Making check in libvarnish
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make  check-TESTS
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+PASS: vav_test
+PASS: vct_test
+PASS: vnum_c_test
+PASS: vte_test
+PASS: vjsn_test
+PASS: vsb_test
+PASS: vbh_test
+PASS: vtim_test
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 8
+# PASS:  8
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+Making check in libvarnishapi
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make  check-TESTS
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[5]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+PASS: vxp_test_coverage.sh
+PASS: vsl_glob_test_coverage.sh
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 2
+# PASS:  2
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+Making check in libvcc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+Making check in libvgz
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+Making check in bin
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+Making check in varnishadm
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+Making check in varnishd
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make  check-TESTS
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[5]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+PASS: vhp_table_test
+PASS: vhp_decode_test
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 2
+# PASS:  2
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+Making check in varnishhist
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+Making check in varnishlog
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+Making check in varnishncsa
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+Making check in varnishstat
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+Making check in varnishtop
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+Making check in varnishtest
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make  check-TESTS
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[5]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+PASS: tests/a00005.vtc
+PASS: tests/a00010.vtc
+SKIP: tests/a00001.vtc
+PASS: tests/a00002.vtc
+PASS: tests/a00018.vtc
+SKIP: tests/a00014.vtc
+PASS: tests/a00006.vtc
+PASS: tests/a00015.vtc
+PASS: tests/a00004.vtc
+PASS: tests/a00016.vtc
+PASS: tests/a00011.vtc
+PASS: tests/a00003.vtc
+PASS: tests/a00012.vtc
+PASS: tests/a00007.vtc
+PASS: tests/a00009.vtc
+PASS: tests/a02001.vtc
+PASS: tests/a02003.vtc
+PASS: tests/a02004.vtc
+PASS: tests/a00022.vtc
+PASS: tests/a02000.vtc
+PASS: tests/a00019.vtc
+PASS: tests/a00020.vtc
+PASS: tests/a02005.vtc
+PASS: tests/a00023.vtc
+PASS: tests/a02002.vtc
+PASS: tests/a02010.vtc
+PASS: tests/a02006.vtc
+PASS: tests/a02007.vtc
+PASS: tests/a02009.vtc
+PASS: tests/a02011.vtc
+PASS: tests/a02012.vtc
+PASS: tests/a02016.vtc
+PASS: tests/a00021.vtc
+PASS: tests/a02013.vtc
+PASS: tests/a02014.vtc
+PASS: tests/a02008.vtc
+PASS: tests/a02019.vtc
+PASS: tests/a02024.vtc
+PASS: tests/a02018.vtc
+PASS: tests/a02017.vtc
+SKIP: tests/a02022.vtc
+PASS: tests/a02015.vtc
+PASS: tests/a02023.vtc
+PASS: tests/a02020.vtc
+PASS: tests/a02021.vtc
+PASS: tests/a02026.vtc
+PASS: tests/a02025.vtc
+PASS: tests/a02028.vtc
+PASS: tests/a00024.vtc
+PASS: tests/b00001.vtc
+PASS: tests/b00002.vtc
+PASS: tests/b00007.vtc
+PASS: tests/a02027.vtc
+PASS: tests/b00003.vtc
+PASS: tests/b00006.vtc
+PASS: tests/b00005.vtc
+PASS: tests/b00009.vtc
+PASS: tests/b00000.vtc
+PASS: tests/a00008.vtc
+PASS: tests/b00010.vtc
+PASS: tests/a00013.vtc
+PASS: tests/a00025.vtc
+PASS: tests/b00011.vtc
+PASS: tests/b00012.vtc
+PASS: tests/b00013.vtc
+PASS: tests/b00017.vtc
+PASS: tests/b00014.vtc
+PASS: tests/b00008.vtc
+PASS: tests/b00016.vtc
+PASS: tests/b00004.vtc
+PASS: tests/b00019.vtc
+PASS: tests/a00000.vtc
+PASS: tests/b00015.vtc
+PASS: tests/b00025.vtc
+PASS: tests/b00024.vtc
+PASS: tests/b00027.vtc
+PASS: tests/b00028.vtc
+PASS: tests/b00031.vtc
+PASS: tests/b00034.vtc
+PASS: tests/b00033.vtc
+PASS: tests/b00035.vtc
+PASS: tests/b00036.vtc
+PASS: tests/b00032.vtc
+PASS: tests/b00038.vtc
+PASS: tests/b00037.vtc
+PASS: tests/b00044.vtc
+PASS: tests/b00043.vtc
+PASS: tests/b00022.vtc
+PASS: tests/b00040.vtc
+PASS: tests/b00026.vtc
+PASS: tests/b00020.vtc
+PASS: tests/b00047.vtc
+PASS: tests/b00049.vtc
+PASS: tests/b00029.vtc
+PASS: tests/b00018.vtc
+PASS: tests/b00048.vtc
+PASS: tests/b00050.vtc
+PASS: tests/b00045.vtc
+PASS: tests/b00051.vtc
+PASS: tests/b00042.vtc
+PASS: tests/b00023.vtc
+PASS: tests/b00058.vtc
+PASS: tests/b00054.vtc
+PASS: tests/b00055.vtc
+PASS: tests/b00056.vtc
+PASS: tests/b00060.vtc
+PASS: tests/b00061.vtc
+PASS: tests/b00059.vtc
+PASS: tests/b00065.vtc
+PASS: tests/b00066.vtc
+PASS: tests/b00064.vtc
+PASS: tests/b00063.vtc
+PASS: tests/b00069.vtc
+PASS: tests/b00053.vtc
+PASS: tests/b00070.vtc
+PASS: tests/b00072.vtc
+PASS: tests/b00071.vtc
+PASS: tests/b00073.vtc
+PASS: tests/b00074.vtc
+PASS: tests/b00041.vtc
+PASS: tests/b00075.vtc
+PASS: tests/b00076.vtc
+PASS: tests/b00039.vtc
+PASS: tests/b00057.vtc
+PASS: tests/b00046.vtc
+PASS: tests/b00077.vtc
+PASS: tests/b00080.vtc
+PASS: tests/b00052.vtc
+SKIP: tests/b00089.vtc
+PASS: tests/b00078.vtc
+SKIP: tests/b00090.vtc
+SKIP: tests/b00091.vtc
+PASS: tests/b00079.vtc
+PASS: tests/b00062.vtc
+PASS: tests/c00003.vtc
+PASS: tests/c00000.vtc
+PASS: tests/c00001.vtc
+PASS: tests/b00021.vtc
+PASS: tests/b00092.vtc
+PASS: tests/b00068.vtc
+PASS: tests/c00002.vtc
+PASS: tests/b00082.vtc
+PASS: tests/c00004.vtc
+PASS: tests/b00030.vtc
+PASS: tests/b00084.vtc
+PASS: tests/c00006.vtc
+PASS: tests/b00088.vtc
+PASS: tests/c00007.vtc
+PASS: tests/c00009.vtc
+PASS: tests/c00008.vtc
+PASS: tests/c00010.vtc
+PASS: tests/c00011.vtc
+PASS: tests/c00012.vtc
+PASS: tests/b00087.vtc
+PASS: tests/c00014.vtc
+PASS: tests/c00005.vtc
+PASS: tests/c00018.vtc
+PASS: tests/c00016.vtc
+PASS: tests/b00083.vtc
+PASS: tests/c00020.vtc
+PASS: tests/c00013.vtc
+PASS: tests/c00022.vtc
+PASS: tests/b00081.vtc
+PASS: tests/c00015.vtc
+PASS: tests/c00019.vtc
+PASS: tests/c00024.vtc
+PASS: tests/c00025.vtc
+PASS: tests/c00026.vtc
+PASS: tests/c00023.vtc
+PASS: tests/c00027.vtc
+PASS: tests/c00021.vtc
+PASS: tests/c00028.vtc
+PASS: tests/c00017.vtc
+PASS: tests/c00029.vtc
+PASS: tests/c00031.vtc
+PASS: tests/c00036.vtc
+PASS: tests/c00037.vtc
+PASS: tests/c00040.vtc
+PASS: tests/c00039.vtc
+PASS: tests/c00043.vtc
+PASS: tests/c00044.vtc
+PASS: tests/c00045.vtc
+PASS: tests/c00046.vtc
+PASS: tests/c00047.vtc
+PASS: tests/c00051.vtc
+PASS: tests/c00038.vtc
+PASS: tests/c00041.vtc
+PASS: tests/c00054.vtc
+PASS: tests/c00055.vtc
+PASS: tests/c00056.vtc
+PASS: tests/c00052.vtc
+PASS: tests/c00035.vtc
+PASS: tests/c00053.vtc
+PASS: tests/c00042.vtc
+PASS: tests/c00061.vtc
+PASS: tests/c00062.vtc
+PASS: tests/c00064.vtc
+PASS: tests/c00065.vtc
+PASS: tests/b00067.vtc
+PASS: tests/c00058.vtc
+PASS: tests/c00068.vtc
+PASS: tests/c00066.vtc
+PASS: tests/c00059.vtc
+PASS: tests/c00069.vtc
+PASS: tests/c00070.vtc
+PASS: tests/c00071.vtc
+PASS: tests/c00074.vtc
+PASS: tests/c00073.vtc
+PASS: tests/c00078.vtc
+PASS: tests/c00075.vtc
+PASS: tests/c00072.vtc
+PASS: tests/c00060.vtc
+PASS: tests/c00067.vtc
+PASS: tests/b00085.vtc
+SKIP: tests/c00086.vtc
+PASS: tests/c00079.vtc
+PASS: tests/c00034.vtc
+PASS: tests/c00048.vtc
+PASS: tests/c00076.vtc
+PASS: tests/c00085.vtc
+PASS: tests/c00082.vtc
+PASS: tests/c00084.vtc
+PASS: tests/c00089.vtc
+PASS: tests/c00091.vtc
+PASS: tests/c00087.vtc
+PASS: tests/c00092.vtc
+PASS: tests/c00077.vtc
+PASS: tests/c00093.vtc
+PASS: tests/c00096.vtc
+PASS: tests/c00097.vtc
+PASS: tests/c00098.vtc
+PASS: tests/c00099.vtc
+PASS: tests/c00090.vtc
+PASS: tests/c00100.vtc
+PASS: tests/c00101.vtc
+PASS: tests/c00050.vtc
+PASS: tests/c00057.vtc
+PASS: tests/c00081.vtc
+PASS: tests/c00103.vtc
+PASS: tests/c00109.vtc
+PASS: tests/c00095.vtc
+PASS: tests/c00105.vtc
+SKIP: tests/c00114.vtc
+PASS: tests/c00107.vtc
+PASS: tests/c00110.vtc
+PASS: tests/c00108.vtc
+PASS: tests/c00111.vtc
+PASS: tests/c00112.vtc
+PASS: tests/c00106.vtc
+PASS: tests/c00120.vtc
+PASS: tests/c00049.vtc
+PASS: tests/c00128.vtc
+PASS: tests/c00126.vtc
+PASS: tests/c00088.vtc
+PASS: tests/c00132.vtc
+PASS: tests/c00063.vtc
+PASS: tests/c00104.vtc
+PASS: tests/c00133.vtc
+PASS: tests/c00102.vtc
+PASS: tests/d00009.vtc
+PASS: tests/d00010.vtc
+PASS: tests/c00134.vtc
+PASS: tests/c00123.vtc
+PASS: tests/d00014.vtc
+PASS: tests/c00083.vtc
+PASS: tests/d00008.vtc
+PASS: tests/d00033.vtc
+PASS: tests/c00113.vtc
+PASS: tests/d00034.vtc
+PASS: tests/d00035.vtc
+PASS: tests/d00036.vtc
+PASS: tests/d00040.vtc
+PASS: tests/d00032.vtc
+PASS: tests/e00000.vtc
+PASS: tests/e00001.vtc
+PASS: tests/e00002.vtc
+PASS: tests/d00013.vtc
+PASS: tests/c00094.vtc
+PASS: tests/d00012.vtc
+PASS: tests/d00007.vtc
+PASS: tests/e00004.vtc
+PASS: tests/e00005.vtc
+PASS: tests/e00007.vtc
+PASS: tests/e00008.vtc
+PASS: tests/c00121.vtc
+PASS: tests/d00011.vtc
+PASS: tests/e00009.vtc
+PASS: tests/e00006.vtc
+PASS: tests/e00003.vtc
+PASS: tests/e00010.vtc
+PASS: tests/e00011.vtc
+PASS: tests/e00012.vtc
+PASS: tests/e00013.vtc
+PASS: tests/e00014.vtc
+PASS: tests/d00038.vtc
+PASS: tests/d00037.vtc
+PASS: tests/e00016.vtc
+PASS: tests/e00018.vtc
+PASS: tests/e00017.vtc
+PASS: tests/e00020.vtc
+PASS: tests/e00015.vtc
+PASS: tests/e00021.vtc
+PASS: tests/e00022.vtc
+PASS: tests/e00025.vtc
+PASS: tests/e00023.vtc
+PASS: tests/e00027.vtc
+PASS: tests/e00024.vtc
+PASS: tests/e00026.vtc
+PASS: tests/e00019.vtc
+PASS: tests/e00028.vtc
+PASS: tests/e00029.vtc
+PASS: tests/e00031.vtc
+PASS: tests/e00030.vtc
+PASS: tests/e00032.vtc
+PASS: tests/e00034.vtc
+PASS: tests/e00033.vtc
+PASS: tests/e00036.vtc
+PASS: tests/e00037.vtc
+PASS: tests/e00035.vtc
+PASS: tests/f00010.vtc
+PASS: tests/f00001.vtc
+PASS: tests/f00011.vtc
+PASS: tests/f00004.vtc
+SKIP: tests/h00001.vtc
+SKIP: tests/h00002.vtc
+SKIP: tests/h00003.vtc
+PASS: tests/g00000.vtc
+SKIP: tests/h00004.vtc
+PASS: tests/f00015.vtc
+SKIP: tests/h00006.vtc
+SKIP: tests/h00005.vtc
+SKIP: tests/h00007.vtc
+SKIP: tests/j00000.vtc
+SKIP: tests/j00001.vtc
+SKIP: tests/j00003.vtc
+SKIP: tests/j00004.vtc
+PASS: tests/f00007.vtc
+PASS: tests/g00004.vtc
+PASS: tests/c00080.vtc
+PASS: tests/g00001.vtc
+PASS: tests/g00002.vtc
+PASS: tests/i00000.vtc
+PASS: tests/g00008.vtc
+PASS: tests/g00007.vtc
+PASS: tests/g00003.vtc
+PASS: tests/l00000.vtc
+PASS: tests/l00001.vtc
+PASS: tests/i00001.vtc
+PASS: tests/l00002.vtc
+PASS: tests/l00003.vtc
+PASS: tests/l00004.vtc
+PASS: tests/l00005.vtc
+PASS: tests/l00006.vtc
+PASS: tests/l00007.vtc
+PASS: tests/m00025.vtc
+PASS: tests/m00019.vtc
+PASS: tests/m00023.vtc
+PASS: tests/m00008.vtc
+PASS: tests/g00006.vtc
+PASS: tests/m00024.vtc
+PASS: tests/m00027.vtc
+PASS: tests/m00022.vtc
+PASS: tests/m00021.vtc
+PASS: tests/m00052.vtc
+PASS: tests/m00003.vtc
+PASS: tests/m00051.vtc
+PASS: tests/c00122.vtc
+PASS: tests/f00008.vtc
+PASS: tests/m00055.vtc
+PASS: tests/m00049.vtc
+PASS: tests/f00005.vtc
+PASS: tests/m00060.vtc
+PASS: tests/m00053.vtc
+PASS: tests/m00054.vtc
+PASS: tests/o00003.vtc
+SKIP: tests/p00000.vtc
+SKIP: tests/p00003.vtc
+SKIP: tests/p00002.vtc
+SKIP: tests/p00004.vtc
+SKIP: tests/p00005.vtc
+SKIP: tests/p00006.vtc
+SKIP: tests/p00008.vtc
+SKIP: tests/p00007.vtc
+SKIP: tests/p00009.vtc
+PASS: tests/m00058.vtc
+PASS: tests/o00006.vtc
+PASS: tests/o00001.vtc
+PASS: tests/p00010.vtc
+PASS: tests/r00102.vtc
+PASS: tests/r00251.vtc
+PASS: tests/g00005.vtc
+PASS: tests/r00310.vtc
+PASS: tests/r00255.vtc
+PASS: tests/o00002.vtc
+PASS: tests/r00262.vtc
+PASS: tests/r00292.vtc
+PASS: tests/o02001.vtc
+PASS: tests/r00306.vtc
+PASS: tests/r00318.vtc
+PASS: tests/r00325.vtc
+PASS: tests/r00326.vtc
+PASS: tests/r00409.vtc
+PASS: tests/m00057.vtc
+PASS: tests/o00004.vtc
+PASS: tests/r00386.vtc
+PASS: tests/o00005.vtc
+PASS: tests/r00387.vtc
+PASS: tests/r00400.vtc
+PASS: tests/r00411.vtc
+PASS: tests/r00412.vtc
+PASS: tests/m00000.vtc
+PASS: tests/r00416.vtc
+PASS: tests/r00425.vtc
+PASS: tests/r00345.vtc
+PASS: tests/r00427.vtc
+PASS: tests/r00433.vtc
+PASS: tests/r00445.vtc
+PASS: tests/r00466.vtc
+PASS: tests/r00494.vtc
+PASS: tests/m00048.vtc
+PASS: tests/r00476.vtc
+PASS: tests/m00059.vtc
+PASS: tests/r00495.vtc
+PASS: tests/r00655.vtc
+PASS: tests/r00498.vtc
+PASS: tests/r00502.vtc
+PASS: tests/r00506.vtc
+PASS: tests/r00524.vtc
+PASS: tests/r00549.vtc
+PASS: tests/r00545.vtc
+PASS: tests/r00558.vtc
+PASS: tests/r00612.vtc
+PASS: tests/r00641.vtc
+PASS: tests/r00561.vtc
+PASS: tests/r00590.vtc
+PASS: tests/r00667.vtc
+PASS: tests/r00679.vtc
+PASS: tests/r00686.vtc
+PASS: tests/r00700.vtc
+PASS: tests/r00702.vtc
+PASS: tests/r00704.vtc
+PASS: tests/r00694.vtc
+PASS: tests/r00733.vtc
+PASS: tests/r00742.vtc
+PASS: tests/r00763.vtc
+PASS: tests/r00769.vtc
+PASS: tests/r00776.vtc
+PASS: tests/r00832.vtc
+SKIP: tests/r00915.vtc
+PASS: tests/r00803.vtc
+PASS: tests/r00789.vtc
+PASS: tests/r00722.vtc
+PASS: tests/r00781.vtc
+PASS: tests/r00916.vtc
+PASS: tests/r00873.vtc
+PASS: tests/r00861.vtc
+PASS: tests/r00894.vtc
+PASS: tests/r00896.vtc
+SKIP: tests/r00962.vtc
+PASS: tests/r00902.vtc
+PASS: tests/r00911.vtc
+PASS: tests/r00913.vtc
+PASS: tests/r00795.vtc
+PASS: tests/r00878.vtc
+PASS: tests/r00917.vtc
+PASS: tests/r00921.vtc
+PASS: tests/r00942.vtc
+PASS: tests/o00000.vtc
+PASS: tests/r00961.vtc
+PASS: tests/r00963.vtc
+PASS: tests/r00965.vtc
+PASS: tests/r01002.vtc
+PASS: tests/r00972.vtc
+PASS: tests/r00979.vtc
+PASS: tests/r00980.vtc
+PASS: tests/r01014.vtc
+PASS: tests/r00984.vtc
+PASS: tests/r01029.vtc
+PASS: tests/r01036.vtc
+PASS: tests/r00940.vtc
+PASS: tests/r01037.vtc
+PASS: tests/r01030.vtc
+PASS: tests/r01038.vtc
+PASS: tests/r01068.vtc
+PASS: tests/r01092.vtc
+PASS: tests/r01086.vtc
+PASS: tests/r01109.vtc
+PASS: tests/r01113.vtc
+PASS: tests/r01123.vtc
+PASS: tests/r01120.vtc
+PASS: tests/r01134.vtc
+PASS: tests/r00941.vtc
+PASS: tests/r01144.vtc
+PASS: tests/r01145.vtc
+SKIP: tests/r01225.vtc
+PASS: tests/r01140.vtc
+PASS: tests/r01157.vtc
+PASS: tests/r01212.vtc
+SKIP: tests/r01266.vtc
+PASS: tests/r01156.vtc
+PASS: tests/r01073.vtc
+PASS: tests/r01169.vtc
+PASS: tests/r01164.vtc
+PASS: tests/r01168.vtc
+PASS: tests/r01175.vtc
+PASS: tests/r01176.vtc
+PASS: tests/r01211.vtc
+PASS: tests/r01218.vtc
+PASS: tests/r01255.vtc
+PASS: tests/r01274.vtc
+PASS: tests/r01287.vtc
+PASS: tests/r01296.vtc
+PASS: tests/r01275.vtc
+PASS: tests/r01184.vtc
+PASS: tests/r01320.vtc
+PASS: tests/r01332.vtc
+PASS: tests/r01333.vtc
+PASS: tests/r01337.vtc
+PASS: tests/r00806.vtc
+PASS: tests/r01349.vtc
+PASS: tests/r00956.vtc
+PASS: tests/r01355.vtc
+PASS: tests/r01356.vtc
+PASS: tests/r01367.vtc
+PASS: tests/r01395.vtc
+PASS: tests/r01312.vtc
+PASS: tests/r01284.vtc
+PASS: tests/r01398.vtc
+PASS: tests/r01401.vtc
+PASS: tests/r01404.vtc
+PASS: tests/r01406.vtc
+PASS: tests/r01417.vtc
+PASS: tests/r01441.vtc
+PASS: tests/r01498.vtc
+PASS: tests/r01485.vtc
+PASS: tests/r01493.vtc
+PASS: tests/r01494.vtc
+PASS: tests/r01501.vtc
+PASS: tests/r01504.vtc
+PASS: tests/r01510.vtc
+PASS: tests/r01506.vtc
+PASS: tests/r01468.vtc
+PASS: tests/r01391.vtc
+PASS: tests/r01518.vtc
+PASS: tests/r01524.vtc
+PASS: tests/r01569.vtc
+PASS: tests/r01566.vtc
+PASS: tests/r01532.vtc
+PASS: tests/r01512.vtc
+PASS: tests/r01557.vtc
+PASS: tests/r01562.vtc
+PASS: tests/r01419.vtc
+PASS: tests/r01577.vtc
+PASS: tests/r01576.vtc
+PASS: tests/r01575.vtc
+PASS: tests/r01608.vtc
+PASS: tests/r01581.vtc
+PASS: tests/r01602.vtc
+PASS: tests/r01598.vtc
+PASS: tests/r01350.vtc
+PASS: tests/r01442.vtc
+PASS: tests/r01612.vtc
+PASS: tests/r01627.vtc
+PASS: tests/r01637.vtc
+PASS: tests/r01638.vtc
+PASS: tests/r01641.vtc
+PASS: tests/r01644.vtc
+PASS: tests/r01624.vtc
+PASS: tests/r01650.vtc
+PASS: tests/r01660.vtc
+PASS: tests/r01613.vtc
+PASS: tests/r01662.vtc
+PASS: tests/r01499.vtc
+PASS: tests/r01684.vtc
+PASS: tests/r01672.vtc
+PASS: tests/r01691.vtc
+PASS: tests/r01399.vtc
+PASS: tests/r01693.vtc
+SKIP: tests/r01762.vtc
+PASS: tests/r01688.vtc
+PASS: tests/r01729.vtc
+PASS: tests/r01478.vtc
+PASS: tests/r01730.vtc
+PASS: tests/r01739.vtc
+PASS: tests/r01746.vtc
+PASS: tests/r01755.vtc
+PASS: tests/r01761.vtc
+PASS: tests/r01732.vtc
+PASS: tests/r01764.vtc
+PASS: tests/r01768.vtc
+PASS: tests/r01775.vtc
+PASS: tests/r01781.vtc
+PASS: tests/r01783.vtc
+PASS: tests/r01777.vtc
+PASS: tests/r01578.vtc
+PASS: tests/r01804.vtc
+PASS: tests/r01806.vtc
+PASS: tests/r01765.vtc
+PASS: tests/r01807.vtc
+PASS: tests/r01648.vtc
+PASS: tests/r01837.vtc
+PASS: tests/r01772.vtc
+PASS: tests/r01810.vtc
+PASS: tests/r01821.vtc
+PASS: tests/r01665.vtc
+PASS: tests/r01826.vtc
+PASS: tests/r01818.vtc
+PASS: tests/r01838.vtc
+PASS: tests/r01843.vtc
+PASS: tests/r01834.vtc
+PASS: tests/r01856.vtc
+PASS: tests/r01847.vtc
+PASS: tests/r01878.vtc
+PASS: tests/r01881.vtc
+PASS: tests/r01890.vtc
+PASS: tests/r01737.vtc
+PASS: tests/r01918.vtc
+PASS: tests/r01914.vtc
+PASS: tests/r01941.vtc
+PASS: tests/r01955.vtc
+PASS: tests/r01924.vtc
+PASS: tests/r01857.vtc
+PASS: tests/r01990.vtc
+PASS: tests/r01956.vtc
+PASS: tests/r01858.vtc
+PASS: tests/r02036.vtc
+PASS: tests/r01879.vtc
+PASS: tests/r02084.vtc
+PASS: tests/r01953.vtc
+PASS: tests/r01927.vtc
+PASS: tests/r02135.vtc
+PASS: tests/r02142.vtc
+PASS: tests/r02035.vtc
+PASS: tests/r02262.vtc
+SKIP: tests/r02275.vtc
+PASS: tests/r02069.vtc
+PASS: tests/r02219.vtc
+PASS: tests/r02233.vtc
+PASS: tests/r02175.vtc
+PASS: tests/r02105.vtc
+PASS: tests/r02157.vtc
+PASS: tests/r02325.vtc
+PASS: tests/r02321.vtc
+PASS: tests/r02148.vtc
+PASS: tests/r02177.vtc
+PASS: tests/r02291.vtc
+PASS: tests/r02300.vtc
+PASS: tests/r02266.vtc
+PASS: tests/r02319.vtc
+PASS: tests/r02305.vtc
+PASS: tests/r02310.vtc
+PASS: tests/r02342.vtc
+PASS: tests/r02351.vtc
+PASS: tests/r02339.vtc
+PASS: tests/r02387.vtc
+PASS: tests/r02406.vtc
+PASS: tests/r02042.vtc
+PASS: tests/r02367.vtc
+PASS: tests/r02429.vtc
+PASS: tests/r02372.vtc
+PASS: tests/r02451.vtc
+PASS: tests/r02413.vtc
+PASS: tests/r02494.vtc
+PASS: tests/r02488.vtc
+PASS: tests/r02422.vtc
+PASS: tests/r02530.vtc
+PASS: tests/r02471.vtc
+PASS: tests/r02554.vtc
+PASS: tests/r02617.vtc
+PASS: tests/r02395.vtc
+PASS: tests/r02589.vtc
+PASS: tests/r02633.vtc
+PASS: tests/r02618.vtc
+PASS: tests/r02258.vtc
+PASS: tests/r02647.vtc
+PASS: tests/r02527.vtc
+PASS: tests/r02645.vtc
+PASS: tests/r02679.vtc
+PASS: tests/r02555.vtc
+PASS: tests/r02700.vtc
+PASS: tests/r02432.vtc
+PASS: tests/r02705.vtc
+PASS: tests/r01801.vtc
+PASS: tests/r02690.vtc
+PASS: tests/r02763.vtc
+PASS: tests/r02539.vtc
+PASS: tests/r02775.vtc
+PASS: tests/r02646.vtc
+PASS: tests/r02649.vtc
+PASS: tests/r02880.vtc
+PASS: tests/r02433.vtc
+PASS: tests/r02887.vtc
+PASS: tests/r02872.vtc
+PASS: tests/r02839.vtc
+PASS: tests/r02934.vtc
+PASS: tests/r02937.vtc
+PASS: tests/r02831.vtc
+PASS: tests/r02964.vtc
+PASS: tests/r02849.vtc
+PASS: tests/r03003.vtc
+PASS: tests/r03093.vtc
+PASS: tests/r03019.vtc
+PASS: tests/r03098.vtc
+PASS: tests/r03079.vtc
+PASS: tests/r02686.vtc
+PASS: tests/r02702.vtc
+PASS: tests/r03109.vtc
+PASS: tests/r03131.vtc
+PASS: tests/r02722.vtc
+PASS: tests/r03221.vtc
+PASS: tests/r03006.vtc
+PASS: tests/r03159.vtc
+PASS: tests/r03241.vtc
+PASS: tests/r03089.vtc
+PASS: tests/r02270.vtc
+PASS: tests/r02946.vtc
+PASS: tests/r03253.vtc
+PASS: tests/r03266.vtc
+PASS: tests/r03038.vtc
+PASS: tests/r02990.vtc
+PASS: tests/r03360.vtc
+PASS: tests/r03301.vtc
+PASS: tests/r03308.vtc
+PASS: tests/r03319.vtc
+PASS: tests/r03353.vtc
+PASS: tests/r03329.vtc
+PASS: tests/r03354.vtc
+PASS: tests/r02976.vtc
+PASS: tests/r03385.vtc
+PASS: tests/r03189.vtc
+PASS: tests/r03410.vtc
+PASS: tests/r03417.vtc
+PASS: tests/r03416.vtc
+PASS: tests/r03463.vtc
+PASS: tests/r02923.vtc
+PASS: tests/r03502.vtc
+PASS: tests/r03546.vtc
+PASS: tests/r03525.vtc
+PASS: tests/r03169.vtc
+PASS: tests/r03433.vtc
+PASS: tests/r03556.vtc
+PASS: tests/r03564.vtc
+PASS: tests/r03706.vtc
+PASS: tests/r03960.vtc
+PASS: tests/r03394.vtc
+PASS: tests/r03709.vtc
+PASS: tests/r03856.vtc
+PASS: tests/r03830.vtc
+PASS: tests/r04298.vtc
+PASS: tests/r03560.vtc
+PASS: tests/r03984.vtc
+PASS: tests/r03734.vtc
+PASS: tests/r03865.vtc
+PASS: tests/r04036.vtc
+PASS: tests/r03895.vtc
+PASS: tests/r03962.vtc
+PASS: tests/r04164.vtc
+PASS: tests/r03794.vtc
+PASS: tests/r04276.vtc
+PASS: tests/r04053.vtc
+PASS: tests/s00001.vtc
+PASS: tests/s00006.vtc
+PASS: tests/r03402.vtc
+PASS: tests/s00008.vtc
+PASS: tests/s00011.vtc
+PASS: tests/r03996.vtc
+PASS: tests/s00000.vtc
+PASS: tests/s00003.vtc
+PASS: tests/s00004.vtc
+PASS: tests/t02002.vtc
+PASS: tests/s00009.vtc
+PASS: tests/s00010.vtc
+PASS: tests/t02006.vtc
+PASS: tests/s00007.vtc
+PASS: tests/t02001.vtc
+PASS: tests/s00005.vtc
+PASS: tests/s00002.vtc
+PASS: tests/t02005.vtc
+PASS: tests/t02008.vtc
+PASS: tests/t02012.vtc
+PASS: tests/t02010.vtc
+PASS: tests/t02004.vtc
+PASS: tests/s00012.vtc
+PASS: tests/t02009.vtc
+PASS: tests/t02015.vtc
+PASS: tests/t02017.vtc
+PASS: tests/t02013.vtc
+PASS: tests/t02018.vtc
+PASS: tests/t02021.vtc
+PASS: tests/t02019.vtc
+PASS: tests/t02020.vtc
+PASS: tests/t02023.vtc
+PASS: tests/s00013.vtc
+PASS: tests/t02024.vtc
+PASS: tests/t02011.vtc
+PASS: tests/t02007.vtc
+PASS: tests/t02022.vtc
+PASS: tests/t02026.vtc
+PASS: tests/t02027.vtc
+PASS: tests/r01490.vtc
+PASS: tests/u00001.vtc
+PASS: tests/u00002.vtc
+PASS: tests/t02000.vtc
+PASS: tests/t02014.vtc
+PASS: tests/u00007.vtc
+PASS: tests/u00011.vtc
+PASS: tests/u00012.vtc
+PASS: tests/u00004.vtc
+PASS: tests/u00013.vtc
+PASS: tests/u00018.vtc
+PASS: tests/u00000.vtc
+PASS: tests/u00014.vtc
+PASS: tests/u00017.vtc
+PASS: tests/u00019.vtc
+PASS: tests/u00015.vtc
+PASS: tests/u00005.vtc
+PASS: tests/v00000.vtc
+PASS: tests/u00016.vtc
+PASS: tests/v00001.vtc
+PASS: tests/t02016.vtc
+PASS: tests/u00008.vtc
+PASS: tests/v00004.vtc
+PASS: tests/t02025.vtc
+PASS: tests/v00005.vtc
+PASS: tests/v00002.vtc
+PASS: tests/v00008.vtc
+PASS: tests/v00009.vtc
+PASS: tests/u00020.vtc
+PASS: tests/v00011.vtc
+PASS: tests/v00012.vtc
+PASS: tests/v00013.vtc
+PASS: tests/u00003.vtc
+PASS: tests/v00015.vtc
+PASS: tests/v00016.vtc
+PASS: tests/u00010.vtc
+PASS: tests/v00010.vtc
+PASS: tests/v00017.vtc
+PASS: tests/r03940.vtc
+PASS: tests/v00024.vtc
+PASS: tests/v00021.vtc
+PASS: tests/v00019.vtc
+PASS: tests/v00031.vtc
+PASS: tests/v00027.vtc
+PASS: tests/u00009.vtc
+PASS: tests/v00018.vtc
+PASS: tests/v00032.vtc
+PASS: tests/u00006.vtc
+PASS: tests/v00033.vtc
+PASS: tests/t02003.vtc
+PASS: tests/v00037.vtc
+PASS: tests/v00034.vtc
+PASS: tests/u00021.vtc
+PASS: tests/v00042.vtc
+PASS: tests/v00020.vtc
+PASS: tests/v00043.vtc
+PASS: tests/v00047.vtc
+PASS: tests/v00014.vtc
+PASS: tests/v00025.vtc
+PASS: tests/v00040.vtc
+PASS: tests/v00038.vtc
+PASS: tests/v00039.vtc
+PASS: tests/v00041.vtc
+PASS: tests/v00049.vtc
+PASS: tests/v00050.vtc
+PASS: tests/v00052.vtc
+PASS: tests/v00055.vtc
+PASS: tests/v00062.vtc
+SKIP: tests/v00022.vtc
+PASS: tests/v00057.vtc
+PASS: tests/v00059.vtc
+PASS: tests/v00046.vtc
+PASS: tests/v00065.vtc
+PASS: tests/v00060.vtc
+PASS: tests/v00058.vtc
+PASS: tests/v00066.vtc
+PASS: tests/v00068.vtc
+PASS: tests/v00069.vtc
+PASS: tests/v00070.vtc
+PASS: tests/v00054.vtc
+PASS: tests/v00071.vtc
+PASS: tests/v00056.vtc
+PASS: tests/v00073.vtc
+PASS: tests/x00000.vtc
+PASS: tests/v00067.vtc
+PASS: tests/v00045.vtc
+PASS: tests/v00051.vtc
+PASS: tests/v00072.vtc
+PASS: tests/v00064.vtc
+PASS: tests/v00063.vtc
+PASS: tests/v00006.vtc
+PASS: tests/v00074.vtc
+PASS: tests/v00003.vtc
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 892
+# PASS:  857
+# SKIP:  35
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+Making check in vmod
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make  check-am
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make  check-TESTS
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+PASS: tests/cookie_b00000.vtc
+PASS: tests/cookie_b00001.vtc
+PASS: tests/blob_b00001.vtc
+PASS: tests/blob_b00009.vtc
+PASS: tests/blob_b00005.vtc
+PASS: tests/blob_b00007.vtc
+PASS: tests/blob_b00003.vtc
+PASS: tests/blob_b00000.vtc
+PASS: tests/blob_b00002.vtc
+PASS: tests/blob_b00006.vtc
+PASS: tests/cookie_b00003.vtc
+PASS: tests/cookie_b00005.vtc
+PASS: tests/cookie_b00002.vtc
+PASS: tests/blob_b00004.vtc
+PASS: tests/cookie_b00006.vtc
+PASS: tests/cookie_b00004.vtc
+PASS: tests/cookie_b00010.vtc
+PASS: tests/cookie_b00008.vtc
+PASS: tests/cookie_b00007.vtc
+PASS: tests/blob_b00012.vtc
+PASS: tests/cookie_b00009.vtc
+PASS: tests/cookie_b00011.vtc
+PASS: tests/blob_b00011.vtc
+PASS: tests/blob_b00010.vtc
+PASS: tests/blob_b00013.vtc
+PASS: tests/cookie_b00012.vtc
+PASS: tests/cookie_b00013.vtc
+PASS: tests/cookie_r00028.vtc
+PASS: tests/directors_b00000.vtc
+PASS: tests/directors_b00003.vtc
+PASS: tests/directors_b00007.vtc
+PASS: tests/directors_b00004.vtc
+PASS: tests/directors_c00000.vtc
+PASS: tests/directors_b00005.vtc
+PASS: tests/directors_b00002.vtc
+PASS: tests/directors_b00006.vtc
+PASS: tests/directors_c00002.vtc
+PASS: tests/directors_c00003.vtc
+PASS: tests/directors_c00005.vtc
+PASS: tests/directors_c00004.vtc
+PASS: tests/directors_c00001.vtc
+PASS: tests/directors_b00001.vtc
+PASS: tests/directors_c00006.vtc
+PASS: tests/directors_c00007.vtc
+PASS: tests/directors_c00008.vtc
+PASS: tests/blob_b00008.vtc
+PASS: tests/directors_c00010.vtc
+PASS: tests/directors_c00011.vtc
+PASS: tests/directors_c00014.vtc
+PASS: tests/directors_c00012.vtc
+PASS: tests/directors_c00013.vtc
+PASS: tests/directors_c00009.vtc
+PASS: tests/directors_v00000.vtc
+PASS: tests/proxy_b00000.vtc
+PASS: tests/purge_c00000.vtc
+PASS: tests/h2_b00000.vtc
+PASS: tests/std_b00002.vtc
+PASS: tests/std_b00003.vtc
+PASS: tests/std_b00006.vtc
+PASS: tests/std_b00004.vtc
+PASS: tests/cookie_v00000.vtc
+PASS: tests/std_b00009.vtc
+PASS: tests/std_b00010.vtc
+PASS: tests/std_b00000.vtc
+PASS: tests/std_b00007.vtc
+PASS: tests/std_b00008.vtc
+PASS: tests/std_b00012.vtc
+PASS: tests/std_b00001.vtc
+PASS: tests/std_b00013.vtc
+PASS: tests/std_b00014.vtc
+PASS: tests/vtc_l00000.vtc
+PASS: tests/std_c00000.vtc
+PASS: tests/std_b00011.vtc
+PASS: tests/unix_c00000.vtc
+PASS: tests/directors_c00015.vtc
+PASS: tests/std_c00001.vtc
+PASS: tests/std_c00002.vtc
+PASS: tests/std_b00005.vtc
+PASS: tests/directors_s00000.vtc
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 79
+# PASS:  79
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+Making check in etc
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/etc'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/etc'
+Making check in doc
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+Making check in graphviz
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+Making check in sphinx
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make  check-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+Making check in man
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/man'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/man'
+Making check in contrib
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+make  check-TESTS
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+running CONFIG_SHELL=/bin/sh /bin/sh ./configure --build=x86_64-alpine-linux-musl --host=x86_64-alpine-linux-musl --prefix=/usr --sysconfdir=/etc --mandir=/usr/share/man --infodir=/usr/share/info --localstatedir=/var/lib --with-unwind --without-jemalloc build_alias=x86_64-alpine-linux-musl host_alias=x86_64-alpine-linux-musl CC=cc CFLAGS=-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g LDFLAGS=-Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs --no-create --no-recursion
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 0
+# PASS:  0
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./build-aux/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of cc... gcc3
+checking whether make supports nested variables... (cached) yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking whether cc understands -c and -o together... (cached) yes
+checking how to run the C preprocessor... cc -E
+checking whether cc is Clang... no
+checking whether pthreads work with "-pthread" and "-lpthread"... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for rst2man-3.6... no
+checking for rst2man-3... no
+checking for rst2man... rst2man
+checking for sphinx-build-3.6... no
+checking for sphinx-build-3... no
+checking for sphinx-build... sphinx-build
+checking for rst2html-3.6... no
+checking for rst2html-3... no
+checking for rst2html... rst2html
+checking for dot... ${SHELL} '/tmp/src/varnish-7.7.0/build-aux/missing' dot
+checking for a Python interpreter with version >= 3.4... python3
+checking for python3... /usr/bin/python3
+checking for python3 version... 3.12
+checking for python3 platform... linux
+checking for GNU default python3 prefix... ${prefix}
+checking for GNU default python3 exec_prefix... ${exec_prefix}
+checking for python3 script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for python3 extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for library containing pthread_create... none required
+checking for dlopen in -ldl... yes
+checking for socket in -lsocket... no
+checking for getaddrinfo in -lnsl... no
+checking for stdatomic.h... yes
+checking for cos in -lm... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for libpcre2-8... yes
+checking for pcre2_set_depth_limit_8... yes
+checking for edit/readline/readline.h... no
+checking for libedit... yes
+checking for editline/readline.h... yes
+checking for ncursesw... yes
+checking for ncursesw/curses.h... no
+checking for ncursesw.h... no
+checking for ncurses/curses.h... no
+checking for ncurses.h... yes
+checking for curses.h... yes
+checking for sys/filio.h... no
+checking for sys/personality.h... yes
+checking for pthread_np.h... no
+checking for priv.h... no
+checking for fnmatch.h... yes
+checking for setppriv... no
+checking for fallocate... yes
+checking for closefrom... no
+checking for getpeereid... no
+checking for getpeerucred... no
+checking for fnmatch... yes
+checking for pthread_setname_np... yes
+checking for pthread_mutex_isowned_np... no
+checking for pthread_getattr_np... yes
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether __SUNPRO_C is declared... no
+checking for setproctitle... no
+checking for library containing backtrace... no
+checking for libunwind... yes
+checking for daemon... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for clock_gettime... yes
+checking for gethrtime... no
+checking for kqueue... no
+checking for epoll_ctl... yes
+checking for port_create... no
+checking for struct sockaddr.sa_len... no
+checking whether SO_ACCEPTFILTER is declared... no
+checking whether SO_RCVTIMEO is declared... yes
+checking whether SO_SNDTIMEO is declared... yes
+checking for TCP_KEEP(CNT|IDLE|INTVL) socket options... yes
+checking for TCP_FASTOPEN socket option... yes
+checking for close_range... no
+checking if LD -Wl,--version-script works... yes
+checking whether C compiler accepts -Wall... yes
+checking whether C compiler accepts -Werror... yes
+checking whether C compiler accepts -Werror=unused-result... yes
+cc cannot -Wstring-plus-int
+
+	cc: error: unrecognized command-line option '-Wstring-plus-int'
+
+cc cannot -Wunused-parameters
+
+	cc: error: unrecognized command-line option '-Wunused-parameters'; did you mean '-Wunused-parameter'?
+
+checking whether we have support for visibility attributes... yes
+checking whether C compiler accepts -fstack-protector... yes
+checking whether the linker accepts -fstack-protector... yes
+checking whether C compiler accepts -fno-var-tracking-assignments... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+make[1]: Entering directory '/tmp/src/varnish-7.7.0'
+ /bin/sh ./config.status
+config.status: creating Makefile
+config.status: creating bin/Makefile
+config.status: creating bin/varnishadm/Makefile
+config.status: creating bin/varnishd/Makefile
+config.status: creating bin/varnishlog/Makefile
+config.status: creating bin/varnishstat/Makefile
+config.status: creating bin/varnishtop/Makefile
+config.status: creating bin/varnishhist/Makefile
+config.status: creating bin/varnishtest/Makefile
+config.status: creating bin/varnishncsa/Makefile
+config.status: creating contrib/Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/graphviz/Makefile
+config.status: creating doc/sphinx/Makefile
+config.status: creating doc/sphinx/conf.py
+config.status: creating etc/Makefile
+config.status: creating include/Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/libvsc/Makefile
+config.status: creating lib/libvarnish/Makefile
+config.status: creating lib/libvarnishapi/Makefile
+config.status: creating lib/libvcc/Makefile
+config.status: creating lib/libvgz/Makefile
+config.status: creating man/Makefile
+config.status: creating varnishapi.pc
+config.status: creating varnishapi-uninstalled.pc
+config.status: creating vmod/Makefile
+config.status: creating config.h
+config.status: config.h is unchanged
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing mkdir commands
+make  check-TESTS
+make[2]: Entering directory '/tmp/src/varnish-7.7.0'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0'
+SKIP: tools/magic_check.sh
+============================================================================
+Testsuite summary for Varnish 7.7.0
+============================================================================
+# TOTAL: 1
+# PASS:  0
+# SKIP:  1
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0'
+>>> varnish: Entering fakeroot...
+Making install in include
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make  install-am
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish/tbl'
+ /usr/bin/install -c -m 644  tbl/acct_fields_bereq.h tbl/acct_fields_req.h tbl/backend_poll.h tbl/ban_arg_oper.h tbl/ban_oper.h tbl/ban_vars.h tbl/bereq_flags.h tbl/beresp_flags.h tbl/boc_state.h tbl/body_status.h tbl/cli_cmds.h tbl/debug_bits.h tbl/experimental_bits.h tbl/feature_bits.h tbl/h2_error.h tbl/h2_frames.h tbl/h2_settings.h tbl/h2_stream.h tbl/htc.h tbl/http_headers.h tbl/http_response.h tbl/locks.h tbl/obj_attr.h tbl/oc_exp_flags.h tbl/oc_flags.h tbl/params.h tbl/req_bereq_flags.h tbl/req_flags.h tbl/sess_attr.h tbl/sess_close.h tbl/symbol_kind.h tbl/vcc_feature_bits.h tbl/vcl_returns.h tbl/vcl_context.h tbl/vcl_states.h tbl/vhd_fsm.h tbl/vhd_fsm_funcs.h tbl/vhd_return.h tbl/vhp_huffman.h tbl/vhp_static.h '/tmp/pkg/varnish/usr/include/varnish/tbl'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish/vapi'
+ /usr/bin/install -c -m 644  vapi/vsc.h vapi/vsig.h vapi/vsl.h vapi/vsl_int.h vapi/vsm.h vapi/voptget.h vapi/vapi_options.h '/tmp/pkg/varnish/usr/include/varnish/vapi'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish/tbl'
+ /usr/bin/install -c -m 644  tbl/vrt_stv_var.h tbl/vsc_levels.h tbl/vsig_list.h tbl/vsl_tags.h tbl/vsl_tags_http.h tbl/waiters.h '/tmp/pkg/varnish/usr/include/varnish/tbl'
+ /usr/bin/install -c -m 644  vcli.h vut.h vut_options.h vbh.h miniobj.h vas.h vav.h vbm.h vcl.h vcs.h vmod_abi.h vnum.h vqueue.h vre.h vre_pcre2.h vdef.h vrt.h vrt_obj.h vsa.h vsb.h vsha256.h vtcp.h vte.h vtim.h vtree.h vrnd.h '/tmp/pkg/varnish/usr/include/varnish/.'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/include'
+Making install in lib
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+Making install in libvsc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/varnish'
+ /usr/bin/install -c vsctool.py '/tmp/pkg/varnish/usr/share/varnish'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvsc'
+Making install in libvarnish
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnish'
+Making install in libvarnishapi
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[4]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libvarnishapi.la '/tmp/pkg/varnish/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libvarnishapi.so.3.1.0 /tmp/pkg/varnish/usr/lib/libvarnishapi.so.3.1.0
+libtool: install: (cd /tmp/pkg/varnish/usr/lib && { ln -s -f libvarnishapi.so.3.1.0 libvarnishapi.so.3 || { rm -f libvarnishapi.so.3 && ln -s libvarnishapi.so.3.1.0 libvarnishapi.so.3; }; })
+libtool: install: (cd /tmp/pkg/varnish/usr/lib && { ln -s -f libvarnishapi.so.3.1.0 libvarnishapi.so || { rm -f libvarnishapi.so && ln -s libvarnishapi.so.3.1.0 libvarnishapi.so; }; })
+libtool: install: /usr/bin/install -c .libs/libvarnishapi.lai /tmp/pkg/varnish/usr/lib/libvarnishapi.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvarnishapi'
+Making install in libvcc
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[4]: Nothing to be done for 'install-exec-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/varnish'
+ /usr/bin/install -c vmodtool.py '/tmp/pkg/varnish/usr/share/varnish'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvcc'
+Making install in libvgz
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib/libvgz'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/lib'
+Making install in bin
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+Making install in varnishadm
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishadm '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishadm /tmp/pkg/varnish/usr/bin/varnishadm
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishadm'
+Making install in varnishd
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/sbin'
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish'
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish/waiter'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishd '/tmp/pkg/varnish/usr/sbin'
+ /usr/bin/install -c -m 644  waiter/waiter.h '/tmp/pkg/varnish/usr/include/varnish/waiter'
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish/cache'
+ /usr/bin/install -c -m 644  cache/cache.h cache/cache_backend.h cache/cache_director.h cache/cache_filter.h cache/cache_varnishd.h '/tmp/pkg/varnish/usr/include/varnish/cache'
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/include/varnish/common'
+libtool: install: /usr/bin/install -c varnishd /tmp/pkg/varnish/usr/sbin/varnishd
+ /usr/bin/install -c -m 644  common/common_param.h '/tmp/pkg/varnish/usr/include/varnish/common'
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishd'
+Making install in varnishhist
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishhist '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishhist /tmp/pkg/varnish/usr/bin/varnishhist
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishhist'
+Making install in varnishlog
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishlog '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishlog /tmp/pkg/varnish/usr/bin/varnishlog
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishlog'
+Making install in varnishncsa
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishncsa '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishncsa /tmp/pkg/varnish/usr/bin/varnishncsa
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishncsa'
+Making install in varnishstat
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[4]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishstat varnishstat_help_gen '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishstat /tmp/pkg/varnish/usr/bin/varnishstat
+libtool: install: /usr/bin/install -c varnishstat_help_gen /tmp/pkg/varnish/usr/bin/varnishstat_help_gen
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishstat'
+Making install in varnishtop
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishtop '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishtop /tmp/pkg/varnish/usr/bin/varnishtop
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtop'
+Making install in varnishtest
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[4]: Nothing to be done for 'install-data-am'.
+ ../.././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c varnishtest '/tmp/pkg/varnish/usr/bin'
+libtool: warning: '../../lib/libvarnishapi/libvarnishapi.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/varnishtest /tmp/pkg/varnish/usr/bin/varnishtest
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin/varnishtest'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/bin'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/bin'
+Making install in vmod
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make  install-am
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/vmod'
+make[3]: Nothing to be done for 'install-exec-am'.
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/varnish/vcc'
+ /usr/bin/install -c -m 644 ./vmod_blob.vcc ./vmod_h2.vcc ./vmod_cookie.vcc ./vmod_directors.vcc ./vmod_proxy.vcc ./vmod_purge.vcc ./vmod_std.vcc ./vmod_unix.vcc ./vmod_vtc.vcc '/tmp/pkg/varnish/usr/share/varnish/vcc'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/lib/varnish/vmods'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libvmod_blob.la libvmod_h2.la libvmod_cookie.la libvmod_debug.la libvmod_directors.la libvmod_proxy.la libvmod_purge.la libvmod_std.la libvmod_unix.la libvmod_vtc.la '/tmp/pkg/varnish/usr/lib/varnish/vmods'
+libtool: install: /usr/bin/install -c .libs/libvmod_blob.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_blob.so
+libtool: install: /usr/bin/install -c .libs/libvmod_blob.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_blob.la
+libtool: install: /usr/bin/install -c .libs/libvmod_h2.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_h2.so
+libtool: install: /usr/bin/install -c .libs/libvmod_h2.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_h2.la
+libtool: install: /usr/bin/install -c .libs/libvmod_cookie.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_cookie.so
+libtool: install: /usr/bin/install -c .libs/libvmod_cookie.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_cookie.la
+libtool: install: /usr/bin/install -c .libs/libvmod_debug.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_debug.so
+libtool: install: /usr/bin/install -c .libs/libvmod_debug.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_debug.la
+libtool: install: /usr/bin/install -c .libs/libvmod_directors.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_directors.so
+libtool: install: /usr/bin/install -c .libs/libvmod_directors.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_directors.la
+libtool: install: /usr/bin/install -c .libs/libvmod_proxy.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_proxy.so
+libtool: install: /usr/bin/install -c .libs/libvmod_proxy.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_proxy.la
+libtool: install: /usr/bin/install -c .libs/libvmod_purge.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_purge.so
+libtool: install: /usr/bin/install -c .libs/libvmod_purge.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_purge.la
+libtool: install: /usr/bin/install -c .libs/libvmod_std.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_std.so
+libtool: install: /usr/bin/install -c .libs/libvmod_std.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_std.la
+libtool: install: /usr/bin/install -c .libs/libvmod_unix.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_unix.so
+libtool: install: /usr/bin/install -c .libs/libvmod_unix.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_unix.la
+libtool: install: /usr/bin/install -c .libs/libvmod_vtc.so /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_vtc.so
+libtool: install: /usr/bin/install -c .libs/libvmod_vtc.lai /tmp/pkg/varnish/usr/lib/varnish/vmods/libvmod_vtc.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/varnish/vmods'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/vmod'
+Making install in etc
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/etc'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/etc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/doc/varnish'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/varnish/vcl'
+ /usr/bin/install -c -m 644 builtin.vcl example.vcl '/tmp/pkg/varnish/usr/share/doc/varnish'
+ /usr/bin/install -c -m 644 devicedetect.vcl '/tmp/pkg/varnish/usr/share/varnish/vcl'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/etc'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/etc'
+Making install in doc
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+Making install in graphviz
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc/graphviz'
+Making install in sphinx
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make  install-am
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[4]: Entering directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc/sphinx'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+make[3]: Entering directory '/tmp/src/varnish-7.7.0/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/doc'
+Making install in man
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/man'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/man/man3'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/man/man1'
+ .././build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/man/man7'
+ /usr/bin/install -c -m 644 varnish-cli.7 varnish-counters.7 vcl.7 vcl-backend.7 vcl-probe.7 vcl-var.7 vcl-step.7 vsl.7 vsl-query.7 vtc.7 '/tmp/pkg/varnish/usr/share/man/man7'
+ /usr/bin/install -c -m 644 vmod_cookie.3 vmod_directors.3 vmod_purge.3 vmod_std.3 vmod_vtc.3 vmod_blob.3 vmod_unix.3 vmod_proxy.3 vmod_h2.3 '/tmp/pkg/varnish/usr/share/man/man3'
+ /usr/bin/install -c -m 644 varnishadm.1 varnishd.1 varnishhist.1 varnishlog.1 varnishncsa.1 varnishstat.1 varnishtest.1 varnishtop.1 '/tmp/pkg/varnish/usr/share/man/man1'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/man'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/man'
+Making install in contrib
+make[1]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0/contrib'
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0/contrib'
+make[1]: Entering directory '/tmp/src/varnish-7.7.0'
+make[2]: Entering directory '/tmp/src/varnish-7.7.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+/bin/sh /tmp/src/varnish-7.7.0/build-aux/install-sh -d -m 0755 /tmp/pkg/varnish/var/lib/varnish
+ ./build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/share/aclocal'
+ ./build-aux/install-sh -c -d '/tmp/pkg/varnish/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 varnish.m4 varnish-legacy.m4 '/tmp/pkg/varnish/usr/share/aclocal'
+ /usr/bin/install -c -m 644 varnishapi.pc '/tmp/pkg/varnish/usr/lib/pkgconfig'
+make[2]: Leaving directory '/tmp/src/varnish-7.7.0'
+make[1]: Leaving directory '/tmp/src/varnish-7.7.0'
+>>> varnish-dbg*: Running split function dbg...
+>>> varnish-dbg*: Preparing subpackage varnish-dbg...
+>>> varnish-dbg*: Stripping binaries
+>>> varnish-dbg*: Running postcheck for varnish-dbg
+>>> varnish-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/varnish-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/varnish-dev/usr/lib/pkgconfig'
+'usr/share/aclocal' -> '/tmp/pkg/varnish-dev/usr/share/aclocal'
+'usr/lib/libvarnishapi.so' -> '/tmp/pkg/varnish-dev/usr/lib/libvarnishapi.so'
+>>> varnish-dev*: Preparing subpackage varnish-dev...
+>>> varnish-dev*: Stripping binaries
+>>> varnish-dev*: Running postcheck for varnish-dev
+>>> varnish-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/varnish-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/varnish-doc/usr/share/man'
+>>> varnish-doc*: Preparing subpackage varnish-doc...
+>>> varnish-doc*: Running postcheck for varnish-doc
+>>> varnish-libs*: Running split function libs...
+>>> varnish-libs*: Preparing subpackage varnish-libs...
+>>> varnish-libs*: Stripping binaries
+>>> varnish-libs*: Running postcheck for varnish-libs
+>>> varnish-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/varnish-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/varnish-openrc/etc/init.d'
+>>> varnish-openrc*: Preparing subpackage varnish-openrc...
+>>> varnish-openrc*: Running postcheck for varnish-openrc
+>>> varnish*: Running postcheck for varnish
+>>> varnish*: Preparing package varnish...
+>>> varnish*: Stripping binaries
+>>> varnish*: Script found. /bin/sh added as a dependency for varnish-7.7.0-r0.apk
+>>> varnish*: Adding .pre-install
+>>> varnish-dbg*: Scanning shared objects
+>>> varnish-dev*: Scanning shared objects
+>>> varnish-doc*: Scanning shared objects
+>>> varnish-libs*: Scanning shared objects
+>>> varnish-openrc*: Scanning shared objects
+>>> varnish*: Scanning shared objects
+>>> varnish-dbg*: Tracing dependencies...
+	gcc
+	libc-dev
+	libgcc
+	!varnish-libs<7.7.0-r0
+	!varnish-libs>7.7.0-r0
+	!varnish<7.7.0-r0
+	!varnish>7.7.0-r0
+>>> varnish-dbg*: Package size: 5.4 MB
+>>> varnish-dbg*: Compressing data...
+>>> varnish-dbg*: Create checksum...
+>>> varnish-dbg*: Create varnish-dbg-7.7.0-r0.apk
+>>> varnish-dev*: Tracing dependencies...
+	pkgconfig
+	varnish-libs=7.7.0-r0
+>>> varnish-dev*: Package size: 473.5 KB
+>>> varnish-dev*: Compressing data...
+>>> varnish-dev*: Create checksum...
+>>> varnish-dev*: Create varnish-dev-7.7.0-r0.apk
+>>> varnish-doc*: Tracing dependencies...
+>>> varnish-doc*: Package size: 153.1 KB
+>>> varnish-doc*: Compressing data...
+>>> varnish-doc*: Create checksum...
+>>> varnish-doc*: Create varnish-doc-7.7.0-r0.apk
+>>> varnish-libs*: Tracing dependencies...
+	gcc
+	libc-dev
+	libgcc
+	so:libc.musl-x86_64.so.1
+	so:libpcre2-8.so.0
+	so:libunwind.so.8
+>>> varnish-libs*: Package size: 190.2 KB
+>>> varnish-libs*: Compressing data...
+>>> varnish-libs*: Create checksum...
+>>> varnish-libs*: Create varnish-libs-7.7.0-r0.apk
+>>> varnish-openrc*: Tracing dependencies...
+>>> varnish-openrc*: Package size: 3.5 KB
+>>> varnish-openrc*: Compressing data...
+>>> varnish-openrc*: Create checksum...
+>>> varnish-openrc*: Create varnish-openrc-7.7.0-r0.apk
+>>> varnish*: Tracing dependencies...
+	gcc
+	libc-dev
+	libgcc
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libedit.so.0
+	so:libncursesw.so.6
+	so:libpcre2-8.so.0
+	so:libunwind.so.8
+	so:libvarnishapi.so.3
+>>> varnish*: Package size: 2.3 MB
+>>> varnish*: Compressing data...
+>>> varnish*: Create checksum...
+>>> varnish*: Create varnish-7.7.0-r0.apk
+>>> varnish: Updating the main/x86_64 repository index...
+>>> varnish: Signing the index...
+>>> varnish: Cleaning up srcdir
+>>> varnish: Cleaning up build chroot
+>>> varnish: Cleaning up pkgdir

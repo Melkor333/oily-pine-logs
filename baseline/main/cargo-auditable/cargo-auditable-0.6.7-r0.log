@@ -1,0 +1,698 @@
+>>> cargo-auditable: Validating /home/packager/oily-pine/main/cargo-auditable/APKBUILD...
+>>> cargo-auditable: Cleaning up srcdir
+>>> cargo-auditable: Cleaning up pkgdir
+>>> cargo-auditable: Cleaning up tmpdir
+>>> cargo-auditable: Fetching cargo-auditable-0.6.7.tar.gz::https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/v0.6.7.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 73109    0 73109    0     0    97k      0 --:--:-- --:--:-- --:--:--   97k
+>>> cargo-auditable: Fetching cargo-auditable-0.6.7.tar.gz::https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/v0.6.7.tar.gz
+>>> cargo-auditable: Checking sha512sums...
+cargo-auditable-0.6.7.tar.gz: OK
+>>> cargo-auditable: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/79) Installing musl (1.2.5-r10)
+(2/79) Installing libcrypto3 (3.5.0-r0)
+(3/79) Installing ca-certificates-bundle (20241121-r2)
+(4/79) Installing libssl3 (3.5.0-r0)
+(5/79) Installing zlib (1.3.1-r2)
+(6/79) Installing libapk2 (2.14.9-r2)
+(7/79) Installing apk-tools (2.14.9-r2)
+(8/79) Installing libcap2 (2.76-r0)
+(9/79) Installing libcap-getcap (2.76-r0)
+(10/79) Installing fakeroot (1.37.1.1-r0)
+(11/79) Installing scanelf (1.3.8-r1)
+(12/79) Installing musl-utils (1.2.5-r10)
+(13/79) Installing libgcc (14.3.0-r1)
+(14/79) Installing libstdc++ (14.3.0-r1)
+(15/79) Installing lzip (1.25-r0)
+(16/79) Installing openssl (3.5.0-r0)
+(17/79) Installing patch (2.8-r0)
+(18/79) Installing pkgconf (2.4.3-r0)
+(19/79) Installing acl-libs (2.3.2-r1)
+(20/79) Installing tar (1.35-r3)
+(21/79) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/79) Installing ssl_client (1.37.0-r18)
+(23/79) Installing busybox-binsh (1.37.0-r18)
+(24/79) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/79) Installing abuild-sudo (3.15.0-r0)
+(26/79) Installing alpine-baselayout-data (3.7.0-r0)
+(27/79) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/79) Installing bridge (1.5-r5)
+(29/79) Installing ifupdown-ng (0.12.1-r7)
+(30/79) Installing openrc-user (0.62.2-r2)
+(31/79) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/79) Installing mdev-conf (4.8-r0)
+(33/79) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/79) Installing alpine-conf (3.20.0-r0)
+(35/79) Installing alpine-keys (2.5-r0)
+(36/79) Installing alpine-release (3.22.0-r0)
+(37/79) Installing busybox-openrc (1.37.0-r18)
+(38/79) Installing busybox-suid (1.37.0-r18)
+(39/79) Installing alpine-base (3.22.0-r0)
+(40/79) Installing jansson (2.14.1-r0)
+(41/79) Installing zstd-libs (1.5.7-r0)
+(42/79) Installing binutils (2.44-r0)
+(43/79) Installing libmagic (5.46-r2)
+(44/79) Installing file (5.46-r2)
+(45/79) Installing libgomp (14.3.0-r1)
+(46/79) Installing libatomic (14.3.0-r1)
+(47/79) Installing gmp (6.3.0-r3)
+(48/79) Installing isl26 (0.26-r1)
+(49/79) Installing mpfr4 (4.2.1_p1-r0)
+(50/79) Installing mpc1 (1.3.1-r1)
+(51/79) Installing gcc (14.3.0-r1)
+(52/79) Installing libstdc++-dev (14.3.0-r1)
+(53/79) Installing musl-dev (1.2.5-r10)
+(54/79) Installing g++ (14.3.0-r1)
+(55/79) Installing make (4.4.1-r3)
+(56/79) Installing fortify-headers (1.1-r5)
+(57/79) Installing build-base (0.5-r3)
+(58/79) Installing libffi (3.4.8-r0)
+(59/79) Installing xz-libs (5.8.1-r0)
+(60/79) Installing libxml2 (2.13.8-r0)
+(61/79) Installing llvm20-libs (20.1.6-r0)
+(62/79) Installing scudo-malloc (20.1.6-r0)
+(63/79) Installing rust (1.87.0-r0)
+(64/79) Installing brotli-libs (1.1.0-r2)
+(65/79) Installing c-ares (1.34.5-r0)
+(66/79) Installing libunistring (1.3-r0)
+(67/79) Installing libidn2 (2.3.7-r0)
+(68/79) Installing nghttp2-libs (1.65.0-r0)
+(69/79) Installing libpsl (0.21.5-r3)
+(70/79) Installing libcurl (8.14.0-r2)
+(71/79) Installing cargo (1.87.0-r0)
+(72/79) Installing libexpat (2.7.1-r0)
+(73/79) Installing pcre2 (10.43-r1)
+(74/79) Installing git (2.49.0-r0)
+(75/79) Installing git-init-template (2.49.0-r0)
+(76/79) Installing lld20-libs (20.1.6-r0)
+(77/79) Installing lld20 (20.1.6-r0)
+(78/79) Installing wasi-libc (0.20250204-r0)
+(79/79) Installing rust-wasm (1.87.0-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 962 MiB in 79 packages
+>>> cargo-auditable: Fetching cargo-auditable-0.6.7.tar.gz::https://github.com/rust-secure-code/cargo-auditable/archive/refs/tags/v0.6.7.tar.gz
+>>> cargo-auditable: Checking sha512sums...
+cargo-auditable-0.6.7.tar.gz: OK
+>>> cargo-auditable: Unpacking /var/cache/distfiles/cargo-auditable-0.6.7.tar.gz...
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded toml v0.8.19
+  Downloaded memchr v2.7.4
+  Downloaded serde_spanned v0.6.8
+  Downloaded toml_datetime v0.6.8
+  Downloaded foldhash v0.1.3
+  Downloaded serde v1.0.217
+  Downloaded quote v1.0.37
+  Downloaded cyclonedx-bom-macros v0.1.0
+  Downloaded time-core v0.1.2
+  Downloaded strum v0.26.3
+  Downloaded adler2 v2.0.0
+  Downloaded dyn-clone v1.0.17
+  Downloaded wasm-gen v0.1.4
+  Downloaded equivalent v1.0.1
+  Downloaded heck v0.5.0
+  Downloaded bitflags v1.3.2
+  Downloaded pico-args v0.5.0
+  Downloaded leb128 v0.2.5
+  Downloaded purl v0.1.3
+  Downloaded ordered-float v4.5.0
+  Downloaded errno v0.3.9
+  Downloaded cargo-platform v0.1.8
+  Downloaded serde_derive v1.0.217
+  Downloaded either v1.13.0
+  Downloaded uuid v1.11.0
+  Downloaded camino v1.1.9
+  Downloaded miniz_oxide v0.8.0
+  Downloaded fluent-uri v0.1.4
+  Downloaded autocfg v1.4.0
+  Downloaded rustversion v1.0.18
+  Downloaded smallvec v1.13.2
+  Downloaded once_cell v1.20.2
+  Downloaded num-traits v0.2.19
+  Downloaded crc32fast v1.4.2
+  Downloaded base64 v0.21.7
+  Downloaded hashbrown v0.15.1
+  Downloaded winnow v0.6.24
+  Downloaded time v0.3.36
+  Downloaded aho-corasick v1.1.3
+  Downloaded serde_json v1.0.133
+  Downloaded wasmparser v0.207.0
+  Downloaded regex v1.11.1
+  Downloaded syn v2.0.89
+  Downloaded schemars v0.8.21
+  Downloaded object v0.36.5
+  Downloaded rustix v0.38.41
+  Downloaded regex-syntax v0.8.5
+  Downloaded indexmap v2.6.0
+  Downloaded toml_edit v0.22.22
+  Downloaded xml-rs v0.8.23
+  Downloaded bitflags v2.6.0
+  Downloaded ryu v1.0.18
+  Downloaded regex-automata v0.4.9
+  Downloaded strum_macros v0.26.4
+  Downloaded powerfmt v0.2.0
+  Downloaded getrandom v0.2.15
+  Downloaded libc v0.2.164
+  Downloaded serde_derive_internals v0.29.1
+  Downloaded semver v1.0.23
+  Downloaded thiserror v1.0.69
+  Downloaded which v4.4.2
+  Downloaded proc-macro2 v1.0.92
+  Downloaded unicode-ident v1.0.14
+  Downloaded percent-encoding v2.3.1
+  Downloaded time-macros v0.2.18
+  Downloaded topological-sort v0.2.2
+  Downloaded home v0.5.9
+  Downloaded hex v0.4.3
+  Downloaded deranged v0.3.11
+  Downloaded num-conv v0.1.0
+  Downloaded linux-raw-sys v0.4.14
+  Downloaded cfg-if v1.0.0
+  Downloaded binfarce v0.2.1
+  Downloaded schemars_derive v0.8.21
+  Downloaded itoa v1.0.13
+  Downloaded thiserror-impl v1.0.69
+  Downloaded cargo_metadata v0.18.1
+  Downloaded byteorder v0.5.3
+  Downloaded spdx v0.10.7
+  Downloaded cyclonedx-bom v0.8.0
+>>> cargo-auditable: building cargo auditable
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling proc-macro2 v1.0.92
+   Compiling unicode-ident v1.0.14
+   Compiling serde v1.0.217
+   Compiling foldhash v0.1.3
+   Compiling equivalent v1.0.1
+   Compiling memchr v2.7.4
+   Compiling serde_json v1.0.133
+   Compiling itoa v1.0.13
+   Compiling semver v1.0.23
+   Compiling cfg-if v1.0.0
+   Compiling ryu v1.0.18
+   Compiling thiserror v1.0.69
+   Compiling libc v0.2.164
+   Compiling autocfg v1.4.0
+   Compiling rustversion v1.0.18
+   Compiling heck v0.5.0
+   Compiling regex-syntax v0.8.5
+   Compiling topological-sort v0.2.2
+   Compiling powerfmt v0.2.0
+   Compiling hashbrown v0.15.1
+   Compiling bitflags v1.3.2
+   Compiling camino v1.1.9
+   Compiling hex v0.4.3
+   Compiling time-core v0.1.2
+   Compiling deranged v0.3.11
+   Compiling bitflags v2.6.0
+   Compiling smallvec v1.13.2
+   Compiling percent-encoding v2.3.1
+   Compiling adler2 v2.0.0
+   Compiling num-conv v0.1.0
+   Compiling fluent-uri v0.1.4
+   Compiling miniz_oxide v0.8.0
+   Compiling wasmparser v0.207.0
+   Compiling aho-corasick v1.1.3
+   Compiling once_cell v1.20.2
+   Compiling indexmap v2.6.0
+   Compiling num-traits v0.2.19
+   Compiling spdx v0.10.7
+   Compiling base64 v0.21.7
+   Compiling binfarce v0.2.1
+   Compiling winnow v0.6.24
+   Compiling time v0.3.36
+   Compiling xml-rs v0.8.23
+   Compiling quote v1.0.37
+   Compiling crc32fast v1.4.2
+   Compiling byteorder v0.5.3
+   Compiling syn v2.0.89
+   Compiling leb128 v0.2.5
+   Compiling pico-args v0.5.0
+   Compiling ordered-float v4.5.0
+   Compiling wasm-gen v0.1.4
+   Compiling object v0.36.5
+   Compiling getrandom v0.2.15
+   Compiling uuid v1.11.0
+   Compiling auditable-extract v0.3.5 (/tmp/src/cargo-auditable-0.6.7/auditable-extract)
+   Compiling regex-automata v0.4.9
+   Compiling regex v1.11.1
+   Compiling serde_derive v1.0.217
+   Compiling thiserror-impl v1.0.69
+   Compiling strum_macros v0.26.4
+   Compiling cyclonedx-bom-macros v0.1.0
+   Compiling purl v0.1.3
+   Compiling strum v0.26.3
+   Compiling serde_spanned v0.6.8
+   Compiling toml_datetime v0.6.8
+   Compiling cargo-platform v0.1.8
+   Compiling toml_edit v0.22.22
+   Compiling auditable-serde v0.8.0 (/tmp/src/cargo-auditable-0.6.7/auditable-serde)
+   Compiling cyclonedx-bom v0.8.0
+   Compiling cargo_metadata v0.18.1
+   Compiling auditable-info v0.9.0 (/tmp/src/cargo-auditable-0.6.7/auditable-info)
+   Compiling toml v0.8.19
+   Compiling resolverver v0.1.0 (/tmp/src/cargo-auditable-0.6.7/resolverver)
+   Compiling cargo-auditable v0.6.7 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable)
+   Compiling auditable-cyclonedx v0.1.0 (/tmp/src/cargo-auditable-0.6.7/auditable-cyclonedx)
+   Compiling auditable2cdx v0.1.0 (/tmp/src/cargo-auditable-0.6.7/auditable2cdx)
+    Finished `release` profile [optimized] target(s) in 35.03s
+>>> cargo-auditable: rebuilding with cargo-auditable itself
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling auditable-extract v0.3.5 (/tmp/src/cargo-auditable-0.6.7/auditable-extract)
+   Compiling auditable-serde v0.8.0 (/tmp/src/cargo-auditable-0.6.7/auditable-serde)
+   Compiling resolverver v0.1.0 (/tmp/src/cargo-auditable-0.6.7/resolverver)
+   Compiling auditable-cyclonedx v0.1.0 (/tmp/src/cargo-auditable-0.6.7/auditable-cyclonedx)
+   Compiling auditable-info v0.9.0 (/tmp/src/cargo-auditable-0.6.7/auditable-info)
+   Compiling auditable2cdx v0.1.0 (/tmp/src/cargo-auditable-0.6.7/auditable2cdx)
+   Compiling cargo-auditable v0.6.7 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable)
+    Finished `release` profile [optimized] target(s) in 7.87s
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+   Compiling proc-macro2 v1.0.92
+   Compiling unicode-ident v1.0.14
+   Compiling serde v1.0.217
+   Compiling foldhash v0.1.3
+   Compiling equivalent v1.0.1
+   Compiling memchr v2.7.4
+   Compiling itoa v1.0.13
+   Compiling serde_json v1.0.133
+   Compiling ryu v1.0.18
+   Compiling semver v1.0.23
+   Compiling thiserror v1.0.69
+   Compiling topological-sort v0.2.2
+   Compiling cfg-if v1.0.0
+   Compiling bitflags v2.6.0
+   Compiling libc v0.2.164
+   Compiling binfarce v0.2.1
+   Compiling rustversion v1.0.18
+   Compiling autocfg v1.4.0
+   Compiling hashbrown v0.15.1
+   Compiling adler2 v2.0.0
+   Compiling camino v1.1.9
+   Compiling regex-syntax v0.8.5
+   Compiling miniz_oxide v0.8.0
+   Compiling wasmparser v0.207.0
+   Compiling heck v0.5.0
+   Compiling powerfmt v0.2.0
+   Compiling smallvec v1.13.2
+   Compiling num-conv v0.1.0
+   Compiling bitflags v1.3.2
+   Compiling hex v0.4.3
+   Compiling percent-encoding v2.3.1
+   Compiling time-core v0.1.2
+   Compiling deranged v0.3.11
+   Compiling aho-corasick v1.1.3
+   Compiling fluent-uri v0.1.4
+   Compiling spdx v0.10.7
+   Compiling indexmap v2.6.0
+   Compiling num-traits v0.2.19
+   Compiling base64 v0.21.7
+   Compiling once_cell v1.20.2
+   Compiling quote v1.0.37
+   Compiling time v0.3.36
+   Compiling xml-rs v0.8.23
+   Compiling syn v2.0.89
+   Compiling rustix v0.38.41
+   Compiling winnow v0.6.24
+   Compiling crc32fast v1.4.2
+   Compiling linux-raw-sys v0.4.14
+   Compiling leb128 v0.2.5
+   Compiling getrandom v0.2.15
+   Compiling byteorder v0.5.3
+   Compiling either v1.13.0
+   Compiling pico-args v0.5.0
+   Compiling wasm-gen v0.1.4
+   Compiling home v0.5.9
+   Compiling uuid v1.11.0
+   Compiling object v0.36.5
+   Compiling regex-automata v0.4.9
+   Compiling ordered-float v4.5.0
+   Compiling auditable-extract v0.3.5 (/tmp/src/cargo-auditable-0.6.7/auditable-extract)
+   Compiling regex v1.11.1
+   Compiling which v4.4.2
+   Compiling serde_derive v1.0.217
+   Compiling thiserror-impl v1.0.69
+   Compiling strum_macros v0.26.4
+   Compiling cyclonedx-bom-macros v0.1.0
+   Compiling purl v0.1.3
+   Compiling strum v0.26.3
+   Compiling cargo-platform v0.1.8
+   Compiling serde_spanned v0.6.8
+   Compiling toml_datetime v0.6.8
+   Compiling toml_edit v0.22.22
+   Compiling auditable-serde v0.8.0 (/tmp/src/cargo-auditable-0.6.7/auditable-serde)
+   Compiling cargo_metadata v0.18.1
+   Compiling cyclonedx-bom v0.8.0
+   Compiling auditable-info v0.9.0 (/tmp/src/cargo-auditable-0.6.7/auditable-info)
+   Compiling toml v0.8.19
+   Compiling resolverver v0.1.0 (/tmp/src/cargo-auditable-0.6.7/resolverver)
+   Compiling cargo-auditable v0.6.7 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable)
+   Compiling auditable-cyclonedx v0.1.0 (/tmp/src/cargo-auditable-0.6.7/auditable-cyclonedx)
+   Compiling auditable2cdx v0.1.0 (/tmp/src/cargo-auditable-0.6.7/auditable2cdx)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 19.39s
+     Running unittests src/lib.rs (target/debug/deps/auditable_cyclonedx-9c675a93290b1879)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/auditable_extract-98054c35b5dab5e3)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/auditable_info-bd151767a8a8a6c6)
+
+running 1 test
+test tests::input_file_limits ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (target/debug/deps/auditable_serde-0412ed2db89385ec)
+
+running 2 tests
+test validation::tests::cyclic_dependencies ... ok
+test validation::tests::no_cyclic_dependencies ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/auditable2cdx-e330e8a3bc18e6fe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/cargo_auditable-2bd8de6a2512c04b)
+
+running 19 tests
+test cargo_arguments::tests::basic_parsing ... ok
+test cargo_arguments::tests::double_dash_to_ignore_args ... ok
+test cargo_arguments::tests::with_unrelated_flags ... ok
+test object_file::tests::test_create_object_file_linux ... ok
+test object_file::tests::test_create_object_file_linux_arm ... ok
+test object_file::tests::test_create_object_file_windows_gnu ... ok
+test object_file::tests::test_loongarch_abi_detection ... ok
+test object_file::tests::test_create_object_file_windows_msvc ... ok
+test object_file::tests::test_riscv_abi_detection ... ok
+test object_file::tests::test_create_object_file_macos ... ok
+test rustc_arguments::tests::detect_bare_linker ... ok
+test rustc_arguments::tests::multiple_codegen_options ... ok
+test rustc_arguments::tests::cargo_c_compatibility ... ok
+test rustc_arguments::tests::multiple_emit_values ... ok
+test rustc_arguments::tests::embed_licensing_compatibility ... ok
+test rustc_arguments::tests::rustc_version_verbose ... ok
+test rustc_arguments::tests::rustc_vv ... ok
+test target_info::tests::test_rustc_parser_linux ... ok
+test auditable_from_metadata::tests::dependency_cycle ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+
+     Running tests/it.rs (target/debug/deps/it-6664a840b8dbf4ef)
+
+running 11 tests
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+rustc 1.87.0 (17067e9ac 2025-05-09) (Alpine Linux 1.87.0-r0)
+binary: rustc
+commit-hash: 17067e9ac6d7ecb70e50f92c1944e545188d2359
+commit-date: 2025-05-09
+host: x86_64-alpine-linux-musl
+release: 1.87.0
+LLVM version: 20.1.5
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+test test_workspace_member_version_info ... ok
+     Removed 0 files
+     Removed 0 files
+     Removed 0 files
+     Removed 0 files
+     Removed 0 files
+     Removed 0 files
+     Removed 0 files
+     Removed 0 files
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+     Removed 0 files
+     Removed 0 files
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: /tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/binary_and_cdylib_crate/Cargo.toml: `crate_type` is deprecated in favor of `crate-type` and will not work in the 2024 edition
+(in the `binary_and_cdylib_crate` library target)
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+ Downloading crates ...
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+   Compiling lto_binary_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/lto_binary_crate)
+   Compiling library_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/library_crate)
+   Compiling lib_and_bin_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/lib_and_bin_crate)
+   Compiling crate_with_build_script v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/crate_with_build_script)
+    Blocking waiting for file lock on package cache
+   Compiling with_platform_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/platform_specific_deps/with_platform_dep)
+   Compiling should_not_be_included v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/platform_specific_deps/should_not_be_included)
+   Compiling runtime_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/runtime_then_build_dep/runtime_dep)
+   Compiling build_dep_of_runtime_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/runtime_then_build_dep/build_dep_of_runtime_dep)
+   Compiling crate_with_features v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/crate_with_features)
+   Compiling binary_and_cdylib_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/binary_and_cdylib_crate)
+   Compiling top_level_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/runtime_then_build_dep/top_level_crate)
+  Downloaded bitflags v2.5.0
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Updating crates.io index
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on package cache
+ Downloading crates ...
+   Compiling bitflags v2.5.0
+   Compiling adler2 v2.0.0
+   Compiling binfarce v0.2.1
+   Compiling miniz_oxide v0.8.0
+   Compiling wasmparser v0.207.0
+  Downloaded log v0.4.25
+  Downloaded rustversion v1.0.19
+  Downloaded quote v1.0.38
+  Downloaded wasm-bindgen-macro v0.2.100
+  Downloaded wasm-bindgen-backend v0.2.100
+  Downloaded wasm-bindgen-shared v0.2.100
+  Downloaded memory_units v0.4.0
+  Downloaded wee_alloc v0.4.5
+  Downloaded cfg-if v0.1.10
+  Downloaded wasm-bindgen v0.2.100
+  Downloaded wasm-bindgen-macro-support v0.2.100
+  Downloaded proc-macro2 v1.0.93
+  Downloaded bumpalo v3.16.0
+  Downloaded syn v2.0.96
+  Downloaded console_error_panic_hook v0.1.7
+  Downloaded libc v0.2.169
+    Blocking waiting for file lock on package cache
+   Compiling runtime_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/custom_rustc_path/runtime_dep)
+   Compiling build_dep_of_runtime_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/custom_rustc_path/build_dep_of_runtime_dep)
+   Compiling runtime_dep_of_build_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/build_then_runtime_dep/runtime_dep_of_build_dep)
+   Compiling top_level_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/build_then_runtime_dep/top_level_crate)
+   Compiling unicode-ident v1.0.14
+   Compiling proc-macro2 v1.0.93
+   Compiling wasm-bindgen-shared v0.2.100
+   Compiling bumpalo v3.16.0
+   Compiling log v0.4.25
+   Compiling rustversion v1.0.19
+   Compiling wasm-bindgen v0.2.100
+   Compiling wee_alloc v0.4.5
+   Compiling cfg-if v1.0.0
+   Compiling once_cell v1.20.2
+   Compiling memory_units v0.4.0
+   Compiling cfg-if v0.1.10
+   Compiling build_dep v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/build_then_runtime_dep/build_dep)
+   Compiling top_level_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/custom_rustc_path/top_level_crate)
+   Compiling quote v1.0.38
+   Compiling auditable-extract v0.3.5 (/tmp/src/cargo-auditable-0.6.7/auditable-extract)
+   Compiling auditable-info v0.9.0 (/tmp/src/cargo-auditable-0.6.7/auditable-info)
+   Compiling syn v2.0.96
+   Compiling rust-audit-info v0.5.4 (/tmp/src/cargo-auditable-0.6.7/rust-audit-info)
+    Finished `release` profile [optimized] target(s) in 5.75s
+    Finished `release` profile [optimized] target(s) in 5.75s
+test test_build_script ... ok
+test test_lto ... ok
+    Finished `release` profile [optimized] target(s) in 5.93s
+test test_platform_specific_deps ... ok
+    Finished `release` profile [optimized] target(s) in 6.38s
+test test_custom_rustc_path ... ok
+   Compiling wasm-bindgen-backend v0.2.100
+    Finished `release` profile [optimized] target(s) in 7.06s
+test test_bin_and_lib_in_one_crate ... ok
+    Finished `release` profile [optimized] target(s) in 7.35s
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+     Removed 49 files, 1.4MiB total
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: /tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/binary_and_cdylib_crate/Cargo.toml: `crate_type` is deprecated in favor of `crate-type` and will not work in the 2024 edition
+(in the `binary_and_cdylib_crate` library target)
+    Finished `release` profile [optimized] target(s) in 7.47s
+test test_build_then_runtime_dep ... ok
+    Finished `release` profile [optimized] target(s) in 7.48s
+test test_runtime_then_build_dep ... ok
+   Compiling library_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/library_crate)
+   Compiling binary_and_cdylib_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/binary_and_cdylib_crate)
+   Compiling crate_with_features v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/crate_with_features)
+   Compiling wasm-bindgen-macro-support v0.2.100
+   Compiling wasm-bindgen-macro v0.2.100
+   Compiling console_error_panic_hook v0.1.7
+   Compiling wasm_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate)
+    Finished `release` profile [optimized] target(s) in 9.72s
+test test_self_hosting ... ok
+    Finished `release` profile [optimized] target(s) in 3.27s
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+     Removed 49 files, 1.4MiB total
+warning: virtual workspace defaulting to `resolver = "1"` despite one or more workspace members being on edition 2021 which implies `resolver = "2"`
+note: to keep the current resolver, specify `workspace.resolver = "1"` in the workspace root's manifest
+note: to use the edition 2021 resolver, specify `workspace.resolver = "2"` in the workspace root's manifest
+note: for more details see https://doc.rust-lang.org/cargo/reference/resolver.html#resolver-versions
+warning: /tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/binary_and_cdylib_crate/Cargo.toml: `crate_type` is deprecated in favor of `crate-type` and will not work in the 2024 edition
+(in the `binary_and_cdylib_crate` library target)
+    Blocking waiting for file lock on package cache
+
+thread 'main' panicked at cargo-auditable/src/collect_audit_data.rs:79:9:
+cargo metadata failure:  Downloading crates ...
+warning: spurious network error (3 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 8593 ms: Could not connect to server)
+warning: spurious network error (3 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 8593 ms: Could not connect to server)
+warning: spurious network error (3 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 8593 ms: Could not connect to server)
+warning: spurious network error (3 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 8593 ms: Could not connect to server)
+warning: spurious network error (2 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (2 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (2 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (2 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (1 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (1 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (1 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+warning: spurious network error (1 tries remaining): [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+error: failed to download from `https://static.crates.io/crates/js-sys/0.3.77/download`
+
+Caused by:
+  [7] Could not connect to server (Failed to connect to static.crates.io port 443 after 0 ms: Could not connect to server)
+
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+error: could not compile `wasm_crate` (lib)
+
+Caused by:
+  process didn't exit successfully: `/tmp/src/cargo-auditable-0.6.7/target/debug/cargo-auditable rustc --crate-name wasm_crate --edition=2018 src/lib.rs --error-format=json --json=diagnostic-rendered-ansi,artifacts,future-incompat --crate-type cdylib --crate-type rlib --emit=dep-info,link -C opt-level=s -C panic=abort -C codegen-units=1 --cfg 'feature="console_error_panic_hook"' --cfg 'feature="default"' --check-cfg 'cfg(docsrs,test)' --check-cfg 'cfg(feature, values("console_error_panic_hook", "default"))' -C metadata=ab3c1f61a588e1fe --out-dir /tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps --target wasm32-unknown-unknown -C strip=symbols -L dependency=/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps -L dependency=/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps --extern console_error_panic_hook=/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libconsole_error_panic_hook-91a25cc64ef5633c.rlib --extern wasm_bindgen=/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen-6c05cffde5628d8f.rlib --extern wee_alloc=/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libwee_alloc-b3ddb1ded157b260.rlib` (exit status: 101)
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#cfg-if@1.0.0","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-1.0.0/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"cfg_if","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-1.0.0/src/lib.rs","edition":"2018","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libcfg_if-76b4d6fa767cacb4.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libcfg_if-76b4d6fa767cacb4.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#cfg-if@0.1.10","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-0.1.10/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"cfg_if","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/cfg-if-0.1.10/src/lib.rs","edition":"2018","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libcfg_if-ab59c8267830a8a0.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libcfg_if-ab59c8267830a8a0.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#unicode-ident@1.0.14","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.14/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"unicode_ident","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/unicode-ident-1.0.14/src/lib.rs","edition":"2018","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libunicode_ident-69d71a916b76d7c6.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libunicode_ident-69d71a916b76d7c6.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#once_cell@1.20.2","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/once_cell-1.20.2/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"once_cell","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/once_cell-1.20.2/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libonce_cell-bb221eedd349757d.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libonce_cell-bb221eedd349757d.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.100/Cargo.toml","target":{"kind":["custom-build"],"crate_types":["bin"],"name":"build-script-build","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.100/build.rs","edition":"2021","doc":false,"doctest":false,"test":false},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","msrv","rustversion","std"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/wasm-bindgen-4603bf2c6fe881c0/build-script-build"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#memory_units@0.4.0","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_units-0.4.0/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"memory_units","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/memory_units-0.4.0/src/lib.rs","edition":"2015","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libmemory_units-0ffda7f7b5a53415.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libmemory_units-0ffda7f7b5a53415.rmeta"],"executable":null,"fresh":false}
+{"reason":"build-script-executed","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen@0.2.100","linked_libs":[],"linked_paths":[],"cfgs":[],"env":[],"out_dir":"/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/build/wasm-bindgen-2fd06fbc12859095/out"}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#log@0.4.25","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/log-0.4.25/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"log","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/log-0.4.25/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/liblog-951b88a856226ed4.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/liblog-951b88a856226ed4.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-shared@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.100/Cargo.toml","target":{"kind":["custom-build"],"crate_types":["bin"],"name":"build-script-build","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.100/build.rs","edition":"2021","doc":false,"doctest":false,"test":false},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/wasm-bindgen-shared-31c82c52ba979d44/build-script-build"],"executable":null,"fresh":false}
+{"reason":"build-script-executed","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-shared@0.2.100","linked_libs":[],"linked_paths":[],"cfgs":[],"env":[["SCHEMA_FILE_HASH","6242250402756688161"]],"out_dir":"/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/wasm-bindgen-shared-17fd954616e67ce1/out"}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wee_alloc@0.4.5","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wee_alloc-0.4.5/Cargo.toml","target":{"kind":["custom-build"],"crate_types":["bin"],"name":"build-script-build","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wee_alloc-0.4.5/build.rs","edition":"2015","doc":false,"doctest":false,"test":false},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","size_classes"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/wee_alloc-9ebada209b1ebe91/build-script-build"],"executable":null,"fresh":false}
+{"reason":"build-script-executed","package_id":"registry+https://github.com/rust-lang/crates.io-index#wee_alloc@0.4.5","linked_libs":[],"linked_paths":[],"cfgs":[],"env":[],"out_dir":"/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/build/wee_alloc-9b90fde3f8e7edc5/out"}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.19","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustversion-1.0.19/Cargo.toml","target":{"kind":["custom-build"],"crate_types":["bin"],"name":"build-script-build","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustversion-1.0.19/build/build.rs","edition":"2018","doc":false,"doctest":false,"test":false},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/rustversion-6967d62135c4c326/build-script-build"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#bumpalo@3.16.0","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.16.0/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"bumpalo","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/bumpalo-3.16.0/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libbumpalo-3b3cf80959f0847a.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libbumpalo-3b3cf80959f0847a.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.93","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro2-1.0.93/Cargo.toml","target":{"kind":["custom-build"],"crate_types":["bin"],"name":"build-script-build","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro2-1.0.93/build.rs","edition":"2021","doc":false,"doctest":false,"test":false},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","proc-macro"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/proc-macro2-19e8e0249f311592/build-script-build"],"executable":null,"fresh":false}
+{"reason":"build-script-executed","package_id":"registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.19","linked_libs":[],"linked_paths":[],"cfgs":[],"env":[],"out_dir":"/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/rustversion-262cba13c5e4b607/out"}
+{"reason":"build-script-executed","package_id":"registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.93","linked_libs":[],"linked_paths":[],"cfgs":["wrap_proc_macro"],"env":[],"out_dir":"/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/build/proc-macro2-d3689520e26f99a6/out"}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-shared@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.100/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"wasm_bindgen_shared","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-shared-0.2.100/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_shared-1eff05bfd6a0e6bd.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_shared-1eff05bfd6a0e6bd.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wee_alloc@0.4.5","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wee_alloc-0.4.5/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"wee_alloc","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wee_alloc-0.4.5/src/lib.rs","edition":"2015","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","size_classes"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libwee_alloc-b3ddb1ded157b260.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libwee_alloc-b3ddb1ded157b260.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#rustversion@1.0.19","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustversion-1.0.19/Cargo.toml","target":{"kind":["proc-macro"],"crate_types":["proc-macro"],"name":"rustversion","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/rustversion-1.0.19/src/lib.rs","edition":"2018","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/librustversion-f13fa332bb8cc020.so"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#proc-macro2@1.0.93","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro2-1.0.93/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"proc_macro2","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/proc-macro2-1.0.93/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","proc-macro"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libproc_macro2-164dda2a086ab128.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libproc_macro2-164dda2a086ab128.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#quote@1.0.38","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/quote-1.0.38/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"quote","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/quote-1.0.38/src/lib.rs","edition":"2018","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","proc-macro"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libquote-8d8ebaef67837a12.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libquote-8d8ebaef67837a12.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#syn@2.0.96","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/syn-2.0.96/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"syn","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/syn-2.0.96/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["clone-impls","default","derive","full","parsing","printing","proc-macro","visit","visit-mut"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libsyn-5668835fbc26bc96.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libsyn-5668835fbc26bc96.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-backend@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-backend-0.2.100/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"wasm_bindgen_backend","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-backend-0.2.100/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_backend-313510d3c9fa66c8.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_backend-313510d3c9fa66c8.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-macro-support@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-macro-support-0.2.100/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"wasm_bindgen_macro_support","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-macro-support-0.2.100/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_macro_support-f84c48b41ea769a7.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_macro_support-f84c48b41ea769a7.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen-macro@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-macro-0.2.100/Cargo.toml","target":{"kind":["proc-macro"],"crate_types":["proc-macro"],"name":"wasm_bindgen_macro","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-macro-0.2.100/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"0","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/release/deps/libwasm_bindgen_macro-e47533b49f052283.so"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#console_error_panic_hook@0.1.7","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/console_error_panic_hook-0.1.7/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"console_error_panic_hook","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/console_error_panic_hook-0.1.7/src/lib.rs","edition":"2015","doc":true,"doctest":true,"test":true},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":[],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libconsole_error_panic_hook-91a25cc64ef5633c.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libconsole_error_panic_hook-91a25cc64ef5633c.rmeta"],"executable":null,"fresh":false}
+{"reason":"compiler-artifact","package_id":"registry+https://github.com/rust-lang/crates.io-index#wasm-bindgen@0.2.100","manifest_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.100/Cargo.toml","target":{"kind":["lib"],"crate_types":["lib"],"name":"wasm_bindgen","src_path":"/home/packager/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/wasm-bindgen-0.2.100/src/lib.rs","edition":"2021","doc":true,"doctest":true,"test":false},"profile":{"opt_level":"s","debuginfo":0,"debug_assertions":false,"overflow_checks":false,"test":false},"features":["default","msrv","rustversion","std"],"filenames":["/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen-6c05cffde5628d8f.rlib","/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/wasm_crate/target/wasm32-unknown-unknown/release/deps/libwasm_bindgen-6c05cffde5628d8f.rmeta"],"executable":null,"fresh":false}
+{"reason":"build-finished","success":false}
+test test_wasm ... FAILED
+   Compiling library_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/library_crate)
+   Compiling crate_with_features v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/crate_with_features)
+   Compiling binary_and_cdylib_crate v0.1.0 (/tmp/src/cargo-auditable-0.6.7/cargo-auditable/tests/fixtures/workspace/binary_and_cdylib_crate)
+    Finished `release` profile [optimized] target(s) in 21.04s
+test test_cargo_auditable_workspaces ... ok
+
+failures:
+
+---- test_wasm stdout ----
+
+thread 'test_wasm' panicked at cargo-auditable/tests/it.rs:146:9:
+Build with `cargo auditable` failed
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    test_wasm
+
+test result: FAILED. 10 passed; 1 failed; 0 ignored; 0 measured; 0 filtered out; finished in 31.84s
+
+error: test failed, to rerun pass `-p cargo-auditable --test it`
+>>> ERROR: cargo-auditable: check failed
+>>> ERROR: cargo-auditable: rootbld failed
+>>> cargo-auditable: Cleaning up build chroot

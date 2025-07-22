@@ -1,0 +1,695 @@
+>>> distcc: Validating /home/packager/oily-pine/main/distcc/APKBUILD...
+>>> distcc: Cleaning up srcdir
+>>> distcc: Cleaning up pkgdir
+>>> distcc: Cleaning up tmpdir
+>>> distcc: Fetching https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  6 1210k    6 79514    0     0  86830      0  0:00:14 --:--:--  0:00:14 86830100 1210k  100 1210k    0     0  1172k      0  0:00:01  0:00:01 --:--:-- 9682k
+>>> distcc: Fetching https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz
+>>> distcc: Checking sha512sums...
+distcc-3.4.tar.gz: OK
+distcc-hardened.patch: OK
+gcc-10.patch: OK
+dcc_gcc_rewrite_fqn-avoid-heap-corruption.patch: OK
+distccd.initd: OK
+distccd.confd: OK
+>>> distcc: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/98) Installing musl (1.2.5-r10)
+(2/98) Installing libcrypto3 (3.5.0-r0)
+(3/98) Installing ca-certificates-bundle (20241121-r2)
+(4/98) Installing libssl3 (3.5.0-r0)
+(5/98) Installing zlib (1.3.1-r2)
+(6/98) Installing libapk2 (2.14.9-r2)
+(7/98) Installing apk-tools (2.14.9-r2)
+(8/98) Installing libcap2 (2.76-r0)
+(9/98) Installing libcap-getcap (2.76-r0)
+(10/98) Installing fakeroot (1.37.1.1-r0)
+(11/98) Installing scanelf (1.3.8-r1)
+(12/98) Installing musl-utils (1.2.5-r10)
+(13/98) Installing libgcc (14.3.0-r1)
+(14/98) Installing libstdc++ (14.3.0-r1)
+(15/98) Installing lzip (1.25-r0)
+(16/98) Installing openssl (3.5.0-r0)
+(17/98) Installing patch (2.8-r0)
+(18/98) Installing pkgconf (2.4.3-r0)
+(19/98) Installing acl-libs (2.3.2-r1)
+(20/98) Installing tar (1.35-r3)
+(21/98) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/98) Installing ssl_client (1.37.0-r18)
+(23/98) Installing busybox-binsh (1.37.0-r18)
+(24/98) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/98) Installing abuild-sudo (3.15.0-r0)
+(26/98) Installing alpine-baselayout-data (3.7.0-r0)
+(27/98) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/98) Installing bridge (1.5-r5)
+(29/98) Installing ifupdown-ng (0.12.1-r7)
+(30/98) Installing openrc-user (0.62.2-r2)
+(31/98) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/98) Installing mdev-conf (4.8-r0)
+(33/98) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/98) Installing alpine-conf (3.20.0-r0)
+(35/98) Installing alpine-keys (2.5-r0)
+(36/98) Installing alpine-release (3.22.0-r0)
+(37/98) Installing busybox-openrc (1.37.0-r18)
+(38/98) Installing busybox-suid (1.37.0-r18)
+(39/98) Installing alpine-base (3.22.0-r0)
+(40/98) Installing m4 (1.4.20-r0)
+(41/98) Installing libbz2 (1.0.8-r6)
+(42/98) Installing perl (5.40.2-r0)
+(43/98) Installing autoconf (2.72-r1)
+(44/98) Installing automake (1.18-r0)
+(45/98) Installing jansson (2.14.1-r0)
+(46/98) Installing zstd-libs (1.5.7-r0)
+(47/98) Installing binutils (2.44-r0)
+(48/98) Installing libmagic (5.46-r2)
+(49/98) Installing file (5.46-r2)
+(50/98) Installing libgomp (14.3.0-r1)
+(51/98) Installing libatomic (14.3.0-r1)
+(52/98) Installing gmp (6.3.0-r3)
+(53/98) Installing isl26 (0.26-r1)
+(54/98) Installing mpfr4 (4.2.1_p1-r0)
+(55/98) Installing mpc1 (1.3.1-r1)
+(56/98) Installing gcc (14.3.0-r1)
+(57/98) Installing libstdc++-dev (14.3.0-r1)
+(58/98) Installing musl-dev (1.2.5-r10)
+(59/98) Installing g++ (14.3.0-r1)
+(60/98) Installing make (4.4.1-r3)
+(61/98) Installing fortify-headers (1.1-r5)
+(62/98) Installing build-base (0.5-r3)
+(63/98) Installing brotli-libs (1.1.0-r2)
+(64/98) Installing c-ares (1.34.5-r0)
+(65/98) Installing libunistring (1.3-r0)
+(66/98) Installing libidn2 (2.3.7-r0)
+(67/98) Installing nghttp2-libs (1.65.0-r0)
+(68/98) Installing libpsl (0.21.5-r3)
+(69/98) Installing libcurl (8.14.0-r2)
+(70/98) Installing libexpat (2.7.1-r0)
+(71/98) Installing pcre2 (10.43-r1)
+(72/98) Installing git (2.49.0-r0)
+(73/98) Installing git-init-template (2.49.0-r0)
+(74/98) Installing perl-error (0.17030-r0)
+(75/98) Installing perl-git (2.49.0-r0)
+(76/98) Installing git-perl (2.49.0-r0)
+(77/98) Installing popt (1.19-r4)
+(78/98) Installing popt-dev (1.19-r4)
+(79/98) Installing libffi (3.4.8-r0)
+(80/98) Installing gdbm (1.24-r0)
+(81/98) Installing xz-libs (5.8.1-r0)
+(82/98) Installing mpdecimal (4.0.1-r0)
+(83/98) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(84/98) Installing libncursesw (6.5_p20250503-r0)
+(85/98) Installing libpanelw (6.5_p20250503-r0)
+(86/98) Installing readline (8.2.13-r1)
+(87/98) Installing sqlite-libs (3.50.0-r0)
+(88/98) Installing python3 (3.12.10-r1)
+(89/98) Installing python3-pycache-pyc0 (3.12.10-r1)
+(90/98) Installing pyc (3.12.10-r1)
+(91/98) Installing py3-setuptools-pyc (80.9.0-r0)
+(92/98) Installing py3-parsing (3.2.3-r0)
+(93/98) Installing py3-parsing-pyc (3.2.3-r0)
+(94/98) Installing py3-packaging-pyc (25.0-r0)
+(95/98) Installing python3-pyc (3.12.10-r1)
+(96/98) Installing py3-packaging (25.0-r0)
+(97/98) Installing py3-setuptools (80.9.0-r0)
+(98/98) Installing python3-dev (3.12.10-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 388 MiB in 98 packages
+>>> distcc: Fetching https://github.com/distcc/distcc/releases/download/v3.4/distcc-3.4.tar.gz
+>>> distcc: Checking sha512sums...
+distcc-3.4.tar.gz: OK
+distcc-hardened.patch: OK
+gcc-10.patch: OK
+dcc_gcc_rewrite_fqn-avoid-heap-corruption.patch: OK
+distccd.initd: OK
+distccd.confd: OK
+>>> distcc: Unpacking /var/cache/distfiles/distcc-3.4.tar.gz...
+>>> distcc: distcc-hardened.patch
+patching file src/strip.c
+>>> distcc: gcc-10.patch
+patching file src/stats.c
+>>> distcc: dcc_gcc_rewrite_fqn-avoid-heap-corruption.patch
+patching file src/compile.c
+>>> distcc: Updating ./config.sub
+./autogen.sh: running aclocal
+./autogen.sh: running autoheader
+./autogen.sh: running autoconf
+configure.ac:28: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:28: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/types.m4:149: _AC_CHECK_TYPE_NEW is expanded from...
+./lib/autoconf/types.m4:233: AC_CHECK_TYPE is expanded from...
+configure.ac:28: the top level
+configure.ac:65: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:65: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:65: the top level
+configure.ac:81: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:81: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:81: the top level
+configure.ac:84: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:84: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:84: the top level
+configure.ac:96: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:96: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:96: the top level
+configure.ac:104: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:104: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:104: the top level
+configure.ac:113: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:113: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:113: the top level
+configure.ac:121: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:121: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:121: the top level
+configure.ac:129: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:129: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:129: the top level
+configure.ac:228: warning: The macro 'AC_ISC_POSIX' is obsolete.
+configure.ac:228: You should run autoupdate.
+./lib/autoconf/specific.m4:732: AC_ISC_POSIX is expanded from...
+configure.ac:228: the top level
+configure.ac:346: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:346: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:346: the top level
+configure.ac:362: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.ac:362: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.ac:362: the top level
+configure.ac:391: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:391: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:391: the top level
+configure.ac:411: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:411: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:411: the top level
+configure.ac:417: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:417: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+configure.ac:417: the top level
+configure.ac:424: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:424: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+configure.ac:424: the top level
+configure.ac:432: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:432: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+configure.ac:432: the top level
+configure.ac:461: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:461: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+configure.ac:461: the top level
+configure.ac:481: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:481: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:481: the top level
+configure.ac:526: warning: $as_echo is obsolete; use AS_ECHO(["message"]) instead
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+./lib/autoconf/general.m4:2270: AC_CACHE_CHECK is expanded from...
+m4/ax_pthread.m4:88: AX_PTHREAD is expanded from...
+configure.ac:526: the top level
+Now run './configure' and then 'make'.
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking for socklen_t... yes
+checking if building on Android... no
+checking for a Python interpreter with version >= 3.1... python
+checking for python... /usr/bin/python
+checking for python version... 3.12
+checking for python platform... linux
+checking for GNU default python prefix... ${prefix}
+checking for GNU default python exec_prefix... ${exec_prefix}
+checking for python script directory (pythondir)... ${PYTHON_PREFIX}/lib/python3.12/site-packages
+checking for python extension module directory (pyexecdir)... ${PYTHON_EXEC_PREFIX}/lib/python3.12/site-packages
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+configure: Adding gcc options: -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized
+checking for library containing strerror... none required
+checking whether make sets $(MAKE)... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for inline... inline
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking for unistd.h... (cached) yes
+checking for sys/types.h... (cached) yes
+checking for sys/sendfile.h... yes
+checking for ctype.h... yes
+checking for sys/resource.h... yes
+checking for sys/socket.h... yes
+checking for sys/select.h... yes
+checking for netinet/in.h... yes
+checking for arpa/nameser.h... yes
+checking for resolv.h... yes
+checking for float.h... yes
+checking for mcheck.h... no
+checking for alloca.h... yes
+checking for sys/mman.h... yes
+checking for sys/loadavg.h... no
+checking for elf.h... yes
+checking for fnmatch.h... yes
+checking for in_port_t... yes
+checking for in_addr_t... yes
+checking for library containing gethostent... none required
+checking for library containing setsockopt... none required
+checking for library containing hstrerror... none required
+checking for library containing inet_aton... none required
+checking for poptGetContext in -lpopt... yes
+checking for popt.h... yes
+checking whether to use included libpopt... no
+checking for poptGetContext in -lpopt... (cached) yes
+checking return type of signal handlers... void
+checking for getpagesize... yes
+checking for sendfile... yes
+checking for setsid... yes
+checking for flock... yes
+checking for lockf... yes
+checking for hstrerror... yes
+checking for strerror... yes
+checking for setuid... yes
+checking for setreuid... yes
+checking for getuid... yes
+checking for geteuid... yes
+checking for mcheck... no
+checking for wait4... yes
+checking for wait3... yes
+checking for waitpid... yes
+checking for setgroups... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for vasprintf... yes
+checking for asprintf... yes
+checking for getcwd... yes
+checking for getwd... no
+checking for mkdtemp... yes
+checking for getrusage... yes
+checking for strsignal... yes
+checking for gettimeofday... yes
+checking for getaddrinfo... yes
+checking for getnameinfo... yes
+checking for inet_ntop... yes
+checking for inet_ntoa... yes
+checking for strndup... yes
+checking for strsep... yes
+checking for mmap... yes
+checking for strlcpy... yes
+checking for getloadavg... yes
+checking for getline... yes
+checking for fstatat... yes
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether snprintf is declared... yes
+checking whether vsnprintf is declared... yes
+checking whether vasprintf is declared... yes
+checking whether asprintf is declared... yes
+checking whether strndup is declared... yes
+checking if mmap() supports MAP_FAILED... yes
+checking for vararg macro support... yes
+checking for va_copy... yes
+checking for __va_copy... no
+checking for C99 vsnprintf... yes
+checking for working socketpair... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for AVAHI... checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for a sed that does not truncate output... /bin/sed
+checking how to run the C preprocessor... cc -E
+checking for egrep -e... /bin/grep -E
+checking whether cc is Clang... no
+checking whether pthreads work with -pthread... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating popt/.stamp-conf
+config.status: creating lzo/.stamp-conf
+config.status: creating pump
+config.status: creating src/config.h
+ 
+'make install' will install distcc as follows:
+  man pages            /usr/share/man/man1
+  documents            /usr/share/doc/distcc
+  programs             /usr/bin
+  sbin programs        /usr/sbin
+  system configuration /etc
+  icon file            /usr/share/pixmaps
+  application file     /usr/share/applications
+ 
+
+    distcc 3.4 configured
+
+    Copyright (C) 2002, 2003, 2004 by Martin Pool <mbp@samba.org>
+    Portions Copyright 2005 Google Inc.
+
+    This program is free software; you can redistribute it and/or
+    modify it under the terms of the GNU General Public License
+    as published by the Free Software Foundation; either version 2
+    of the License, or (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program; if not, write to the Free Software
+    Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301,
+    USA.
+
+After installing distcc, please complete the survey in the file "survey.txt".
+
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/backoff.o -c src/backoff.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/climasq.o -c src/climasq.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/clinet.o -c src/clinet.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/clirpc.o -c src/clirpc.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/compile.o -c src/compile.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/cpp.o -c src/cpp.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/distcc.o -c src/distcc.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/remote.o -c src/remote.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/ssh.o -c src/ssh.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/state.o -c src/state.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/strip.o -c src/strip.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/timefile.o -c src/timefile.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/traceenv.o -c src/traceenv.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/include_server_if.o -c src/include_server_if.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/where.o -c src/where.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/emaillog.o -c src/emaillog.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/arg.o -c src/arg.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/argutil.o -c src/argutil.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/cleanup.o -c src/cleanup.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/compress.o -c src/compress.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/trace.o -c src/trace.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/util.o -c src/util.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/io.o -c src/io.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/exec.o -c src/exec.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/rpc.o -c src/rpc.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/tempfile.o -c src/tempfile.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/bulk.o -c src/bulk.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/help.o -c src/help.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/filename.o -c src/filename.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/lock.o -c src/lock.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/netutil.o -c src/netutil.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/pump.o -c src/pump.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/sendfile.o -c src/sendfile.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/safeguard.o -c src/safeguard.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/snprintf.o -c src/snprintf.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/timeval.o -c src/timeval.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/dotd.o -c src/dotd.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/hosts.o -c src/hosts.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/hostfile.o -c src/hostfile.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/implicit.o -c src/implicit.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/loadfile.o -c src/loadfile.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o lzo/minilzo.o -c lzo/minilzo.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/access.o -c src/access.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/daemon.o -c src/daemon.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/dopt.o -c src/dopt.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/dparent.o -c src/dparent.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/dsignal.o -c src/dsignal.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/ncpus.o -c src/ncpus.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/prefork.o -c src/prefork.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/stringmap.o -c src/stringmap.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/serve.o -c src/serve.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/setuid.o -c src/setuid.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/srvnet.o -c src/srvnet.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/srvrpc.o -c src/srvrpc.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/stats.o -c src/stats.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/fix_debug_info.o -c src/fix_debug_info.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/mon.o -c src/mon.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/mon-text.o -c src/mon-text.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/lsdistcc.o -c src/lsdistcc.c
+cc -DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo"   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -o src/rslave.o -c src/rslave.c
+src/stats.c:85:20: warning: 'stats_text' initialized and declared 'extern'
+   85 | extern const char *stats_text[20] = { "TCP_ACCEPT", "REJ_BAD_REQ", "REJ_OVERLOAD",
+      |                    ^~~~~~~~~~
+cp update-distcc-symlinks.py update-distcc-symlinks
+if test -z "/usr/bin/python"; then	\
+  echo "Not building include-server: No suitable python found"; \
+else						\
+  mkdir -p "./_include_server" &&      \
+  DISTCC_VERSION="3.4"			\
+  SRCDIR="."                            \
+  CFLAGS="-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wno-missing-prototypes -Wno-missing-declarations -Wno-write-strings"           \
+  CPPFLAGS="-DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo" "                        \
+  /usr/bin/python "./include_server/setup.py" \
+      build 					\
+        --build-base="./_include_server"  \
+        --build-temp="./_include_server"; \
+fi
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o distccmon-text src/cleanup.o src/filename.o src/io.o src/mon.o src/netutil.o src/argutil.o src/rpc.o src/snprintf.o src/state.o src/tempfile.o src/trace.o src/traceenv.o src/util.o src/mon-text.o -lpopt -lpopt 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o distcc src/backoff.o src/climasq.o src/clinet.o src/clirpc.o src/compile.o src/cpp.o src/distcc.o src/remote.o src/ssh.o src/state.o src/strip.o src/timefile.o src/traceenv.o src/include_server_if.o src/where.o src/emaillog.o src/arg.o src/argutil.o src/cleanup.o src/compress.o src/trace.o src/util.o src/io.o src/exec.o src/rpc.o src/tempfile.o src/bulk.o src/help.o src/filename.o src/lock.o src/netutil.o src/pump.o src/sendfile.o src/safeguard.o src/snprintf.o src/timeval.o src/dotd.o src/hosts.o src/hostfile.o src/implicit.o src/loadfile.o lzo/minilzo.o  -lpopt -lpopt 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o distccd src/access.o src/daemon.o  src/dopt.o src/dparent.o src/dsignal.o src/ncpus.o src/prefork.o src/stringmap.o src/serve.o src/setuid.o src/srvnet.o src/srvrpc.o src/state.o src/stats.o src/fix_debug_info.o src/arg.o src/argutil.o src/cleanup.o src/compress.o src/trace.o src/util.o src/io.o src/exec.o src/rpc.o src/tempfile.o src/bulk.o src/help.o src/filename.o src/lock.o src/netutil.o src/pump.o src/sendfile.o src/safeguard.o src/snprintf.o src/timeval.o src/dotd.o src/hosts.o src/hostfile.o src/implicit.o src/loadfile.o lzo/minilzo.o   -lpopt -lpopt 	
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o lsdistcc src/lsdistcc.o src/clinet.o src/io.o src/netutil.o src/trace.o src/util.o src/rslave.o src/snprintf.o lzo/minilzo.o -lpopt -lpopt 
+>>> distcc: Entering fakeroot...
+'make install' will install distcc as follows:
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/usr/share/doc/distcc"
+  man pages            /tmp/pkg/distcc/usr/share/man/man1
+mkdir /tmp/pkg/distcc
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/usr/share/man/man1"
+  documents            /tmp/pkg/distcc/usr/share/doc/distcc
+mkdir /tmp/pkg/distcc/usr
+mkdir /tmp/pkg/distcc/usr/share
+echo "path: $PATH"
+path: /bin:/usr/bin:/sbin:/usr/sbin
+  programs             /tmp/pkg/distcc/usr/bin
+mkdir /tmp/pkg/distcc/usr/share/doc
+mkdir /tmp/pkg/distcc/usr/share/man
+mkdir /tmp/pkg/distcc/usr/share/doc/distcc
+mkdir /tmp/pkg/distcc/usr/share/man/man1
+for p in AUTHORS COPYING NEWS README README.pump INSTALL TODO doc/protocol-1.txt doc/status-1.txt doc/protocol-2.txt doc/protocol-3.txt doc/protocol-3-impl.txt doc/protocol-gssapi.txt doc/reporting-bugs.txt survey.txt; do \
+  /usr/bin/install -c -m 644 "./$p" "/tmp/pkg/distcc/usr/share/doc/distcc" || exit 1; \
+done
+for p in man/distcc.1 man/distccd.1 man/distccmon-text.1 man/lsdistcc.1 man/pump.1 man/include_server.1; do \
+  if gzip --help >/dev/null 2>&1; then \
+    mkdir -p "`dirname $p`"; \
+    if [ -e "/tmp/pkg/distcc/usr/share/man/man1$p" ]; then rm -fv "/tmp/pkg/distcc/usr/share/man/man1$p"; fi; \
+    gzip < "./$p" > "$p.gz"; \
+    /usr/bin/install -c -m 644 "$p.gz" "/tmp/pkg/distcc/usr/share/man/man1" || exit 1; \
+  else \
+    echo "Warning: no working gzip, installing man pages uncompressed" 1>&2; \
+    if [ -e "/tmp/pkg/distcc/usr/share/man/man1$p.gz" ]; then rm -fv "/tmp/pkg/distcc/usr/share/man/man1$p.gz"; fi; \
+    /usr/bin/install -c -m 644 "./$p" "/tmp/pkg/distcc/usr/share/man/man1" || exit 1; \
+  fi; \
+done
+./config.status
+  sbin programs        /tmp/pkg/distcc/usr/sbin
+if test -z "/usr/bin/python"; then	\
+  echo "Not building include-server: No suitable python found"; \
+else						\
+  mkdir -p "./_include_server" &&      \
+  DISTCC_VERSION="3.4"			\
+  SRCDIR="."                            \
+  CFLAGS="-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wno-missing-prototypes -Wno-missing-declarations -Wno-write-strings"           \
+  CPPFLAGS="-DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo" "                        \
+  /usr/bin/python "./include_server/setup.py" \
+      build 					\
+        --build-base="./_include_server"  \
+        --build-temp="./_include_server"; \
+fi
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/usr/share/doc/distcc/example"
+  system configuration /tmp/pkg/distcc/etc
+mkdir /tmp/pkg/distcc/usr/share/doc/distcc/example
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/etc/distcc"
+  icon file            /tmp/pkg/distcc/usr/share/pixmaps
+for p in doc/example/README doc/example/default doc/example/hosts.allow doc/example/services doc/example/init doc/example/init-suse doc/example/logrotate doc/example/xinetd ; do \
+  /usr/bin/install -c -m 644 "./$p" "/tmp/pkg/distcc/usr/share/doc/distcc/example" || exit 1; \
+done
+  application file     /tmp/pkg/distcc/usr/share/applications
+mkdir /tmp/pkg/distcc/etc
+mkdir /tmp/pkg/distcc/etc/distcc
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/etc/default"
+mkdir /tmp/pkg/distcc/etc/default
+/usr/bin/install -c -m 644 ./packaging/RedHat/conf/hosts /tmp/pkg/distcc/etc/distcc/hosts
+/usr/bin/install -c -m 644 ./packaging/RedHat/conf/clients.allow /tmp/pkg/distcc/etc/distcc/clients.allow
+/usr/bin/install -c -m 644 ./packaging/RedHat/conf/commands.allow.sh /tmp/pkg/distcc/etc/distcc/commands.allow.sh
+/usr/bin/install -c -m 644 ./packaging/RedHat/default/distcc /tmp/pkg/distcc/etc/default/distcc
+config.status: creating Makefile
+config.status: creating popt/.stamp-conf
+config.status: creating lzo/.stamp-conf
+config.status: creating pump
+config.status: creating src/config.h
+config.status: src/config.h is unchanged
+touch src/config.h.stamp
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/usr/bin"
+mkdir /tmp/pkg/distcc/usr/bin
+/bin/sh ./mkinstalldirs "/tmp/pkg/distcc/usr/sbin"
+mkdir /tmp/pkg/distcc/usr/sbin
+for p in distcc distccd distccmon-text lsdistcc ; do \
+  /usr/bin/install -c  "$p" "/tmp/pkg/distcc/usr/bin" || exit 1; \
+done
+for p in update-distcc-symlinks; do \
+  /usr/bin/install -c  "$p" "/tmp/pkg/distcc/usr/sbin" || exit 1; \
+done
+if test -z "/usr/bin/python"; then	\
+  echo "Not building install-include-server: No suitable python found"; \
+else						\
+  mkdir -p "./_include_server" &&      \
+  DESTDIR=`cd "/tmp/pkg/distcc/" && pwd` &&            \
+  DISTCC_VERSION="3.4"			\
+  SRCDIR="."                            \
+  CFLAGS="-Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -MD -W -Wall -Wimplicit -Wshadow -Wpointer-arith -Wcast-align -Wwrite-strings -Waggregate-return -Wstrict-prototypes -Wmissing-prototypes -Wnested-externs -Wmissing-declarations -Wuninitialized -pthread -Wno-missing-prototypes -Wno-missing-declarations -Wno-write-strings"           \
+  CPPFLAGS="-DMINILZO_HAVE_CONFIG_H -DHAVE_CONFIG_H -D_GNU_SOURCE -DLIBDIR="\"/usr/lib\"" -DSYSCONFDIR="\"/etc\"" -DICONDIR="\"/usr/share/pixmaps\"" -Isrc -I"./src" -I"./lzo" "                        \
+  /usr/bin/python "./include_server/setup.py" \
+      build 					\
+        --build-base="./_include_server" \
+        --build-temp="./_include_server" \
+      install 					\
+         --prefix="/usr" 			\
+         --record="./_include_server/install.log.pre" \
+         --root="$DESTDIR"                     \
+    || exit 1; \
+  sed -e '/^[^\/]/ s,^,/,' \
+      -e 's/\r$//' \
+      "./_include_server/install.log.pre" \
+      > "./_include_server/install.log"; \
+  if test -n ""; then \
+    cp -f "./_include_server/install.log" ""; \
+  fi; \
+  /bin/sh ./mkinstalldirs "/tmp/pkg/distcc/usr/bin" && \
+  INCLUDE_SERVER=`grep '/include_server.py$' "./_include_server/install.log"` && \
+  sed "s,^include_server='',include_server='$INCLUDE_SERVER'," \
+    pump > "./_include_server/pump" && \
+  /usr/bin/install -c "./_include_server/pump" "/tmp/pkg/distcc/usr/bin"; \
+fi
+/usr/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        By 2025-Oct-31, you need to update your project and remove deprecated calls
+        or your builds will no longer be supported.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/usr/lib/python3.12/site-packages/include_server/parse_command.py:126: SyntaxWarning: invalid escape sequence '\.'
+/usr/lib/python3.12/site-packages/include_server/parse_command.py:127: SyntaxWarning: invalid escape sequence '\['
+>>> distcc-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/distcc-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/distcc-doc/usr/share/man'
+>>> distcc-doc*: Preparing subpackage distcc-doc...
+>>> distcc-doc*: Running postcheck for distcc-doc
+>>> distcc-pump-pyc*: Running split function pyc...
+'usr/lib/python3.12/site-packages/include_server/__pycache__' -> '/tmp/pkg/distcc-pump-pyc/usr/lib/python3.12/site-packages/include_server/__pycache__'
+>>> distcc-pump-pyc*: Preparing subpackage distcc-pump-pyc...
+>>> distcc-pump-pyc*: Running postcheck for distcc-pump-pyc
+>>> distcc-pump*: Running split function pump...
+>>> distcc-pump*: Preparing subpackage distcc-pump...
+>>> distcc-pump*: Stripping binaries
+>>> distcc-pump*: Running postcheck for distcc-pump
+>>> distcc-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/distcc-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/distcc-openrc/etc/init.d'
+>>> distcc-openrc*: Preparing subpackage distcc-openrc...
+>>> distcc-openrc*: Running postcheck for distcc-openrc
+>>> distcc*: Running postcheck for distcc
+>>> distcc*: Preparing package distcc...
+>>> distcc*: Stripping binaries
+>>> distcc*: Script found. /bin/sh added as a dependency for distcc-3.4-r9.apk
+>>> distcc*: Adding .pre-install
+>>> distcc-doc*: Scanning shared objects
+>>> distcc-openrc*: Scanning shared objects
+>>> distcc-pump-pyc*: Scanning shared objects
+>>> distcc-pump*: Scanning shared objects
+>>> distcc*: Scanning shared objects
+>>> distcc-doc*: Tracing dependencies...
+>>> distcc-doc*: Package size: 195.7 KB
+>>> distcc-doc*: Compressing data...
+>>> distcc-doc*: Create checksum...
+>>> distcc-doc*: Create distcc-doc-3.4-r9.apk
+>>> distcc-openrc*: Tracing dependencies...
+>>> distcc-openrc*: Package size: 2.2 KB
+>>> distcc-openrc*: Compressing data...
+>>> distcc-openrc*: Create checksum...
+>>> distcc-openrc*: Create distcc-openrc-3.4-r9.apk
+>>> distcc-pump-pyc*: Tracing dependencies...
+	python3~3.12
+>>> distcc-pump-pyc*: Package size: 284.0 KB
+>>> distcc-pump-pyc*: Compressing data...
+>>> distcc-pump-pyc*: Create checksum...
+>>> distcc-pump-pyc*: Create distcc-pump-pyc-3.4-r9.apk
+>>> distcc-pump*: Tracing dependencies...
+	python3
+	py3-setuptools
+	distcc=3.4-r9
+	python3~3.12
+	so:libc.musl-x86_64.so.1
+>>> distcc-pump*: Package size: 373.9 KB
+>>> distcc-pump*: Compressing data...
+>>> distcc-pump*: Create checksum...
+>>> distcc-pump*: Create distcc-pump-3.4-r9.apk
+>>> distcc*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libpopt.so.0
+>>> distcc*: Package size: 298.4 KB
+>>> distcc*: Compressing data...
+>>> distcc*: Create checksum...
+>>> distcc*: Create distcc-3.4-r9.apk
+>>> distcc: Updating the main/x86_64 repository index...
+>>> distcc: Signing the index...
+>>> distcc: Cleaning up srcdir
+>>> distcc: Cleaning up build chroot
+>>> distcc: Cleaning up pkgdir

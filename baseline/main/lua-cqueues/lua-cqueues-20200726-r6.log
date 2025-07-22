@@ -1,0 +1,597 @@
+>>> lua-cqueues: Validating /home/packager/oily-pine/main/lua-cqueues/APKBUILD...
+>>> lua-cqueues: Cleaning up srcdir
+>>> lua-cqueues: Cleaning up pkgdir
+>>> lua-cqueues: Cleaning up tmpdir
+>>> lua-cqueues: Fetching cqueues-20200726.tar.gz::https://github.com/wahern/cqueues/archive/rel-20200726.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100  499k    0  499k    0     0   554k      0 --:--:-- --:--:-- --:--:--  554k
+>>> lua-cqueues: Fetching cqueues-20200726.tar.gz::https://github.com/wahern/cqueues/archive/rel-20200726.tar.gz
+>>> lua-cqueues: Checking sha512sums...
+cqueues-20200726.tar.gz: OK
+>>> lua-cqueues: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/87) Installing musl (1.2.5-r10)
+(2/87) Installing libcrypto3 (3.5.0-r0)
+(3/87) Installing ca-certificates-bundle (20241121-r2)
+(4/87) Installing libssl3 (3.5.0-r0)
+(5/87) Installing zlib (1.3.1-r2)
+(6/87) Installing libapk2 (2.14.9-r2)
+(7/87) Installing apk-tools (2.14.9-r2)
+(8/87) Installing libcap2 (2.76-r0)
+(9/87) Installing libcap-getcap (2.76-r0)
+(10/87) Installing fakeroot (1.37.1.1-r0)
+(11/87) Installing scanelf (1.3.8-r1)
+(12/87) Installing musl-utils (1.2.5-r10)
+(13/87) Installing libgcc (14.3.0-r1)
+(14/87) Installing libstdc++ (14.3.0-r1)
+(15/87) Installing lzip (1.25-r0)
+(16/87) Installing openssl (3.5.0-r0)
+(17/87) Installing patch (2.8-r0)
+(18/87) Installing pkgconf (2.4.3-r0)
+(19/87) Installing acl-libs (2.3.2-r1)
+(20/87) Installing tar (1.35-r3)
+(21/87) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/87) Installing ssl_client (1.37.0-r18)
+(23/87) Installing busybox-binsh (1.37.0-r18)
+(24/87) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/87) Installing abuild-sudo (3.15.0-r0)
+(26/87) Installing alpine-baselayout-data (3.7.0-r0)
+(27/87) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/87) Installing bridge (1.5-r5)
+(29/87) Installing ifupdown-ng (0.12.1-r7)
+(30/87) Installing openrc-user (0.62.2-r2)
+(31/87) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/87) Installing mdev-conf (4.8-r0)
+(33/87) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/87) Installing alpine-conf (3.20.0-r0)
+(35/87) Installing alpine-keys (2.5-r0)
+(36/87) Installing alpine-release (3.22.0-r0)
+(37/87) Installing busybox-openrc (1.37.0-r18)
+(38/87) Installing busybox-suid (1.37.0-r18)
+(39/87) Installing alpine-base (3.22.0-r0)
+(40/87) Installing bsd-compat-headers (0.7.2-r6)
+(41/87) Installing jansson (2.14.1-r0)
+(42/87) Installing zstd-libs (1.5.7-r0)
+(43/87) Installing binutils (2.44-r0)
+(44/87) Installing libmagic (5.46-r2)
+(45/87) Installing file (5.46-r2)
+(46/87) Installing libgomp (14.3.0-r1)
+(47/87) Installing libatomic (14.3.0-r1)
+(48/87) Installing gmp (6.3.0-r3)
+(49/87) Installing isl26 (0.26-r1)
+(50/87) Installing mpfr4 (4.2.1_p1-r0)
+(51/87) Installing mpc1 (1.3.1-r1)
+(52/87) Installing gcc (14.3.0-r1)
+(53/87) Installing libstdc++-dev (14.3.0-r1)
+(54/87) Installing musl-dev (1.2.5-r10)
+(55/87) Installing g++ (14.3.0-r1)
+(56/87) Installing make (4.4.1-r3)
+(57/87) Installing fortify-headers (1.1-r5)
+(58/87) Installing build-base (0.5-r3)
+(59/87) Installing brotli-libs (1.1.0-r2)
+(60/87) Installing c-ares (1.34.5-r0)
+(61/87) Installing libunistring (1.3-r0)
+(62/87) Installing libidn2 (2.3.7-r0)
+(63/87) Installing nghttp2-libs (1.65.0-r0)
+(64/87) Installing libpsl (0.21.5-r3)
+(65/87) Installing libcurl (8.14.0-r2)
+(66/87) Installing libexpat (2.7.1-r0)
+(67/87) Installing pcre2 (10.43-r1)
+(68/87) Installing git (2.49.0-r0)
+(69/87) Installing git-init-template (2.49.0-r0)
+(70/87) Installing lua5.1-libs (5.1.5-r13)
+(71/87) Installing lua5.1 (5.1.5-r13)
+(72/87) Installing lua5.1-dev (5.1.5-r13)
+(73/87) Installing lua5.2-libs (5.2.4-r13)
+(74/87) Installing lua5.2 (5.2.4-r13)
+(75/87) Installing lua5.2-dev (5.2.4-r13)
+(76/87) Installing linenoise (1.0-r5)
+(77/87) Installing lua5.3-libs (5.3.6-r6)
+(78/87) Installing lua5.3 (5.3.6-r6)
+(79/87) Installing lua5.3-dev (5.3.6-r6)
+(80/87) Installing lua5.4-libs (5.4.7-r0)
+(81/87) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(82/87) Installing libncursesw (6.5_p20250503-r0)
+(83/87) Installing readline (8.2.13-r1)
+(84/87) Installing lua5.4 (5.4.7-r0)
+(85/87) Installing lua5.4-dev (5.4.7-r0)
+(86/87) Installing m4 (1.4.20-r0)
+(87/87) Installing openssl-dev (3.5.0-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 269 MiB in 87 packages
+>>> lua-cqueues: Fetching cqueues-20200726.tar.gz::https://github.com/wahern/cqueues/archive/rel-20200726.tar.gz
+>>> lua-cqueues: Checking sha512sums...
+cqueues-20200726.tar.gz: OK
+>>> lua-cqueues: Unpacking /var/cache/distfiles/cqueues-20200726.tar.gz...
+>>> lua-cqueues: Building for Lua 5.1
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+cp /tmp/src/cqueues-rel-20200726/config.h.guess /tmp/src/cqueues-rel-20200726/config.h
+cd /tmp/src/cqueues-rel-20200726/src && m4 /tmp/src/cqueues-rel-20200726/src/errno.c.m4 >| /tmp/src/cqueues-rel-20200726/src/errno.c.tmp
+cp /tmp/src/cqueues-rel-20200726/config.h /tmp/src/cqueues-rel-20200726/src/lib/config.h
+cp /tmp/src/cqueues-rel-20200726/config.h /tmp/src/cqueues-rel-20200726/src/config.h
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DSOCKET_DEBUG -DHAVE_CONFIG_H -DDNS_RANDOM=RAND_bytes -c -o /tmp/src/cqueues-rel-20200726/src/lib/socket.o /tmp/src/cqueues-rel-20200726/src/lib/socket.c
+mv /tmp/src/cqueues-rel-20200726/src/errno.c.tmp /tmp/src/cqueues-rel-20200726/src/errno.c
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DSOCKET_DEBUG -DHAVE_CONFIG_H -DDNS_RANDOM=RAND_bytes -c -o /tmp/src/cqueues-rel-20200726/src/lib/dns.o /tmp/src/cqueues-rel-20200726/src/lib/dns.c
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DSOCKET_DEBUG -DHAVE_CONFIG_H -DDNS_RANDOM=RAND_bytes -c -o /tmp/src/cqueues-rel-20200726/src/lib/notify.o /tmp/src/cqueues-rel-20200726/src/lib/notify.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues    -c -o /tmp/src/cqueues-rel-20200726/src/5.1/compat53.o /tmp/src/cqueues-rel-20200726/src/../vendor/compat53/c-api/compat-5.3.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/cqueues.o /tmp/src/cqueues-rel-20200726/src/cqueues.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/socket.o /tmp/src/cqueues-rel-20200726/src/socket.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/errno.o /tmp/src/cqueues-rel-20200726/src/errno.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/signal.o /tmp/src/cqueues-rel-20200726/src/signal.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/thread.o /tmp/src/cqueues-rel-20200726/src/thread.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_start':
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  618 |         if (!(ct->tmp.arg = calloc(sizeof *ct->tmp.arg, top)))
+      |                                           ^
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: note: earlier argument should specify number of elements, later size of each element
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/notify.o /tmp/src/cqueues-rel-20200726/src/notify.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.1
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.1/dns.o /tmp/src/cqueues-rel-20200726/src/dns.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_enter':
+/tmp/src/cqueues-rel-20200726/src/thread.c:304:20: warning: variable 'L' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  304 |         lua_State *L = NULL;
+      |                    ^
+In function 'dns_so_tcp_send',
+    inlined from 'dns_so_check' at /tmp/src/cqueues-rel-20200726/src/lib/dns.c:6678:16:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.c:6547:24: warning: array subscript -2 is below array bounds of 'unsigned char[1]' [-Warray-bounds=]
+ 6547 |         so->query->data[-2] = 0xff & (so->query->end >> 8);
+      |         ~~~~~~~~~~~~~~~^~~~
+In file included from /tmp/src/cqueues-rel-20200726/src/lib/dns.c:83:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h: In function 'dns_so_check':
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h:422:31: note: while referencing 'data'
+  422 |                 unsigned char data[1];
+      |                               ^~~~
+In function 'dns_so_tcp_send',
+    inlined from 'dns_so_check' at /tmp/src/cqueues-rel-20200726/src/lib/dns.c:6678:16:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.c:6548:24: warning: array subscript -1 is below array bounds of 'unsigned char[1]' [-Warray-bounds=]
+ 6548 |         so->query->data[-1] = 0xff & (so->query->end >> 0);
+      |         ~~~~~~~~~~~~~~~^~~~
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h: In function 'dns_so_check':
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h:422:31: note: while referencing 'data'
+  422 |                 unsigned char data[1];
+      |                               ^~~~
+In function 'dns_so_tcp_send',
+    inlined from 'dns_so_check' at /tmp/src/cqueues-rel-20200726/src/lib/dns.c:6678:16:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.c:6550:16: warning: array subscript -2 is below array bounds of 'unsigned char[1]' [-Warray-bounds=]
+ 6550 |         qsrc = &so->query->data[-2] + so->qout;
+      |                ^~~~~~~~~~~~~~~~~~~~
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h: In function 'dns_so_check':
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h:422:31: note: while referencing 'data'
+  422 |                 unsigned char data[1];
+      |                               ^~~~
+In function 'dns_so_tcp_recv',
+    inlined from 'dns_so_check' at /tmp/src/cqueues-rel-20200726/src/lib/dns.c:6684:16:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.c:6576:24: warning: array subscript -2 is below array bounds of 'unsigned char[1]' [-Warray-bounds=]
+ 6576 |                 asrc = &so->answer->data[-2];
+      |                        ^~~~~~~~~~~~~~~~~~~~~
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h: In function 'dns_so_check':
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h:422:31: note: while referencing 'data'
+  422 |                 unsigned char data[1];
+      |                               ^~~~
+In function 'dns_so_tcp_recv',
+    inlined from 'dns_so_check' at /tmp/src/cqueues-rel-20200726/src/lib/dns.c:6684:16:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.c:6587:39: warning: array subscript -2 is below array bounds of 'unsigned char[1]' [-Warray-bounds=]
+ 6587 |                         alen = ((0xff & so->answer->data[-2]) << 8)
+      |                                 ~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h: In function 'dns_so_check':
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h:422:31: note: while referencing 'data'
+  422 |                 unsigned char data[1];
+      |                               ^~~~
+In function 'dns_so_tcp_recv',
+    inlined from 'dns_so_check' at /tmp/src/cqueues-rel-20200726/src/lib/dns.c:6684:16:
+/tmp/src/cqueues-rel-20200726/src/lib/dns.c:6588:63: warning: array subscript -1 is below array bounds of 'unsigned char[1]' [-Warray-bounds=]
+ 6588 |                              | ((0xff & so->answer->data[-1]) << 0);
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h: In function 'dns_so_check':
+/tmp/src/cqueues-rel-20200726/src/lib/dns.h:422:31: note: while referencing 'data'
+  422 |                 unsigned char data[1];
+      |                               ^~~~
+ar cr /tmp/src/cqueues-rel-20200726/src/lib/libnonlua.a /tmp/src/cqueues-rel-20200726/src/lib/socket.o /tmp/src/cqueues-rel-20200726/src/lib/dns.o /tmp/src/cqueues-rel-20200726/src/lib/notify.o
+ranlib /tmp/src/cqueues-rel-20200726/src/lib/libnonlua.a
+cc -o /tmp/src/cqueues-rel-20200726/src/5.1/cqueues.so /tmp/src/cqueues-rel-20200726/src/5.1/cqueues.o /tmp/src/cqueues-rel-20200726/src/5.1/socket.o /tmp/src/cqueues-rel-20200726/src/5.1/errno.o /tmp/src/cqueues-rel-20200726/src/5.1/signal.o /tmp/src/cqueues-rel-20200726/src/5.1/thread.o /tmp/src/cqueues-rel-20200726/src/5.1/notify.o /tmp/src/cqueues-rel-20200726/src/5.1/dns.o /tmp/src/cqueues-rel-20200726/src/lib/libnonlua.a /tmp/src/cqueues-rel-20200726/src/5.1/compat53.o -shared  -L/usr/local/lib -L/usr/local/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lssl -lcrypto -lpthread -ldl -lrt -lm
+>>> lua-cqueues: Building for Lua 5.2
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/cqueues.o /tmp/src/cqueues-rel-20200726/src/cqueues.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/socket.o /tmp/src/cqueues-rel-20200726/src/socket.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/errno.o /tmp/src/cqueues-rel-20200726/src/errno.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/signal.o /tmp/src/cqueues-rel-20200726/src/signal.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/thread.o /tmp/src/cqueues-rel-20200726/src/thread.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_start':
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  618 |         if (!(ct->tmp.arg = calloc(sizeof *ct->tmp.arg, top)))
+      |                                           ^
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: note: earlier argument should specify number of elements, later size of each element
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/notify.o /tmp/src/cqueues-rel-20200726/src/notify.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.2/dns.o /tmp/src/cqueues-rel-20200726/src/dns.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_enter':
+/tmp/src/cqueues-rel-20200726/src/thread.c:304:20: warning: variable 'L' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  304 |         lua_State *L = NULL;
+      |                    ^
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.2
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.2 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues    -c -o /tmp/src/cqueues-rel-20200726/src/5.2/compat53.o /tmp/src/cqueues-rel-20200726/src/../vendor/compat53/c-api/compat-5.3.c
+cc -o /tmp/src/cqueues-rel-20200726/src/5.2/cqueues.so /tmp/src/cqueues-rel-20200726/src/5.2/cqueues.o /tmp/src/cqueues-rel-20200726/src/5.2/socket.o /tmp/src/cqueues-rel-20200726/src/5.2/errno.o /tmp/src/cqueues-rel-20200726/src/5.2/signal.o /tmp/src/cqueues-rel-20200726/src/5.2/thread.o /tmp/src/cqueues-rel-20200726/src/5.2/notify.o /tmp/src/cqueues-rel-20200726/src/5.2/dns.o /tmp/src/cqueues-rel-20200726/src/lib/libnonlua.a /tmp/src/cqueues-rel-20200726/src/5.2/compat53.o -shared  -L/usr/local/lib -L/usr/local/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lssl -lcrypto -lpthread -ldl -lrt -lm
+>>> lua-cqueues: Building for Lua 5.3
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/cqueues.o /tmp/src/cqueues-rel-20200726/src/cqueues.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/socket.o /tmp/src/cqueues-rel-20200726/src/socket.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/errno.o /tmp/src/cqueues-rel-20200726/src/errno.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/signal.o /tmp/src/cqueues-rel-20200726/src/signal.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/thread.o /tmp/src/cqueues-rel-20200726/src/thread.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_start':
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  618 |         if (!(ct->tmp.arg = calloc(sizeof *ct->tmp.arg, top)))
+      |                                           ^
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: note: earlier argument should specify number of elements, later size of each element
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/notify.o /tmp/src/cqueues-rel-20200726/src/notify.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.3
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.3 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.3/dns.o /tmp/src/cqueues-rel-20200726/src/dns.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_enter':
+/tmp/src/cqueues-rel-20200726/src/thread.c:304:20: warning: variable 'L' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  304 |         lua_State *L = NULL;
+      |                    ^
+cc -o /tmp/src/cqueues-rel-20200726/src/5.3/cqueues.so /tmp/src/cqueues-rel-20200726/src/5.3/cqueues.o /tmp/src/cqueues-rel-20200726/src/5.3/socket.o /tmp/src/cqueues-rel-20200726/src/5.3/errno.o /tmp/src/cqueues-rel-20200726/src/5.3/signal.o /tmp/src/cqueues-rel-20200726/src/5.3/thread.o /tmp/src/cqueues-rel-20200726/src/5.3/notify.o /tmp/src/cqueues-rel-20200726/src/5.3/dns.o /tmp/src/cqueues-rel-20200726/src/lib/libnonlua.a -shared  -L/usr/local/lib -L/usr/local/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lssl -lcrypto -lpthread -ldl -lrt -lm
+>>> lua-cqueues: Building for Lua 5.4
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/cqueues.o /tmp/src/cqueues-rel-20200726/src/cqueues.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/socket.o /tmp/src/cqueues-rel-20200726/src/socket.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/errno.o /tmp/src/cqueues-rel-20200726/src/errno.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/signal.o /tmp/src/cqueues-rel-20200726/src/signal.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/thread.o /tmp/src/cqueues-rel-20200726/src/thread.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_start':
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: warning: 'calloc' sizes specified with 'sizeof' in the earlier argument and not in the later argument [-Wcalloc-transposed-args]
+  618 |         if (!(ct->tmp.arg = calloc(sizeof *ct->tmp.arg, top)))
+      |                                           ^
+/tmp/src/cqueues-rel-20200726/src/thread.c:618:43: note: earlier argument should specify number of elements, later size of each element
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/notify.o /tmp/src/cqueues-rel-20200726/src/notify.c
+mkdir -p /tmp/src/cqueues-rel-20200726/src/5.4
+cc -O2 -std=gnu99 -fPIC -g -Wall -Wextra  -Wno-missing-field-initializers  -Wno-override-init -Wno-unused -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DHAVE_EVENTFD=1 -DHAVE_EPOLL_CREATE1=1 -DHAVE_PIPE2=1 -DLUA_COMPAT_APIINTCASTS -I/usr/include/lua5.4 -D_REENTRANT -D_THREAD_SAFE -D_GNU_SOURCE  -DCOMPAT53_PREFIX=cqueues -DCQUEUES_VENDOR='"quae@daurnimator.com"' -DCQUEUES_VERSION=20200726L  -c -o /tmp/src/cqueues-rel-20200726/src/5.4/dns.o /tmp/src/cqueues-rel-20200726/src/dns.c
+/tmp/src/cqueues-rel-20200726/src/thread.c: In function 'ct_enter':
+/tmp/src/cqueues-rel-20200726/src/thread.c:304:20: warning: variable 'L' might be clobbered by 'longjmp' or 'vfork' [-Wclobbered]
+  304 |         lua_State *L = NULL;
+      |                    ^
+cc -o /tmp/src/cqueues-rel-20200726/src/5.4/cqueues.so /tmp/src/cqueues-rel-20200726/src/5.4/cqueues.o /tmp/src/cqueues-rel-20200726/src/5.4/socket.o /tmp/src/cqueues-rel-20200726/src/5.4/errno.o /tmp/src/cqueues-rel-20200726/src/5.4/signal.o /tmp/src/cqueues-rel-20200726/src/5.4/thread.o /tmp/src/cqueues-rel-20200726/src/5.4/notify.o /tmp/src/cqueues-rel-20200726/src/5.4/dns.o /tmp/src/cqueues-rel-20200726/src/lib/libnonlua.a -shared  -L/usr/local/lib -L/usr/local/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lssl -lcrypto -lpthread -ldl -lrt -lm
+>>> lua-cqueues: Entering fakeroot...
+>>> lua5.1-cqueues*: Running split function _package...
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/lib/lua/5.1
+cp -p /tmp/src/cqueues-rel-20200726/src/5.1/cqueues.so /tmp/pkg/lua5.1-cqueues/usr/lib/lua/5.1/_cqueues.so
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/socket.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/errno.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/socket.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/socket.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/errno.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/errno.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/signal.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/thread.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/signal.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/signal.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/notify.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/thread.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/thread.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/notify.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/notify.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/condition.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/condition.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/condition.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/promise.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/promise.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/promise.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/auxlib.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/resolver.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/config.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/hosts.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/hints.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/record.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/packet.lua
+/usr/bin/luac -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua
+mkdir -p /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua /tmp/pkg/lua5.1-cqueues/usr/share/lua/5.1/cqueues/dns/resolvers.lua
+>>> lua5.1-cqueues*: Preparing subpackage lua5.1-cqueues...
+>>> lua5.1-cqueues*: Stripping binaries
+>>> lua5.1-cqueues*: Running postcheck for lua5.1-cqueues
+>>> lua5.2-cqueues*: Running split function _package...
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/lib/lua/5.2
+cp -p /tmp/src/cqueues-rel-20200726/src/5.2/cqueues.so /tmp/pkg/lua5.2-cqueues/usr/lib/lua/5.2/_cqueues.so
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/socket.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/errno.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/socket.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/socket.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/errno.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/errno.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/signal.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/signal.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/signal.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/thread.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/thread.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/thread.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/notify.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/notify.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/notify.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/condition.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/condition.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/condition.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/promise.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/promise.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/promise.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/auxlib.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/resolver.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/config.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/hosts.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/hints.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/record.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/packet.lua
+/usr/bin/luac5.2 -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua
+mkdir -p /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua /tmp/pkg/lua5.2-cqueues/usr/share/lua/5.2/cqueues/dns/resolvers.lua
+>>> lua5.2-cqueues*: Preparing subpackage lua5.2-cqueues...
+>>> lua5.2-cqueues*: Stripping binaries
+>>> lua5.2-cqueues*: Running postcheck for lua5.2-cqueues
+>>> lua5.3-cqueues*: Running split function _package...
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/lib/lua/5.3
+cp -p /tmp/src/cqueues-rel-20200726/src/5.3/cqueues.so /tmp/pkg/lua5.3-cqueues/usr/lib/lua/5.3/_cqueues.so
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3
+cp -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/socket.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/errno.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/socket.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/socket.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/errno.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/errno.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/signal.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/signal.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/signal.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/thread.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/thread.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/thread.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/notify.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/notify.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/notify.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/condition.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/condition.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/condition.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/promise.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/promise.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/promise.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/auxlib.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/resolver.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/config.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/hosts.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/hints.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/record.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/packet.lua
+/usr/bin/luac5.3 -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua
+mkdir -p /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua /tmp/pkg/lua5.3-cqueues/usr/share/lua/5.3/cqueues/dns/resolvers.lua
+>>> lua5.3-cqueues*: Preparing subpackage lua5.3-cqueues...
+>>> lua5.3-cqueues*: Stripping binaries
+>>> lua5.3-cqueues*: Running postcheck for lua5.3-cqueues
+>>> lua5.4-cqueues*: Running split function _package...
+enabling Lua 5.1
+enabling Lua 5.2
+enabling Lua 5.3
+enabling Lua 5.4
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/lib/lua/5.4
+cp -p /tmp/src/cqueues-rel-20200726/src/5.4/cqueues.so /tmp/pkg/lua5.4-cqueues/usr/lib/lua/5.4/_cqueues.so
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4
+cp -p /tmp/src/cqueues-rel-20200726/src/cqueues.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/socket.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/errno.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/socket.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/socket.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/errno.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/errno.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/signal.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/signal.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/signal.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/thread.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/thread.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/thread.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/notify.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/notify.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/notify.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/condition.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/condition.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/condition.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/promise.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/promise.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/promise.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+cp -p /tmp/src/cqueues-rel-20200726/src/auxlib.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/auxlib.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolver.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/resolver.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.config.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/config.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hosts.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/hosts.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.hints.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/hints.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.record.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/record.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.packet.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/packet.lua
+/usr/bin/luac5.4 -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua
+mkdir -p /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns
+cp -p /tmp/src/cqueues-rel-20200726/src/dns.resolvers.lua /tmp/pkg/lua5.4-cqueues/usr/share/lua/5.4/cqueues/dns/resolvers.lua
+>>> lua5.4-cqueues*: Preparing subpackage lua5.4-cqueues...
+>>> lua5.4-cqueues*: Stripping binaries
+>>> lua5.4-cqueues*: Running postcheck for lua5.4-cqueues
+>>> lua-cqueues*: Running postcheck for lua-cqueues
+>>> lua-cqueues*: Preparing package lua-cqueues...
+>>> lua-cqueues*: Stripping binaries
+>>> WARNING: lua-cqueues*: No arch specific binaries found so arch should probably be set to "noarch"
+>>> lua-cqueues*: Scanning shared objects
+>>> lua5.1-cqueues*: Scanning shared objects
+>>> lua5.2-cqueues*: Scanning shared objects
+>>> lua5.3-cqueues*: Scanning shared objects
+>>> lua5.4-cqueues*: Scanning shared objects
+>>> lua-cqueues*: Tracing dependencies...
+>>> lua-cqueues*: Package size: 0.0 
+>>> lua-cqueues*: Compressing data...
+>>> lua-cqueues*: Create checksum...
+>>> lua-cqueues*: Create lua-cqueues-20200726-r6.apk
+>>> lua5.1-cqueues*: Tracing dependencies...
+	lua5.1
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libssl.so.3
+>>> lua5.1-cqueues*: Package size: 302.3 KB
+>>> lua5.1-cqueues*: Compressing data...
+>>> lua5.1-cqueues*: Create checksum...
+>>> lua5.1-cqueues*: Create lua5.1-cqueues-20200726-r6.apk
+>>> lua5.2-cqueues*: Tracing dependencies...
+	lua5.2
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libssl.so.3
+>>> lua5.2-cqueues*: Package size: 290.3 KB
+>>> lua5.2-cqueues*: Compressing data...
+>>> lua5.2-cqueues*: Create checksum...
+>>> lua5.2-cqueues*: Create lua5.2-cqueues-20200726-r6.apk
+>>> lua5.3-cqueues*: Tracing dependencies...
+	lua5.3
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libssl.so.3
+>>> lua5.3-cqueues*: Package size: 286.3 KB
+>>> lua5.3-cqueues*: Compressing data...
+>>> lua5.3-cqueues*: Create checksum...
+>>> lua5.3-cqueues*: Create lua5.3-cqueues-20200726-r6.apk
+>>> lua5.4-cqueues*: Tracing dependencies...
+	lua5.4
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libssl.so.3
+>>> lua5.4-cqueues*: Package size: 286.3 KB
+>>> lua5.4-cqueues*: Compressing data...
+>>> lua5.4-cqueues*: Create checksum...
+>>> lua5.4-cqueues*: Create lua5.4-cqueues-20200726-r6.apk
+>>> lua-cqueues: Updating the main/x86_64 repository index...
+>>> lua-cqueues: Signing the index...
+>>> lua-cqueues: Cleaning up srcdir
+>>> lua-cqueues: Cleaning up build chroot
+>>> lua-cqueues: Cleaning up pkgdir

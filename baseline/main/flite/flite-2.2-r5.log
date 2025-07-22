@@ -1,0 +1,943 @@
+>>> flite: Validating /home/packager/oily-pine/main/flite/APKBUILD...
+>>> flite: Cleaning up srcdir
+>>> flite: Cleaning up pkgdir
+>>> flite: Cleaning up tmpdir
+>>> flite: Fetching flite-2.2.tar.gz::https://github.com/festvox/flite/archive/v2.2.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 2830k    0 2830k    0     0  2075k      0 --:--:--  0:00:01 --:--:-- 2879k100 7170k    0 7170k    0     0  2984k      0 --:--:--  0:00:02 --:--:-- 3548k100 10.2M    0 10.2M    0     0  3090k      0 --:--:--  0:00:03 --:--:-- 3481k100 14.3M    0 14.3M    0     0  3393k      0 --:--:--  0:00:04 --:--:-- 3718k100 19.2M    0 19.2M    0     0  3702k      0 --:--:--  0:00:05 --:--:-- 3987k
+>>> flite: Fetching flite-2.2.tar.gz::https://github.com/festvox/flite/archive/v2.2.tar.gz
+>>> flite: Checking sha512sums...
+flite-2.2.tar.gz: OK
+flite.pc: OK
+>>> flite: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/70) Installing musl (1.2.5-r10)
+(2/70) Installing libcrypto3 (3.5.0-r0)
+(3/70) Installing ca-certificates-bundle (20241121-r2)
+(4/70) Installing libssl3 (3.5.0-r0)
+(5/70) Installing zlib (1.3.1-r2)
+(6/70) Installing libapk2 (2.14.9-r2)
+(7/70) Installing apk-tools (2.14.9-r2)
+(8/70) Installing libcap2 (2.76-r0)
+(9/70) Installing libcap-getcap (2.76-r0)
+(10/70) Installing fakeroot (1.37.1.1-r0)
+(11/70) Installing scanelf (1.3.8-r1)
+(12/70) Installing musl-utils (1.2.5-r10)
+(13/70) Installing libgcc (14.3.0-r0)
+(14/70) Installing libstdc++ (14.3.0-r0)
+(15/70) Installing lzip (1.25-r0)
+(16/70) Installing openssl (3.5.0-r0)
+(17/70) Installing patch (2.8-r0)
+(18/70) Installing pkgconf (2.4.3-r0)
+(19/70) Installing acl-libs (2.3.2-r1)
+(20/70) Installing tar (1.35-r3)
+(21/70) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/70) Installing ssl_client (1.37.0-r18)
+(23/70) Installing busybox-binsh (1.37.0-r18)
+(24/70) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/70) Installing abuild-sudo (3.15.0-r0)
+(26/70) Installing alpine-baselayout-data (3.7.0-r0)
+(27/70) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/70) Installing bridge (1.5-r5)
+(29/70) Installing ifupdown-ng (0.12.1-r7)
+(30/70) Installing openrc-user (0.62.2-r2)
+(31/70) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/70) Installing mdev-conf (4.8-r0)
+(33/70) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/70) Installing alpine-conf (3.20.0-r0)
+(35/70) Installing alpine-keys (2.5-r0)
+(36/70) Installing alpine-release (3.22.0-r0)
+(37/70) Installing busybox-openrc (1.37.0-r18)
+(38/70) Installing busybox-suid (1.37.0-r18)
+(39/70) Installing alpine-base (3.22.0-r0)
+(40/70) Installing alsa-lib (1.2.14-r0)
+(41/70) Installing alsa-lib-dev (1.2.14-r0)
+(42/70) Installing jansson (2.14.1-r0)
+(43/70) Installing zstd-libs (1.5.7-r0)
+(44/70) Installing binutils (2.44-r0)
+(45/70) Installing libmagic (5.46-r2)
+(46/70) Installing file (5.46-r2)
+(47/70) Installing libgomp (14.3.0-r0)
+(48/70) Installing libatomic (14.3.0-r0)
+(49/70) Installing gmp (6.3.0-r3)
+(50/70) Installing isl26 (0.26-r1)
+(51/70) Installing mpfr4 (4.2.1_p1-r0)
+(52/70) Installing mpc1 (1.3.1-r1)
+(53/70) Installing gcc (14.3.0-r0)
+(54/70) Installing libstdc++-dev (14.3.0-r0)
+(55/70) Installing musl-dev (1.2.5-r10)
+(56/70) Installing g++ (14.3.0-r0)
+(57/70) Installing make (4.4.1-r3)
+(58/70) Installing fortify-headers (1.1-r5)
+(59/70) Installing build-base (0.5-r3)
+(60/70) Installing brotli-libs (1.1.0-r2)
+(61/70) Installing c-ares (1.34.5-r0)
+(62/70) Installing libunistring (1.3-r0)
+(63/70) Installing libidn2 (2.3.7-r0)
+(64/70) Installing nghttp2-libs (1.65.0-r0)
+(65/70) Installing libpsl (0.21.5-r3)
+(66/70) Installing libcurl (8.14.0-r2)
+(67/70) Installing libexpat (2.7.1-r0)
+(68/70) Installing pcre2 (10.43-r1)
+(69/70) Installing git (2.49.0-r0)
+(70/70) Installing git-init-template (2.49.0-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 261 MiB in 70 packages
+>>> flite: Fetching flite-2.2.tar.gz::https://github.com/festvox/flite/archive/v2.2.tar.gz
+>>> flite: Checking sha512sums...
+flite-2.2.tar.gz: OK
+flite.pc: OK
+>>> flite: Unpacking /var/cache/distfiles/flite-2.2.tar.gz...
+>>> flite: Updating ./config.sub
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking whether byte ordering is bigendian... no
+checking for mmap... yes
+checking sys/soundcard.h usability... no
+checking sys/soundcard.h presence... no
+checking for sys/soundcard.h... no
+checking machine/soundcard.h usability... no
+checking machine/soundcard.h presence... no
+checking for machine/soundcard.h... no
+checking sys/audioio.h usability... no
+checking sys/audioio.h presence... no
+checking for sys/audioio.h... no
+checking alsa/asoundlib.h usability... yes
+checking alsa/asoundlib.h presence... yes
+checking for alsa/asoundlib.h... yes
+checking mmsystem.h usability... no
+checking mmsystem.h presence... no
+checking for mmsystem.h... no
+configure: creating ./config.status
+config.status: creating config/config
+config.status: creating config/system.mak
+making in ...
+making in include ...
+making in src ...
+making in src/audio ...
+cc -fPIC  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c auclient.c -o ../../build/x86_64-linux-musl/obj/src/audio/auclient.os
+cc -fPIC  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c auserver.c -o ../../build/x86_64-linux-musl/obj/src/audio/auserver.os
+cc -fPIC  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c audio.c -o ../../build/x86_64-linux-musl/obj/src/audio/audio.os
+cc -fPIC  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c au_streaming.c -o ../../build/x86_64-linux-musl/obj/src/audio/au_streaming.os
+cc -fPIC  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c au_alsa.c -o ../../build/x86_64-linux-musl/obj/src/audio/au_alsa.os
+a - auclient.os
+a - auserver.os
+a - audio.os
+a - au_streaming.os
+a - au_alsa.os
+cc  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c auclient.c -o ../../build/x86_64-linux-musl/obj/src/audio/auclient.o
+cc  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c auserver.c -o ../../build/x86_64-linux-musl/obj/src/audio/auserver.o
+cc  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c audio.c -o ../../build/x86_64-linux-musl/obj/src/audio/audio.o
+cc  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c au_streaming.c -o ../../build/x86_64-linux-musl/obj/src/audio/au_streaming.o
+cc  -I. -DCST_AUDIO_ALSA -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c au_alsa.c -o ../../build/x86_64-linux-musl/obj/src/audio/au_alsa.o
+a - auclient.o
+a - auserver.o
+a - audio.o
+a - au_streaming.o
+a - au_alsa.o
+making in src/utils ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_alloc.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_alloc.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_error.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_error.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_string.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_string.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wchar.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_wchar.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_tokenstream.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_tokenstream.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_val.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_val.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_features.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_features.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_endian.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_endian.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_socket.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_socket.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_val_const.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_val_const.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_val_user.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_val_user.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_args.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_args.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_url.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_url.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_mmap_posix.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_mmap_posix.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_file_stdio.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_file_stdio.os
+a - cst_alloc.os
+a - cst_error.os
+a - cst_string.os
+a - cst_wchar.os
+a - cst_tokenstream.os
+a - cst_val.os
+a - cst_features.os
+a - cst_endian.os
+a - cst_socket.os
+a - cst_val_const.os
+a - cst_val_user.os
+a - cst_args.os
+a - cst_url.os
+a - cst_mmap_posix.os
+a - cst_file_stdio.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_alloc.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_alloc.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_error.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_error.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_string.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_string.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wchar.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_wchar.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_tokenstream.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_tokenstream.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_val.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_val.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_features.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_features.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_endian.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_endian.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_socket.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_socket.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_val_const.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_val_const.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_val_user.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_val_user.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_args.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_args.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_url.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_url.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_mmap_posix.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_mmap_posix.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_file_stdio.c -o ../../build/x86_64-linux-musl/obj/src/utils/cst_file_stdio.o
+a - cst_alloc.o
+a - cst_error.o
+a - cst_string.o
+a - cst_wchar.o
+a - cst_tokenstream.o
+a - cst_val.o
+a - cst_features.o
+a - cst_endian.o
+a - cst_socket.o
+a - cst_val_const.o
+a - cst_val_user.o
+a - cst_args.o
+a - cst_url.o
+a - cst_mmap_posix.o
+a - cst_file_stdio.o
+making in src/regex ...
+cc -fPIC  -I. -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_regex.c -o ../../build/x86_64-linux-musl/obj/src/regex/cst_regex.os
+cc -fPIC  -I. -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c regexp.c -o ../../build/x86_64-linux-musl/obj/src/regex/regexp.os
+cc -fPIC  -I. -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c regsub.c -o ../../build/x86_64-linux-musl/obj/src/regex/regsub.os
+a - cst_regex.os
+a - regexp.os
+a - regsub.os
+cc  -I. -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_regex.c -o ../../build/x86_64-linux-musl/obj/src/regex/cst_regex.o
+cc  -I. -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c regexp.c -o ../../build/x86_64-linux-musl/obj/src/regex/regexp.o
+cc  -I. -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c regsub.c -o ../../build/x86_64-linux-musl/obj/src/regex/regsub.o
+a - cst_regex.o
+a - regexp.o
+a - regsub.o
+making in src/hrg ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_utterance.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_utterance.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_relation.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_relation.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_item.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_item.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ffeature.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_ffeature.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_rel_io.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_rel_io.os
+a - cst_utterance.os
+a - cst_relation.os
+a - cst_item.os
+a - cst_ffeature.os
+a - cst_rel_io.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_utterance.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_utterance.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_relation.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_relation.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_item.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_item.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ffeature.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_ffeature.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_rel_io.c -o ../../build/x86_64-linux-musl/obj/src/hrg/cst_rel_io.o
+a - cst_utterance.o
+a - cst_relation.o
+a - cst_item.o
+a - cst_ffeature.o
+a - cst_rel_io.o
+making in src/stats ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cart.c -o ../../build/x86_64-linux-musl/obj/src/stats/cst_cart.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_viterbi.c -o ../../build/x86_64-linux-musl/obj/src/stats/cst_viterbi.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ss.c -o ../../build/x86_64-linux-musl/obj/src/stats/cst_ss.os
+a - cst_cart.os
+a - cst_viterbi.os
+a - cst_ss.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cart.c -o ../../build/x86_64-linux-musl/obj/src/stats/cst_cart.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_viterbi.c -o ../../build/x86_64-linux-musl/obj/src/stats/cst_viterbi.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ss.c -o ../../build/x86_64-linux-musl/obj/src/stats/cst_ss.o
+a - cst_cart.o
+a - cst_viterbi.o
+a - cst_ss.o
+making in src/speech ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wave.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_wave.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wave_io.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_wave_io.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_track.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_track.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_track_io.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_track_io.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wave_utils.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_wave_utils.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lpcres.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_lpcres.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c rateconv.c -o ../../build/x86_64-linux-musl/obj/src/speech/rateconv.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g721.c -o ../../build/x86_64-linux-musl/obj/src/speech/g721.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g72x.c -o ../../build/x86_64-linux-musl/obj/src/speech/g72x.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g723_24.c -o ../../build/x86_64-linux-musl/obj/src/speech/g723_24.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g723_40.c -o ../../build/x86_64-linux-musl/obj/src/speech/g723_40.os
+a - cst_wave.os
+a - cst_wave_io.os
+a - cst_track.os
+a - cst_track_io.os
+a - cst_wave_utils.os
+a - cst_lpcres.os
+a - rateconv.os
+a - g721.os
+a - g72x.os
+a - g723_24.os
+a - g723_40.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wave.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_wave.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wave_io.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_wave_io.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_track.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_track.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_track_io.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_track_io.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_wave_utils.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_wave_utils.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lpcres.c -o ../../build/x86_64-linux-musl/obj/src/speech/cst_lpcres.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c rateconv.c -o ../../build/x86_64-linux-musl/obj/src/speech/rateconv.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g721.c -o ../../build/x86_64-linux-musl/obj/src/speech/g721.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g72x.c -o ../../build/x86_64-linux-musl/obj/src/speech/g72x.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g723_24.c -o ../../build/x86_64-linux-musl/obj/src/speech/g723_24.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c g723_40.c -o ../../build/x86_64-linux-musl/obj/src/speech/g723_40.o
+a - cst_wave.o
+a - cst_wave_io.o
+a - cst_track.o
+a - cst_track_io.o
+a - cst_wave_utils.o
+a - cst_lpcres.o
+a - rateconv.o
+a - g721.o
+a - g72x.o
+a - g723_24.o
+a - g723_40.o
+making in src/lexicon ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lexicon.c -o ../../build/x86_64-linux-musl/obj/src/lexicon/cst_lexicon.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lts.c -o ../../build/x86_64-linux-musl/obj/src/lexicon/cst_lts.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lts_rewrites.c -o ../../build/x86_64-linux-musl/obj/src/lexicon/cst_lts_rewrites.os
+a - cst_lexicon.os
+a - cst_lts.os
+a - cst_lts_rewrites.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lexicon.c -o ../../build/x86_64-linux-musl/obj/src/lexicon/cst_lexicon.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lts.c -o ../../build/x86_64-linux-musl/obj/src/lexicon/cst_lts.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_lts_rewrites.c -o ../../build/x86_64-linux-musl/obj/src/lexicon/cst_lts_rewrites.o
+a - cst_lexicon.o
+a - cst_lts.o
+a - cst_lts_rewrites.o
+making in src/synth ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_synth.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_synth.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_utt_utils.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_utt_utils.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_voice.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_voice.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_phoneset.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_phoneset.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ffeatures.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_ffeatures.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ssml.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_ssml.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c flite.c -o ../../build/x86_64-linux-musl/obj/src/synth/flite.os
+a - cst_synth.os
+a - cst_utt_utils.os
+a - cst_voice.os
+a - cst_phoneset.os
+a - cst_ffeatures.os
+a - cst_ssml.os
+a - flite.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_synth.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_synth.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_utt_utils.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_utt_utils.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_voice.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_voice.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_phoneset.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_phoneset.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ffeatures.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_ffeatures.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_ssml.c -o ../../build/x86_64-linux-musl/obj/src/synth/cst_ssml.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c flite.c -o ../../build/x86_64-linux-musl/obj/src/synth/flite.o
+a - cst_synth.o
+a - cst_utt_utils.o
+a - cst_voice.o
+a - cst_phoneset.o
+a - cst_ffeatures.o
+a - cst_ssml.o
+a - flite.o
+making in src/wavesynth ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_units.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_units.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_clunits.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_clunits.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_diphone.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_diphone.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_sigpr.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_sigpr.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_sts.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_sts.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_reflpc.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_reflpc.os
+a - cst_units.os
+a - cst_clunits.os
+a - cst_diphone.os
+a - cst_sigpr.os
+a - cst_sts.os
+a - cst_reflpc.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_units.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_units.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_clunits.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_clunits.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_diphone.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_diphone.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_sigpr.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_sigpr.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_sts.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_sts.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_reflpc.c -o ../../build/x86_64-linux-musl/obj/src/wavesynth/cst_reflpc.o
+a - cst_units.o
+a - cst_clunits.o
+a - cst_diphone.o
+a - cst_sigpr.o
+a - cst_sts.o
+a - cst_reflpc.o
+making in src/cg ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_mlsa.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_mlsa.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_mlpg.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_mlpg.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_vc.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_vc.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg_load_voice.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg_load_voice.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg_dump_voice.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg_dump_voice.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg_map.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg_map.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_spamf0.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_spamf0.os
+a - cst_cg.os
+a - cst_mlsa.os
+a - cst_mlpg.os
+a - cst_vc.os
+a - cst_cg_load_voice.os
+a - cst_cg_dump_voice.os
+a - cst_cg_map.os
+a - cst_spamf0.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_mlsa.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_mlsa.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_mlpg.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_mlpg.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_vc.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_vc.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg_load_voice.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg_load_voice.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg_dump_voice.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg_dump_voice.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_cg_map.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_cg_map.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cst_spamf0.c -o ../../build/x86_64-linux-musl/obj/src/cg/cst_spamf0.o
+a - cst_cg.o
+a - cst_mlsa.o
+a - cst_mlpg.o
+a - cst_vc.o
+a - cst_cg_load_voice.o
+a - cst_cg_dump_voice.o
+a - cst_cg_map.o
+a - cst_spamf0.o
+making in lang ...
+making in lang/cmulex ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lts_rules.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lts_rules.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lts_model.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lts_model.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lex.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lex.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lex_entries.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lex_entries.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lex_data.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lex_data.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_postlex.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_postlex.os
+a - cmu_lts_rules.os
+a - cmu_lts_model.os
+a - cmu_lex.os
+a - cmu_lex_entries.os
+a - cmu_lex_data.os
+a - cmu_postlex.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lts_rules.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lts_rules.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lts_model.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lts_model.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lex.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lex.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lex_entries.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lex_entries.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_lex_data.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_lex_data.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_postlex.c -o ../../build/x86_64-linux-musl/obj/lang/cmulex/cmu_postlex.o
+a - cmu_lts_rules.o
+a - cmu_lts_model.o
+a - cmu_lex.o
+a - cmu_lex_entries.o
+a - cmu_lex_data.o
+a - cmu_postlex.o
+making in lang/cmu_indic_lex ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_lex.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lex/cmu_indic_lex.os
+a - cmu_indic_lex.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_lex.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lex/cmu_indic_lex.o
+a - cmu_indic_lex.o
+making in lang/cmu_grapheme_lex ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_lex.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lex/cmu_grapheme_lex.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c grapheme_unitran_tables.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lex/grapheme_unitran_tables.os
+a - cmu_grapheme_lex.os
+a - grapheme_unitran_tables.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_lex.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lex/cmu_grapheme_lex.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c grapheme_unitran_tables.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lex/grapheme_unitran_tables.o
+a - cmu_grapheme_lex.o
+a - grapheme_unitran_tables.o
+making in lang/usenglish ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_int_accent_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_int_accent_cart.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_int_tone_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_int_tone_cart.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_f0_model.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_f0_model.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_dur_stats.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_dur_stats.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_durz_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_durz_cart.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_f0lr.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_f0lr.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_phoneset.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_phoneset.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_ffeatures.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_ffeatures.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_phrasing_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_phrasing_cart.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_gpos.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_gpos.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_text.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_text.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_expand.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_expand.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_nums_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_nums_cart.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_aswd.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_aswd.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c usenglish.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/usenglish.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_pos_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_pos_cart.os
+a - us_int_accent_cart.os
+a - us_int_tone_cart.os
+a - us_f0_model.os
+a - us_dur_stats.os
+a - us_durz_cart.os
+a - us_f0lr.os
+a - us_phoneset.os
+a - us_ffeatures.os
+a - us_phrasing_cart.os
+a - us_gpos.os
+a - us_text.os
+a - us_expand.os
+a - us_nums_cart.os
+a - us_aswd.os
+a - usenglish.os
+a - us_pos_cart.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_int_accent_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_int_accent_cart.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_int_tone_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_int_tone_cart.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_f0_model.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_f0_model.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_dur_stats.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_dur_stats.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_durz_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_durz_cart.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_f0lr.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_f0lr.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_phoneset.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_phoneset.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_ffeatures.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_ffeatures.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_phrasing_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_phrasing_cart.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_gpos.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_gpos.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_text.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_text.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_expand.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_expand.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_nums_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_nums_cart.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_aswd.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_aswd.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c usenglish.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/usenglish.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c us_pos_cart.c -o ../../build/x86_64-linux-musl/obj/lang/usenglish/us_pos_cart.o
+a - us_int_accent_cart.o
+a - us_int_tone_cart.o
+a - us_f0_model.o
+a - us_dur_stats.o
+a - us_durz_cart.o
+a - us_f0lr.o
+a - us_phoneset.o
+a - us_ffeatures.o
+a - us_phrasing_cart.o
+a - us_gpos.o
+a - us_text.o
+a - us_expand.o
+a - us_nums_cart.o
+a - us_aswd.o
+a - usenglish.o
+a - us_pos_cart.o
+making in lang/cmu_indic_lang ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_lang.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lang/cmu_indic_lang.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_phoneset.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lang/cmu_indic_phoneset.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_phrasing_cart.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lang/cmu_indic_phrasing_cart.os
+a - cmu_indic_lang.os
+a - cmu_indic_phoneset.os
+a - cmu_indic_phrasing_cart.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_lang.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lang/cmu_indic_lang.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_phoneset.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lang/cmu_indic_phoneset.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_indic_phrasing_cart.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_indic_lang/cmu_indic_phrasing_cart.o
+a - cmu_indic_lang.o
+a - cmu_indic_phoneset.o
+a - cmu_indic_phrasing_cart.o
+making in lang/cmu_grapheme_lang ...
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_lang.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lang/cmu_grapheme_lang.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_phoneset.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lang/cmu_grapheme_phoneset.os
+cc -fPIC   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_phrasing_cart.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lang/cmu_grapheme_phrasing_cart.os
+a - cmu_grapheme_lang.os
+a - cmu_grapheme_phoneset.os
+a - cmu_grapheme_phrasing_cart.os
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_lang.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lang/cmu_grapheme_lang.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_phoneset.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lang/cmu_grapheme_phoneset.o
+cc   -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_grapheme_phrasing_cart.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_grapheme_lang/cmu_grapheme_phrasing_cart.o
+a - cmu_grapheme_lang.o
+a - cmu_grapheme_phoneset.o
+a - cmu_grapheme_phrasing_cart.o
+making in lang/cmu_us_kal ...
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_diphone.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_diphone.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_lpc.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_lpc.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_res.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_res.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_residx.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_residx.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_ressize.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_ressize.os
+a - cmu_us_kal_diphone.os
+a - cmu_us_kal.os
+a - cmu_us_kal_lpc.os
+a - cmu_us_kal_res.os
+a - cmu_us_kal_residx.os
+a - cmu_us_kal_ressize.os
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_diphone.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_diphone.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_lpc.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_lpc.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_res.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_res.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_residx.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_residx.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal_ressize.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal/cmu_us_kal_ressize.o
+a - cmu_us_kal_diphone.o
+a - cmu_us_kal.o
+a - cmu_us_kal_lpc.o
+a - cmu_us_kal_res.o
+a - cmu_us_kal_residx.o
+a - cmu_us_kal_ressize.o
+making in lang/cmu_time_awb ...
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_clunits.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_clunits.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_cart.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_cart.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_mcep.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_mcep.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_lpc.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_lpc.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_lex_entry.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_lex_entry.os
+a - cmu_time_awb.os
+a - cmu_time_awb_clunits.os
+a - cmu_time_awb_cart.os
+a - cmu_time_awb_mcep.os
+a - cmu_time_awb_lpc.os
+a - cmu_time_awb_lex_entry.os
+cc  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb.o
+cc  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_clunits.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_clunits.o
+cc  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_cart.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_cart.o
+cc  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_mcep.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_mcep.o
+cc  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_lpc.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_lpc.o
+cc  -I../../lang/usenglish -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_time_awb_lex_entry.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_time_awb/cmu_time_awb_lex_entry.o
+a - cmu_time_awb.o
+a - cmu_time_awb_clunits.o
+a - cmu_time_awb_cart.o
+a - cmu_time_awb_mcep.o
+a - cmu_time_awb_lpc.o
+a - cmu_time_awb_lex_entry.o
+making in lang/cmu_us_kal16 ...
+cc -fPIC  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_diphone.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_diphone.os
+cc -fPIC  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16.os
+cc -fPIC  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_lpc.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_lpc.os
+cc -fPIC  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_res.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_res.os
+cc -fPIC  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_residx.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_residx.os
+a - cmu_us_kal16_diphone.os
+a - cmu_us_kal16.os
+a - cmu_us_kal16_lpc.os
+a - cmu_us_kal16_res.os
+a - cmu_us_kal16_residx.os
+cc  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_diphone.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_diphone.o
+cc  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16.o
+cc  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_lpc.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_lpc.o
+cc  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_res.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_res.o
+cc  -I../../lang/usenglish  -I../../lang/cmulex -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_kal16_residx.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_kal16/cmu_us_kal16_residx.o
+a - cmu_us_kal16_diphone.o
+a - cmu_us_kal16.o
+a - cmu_us_kal16_lpc.o
+a - cmu_us_kal16_res.o
+a - cmu_us_kal16_residx.o
+making in lang/cmu_us_awb ...
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_single_mcep_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_single_mcep_trees.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_single_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_single_params.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_durmodel.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_durmodel.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_phonestate.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_phonestate.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_f0_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_f0_trees.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_spamf0_accent_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_spamf0_accent_params.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_spamf0_phrase.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_spamf0_phrase.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_spamf0_accent.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_spamf0_accent.os
+a - cmu_us_awb.os
+a - cmu_us_awb_cg_single_mcep_trees.os
+a - cmu_us_awb_cg.os
+a - cmu_us_awb_cg_single_params.os
+a - cmu_us_awb_cg_durmodel.os
+a - cmu_us_awb_cg_phonestate.os
+a - cmu_us_awb_cg_f0_trees.os
+a - cmu_us_awb_spamf0_accent_params.os
+a - cmu_us_awb_spamf0_phrase.os
+a - cmu_us_awb_spamf0_accent.os
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_single_mcep_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_single_mcep_trees.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_single_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_single_params.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_durmodel.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_durmodel.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_phonestate.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_phonestate.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_cg_f0_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_cg_f0_trees.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_spamf0_accent_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_spamf0_accent_params.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_spamf0_phrase.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_spamf0_phrase.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_awb_spamf0_accent.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_awb/cmu_us_awb_spamf0_accent.o
+a - cmu_us_awb.o
+a - cmu_us_awb_cg_single_mcep_trees.o
+a - cmu_us_awb_cg.o
+a - cmu_us_awb_cg_single_params.o
+a - cmu_us_awb_cg_durmodel.o
+a - cmu_us_awb_cg_phonestate.o
+a - cmu_us_awb_cg_f0_trees.o
+a - cmu_us_awb_spamf0_accent_params.o
+a - cmu_us_awb_spamf0_phrase.o
+a - cmu_us_awb_spamf0_accent.o
+making in lang/cmu_us_rms ...
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_single_mcep_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_single_mcep_trees.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_single_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_single_params.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_durmodel.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_durmodel.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_phonestate.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_phonestate.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_f0_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_f0_trees.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_spamf0_accent_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_spamf0_accent_params.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_spamf0_phrase.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_spamf0_phrase.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_spamf0_accent.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_spamf0_accent.os
+a - cmu_us_rms.os
+a - cmu_us_rms_cg_single_mcep_trees.os
+a - cmu_us_rms_cg.os
+a - cmu_us_rms_cg_single_params.os
+a - cmu_us_rms_cg_durmodel.os
+a - cmu_us_rms_cg_phonestate.os
+a - cmu_us_rms_cg_f0_trees.os
+a - cmu_us_rms_spamf0_accent_params.os
+a - cmu_us_rms_spamf0_phrase.os
+a - cmu_us_rms_spamf0_accent.os
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_single_mcep_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_single_mcep_trees.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_single_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_single_params.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_durmodel.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_durmodel.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_phonestate.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_phonestate.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_cg_f0_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_cg_f0_trees.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_spamf0_accent_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_spamf0_accent_params.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_spamf0_phrase.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_spamf0_phrase.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_rms_spamf0_accent.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_rms/cmu_us_rms_spamf0_accent.o
+a - cmu_us_rms.o
+a - cmu_us_rms_cg_single_mcep_trees.o
+a - cmu_us_rms_cg.o
+a - cmu_us_rms_cg_single_params.o
+a - cmu_us_rms_cg_durmodel.o
+a - cmu_us_rms_cg_phonestate.o
+a - cmu_us_rms_cg_f0_trees.o
+a - cmu_us_rms_spamf0_accent_params.o
+a - cmu_us_rms_spamf0_phrase.o
+a - cmu_us_rms_spamf0_accent.o
+making in lang/cmu_us_slt ...
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_single_mcep_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_single_mcep_trees.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_single_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_single_params.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_durmodel.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_durmodel.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_phonestate.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_phonestate.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_f0_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_f0_trees.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_spamf0_accent.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_spamf0_accent.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_spamf0_phrase.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_spamf0_phrase.os
+cc -fPIC  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_spamf0_accent_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_spamf0_accent_params.os
+a - cmu_us_slt.os
+a - cmu_us_slt_cg_single_mcep_trees.os
+a - cmu_us_slt_cg.os
+a - cmu_us_slt_cg_single_params.os
+a - cmu_us_slt_cg_durmodel.os
+a - cmu_us_slt_cg_phonestate.os
+a - cmu_us_slt_cg_f0_trees.os
+a - cmu_us_slt_spamf0_accent.os
+a - cmu_us_slt_spamf0_phrase.os
+a - cmu_us_slt_spamf0_accent_params.os
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_single_mcep_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_single_mcep_trees.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_single_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_single_params.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_durmodel.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_durmodel.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_phonestate.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_phonestate.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_cg_f0_trees.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_cg_f0_trees.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_spamf0_accent.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_spamf0_accent.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_spamf0_phrase.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_spamf0_phrase.o
+cc  -I../../lang/usenglish -I../../lang/cmulex  -I../../include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -c cmu_us_slt_spamf0_accent_params.c -o ../../build/x86_64-linux-musl/obj/lang/cmu_us_slt/cmu_us_slt_spamf0_accent_params.o
+a - cmu_us_slt.o
+a - cmu_us_slt_cg_single_mcep_trees.o
+a - cmu_us_slt_cg.o
+a - cmu_us_slt_cg_single_params.o
+a - cmu_us_slt_cg_durmodel.o
+a - cmu_us_slt_cg_phonestate.o
+a - cmu_us_slt_cg_f0_trees.o
+a - cmu_us_slt_spamf0_accent.o
+a - cmu_us_slt_spamf0_phrase.o
+a - cmu_us_slt_spamf0_accent_params.o
+making in doc ...
+making in tools ...
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o find_sts_main.o find_sts_main.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/find_sts find_sts_main.o -L../build/x86_64-linux-musl/lib -lflite  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_sort_main.o flite_sort_main.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_sort flite_sort_main.o -L../build/x86_64-linux-musl/lib -lflite  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+making in main ...
+making ../build/x86_64-linux-musl/lib/libflite.so
+making ../build/x86_64-linux-musl/lib/libflite_usenglish.so
+making ../build/x86_64-linux-musl/lib/libflite_cmulex.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_time_awb.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal16.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_us_awb.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_us_rms.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_us_slt.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lang.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lang.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lex.so
+making ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lex.so
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_main.o flite_main.c
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_us_kal cmu_time_awb cmu_us_kal16 cmu_us_awb cmu_us_rms cmu_us_slt
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o t2p_main.o t2p_main.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/t2p t2p_main.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o compile_regexes.o compile_regexes.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/compile_regexes compile_regexes.o -L../build/x86_64-linux-musl/lib -lflite  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flitevox_info_main.o flitevox_info_main.c
+../tools/make_voice_list cmu_us_kal cmu_time_awb cmu_us_kal16 cmu_us_awb cmu_us_rms cmu_us_slt
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flitevox_info flitevox_info_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_us_kal
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_cmu_us_kal flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_time_awb
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_cmu_time_awb flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_us_kal16
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_cmu_us_kal16 flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_us_awb
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_cmu_us_awb flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_us_rms
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_cmu_us_rms flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+rm -f flite_lang_list.c
+../tools/make_lang_list usenglish cmu_indic_lang  cmu_grapheme_lang cmulex cmu_indic_lex cmu_grapheme_lex
+make flite_lang_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_lang_list.o flite_lang_list.c
+../tools/make_voice_list cmu_us_slt
+rm -f flite_voice_list.o
+make flite_voice_list.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_voice_list.o flite_voice_list.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_cmu_us_slt flite_main.o flite_voice_list.o flite_lang_list.o -L../build/x86_64-linux-musl/lib -lflite_cmu_us_kal -lflite_cmu_time_awb -lflite_cmu_us_kal16 -lflite_cmu_us_awb -lflite_cmu_us_rms -lflite_cmu_us_slt -lflite_usenglish -lflite_cmu_indic_lang -lflite_cmu_grapheme_lang -lflite_cmulex -lflite_cmu_indic_lex -lflite_cmu_grapheme_lex -lflite -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound 
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall      -I../include  -c -o flite_time_main.o flite_time_main.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -Wall     -o ../bin/flite_time flite_time_main.o -L../build/x86_64-linux-musl/lib -lflite_cmu_time_awb -lflite_usenglish -lflite_cmulex -L../build/x86_64-linux-musl/lib -lflite  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lm -lasound  
+>>> flite: Entering fakeroot...
+Installing
+mkdir -p /tmp/pkg/flite/usr/bin
+mkdir -p /tmp/pkg/flite/usr/lib
+mkdir -p /tmp/pkg/flite/usr/include/flite
+/usr/bin/install -c -m 644 include/*.h /tmp/pkg/flite/usr/include/flite
+/usr/bin/install -c -m 755 ../bin/flite_time /tmp/pkg/flite/usr/bin
+cp -pd ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal.a ../build/x86_64-linux-musl/lib/libflite_cmu_time_awb.a ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal16.a ../build/x86_64-linux-musl/lib/libflite_cmu_us_awb.a ../build/x86_64-linux-musl/lib/libflite_cmu_us_rms.a ../build/x86_64-linux-musl/lib/libflite_cmu_us_slt.a ../build/x86_64-linux-musl/lib/libflite_usenglish.a ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lang.a ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lang.a ../build/x86_64-linux-musl/lib/libflite_cmulex.a ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lex.a ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lex.a ../build/x86_64-linux-musl/lib/libflite.a /tmp/pkg/flite/usr/lib
+cp -pd ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal.so ../build/x86_64-linux-musl/lib/libflite_cmu_time_awb.so ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal16.so ../build/x86_64-linux-musl/lib/libflite_cmu_us_awb.so ../build/x86_64-linux-musl/lib/libflite_cmu_us_rms.so ../build/x86_64-linux-musl/lib/libflite_cmu_us_slt.so ../build/x86_64-linux-musl/lib/libflite_usenglish.so ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lang.so ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lang.so ../build/x86_64-linux-musl/lib/libflite_cmulex.so ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lex.so ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lex.so ../build/x86_64-linux-musl/lib/libflite.so ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_time_awb.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal16.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_us_awb.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_us_rms.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_us_slt.so.2.2 ../build/x86_64-linux-musl/lib/libflite_usenglish.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lang.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lang.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmulex.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lex.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lex.so.2.2 ../build/x86_64-linux-musl/lib/libflite.so.2.2 ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_time_awb.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_us_kal16.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_us_awb.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_us_rms.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_us_slt.so.1 ../build/x86_64-linux-musl/lib/libflite_usenglish.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lang.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lang.so.1 ../build/x86_64-linux-musl/lib/libflite_cmulex.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_indic_lex.so.1 ../build/x86_64-linux-musl/lib/libflite_cmu_grapheme_lex.so.1 ../build/x86_64-linux-musl/lib/libflite.so.1 /tmp/pkg/flite/usr/lib
+ TYPE   RPATH FILE 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_us_slt.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_indic_lang.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_us_awb.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmulex.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_usenglish.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_time_awb.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_us_rms.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_us_kal.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_grapheme_lex.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_indic_lex.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_grapheme_lang.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/lib/libflite_cmu_us_kal16.so.2.2 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_cmu_us_slt 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_cmu_us_rms 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_cmu_us_kal16 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_cmu_us_kal 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_cmu_time_awb 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_time 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite 
+ET_DYN   -   /tmp/pkg/flite/usr/bin/flite_cmu_us_awb 
+>>> flite-static*: Running split function static...
+'usr/lib/libflite_cmu_us_slt.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_us_slt.a'
+'usr/lib/libflite_cmu_grapheme_lex.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_grapheme_lex.a'
+'usr/lib/libflite_cmu_us_kal.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_us_kal.a'
+'usr/lib/libflite_usenglish.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_usenglish.a'
+'usr/lib/libflite_cmu_grapheme_lang.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_grapheme_lang.a'
+'usr/lib/libflite_cmu_indic_lex.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_indic_lex.a'
+'usr/lib/libflite_cmu_us_kal16.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_us_kal16.a'
+'usr/lib/libflite_cmu_time_awb.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_time_awb.a'
+'usr/lib/libflite_cmu_indic_lang.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_indic_lang.a'
+'usr/lib/libflite_cmu_us_awb.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_us_awb.a'
+'usr/lib/libflite_cmu_us_rms.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmu_us_rms.a'
+'usr/lib/libflite_cmulex.a' -> '/tmp/pkg/flite-static/usr/lib/libflite_cmulex.a'
+'usr/lib/libflite.a' -> '/tmp/pkg/flite-static/usr/lib/libflite.a'
+>>> flite-static*: Preparing subpackage flite-static...
+>>> flite-static*: Stripping binaries
+>>> flite-static*: Running postcheck for flite-static
+>>> flite-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/flite-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/flite-dev/usr/lib/pkgconfig'
+'usr/lib/libflite.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite.so'
+'usr/lib/libflite_cmu_grapheme_lang.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_grapheme_lang.so'
+'usr/lib/libflite_cmu_grapheme_lex.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_grapheme_lex.so'
+'usr/lib/libflite_cmu_indic_lang.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_indic_lang.so'
+'usr/lib/libflite_cmu_indic_lex.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_indic_lex.so'
+'usr/lib/libflite_cmu_time_awb.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_time_awb.so'
+'usr/lib/libflite_cmu_us_awb.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_us_awb.so'
+'usr/lib/libflite_cmu_us_kal.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_us_kal.so'
+'usr/lib/libflite_cmu_us_kal16.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_us_kal16.so'
+'usr/lib/libflite_cmu_us_rms.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_us_rms.so'
+'usr/lib/libflite_cmu_us_slt.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmu_us_slt.so'
+'usr/lib/libflite_cmulex.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_cmulex.so'
+'usr/lib/libflite_usenglish.so' -> '/tmp/pkg/flite-dev/usr/lib/libflite_usenglish.so'
+>>> flite-dev*: Preparing subpackage flite-dev...
+>>> flite-dev*: Stripping binaries
+>>> flite-dev*: Running postcheck for flite-dev
+>>> flite*: Running postcheck for flite
+>>> flite*: Preparing package flite...
+>>> flite*: Stripping binaries
+>>> flite-dev*: Scanning shared objects
+>>> flite-static*: Scanning shared objects
+>>> flite*: Scanning shared objects
+>>> flite-dev*: Tracing dependencies...
+	flite=2.2-r5
+	pkgconfig
+>>> flite-dev*: Package size: 199.0 KB
+>>> flite-dev*: Compressing data...
+>>> flite-dev*: Create checksum...
+>>> flite-dev*: Create flite-dev-2.2-r5.apk
+>>> flite-static*: Tracing dependencies...
+>>> flite-static*: Package size: 29.9 MB
+>>> flite-static*: Compressing data...
+>>> flite-static*: Create checksum...
+>>> flite-static*: Create flite-static-2.2-r5.apk
+>>> flite*: Tracing dependencies...
+	so:libasound.so.2
+	so:libc.musl-x86_64.so.1
+>>> flite*: Package size: 21.2 MB
+>>> flite*: Compressing data...
+>>> flite*: Create checksum...
+>>> flite*: Create flite-2.2-r5.apk
+>>> flite: Updating the main/x86_64 repository index...
+>>> flite: Signing the index...
+>>> flite: Cleaning up srcdir
+>>> flite: Cleaning up build chroot
+>>> flite: Cleaning up pkgdir

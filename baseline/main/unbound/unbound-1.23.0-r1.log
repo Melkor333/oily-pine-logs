@@ -1,0 +1,1655 @@
+>>> unbound: Validating /home/packager/oily-pine/main/unbound/APKBUILD...
+>>> unbound: Cleaning up srcdir
+>>> unbound: Cleaning up pkgdir
+>>> unbound: Cleaning up tmpdir
+>>> unbound: Fetching https://unbound.net/downloads/unbound-1.23.0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   145  100   145    0     0    909      0 --:--:-- --:--:-- --:--:--   911
+100 6612k  100 6612k    0     0  12.3M      0 --:--:-- --:--:-- --:--:-- 12.3M
+>>> unbound: Fetching https://unbound.net/downloads/unbound-1.23.0.tar.gz
+>>> unbound: Checking sha512sums...
+unbound-1.23.0.tar.gz: OK
+conf.patch: OK
+migrate-dnscache-to-unbound: OK
+unbound.initd: OK
+unbound.confd: OK
+>>> unbound: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/162) Installing musl (1.2.5-r10)
+(2/162) Installing libcrypto3 (3.5.0-r0)
+(3/162) Installing ca-certificates-bundle (20241121-r2)
+(4/162) Installing libssl3 (3.5.0-r0)
+(5/162) Installing zlib (1.3.1-r2)
+(6/162) Installing libapk2 (2.14.9-r2)
+(7/162) Installing apk-tools (2.14.9-r2)
+(8/162) Installing libcap2 (2.76-r0)
+(9/162) Installing libcap-getcap (2.76-r0)
+(10/162) Installing fakeroot (1.37.1.1-r0)
+(11/162) Installing scanelf (1.3.8-r1)
+(12/162) Installing musl-utils (1.2.5-r10)
+(13/162) Installing libgcc (14.3.0-r0)
+(14/162) Installing libstdc++ (14.3.0-r0)
+(15/162) Installing lzip (1.25-r0)
+(16/162) Installing openssl (3.5.0-r0)
+(17/162) Installing patch (2.8-r0)
+(18/162) Installing pkgconf (2.4.3-r0)
+(19/162) Installing acl-libs (2.3.2-r1)
+(20/162) Installing tar (1.35-r3)
+(21/162) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/162) Installing ssl_client (1.37.0-r18)
+(23/162) Installing busybox-binsh (1.37.0-r18)
+(24/162) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/162) Installing abuild-sudo (3.15.0-r0)
+(26/162) Installing alpine-baselayout-data (3.7.0-r0)
+(27/162) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/162) Installing bridge (1.5-r5)
+(29/162) Installing ifupdown-ng (0.12.1-r7)
+(30/162) Installing openrc-user (0.62.2-r2)
+(31/162) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/162) Installing mdev-conf (4.8-r0)
+(33/162) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/162) Installing alpine-conf (3.20.0-r0)
+(35/162) Installing alpine-keys (2.5-r0)
+(36/162) Installing alpine-release (3.22.0-r0)
+(37/162) Installing busybox-openrc (1.37.0-r18)
+(38/162) Installing busybox-suid (1.37.0-r18)
+(39/162) Installing alpine-base (3.22.0-r0)
+(40/162) Installing fstrm (0.6.1-r4)
+(41/162) Installing krb5-conf (1.0-r2)
+(42/162) Installing libcom_err (1.47.2-r2)
+(43/162) Installing keyutils-libs (1.6.3-r4)
+(44/162) Installing libverto (0.3.2-r2)
+(45/162) Installing krb5-libs (1.21.3-r0)
+(46/162) Installing json-c (0.18-r0)
+(47/162) Installing nghttp2-libs (1.65.0-r0)
+(48/162) Installing protobuf-c (1.5.2-r0)
+(49/162) Installing userspace-rcu (0.15.2-r0)
+(50/162) Installing libuv (1.51.0-r0)
+(51/162) Installing xz-libs (5.8.1-r0)
+(52/162) Installing libxml2 (2.13.8-r0)
+(53/162) Installing bind-libs (9.20.9-r0)
+(54/162) Installing bind-tools (9.20.9-r0)
+(55/162) Installing jansson (2.14.1-r0)
+(56/162) Installing zstd-libs (1.5.7-r0)
+(57/162) Installing binutils (2.44-r0)
+(58/162) Installing libmagic (5.46-r2)
+(59/162) Installing file (5.46-r2)
+(60/162) Installing libgomp (14.3.0-r0)
+(61/162) Installing libatomic (14.3.0-r0)
+(62/162) Installing gmp (6.3.0-r3)
+(63/162) Installing isl26 (0.26-r1)
+(64/162) Installing mpfr4 (4.2.1_p1-r0)
+(65/162) Installing mpc1 (1.3.1-r1)
+(66/162) Installing gcc (14.3.0-r0)
+(67/162) Installing libstdc++-dev (14.3.0-r0)
+(68/162) Installing musl-dev (1.2.5-r10)
+(69/162) Installing g++ (14.3.0-r0)
+(70/162) Installing make (4.4.1-r3)
+(71/162) Installing fortify-headers (1.1-r5)
+(72/162) Installing build-base (0.5-r3)
+(73/162) Installing dnssec-root (20250524-r0)
+(74/162) Installing libexpat (2.7.1-r0)
+(75/162) Installing expat (2.7.1-r0)
+(76/162) Installing expat-dev (2.7.1-r0)
+(77/162) Installing brotli-libs (1.1.0-r2)
+(78/162) Installing c-ares (1.34.5-r0)
+(79/162) Installing libunistring (1.3-r0)
+(80/162) Installing libidn2 (2.3.7-r0)
+(81/162) Installing libpsl (0.21.5-r3)
+(82/162) Installing libcurl (8.14.0-r2)
+(83/162) Installing pcre2 (10.43-r1)
+(84/162) Installing git (2.49.0-r0)
+(85/162) Installing git-init-template (2.49.0-r0)
+(86/162) Installing hiredis (1.3.0-r0)
+(87/162) Installing hiredis-dev (1.3.0-r0)
+(88/162) Installing ldns (1.8.4-r0)
+(89/162) Installing libpcap (1.10.5-r1)
+(90/162) Installing ldns-tools (1.8.4-r0)
+(91/162) Installing libbz2 (1.0.8-r6)
+(92/162) Installing libffi (3.4.8-r0)
+(93/162) Installing gdbm (1.24-r0)
+(94/162) Installing mpdecimal (4.0.1-r0)
+(95/162) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(96/162) Installing libncursesw (6.5_p20250503-r0)
+(97/162) Installing libpanelw (6.5_p20250503-r0)
+(98/162) Installing readline (8.2.13-r1)
+(99/162) Installing sqlite-libs (3.50.0-r0)
+(100/162) Installing python3 (3.12.10-r1)
+(101/162) Installing python3-pycache-pyc0 (3.12.10-r1)
+(102/162) Installing pyc (3.12.10-r1)
+(103/162) Installing python3-pyc (3.12.10-r1)
+(104/162) Installing libevent (2.1.12-r8)
+(105/162) Installing libevent-dev (2.1.12-r8)
+(106/162) Installing linux-headers (6.14.2-r0)
+(107/162) Installing nghttp2-dev (1.65.0-r0)
+(108/162) Installing openssl-dev (3.5.0-r0)
+(109/162) Installing abseil-cpp-city (20240722.1-r1)
+(110/162) Installing abseil-cpp-low-level-hash (20240722.1-r1)
+(111/162) Installing abseil-cpp-hash (20240722.1-r1)
+(112/162) Installing abseil-cpp-log-internal-nullguard (20240722.1-r1)
+(113/162) Installing abseil-cpp-raw-logging-internal (20240722.1-r1)
+(114/162) Installing abseil-cpp-strings-internal (20240722.1-r1)
+(115/162) Installing abseil-cpp-strings (20240722.1-r1)
+(116/162) Installing abseil-cpp-log-internal-check-op (20240722.1-r1)
+(117/162) Installing abseil-cpp-spinlock-wait (20240722.1-r1)
+(118/162) Installing abseil-cpp-base (20240722.1-r1)
+(119/162) Installing abseil-cpp-debugging-internal (20240722.1-r1)
+(120/162) Installing abseil-cpp-stacktrace (20240722.1-r1)
+(121/162) Installing abseil-cpp-symbolize (20240722.1-r1)
+(122/162) Installing abseil-cpp-examine-stack (20240722.1-r1)
+(123/162) Installing abseil-cpp-log-globals (20240722.1-r1)
+(124/162) Installing abseil-cpp-log-internal-globals (20240722.1-r1)
+(125/162) Installing abseil-cpp-int128 (20240722.1-r1)
+(126/162) Installing abseil-cpp-str-format-internal (20240722.1-r1)
+(127/162) Installing abseil-cpp-time-zone (20240722.1-r1)
+(128/162) Installing abseil-cpp-time (20240722.1-r1)
+(129/162) Installing abseil-cpp-log-internal-format (20240722.1-r1)
+(130/162) Installing abseil-cpp-log-sink (20240722.1-r1)
+(131/162) Installing abseil-cpp-kernel-timeout-internal (20240722.1-r1)
+(132/162) Installing abseil-cpp-malloc-internal (20240722.1-r1)
+(133/162) Installing abseil-cpp-synchronization (20240722.1-r1)
+(134/162) Installing abseil-cpp-log-internal-log-sink-set (20240722.1-r1)
+(135/162) Installing abseil-cpp-log-internal-proto (20240722.1-r1)
+(136/162) Installing abseil-cpp-strerror (20240722.1-r1)
+(137/162) Installing abseil-cpp-log-internal-message (20240722.1-r1)
+(138/162) Installing abseil-cpp-raw-hash-set (20240722.1-r1)
+(139/162) Installing abseil-cpp-crc-internal (20240722.1-r1)
+(140/162) Installing abseil-cpp-crc32c (20240722.1-r1)
+(141/162) Installing abseil-cpp-crc-cord-state (20240722.1-r1)
+(142/162) Installing abseil-cpp-cord-internal (20240722.1-r1)
+(143/162) Installing abseil-cpp-exponential-biased (20240722.1-r1)
+(144/162) Installing abseil-cpp-cordz-functions (20240722.1-r1)
+(145/162) Installing abseil-cpp-cordz-handle (20240722.1-r1)
+(146/162) Installing abseil-cpp-cordz-info (20240722.1-r1)
+(147/162) Installing abseil-cpp-cord (20240722.1-r1)
+(148/162) Installing abseil-cpp-die-if-null (20240722.1-r1)
+(149/162) Installing abseil-cpp-log-internal-conditions (20240722.1-r1)
+(150/162) Installing abseil-cpp-status (20240722.1-r1)
+(151/162) Installing abseil-cpp-statusor (20240722.1-r1)
+(152/162) Installing abseil-cpp-throw-delegate (20240722.1-r1)
+(153/162) Installing abseil-cpp-log-initialize (20240722.1-r1)
+(154/162) Installing libprotoc (29.4-r0)
+(155/162) Installing protoc (29.4-r0)
+(156/162) Installing libprotobuf-lite (29.4-r0)
+(157/162) Installing protobuf (29.4-r0)
+(158/162) Installing libprotobuf (29.4-r0)
+(159/162) Installing protobuf-c-compiler (1.5.2-r0)
+(160/162) Installing protobuf-c-dev (1.5.2-r0)
+(161/162) Installing python3-dev (3.12.10-r1)
+(162/162) Installing swig (4.3.0-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 370 MiB in 162 packages
+>>> unbound: Fetching https://unbound.net/downloads/unbound-1.23.0.tar.gz
+>>> unbound: Checking sha512sums...
+unbound-1.23.0.tar.gz: OK
+conf.patch: OK
+migrate-dnscache-to-unbound: OK
+unbound.initd: OK
+unbound.confd: OK
+>>> unbound: Unpacking /var/cache/distfiles/unbound-1.23.0.tar.gz...
+>>> unbound: conf.patch
+patching file doc/example.conf.in
+Hunk #4 succeeded at 295 (offset 15 lines).
+Hunk #5 succeeded at 498 (offset 19 lines).
+Hunk #6 succeeded at 620 (offset 23 lines).
+Hunk #7 succeeded at 666 (offset 23 lines).
+Hunk #8 succeeded at 677 (offset 23 lines).
+Hunk #9 succeeded at 727 (offset 23 lines).
+Hunk #10 succeeded at 773 (offset 23 lines).
+Hunk #11 succeeded at 929 with fuzz 1 (offset 25 lines).
+Hunk #12 succeeded at 1083 with fuzz 2 (offset 34 lines).
+Hunk #13 succeeded at 1156 (offset 39 lines).
+Hunk #14 succeeded at 1423 (offset 62 lines).
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking for vfork.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+checking for grep that handles long lines and -e... /bin/grep
+checking for an ANSI C-conforming const... yes
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking cc dependency flag... -MM
+checking whether cc supports -Werror... yes
+checking whether cc supports -Wall... yes
+checking whether cc supports -std=c99... yes
+checking whether cc supports -xc99... no
+checking for getopt.h... yes
+checking for time.h... yes
+checking whether we need -std=c99 -D__EXTENSIONS__ -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600 -D_XOPEN_SOURCE_EXTENDED=1 -D_ALL_SOURCE as a flag for cc... no
+checking whether we need -std=c99 -D__EXTENSIONS__ -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_POSIX_C_SOURCE=200112 -D_XOPEN_SOURCE=600 -D_ALL_SOURCE as a flag for cc... no
+checking whether we need -std=c99 as a flag for cc... no
+checking whether we need -D_BSD_SOURCE -D_DEFAULT_SOURCE as a flag for cc... no
+checking whether we need -D_GNU_SOURCE as a flag for cc... no
+checking whether we need -D_GNU_SOURCE -D_FRSRESGID as a flag for cc... yes
+checking whether we need -D_POSIX_C_SOURCE=200112 as a flag for cc... no
+checking whether we need -D__EXTENSIONS__ as a flag for cc... no
+checking for inline... inline
+checking whether the C compiler (cc) accepts the "format" attribute... yes
+checking whether the C compiler (cc) accepts the "unused" attribute... yes
+checking whether the C compiler (cc) accepts the "weak" attribute... yes
+checking whether the C compiler (cc) accepts the "noreturn" attribute... yes
+checking whether the C compiler (cc) accepts the "fallthrough" attribute... yes
+checking for flex... no
+checking for lex... no
+checking for bison... no
+checking for byacc... no
+checking for doxygen... no
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... /usr/bin/ar
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... /usr/bin/ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for stdarg.h... yes
+checking for stdbool.h... yes
+checking for netinet/in.h... yes
+checking for netinet/tcp.h... yes
+checking for sys/param.h... yes
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for sys/un.h... yes
+checking for sys/uio.h... yes
+checking for sys/resource.h... yes
+checking for arpa/inet.h... yes
+checking for syslog.h... yes
+checking for netdb.h... yes
+checking for sys/wait.h... yes
+checking for pwd.h... yes
+checking for glob.h... yes
+checking for grp.h... yes
+checking for login_cap.h... no
+checking for winsock2.h... no
+checking for ws2tcpip.h... no
+checking for endian.h... yes
+checking for sys/endian.h... no
+checking for libkern/OSByteOrder.h... no
+checking for sys/ipc.h... yes
+checking for sys/shm.h... yes
+checking for ifaddrs.h... yes
+checking for poll.h... yes
+checking for net/if.h... yes
+checking for TargetConditionals.h... no
+checking for netioapi.h... no
+checking for linux/net_tstamp.h... yes
+checking for stdatomic.h... yes
+checking for int8_t... yes
+checking for int16_t... yes
+checking for int32_t... yes
+checking for int64_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for uint64_t... yes
+checking for size_t... yes
+checking for ssize_t... yes
+checking how to run the C preprocessor... cc -E
+checking for uid_t in sys/types.h... yes
+checking for pid_t... yes
+checking for off_t... yes
+checking for u_char... yes
+checking for rlim_t... yes
+checking for socklen_t... yes
+checking for in_addr_t... yes
+checking for in_port_t... yes
+checking if memcmp compares unsigned... yes
+checking size of time_t... 8
+checking size of size_t... 8
+checking for library containing inet_pton... none required
+checking for library containing socket... none required
+checking for working chown... yes
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for _LARGEFILE_SOURCE value needed for large files... no
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking whether we need -D_LARGEFILE_SOURCE=1 as a flag for cc... no
+checking if nonblocking sockets work... yes
+checking whether mkdir has one arg... no
+checking for strptime... yes
+checking whether strptime works... yes
+checking for GNU libc compatible malloc... yes
+checking whether cc is Clang... no
+checking whether pthreads work with "-pthread" and "-lpthread"... yes
+checking for joinable pthread attribute... PTHREAD_CREATE_JOINABLE
+checking whether more special flags are required for pthreads... no
+checking for PTHREAD_PRIO_INHERIT... yes
+checking for pthread_spinlock_t... yes
+checking for pthread_rwlock_t... yes
+checking size of unsigned long... 8
+checking size of pthread_t... 8
+checking if -pthread unused during linking... no
+checking for python3... /usr/bin/python3
+checking for the distutils Python module... no
+checking for the sysconfig Python module... yes
+checking for Python include path... -I/usr/include/python3.12
+checking for Python library path... -L/usr/lib -L/usr/lib/python3.12 -L. -lpython3.12
+checking for Python site-packages path... /usr/lib/python3.12/site-packages
+checking consistency of all components of python development environment... yes
+checking for swig... /usr/bin/swig
+checking SWIG... present
+checking for build time... 20250506
+checking for SSL... found in /usr
+checking for EVP_sha256 in -lcrypto... yes
+checking for openssl/ssl.h... yes
+checking for openssl/err.h... yes
+checking for openssl/rand.h... yes
+checking if libssl needs libdl... no
+checking if libssl needs -lcrypt32... no
+checking for LibreSSL... no
+checking for openssl/conf.h... yes
+checking for openssl/engine.h... yes
+checking for openssl/bn.h... yes
+checking for openssl/dh.h... yes
+checking for openssl/dsa.h... yes
+checking for openssl/rsa.h... yes
+checking for openssl/core_names.h... yes
+checking for openssl/param_build.h... yes
+checking for OPENSSL_config... yes
+checking for EVP_sha1... yes
+checking for EVP_sha256... yes
+checking for EVP_sha512... yes
+checking for FIPS_mode... no
+checking for EVP_default_properties_is_fips_enabled... yes
+checking for EVP_MD_CTX_new... yes
+checking for OpenSSL_add_all_digests... no
+checking for OPENSSL_init_crypto... yes
+checking for EVP_cleanup... no
+checking for ENGINE_cleanup... no
+checking for ERR_load_crypto_strings... no
+checking for CRYPTO_cleanup_all_ex_data... no
+checking for ERR_free_strings... no
+checking for RAND_cleanup... no
+checking for DSA_SIG_set0... yes
+checking for EVP_dss1... no
+checking for EVP_DigestVerify... yes
+checking for EVP_aes_256_cbc... yes
+checking for EVP_EncryptInit_ex... yes
+checking for HMAC_Init_ex... yes
+checking for CRYPTO_THREADID_set_callback... no
+checking for EVP_MAC_CTX_set_params... yes
+checking for OSSL_PARAM_BLD_new... yes
+checking for BIO_set_callback_ex... yes
+checking for SSL_CTX_set_tmp_ecdh... no
+checking for OPENSSL_init_ssl... yes
+checking for SSL_CTX_set_security_level... yes
+checking for SSL_set1_host... yes
+checking for SSL_get0_peername... yes
+checking for X509_VERIFY_PARAM_set1_host... yes
+checking for SSL_CTX_set_ciphersuites... yes
+checking for SSL_CTX_set_tlsext_ticket_key_evp_cb... yes
+checking for SSL_CTX_set_alpn_select_cb... yes
+checking for SSL_get0_alpn_selected... yes
+checking for SSL_CTX_set_alpn_protos... yes
+checking for SSL_get1_peer_certificate... yes
+checking whether SSL_COMP_get_compression_methods is declared... yes
+checking whether sk_SSL_COMP_pop_free is declared... yes
+checking whether SSL_CTX_set_ecdh_auto is declared... yes
+checking the return type of HMAC_Init_ex... int
+checking for EVP_PKEY_fromdata... yes
+checking whether OPENSSL_NO_EC is declared... no
+checking whether NID_X9_62_prime256v1 is declared... yes
+checking whether NID_secp384r1 is declared... yes
+checking if openssl supports SHA2 and ECDSA with EVP... yes
+checking whether NID_ED25519 is declared... yes
+checking whether NID_ED448 is declared... yes
+checking for libevent... found in /usr
+checking for library containing clock_gettime... none required
+checking for event.h... yes
+checking whether EV_VERSION_MAJOR is declared... no
+checking for library containing event_set... -levent
+checking for event_base_free... yes
+checking for event_base_once... yes
+checking for event_base_new... yes
+checking for event_base_get_method... yes
+checking for ev_loop... no
+checking for ev_default_loop... no
+checking for event_assign... yes
+checking whether evsignal_assign is declared... yes
+checking for libexpat... found in /usr
+checking for expat.h... yes
+checking whether XML_StopParser is declared... yes
+checking for libhiredis... found in /usr
+checking for hiredis/hiredis.h... yes
+checking whether redisConnect is declared... yes
+checking for libnghttp2... found in /usr
+checking for nghttp2/nghttp2.h... yes
+checking whether nghttp2_session_server_new is declared... yes
+checking for getaddrinfo... yes
+checking for ioctlsocket... no
+checking for daemon... yes
+checking if daemon is deprecated... no
+checking for struct sockaddr_un.sun_len... no
+checking for struct in_pktinfo.ipi_spec_dst... yes
+checking for htobe64... yes
+checking for be64toh... yes
+checking for library containing setusercontext... no
+checking for tzset... yes
+checking for sigprocmask... yes
+checking for fcntl... yes
+checking for getpwnam... yes
+checking for endpwent... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for setsid... yes
+checking for chroot... yes
+checking for kill... yes
+checking for chown... yes
+checking for sleep... yes
+checking for usleep... yes
+checking for random... yes
+checking for srandom... yes
+checking for recvmsg... yes
+checking for sendmsg... yes
+checking for writev... yes
+checking for socketpair... yes
+checking for glob... yes
+checking for initgroups... yes
+checking for strftime... yes
+checking for localtime_r... yes
+checking for setusercontext... no
+checking for _beginthreadex... no
+checking for endservent... yes
+checking for endprotoent... yes
+checking for fsync... yes
+checking for shmget... yes
+checking for accept4... yes
+checking for getifaddrs... yes
+checking for if_nametoindex... yes
+checking for poll... yes
+checking for gettid... yes
+checking for setresuid... yes
+checking for setresgid... yes
+checking for atomic_store... yes
+checking whether inet_pton is declared... yes
+checking whether inet_ntop is declared... yes
+checking for inet_aton... yes
+checking for inet_pton... yes
+checking for inet_ntop... yes
+checking for snprintf... yes
+checking for correct snprintf return value... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for memmove... yes
+checking for gmtime_r... yes
+checking for isblank... yes
+checking for explicit_bzero... yes
+checking for reallocarray... yes
+checking whether reallocarray is declared... yes
+checking for arc4random... no
+checking for arc4random_uniform... no
+checking for getentropy... yes
+checking for ctime_r... yes
+checking for strsep... yes
+checking for protoc-c... /usr/bin/protoc-c
+checking for PROTOBUFC... yes
+checking for library containing protobuf_c_message_pack... none required
+checking if make supports $< with implicit rule in scope... yes
+configure: Stripping extension flags...
+checking for build time... May  6, 2025
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/example.conf
+config.status: creating doc/libunbound.3
+config.status: creating doc/unbound.8
+config.status: creating doc/unbound-anchor.8
+config.status: creating doc/unbound-checkconf.8
+config.status: creating doc/unbound.conf.5
+config.status: creating doc/unbound-control.8
+config.status: creating doc/unbound-host.1
+config.status: creating smallapp/unbound-control-setup.sh
+config.status: creating dnstap/dnstap_config.h
+config.status: creating dnscrypt/dnscrypt_config.h
+config.status: creating contrib/libunbound.pc
+config.status: creating contrib/unbound.socket
+config.status: creating contrib/unbound.service
+config.status: creating contrib/unbound_portable.service
+config.status: creating config.h
+config.status: executing libtool commands
+config.status: executing disable-rpath commands
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dns.lo -c services/cache/dns.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o infra.lo -c services/cache/infra.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o rrset.lo -c services/cache/rrset.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dname.lo -c util/data/dname.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o msgencode.lo -c util/data/msgencode.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o as112.lo -c util/as112.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o msgparse.lo -c util/data/msgparse.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o msgreply.lo -c util/data/msgreply.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o packed_rrset.lo -c util/data/packed_rrset.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iterator.lo -c iterator/iterator.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_delegpt.lo -c iterator/iter_delegpt.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_donotq.lo -c iterator/iter_donotq.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_fwd.lo -c iterator/iter_fwd.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_hints.lo -c iterator/iter_hints.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_priv.lo -c iterator/iter_priv.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_resptype.lo -c iterator/iter_resptype.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/data/dname.c  -fPIC -DPIC -o .libs/dname.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/cache/infra.c  -fPIC -DPIC -o .libs/infra.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/data/msgparse.c  -fPIC -DPIC -o .libs/msgparse.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/data/msgencode.c  -fPIC -DPIC -o .libs/msgencode.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/cache/rrset.c  -fPIC -DPIC -o .libs/rrset.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/as112.c  -fPIC -DPIC -o .libs/as112.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/data/msgreply.c  -fPIC -DPIC -o .libs/msgreply.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/cache/dns.c  -fPIC -DPIC -o .libs/dns.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_donotq.c  -fPIC -DPIC -o .libs/iter_donotq.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iterator.c  -fPIC -DPIC -o .libs/iterator.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_resptype.c  -fPIC -DPIC -o .libs/iter_resptype.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_fwd.c  -fPIC -DPIC -o .libs/iter_fwd.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_priv.c  -fPIC -DPIC -o .libs/iter_priv.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_hints.c  -fPIC -DPIC -o .libs/iter_hints.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/data/packed_rrset.c  -fPIC -DPIC -o .libs/packed_rrset.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_scrub.lo -c iterator/iter_scrub.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_delegpt.c  -fPIC -DPIC -o .libs/iter_delegpt.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_scrub.c  -fPIC -DPIC -o .libs/iter_scrub.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o iter_utils.lo -c iterator/iter_utils.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o localzone.lo -c services/localzone.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o mesh.lo -c services/mesh.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o modstack.lo -c services/modstack.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o view.lo -c services/view.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/localzone.c  -fPIC -DPIC -o .libs/localzone.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o outbound_list.lo -c services/outbound_list.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/mesh.c  -fPIC -DPIC -o .libs/mesh.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/modstack.c  -fPIC -DPIC -o .libs/modstack.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c iterator/iter_utils.c  -fPIC -DPIC -o .libs/iter_utils.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/view.c  -fPIC -DPIC -o .libs/view.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/outbound_list.c  -fPIC -DPIC -o .libs/outbound_list.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o alloc.lo -c util/alloc.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o config_file.lo -c util/config_file.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o configlexer.lo -c util/configlexer.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o configparser.lo -c util/configparser.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o fptr_wlist.lo -c util/fptr_wlist.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/alloc.c  -fPIC -DPIC -o .libs/alloc.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/config_file.c  -fPIC -DPIC -o .libs/config_file.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/configlexer.c  -fPIC -DPIC -o .libs/configlexer.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o siphash.lo -c util/siphash.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/configparser.c  -fPIC -DPIC -o .libs/configparser.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/fptr_wlist.c  -fPIC -DPIC -o .libs/fptr_wlist.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o edns.lo -c util/edns.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/siphash.c  -fPIC -DPIC -o .libs/siphash.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o locks.lo -c util/locks.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o log.lo -c util/log.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/edns.c  -fPIC -DPIC -o .libs/edns.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/log.c  -fPIC -DPIC -o .libs/log.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o mini_event.lo -c util/mini_event.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/locks.c  -fPIC -DPIC -o .libs/locks.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o module.lo -c util/module.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o net_help.lo -c util/net_help.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/mini_event.c  -fPIC -DPIC -o .libs/mini_event.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/module.c  -fPIC -DPIC -o .libs/module.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o random.lo -c util/random.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/net_help.c  -fPIC -DPIC -o .libs/net_help.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o rbtree.lo -c util/rbtree.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o regional.lo -c util/regional.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o rtt.lo -c util/rtt.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/rbtree.c  -fPIC -DPIC -o .libs/rbtree.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/random.c  -fPIC -DPIC -o .libs/random.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/regional.c  -fPIC -DPIC -o .libs/regional.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dnstree.lo -c util/storage/dnstree.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/rtt.c  -fPIC -DPIC -o .libs/rtt.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o lookup3.lo -c util/storage/lookup3.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o lruhash.lo -c util/storage/lruhash.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o slabhash.lo -c util/storage/slabhash.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/storage/dnstree.c  -fPIC -DPIC -o .libs/dnstree.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o tcp_conn_limit.lo -c util/tcp_conn_limit.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/storage/lookup3.c  -fPIC -DPIC -o .libs/lookup3.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/storage/slabhash.c  -fPIC -DPIC -o .libs/slabhash.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o timehist.lo -c util/timehist.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/storage/lruhash.c  -fPIC -DPIC -o .libs/lruhash.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o tube.lo -c util/tube.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/timehist.c  -fPIC -DPIC -o .libs/timehist.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/tcp_conn_limit.c  -fPIC -DPIC -o .libs/tcp_conn_limit.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o winsock_event.lo -c util/winsock_event.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/tube.c  -fPIC -DPIC -o .libs/tube.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o autotrust.lo -c validator/autotrust.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_anchor.lo -c validator/val_anchor.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o rpz.lo -c services/rpz.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/winsock_event.c  -fPIC -DPIC -o .libs/winsock_event.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/autotrust.c  -fPIC -DPIC -o .libs/autotrust.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o rfc_1982.lo -c util/rfc_1982.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/rpz.c  -fPIC -DPIC -o .libs/rpz.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_anchor.c  -fPIC -DPIC -o .libs/val_anchor.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o proxy_protocol.lo -c util/proxy_protocol.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o validator.lo -c validator/validator.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/rfc_1982.c  -fPIC -DPIC -o .libs/rfc_1982.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_kcache.lo -c validator/val_kcache.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_kentry.lo -c validator/val_kentry.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_neg.lo -c validator/val_neg.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/proxy_protocol.c  -fPIC -DPIC -o .libs/proxy_protocol.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_nsec3.lo -c validator/val_nsec3.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/validator.c  -fPIC -DPIC -o .libs/validator.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_kcache.c  -fPIC -DPIC -o .libs/val_kcache.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_kentry.c  -fPIC -DPIC -o .libs/val_kentry.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_nsec.lo -c validator/val_nsec.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_neg.c  -fPIC -DPIC -o .libs/val_neg.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_secalgo.lo -c validator/val_secalgo.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_nsec3.c  -fPIC -DPIC -o .libs/val_nsec3.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_nsec.c  -fPIC -DPIC -o .libs/val_nsec.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_sigcrypt.lo -c validator/val_sigcrypt.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_secalgo.c  -fPIC -DPIC -o .libs/val_secalgo.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o val_utils.lo -c validator/val_utils.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dns64.lo -c dns64/dns64.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_sigcrypt.c  -fPIC -DPIC -o .libs/val_sigcrypt.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o cachedb.lo -c cachedb/cachedb.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o redis.lo -c cachedb/redis.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o authzone.lo -c services/authzone.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c validator/val_utils.c  -fPIC -DPIC -o .libs/val_utils.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c dns64/dns64.c  -fPIC -DPIC -o .libs/dns64.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c cachedb/redis.c  -fPIC -DPIC -o .libs/redis.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o edns-subnet.lo -c edns-subnet/edns-subnet.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c cachedb/cachedb.c  -fPIC -DPIC -o .libs/cachedb.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o subnetmod.lo -c edns-subnet/subnetmod.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/authzone.c  -fPIC -DPIC -o .libs/authzone.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c edns-subnet/subnetmod.c  -fPIC -DPIC -o .libs/subnetmod.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c edns-subnet/edns-subnet.c  -fPIC -DPIC -o .libs/edns-subnet.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o addrtree.lo -c edns-subnet/addrtree.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o subnet-whitelist.lo -c edns-subnet/subnet-whitelist.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c edns-subnet/addrtree.c  -fPIC -DPIC -o .libs/addrtree.o
+/usr/bin/protoc-c --c_out=. --proto_path=. ./dnstap/dnstap.proto
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1748705545.195490    7865 main.cc:45] `protoc-c` is deprecated. Please use `protoc` instead!
+/usr/bin/protoc-c --c_out=. --proto_path=. ./dnstap/dnstap.proto
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+W0000 00:00:1748705545.199936    7875 main.cc:45] `protoc-c` is deprecated. Please use `protoc` instead!
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c edns-subnet/subnet-whitelist.c  -fPIC -DPIC -o .libs/subnet-whitelist.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dnstap_fstrm.lo -c dnstap/dnstap_fstrm.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dtstream.lo -c dnstap/dtstream.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o respip.lo -c respip/respip.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o timeval_func.lo -c util/timeval_func.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o netevent.lo -c util/netevent.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c dnstap/dtstream.c  -fPIC -DPIC -o .libs/dtstream.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c respip/respip.c  -fPIC -DPIC -o .libs/respip.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c dnstap/dnstap_fstrm.c  -fPIC -DPIC -o .libs/dnstap_fstrm.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/timeval_func.c  -fPIC -DPIC -o .libs/timeval_func.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/netevent.c  -fPIC -DPIC -o .libs/netevent.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o listen_dnsport.lo -c services/listen_dnsport.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o outside_network.lo -c services/outside_network.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o ub_event.lo -c util/ub_event.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o acl_list.lo -c daemon/acl_list.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o cachedump.lo -c daemon/cachedump.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o daemon.lo -c daemon/daemon.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/listen_dnsport.c  -fPIC -DPIC -o .libs/listen_dnsport.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c services/outside_network.c  -fPIC -DPIC -o .libs/outside_network.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o shm_main.lo -c util/shm_side/shm_main.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/acl_list.c  -fPIC -DPIC -o .libs/acl_list.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/ub_event.c  -fPIC -DPIC -o .libs/ub_event.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/daemon.c  -fPIC -DPIC -o .libs/daemon.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/cachedump.c  -fPIC -DPIC -o .libs/cachedump.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o remote.lo -c daemon/remote.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/shm_side/shm_main.c  -fPIC -DPIC -o .libs/shm_main.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o stats.lo -c daemon/stats.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unbound.lo -c daemon/unbound.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o worker.lo -c daemon/worker.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/remote.c  -fPIC -DPIC -o .libs/remote.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/stats.c  -fPIC -DPIC -o .libs/stats.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/worker.c  -fPIC -DPIC -o .libs/worker.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c daemon/unbound.c  -fPIC -DPIC -o .libs/unbound.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o keyraw.lo -c sldns/keyraw.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o sbuffer.lo -c sldns/sbuffer.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o wire2str.lo -c sldns/wire2str.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/keyraw.c  -fPIC -DPIC -o .libs/keyraw.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/wire2str.c  -fPIC -DPIC -o .libs/wire2str.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/sbuffer.c  -fPIC -DPIC -o .libs/sbuffer.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o parse.lo -c sldns/parse.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o parseutil.lo -c sldns/parseutil.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o rrdef.lo -c sldns/rrdef.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/parse.c  -fPIC -DPIC -o .libs/parse.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/parseutil.c  -fPIC -DPIC -o .libs/parseutil.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/rrdef.c  -fPIC -DPIC -o .libs/rrdef.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o str2wire.lo -c sldns/str2wire.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o arc4random.lo -c compat/arc4random.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sldns/str2wire.c  -fPIC -DPIC -o .libs/str2wire.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o arc4random_uniform.lo -c compat/arc4random_uniform.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c compat/arc4random.c  -fPIC -DPIC -o .libs/arc4random.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o arc4_lock.lo -c compat/arc4_lock.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c compat/arc4random_uniform.c  -fPIC -DPIC -o .libs/arc4random_uniform.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c compat/arc4_lock.c  -fPIC -DPIC -o .libs/arc4_lock.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o context.lo -c libunbound/context.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c libunbound/context.c  -fPIC -DPIC -o .libs/context.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o libunbound.lo -c libunbound/libunbound.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o libworker.lo -c libunbound/libworker.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o ub_event_pluggable.lo -c util/ub_event_pluggable.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c libunbound/libunbound.c  -fPIC -DPIC -o .libs/libunbound.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unbound-checkconf.lo -c smallapp/unbound-checkconf.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o worker_cb.lo -c smallapp/worker_cb.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util/ub_event_pluggable.c  -fPIC -DPIC -o .libs/ub_event_pluggable.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c libunbound/libworker.c  -fPIC -DPIC -o .libs/libworker.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c smallapp/worker_cb.c  -fPIC -DPIC -o .libs/worker_cb.o
+sed -e 's/@''UNBOUND_VERSION_MAJOR@/1/' -e 's/@''UNBOUND_VERSION_MINOR@/23/' -e 's/@''UNBOUND_VERSION_MICRO@/0/' < ./libunbound/unbound.h > unbound.h
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c smallapp/unbound-checkconf.c  -fPIC -DPIC -o .libs/unbound-checkconf.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unbound-host.lo -c smallapp/unbound-host.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unbound-control.lo -c smallapp/unbound-control.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unbound-anchor.lo -c smallapp/unbound-anchor.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c smallapp/unbound-host.c  -fPIC -DPIC -o .libs/unbound-host.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c smallapp/unbound-control.c  -fPIC -DPIC -o .libs/unbound-control.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c smallapp/unbound-anchor.c  -fPIC -DPIC -o .libs/unbound-anchor.o
+cp smallapp/unbound-control-setup.sh unbound-control-setup
+chmod +x unbound-control-setup
+/usr/bin/swig -python -o libunbound/python/libunbound_wrap.c -I. -I. -I/usr/include/python3.12 -DPY_MAJOR_VERSION=3 ./libunbound/python/libunbound.i
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dnstap.lo -c dnstap/dnstap.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o dnstap.pb-c.lo -c dnstap/dnstap.pb-c.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c dnstap/dnstap.c  -fPIC -DPIC -o .libs/dnstap.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c dnstap/dnstap.pb-c.c  -fPIC -DPIC -o .libs/dnstap.pb-c.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o libunbound_wrap.lo -c libunbound/python/libunbound_wrap.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c libunbound/python/libunbound_wrap.c  -fPIC -DPIC -o .libs/libunbound_wrap.o
+./libtool --tag=CC --mode=link cc  -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -version-info 9:31:1 -no-undefined -export-symbols ./libunbound/ubsyms.def -o libunbound.la context.lo libunbound.lo libworker.lo ub_event_pluggable.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo as112.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo view.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo siphash.lo edns.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo tcp_conn_limit.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo rpz.lo rfc_1982.lo proxy_protocol.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo dns64.lo cachedb.lo redis.lo authzone.lo edns-subnet.lo subnetmod.lo addrtree.lo subnet-whitelist.lo   dnstap.lo dnstap.pb-c.lo dnstap_fstrm.lo dtstream.lo     respip.lo timeval_func.lo netevent.lo listen_dnsport.lo outside_network.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo -rpath /usr/lib -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+libtool: link: echo "{ global:" > .libs/libunbound.ver
+libtool: link:  cat ./libunbound/ubsyms.def | sed -e "s/\(.*\)/\1;/" >> .libs/libunbound.ver
+libtool: link:  echo "local: *; };" >> .libs/libunbound.ver
+libtool: link:  cc -shared  -fPIC -DPIC  .libs/context.o .libs/libunbound.o .libs/libworker.o .libs/ub_event_pluggable.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/as112.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/view.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/siphash.o .libs/edns.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/tcp_conn_limit.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/rpz.o .libs/rfc_1982.o .libs/proxy_protocol.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/dns64.o .libs/cachedb.o .libs/redis.o .libs/authzone.o .libs/edns-subnet.o .libs/subnetmod.o .libs/addrtree.o .libs/subnet-whitelist.o .libs/dnstap.o .libs/dnstap.pb-c.o .libs/dnstap_fstrm.o .libs/dtstream.o .libs/respip.o .libs/timeval_func.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o   -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c  -Os -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -pthread -Wl,-soname -Wl,libunbound.so.8 -Wl,-version-script -Wl,.libs/libunbound.ver -o .libs/libunbound.so.8.1.31
+libtool: link: (cd ".libs" && rm -f "libunbound.so.8" && ln -s "libunbound.so.8.1.31" "libunbound.so.8")
+libtool: link: (cd ".libs" && rm -f "libunbound.so" && ln -s "libunbound.so.8.1.31" "libunbound.so")
+libtool: link: ( cd ".libs" && rm -f "libunbound.la" && ln -s "../libunbound.la" "libunbound.la" )
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o unbound acl_list.lo cachedump.lo daemon.lo shm_main.lo remote.lo stats.lo unbound.lo worker.lo  dns.lo infra.lo rrset.lo dname.lo msgencode.lo as112.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo view.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo siphash.lo edns.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo tcp_conn_limit.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo rpz.lo rfc_1982.lo proxy_protocol.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo dns64.lo cachedb.lo redis.lo authzone.lo edns-subnet.lo subnetmod.lo addrtree.lo subnet-whitelist.lo   dnstap.lo dnstap.pb-c.lo dnstap_fstrm.lo dtstream.lo     respip.lo timeval_func.lo netevent.lo listen_dnsport.lo outside_network.lo ub_event.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo   -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c 
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o unbound-checkconf unbound-checkconf.lo worker_cb.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo as112.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo view.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo siphash.lo edns.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo tcp_conn_limit.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo rpz.lo rfc_1982.lo proxy_protocol.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo dns64.lo cachedb.lo redis.lo authzone.lo edns-subnet.lo subnetmod.lo addrtree.lo subnet-whitelist.lo   dnstap.lo dnstap.pb-c.lo dnstap_fstrm.lo dtstream.lo     respip.lo timeval_func.lo netevent.lo listen_dnsport.lo outside_network.lo ub_event.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo   -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o unbound-host unbound-host.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo    libunbound.la -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o unbound-control unbound-control.lo worker_cb.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo as112.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo view.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo siphash.lo edns.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo tcp_conn_limit.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo rpz.lo rfc_1982.lo proxy_protocol.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo dns64.lo cachedb.lo redis.lo authzone.lo edns-subnet.lo subnetmod.lo addrtree.lo subnet-whitelist.lo   dnstap.lo dnstap.pb-c.lo dnstap_fstrm.lo dtstream.lo     respip.lo timeval_func.lo netevent.lo listen_dnsport.lo outside_network.lo ub_event.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo   -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o unbound-anchor unbound-anchor.lo parseutil.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo   libunbound.la -lexpat -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+./libtool --tag=CC --mode=link cc  -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -module -avoid-version -no-undefined -shared -o _unbound.la libunbound_wrap.lo -rpath /usr/lib/python3.12/site-packages -L. -L.libs libunbound.la -L/usr/lib -L/usr/lib/python3.12 -L. -lpython3.12
+libtool: link: cc -shared  -fPIC -DPIC  .libs/libunbound_wrap.o   -D__LIBTOOL_RPATH_SED__ -L. -L.libs ./.libs/libunbound.so -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -L/usr/lib -L/usr/lib/python3.12 -lpython3.12  -Os -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -pthread -Wl,-soname -Wl,_unbound.so -o .libs/_unbound.so
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/unbound-anchor .libs/unbound-anchor.o .libs/parseutil.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o  ./.libs/libunbound.so -lexpat -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/unbound-host .libs/unbound-host.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o  ./.libs/libunbound.so -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o unbound .libs/acl_list.o .libs/cachedump.o .libs/daemon.o .libs/shm_main.o .libs/remote.o .libs/stats.o .libs/unbound.o .libs/worker.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/as112.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/view.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/siphash.o .libs/edns.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/tcp_conn_limit.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/rpz.o .libs/rfc_1982.o .libs/proxy_protocol.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/dns64.o .libs/cachedb.o .libs/redis.o .libs/authzone.o .libs/edns-subnet.o .libs/subnetmod.o .libs/addrtree.o .libs/subnet-whitelist.o .libs/dnstap.o .libs/dnstap.pb-c.o .libs/dnstap_fstrm.o .libs/dtstream.o .libs/respip.o .libs/timeval_func.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/ub_event.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o  -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o unbound-control .libs/unbound-control.o .libs/worker_cb.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/as112.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/view.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/siphash.o .libs/edns.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/tcp_conn_limit.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/rpz.o .libs/rfc_1982.o .libs/proxy_protocol.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/dns64.o .libs/cachedb.o .libs/redis.o .libs/authzone.o .libs/edns-subnet.o .libs/subnetmod.o .libs/addrtree.o .libs/subnet-whitelist.o .libs/dnstap.o .libs/dnstap.pb-c.o .libs/dnstap_fstrm.o .libs/dtstream.o .libs/respip.o .libs/timeval_func.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/ub_event.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o  -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o unbound-checkconf .libs/unbound-checkconf.o .libs/worker_cb.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/as112.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/view.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/siphash.o .libs/edns.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/tcp_conn_limit.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/rpz.o .libs/rfc_1982.o .libs/proxy_protocol.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/dns64.o .libs/cachedb.o .libs/redis.o .libs/authzone.o .libs/edns-subnet.o .libs/subnetmod.o .libs/addrtree.o .libs/subnet-whitelist.o .libs/dnstap.o .libs/dnstap.pb-c.o .libs/dnstap_fstrm.o .libs/dtstream.o .libs/respip.o .libs/timeval_func.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/ub_event.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o  -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+libtool: link: ( cd ".libs" && rm -f "_unbound.la" && ln -s "../_unbound.la" "_unbound.la" )
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitanchor.lo -c testcode/unitanchor.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitdname.lo -c testcode/unitdname.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitlruhash.lo -c testcode/unitlruhash.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitmain.lo -c testcode/unitmain.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitmsgparse.lo -c testcode/unitmsgparse.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitneg.lo -c testcode/unitneg.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitregional.lo -c testcode/unitregional.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitslabhash.lo -c testcode/unitslabhash.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitverify.lo -c testcode/unitverify.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o readhex.lo -c testcode/readhex.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o testpkts.lo -c testcode/testpkts.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitldns.lo -c testcode/unitldns.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitecs.lo -c testcode/unitecs.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitauth.lo -c testcode/unitauth.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitzonemd.lo -c testcode/unitzonemd.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unittcpreuse.lo -c testcode/unittcpreuse.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitmain.c  -fPIC -DPIC -o .libs/unitmain.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitanchor.c  -fPIC -DPIC -o .libs/unitanchor.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitldns.c  -fPIC -DPIC -o .libs/unitldns.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitslabhash.c  -fPIC -DPIC -o .libs/unitslabhash.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitdname.c  -fPIC -DPIC -o .libs/unitdname.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/testpkts.c  -fPIC -DPIC -o .libs/testpkts.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitneg.c  -fPIC -DPIC -o .libs/unitneg.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitmsgparse.c  -fPIC -DPIC -o .libs/unitmsgparse.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitregional.c  -fPIC -DPIC -o .libs/unitregional.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitauth.c  -fPIC -DPIC -o .libs/unitauth.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitverify.c  -fPIC -DPIC -o .libs/unitverify.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unittcpreuse.c  -fPIC -DPIC -o .libs/unittcpreuse.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitecs.c  -fPIC -DPIC -o .libs/unitecs.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitzonemd.c  -fPIC -DPIC -o .libs/unitzonemd.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/readhex.c  -fPIC -DPIC -o .libs/readhex.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitlruhash.c  -fPIC -DPIC -o .libs/unitlruhash.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitdoq.lo -c testcode/unitdoq.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitdoq.c  -fPIC -DPIC -o .libs/unitdoq.o
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o unitinfra.lo -c testcode/unitinfra.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o testbound.lo -c testcode/testbound.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o replay.lo -c testcode/replay.c
+./libtool --tag=CC --mode=compile cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread  -o fake_event.lo -c testcode/fake_event.c
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/unitinfra.c  -fPIC -DPIC -o .libs/unitinfra.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/replay.c  -fPIC -DPIC -o .libs/replay.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/testbound.c  -fPIC -DPIC -o .libs/testbound.o
+libtool: compile:  cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c testcode/fake_event.c  -fPIC -DPIC -o .libs/fake_event.o
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o unittest unitanchor.lo unitdname.lo unitlruhash.lo unitmain.lo unitmsgparse.lo unitneg.lo unitregional.lo unitslabhash.lo unitverify.lo readhex.lo testpkts.lo unitldns.lo unitecs.lo unitauth.lo unitzonemd.lo unittcpreuse.lo unitdoq.lo unitinfra.lo worker_cb.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo as112.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo view.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo siphash.lo edns.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo tcp_conn_limit.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo rpz.lo rfc_1982.lo proxy_protocol.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo dns64.lo cachedb.lo redis.lo authzone.lo edns-subnet.lo subnetmod.lo addrtree.lo subnet-whitelist.lo   dnstap.lo dnstap.pb-c.lo dnstap_fstrm.lo dtstream.lo     respip.lo timeval_func.lo netevent.lo listen_dnsport.lo outside_network.lo ub_event.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+./libtool --tag=CC --mode=link cc   -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o testbound testbound.lo replay.lo fake_event.lo testpkts.lo worker.lo acl_list.lo daemon.lo stats.lo shm_main.lo dns.lo infra.lo rrset.lo dname.lo msgencode.lo as112.lo msgparse.lo msgreply.lo packed_rrset.lo iterator.lo iter_delegpt.lo iter_donotq.lo iter_fwd.lo iter_hints.lo iter_priv.lo iter_resptype.lo iter_scrub.lo iter_utils.lo localzone.lo mesh.lo modstack.lo view.lo outbound_list.lo alloc.lo config_file.lo configlexer.lo configparser.lo fptr_wlist.lo siphash.lo edns.lo locks.lo log.lo mini_event.lo module.lo net_help.lo random.lo rbtree.lo regional.lo rtt.lo dnstree.lo lookup3.lo lruhash.lo slabhash.lo tcp_conn_limit.lo timehist.lo tube.lo winsock_event.lo autotrust.lo val_anchor.lo rpz.lo rfc_1982.lo proxy_protocol.lo validator.lo val_kcache.lo val_kentry.lo val_neg.lo val_nsec3.lo val_nsec.lo val_secalgo.lo val_sigcrypt.lo val_utils.lo dns64.lo cachedb.lo redis.lo authzone.lo edns-subnet.lo subnetmod.lo addrtree.lo subnet-whitelist.lo   dnstap.lo dnstap.pb-c.lo dnstap_fstrm.lo dtstream.lo     respip.lo timeval_func.lo ub_event.lo keyraw.lo sbuffer.lo wire2str.lo parse.lo parseutil.lo rrdef.lo str2wire.lo arc4random.lo arc4random_uniform.lo arc4_lock.lo -lssl -levent -lpthread  -lcrypto -lhiredis -lnghttp2 -lprotobuf-c
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o unittest .libs/unitanchor.o .libs/unitdname.o .libs/unitlruhash.o .libs/unitmain.o .libs/unitmsgparse.o .libs/unitneg.o .libs/unitregional.o .libs/unitslabhash.o .libs/unitverify.o .libs/readhex.o .libs/testpkts.o .libs/unitldns.o .libs/unitecs.o .libs/unitauth.o .libs/unitzonemd.o .libs/unittcpreuse.o .libs/unitdoq.o .libs/unitinfra.o .libs/worker_cb.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/as112.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/view.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/siphash.o .libs/edns.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/tcp_conn_limit.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/rpz.o .libs/rfc_1982.o .libs/proxy_protocol.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/dns64.o .libs/cachedb.o .libs/redis.o .libs/authzone.o .libs/edns-subnet.o .libs/subnetmod.o .libs/addrtree.o .libs/subnet-whitelist.o .libs/dnstap.o .libs/dnstap.pb-c.o .libs/dnstap_fstrm.o .libs/dtstream.o .libs/respip.o .libs/timeval_func.o .libs/netevent.o .libs/listen_dnsport.o .libs/outside_network.o .libs/ub_event.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o  -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+libtool: link: cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o testbound .libs/testbound.o .libs/replay.o .libs/fake_event.o .libs/testpkts.o .libs/worker.o .libs/acl_list.o .libs/daemon.o .libs/stats.o .libs/shm_main.o .libs/dns.o .libs/infra.o .libs/rrset.o .libs/dname.o .libs/msgencode.o .libs/as112.o .libs/msgparse.o .libs/msgreply.o .libs/packed_rrset.o .libs/iterator.o .libs/iter_delegpt.o .libs/iter_donotq.o .libs/iter_fwd.o .libs/iter_hints.o .libs/iter_priv.o .libs/iter_resptype.o .libs/iter_scrub.o .libs/iter_utils.o .libs/localzone.o .libs/mesh.o .libs/modstack.o .libs/view.o .libs/outbound_list.o .libs/alloc.o .libs/config_file.o .libs/configlexer.o .libs/configparser.o .libs/fptr_wlist.o .libs/siphash.o .libs/edns.o .libs/locks.o .libs/log.o .libs/mini_event.o .libs/module.o .libs/net_help.o .libs/random.o .libs/rbtree.o .libs/regional.o .libs/rtt.o .libs/dnstree.o .libs/lookup3.o .libs/lruhash.o .libs/slabhash.o .libs/tcp_conn_limit.o .libs/timehist.o .libs/tube.o .libs/winsock_event.o .libs/autotrust.o .libs/val_anchor.o .libs/rpz.o .libs/rfc_1982.o .libs/proxy_protocol.o .libs/validator.o .libs/val_kcache.o .libs/val_kentry.o .libs/val_neg.o .libs/val_nsec3.o .libs/val_nsec.o .libs/val_secalgo.o .libs/val_sigcrypt.o .libs/val_utils.o .libs/dns64.o .libs/cachedb.o .libs/redis.o .libs/authzone.o .libs/edns-subnet.o .libs/subnetmod.o .libs/addrtree.o .libs/subnet-whitelist.o .libs/dnstap.o .libs/dnstap.pb-c.o .libs/dnstap_fstrm.o .libs/dtstream.o .libs/respip.o .libs/timeval_func.o .libs/ub_event.o .libs/keyraw.o .libs/sbuffer.o .libs/wire2str.o .libs/parse.o .libs/parseutil.o .libs/rrdef.o .libs/str2wire.o .libs/arc4random.o .libs/arc4random_uniform.o .libs/arc4_lock.o  -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -pthread
+./unittest
+Start of unbound 1.23.0+libevent unit test.
+test authzone functions
+test negative cache functions
+test ub_random functions
+test per-view respip config data apply functions
+test global respip config data apply functions
+test per-view respip config actions apply functions
+test global respip config actions apply functions
+test signature verify functions
+test signature verify:./testdata/test_signatures.1
+test signature verify:./testdata/test_signatures.8
+test signature verify:./testdata/test_sigs.rsasha256
+test signature verify:./testdata/test_sigs.sha1_and_256
+test signature verify:./testdata/test_sigs.rsasha256_draft
+test signature verify:./testdata/test_sigs.rsasha512_draft
+test signature verify:./testdata/test_signatures.9
+test signature verify:./testdata/test_sigs.hinfo
+test signature verify:./testdata/test_sigs.revoked
+test signature verify:./testdata/test_sigs.ecdsa_p256
+test signature verify:./testdata/test_sigs.ecdsa_p384
+test DS verify:./testdata/test_ds.sha384
+test signature verify:./testdata/test_sigs.ed25519
+test signature verify:./testdata/test_sigs.ed448
+test DS verify:./testdata/test_ds.sha1
+test NSEC3 hash:./testdata/test_nsec3_hash.1
+test util/net_help.c:str_is_ip6
+test util/net_help.c:is_pow2
+test util/net_help.c:addr_mask
+test util/net_help.c:addr_in_common
+test util/net_help.c:sockaddr_cmp_addr
+test util/net_help.c:addr_is_ip4mapped
+test util/net_help.c:addr_is_any
+test util/config_file.c:cfg_parse_memsize
+test util/config_file.c:taglist_intersect
+test util/data/dname.c:query_dname_len
+test util/data/dname.c:query_dname_tolower
+test util/data/dname.c:pkt_dname_tolower
+test util/data/dname.c:query_dname_compare
+test util/data/dname.c:dname_count_labels
+test util/data/dname.c:dname_count_size_labels
+test util/data/dname.c:dname_lab_cmp
+test util/data/dname.c:pkt_dname_len
+test util/data/dname.c:dname_strict_subdomain
+test util/data/dname.c:dname_subdomain
+test util/data/dname.c:dname_isroot
+test util/data/dname.c:dname_remove_label
+test util/data/dname.c:dname_signame_label_count
+test util/data/dname.c:dname_iswild
+test util/data/dname.c:dname_canonical_compare
+test util/data/dname.c:dname_get_shared_topdomain
+test util/data/dname.c:dname_valid
+test util/data/dname.c:dname_has_label
+test util/data/dname.c:dname_str
+test util/rtt.c:rtt_timeout
+test trust anchor store functions
+test alloc_special_obtain functions
+test regional functions
+test lruhash functions
+test slabhash functions
+test infra cache functions
+test infra cache probing (keep-probing off, default infra-cache-max-rtt) functions
+test infra cache probing (keep-probing on,  default infra-cache-max-rtt) functions
+test infra cache probing (keep-probing off, low infra-cache-max-rtt) functions
+test infra cache probing (keep-probing on,  low infra-cache-max-rtt) functions
+test sldns functions
+test interoperable dns cookies functions
+test zonemd functions
+test services/authzone.c:auth_zone_generate_zonemd_hash
+test services/authzone.c:auth_zone_generate_zonemd_check
+test services/authzone.c:auth_zone_verify_zonemd
+test tcp_reuse functions
+test services/outside_network.c:reuse_tcp_select_id
+test services/outside_network.c:reuse_tcp_insert
+test services/outside_network.c:reuse_tcp_lru_touch
+test services/outside_network.c:reuse_tcp_remove_tree_list
+test services/outside_network.c:reuse_tcp_lru_snip
+test services/outside_network.c:outnet_waiting_tcp_list_add_first
+test services/outside_network.c:outnet_waiting_tcp_list_add
+test services/outside_network.c:outnet_waiting_tcp_list_add_first
+test services/outside_network.c:outnet_waiting_tcp_list_remove
+test services/outside_network.c:outnet_waiting_tcp_list_pop
+test services/outside_network.c:reuse_write_wait_push_back
+test services/outside_network.c:reuse_write_wait_remove
+test services/outside_network.c:reuse_write_wait_pop
+test message parse functions
+[0] did 10000 in 48.349 msec for 206829.510435 encode/sec size 615
+test edns ede optional encoding functions
+test localzones parent calculation functions
+test ecs functions
+test edns-subnet/addrtree.h:cmpbit
+test edns-subnet/addrtree.h:bits_common
+test edns-subnet/addrtree.h:getbit
+test edns-subnet/addrtree.h:issub
+test edns-subnet/addrtree.h:Tree consistency check
+test edns-subnet/addrtree.h:Tree consistency with purge
+test edns-subnet/addrtree.h:Tree consistency with limit
+1275474 checks ok.
+./testbound -s
+selftest successful (33 checks).
+for x in ./testdata/*.rpl; do \
+	output=`./testbound -p $x -o -vvvvv 2>&1`; \
+	if test $? -eq 0; then \
+		printf "%s OK\n" "$x "; \
+	else \
+		printf "%s\n" "$output "; \
+		printf "%s failed\n" "$x "; \
+		exit 1; \
+	fi; \
+done
+./testdata/acl.rpl  OK
+./testdata/auth_nsec3_ent.rpl  OK
+./testdata/auth_nsec3_wild.rpl  OK
+./testdata/auth_xfr.rpl  OK
+./testdata/auth_xfr_host.rpl  OK
+./testdata/auth_xfr_ixfr.rpl  OK
+./testdata/auth_xfr_ixfrisaxfr.rpl  OK
+./testdata/auth_xfr_ixfrmismatch.rpl  OK
+./testdata/auth_xfr_ixfrnotimpl.rpl  OK
+./testdata/auth_xfr_notify.rpl  OK
+./testdata/auth_xfr_probesoa.rpl  OK
+./testdata/auth_zonefile.rpl  OK
+./testdata/auth_zonefile_dnssec.rpl  OK
+./testdata/auth_zonefile_dnssec_fail.rpl  OK
+./testdata/auth_zonefile_down.rpl  OK
+./testdata/auth_zonefile_noup.rpl  OK
+./testdata/auth_zonefile_root.rpl  OK
+./testdata/auth_zonemd_anchor.rpl  OK
+./testdata/auth_zonemd_anchor_fail.rpl  OK
+./testdata/auth_zonemd_chain.rpl  OK
+./testdata/auth_zonemd_chain_fail.rpl  OK
+./testdata/auth_zonemd_file.rpl  OK
+./testdata/auth_zonemd_file_fail.rpl  OK
+./testdata/auth_zonemd_file_unknown.rpl  OK
+./testdata/auth_zonemd_insecure.rpl  OK
+./testdata/auth_zonemd_insecure_absent.rpl  OK
+./testdata/auth_zonemd_insecure_absent_reject.rpl  OK
+./testdata/auth_zonemd_insecure_fail.rpl  OK
+./testdata/auth_zonemd_nokey.rpl  OK
+./testdata/auth_zonemd_permissive_mode.rpl  OK
+./testdata/auth_zonemd_xfr.rpl  OK
+./testdata/auth_zonemd_xfr_anchor.rpl  OK
+./testdata/auth_zonemd_xfr_anchor_fail.rpl  OK
+./testdata/auth_zonemd_xfr_chain.rpl  OK
+./testdata/auth_zonemd_xfr_chain_fail.rpl  OK
+./testdata/auth_zonemd_xfr_chain_keyinxfr.rpl  OK
+./testdata/auth_zonemd_xfr_fail.rpl  OK
+./testdata/autotrust_10key.rpl  OK
+./testdata/autotrust_addpend_2exceed.rpl  OK
+./testdata/autotrust_addpend_early.rpl  OK
+./testdata/autotrust_addpend_nosign.rpl  OK
+./testdata/autotrust_addpend_nosignnew.rpl  OK
+./testdata/autotrust_addpend_once.rpl  OK
+./testdata/autotrust_addpend_twice.rpl  OK
+./testdata/autotrust_init.rpl  OK
+./testdata/autotrust_init_ds.rpl  OK
+./testdata/autotrust_init_fail.rpl  OK
+./testdata/autotrust_init_failsig.rpl  OK
+./testdata/autotrust_init_legacy.rpl  OK
+./testdata/autotrust_init_sigs.rpl  OK
+./testdata/autotrust_init_zsk.rpl  OK
+./testdata/autotrust_missing.rpl  OK
+./testdata/autotrust_missing_all.rpl  OK
+./testdata/autotrust_missing_returns.rpl  OK
+./testdata/autotrust_probefail.rpl  OK
+./testdata/autotrust_probefailsig.rpl  OK
+./testdata/autotrust_revoked_use.rpl  OK
+./testdata/autotrust_revoked_with_invalid.rpl  OK
+./testdata/autotrust_revtp.rpl  OK
+./testdata/autotrust_revtp_read.rpl  OK
+./testdata/autotrust_revtp_use.rpl  OK
+./testdata/autotrust_rollalgo.rpl  OK
+./testdata/autotrust_rollalgo_unknown.rpl  OK
+./testdata/autotrust_rollover.rpl  OK
+./testdata/autotrust_valid_use.rpl  OK
+./testdata/black_data.rpl  OK
+./testdata/black_dnskey.rpl  OK
+./testdata/black_ds.rpl  OK
+./testdata/black_ds_entry.rpl  OK
+./testdata/black_ent.rpl  OK
+./testdata/black_key_entry.rpl  OK
+./testdata/black_prime.rpl  OK
+./testdata/black_prime_entry.rpl  OK
+./testdata/chaos_trustanchor.rpl  OK
+./testdata/disable_edns_do.rpl  OK
+./testdata/dns64_lookup.rpl  OK
+./testdata/dns64_prefetch_cache.rpl  OK
+./testdata/dns_error_reporting.rpl  OK
+./testdata/domain_insec_ds.rpl  OK
+./testdata/ede_acl_refused.rpl  OK
+./testdata/ede_cache_snoop_not_auth.rpl  OK
+./testdata/ede_localzone_dname_expansion.rpl  OK
+./testdata/edns_attached_once_per_upstream.rpl  OK
+./testdata/edns_client_string.rpl  OK
+./testdata/edns_client_string_opcode.rpl  OK
+./testdata/edns_downstream_cookies.rpl  OK
+./testdata/edns_keepalive.rpl  OK
+./testdata/fetch_glue.rpl  OK
+./testdata/fetch_glue_cname.rpl  OK
+./testdata/fwd.rpl  OK
+./testdata/fwd_0ttlservfail.rpl  OK
+./testdata/fwd_any.rpl  OK
+./testdata/fwd_cached.rpl  OK
+./testdata/fwd_droptoomany.rpl  OK
+./testdata/fwd_error.rpl  OK
+./testdata/fwd_error_retries.rpl  OK
+./testdata/fwd_jostle.rpl  OK
+./testdata/fwd_jostle_out.rpl  OK
+./testdata/fwd_lrudrop.rpl  OK
+./testdata/fwd_minimal.rpl  OK
+./testdata/fwd_name_lookup.rpl  OK
+./testdata/fwd_no_cache.rpl  OK
+./testdata/fwd_notcached.rpl  OK
+./testdata/fwd_timeout.rpl  OK
+./testdata/fwd_two.rpl  OK
+./testdata/iter_auth_tc.rpl  OK
+./testdata/iter_class_any.rpl  OK
+./testdata/iter_cname_cache.rpl  OK
+./testdata/iter_cname_double.rpl  OK
+./testdata/iter_cname_minimise.rpl  OK
+./testdata/iter_cname_minimise_nx.rpl  OK
+./testdata/iter_cname_nx.rpl  OK
+./testdata/iter_cname_qnamecopy.rpl  OK
+./testdata/iter_cycle.rpl  OK
+./testdata/iter_cycle_noh.rpl  OK
+./testdata/iter_dname_insec.rpl  OK
+./testdata/iter_dname_ttl.rpl  OK
+./testdata/iter_dname_yx.rpl  OK
+./testdata/iter_dnsseclame_bug.rpl  OK
+./testdata/iter_dnsseclame_ds.rpl  OK
+./testdata/iter_dnsseclame_ds_ok.rpl  OK
+./testdata/iter_dnsseclame_ta.rpl  OK
+./testdata/iter_dnsseclame_ta_ok.rpl  OK
+./testdata/iter_domain_sale.rpl  OK
+./testdata/iter_domain_sale_nschange.rpl  OK
+./testdata/iter_donotq127.rpl  OK
+./testdata/iter_dp_ip6useless.rpl  OK
+./testdata/iter_dp_turnsuseless.rpl  OK
+./testdata/iter_ds_locate_ns.rpl  OK
+./testdata/iter_ds_locate_ns_cname.rpl  OK
+./testdata/iter_ds_locate_ns_detach.rpl  OK
+./testdata/iter_ds_locate_ns_nosoa.rpl  OK
+./testdata/iter_ds_referral.rpl  OK
+./testdata/iter_ds_reply.rpl  OK
+./testdata/iter_emptydp.rpl  OK
+./testdata/iter_emptydp_for_glue.rpl  OK
+./testdata/iter_failreply.rpl  OK
+./testdata/iter_fwdfirst.rpl  OK
+./testdata/iter_fwdfirstequal.rpl  OK
+./testdata/iter_fwdstub.rpl  OK
+./testdata/iter_fwdstubauth.rpl  OK
+./testdata/iter_fwdstubroot.rpl  OK
+./testdata/iter_ghost_grandchild_delegation.rpl  OK
+./testdata/iter_ghost_sub.rpl  OK
+./testdata/iter_ghost_timewindow.rpl  OK
+./testdata/iter_got6only.rpl  OK
+./testdata/iter_hint_lame.rpl  OK
+./testdata/iter_ignore_empty.rpl  OK
+./testdata/iter_lame_aaaa.rpl  OK
+./testdata/iter_lame_noaa.rpl  OK
+./testdata/iter_lame_nosoa.rpl  OK
+./testdata/iter_lamescrub.rpl  OK
+./testdata/iter_max_global_quota.rpl  OK
+./testdata/iter_mod.rpl  OK
+./testdata/iter_nat64.rpl  OK
+./testdata/iter_nat64_prefix.rpl  OK
+./testdata/iter_nat64_prefix48.rpl  OK
+./testdata/iter_ns_badip.rpl  OK
+./testdata/iter_ns_spoof.rpl  OK
+./testdata/iter_nxns_cached.rpl  OK
+./testdata/iter_nxns_fallback.rpl  OK
+./testdata/iter_nxns_parentside.rpl  OK
+./testdata/iter_pc_a.rpl  OK
+./testdata/iter_pc_aaaa.rpl  OK
+./testdata/iter_pcdiff.rpl  OK
+./testdata/iter_pcdirect.rpl  OK
+./testdata/iter_pclame.rpl  OK
+./testdata/iter_pcname.rpl  OK
+./testdata/iter_pcnamech.rpl  OK
+./testdata/iter_pcnamechrec.rpl  OK
+./testdata/iter_pcnamerec.rpl  OK
+./testdata/iter_pcttl.rpl  OK
+./testdata/iter_prefetch.rpl  OK
+./testdata/iter_prefetch_change.rpl  OK
+./testdata/iter_prefetch_change2.rpl  OK
+./testdata/iter_prefetch_childns.rpl  OK
+./testdata/iter_prefetch_fail.rpl  OK
+./testdata/iter_prefetch_ns.rpl  OK
+./testdata/iter_primenoglue.rpl  OK
+./testdata/iter_privaddr.rpl  OK
+./testdata/iter_ranoaa_lame.rpl  OK
+./testdata/iter_reclame_one.rpl  OK
+./testdata/iter_reclame_two.rpl  OK
+./testdata/iter_recurse.rpl  OK
+./testdata/iter_req_qname.rpl  OK
+./testdata/iter_resolve.rpl  OK
+./testdata/iter_resolve_minimised.rpl  OK
+./testdata/iter_resolve_minimised_nx.rpl  OK
+./testdata/iter_resolve_minimised_refused.rpl  OK
+./testdata/iter_resolve_minimised_timeout.rpl  OK
+./testdata/iter_scrub_cname_an.rpl  OK
+./testdata/iter_scrub_dname_insec.rpl  OK
+./testdata/iter_scrub_dname_rev.rpl  OK
+./testdata/iter_scrub_dname_sec.rpl  OK
+./testdata/iter_scrub_ns.rpl  OK
+./testdata/iter_scrub_ns_fwd.rpl  OK
+./testdata/iter_scrub_ns_side.rpl  OK
+./testdata/iter_scrub_rr_length.rpl  OK
+./testdata/iter_soamin.rpl  OK
+./testdata/iter_stub_leak.rpl  OK
+./testdata/iter_stub_noroot.rpl  OK
+./testdata/iter_stubfirst.rpl  OK
+./testdata/iter_stublastresort.rpl  OK
+./testdata/iter_timeout_ra_aaaa.rpl  OK
+./testdata/iter_unverified_glue.rpl  OK
+./testdata/iter_unverified_glue_fallback.rpl  OK
+./testdata/local_acl_override.rpl  OK
+./testdata/local_acl_taglist.rpl  OK
+./testdata/local_acl_taglist_action.rpl  OK
+./testdata/local_cname.rpl  OK
+./testdata/local_cnameother.rpl  OK
+./testdata/local_ds.rpl  OK
+./testdata/local_nodefault.rpl  OK
+./testdata/local_transparent_sametype.rpl  OK
+./testdata/local_typetransparent.rpl  OK
+./testdata/localdata.rpl  OK
+./testdata/net_signed_servfail.rpl  OK
+./testdata/nomem_cnametopos.rpl  OK
+./testdata/nsid_ascii.rpl  OK
+./testdata/nsid_bogus.rpl  OK
+./testdata/nsid_hex.rpl  OK
+./testdata/nsid_not_set.rpl  OK
+./testdata/refuse_xfr.rpl  OK
+./testdata/root_key_sentinel.rpl  OK
+./testdata/rpz_axfr.rpl  OK
+./testdata/rpz_cached_cname.rpl  OK
+./testdata/rpz_clientip.rpl  OK
+./testdata/rpz_clientip_override.rpl  OK
+./testdata/rpz_cname_handle.rpl  OK
+./testdata/rpz_cname_tag.rpl  OK
+./testdata/rpz_ixfr.rpl  OK
+./testdata/rpz_nsdname.rpl  OK
+./testdata/rpz_nsdname_override.rpl  OK
+./testdata/rpz_nsip.rpl  OK
+./testdata/rpz_nsip_override.rpl  OK
+./testdata/rpz_passthru.rpl  OK
+./testdata/rpz_passthru_clientip.rpl  OK
+./testdata/rpz_qname.rpl  OK
+./testdata/rpz_qname_override.rpl  OK
+./testdata/rpz_qname_tcponly.rpl  OK
+./testdata/rpz_qtype_cname.rpl  OK
+./testdata/rpz_respip.rpl  OK
+./testdata/rpz_respip_override.rpl  OK
+./testdata/rpz_respip_tcponly.rpl  OK
+./testdata/rpz_rootwc.rpl  OK
+./testdata/rpz_signal_nxdomain_ra.rpl  OK
+./testdata/rpz_val_block.rpl  OK
+./testdata/rrset_rettl.rpl  OK
+./testdata/rrset_untrusted.rpl  OK
+./testdata/rrset_updated.rpl  OK
+./testdata/rrset_use_cached.rpl  OK
+./testdata/serve_expired.rpl  OK
+./testdata/serve_expired_0ttl_nodata.rpl  OK
+./testdata/serve_expired_0ttl_nxdomain.rpl  OK
+./testdata/serve_expired_0ttl_servfail.rpl  OK
+./testdata/serve_expired_cached_servfail.rpl  OK
+./testdata/serve_expired_cached_servfail_refresh.rpl  OK
+./testdata/serve_expired_client_timeout.rpl  OK
+./testdata/serve_expired_client_timeout_no_prefetch.rpl  OK
+./testdata/serve_expired_client_timeout_servfail.rpl  OK
+./testdata/serve_expired_client_timeout_val_bogus.rpl  OK
+./testdata/serve_expired_client_timeout_val_insecure_delegation.rpl  OK
+./testdata/serve_expired_reply_ttl.rpl  OK
+./testdata/serve_expired_ttl.rpl  OK
+./testdata/serve_expired_ttl_client_timeout.rpl  OK
+./testdata/serve_expired_ttl_reset.rpl  OK
+./testdata/serve_expired_val_bogus.rpl  OK
+./testdata/serve_expired_zerottl.rpl  OK
+./testdata/serve_original_ttl.rpl  OK
+./testdata/stop_nxdomain.rpl  OK
+./testdata/stop_nxdomain_minimised.rpl  OK
+./testdata/trust_cname_chain.rpl  OK
+./testdata/ttl_max.rpl  OK
+./testdata/ttl_max_negative.rpl  OK
+./testdata/ttl_min.rpl  OK
+./testdata/ttl_min_negative.rpl  OK
+./testdata/ttl_msg.rpl  OK
+./testdata/val_adbit.rpl  OK
+./testdata/val_adcopy.rpl  OK
+./testdata/val_anchor_nx.rpl  OK
+./testdata/val_anchor_nx_nosig.rpl  OK
+./testdata/val_ans_dsent.rpl  OK
+./testdata/val_ans_nx.rpl  OK
+./testdata/val_any.rpl  OK
+./testdata/val_any_cname.rpl  OK
+./testdata/val_any_dname.rpl  OK
+./testdata/val_any_negcache.rpl  OK
+./testdata/val_cname_loop1.rpl  OK
+./testdata/val_cname_loop2.rpl  OK
+./testdata/val_cname_loop3.rpl  OK
+./testdata/val_cnameinsectopos.rpl  OK
+./testdata/val_cnamenx_dblnsec.rpl  OK
+./testdata/val_cnamenx_rcodenx.rpl  OK
+./testdata/val_cnameqtype.rpl  OK
+./testdata/val_cnameqtype_qmin.rpl  OK
+./testdata/val_cnametocloser.rpl  OK
+./testdata/val_cnametocloser_nosig.rpl  OK
+./testdata/val_cnametocnamewctoposwc.rpl  OK
+./testdata/val_cnametodname.rpl  OK
+./testdata/val_cnametodnametocnametopos.rpl  OK
+./testdata/val_cnametoinsecure.rpl  OK
+./testdata/val_cnametonodata.rpl  OK
+./testdata/val_cnametonodata_nonsec.rpl  OK
+./testdata/val_cnametonsec.rpl  OK
+./testdata/val_cnametonx.rpl  OK
+./testdata/val_cnametooptin.rpl  OK
+./testdata/val_cnametooptout.rpl  OK
+./testdata/val_cnametopos.rpl  OK
+./testdata/val_cnametoposnowc.rpl  OK
+./testdata/val_cnametoposwc.rpl  OK
+./testdata/val_cnamewctonodata.rpl  OK
+./testdata/val_cnamewctonx.rpl  OK
+./testdata/val_cnamewctoposwc.rpl  OK
+./testdata/val_deleg_nons.rpl  OK
+./testdata/val_dname_twice.rpl  OK
+./testdata/val_dnameqtype.rpl  OK
+./testdata/val_dnameqtype_qmin.rpl  OK
+./testdata/val_dnametoolong.rpl  OK
+./testdata/val_dnametopos.rpl  OK
+./testdata/val_dnametoposwc.rpl  OK
+./testdata/val_dnamewc.rpl  OK
+./testdata/val_ds_afterprime.rpl  OK
+./testdata/val_ds_cname.rpl  OK
+./testdata/val_ds_cnamesub.rpl  OK
+./testdata/val_dsnsec.rpl  OK
+./testdata/val_entds.rpl  OK
+./testdata/val_faildnskey.rpl  OK
+./testdata/val_faildnskey_ok.rpl  OK
+./testdata/val_failure_dnskey.rpl  OK
+./testdata/val_fwdds.rpl  OK
+./testdata/val_keyprefetch.rpl  OK
+./testdata/val_keyprefetch_verify.rpl  OK
+./testdata/val_mal_wc.rpl  OK
+./testdata/val_negcache_ds.rpl  OK
+./testdata/val_negcache_dssoa.rpl  OK
+./testdata/val_negcache_nodata.rpl  OK
+./testdata/val_negcache_nta.rpl  OK
+./testdata/val_negcache_nxdomain.rpl  OK
+./testdata/val_negcache_ttl.rpl  OK
+./testdata/val_negcache_ttl_prefetch.rpl  OK
+./testdata/val_noadwhennodo.rpl  OK
+./testdata/val_nodata.rpl  OK
+./testdata/val_nodata_ent.rpl  OK
+./testdata/val_nodata_entnx.rpl  OK
+./testdata/val_nodata_entwc.rpl  OK
+./testdata/val_nodata_failsig.rpl  OK
+./testdata/val_nodata_failwc.rpl  OK
+./testdata/val_nodata_hasdata.rpl  OK
+./testdata/val_nodata_zonecut.rpl  OK
+./testdata/val_nodatawc.rpl  OK
+./testdata/val_nodatawc_badce.rpl  OK
+./testdata/val_nodatawc_nodeny.rpl  OK
+./testdata/val_nodatawc_one.rpl  OK
+./testdata/val_nokeyprime.rpl  OK
+./testdata/val_nsec3_b1_nameerror.rpl  OK
+./testdata/val_nsec3_b1_nameerror_noce.rpl  OK
+./testdata/val_nsec3_b1_nameerror_nonc.rpl  OK
+./testdata/val_nsec3_b1_nameerror_nowc.rpl  OK
+./testdata/val_nsec3_b21_nodataent.rpl  OK
+./testdata/val_nsec3_b21_nodataent_wr.rpl  OK
+./testdata/val_nsec3_b2_nodata.rpl  OK
+./testdata/val_nsec3_b2_nodata_nons.rpl  OK
+./testdata/val_nsec3_b3_optout.rpl  OK
+./testdata/val_nsec3_b3_optout_negcache.rpl  OK
+./testdata/val_nsec3_b3_optout_noce.rpl  OK
+./testdata/val_nsec3_b3_optout_nonc.rpl  OK
+./testdata/val_nsec3_b4_wild.rpl  OK
+./testdata/val_nsec3_b4_wild_wr.rpl  OK
+./testdata/val_nsec3_b5_wcnodata.rpl  OK
+./testdata/val_nsec3_b5_wcnodata_noce.rpl  OK
+./testdata/val_nsec3_b5_wcnodata_nonc.rpl  OK
+./testdata/val_nsec3_b5_wcnodata_nowc.rpl  OK
+./testdata/val_nsec3_cname_ds.rpl  OK
+./testdata/val_nsec3_cname_par.rpl  OK
+./testdata/val_nsec3_cname_sub.rpl  OK
+./testdata/val_nsec3_cnametocnamewctoposwc.rpl  OK
+./testdata/val_nsec3_entnodata_optout.rpl  OK
+./testdata/val_nsec3_entnodata_optout_badopt.rpl  OK
+./testdata/val_nsec3_entnodata_optout_match.rpl  OK
+./testdata/val_nsec3_iter_high.rpl  OK
+./testdata/val_nsec3_nodatawccname.rpl  OK
+./testdata/val_nsec3_nods.rpl  OK
+./testdata/val_nsec3_nods_badopt.rpl  OK
+./testdata/val_nsec3_nods_badsig.rpl  OK
+./testdata/val_nsec3_nods_negcache.rpl  OK
+./testdata/val_nsec3_nods_soa.rpl  OK
+./testdata/val_nsec3_optout_ad.rpl  OK
+./testdata/val_nsec3_optout_cache.rpl  OK
+./testdata/val_nsec3_wcany.rpl  OK
+./testdata/val_nsec3_wcany_nodeny.rpl  OK
+./testdata/val_nx.rpl  OK
+./testdata/val_nx_failwc.rpl  OK
+./testdata/val_nx_nodeny.rpl  OK
+./testdata/val_nx_nowc.rpl  OK
+./testdata/val_nx_nsec3_collision.rpl  OK
+./testdata/val_nx_nsec3_params.rpl  OK
+./testdata/val_nx_overreach.rpl  OK
+./testdata/val_pos_truncns.rpl  OK
+./testdata/val_positive.rpl  OK
+./testdata/val_positive_nosigs.rpl  OK
+./testdata/val_positive_wc.rpl  OK
+./testdata/val_positive_wc_nodeny.rpl  OK
+./testdata/val_qds_badanc.rpl  OK
+./testdata/val_qds_oneanc.rpl  OK
+./testdata/val_qds_twoanc.rpl  OK
+./testdata/val_refer_unsignadd.rpl  OK
+./testdata/val_referd.rpl  OK
+./testdata/val_referglue.rpl  OK
+./testdata/val_rrsig.rpl  OK
+./testdata/val_scrub_rr_length.rpl  OK
+./testdata/val_secds.rpl  OK
+./testdata/val_secds_nosig.rpl  OK
+./testdata/val_spurious_ns.rpl  OK
+./testdata/val_stub_noroot.rpl  OK
+./testdata/val_stubds.rpl  OK
+./testdata/val_ta_algo_dnskey.rpl  OK
+./testdata/val_ta_algo_dnskey_dp.rpl  OK
+./testdata/val_ta_algo_missing.rpl  OK
+./testdata/val_ta_algo_missing_dp.rpl  OK
+./testdata/val_twocname.rpl  OK
+./testdata/val_unalgo_anchor.rpl  OK
+./testdata/val_unalgo_ds.rpl  OK
+./testdata/val_unsec_cname.rpl  OK
+./testdata/val_unsecds.rpl  OK
+./testdata/val_unsecds_negcache.rpl  OK
+./testdata/val_unsecds_qtypeds.rpl  OK
+./testdata/val_wild_pos.rpl  OK
+./testdata/version_bind.rpl  OK
+./testdata/version_bind_hide.rpl  OK
+./testdata/views.rpl  OK
+test OK
+>>> unbound: Entering fakeroot...
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/lib/python3.12/site-packages
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/lib
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/include
+/bin/sh ./install-sh -c -m 644 libunbound/python/unbound.py /tmp/pkg/unbound/usr/lib/python3.12/site-packages/unbound.py
+./libtool --mode=install cp _unbound.la /tmp/pkg/unbound/usr/lib/python3.12/site-packages
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/share/man
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/share/man/man3
+/bin/sh ./install-sh -c -m 644 doc/libunbound.3 /tmp/pkg/unbound/usr/share/man/man3
+for mpage in ub_ctx ub_result ub_ctx_create ub_ctx_delete \
+	ub_ctx_set_option ub_ctx_get_option ub_ctx_config ub_ctx_set_fwd \
+	ub_ctx_resolvconf ub_ctx_hosts ub_ctx_add_ta ub_ctx_add_ta_file \
+	ub_ctx_trustedkeys ub_ctx_debugout ub_ctx_debuglevel ub_ctx_async \
+	ub_poll ub_wait ub_fd ub_process ub_resolve ub_resolve_async ub_cancel \
+	ub_resolve_free ub_strerror ub_ctx_print_local_zones ub_ctx_zone_add \
+	ub_ctx_zone_remove ub_ctx_data_add ub_ctx_data_remove; \
+do \
+	echo ".so man3/libunbound.3" > /tmp/pkg/unbound/usr/share/man/man3/$mpage.3 ; \
+done
+./libtool --mode=install cp unbound.h /tmp/pkg/unbound/usr/include/unbound.h
+libtool: warning: relinking '_unbound.la'
+libtool: install: (cd /tmp/src/unbound-1.23.0; /bin/sh "/tmp/src/unbound-1.23.0/libtool"  --tag CC --mode=relink cc -I. -I/usr/include/python3.12 -DSRCDIR=. -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -module -avoid-version -no-undefined -shared -o _unbound.la libunbound_wrap.lo -rpath /usr/lib/python3.12/site-packages -L. -L.libs libunbound.la -L/usr/lib -L/usr/lib/python3.12 -L. -lpython3.12 -inst-prefix-dir /tmp/pkg/unbound)
+libtool: install: cp unbound.h /tmp/pkg/unbound/usr/include/unbound.h
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/lib/pkgconfig
+/bin/sh ./install-sh -m 644 contrib/libunbound.pc /tmp/pkg/unbound/usr/lib/pkgconfig
+./libtool --mode=install cp libunbound.la /tmp/pkg/unbound/usr/lib
+libtool: install: cp .libs/libunbound.so.8.1.31 /tmp/pkg/unbound/usr/lib/libunbound.so.8.1.31
+libtool: install: (cd /tmp/pkg/unbound/usr/lib && { ln -s -f libunbound.so.8.1.31 libunbound.so.8 || { rm -f libunbound.so.8 && ln -s libunbound.so.8.1.31 libunbound.so.8; }; })
+libtool: install: (cd /tmp/pkg/unbound/usr/lib && { ln -s -f libunbound.so.8.1.31 libunbound.so || { rm -f libunbound.so && ln -s libunbound.so.8.1.31 libunbound.so; }; })
+libtool: install: cp .libs/libunbound.lai /tmp/pkg/unbound/usr/lib/libunbound.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+./libtool --mode=finish /tmp/pkg/unbound/usr/lib
+libtool: finish: PATH="/bin:/usr/bin:/sbin:/usr/sbin:/sbin" ldconfig -n /tmp/pkg/unbound/usr/lib
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/pkg/unbound/usr/lib
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the ' -D__LIBTOOL_RPATH_SED__ ' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+libtool: relink: cc -shared  -fPIC -DPIC  .libs/libunbound_wrap.o   -L. -L.libs -L/tmp/pkg/unbound/usr/lib -L/usr/lib -lunbound -lssl -levent -lpthread -lcrypto -lhiredis -lnghttp2 -lprotobuf-c -L/usr/lib/python3.12 -lpython3.12  -Os -g -flto=auto -pthread -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -pthread -Wl,-soname -Wl,_unbound.so -o .libs/_unbound.so
+libtool: install: cp .libs/_unbound.soT /tmp/pkg/unbound/usr/lib/python3.12/site-packages/_unbound.so
+libtool: install: cp .libs/_unbound.lai /tmp/pkg/unbound/usr/lib/python3.12/site-packages/_unbound.la
+libtool: warning: remember to run 'libtool --finish /usr/lib/python3.12/site-packages'
+./libtool --mode=finish /tmp/pkg/unbound/usr/lib/python3.12/site-packages
+libtool: finish: PATH="/bin:/usr/bin:/sbin:/usr/sbin:/sbin" ldconfig -n /tmp/pkg/unbound/usr/lib/python3.12/site-packages
+----------------------------------------------------------------------
+Libraries have been installed in:
+   /tmp/pkg/unbound/usr/lib/python3.12/site-packages
+
+If you ever happen to want to link against installed libraries
+in a given directory, LIBDIR, you must either use libtool, and
+specify the full pathname of the library, or use the '-LLIBDIR'
+flag during linking and do at least one of the following:
+   - add LIBDIR to the 'LD_LIBRARY_PATH' environment variable
+     during execution
+   - add LIBDIR to the 'LD_RUN_PATH' environment variable
+     during linking
+   - use the ' -D__LIBTOOL_RPATH_SED__ ' linker flag
+
+See any operating system documentation about shared libraries for
+more information, such as the ld(1) and ld.so(8) manual pages.
+----------------------------------------------------------------------
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/sbin
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/share/man
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/share/man/man8
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/share/man/man5
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/share/man/man1
+./libtool --mode=install cp -f unbound /tmp/pkg/unbound/usr/sbin/unbound
+libtool: install: cp -f unbound /tmp/pkg/unbound/usr/sbin/unbound
+./libtool --mode=install cp -f unbound-checkconf /tmp/pkg/unbound/usr/sbin/unbound-checkconf
+libtool: install: cp -f unbound-checkconf /tmp/pkg/unbound/usr/sbin/unbound-checkconf
+./libtool --mode=install cp -f unbound-control /tmp/pkg/unbound/usr/sbin/unbound-control
+libtool: install: cp -f unbound-control /tmp/pkg/unbound/usr/sbin/unbound-control
+./libtool --mode=install cp -f unbound-host /tmp/pkg/unbound/usr/sbin/unbound-host
+libtool: warning: 'libunbound.la' has not been installed in '/usr/lib'
+libtool: install: cp -f .libs/unbound-host /tmp/pkg/unbound/usr/sbin/unbound-host
+./libtool --mode=install cp -f unbound-anchor /tmp/pkg/unbound/usr/sbin/unbound-anchor
+libtool: warning: 'libunbound.la' has not been installed in '/usr/lib'
+libtool: install: cp -f .libs/unbound-anchor /tmp/pkg/unbound/usr/sbin/unbound-anchor
+/bin/sh ./install-sh -c -m 644 doc/unbound.8 /tmp/pkg/unbound/usr/share/man/man8
+/bin/sh ./install-sh -c -m 644 doc/unbound-checkconf.8 /tmp/pkg/unbound/usr/share/man/man8
+/bin/sh ./install-sh -c -m 644 doc/unbound-control.8 /tmp/pkg/unbound/usr/share/man/man8
+/bin/sh ./install-sh -c -m 644 doc/unbound-control.8 /tmp/pkg/unbound/usr/share/man/man8/unbound-control-setup.8
+/bin/sh ./install-sh -c -m 644 doc/unbound-anchor.8 /tmp/pkg/unbound/usr/share/man/man8
+/bin/sh ./install-sh -c -m 644 doc/unbound.conf.5 /tmp/pkg/unbound/usr/share/man/man5
+/bin/sh ./install-sh -c -m 644 doc/unbound-host.1 /tmp/pkg/unbound/usr/share/man/man1
+/bin/sh ./install-sh -c -m 755 unbound-control-setup /tmp/pkg/unbound/usr/sbin/unbound-control-setup
+if test ! -e "/tmp/pkg/unbound/etc/unbound/unbound.conf"; then /bin/sh ./install-sh -d `dirname "/tmp/pkg/unbound/etc/unbound/unbound.conf"`; /bin/sh ./install-sh -c -m 644 doc/example.conf "/tmp/pkg/unbound/etc/unbound/unbound.conf"; fi
+/bin/sh ./install-sh -m 755 -d /tmp/pkg/unbound/usr/include
+./libtool --mode=install cp ./libunbound/unbound-event.h /tmp/pkg/unbound/usr/include/unbound-event.h
+libtool: install: cp ./libunbound/unbound-event.h /tmp/pkg/unbound/usr/include/unbound-event.h
+>>> unbound-dbg*: Running split function dbg...
+>>> unbound-dbg*: Preparing subpackage unbound-dbg...
+>>> unbound-dbg*: Stripping binaries
+>>> unbound-dbg*: Running postcheck for unbound-dbg
+>>> unbound-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/unbound-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/unbound-dev/usr/lib/pkgconfig'
+'usr/lib/libunbound.so' -> '/tmp/pkg/unbound-dev/usr/lib/libunbound.so'
+>>> unbound-dev*: Preparing subpackage unbound-dev...
+>>> unbound-dev*: Stripping binaries
+>>> unbound-dev*: Running postcheck for unbound-dev
+>>> unbound-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/unbound-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/unbound-doc/usr/share/man'
+>>> unbound-doc*: Preparing subpackage unbound-doc...
+>>> unbound-doc*: Running postcheck for unbound-doc
+>>> unbound-libs*: Running split function libs...
+'usr/lib/libunbound.so.8' -> '/tmp/pkg/unbound-libs/usr/lib/libunbound.so.8'
+'usr/lib/libunbound.so.8.1.31' -> '/tmp/pkg/unbound-libs/usr/lib/libunbound.so.8.1.31'
+>>> unbound-libs*: Preparing subpackage unbound-libs...
+>>> unbound-libs*: Stripping binaries
+>>> unbound-libs*: Running postcheck for unbound-libs
+>>> unbound-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/unbound-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/unbound-openrc/etc/init.d'
+>>> unbound-openrc*: Preparing subpackage unbound-openrc...
+>>> unbound-openrc*: Running postcheck for unbound-openrc
+>>> py-unbound*: Running split function py...
+'usr/lib/python3.12' -> '/tmp/pkg/py-unbound/usr/lib/python3.12'
+>>> py-unbound*: Preparing subpackage py-unbound...
+>>> py-unbound*: Stripping binaries
+>>> py-unbound*: Running postcheck for py-unbound
+>>> unbound-migrate*: Running split function migrate...
+>>> unbound-migrate*: Preparing subpackage unbound-migrate...
+>>> unbound-migrate*: Running postcheck for unbound-migrate
+>>> unbound*: Running postcheck for unbound
+>>> unbound*: Preparing package unbound...
+>>> unbound*: Stripping binaries
+>>> unbound*: Script found. /bin/sh added as a dependency for unbound-1.23.0-r1.apk
+>>> unbound*: Adding .pre-install
+>>> py-unbound*: Scanning shared objects
+>>> unbound-dbg*: Scanning shared objects
+>>> unbound-dev*: Scanning shared objects
+>>> unbound-doc*: Scanning shared objects
+>>> unbound-libs*: Scanning shared objects
+>>> unbound-migrate*: Scanning shared objects
+>>> unbound-openrc*: Scanning shared objects
+>>> unbound*: Scanning shared objects
+>>> py-unbound*: Tracing dependencies...
+	python3~3.12
+	so:libc.musl-x86_64.so.1
+	so:libpython3.12.so.1.0
+	so:libunbound.so.8
+>>> py-unbound*: Package size: 212.6 KB
+>>> py-unbound*: Compressing data...
+>>> py-unbound*: Create checksum...
+>>> py-unbound*: Create py-unbound-1.23.0-r1.apk
+>>> unbound-dbg*: Tracing dependencies...
+	dnssec-root
+	!py-unbound<1.23.0-r1
+	!py-unbound>1.23.0-r1
+	!unbound-libs<1.23.0-r1
+	!unbound-libs>1.23.0-r1
+	!unbound<1.23.0-r1
+	!unbound>1.23.0-r1
+>>> unbound-dbg*: Package size: 11.6 MB
+>>> unbound-dbg*: Compressing data...
+>>> unbound-dbg*: Create checksum...
+>>> unbound-dbg*: Create unbound-dbg-1.23.0-r1.apk
+>>> unbound-dev*: Tracing dependencies...
+	expat-dev
+	pc:libevent
+	pc:python3
+	pkgconfig
+	unbound-libs=1.23.0-r1
+>>> unbound-dev*: Package size: 41.9 KB
+>>> unbound-dev*: Compressing data...
+>>> unbound-dev*: Create checksum...
+>>> unbound-dev*: Create unbound-dev-1.23.0-r1.apk
+>>> unbound-doc*: Tracing dependencies...
+>>> unbound-doc*: Package size: 564.5 KB
+>>> unbound-doc*: Compressing data...
+>>> unbound-doc*: Create checksum...
+>>> unbound-doc*: Create unbound-doc-1.23.0-r1.apk
+>>> unbound-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libevent-2.1.so.7
+	so:libhiredis.so.1.3.0
+	so:libnghttp2.so.14
+	so:libprotobuf-c.so.1
+	so:libssl.so.3
+>>> unbound-libs*: Package size: 898.8 KB
+>>> unbound-libs*: Compressing data...
+>>> unbound-libs*: Create checksum...
+>>> unbound-libs*: Create unbound-libs-1.23.0-r1.apk
+>>> unbound-migrate*: Tracing dependencies...
+	/bin/sh
+	apk-tools
+	openrc
+>>> unbound-migrate*: Package size: 3.2 KB
+>>> unbound-migrate*: Compressing data...
+>>> unbound-migrate*: Create checksum...
+>>> unbound-migrate*: Create unbound-migrate-1.23.0-r1.apk
+>>> unbound-openrc*: Tracing dependencies...
+>>> unbound-openrc*: Package size: 1.3 KB
+>>> unbound-openrc*: Compressing data...
+>>> unbound-openrc*: Create checksum...
+>>> unbound-openrc*: Create unbound-openrc-1.23.0-r1.apk
+>>> unbound*: Tracing dependencies...
+	dnssec-root
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libevent-2.1.so.7
+	so:libexpat.so.1
+	so:libhiredis.so.1.3.0
+	so:libnghttp2.so.14
+	so:libprotobuf-c.so.1
+	so:libssl.so.3
+	so:libunbound.so.8
+>>> unbound*: Package size: 2.3 MB
+>>> unbound*: Compressing data...
+>>> unbound*: Create checksum...
+>>> unbound*: Create unbound-1.23.0-r1.apk
+>>> unbound: Updating the main/x86_64 repository index...
+>>> unbound: Signing the index...
+>>> unbound: Cleaning up srcdir
+>>> unbound: Cleaning up build chroot
+>>> unbound: Cleaning up pkgdir

@@ -1,0 +1,1404 @@
+>>> pgpool: Validating /home/packager/oily-pine/main/pgpool/APKBUILD...
+>>> pgpool: Cleaning up srcdir
+>>> pgpool: Cleaning up pkgdir
+>>> pgpool: Cleaning up tmpdir
+>>> pgpool: Fetching https://github.com/pgpool/pgpool2/archive/V4_6_0/pgpool2-4_6_0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 3378k    0 3378k    0     0  3007k      0 --:--:--  0:00:01 --:--:-- 4646k
+>>> pgpool: Fetching https://github.com/pgpool/pgpool2/archive/V4_6_0/pgpool2-4_6_0.tar.gz
+>>> pgpool: Checking sha512sums...
+pgpool2-4_6_0.tar.gz: OK
+missing-include.patch: OK
+pgpool.initd: OK
+pgpool.confd: OK
+pgpool.logrotated: OK
+fix-snprintf.patch: OK
+fix-time_t.patch: OK
+>>> pgpool: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/104) Installing musl (1.2.5-r10)
+(2/104) Installing libcrypto3 (3.5.0-r0)
+(3/104) Installing ca-certificates-bundle (20241121-r2)
+(4/104) Installing libssl3 (3.5.0-r0)
+(5/104) Installing zlib (1.3.1-r2)
+(6/104) Installing libapk2 (2.14.9-r2)
+(7/104) Installing apk-tools (2.14.9-r2)
+(8/104) Installing libcap2 (2.76-r0)
+(9/104) Installing libcap-getcap (2.76-r0)
+(10/104) Installing fakeroot (1.37.1.1-r0)
+(11/104) Installing scanelf (1.3.8-r1)
+(12/104) Installing musl-utils (1.2.5-r10)
+(13/104) Installing libgcc (14.3.0-r1)
+(14/104) Installing libstdc++ (14.3.0-r1)
+(15/104) Installing lzip (1.25-r0)
+(16/104) Installing openssl (3.5.0-r0)
+(17/104) Installing patch (2.8-r0)
+(18/104) Installing pkgconf (2.4.3-r0)
+(19/104) Installing acl-libs (2.3.2-r1)
+(20/104) Installing tar (1.35-r3)
+(21/104) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/104) Installing ssl_client (1.37.0-r18)
+(23/104) Installing busybox-binsh (1.37.0-r18)
+(24/104) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/104) Installing abuild-sudo (3.15.0-r0)
+(26/104) Installing alpine-baselayout-data (3.7.0-r0)
+(27/104) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/104) Installing bridge (1.5-r5)
+(29/104) Installing ifupdown-ng (0.12.1-r7)
+(30/104) Installing openrc-user (0.62.2-r2)
+(31/104) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/104) Installing mdev-conf (4.8-r0)
+(33/104) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/104) Installing alpine-conf (3.20.0-r0)
+(35/104) Installing alpine-keys (2.5-r0)
+(36/104) Installing alpine-release (3.22.0-r0)
+(37/104) Installing busybox-openrc (1.37.0-r18)
+(38/104) Installing busybox-suid (1.37.0-r18)
+(39/104) Installing alpine-base (3.22.0-r0)
+(40/104) Installing m4 (1.4.20-r0)
+(41/104) Installing libbz2 (1.0.8-r6)
+(42/104) Installing perl (5.40.2-r0)
+(43/104) Installing autoconf (2.72-r1)
+(44/104) Installing automake (1.18-r0)
+(45/104) Installing bison (3.8.2-r2)
+(46/104) Installing jansson (2.14.1-r0)
+(47/104) Installing zstd-libs (1.5.7-r0)
+(48/104) Installing binutils (2.44-r0)
+(49/104) Installing libmagic (5.46-r2)
+(50/104) Installing file (5.46-r2)
+(51/104) Installing libgomp (14.3.0-r1)
+(52/104) Installing libatomic (14.3.0-r1)
+(53/104) Installing gmp (6.3.0-r3)
+(54/104) Installing isl26 (0.26-r1)
+(55/104) Installing mpfr4 (4.2.1_p1-r0)
+(56/104) Installing mpc1 (1.3.1-r1)
+(57/104) Installing gcc (14.3.0-r1)
+(58/104) Installing libstdc++-dev (14.3.0-r1)
+(59/104) Installing musl-dev (1.2.5-r10)
+(60/104) Installing g++ (14.3.0-r1)
+(61/104) Installing make (4.4.1-r3)
+(62/104) Installing fortify-headers (1.1-r5)
+(63/104) Installing build-base (0.5-r3)
+(64/104) Installing flex (2.6.4-r7)
+(65/104) Installing brotli-libs (1.1.0-r2)
+(66/104) Installing c-ares (1.34.5-r0)
+(67/104) Installing libunistring (1.3-r0)
+(68/104) Installing libidn2 (2.3.7-r0)
+(69/104) Installing nghttp2-libs (1.65.0-r0)
+(70/104) Installing libpsl (0.21.5-r3)
+(71/104) Installing libcurl (8.14.0-r2)
+(72/104) Installing libexpat (2.7.1-r0)
+(73/104) Installing pcre2 (10.43-r1)
+(74/104) Installing git (2.49.0-r0)
+(75/104) Installing git-init-template (2.49.0-r0)
+(76/104) Installing perl-error (0.17030-r0)
+(77/104) Installing perl-git (2.49.0-r0)
+(78/104) Installing git-perl (2.49.0-r0)
+(79/104) Installing libpq (17.5-r0)
+(80/104) Installing openssl-dev (3.5.0-r0)
+(81/104) Installing libpq-dev (17.5-r0)
+(82/104) Installing libltdl (2.5.4-r1)
+(83/104) Installing libtool (2.5.4-r1)
+(84/104) Installing linux-headers (6.14.2-r0)
+(85/104) Installing libecpg (17.5-r0)
+(86/104) Installing libecpg-dev (17.5-r0)
+(87/104) Installing clang18-headers (18.1.8-r5)
+(88/104) Installing libffi (3.4.8-r0)
+(89/104) Installing xz-libs (5.8.1-r0)
+(90/104) Installing libxml2 (2.13.8-r0)
+(91/104) Installing llvm18-libs (18.1.8-r5)
+(92/104) Installing clang18-libs (18.1.8-r5)
+(93/104) Installing llvm18-linker-tools (18.1.8-r5)
+(94/104) Installing clang18 (18.1.8-r5)
+(95/104) Installing icu-data-en (76.1-r0)
+Executing icu-data-en-76.1-r0.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(96/104) Installing icu-libs (76.1-r0)
+(97/104) Installing icu (76.1-r0)
+(98/104) Installing icu-dev (76.1-r0)
+(99/104) Installing llvm18 (18.1.8-r5)
+(100/104) Installing lz4-libs (1.10.0-r0)
+(101/104) Installing lz4-dev (1.10.0-r0)
+(102/104) Installing zstd (1.5.7-r0)
+(103/104) Installing zstd-dev (1.5.7-r0)
+(104/104) Installing postgresql17-dev (17.5-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 723 MiB in 104 packages
+>>> pgpool: Fetching https://github.com/pgpool/pgpool2/archive/V4_6_0/pgpool2-4_6_0.tar.gz
+>>> pgpool: Checking sha512sums...
+pgpool2-4_6_0.tar.gz: OK
+missing-include.patch: OK
+pgpool.initd: OK
+pgpool.confd: OK
+pgpool.logrotated: OK
+fix-snprintf.patch: OK
+fix-time_t.patch: OK
+>>> pgpool: Unpacking /var/cache/distfiles/pgpool2-4_6_0.tar.gz...
+>>> pgpool: missing-include.patch
+patching file src/parser/snprintf.c
+>>> pgpool: fix-snprintf.patch
+patching file src/parser/snprintf.c
+Hunk #1 succeeded at 404 (offset 1 line).
+Hunk #2 succeeded at 415 (offset 1 line).
+Hunk #3 succeeded at 756 (offset 1 line).
+>>> pgpool: fix-time_t.patch
+patching file src/include/utils/json.h
+patching file src/include/watchdog/wd_json_data.h
+patching file src/utils/json.c
+patching file src/watchdog/watchdog.c
+Hunk #1 succeeded at 6656 (offset 127 lines).
+patching file src/watchdog/wd_commands.c
+patching file src/watchdog/wd_heartbeat.c
+Hunk #1 succeeded at 847 (offset 194 lines).
+patching file src/watchdog/wd_json_data.c
+autoreconf: export WARNINGS=
+autoreconf: Entering directory '.'
+autoreconf: configure.ac: not using Gettext
+autoreconf: running: aclocal --force -I m4
+autoreconf: configure.ac: tracing
+autoreconf: running: libtoolize --copy --force
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+autoreconf: configure.ac: not using Intltool
+autoreconf: configure.ac: not using Gtkdoc
+autoreconf: running: aclocal --force -I m4
+autoreconf: running: /usr/bin/autoconf --force
+configure.ac:6: warning: The macro 'AC_PROG_CC_C99' is obsolete.
+configure.ac:6: You should run autoupdate.
+./lib/autoconf/c.m4:1662: AC_PROG_CC_C99 is expanded from...
+configure.ac:6: the top level
+configure.ac:22: warning: The macro 'AC_PROG_LIBTOOL' is obsolete.
+configure.ac:22: You should run autoupdate.
+m4/libtool.m4:100: AC_PROG_LIBTOOL is expanded from...
+configure.ac:22: the top level
+configure.ac:24: warning: AC_PROG_LEX without either yywrap or noyywrap is obsolete
+./lib/autoconf/programs.m4:743: _AC_PROG_LEX is expanded from...
+./lib/autoconf/programs.m4:736: AC_PROG_LEX is expanded from...
+aclocal.m4:374: AM_PROG_LEX is expanded from...
+configure.ac:24: the top level
+configure.ac:53: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:53: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:53: the top level
+configure.ac:64: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:64: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:64: the top level
+configure.ac:77: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:77: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:77: the top level
+configure.ac:100: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:100: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:100: the top level
+configure.ac:107: warning: The macro 'AC_HEADER_TIME' is obsolete.
+configure.ac:107: You should run autoupdate.
+./lib/autoconf/headers.m4:702: AC_HEADER_TIME is expanded from...
+configure.ac:107: the top level
+configure.ac:144: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:144: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+configure.ac:144: the top level
+configure.ac:160: warning: The macro 'AC_TRY_RUN' is obsolete.
+configure.ac:160: You should run autoupdate.
+./lib/autoconf/general.m4:2995: AC_TRY_RUN is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+c-library.m4:228: PGAC_FUNC_SNPRINTF_LONG_LONG_INT_FORMAT is expanded from...
+configure.ac:160: the top level
+configure.ac:277: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.ac:277: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.ac:277: the top level
+configure.ac:279: warning: AC_FUNC_WAIT3: 'wait3' has been removed from POSIX.
+configure.ac:279: Remove this 'AC_FUNC_WAIT3' and adjust your code to use 'waitpid' instead.
+./lib/autoconf/functions.m4:2072: AC_FUNC_WAIT3 is expanded from...
+configure.ac:279: the top level
+configure.ac:280: warning: The macro 'AC_TRY_COMPILE' is obsolete.
+configure.ac:280: You should run autoupdate.
+./lib/autoconf/general.m4:2845: AC_TRY_COMPILE is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:2249: AC_CACHE_VAL is expanded from...
+ac_func_accept_argtypes.m4:43: AC_FUNC_ACCEPT_ARGTYPES is expanded from...
+configure.ac:280: the top level
+configure.ac:490: warning: 'AM_CONFIG_HEADER': this macro is obsolete.
+configure.ac:490: You should use the 'AC_CONFIG_HEADERS' macro instead.
+aclocal.m4:463: AM_CONFIG_HEADER is expanded from...
+configure.ac:490: the top level
+configure.ac:492: warning: AC_OUTPUT should be used without arguments.
+configure.ac:492: You should run autoupdate.
+autoreconf: running: /usr/bin/autoheader --force
+autoreconf: running: automake --add-missing --copy --force-missing
+configure.ac:5: installing './compile'
+configure.ac:22: installing './config.guess'
+configure.ac:22: installing './config.sub'
+configure.ac:14: installing './install-sh'
+configure.ac:14: installing './missing'
+configure.ac: installing './ylwrap'
+autoreconf: Leaving directory '.'
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/time.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking for library containing yywrap... no
+checking whether yytext is a pointer... yes
+checking for bison... bison -y
+checking for onsgmls... no
+checking for nsgmls... no
+checking for openjade... no
+checking for jade... no
+checking for DocBook V4.2... no
+checking for DocBook stylesheets... no
+checking for collateindex.pl... no
+checking for xsltproc... no
+checking for xmllint... no
+checking for osx... no
+checking for sgml2xml... no
+checking for sx... no
+checking for perl... perl
+checking for lynx... no
+checking for sunifdef... no
+checking for -Wall option... yes
+checking for -Wmissing-prototypes option... yes
+checking for -Wmissing-declarations option... yes
+checking for main in -lm... yes
+checking for main in -lnsl... no
+checking for main in -lsocket... no
+checking for main in -lipc... no
+checking for main in -lIPC... no
+checking for main in -llc... no
+checking for main in -lBSD... no
+checking for main in -lgen... no
+checking for main in -lPW... no
+checking for main in -lresolv... yes
+checking for main in -lcrypt... yes
+checking for strlcat,... no
+checking for strlcpy... yes
+checking for egrep... (cached) /bin/grep -E
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for fcntl.h... yes
+checking for unistd.h... (cached) yes
+checking for getopt.h... yes
+checking for netinet/tcp.h... yes
+checking for netinet/in.h... yes
+checking for netdb.h... yes
+checking for sys/param.h... yes
+checking for sys/types.h... (cached) yes
+checking for sys/socket.h... yes
+checking for sys/un.h... yes
+checking for sys/time.h... (cached) yes
+checking for sys/sem.h... yes
+checking for sys/shm.h... yes
+checking for sys/select.h... yes
+checking for crypt.h... yes
+checking for sys/pstat.h... no
+checking for termios.h... yes
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking whether long int is 64 bits... yes
+checking whether cc supports -Wformat-truncation, for NOT_THE_CFLAGS... yes
+checking whether cc supports -Wstringop-truncation, for NOT_THE_CFLAGS... yes
+checking size of unsigned long... 8
+checking size of void *... 8
+checking size of size_t... 8
+checking whether to build with float4 passed by value... yes
+checking whether to build with float8 passed by value... yes
+checking for struct sockaddr_storage... yes
+checking for struct sockaddr_storage.ss_family... yes
+checking for struct sockaddr_storage.__ss_family... no
+checking for struct sockaddr_storage.ss_len... no
+checking for struct sockaddr_storage.__ss_len... no
+checking for struct sockaddr.sa_len... no
+checking for union semun... no
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for wait3 that fills in rusage... yes
+checking types of arguments for accept()... int, int, struct sockaddr *, socklen_t *
+checking for setsid... yes
+checking for select... yes
+checking for socket... yes
+checking for sigprocmask... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strftime... yes
+checking for strtok... yes
+checking for asprintf... yes
+checking for vasprintf... yes
+checking for gai_strerror... yes
+checking for hstrerror... yes
+checking for pstat... no
+checking for setproctitle... no
+checking for syslog... yes
+checking for __builtin_types_compatible_p... yes
+checking for pg_config... pg_config
+checking for openssl/ssl.h... yes
+checking for CRYPTO_new_ex_data in -lcrypto... yes
+checking for SSL_new in -lssl... yes
+checking for PQexecPrepared in -lpq... yes
+checking for PQprepare... yes
+checking for PQpingParams... yes
+checking whether to use row lock against the sequence table for insert_lock... no
+checking whether to use table lock against the target table for insert_lock... no
+enable cassert = no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating doc/Makefile
+config.status: creating doc/src/Makefile
+config.status: creating doc/src/sgml/Makefile
+config.status: creating doc.ja/Makefile
+config.status: creating doc.ja/src/Makefile
+config.status: creating doc.ja/src/sgml/Makefile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/parser/Makefile
+config.status: creating src/libs/Makefile
+config.status: creating src/libs/pcp/Makefile
+config.status: creating src/tools/Makefile
+config.status: creating src/tools/pgmd5/Makefile
+config.status: creating src/tools/pgenc/Makefile
+config.status: creating src/tools/pcp/Makefile
+config.status: creating src/tools/pgproto/Makefile
+config.status: creating src/tools/watchdog/Makefile
+config.status: creating src/watchdog/Makefile
+config.status: creating src/include/config.h
+config.status: executing libtool commands
+Making all in src
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+Making all in parser
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/parser'
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o copyfuncs.o copyfuncs.c
+flex -o'scan.c' scan.l
+test -f gram.c || /bin/sh ../../ylwrap gram.y y.tab.c gram.c y.tab.h `echo gram.c | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output gram.output -- bison -y -d -Wno-yacc 
+/tmp/src/pgpool2-4_6_0/src/parser/gram.y:254.1-12: warning: deprecated directive: ‘%pure-parser’, use ‘%define api.pure’ [-Wdeprecated]
+  254 | %pure-parser
+      | ^~~~~~~~~~~~
+      | %define api.pure
+/tmp/src/pgpool2-4_6_0/src/parser/gram.y:256.1-22: warning: deprecated directive: ‘%name-prefix="base_yy"’, use ‘%define api.prefix {base_yy}’ [-Wdeprecated]
+  256 | %name-prefix="base_yy"
+      | ^~~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {base_yy}
+/tmp/src/pgpool2-4_6_0/src/parser/gram.y: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+updating gram.h
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o gram.o gram.c
+test -f gram_minimal.c || /bin/sh ../../ylwrap gram_minimal.y y.tab.c gram_minimal.c y.tab.h `echo gram_minimal.c | sed -e s/cc$/hh/ -e s/cpp$/hpp/ -e s/cxx$/hxx/ -e s/c++$/h++/ -e s/c$/h/` y.output gram_minimal.output -- bison -y -d -Wno-yacc 
+/tmp/src/pgpool2-4_6_0/src/parser/gram_minimal.y:254.1-12: warning: deprecated directive: ‘%pure-parser’, use ‘%define api.pure’ [-Wdeprecated]
+  254 | %pure-parser
+      | ^~~~~~~~~~~~
+      | %define api.pure
+/tmp/src/pgpool2-4_6_0/src/parser/gram_minimal.y:256.1-30: warning: deprecated directive: ‘%name-prefix="minimal_base_yy"’, use ‘%define api.prefix {minimal_base_yy}’ [-Wdeprecated]
+  256 | %name-prefix="minimal_base_yy"
+      | ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      | %define api.prefix {minimal_base_yy}
+/tmp/src/pgpool2-4_6_0/src/parser/gram_minimal.y: warning: fix-its can be applied.  Rerun with option '--update'. [-Wother]
+updating gram_minimal.h
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o gram_minimal.o gram_minimal.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o keywords.o keywords.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o kwlookup.o kwlookup.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o list.o list.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o makefuncs.o makefuncs.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o nodes.o nodes.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o outfuncs.o outfuncs.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o parser.o parser.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o scansup.o scansup.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o stringinfo.o stringinfo.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o value.o value.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../src/utils/mmgr/mcxt.o ../../src/utils/mmgr/mcxt.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../src/utils/mmgr/aset.o ../../src/utils/mmgr/aset.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../src/utils/error/elog.o ../../src/utils/error/elog.c
+In file included from ../../src/utils/error/elog.c:71:
+/usr/include/sys/fcntl.h:1:2: warning: #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h> [-Wcpp]
+    1 | #warning redirecting incorrect #include <sys/fcntl.h> to <fcntl.h>
+      |  ^~~~~~~
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wchar.o wchar.c
+cc -DHAVE_CONFIG_H -I. -I../../src/include  -D_GNU_SOURCE -I ../../src/include/parser -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o scan.o scan.c
+rm -f libsql-parser.a
+ar cr libsql-parser.a copyfuncs.o gram.o gram_minimal.o keywords.o kwlookup.o list.o makefuncs.o nodes.o outfuncs.o parser.o scansup.o stringinfo.o value.o ../../src/utils/mmgr/mcxt.o ../../src/utils/mmgr/aset.o ../../src/utils/error/elog.o wchar.o scan.o  
+ranlib libsql-parser.a
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/parser'
+Making all in libs
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+Making all in pcp
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pcp.lo pcp.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c pcp.c  -fPIC -DPIC -o .libs/pcp.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c pcp.c -o pcp.o >/dev/null 2>&1
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../utils/pool_path.lo ../../utils/pool_path.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../utils/pool_path.c  -fPIC -DPIC -o ../../utils/.libs/pool_path.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../utils/pool_path.c -o ../../utils/pool_path.o >/dev/null 2>&1
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../tools/fe_port.lo ../../tools/fe_port.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../tools/fe_port.c  -fPIC -DPIC -o ../../tools/.libs/fe_port.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../tools/fe_port.c -o ../../tools/fe_port.o >/dev/null 2>&1
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../tools/fe_memutils.lo ../../tools/fe_memutils.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../tools/fe_memutils.c  -fPIC -DPIC -o ../../tools/.libs/fe_memutils.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../tools/fe_memutils.c -o ../../tools/fe_memutils.o >/dev/null 2>&1
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../utils/strlcpy.lo ../../utils/strlcpy.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../utils/strlcpy.c  -fPIC -DPIC -o ../../utils/.libs/strlcpy.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../utils/strlcpy.c -o ../../utils/strlcpy.o >/dev/null 2>&1
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../utils/pool_health_check_stats.lo ../../utils/pool_health_check_stats.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../utils/pool_health_check_stats.c  -fPIC -DPIC -o ../../utils/.libs/pool_health_check_stats.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c ../../utils/pool_health_check_stats.c -o ../../utils/pool_health_check_stats.o >/dev/null 2>&1
+rm -f pcp_stream.c && ln -s ../../../src/utils/pcp/pcp_stream.c .
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pcp_stream.lo pcp_stream.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c pcp_stream.c  -fPIC -DPIC -o .libs/pcp_stream.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c pcp_stream.c -o pcp_stream.o >/dev/null 2>&1
+rm -f md5.c && ln -s ../../../src/auth/md5.c .
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o md5.lo md5.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c md5.c  -fPIC -DPIC -o .libs/md5.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c md5.c -o md5.o >/dev/null 2>&1
+rm -f json.c && ln -s ../../../src/utils/json.c .
+/bin/sh ../../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o json.lo json.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c json.c  -fPIC -DPIC -o .libs/json.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../../../src/include -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c json.c -o json.o >/dev/null 2>&1
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -version-info 2:0:0 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libpcp.la -rpath /usr/lib pcp.lo ../../utils/pool_path.lo ../../tools/fe_port.lo ../../tools/fe_memutils.lo ../../utils/strlcpy.lo ../../utils/pool_health_check_stats.lo pcp_stream.lo md5.lo json.lo  -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -shared  -fPIC -DPIC  .libs/pcp.o ../../utils/.libs/pool_path.o ../../tools/.libs/fe_port.o ../../tools/.libs/fe_memutils.o ../../utils/.libs/strlcpy.o ../../utils/.libs/pool_health_check_stats.o .libs/pcp_stream.o .libs/md5.o .libs/json.o   -lssl -lcrypto -lcrypt -lresolv -lm  -Os -Werror=format-security -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libpcp.so.2 -o .libs/libpcp.so.2.0.0
+libtool: link: (cd ".libs" && rm -f "libpcp.so.2" && ln -s "libpcp.so.2.0.0" "libpcp.so.2")
+libtool: link: (cd ".libs" && rm -f "libpcp.so" && ln -s "libpcp.so.2.0.0" "libpcp.so")
+libtool: link: ar cr .libs/libpcp.a  pcp.o ../../utils/pool_path.o ../../tools/fe_port.o ../../tools/fe_memutils.o ../../utils/strlcpy.o ../../utils/pool_health_check_stats.o pcp_stream.o md5.o json.o
+libtool: link: ranlib .libs/libpcp.a
+libtool: link: ( cd ".libs" && rm -f "libpcp.la" && ln -s "../libpcp.la" "libpcp.la" )
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+Making all in watchdog
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o watchdog.o watchdog.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_if.o wd_if.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_lifecheck.o wd_lifecheck.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_commands.o wd_commands.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_internal_commands.o wd_internal_commands.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_ipc_conn.o wd_ipc_conn.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_json_data.o wd_json_data.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_ping.o wd_ping.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_heartbeat.o wd_heartbeat.c
+wd_heartbeat.c: In function 'packet_to_string_hb':
+wd_heartbeat.c:850:48: warning: format '%lld' expects argument of type 'long long int', but argument 4 has type 'time_t' {aka 'long int'} [-Wformat=]
+  850 |         len = snprintf(str, maxlen, "tv_sec=%lld tv_usec=%lld from=%s",
+      |                                             ~~~^
+      |                                                |
+      |                                                long long int
+      |                                             %ld
+  851 |                                    pkt->send_time.tv_sec, pkt->send_time.tv_usec, pkt->from);
+      |                                    ~~~~~~~~~~~~~~~~~~~~~
+      |                                                  |
+      |                                                  time_t {aka long int}
+wd_heartbeat.c:850:61: warning: format '%lld' expects argument of type 'long long int', but argument 5 has type 'suseconds_t' {aka 'long int'} [-Wformat=]
+  850 |         len = snprintf(str, maxlen, "tv_sec=%lld tv_usec=%lld from=%s",
+      |                                                          ~~~^
+      |                                                             |
+      |                                                             long long int
+      |                                                          %ld
+  851 |                                    pkt->send_time.tv_sec, pkt->send_time.tv_usec, pkt->from);
+      |                                                           ~~~~~~~~~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         suseconds_t {aka long int}
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_utils.o wd_utils.c
+cc -DHAVE_CONFIG_H -DWATCHDOG_DEBUG_OPTS=0 -I. -I../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_escalation.o wd_escalation.c
+rm -f lib-watchdog.a
+ar cr lib-watchdog.a watchdog.o wd_if.o wd_lifecheck.o wd_commands.o wd_internal_commands.o wd_ipc_conn.o wd_json_data.o wd_ping.o wd_heartbeat.o wd_utils.o wd_escalation.o 
+ranlib lib-watchdog.a
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+Making all in .
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main/main.o main/main.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main/pool_globals.o main/pool_globals.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main/pgpool_main.o main/pgpool_main.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main/health_check.o main/health_check.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main/pool_internal_comms.o main/pool_internal_comms.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main/pgpool_logger.o main/pgpool_logger.c
+flex -o'config/pool_config.c' config/pool_config.l
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o config/pool_config.o config/pool_config.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o config/pool_config_variables.o config/pool_config_variables.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pcp_con/pcp_child.o pcp_con/pcp_child.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pcp_con/pcp_worker.o pcp_con/pcp_worker.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pcp_con/recovery.o pcp_con/recovery.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o auth/md5.o auth/md5.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o auth/pool_auth.o auth/pool_auth.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o auth/pool_passwd.o auth/pool_passwd.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o auth/pool_hba.o auth/pool_hba.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o auth/auth-scram.o auth/auth-scram.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/pool_proto2.o protocol/pool_proto2.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/child.o protocol/child.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/pool_pg_utils.o protocol/pool_pg_utils.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/pool_process_query.o protocol/pool_process_query.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/pool_connection_pool.o protocol/pool_connection_pool.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/pool_proto_modules.o protocol/pool_proto_modules.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o query_cache/pool_memqcache.o query_cache/pool_memqcache.c
+query_cache/pool_memqcache.c: In function 'pool_fetch_cache':
+query_cache/pool_memqcache.c:542:17: warning: 'free' called on pointer 'cih' with nonzero offset 24 [-Wfree-nonheap-object]
+  542 |                 free(ptr);
+      |                 ^~~~~~~~~
+In function 'pool_get_item_shmem_cache',
+    inlined from 'pool_fetch_cache' at query_cache/pool_memqcache.c:485:9:
+query_cache/pool_memqcache.c:2832:15: note: returned from 'pool_cache_item_header'
+ 2832 |         cih = pool_cache_item_header(cacheid);
+      |               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o protocol/CommandComplete.o protocol/CommandComplete.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o context/pool_session_context.o context/pool_session_context.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o context/pool_process_context.o context/pool_process_context.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o context/pool_query_context.o context/pool_query_context.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o streaming_replication/pool_worker_child.o streaming_replication/pool_worker_child.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o rewrite/pool_timestamp.o rewrite/pool_timestamp.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o rewrite/pool_lobj.o rewrite/pool_lobj.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_select_walker.o utils/pool_select_walker.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/psprintf.o utils/psprintf.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_params.o utils/pool_params.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/ps_status.o utils/ps_status.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_shmem.o utils/pool_shmem.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_sema.o utils/pool_sema.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_signal.o utils/pool_signal.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_ip.o utils/pool_ip.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_relcache.o utils/pool_relcache.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_process_reporting.o utils/pool_process_reporting.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_ssl.o utils/pool_ssl.c
+utils/pool_ssl.c: In function 'initialize_ecdh':
+utils/pool_ssl.c:907:9: warning: 'EC_KEY_new_by_curve_name' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  907 |         ecdh = EC_KEY_new_by_curve_name(nid);
+      |         ^~~~
+In file included from /usr/include/openssl/x509.h:33,
+                 from /usr/include/openssl/ssl.h:32,
+                 from ../src/include/pool.h:36,
+                 from utils/pool_ssl.c:31:
+/usr/include/openssl/ec.h:1017:31: note: declared here
+ 1017 | OSSL_DEPRECATEDIN_3_0 EC_KEY *EC_KEY_new_by_curve_name(int nid);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~
+utils/pool_ssl.c:917:9: warning: 'EC_KEY_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  917 |         EC_KEY_free(ecdh);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/ec.h:1022:28: note: declared here
+ 1022 | OSSL_DEPRECATEDIN_3_0 void EC_KEY_free(EC_KEY *key);
+      |                            ^~~~~~~~~~~
+utils/pool_ssl.c: In function 'load_dh_file':
+utils/pool_ssl.c:947:9: warning: 'PEM_read_DHparams' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  947 |         dh = PEM_read_DHparams(fp, NULL, NULL, NULL);
+      |         ^~
+In file included from /usr/include/openssl/ssl.h:37:
+/usr/include/openssl/pem.h:478:1: note: declared here
+  478 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, DHparams, DH)
+      | ^~~~~~~~~~~~~~~~~~~
+utils/pool_ssl.c:959:9: warning: 'DH_check' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  959 |         if (DH_check(dh, &codes) == 0)
+      |         ^~
+In file included from /usr/include/openssl/dsa.h:31,
+                 from /usr/include/openssl/x509.h:37:
+/usr/include/openssl/dh.h:231:27: note: declared here
+  231 | OSSL_DEPRECATEDIN_3_0 int DH_check(const DH *dh, int *codes);
+      |                           ^~~~~~~~
+utils/pool_ssl.c: In function 'load_dh_buffer':
+utils/pool_ssl.c:998:9: warning: 'PEM_read_bio_DHparams' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  998 |         dh = PEM_read_bio_DHparams(bio, NULL, NULL, NULL);
+      |         ^~
+/usr/include/openssl/pem.h:478:1: note: declared here
+  478 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, DHparams, DH)
+      | ^~~~~~~~~~~~~~~~~~~
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pool_stream.o utils/pool_stream.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/socket_stream.o utils/socket_stream.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/getopt_long.o utils/getopt_long.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/error/assert.o utils/error/assert.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pcp/pcp_stream.o utils/pcp/pcp_stream.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/regex_array.o utils/regex_array.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/json_writer.o utils/json_writer.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/json.o utils/json.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/scram-common.o utils/scram-common.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/base64.o utils/base64.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/sha2.o utils/sha2.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/ssl_utils.o utils/ssl_utils.c
+utils/ssl_utils.c: In function 'calculate_hmac_sha256':
+utils/ssl_utils.c:225:9: warning: 'HMAC_CTX_new' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  225 |         ctx = HMAC_CTX_new();
+      |         ^~~
+In file included from /usr/include/openssl/ssl.h:38,
+                 from ../src/include/pool.h:36,
+                 from utils/ssl_utils.c:34:
+/usr/include/openssl/hmac.h:33:33: note: declared here
+   33 | OSSL_DEPRECATEDIN_3_0 HMAC_CTX *HMAC_CTX_new(void);
+      |                                 ^~~~~~~~~~~~
+utils/ssl_utils.c:226:9: warning: 'HMAC_CTX_reset' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  226 |         HMAC_CTX_reset(ctx);
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:34:27: note: declared here
+   34 | OSSL_DEPRECATEDIN_3_0 int HMAC_CTX_reset(HMAC_CTX *ctx);
+      |                           ^~~~~~~~~~~~~~
+utils/ssl_utils.c:233:9: warning: 'HMAC_Init_ex' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  233 |         HMAC_Init_ex(ctx, key, strlen(key), EVP_sha256(), NULL);
+      |         ^~~~~~~~~~~~
+/usr/include/openssl/hmac.h:43:27: note: declared here
+   43 | OSSL_DEPRECATEDIN_3_0 int HMAC_Init_ex(HMAC_CTX *ctx, const void *key, int len,
+      |                           ^~~~~~~~~~~~
+utils/ssl_utils.c:234:9: warning: 'HMAC_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  234 |         HMAC_Update(ctx, (unsigned char *) data, len);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/hmac.h:45:27: note: declared here
+   45 | OSSL_DEPRECATEDIN_3_0 int HMAC_Update(HMAC_CTX *ctx, const unsigned char *data,
+      |                           ^~~~~~~~~~~
+utils/ssl_utils.c:235:9: warning: 'HMAC_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  235 |         HMAC_Final(ctx, (unsigned char *) str, &res_len);
+      |         ^~~~~~~~~~
+/usr/include/openssl/hmac.h:47:27: note: declared here
+   47 | OSSL_DEPRECATEDIN_3_0 int HMAC_Final(HMAC_CTX *ctx, unsigned char *md,
+      |                           ^~~~~~~~~~
+utils/ssl_utils.c:237:9: warning: 'HMAC_CTX_reset' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  237 |         HMAC_CTX_reset(ctx);
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:34:27: note: declared here
+   34 | OSSL_DEPRECATEDIN_3_0 int HMAC_CTX_reset(HMAC_CTX *ctx);
+      |                           ^~~~~~~~~~~~~~
+utils/ssl_utils.c:238:9: warning: 'HMAC_CTX_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  238 |         HMAC_CTX_free(ctx);
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:35:28: note: declared here
+   35 | OSSL_DEPRECATEDIN_3_0 void HMAC_CTX_free(HMAC_CTX *ctx);
+      |                            ^~~~~~~~~~~~~
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/statistics.o utils/statistics.c
+flex -o'utils/psqlscan.c' utils/psqlscan.l
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/psqlscan.o utils/psqlscan.c
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPGSQL_BIN_DIR=\"/usr/libexec/postgresql17\" -I. -I../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o utils/pgstrcasecmp.o utils/pgstrcasecmp.c
+/bin/sh ../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pgpool main/main.o main/pool_globals.o main/pgpool_main.o main/health_check.o main/pool_internal_comms.o main/pgpool_logger.o config/pool_config.o config/pool_config_variables.o pcp_con/pcp_child.o pcp_con/pcp_worker.o pcp_con/recovery.o auth/md5.o auth/pool_auth.o auth/pool_passwd.o auth/pool_hba.o auth/auth-scram.o protocol/pool_proto2.o protocol/child.o protocol/pool_pg_utils.o protocol/pool_process_query.o protocol/pool_connection_pool.o protocol/pool_proto_modules.o query_cache/pool_memqcache.o protocol/CommandComplete.o context/pool_session_context.o context/pool_process_context.o context/pool_query_context.o streaming_replication/pool_worker_child.o rewrite/pool_timestamp.o rewrite/pool_lobj.o utils/pool_select_walker.o utils/strlcpy.o utils/psprintf.o utils/pool_params.o utils/ps_status.o utils/pool_shmem.o utils/pool_sema.o utils/pool_signal.o utils/pool_path.o utils/pool_ip.o utils/pool_relcache.o utils/pool_process_reporting.o utils/pool_ssl.o utils/pool_stream.o utils/socket_stream.o utils/getopt_long.o utils/mmgr/mcxt.o utils/mmgr/aset.o utils/error/elog.o utils/error/assert.o utils/pcp/pcp_stream.o utils/regex_array.o utils/json_writer.o utils/json.o utils/scram-common.o utils/base64.o utils/sha2.o utils/ssl_utils.o utils/statistics.o utils/pool_health_check_stats.o utils/psqlscan.o utils/pgstrcasecmp.o -L/usr/lib -lpq parser/libsql-parser.a parser/nodes.o watchdog/lib-watchdog.a -lpthread -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o pgpool main/main.o main/pool_globals.o main/pgpool_main.o main/health_check.o main/pool_internal_comms.o main/pgpool_logger.o config/pool_config.o config/pool_config_variables.o pcp_con/pcp_child.o pcp_con/pcp_worker.o pcp_con/recovery.o auth/md5.o auth/pool_auth.o auth/pool_passwd.o auth/pool_hba.o auth/auth-scram.o protocol/pool_proto2.o protocol/child.o protocol/pool_pg_utils.o protocol/pool_process_query.o protocol/pool_connection_pool.o protocol/pool_proto_modules.o query_cache/pool_memqcache.o protocol/CommandComplete.o context/pool_session_context.o context/pool_process_context.o context/pool_query_context.o streaming_replication/pool_worker_child.o rewrite/pool_timestamp.o rewrite/pool_lobj.o utils/pool_select_walker.o utils/strlcpy.o utils/psprintf.o utils/pool_params.o utils/ps_status.o utils/pool_shmem.o utils/pool_sema.o utils/pool_signal.o utils/pool_path.o utils/pool_ip.o utils/pool_relcache.o utils/pool_process_reporting.o utils/pool_ssl.o utils/pool_stream.o utils/socket_stream.o utils/getopt_long.o utils/mmgr/mcxt.o utils/mmgr/aset.o utils/error/elog.o utils/error/assert.o utils/pcp/pcp_stream.o utils/regex_array.o utils/json_writer.o utils/json.o utils/scram-common.o utils/base64.o utils/sha2.o utils/ssl_utils.o utils/statistics.o utils/pool_health_check_stats.o utils/psqlscan.o utils/pgstrcasecmp.o parser/nodes.o  -L/usr/lib -lpq parser/libsql-parser.a watchdog/lib-watchdog.a -lpthread -lssl -lcrypto -lcrypt -lresolv -lm
+sed -e 's#[@][@]PGPOOL_INSTALL_DIR[@][@]#/usr#g' \
+	-e 's#[@][@]PGPOOL_CONFIG_DIR[@][@]#/etc/pgpool#g' \
+	-e 's#[@][@]PGSQL_BIN_DIR[@][@]#/usr/libexec/postgresql17#g' \
+	-e 's#[@][@]PGSQL_LIB_DIR[@][@]#/usr/lib#g' test/pgpool_setup.in > test/pgpool_setup
+chmod +x test/pgpool_setup
+sed -e 's#[@][@]PGPOOL_INSTALL_DIR[@][@]#/usr#g' \
+	-e 's#[@][@]PGPOOL_CONFIG_DIR[@][@]#/etc/pgpool#g' \
+	-e 's#[@][@]PGSQL_BIN_DIR[@][@]#/usr/libexec/postgresql17#g' \
+	-e 's#[@][@]PGSQL_LIB_DIR[@][@]#/usr/lib#g' test/watchdog_setup.in > test/watchdog_setup
+chmod +x test/watchdog_setup
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+Making all in tools
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+Making all in pcp
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pcp_frontend_client.o pcp_frontend_client.c
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ../../utils/sprompt.o ../../utils/sprompt.c
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_stop_pgpool pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_stop_pgpool pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_node_count pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_node_count pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_node_info pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_node_info pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_health_check_stats pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../utils/pool_health_check_stats.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_health_check_stats pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../utils/pool_health_check_stats.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_proc_count pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_proc_count pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_proc_info pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_proc_info pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_detach_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_detach_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_attach_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_attach_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_recovery_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_recovery_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_promote_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_promote_node pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_pool_status pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_pool_status pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_watchdog_info pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_watchdog_info pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_reload_config pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_reload_config pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_log_rotate pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_log_rotate pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pcp_invalidate_query_cache pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o ../../../src/libs/pcp/libpcp.la -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/pcp_invalidate_query_cache pcp_frontend_client.o ../fe_memutils.o ../../utils/sprompt.o ../../utils/pool_path.o  ../../../src/libs/pcp/.libs/libpcp.so -lssl -lcrypto -lcrypt -lresolv -lm
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+Making all in pgmd5
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pg_md5.o pg_md5.c
+rm -f md5.c && ln -s ../../../src/auth/md5.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o md5.o md5.c
+rm -f pool_passwd.c && ln -s ../../../src/auth/pool_passwd.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_passwd.o pool_passwd.c
+rm -f strlcpy.c && ln -s ../../../src/utils/strlcpy.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o strlcpy.o strlcpy.c
+rm -f regex_array.c && ln -s ../../../src/utils/regex_array.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o regex_array.o regex_array.c
+rm -f pool_config_variables.c && ln -s ../../../src/config/pool_config_variables.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_config_variables.o pool_config_variables.c
+rm -f pool_config.c && ln -s ../../../src/config/pool_config.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_config.o pool_config.c
+rm -f fe_memutils.c && ln -s ../../../src/tools/fe_memutils.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o fe_memutils.o fe_memutils.c
+rm -f pool_path.c && ln -s ../../../src/utils/pool_path.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_path.o pool_path.c
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pg_md5 pg_md5.o ../fe_port.o md5.o pool_passwd.o strlcpy.o regex_array.o pool_config_variables.o pool_config.o fe_memutils.o pool_path.o  -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o pg_md5 pg_md5.o ../fe_port.o md5.o pool_passwd.o strlcpy.o regex_array.o pool_config_variables.o pool_config.o fe_memutils.o pool_path.o  -lssl -lcrypto -lcrypt -lresolv -lm
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+Making all in pgenc
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pg_enc.o pg_enc.c
+rm -f ssl_utils.c && ln -s ../../../src/utils/ssl_utils.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ssl_utils.o ssl_utils.c
+ssl_utils.c: In function 'calculate_hmac_sha256':
+ssl_utils.c:225:9: warning: 'HMAC_CTX_new' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  225 |         ctx = HMAC_CTX_new();
+      |         ^~~
+In file included from /usr/include/openssl/ssl.h:38,
+                 from ../../../src/include/pool.h:36,
+                 from ssl_utils.c:34:
+/usr/include/openssl/hmac.h:33:33: note: declared here
+   33 | OSSL_DEPRECATEDIN_3_0 HMAC_CTX *HMAC_CTX_new(void);
+      |                                 ^~~~~~~~~~~~
+ssl_utils.c:226:9: warning: 'HMAC_CTX_reset' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  226 |         HMAC_CTX_reset(ctx);
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:34:27: note: declared here
+   34 | OSSL_DEPRECATEDIN_3_0 int HMAC_CTX_reset(HMAC_CTX *ctx);
+      |                           ^~~~~~~~~~~~~~
+ssl_utils.c:233:9: warning: 'HMAC_Init_ex' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  233 |         HMAC_Init_ex(ctx, key, strlen(key), EVP_sha256(), NULL);
+      |         ^~~~~~~~~~~~
+/usr/include/openssl/hmac.h:43:27: note: declared here
+   43 | OSSL_DEPRECATEDIN_3_0 int HMAC_Init_ex(HMAC_CTX *ctx, const void *key, int len,
+      |                           ^~~~~~~~~~~~
+ssl_utils.c:234:9: warning: 'HMAC_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  234 |         HMAC_Update(ctx, (unsigned char *) data, len);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/hmac.h:45:27: note: declared here
+   45 | OSSL_DEPRECATEDIN_3_0 int HMAC_Update(HMAC_CTX *ctx, const unsigned char *data,
+      |                           ^~~~~~~~~~~
+ssl_utils.c:235:9: warning: 'HMAC_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  235 |         HMAC_Final(ctx, (unsigned char *) str, &res_len);
+      |         ^~~~~~~~~~
+/usr/include/openssl/hmac.h:47:27: note: declared here
+   47 | OSSL_DEPRECATEDIN_3_0 int HMAC_Final(HMAC_CTX *ctx, unsigned char *md,
+      |                           ^~~~~~~~~~
+ssl_utils.c:237:9: warning: 'HMAC_CTX_reset' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  237 |         HMAC_CTX_reset(ctx);
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:34:27: note: declared here
+   34 | OSSL_DEPRECATEDIN_3_0 int HMAC_CTX_reset(HMAC_CTX *ctx);
+      |                           ^~~~~~~~~~~~~~
+ssl_utils.c:238:9: warning: 'HMAC_CTX_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  238 |         HMAC_CTX_free(ctx);
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:35:28: note: declared here
+   35 | OSSL_DEPRECATEDIN_3_0 void HMAC_CTX_free(HMAC_CTX *ctx);
+      |                            ^~~~~~~~~~~~~
+rm -f md5.c && ln -s ../../../src/auth/md5.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o md5.o md5.c
+rm -f base64.c && ln -s ../../../src/utils/base64.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o base64.o base64.c
+rm -f pool_passwd.c && ln -s ../../../src/auth/pool_passwd.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_passwd.o pool_passwd.c
+rm -f strlcpy.c && ln -s ../../../src/utils/strlcpy.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o strlcpy.o strlcpy.c
+rm -f regex_array.c && ln -s ../../../src/utils/regex_array.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o regex_array.o regex_array.c
+rm -f pool_config_variables.c && ln -s ../../../src/config/pool_config_variables.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_config_variables.o pool_config_variables.c
+rm -f pool_config.c && ln -s ../../../src/config/pool_config.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_config.o pool_config.c
+rm -f fe_memutils.c && ln -s ../../../src/tools/fe_memutils.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o fe_memutils.o fe_memutils.c
+rm -f pool_path.c && ln -s ../../../src/utils/pool_path.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_path.o pool_path.c
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pg_enc pg_enc.o ../fe_port.o ssl_utils.o md5.o base64.o pool_passwd.o strlcpy.o regex_array.o pool_config_variables.o pool_config.o fe_memutils.o pool_path.o  -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o pg_enc pg_enc.o ../fe_port.o ssl_utils.o md5.o base64.o pool_passwd.o strlcpy.o regex_array.o pool_config_variables.o pool_config.o fe_memutils.o pool_path.o  -lssl -lcrypto -lcrypt -lresolv -lm
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+Making all in pgproto
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o main.o main.c
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o read.o read.c
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o send.o send.c
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o extended_query.o extended_query.c
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o buffer.o buffer.c
+cc -DHAVE_CONFIG_H -I. -I../../../src/include  -D_GNU_SOURCE -I /usr/include/postgresql   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o fe_memutils.o fe_memutils.c
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o pgproto main.o read.o send.o extended_query.o buffer.o fe_memutils.o -L/usr/lib -lpq -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o pgproto main.o read.o send.o extended_query.o buffer.o fe_memutils.o  -L/usr/lib -lpq -lssl -lcrypto -lcrypt -lresolv -lm
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+Making all in watchdog
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_cli.o wd_cli.c
+rm -f ssl_utils.c && ln -s ../../../src/utils/ssl_utils.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o ssl_utils.o ssl_utils.c
+ssl_utils.c: In function 'calculate_hmac_sha256':
+ssl_utils.c:225:9: warning: 'HMAC_CTX_new' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  225 |         ctx = HMAC_CTX_new();
+      |         ^~~
+In file included from /usr/include/openssl/ssl.h:38,
+                 from ../../../src/include/pool.h:36,
+                 from ssl_utils.c:34:
+/usr/include/openssl/hmac.h:33:33: note: declared here
+   33 | OSSL_DEPRECATEDIN_3_0 HMAC_CTX *HMAC_CTX_new(void);
+      |                                 ^~~~~~~~~~~~
+ssl_utils.c:226:9: warning: 'HMAC_CTX_reset' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  226 |         HMAC_CTX_reset(ctx);
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:34:27: note: declared here
+   34 | OSSL_DEPRECATEDIN_3_0 int HMAC_CTX_reset(HMAC_CTX *ctx);
+      |                           ^~~~~~~~~~~~~~
+ssl_utils.c:233:9: warning: 'HMAC_Init_ex' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  233 |         HMAC_Init_ex(ctx, key, strlen(key), EVP_sha256(), NULL);
+      |         ^~~~~~~~~~~~
+/usr/include/openssl/hmac.h:43:27: note: declared here
+   43 | OSSL_DEPRECATEDIN_3_0 int HMAC_Init_ex(HMAC_CTX *ctx, const void *key, int len,
+      |                           ^~~~~~~~~~~~
+ssl_utils.c:234:9: warning: 'HMAC_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  234 |         HMAC_Update(ctx, (unsigned char *) data, len);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/hmac.h:45:27: note: declared here
+   45 | OSSL_DEPRECATEDIN_3_0 int HMAC_Update(HMAC_CTX *ctx, const unsigned char *data,
+      |                           ^~~~~~~~~~~
+ssl_utils.c:235:9: warning: 'HMAC_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  235 |         HMAC_Final(ctx, (unsigned char *) str, &res_len);
+      |         ^~~~~~~~~~
+/usr/include/openssl/hmac.h:47:27: note: declared here
+   47 | OSSL_DEPRECATEDIN_3_0 int HMAC_Final(HMAC_CTX *ctx, unsigned char *md,
+      |                           ^~~~~~~~~~
+ssl_utils.c:237:9: warning: 'HMAC_CTX_reset' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  237 |         HMAC_CTX_reset(ctx);
+      |         ^~~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:34:27: note: declared here
+   34 | OSSL_DEPRECATEDIN_3_0 int HMAC_CTX_reset(HMAC_CTX *ctx);
+      |                           ^~~~~~~~~~~~~~
+ssl_utils.c:238:9: warning: 'HMAC_CTX_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  238 |         HMAC_CTX_free(ctx);
+      |         ^~~~~~~~~~~~~
+/usr/include/openssl/hmac.h:35:28: note: declared here
+   35 | OSSL_DEPRECATEDIN_3_0 void HMAC_CTX_free(HMAC_CTX *ctx);
+      |                            ^~~~~~~~~~~~~
+rm -f wd_ipc_conn.c && ln -s ../../../src/watchdog/wd_ipc_conn.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_ipc_conn.o wd_ipc_conn.c
+rm -f wd_commands.c && ln -s ../../../src/watchdog/wd_commands.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o wd_commands.o wd_commands.c
+rm -f json_writer.c && ln -s ../../../src/utils/json_writer.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o json_writer.o json_writer.c
+rm -f json.c && ln -s ../../../src/utils/json.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o json.o json.c
+rm -f pool_config_variables.c && ln -s ../../../src/config/pool_config_variables.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_config_variables.o pool_config_variables.c
+rm -f pool_config.c && ln -s ../../../src/config/pool_config.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_config.o pool_config.c
+rm -f pool_path.c && ln -s ../../../src/utils/pool_path.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o pool_path.o pool_path.c
+rm -f fe_memutils.c && ln -s ../../../src/tools/fe_memutils.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o fe_memutils.o fe_memutils.c
+rm -f stringinfo.c && ln -s ../../../src/parser/stringinfo.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o stringinfo.o stringinfo.c
+rm -f strlcpy.c && ln -s ../../../src/utils/strlcpy.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o strlcpy.o strlcpy.c
+rm -f socket_stream.c && ln -s ../../../src/utils/socket_stream.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o socket_stream.o socket_stream.c
+rm -f regex_array.c && ln -s ../../../src/utils/regex_array.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o regex_array.o regex_array.c
+rm -f psprintf.c && ln -s ../../../src/utils/psprintf.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o psprintf.o psprintf.c
+rm -f md5.c && ln -s ../../../src/auth/md5.c .
+cc -DHAVE_CONFIG_H -DDEFAULT_CONFIGDIR=\"/etc/pgpool\" -DPOOL_TOOLS -I. -I../../../src/include  -D_GNU_SOURCE -DPOOL_PRIVATE -I ../../../src/include/parser -I /usr/include/postgresql    -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -c -o md5.o md5.c
+/bin/sh ../../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o wd_cli wd_cli.o ../fe_port.o ssl_utils.o wd_ipc_conn.o wd_commands.o json_writer.o json.o pool_config_variables.o pool_config.o pool_path.o fe_memutils.o stringinfo.o strlcpy.o socket_stream.o regex_array.o psprintf.o md5.o  -lssl -lcrypto -lcrypt -lresolv -lm 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wmissing-prototypes -Wmissing-declarations -Wno-format-truncation -Wno-stringop-truncation -fno-strict-aliasing -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o wd_cli wd_cli.o ../fe_port.o ssl_utils.o wd_ipc_conn.o wd_commands.o json_writer.o json.o pool_config_variables.o pool_config.o pool_path.o fe_memutils.o stringinfo.o strlcpy.o socket_stream.o regex_array.o psprintf.o md5.o  -lssl -lcrypto -lcrypt -lresolv -lm
+ln -s ../../test/watchdog_setup .
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+ln -s ../test/pgpool_setup .
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+Making all in include
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/include'
+make  all-am
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0'
+make: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql'
+make -C pgpool-recovery all
+make -C pgpool-regclass all
+make -C pgpool_adm all
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+sed 's,MODULE_PATHNAME,$libdir/pgpool-regclass,g' pgpool-regclass.sql.in >pgpool-regclass.sql
+cc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wshadow=compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fvisibility=hidden -I/usr/include/postgresql -I../../include/pcp -DPGPOOL_ADM -I. -I./ -I/usr/include/postgresql/17/server -I/usr/include/postgresql/internal  -D_GNU_SOURCE -I/usr/include/libxml2   -c -o pgpool_adm.o pgpool_adm.c
+cc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wshadow=compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fvisibility=hidden -I. -I./ -I/usr/include/postgresql/17/server -I/usr/include/postgresql/internal  -D_GNU_SOURCE -I/usr/include/libxml2   -c -o pgpool-regclass.o pgpool-regclass.c
+clang-18 -Wno-ignored-attributes -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-unused-command-line-argument -Wno-compound-token-split-by-macro -Wno-format-truncation -O2  -I/usr/include/postgresql -I../../include/pcp -DPGPOOL_ADM -I. -I./ -I/usr/include/postgresql/17/server -I/usr/include/postgresql/internal  -D_GNU_SOURCE -I/usr/include/libxml2  -flto=thin -emit-llvm -c -o pgpool_adm.bc pgpool_adm.c
+clang-18 -Wno-ignored-attributes -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-unused-command-line-argument -Wno-compound-token-split-by-macro -Wno-format-truncation -O2  -I. -I./ -I/usr/include/postgresql/17/server -I/usr/include/postgresql/internal  -D_GNU_SOURCE -I/usr/include/libxml2  -flto=thin -emit-llvm -c -o pgpool-regclass.bc pgpool-regclass.c
+sed 's,MODULE_PATHNAME,$libdir/pgpool-recovery,g' pgpool-recovery.sql.in >pgpool-recovery.sql
+cc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wshadow=compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fvisibility=hidden -I. -I./ -I/usr/include/postgresql/17/server -I/usr/include/postgresql/internal  -D_GNU_SOURCE -I/usr/include/libxml2   -c -o pgpool-recovery.o pgpool-recovery.c
+clang-18 -Wno-ignored-attributes -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-unused-command-line-argument -Wno-compound-token-split-by-macro -Wno-format-truncation -O2  -I. -I./ -I/usr/include/postgresql/17/server -I/usr/include/postgresql/internal  -D_GNU_SOURCE -I/usr/include/libxml2  -flto=thin -emit-llvm -c -o pgpool-recovery.bc pgpool-recovery.c
+cc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wshadow=compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fvisibility=hidden pgpool-regclass.o -L/usr/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L/usr/lib/llvm18/lib  -Wl,--as-needed -fvisibility=hidden -shared -o pgpool-regclass.so
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+cc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wshadow=compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fvisibility=hidden pgpool-recovery.o -L/usr/lib -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L/usr/lib/llvm18/lib  -Wl,--as-needed -fvisibility=hidden -shared -o pgpool-recovery.so
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+cc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror=vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough=3 -Wcast-function-type -Wshadow=compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision=standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -fPIC -fvisibility=hidden -shared -o pgpool_adm.so pgpool_adm.o -L/usr/lib  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L/usr/lib/llvm18/lib  -Wl,--as-needed -fvisibility=hidden -L../../libs/pcp/.libs -lpcp -Wl,--as-needed -Wl,-rpath,'/lib',--enable-new-dtags 
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+make: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql'
+Making check in src
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+Making check in parser
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/parser'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/parser'
+Making check in libs
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+Making check in pcp
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+Making check in watchdog
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+Making check in .
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+Making check in tools
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+Making check in pcp
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+Making check in pgmd5
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+Making check in pgenc
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+Making check in pgproto
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+Making check in watchdog
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[3]: Nothing to be done for 'check'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[3]: Nothing to be done for 'check-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+Making check in include
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0'
+>>> pgpool: Entering fakeroot...
+Making install in src
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+Making install in parser
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/parser'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/parser'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/parser'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/parser'
+Making install in libs
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+Making install in pcp
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/lib'
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/include'
+ /bin/sh ../../../libtool   --mode=install /usr/bin/install -c   libpcp.la '/tmp/pkg/pgpool/usr/lib'
+ /usr/bin/install -c -m 644 ../../../src/include/pcp/pcp.h ../../../src/include/pcp/libpcp_ext.h ../../../src/include/pool_type.h ../../../src/include/utils/pool_process_reporting.h '/tmp/pkg/pgpool/usr/include'
+libtool: install: /usr/bin/install -c .libs/libpcp.so.2.0.0 /tmp/pkg/pgpool/usr/lib/libpcp.so.2.0.0
+libtool: install: (cd /tmp/pkg/pgpool/usr/lib && { ln -s -f libpcp.so.2.0.0 libpcp.so.2 || { rm -f libpcp.so.2 && ln -s libpcp.so.2.0.0 libpcp.so.2; }; })
+libtool: install: (cd /tmp/pkg/pgpool/usr/lib && { ln -s -f libpcp.so.2.0.0 libpcp.so || { rm -f libpcp.so && ln -s libpcp.so.2.0.0 libpcp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libpcp.lai /tmp/pkg/pgpool/usr/lib/libpcp.la
+libtool: install: /usr/bin/install -c .libs/libpcp.a /tmp/pkg/pgpool/usr/lib/libpcp.a
+libtool: install: chmod 644 /tmp/pkg/pgpool/usr/lib/libpcp.a
+libtool: install: ranlib /tmp/pkg/pgpool/usr/lib/libpcp.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs/pcp'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/libs'
+Making install in watchdog
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/watchdog'
+Making install in .
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src'
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/pgpool/etc/pgpool'
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/share/pgpool-II'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c pgpool '/tmp/pkg/pgpool/usr/bin'
+ /usr/bin/install -c test/pgpool_setup test/watchdog_setup '/tmp/pkg/pgpool/usr/bin'
+ /usr/bin/install -c -m 644 sql/insert_lock.sql sample/pgpool.pam '/tmp/pkg/pgpool/usr/share/pgpool-II'
+ /usr/bin/install -c -m 644 sample/pgpool.conf.sample sample/pcp.conf.sample sample/pool_hba.conf.sample sample/scripts/failover.sh.sample sample/scripts/follow_primary.sh.sample sample/scripts/pgpool_remote_start.sample sample/scripts/recovery_1st_stage.sample sample/scripts/replication_mode_recovery_1st_stage.sample sample/scripts/replication_mode_recovery_2nd_stage.sample sample/scripts/escalation.sh.sample sample/scripts/aws_eip_if_cmd.sh.sample sample/scripts/aws_rtb_if_cmd.sh.sample '/tmp/pkg/pgpool/etc/pgpool'
+libtool: install: /usr/bin/install -c pgpool /tmp/pkg/pgpool/usr/bin/pgpool
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+Making install in tools
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+Making install in pcp
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c pcp_stop_pgpool pcp_node_count pcp_node_info pcp_health_check_stats pcp_proc_count pcp_proc_info pcp_detach_node pcp_attach_node pcp_recovery_node pcp_promote_node pcp_pool_status pcp_watchdog_info pcp_reload_config pcp_log_rotate pcp_invalidate_query_cache '/tmp/pkg/pgpool/usr/bin'
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_stop_pgpool /tmp/pkg/pgpool/usr/bin/pcp_stop_pgpool
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_node_count /tmp/pkg/pgpool/usr/bin/pcp_node_count
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_node_info /tmp/pkg/pgpool/usr/bin/pcp_node_info
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_health_check_stats /tmp/pkg/pgpool/usr/bin/pcp_health_check_stats
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_proc_count /tmp/pkg/pgpool/usr/bin/pcp_proc_count
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_proc_info /tmp/pkg/pgpool/usr/bin/pcp_proc_info
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_detach_node /tmp/pkg/pgpool/usr/bin/pcp_detach_node
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_attach_node /tmp/pkg/pgpool/usr/bin/pcp_attach_node
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_recovery_node /tmp/pkg/pgpool/usr/bin/pcp_recovery_node
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_promote_node /tmp/pkg/pgpool/usr/bin/pcp_promote_node
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_pool_status /tmp/pkg/pgpool/usr/bin/pcp_pool_status
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_watchdog_info /tmp/pkg/pgpool/usr/bin/pcp_watchdog_info
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_reload_config /tmp/pkg/pgpool/usr/bin/pcp_reload_config
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_log_rotate /tmp/pkg/pgpool/usr/bin/pcp_log_rotate
+libtool: warning: '../../../src/libs/pcp/libpcp.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pcp_invalidate_query_cache /tmp/pkg/pgpool/usr/bin/pcp_invalidate_query_cache
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pcp'
+Making install in pgmd5
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c pg_md5 '/tmp/pkg/pgpool/usr/bin'
+libtool: install: /usr/bin/install -c pg_md5 /tmp/pkg/pgpool/usr/bin/pg_md5
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgmd5'
+Making install in pgenc
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c pg_enc '/tmp/pkg/pgpool/usr/bin'
+libtool: install: /usr/bin/install -c pg_enc /tmp/pkg/pgpool/usr/bin/pg_enc
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgenc'
+Making install in pgproto
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c pgproto '/tmp/pkg/pgpool/usr/bin'
+libtool: install: /usr/bin/install -c pgproto /tmp/pkg/pgpool/usr/bin/pgproto
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/pgproto'
+Making install in watchdog
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+ /usr/bin/install -c watchdog_setup '/tmp/pkg/pgpool/usr/bin'
+  /bin/sh ../../../libtool   --mode=install /usr/bin/install -c wd_cli '/tmp/pkg/pgpool/usr/bin'
+libtool: install: /usr/bin/install -c wd_cli /tmp/pkg/pgpool/usr/bin/wd_cli
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools/watchdog'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[4]: Entering directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/pgpool/usr/bin'
+ /usr/bin/install -c pgpool_setup '/tmp/pkg/pgpool/usr/bin'
+make[4]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/tools'
+Making install in include
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[3]: Entering directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/include'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0'
+make[2]: Entering directory '/tmp/src/pgpool2-4_6_0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/pgpool2-4_6_0'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0'
+make: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql'
+make -C pgpool-recovery all
+make -C pgpool-regclass all
+make -C pgpool_adm all
+make -C pgpool-recovery installdirs
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+make -C pgpool-regclass installdirs
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+make -C pgpool_adm installdirs
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+make -C pgpool-recovery install
+make -C pgpool-regclass install
+make -C pgpool_adm install
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+make[1]: Entering directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/usr/bin/install -c -m 755  pgpool_adm.so '/tmp/pkg/pgpool//usr/lib/postgresql17/pgpool_adm.so'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/share/postgresql17/extension'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17'
+/usr/bin/install -c -m 644 .//pgpool_adm.control '/tmp/pkg/pgpool//usr/share/postgresql17/extension/'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17'
+/usr/bin/install -c -m 644 .//pgpool_adm--1.0.sql .//pgpool_adm--1.1.sql .//pgpool_adm--1.2.sql .//pgpool_adm--1.3.sql .//pgpool_adm--1.0--1.1.sql .//pgpool_adm--1.1--1.2.sql .//pgpool_adm--1.2--1.3.sql .//pgpool_adm--1.4.sql .//pgpool_adm--1.3--1.4.sql .//pgpool_adm--1.5.sql .//pgpool_adm--1.4--1.5.sql  '/tmp/pkg/pgpool//usr/share/postgresql17/extension/'
+/usr/bin/install -c -m 644 .//pgpool_regclass.control '/tmp/pkg/pgpool//usr/share/postgresql17/extension/'
+/usr/bin/install -c -m 644 .//pgpool_recovery.control '/tmp/pkg/pgpool//usr/share/postgresql17/extension/'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+/usr/bin/install -c -m 644 .//pgpool_regclass--1.0.sql pgpool-regclass.sql '/tmp/pkg/pgpool//usr/share/postgresql17/extension/'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode/pgpool_adm'
+/usr/bin/install -c -m 644 .//pgpool_recovery--1.1.sql .//pgpool_recovery--1.2.sql .//pgpool_recovery--1.1--1.2.sql .//pgpool_recovery--1.3.sql .//pgpool_recovery--1.2--1.3.sql .//pgpool_recovery--1.4.sql .//pgpool_recovery--1.3--1.4.sql pgpool-recovery.sql '/tmp/pkg/pgpool//usr/share/postgresql17/extension/'
+/usr/bin/install -c -m 755  pgpool-regclass.so '/tmp/pkg/pgpool//usr/lib/postgresql17/'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode/pgpool-regclass'
+/usr/bin/install -c -m 755  pgpool-recovery.so '/tmp/pkg/pgpool//usr/lib/postgresql17/'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode/pgpool-recovery'
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode'/pgpool_adm/
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode'/pgpool-regclass/
+/bin/sh /usr/lib/postgresql17/pgxs/src/makefiles/../../config/install-sh -c -d '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode'/pgpool-recovery/
+/usr/bin/install -c -m 644 pgpool_adm.bc '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode'/pgpool_adm/./
+/usr/bin/install -c -m 644 pgpool-regclass.bc '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode'/pgpool-regclass/./
+/usr/bin/install -c -m 644 pgpool-recovery.bc '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode'/pgpool-recovery/./
+cd '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode' && /usr/lib/llvm18/bin/llvm-lto -thinlto -thinlto-action=thinlink -o pgpool-regclass.index.bc pgpool-regclass/pgpool-regclass.bc
+cd '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode' && /usr/lib/llvm18/bin/llvm-lto -thinlto -thinlto-action=thinlink -o pgpool_adm.index.bc pgpool_adm/pgpool_adm.bc
+cd '/tmp/pkg/pgpool//usr/lib/postgresql17/bitcode' && /usr/lib/llvm18/bin/llvm-lto -thinlto -thinlto-action=thinlink -o pgpool-recovery.index.bc pgpool-recovery/pgpool-recovery.bc
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool_adm'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-regclass'
+make[1]: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql/pgpool-recovery'
+make: Leaving directory '/tmp/src/pgpool2-4_6_0/src/sql'
+>>> pgpool-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/pgpool-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/pgpool-openrc/etc/init.d'
+>>> pgpool-openrc*: Preparing subpackage pgpool-openrc...
+>>> pgpool-openrc*: Running postcheck for pgpool-openrc
+>>> pgpool-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/pgpool-doc/usr/share/doc'
+'usr/share/licenses' -> '/tmp/pkg/pgpool-doc/usr/share/licenses'
+>>> pgpool-doc*: Preparing subpackage pgpool-doc...
+>>> pgpool-doc*: Running postcheck for pgpool-doc
+>>> pgpool-static*: Running split function static...
+'usr/lib/libpcp.a' -> '/tmp/pkg/pgpool-static/usr/lib/libpcp.a'
+>>> pgpool-static*: Preparing subpackage pgpool-static...
+>>> pgpool-static*: Stripping binaries
+>>> pgpool-static*: Running postcheck for pgpool-static
+>>> pgpool-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/pgpool-dev/usr/include'
+'usr/lib/libpcp.so' -> '/tmp/pkg/pgpool-dev/usr/lib/libpcp.so'
+>>> pgpool-dev*: Preparing subpackage pgpool-dev...
+>>> pgpool-dev*: Stripping binaries
+>>> pgpool-dev*: Running postcheck for pgpool-dev
+>>> pgpool*: Running postcheck for pgpool
+>>> pgpool*: Preparing package pgpool...
+>>> pgpool*: Stripping binaries
+>>> pgpool*: Script found. /bin/sh added as a dependency for pgpool-4.6.0-r0.apk
+>>> pgpool*: Adding .pre-install
+>>> pgpool*: Adding .post-upgrade
+>>> pgpool-dev*: Scanning shared objects
+>>> pgpool-doc*: Scanning shared objects
+>>> pgpool-openrc*: Scanning shared objects
+>>> pgpool-static*: Scanning shared objects
+>>> pgpool*: Scanning shared objects
+>>> pgpool-dev*: Tracing dependencies...
+	pgpool=4.6.0-r0
+>>> pgpool-dev*: Package size: 34.9 KB
+>>> pgpool-dev*: Compressing data...
+>>> pgpool-dev*: Create checksum...
+>>> pgpool-dev*: Create pgpool-dev-4.6.0-r0.apk
+>>> pgpool-doc*: Tracing dependencies...
+>>> pgpool-doc*: Package size: 79.0 KB
+>>> pgpool-doc*: Compressing data...
+>>> pgpool-doc*: Create checksum...
+>>> pgpool-doc*: Create pgpool-doc-4.6.0-r0.apk
+>>> pgpool-openrc*: Tracing dependencies...
+>>> pgpool-openrc*: Package size: 1.6 KB
+>>> pgpool-openrc*: Compressing data...
+>>> pgpool-openrc*: Create checksum...
+>>> pgpool-openrc*: Create pgpool-openrc-4.6.0-r0.apk
+>>> pgpool-static*: Tracing dependencies...
+>>> pgpool-static*: Package size: 78.1 KB
+>>> pgpool-static*: Compressing data...
+>>> pgpool-static*: Create checksum...
+>>> pgpool-static*: Create pgpool-static-4.6.0-r0.apk
+>>> pgpool*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcrypto.so.3
+	so:libpq.so.5
+	so:libssl.so.3
+>>> pgpool*: Package size: 3.4 MB
+>>> pgpool*: Compressing data...
+>>> pgpool*: Create checksum...
+>>> pgpool*: Create pgpool-4.6.0-r0.apk
+>>> pgpool: Updating the main/x86_64 repository index...
+>>> pgpool: Signing the index...
+>>> pgpool: Cleaning up srcdir
+>>> pgpool: Cleaning up build chroot
+>>> pgpool: Cleaning up pkgdir

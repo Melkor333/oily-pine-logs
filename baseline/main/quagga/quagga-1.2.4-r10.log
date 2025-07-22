@@ -1,0 +1,1681 @@
+>>> quagga: Validating /home/packager/oily-pine/main/quagga/APKBUILD...
+>>> quagga: Cleaning up srcdir
+>>> quagga: Cleaning up pkgdir
+>>> quagga: Cleaning up tmpdir
+>>> quagga: Fetching https://github.com/Quagga/quagga/releases/download/quagga-1.2.4/quagga-1.2.4.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+ 46 2857k   46 1327k    0     0  1284k      0  0:00:02  0:00:01  0:00:01 1284k100 2857k  100 2857k    0     0  2680k      0  0:00:01  0:00:01 --:--:-- 48.1M
+>>> quagga: Fetching https://github.com/Quagga/quagga/releases/download/quagga-1.2.4/quagga-1.2.4.tar.gz
+>>> quagga: Checking sha512sums...
+quagga-1.2.4.tar.gz: OK
+0001-nhrpd-change-ipsec-SA-count-to-32-bit.patch: OK
+0002-nhrpd-fix-neighbor-table-name-length.patch: OK
+0003-nhrpd-ignore-non-host-addresses-on-NHRP-ifaces.patch: OK
+0004-bgpd-fix-parsing-of-MP-EOR-marker.patch: OK
+1001-bgpd-allow-using-ebgp-multihop-for-ibgp-connections.patch: OK
+dont-hook-core-signals.patch: OK
+bgpd.initd: OK
+zebra.initd: OK
+zebra.confd: OK
+>>> quagga: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/99) Installing musl (1.2.5-r10)
+(2/99) Installing libcrypto3 (3.5.0-r0)
+(3/99) Installing ca-certificates-bundle (20241121-r2)
+(4/99) Installing libssl3 (3.5.0-r0)
+(5/99) Installing zlib (1.3.1-r2)
+(6/99) Installing libapk2 (2.14.9-r2)
+(7/99) Installing apk-tools (2.14.9-r2)
+(8/99) Installing libcap2 (2.76-r0)
+(9/99) Installing libcap-getcap (2.76-r0)
+(10/99) Installing fakeroot (1.37.1.1-r0)
+(11/99) Installing scanelf (1.3.8-r1)
+(12/99) Installing musl-utils (1.2.5-r10)
+(13/99) Installing libgcc (14.3.0-r1)
+(14/99) Installing libstdc++ (14.3.0-r1)
+(15/99) Installing lzip (1.25-r0)
+(16/99) Installing openssl (3.5.0-r0)
+(17/99) Installing patch (2.8-r0)
+(18/99) Installing pkgconf (2.4.3-r0)
+(19/99) Installing acl-libs (2.3.2-r1)
+(20/99) Installing tar (1.35-r3)
+(21/99) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/99) Installing ssl_client (1.37.0-r18)
+(23/99) Installing busybox-binsh (1.37.0-r18)
+(24/99) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/99) Installing abuild-sudo (3.15.0-r0)
+(26/99) Installing alpine-baselayout-data (3.7.0-r0)
+(27/99) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/99) Installing bridge (1.5-r5)
+(29/99) Installing ifupdown-ng (0.12.1-r7)
+(30/99) Installing openrc-user (0.62.2-r2)
+(31/99) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/99) Installing mdev-conf (4.8-r0)
+(33/99) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/99) Installing alpine-conf (3.20.0-r0)
+(35/99) Installing alpine-keys (2.5-r0)
+(36/99) Installing alpine-release (3.22.0-r0)
+(37/99) Installing busybox-openrc (1.37.0-r18)
+(38/99) Installing busybox-suid (1.37.0-r18)
+(39/99) Installing alpine-base (3.22.0-r0)
+(40/99) Installing jansson (2.14.1-r0)
+(41/99) Installing zstd-libs (1.5.7-r0)
+(42/99) Installing binutils (2.44-r0)
+(43/99) Installing libmagic (5.46-r2)
+(44/99) Installing file (5.46-r2)
+(45/99) Installing libgomp (14.3.0-r1)
+(46/99) Installing libatomic (14.3.0-r1)
+(47/99) Installing gmp (6.3.0-r3)
+(48/99) Installing isl26 (0.26-r1)
+(49/99) Installing mpfr4 (4.2.1_p1-r0)
+(50/99) Installing mpc1 (1.3.1-r1)
+(51/99) Installing gcc (14.3.0-r1)
+(52/99) Installing libstdc++-dev (14.3.0-r1)
+(53/99) Installing musl-dev (1.2.5-r10)
+(54/99) Installing g++ (14.3.0-r1)
+(55/99) Installing make (4.4.1-r3)
+(56/99) Installing fortify-headers (1.1-r5)
+(57/99) Installing build-base (0.5-r3)
+(58/99) Installing c-ares (1.34.5-r0)
+(59/99) Installing c-ares-dev (1.34.5-r0)
+(60/99) Installing gawk (5.3.2-r1)
+(61/99) Installing brotli-libs (1.1.0-r2)
+(62/99) Installing libunistring (1.3-r0)
+(63/99) Installing libidn2 (2.3.7-r0)
+(64/99) Installing nghttp2-libs (1.65.0-r0)
+(65/99) Installing libpsl (0.21.5-r3)
+(66/99) Installing libcurl (8.14.0-r2)
+(67/99) Installing libexpat (2.7.1-r0)
+(68/99) Installing pcre2 (10.43-r1)
+(69/99) Installing git (2.49.0-r0)
+(70/99) Installing git-init-template (2.49.0-r0)
+(71/99) Installing libelf (0.193-r0)
+(72/99) Installing libmnl (1.0.5-r2)
+(73/99) Installing iproute2-minimal (6.15.0-r0)
+(74/99) Installing ifupdown-ng-iproute2 (0.12.1-r7)
+(75/99) Installing libxtables (1.8.11-r1)
+(76/99) Installing iproute2-tc (6.15.0-r0)
+(77/99) Installing iproute2-ss (6.15.0-r0)
+(78/99) Installing iproute2 (6.15.0-r0)
+Executing iproute2-6.15.0-r0.post-install
+(79/99) Installing linux-headers (6.14.2-r0)
+(80/99) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(81/99) Installing libncursesw (6.5_p20250503-r0)
+(82/99) Installing libformw (6.5_p20250503-r0)
+(83/99) Installing libmenuw (6.5_p20250503-r0)
+(84/99) Installing libpanelw (6.5_p20250503-r0)
+(85/99) Installing libncurses++ (6.5_p20250503-r0)
+(86/99) Installing ncurses-dev (6.5_p20250503-r0)
+(87/99) Installing openssl-dev (3.5.0-r0)
+(88/99) Installing net-snmp-libs (5.9.4-r1)
+(89/99) Installing net-snmp-agent-libs (5.9.4-r1)
+(90/99) Installing net-snmp-dev (5.9.4-r1)
+(91/99) Installing libbz2 (1.0.8-r6)
+(92/99) Installing perl (5.40.2-r0)
+(93/99) Installing perl-error (0.17030-r0)
+(94/99) Installing perl-git (2.49.0-r0)
+(95/99) Installing git-perl (2.49.0-r0)
+(96/99) Installing libhistory (8.2.13-r1)
+(97/99) Installing readline (8.2.13-r1)
+(98/99) Installing readline-dev (8.2.13-r1)
+(99/99) Installing texinfo (7.2-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 338 MiB in 99 packages
+>>> quagga: Fetching https://github.com/Quagga/quagga/releases/download/quagga-1.2.4/quagga-1.2.4.tar.gz
+>>> quagga: Checking sha512sums...
+quagga-1.2.4.tar.gz: OK
+0001-nhrpd-change-ipsec-SA-count-to-32-bit.patch: OK
+0002-nhrpd-fix-neighbor-table-name-length.patch: OK
+0003-nhrpd-ignore-non-host-addresses-on-NHRP-ifaces.patch: OK
+0004-bgpd-fix-parsing-of-MP-EOR-marker.patch: OK
+1001-bgpd-allow-using-ebgp-multihop-for-ibgp-connections.patch: OK
+dont-hook-core-signals.patch: OK
+bgpd.initd: OK
+zebra.initd: OK
+zebra.confd: OK
+>>> quagga: Unpacking /var/cache/distfiles/quagga-1.2.4.tar.gz...
+>>> quagga: 0001-nhrpd-change-ipsec-SA-count-to-32-bit.patch
+patching file nhrpd/nhrpd.h
+>>> quagga: 0002-nhrpd-fix-neighbor-table-name-length.patch
+patching file nhrpd/netlink_arp.c
+>>> quagga: 0003-nhrpd-ignore-non-host-addresses-on-NHRP-ifaces.patch
+patching file nhrpd/nhrp_interface.c
+>>> quagga: 0004-bgpd-fix-parsing-of-MP-EOR-marker.patch
+patching file bgpd/bgp_packet.c
+>>> quagga: 1001-bgpd-allow-using-ebgp-multihop-for-ibgp-connections.patch
+patching file bgpd/bgp_vty.c
+Hunk #1 succeeded at 277 (offset 1 line).
+patching file bgpd/bgpd.c
+Hunk #1 succeeded at 2869 (offset 4 lines).
+patching file bgpd/bgpd.h
+Hunk #1 succeeded at 832 (offset 1 line).
+>>> quagga: dont-hook-core-signals.patch
+patching file lib/sigevent.c
+Hunk #1 succeeded at 246 (offset 2 lines).
+Hunk #2 succeeded at 264 (offset 2 lines).
+>>> quagga: Updating ./config.sub
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... ./install-sh -c -d
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking for perl... /usr/bin/perl
+checking for gawk... gawk
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking whether cc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for x86_64-alpine-linux-musl-pkg-config... no
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for cc option to accept ISO C99... none needed
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... no
+configure: creating ./config.lt
+config.lt: creating libtool
+checking for sed... /bin/sed
+checking for pdflatex... /bin/false
+checking for latexmk... /bin/false
+configure: WARNING: Will not be able to make PDF versions of TeX documents
+checking for pandoc... /bin/false
+configure: WARNING: Will not be able to make PDF versions of MD documents
+checking which default CFLAGS to set... CFLAGS supplied by user
+checking whether ln -s works... yes
+checking whether make sets $(MAKE)... (cached) yes
+checking for x86_64-alpine-linux-musl-ar... ar
+checking if make is GNU make... yes
+checking if zebra should be configurable to send Route Advertisements... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for C/C++ restrict keyword... __restrict
+checking for working volatile... yes
+checking for ANSI C header files... (cached) yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for stdbool.h that conforms to C99... yes
+checking for _Bool... yes
+checking for uid_t in sys/types.h... yes
+checking for mode_t... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking stropts.h usability... yes
+checking stropts.h presence... yes
+checking for stropts.h... yes
+checking sys/ksym.h usability... no
+checking sys/ksym.h presence... no
+checking for sys/ksym.h... no
+checking sys/times.h usability... yes
+checking sys/times.h presence... yes
+checking for sys/times.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking for sys/types.h... (cached) yes
+checking linux/version.h usability... yes
+checking linux/version.h presence... yes
+checking for linux/version.h... yes
+checking netdb.h usability... yes
+checking netdb.h presence... yes
+checking for netdb.h... yes
+checking asm/types.h usability... yes
+checking asm/types.h presence... yes
+checking for asm/types.h... yes
+checking sys/cdefs.h usability... no
+checking sys/cdefs.h presence... no
+checking for sys/cdefs.h... no
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking sys/socket.h usability... yes
+checking sys/socket.h presence... yes
+checking for sys/socket.h... yes
+checking netinet/in.h usability... yes
+checking netinet/in.h presence... yes
+checking for netinet/in.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking features.h usability... yes
+checking features.h presence... yes
+checking for features.h... yes
+checking for net/if.h... yes
+checking for net/if_var.h... no
+checking for sys/un.h... yes
+checking for netinet/in_systm.h... yes
+checking for netinet/in_var.h... no
+checking for net/if_dl.h... no
+checking for net/netopt.h... no
+checking for net/route.h... yes
+checking for inet/nd.h... no
+checking for arpa/inet.h... yes
+checking for netinet/ip_icmp.h... yes
+checking for fcntl.h... yes
+checking for stddef.h... yes
+checking for sys/ioctl.h... yes
+checking for syslog.h... yes
+checking for wchar.h... yes
+checking for wctype.h... yes
+checking for sys/sysctl.h... no
+checking for sys/sockio.h... no
+checking for kvm.h... no
+checking for sys/conf.h... no
+checking for ucontext.h... yes
+checking for ucontext_t.uc_mcontext.uc_regs... no
+checking for ucontext_t.uc_mcontext.regs... no
+checking for ucontext_t.uc_mcontext.gregs... yes
+checking for special C compiler options needed for large files... no
+checking for _FILE_OFFSET_BITS value needed for large files... no
+checking for tputs in -ltermcap... no
+checking for tputs in -ltinfo... yes
+checking for main in -lreadline... yes
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+checking for rl_completion_matches in -lreadline... yes
+checking whether byte ordering is bigendian... no
+checking for unistd.h... (cached) yes
+checking for working chown... yes
+checking for working POSIX fnmatch... yes
+checking for pid_t... yes
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for working memcmp... yes
+checking for sys/time.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for alarm... yes
+checking for working mktime... yes
+checking for strftime... yes
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for sys/select.h... (cached) yes
+checking for sys/socket.h... (cached) yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking for strftime... (cached) yes
+checking for vprintf... yes
+checking for _doprnt... no
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking for pow in -lm... yes
+checking for pow... yes
+checking for dup2... yes
+checking for ftruncate... yes
+checking for getcwd... yes
+checking for gethostbyname... yes
+checking for getpagesize... yes
+checking for gettimeofday... yes
+checking for inet_ntoa... yes
+checking for inet_aton... yes
+checking for strnlen... yes
+checking for memchr... yes
+checking for memmove... yes
+checking for memset... yes
+checking for select... yes
+checking for socket... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strncasecmp... yes
+checking for strndup... yes
+checking for strrchr... yes
+checking for strspn... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for strtoul... yes
+checking for strlcat... yes
+checking for strlcpy... yes
+checking for daemon... yes
+checking for snprintf... yes
+checking for vsnprintf... yes
+checking for if_nametoindex... yes
+checking for if_indextoname... yes
+checking for getifaddrs... yes
+checking for uname... yes
+checking for fcntl... yes
+checking for getgrouplist... yes
+checking asm-generic/unistd.h usability... yes
+checking asm-generic/unistd.h presence... yes
+checking for asm-generic/unistd.h... yes
+checking whether __NR_setns is declared... yes
+checking for setns... yes
+checking zebra between kernel interface method... netlink
+checking net/bpf.h usability... no
+checking net/bpf.h presence... no
+checking for net/bpf.h... no
+checking sys/dlpi.h usability... no
+checking sys/dlpi.h presence... no
+checking for sys/dlpi.h... no
+checking zebra IS-IS I/O method... pfpacket
+checking for broken CMSG_FIRSTHDR... no
+checking route read method... netlink
+checking interface looking up method... netlink
+checking for struct ip_mreqn.imr_ifindex... yes
+checking for linux/mroute.h... yes
+checking for BSD struct ip_mreq hack... no
+checking for RFC3678 protocol-independed API... yes
+checking for net/if.h... (cached) yes
+checking for net/if_media.h... no
+checking for net/if.h... (cached) yes
+checking for struct if_data.ifi_link_state... no
+checking for netinet/tcp.h... yes
+checking whether TCP_MD5SIG is declared... yes
+checking ipforward method... (cached) proc
+checking for getaddrinfo... yes
+checking whether does this OS have IPv6 stack... Linux IPv6
+checking for netinet6/in6.h... no
+checking for netinet/in6_var.h... no
+checking for netinet/icmp6.h... yes
+checking for netinet6/in6_var.h... no
+checking for netinet6/nd6.h... no
+checking for inet_ntop in -lc... yes
+checking for inet_pton in -lc... yes
+checking for crypt in -lcrypt... yes
+checking for res_init in -lresolv... yes
+checking whether system has GNU regex... checking for regexec in -lc... yes
+checking for CARES... yes
+checking for x86_64-alpine-linux-musl-net-snmp-config... no
+checking for net-snmp-config... /usr/bin/net-snmp-config
+checking whether we can link to Net-SNMP... yes
+checking for struct sockaddr... yes
+checking for struct sockaddr_in... yes
+checking for struct sockaddr_in6... yes
+checking for struct sockaddr_un... yes
+checking for struct sockaddr_dl... no
+checking for socklen_t... yes
+checking for struct vifctl... no
+checking for struct mfcctl... no
+checking for struct sioc_sg_req... no
+checking for vifi_t... no
+checking for struct sioc_vif_req... no
+checking for struct igmpmsg... no
+checking for struct ifaliasreq... no
+checking for struct if6_aliasreq... no
+checking for struct in6_aliasreq... no
+checking for struct nd_opt_adv_interval... yes
+checking for struct rt_addrinfo... no
+checking for struct nd_opt_homeagent_info... no
+checking for struct nd_opt_adv_interval... (cached) yes
+checking for struct sockaddr.sa_len... no
+checking for struct sockaddr_in.sin_len... no
+checking for struct sockaddr_un.sun_len... no
+checking for struct sockaddr_in6.sin6_scope_id... yes
+checking for struct sockaddr_dl.sdl_len... no
+checking for struct if6_aliasreq.ifra_lifetime... no
+checking for struct nd_opt_adv_interval.nd_opt_ai_type... no
+checking for struct in_pktinfo... yes
+checking for struct icmphdr... yes
+checking for IP_PKTINFO... yes
+checking for IP_RECVDSTADDR... no
+checking for IP_RECVIF... no
+checking whether getrusage is available... yes
+checking whether CLOCK_MONOTONIC is declared... yes
+checking for clock_gettime in -lrt... yes
+checking whether prctl PR_SET_KEEPCAPS is available... yes
+checking sys/capability.h usability... no
+checking sys/capability.h presence... no
+checking for sys/capability.h... no
+checking priv.h usability... no
+checking priv.h presence... no
+checking for priv.h... no
+checking whether cc accepts function __attribute__((weak,alias()))... no
+checking whether cc supports #pragma weak... yes
+checking whether cc supports #pragma _HP_SECONDARY_DEF... no
+checking whether cc supports #pragma _CRI duplicate... no
+checking how to create weak aliases with cc... pragma
+checking whether cc supports weak aliases across object file boundaries... yes
+checking execinfo.h usability... no
+checking execinfo.h presence... no
+checking for execinfo.h... no
+checking for malloc.h... yes
+checking whether mallinfo is available... no
+checking directory to use for state file... /var/run/quagga
+checking for working htonl... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating qpb/Makefile
+config.status: creating zebra/Makefile
+config.status: creating ripd/Makefile
+config.status: creating ripngd/Makefile
+config.status: creating bgpd/Makefile
+config.status: creating ospfd/Makefile
+config.status: creating watchquagga/Makefile
+config.status: creating ospf6d/Makefile
+config.status: creating isisd/Makefile
+config.status: creating vtysh/Makefile
+config.status: creating doc/Makefile
+config.status: creating ospfclient/Makefile
+config.status: creating tests/Makefile
+config.status: creating m4/Makefile
+config.status: creating pimd/Makefile
+config.status: creating nhrpd/Makefile
+config.status: creating redhat/Makefile
+config.status: creating pkgsrc/Makefile
+config.status: creating fpm/Makefile
+config.status: creating redhat/quagga.spec
+config.status: creating redhat/quagga.sysconfig
+config.status: creating lib/version.h
+config.status: creating isisd/topology/Makefile
+config.status: creating pkgsrc/bgpd.sh
+config.status: creating pkgsrc/ospf6d.sh
+config.status: creating pkgsrc/ospfd.sh
+config.status: creating pkgsrc/ripd.sh
+config.status: creating pkgsrc/ripngd.sh
+config.status: creating pkgsrc/zebra.sh
+config.status: creating solaris/Makefile
+config.status: creating vtysh/extract.pl
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+
+Quagga configuration
+--------------------
+quagga version          : 1.2.4
+host operating system   : linux-musl
+source code location    : .
+compiler                : cc
+compiler flags          : -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DNETSNMP_ENABLE_IPV6 -fno-strict-aliasing -DNETSNMP_REMOVE_U64 -Os -fstack-clash-protection -Wformat -fno-plt -g -Ulinux -Dlinux=linux -I/usr/include -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g
+make                    : make
+linker flags            : -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lresolv -lcrypt  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L/usr/lib -lnetsnmpmibs -lnetsnmpagent -lnetsnmp -lssl -lssl -lcrypto -lrt  -lreadline  -ltinfo -lm
+state file directory    : /var/run/quagga
+config file directory   : /etc/quagga
+example directory       : /usr/share/doc/quagga/
+user to run as		: quagga
+group to run as		: quagga
+group for vty sockets	: quagga
+config file mask        : 0600
+log file mask           : 0600
+zebra protobuf enabled  : no
+
+The above user and group must have read/write access to the state file
+directory and to the config files in the config file directory.
+make  all-recursive
+make[1]: Entering directory '/tmp/src/quagga-1.2.4'
+Making all in lib
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/lib'
+true
+make  all-am
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/lib'
+  CC       network.lo
+  CC       pid_output.lo
+  CC       getopt.lo
+  CC       getopt1.lo
+  CC       daemon.lo
+  CC       checksum.lo
+  CC       vector.lo
+  CC       linklist.lo
+  CC       vty.lo
+  CC       command.lo
+  CC       sockunion.lo
+  CC       prefix.lo
+  CC       thread.lo
+  CC       if.lo
+  CC       memory.lo
+  CC       buffer.lo
+  CC       table.lo
+  CC       hash.lo
+command.c: In function 'cmd_complete_command_real':
+command.c:2439:38: warning: comparison between pointer and zero character constant [-Wpointer-compare]
+ 2439 |       if (vector_slot (vline, index) == '\0')
+      |                                      ^~
+In file included from command.c:31:
+vector.h:40:27: note: did you mean to dereference the pointer?
+   40 | #define vector_slot(V,I)  ((V)->index[(I)])
+      |                           ^
+command.c:2439:11: note: in expansion of macro 'vector_slot'
+ 2439 |       if (vector_slot (vline, index) == '\0')
+      |           ^~~~~~~~~~~
+  CC       filter.lo
+  CC       routemap.lo
+  CC       distribute.lo
+  CC       stream.lo
+  CC       str.lo
+  CC       log.lo
+  CC       plist.lo
+  CC       zclient.lo
+  CC       sockopt.lo
+  CC       smux.lo
+  CC       agentx.lo
+  CC       snmp.lo
+  CC       md5.lo
+  CC       if_rmap.lo
+  CC       keychain.lo
+  CC       privs.lo
+  CC       sigevent.lo
+  CC       pqueue.lo
+  CC       jhash.lo
+  CC       memtypes.lo
+  CC       workqueue.lo
+  CC       vrf.lo
+  CC       event_counter.lo
+  CC       nexthop.lo
+  CCLD     libzebra.la
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/lib'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/lib'
+Making all in qpb
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/qpb'
+make  all-am
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/qpb'
+  CC       qpb.lo
+  CCLD     libquagga_pb.la
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/qpb'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/qpb'
+Making all in fpm
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/fpm'
+make  all-am
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/fpm'
+  CC       fpm_pb.lo
+  CCLD     libfpm_pb.la
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/fpm'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/fpm'
+Making all in zebra
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/zebra'
+  CC       test_main.o
+  CC       zebra_rib.o
+  CC       interface.o
+  CC       connected.o
+  CC       debug.o
+  CC       zebra_vty.o
+  CC       kernel_null.o
+  CC       redistribute_null.o
+  CC       ioctl_null.o
+  CC       misc_null.o
+  CC       zebra_rnh_null.o
+  CC       zserv.o
+  CC       main.o
+  CC       zebra_routemap.o
+  CC       redistribute.o
+  CC       rtadv.o
+In file included from redistribute_null.c:26:
+../zebra/redistribute.h:38:13: warning: 'redistribute_delete' alias between functions of incompatible types 'void(struct prefix *, struct rib *)' and 'void(struct prefix *, struct rib *, struct rib *)' [-Wattribute-alias=]
+   38 | extern void redistribute_delete (struct prefix *, struct rib *);
+      |             ^~~~~~~~~~~~~~~~~~~
+redistribute_null.c:47:6: note: aliased declaration here
+   47 | void redistribute_add (struct prefix *a, struct rib *b, struct rib *c)
+      |      ^~~~~~~~~~~~~~~~
+In file included from misc_null.c:25:
+../zebra/rtadv.h:61:13: warning: 'rtadv_config_write' alias between functions of incompatible types 'void(struct vty *, struct interface *)' and 'void(void)' [-Wattribute-alias=]
+   61 | extern void rtadv_config_write (struct vty *, struct interface *);
+      |             ^~~~~~~~~~~~~~~~~~
+misc_null.c:32:6: note: aliased declaration here
+   32 | void _quagga_noop (void) { return; }
+      |      ^~~~~~~~~~~~
+In file included from ../zebra/interface.h:29,
+                 from ../zebra/rtadv.h:27:
+../zebra/irdp.h:148:13: warning: 'irdp_config_write' alias between functions of incompatible types 'void(struct vty *, struct interface *)' and 'void(void)' [-Wattribute-alias=]
+  148 | extern void irdp_config_write (struct vty *, struct interface *);
+      |             ^~~~~~~~~~~~~~~~~
+misc_null.c:32:6: note: aliased declaration here
+   32 | void _quagga_noop (void) { return; }
+      |      ^~~~~~~~~~~~
+  CC       zebra_snmp.o
+  CC       irdp_main.o
+  CC       irdp_interface.o
+  CC       irdp_packet.o
+  CC       router-id.o
+  CC       zebra_fpm.o
+  CC       zebra_rnh.o
+  CC       zebra_fpm_netlink.o
+  CC       ioctl.o
+  CC       ipforward_proc.o
+  CC       if_netlink.o
+  CC       rt_netlink.o
+  CC       rtread_netlink.o
+  CCLD     testzebra
+  CCLD     zebra
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/zebra'
+Making all in bgpd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/bgpd'
+  CC       bgpd.o
+  CC       bgp_fsm.o
+  CC       bgp_aspath.o
+  CC       bgp_community.o
+  CC       bgp_attr.o
+  CC       bgp_debug.o
+  CC       bgp_route.o
+  CC       bgp_zebra.o
+  CC       bgp_open.o
+  CC       bgp_routemap.o
+  CC       bgp_packet.o
+  CC       bgp_network.o
+  CC       bgp_filter.o
+  CC       bgp_regex.o
+  CC       bgp_clist.o
+  CC       bgp_dump.o
+bgp_open.c: In function 'bgp_capability_orf_entry':
+bgp_open.c:222:30: warning: taking address of packed member of 'struct capability_orf_entry' may result in an unaligned pointer value [-Waddress-of-packed-member]
+  222 |   bgp_capability_mp_data (s, &entry.mpc);
+      |                              ^~~~~~~~~~
+  CC       bgp_snmp.o
+  CC       bgp_ecommunity.o
+  CC       bgp_lcommunity.o
+  CC       bgp_mplsvpn.o
+  CC       bgp_nexthop.o
+  CC       bgp_damp.o
+  CC       bgp_table.o
+  CC       bgp_advertise.o
+  CC       bgp_vty.o
+  CC       bgp_mpath.o
+  CC       bgp_encap.o
+  CC       bgp_encap_tlv.o
+  CC       bgp_nht.o
+  CC       bgp_btoa.o
+  CC       bgp_main.o
+  AR       libbgp.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     bgp_btoa
+  CCLD     bgpd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/bgpd'
+Making all in ripd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ripd'
+  CC       ripd.o
+  CC       rip_zebra.o
+  CC       rip_interface.o
+  CC       rip_debug.o
+  CC       rip_snmp.o
+  CC       rip_routemap.o
+  CC       rip_peer.o
+  CC       rip_offset.o
+  CC       rip_main.o
+  AR       librip.a
+  CCLD     ripd
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ripd'
+Making all in ripngd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ripngd'
+  CC       ripng_interface.o
+  CC       ripngd.o
+  CC       ripng_zebra.o
+  CC       ripng_route.o
+  CC       ripng_debug.o
+  CC       ripng_routemap.o
+  CC       ripng_offset.o
+  CC       ripng_peer.o
+  CC       ripng_nexthop.o
+  CC       ripng_main.o
+  AR       libripng.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+  CCLD     ripngd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ripngd'
+Making all in ospfd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ospfd'
+  CC       ospfd.lo
+  CC       ospf_zebra.lo
+  CC       ospf_interface.lo
+  CC       ospf_ism.lo
+  CC       ospf_neighbor.lo
+  CC       ospf_nsm.lo
+  CC       ospf_dump.lo
+  CC       ospf_network.lo
+  CC       ospf_packet.lo
+  CC       ospf_lsa.lo
+  CC       ospf_spf.lo
+  CC       ospf_route.lo
+  CC       ospf_ase.lo
+  CC       ospf_abr.lo
+  CC       ospf_ia.lo
+  CC       ospf_flood.lo
+  CC       ospf_lsdb.lo
+  CC       ospf_asbr.lo
+  CC       ospf_routemap.lo
+  CC       ospf_snmp.lo
+  CC       ospf_opaque.lo
+  CC       ospf_te.lo
+  CC       ospf_ri.lo
+  CC       ospf_vty.lo
+  CC       ospf_api.lo
+  CC       ospf_apiserver.lo
+  CC       ospf_main.o
+  CCLD     libospf.la
+  CCLD     ospfd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ospfd'
+Making all in ospf6d
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ospf6d'
+  CC       ospf6_network.o
+  CC       ospf6_message.o
+  CC       ospf6_lsa.o
+  CC       ospf6_lsdb.o
+  CC       ospf6_top.o
+  CC       ospf6_area.o
+  CC       ospf6_interface.o
+  CC       ospf6_neighbor.o
+  CC       ospf6_flood.o
+  CC       ospf6_intra.o
+  CC       ospf6_route.o
+  CC       ospf6_zebra.o
+  CC       ospf6_spf.o
+  CC       ospf6_proto.o
+  CC       ospf6_asbr.o
+  CC       ospf6_abr.o
+  CC       ospf6_snmp.o
+  CC       ospf6d.o
+  CC       ospf6_main.o
+  AR       libospf6.a
+  CCLD     ospf6d
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ospf6d'
+Making all in nhrpd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/nhrpd'
+  CC       zbuf.o
+  CC       znl.o
+  CC       resolver.o
+  CC       linux.o
+  CC       netlink_arp.o
+  CC       netlink_gre.o
+  CC       vici.o
+  CC       reqid.o
+  CC       nhrp_event.o
+  CC       nhrp_packet.o
+  CC       nhrp_interface.o
+  CC       nhrp_vc.o
+  CC       nhrp_peer.o
+  CC       nhrp_cache.o
+  CC       nhrp_nhs.o
+  CC       nhrp_route.o
+resolver.c: In function 'resolver_cb_timeout':
+resolver.c:34:9: warning: 'ares_process' is deprecated: Use ares_process_fds instead [-Wdeprecated-declarations]
+   34 |         ares_process(r->channel, NULL, NULL);
+      |         ^~~~~~~~~~~~
+In file included from resolver.c:10:
+/usr/include/ares.h:910:58: note: declared here
+  910 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_process_fds) void ares_process(
+      |                                                          ^~~~~~~~~~~~
+resolver.c: In function 'resolver_resolve':
+resolver.c:188:9: warning: 'ares_gethostbyname' is deprecated: Use ares_getaddrinfo instead [-Wdeprecated-declarations]
+  188 |         ares_gethostbyname(state.channel, hostname, af, ares_address_cb, query);
+      |         ^~~~~~~~~~~~~~~~~~
+/usr/include/ares.h:879:58: note: declared here
+  879 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_getaddrinfo) void ares_gethostbyname(
+      |                                                          ^~~~~~~~~~~~~~~~~~
+  CC       nhrp_shortcut.o
+  CC       nhrp_vty.o
+  CC       nhrp_main.o
+  CCLD     nhrpd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/nhrpd'
+Making all in isisd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/isisd'
+Making all in topology
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/isisd/topology'
+  CC       spgrid.o
+  CC       random.o
+  AR       libtopology.a
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/isisd/topology'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/isisd'
+  CC       isis_adjacency.o
+  CC       isis_lsp.o
+  CC       dict.o
+  CC       isis_circuit.o
+  CC       isis_pdu.o
+  CC       isis_tlv.o
+  CC       isisd.o
+  CC       isis_misc.o
+  CC       isis_zebra.o
+  CC       isis_dr.o
+  CC       isis_flags.o
+  CC       isis_dynhn.o
+  CC       iso_checksum.o
+  CC       isis_csm.o
+  CC       isis_events.o
+  CC       isis_spf.o
+isis_pdu.c: In function 'process_lsp':
+isis_pdu.c:1392:38: warning: taking address of packed member of 'struct isis_link_state_hdr' may result in an unaligned pointer value [-Waddress-of-packed-member]
+ 1392 |                        pdu_len - 12, &hdr->checksum))
+      |                                      ^~~~~~~~~~~~~~
+  CC       isis_redist.o
+  CC       isis_route.o
+  CC       isis_routemap.o
+  CC       isis_te.o
+  CC       isis_vty.o
+  CC       isis_main.o
+  CC       isis_bpf.o
+  CC       isis_dlpi.o
+  CC       isis_pfpacket.o
+  AR       libisis.a
+  CCLD     isisd
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/isisd'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/isisd'
+Making all in pimd
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/pimd'
+  CC       pimd.o
+  CC       pim_version.o
+  CC       pim_cmd.o
+  CC       pim_signals.o
+  CC       pim_iface.o
+  CC       pim_vty.o
+  CC       pim_igmp.o
+  CC       pim_sock.o
+  CC       pim_zebra.o
+  CC       pim_igmpv3.o
+  CC       pim_str.o
+  CC       pim_mroute.o
+  CC       pim_util.o
+  CC       pim_time.o
+  CC       pim_oil.o
+  CC       pim_zlookup.o
+  CC       pim_pim.o
+  CC       pim_tlv.o
+  CC       pim_neighbor.o
+  CC       pim_hello.o
+  CC       pim_ifchannel.o
+  CC       pim_join.o
+  CC       pim_assert.o
+  CC       pim_msg.o
+  CC       pim_upstream.o
+  CC       pim_rpf.o
+  CC       pim_macro.o
+  CC       pim_igmp_join.o
+  CC       pim_ssmpingd.o
+  CC       pim_int.o
+  CC       pim_static.o
+  CC       pim_routemap.o
+  CC       test_igmpv3_join.o
+  CC       pim_main.o
+  CCLD     test_igmpv3_join
+  AR       libpim.a
+  CCLD     pimd
+ar: `u' modifier ignored since `D' is the default (see `U')
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/pimd'
+Making all in watchquagga
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/watchquagga'
+  CC       watchquagga.o
+  CCLD     watchquagga
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/watchquagga'
+Making all in vtysh
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/vtysh'
+  CC       vtysh_main.o
+  CC       vtysh.o
+  CC       vtysh_user.o
+  CC       vtysh_config.o
+./extract.pl ../bgpd/*.c ../isisd/*.c ../ospfd/*.c ../ospf6d/*.c ../ripd/*.c ../ripngd/*.c ../pimd/pim_cmd.c ../nhrpd/nhrp_vty.c ../lib/keychain.c ../lib/routemap.c ../lib/filter.c ../lib/plist.c ../lib/distribute.c ../lib/if_rmap.c ../lib/vrf.c ../lib/vty.c ../zebra/debug.c ../zebra/interface.c ../zebra/irdp_interface.c ../zebra/rtadv.c ../zebra/zebra_vty.c ../zebra/zserv.c ../zebra/router-id.c ../zebra/zebra_routemap.c ../zebra/zebra_fpm.c > vtysh_cmd.c
+Duplicate CLI Function: match_ip_address_cmd
+	From cli: "match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_match_ip_address_val_cmd
+	From cli: "no match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "no match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_match_ip_address_cmd
+	From cli: "no match ip address" to New cli: "no match ip address"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: match_ip_address_prefix_list_cmd
+	From cli: "match ip address prefix-list WORD" to New cli: "match ip address prefix-list WORD"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_match_ip_address_prefix_list_cmd
+	From cli: "no match ip address prefix-list" to New cli: "no match ip address prefix-list"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_match_ip_address_prefix_list_val_cmd
+	From cli: "no match ip address prefix-list WORD" to New cli: "no match ip address prefix-list WORD"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: match_ipv6_address_cmd
+	From cli: "match ipv6 address WORD" to New cli: "match ipv6 address WORD"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_match_ipv6_address_cmd
+	From cli: "no match ipv6 address WORD" to New cli: "no match ipv6 address"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: match_ipv6_address_prefix_list_cmd
+	From cli: "match ipv6 address prefix-list WORD" to New cli: "match ipv6 address prefix-list WORD"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_match_ipv6_address_prefix_list_cmd
+	From cli: "no match ipv6 address prefix-list WORD" to New cli: "no match ipv6 address prefix-list"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: set_metric_cmd
+	From cli: "set metric <0-4294967295>" to New cli: "set metric <0-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_set_metric_val_cmd
+	From cli: "no set metric <0-4294967295>" to New cli: "no set metric <0-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: no_set_metric_cmd
+	From cli: "no set metric" to New cli: "no set metric"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_ISISD
+Duplicate CLI Function: match_ip_next_hop_prefix_list_cmd
+	From cli: "match ip next-hop prefix-list WORD" to New cli: "match ip next-hop prefix-list WORD"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_ip_next_hop_prefix_list_cmd
+	From cli: "no match ip next-hop prefix-list" to New cli: "no match ip next-hop prefix-list"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_ip_next_hop_prefix_list_val_cmd
+	From cli: "no match ip next-hop prefix-list WORD" to New cli: "no match ip next-hop prefix-list WORD"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: match_ip_address_cmd
+	From cli: "match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_ip_address_cmd
+	From cli: "no match ip address" to New cli: "no match ip address"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_ip_address_val_cmd
+	From cli: "no match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "no match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: match_ip_address_prefix_list_cmd
+	From cli: "match ip address prefix-list WORD" to New cli: "match ip address prefix-list WORD"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_ip_address_prefix_list_cmd
+	From cli: "no match ip address prefix-list" to New cli: "no match ip address prefix-list"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_ip_address_prefix_list_val_cmd
+	From cli: "no match ip address prefix-list WORD" to New cli: "no match ip address prefix-list WORD"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: match_tag_cmd
+	From cli: "match tag <1-4294967295>" to New cli: "match tag <1-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_tag_cmd
+	From cli: "no match tag" to New cli: "no match tag"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_match_tag_val_cmd
+	From cli: "no match tag <1-4294967295>" to New cli: "no match tag <1-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: set_metric_cmd
+	From cli: "set metric <0-4294967295>" to New cli: "set metric <0-4294967295>"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_set_metric_cmd
+	From cli: "no set metric" to New cli: "no set metric"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_set_metric_val_cmd
+	From cli: "no set metric <0-4294967295>" to New cli: "no set metric <0-4294967295>"
+	Original Protocol: VTYSH_ISISD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: set_tag_cmd
+	From cli: "set tag <1-4294967295>" to New cli: "set tag <1-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_set_tag_cmd
+	From cli: "no set tag" to New cli: "no set tag"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: no_set_tag_val_cmd
+	From cli: "no set tag <1-4294967295>" to New cli: "no set tag <1-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_OSPFD
+Duplicate CLI Function: set_metric_cmd
+	From cli: "set metric <0-4294967295>" to New cli: "set metric <0-4294967295>"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_OSPF6D
+Duplicate CLI Function: no_set_metric_cmd
+	From cli: "no set metric" to New cli: "no set metric"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_OSPF6D
+Duplicate CLI Function: no_set_metric_val_cmd
+	From cli: "no set metric <0-4294967295>" to New cli: "no set metric <0-4294967295>"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_OSPF6D
+Duplicate CLI Function: match_metric_cmd
+	From cli: "match metric <0-4294967295>" to New cli: "match metric <0-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_metric_cmd
+	From cli: "no match metric" to New cli: "no match metric"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_metric_val_cmd
+	From cli: "no match metric <0-4294967295>" to New cli: "no match metric <0-4294967295>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_interface_cmd
+	From cli: "match interface WORD" to New cli: "match interface WORD"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_interface_cmd
+	From cli: "no match interface" to New cli: "no match interface"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_interface_val_cmd
+	From cli: "no match interface WORD" to New cli: "no match interface WORD"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_ip_next_hop_cmd
+	From cli: "match ip next-hop (<1-199>|<1300-2699>|WORD)" to New cli: "match ip next-hop (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_next_hop_cmd
+	From cli: "no match ip next-hop" to New cli: "no match ip next-hop"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_next_hop_val_cmd
+	From cli: "no match ip next-hop (<1-199>|<1300-2699>|WORD)" to New cli: "no match ip next-hop (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_ip_next_hop_prefix_list_cmd
+	From cli: "match ip next-hop prefix-list WORD" to New cli: "match ip next-hop prefix-list WORD"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_next_hop_prefix_list_cmd
+	From cli: "no match ip next-hop prefix-list" to New cli: "no match ip next-hop prefix-list"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_next_hop_prefix_list_val_cmd
+	From cli: "no match ip next-hop prefix-list WORD" to New cli: "no match ip next-hop prefix-list WORD"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_ip_address_cmd
+	From cli: "match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_address_cmd
+	From cli: "no match ip address" to New cli: "no match ip address"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_address_val_cmd
+	From cli: "no match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "no match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_ip_address_prefix_list_cmd
+	From cli: "match ip address prefix-list WORD" to New cli: "match ip address prefix-list WORD"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_address_prefix_list_cmd
+	From cli: "no match ip address prefix-list" to New cli: "no match ip address prefix-list"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_ip_address_prefix_list_val_cmd
+	From cli: "no match ip address prefix-list WORD" to New cli: "no match ip address prefix-list WORD"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_tag_cmd
+	From cli: "match tag <1-4294967295>" to New cli: "match tag <1-4294967295>"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_tag_cmd
+	From cli: "no match tag" to New cli: "no match tag"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_match_tag_val_cmd
+	From cli: "no match tag <1-4294967295>" to New cli: "no match tag <1-4294967295>"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: set_metric_cmd
+	From cli: "set metric <0-4294967295>" to New cli: "set metric <0-4294967295>"
+	Original Protocol: VTYSH_OSPF6D to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: set_metric_addsub_cmd
+	From cli: "set metric <+/-metric>" to New cli: "set metric <+/-metric>"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_set_metric_cmd
+	From cli: "no set metric" to New cli: "no set metric"
+	Original Protocol: VTYSH_OSPF6D to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_set_metric_val_cmd
+	From cli: "no set metric <0-4294967295>" to New cli: "no set metric <0-4294967295>"
+	Original Protocol: VTYSH_OSPF6D to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: set_ip_nexthop_cmd
+	From cli: "set ip next-hop A.B.C.D" to New cli: "set ip next-hop A.B.C.D"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_set_ip_nexthop_cmd
+	From cli: "no set ip next-hop" to New cli: "no set ip next-hop"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_set_ip_nexthop_val_cmd
+	From cli: "no set ip next-hop A.B.C.D" to New cli: "no set ip next-hop A.B.C.D"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: set_tag_cmd
+	From cli: "set tag <1-4294967295>" to New cli: "set tag <1-4294967295>"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_set_tag_cmd
+	From cli: "no set tag" to New cli: "no set tag"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_set_tag_val_cmd
+	From cli: "no set tag <1-4294967295>" to New cli: "no set tag <1-4294967295>"
+	Original Protocol: VTYSH_OSPFD to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: router_zebra_cmd
+	From cli: "router zebra" to New cli: "router zebra"
+	Original Protocol: VTYSH_OSPF6D to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: no_router_zebra_cmd
+	From cli: "no router zebra" to New cli: "no router zebra"
+	Original Protocol: VTYSH_OSPF6D to New Protocol: VTYSH_RIPD
+Duplicate CLI Function: match_metric_cmd
+	From cli: "match metric <0-4294967295>" to New cli: "match metric <0-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_match_metric_cmd
+	From cli: "no match metric" to New cli: "no match metric"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_match_metric_val_cmd
+	From cli: "no match metric <0-4294967295>" to New cli: "no match metric <0-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: match_interface_cmd
+	From cli: "match interface WORD" to New cli: "match interface WORD"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_match_interface_cmd
+	From cli: "no match interface" to New cli: "no match interface"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_match_interface_val_cmd
+	From cli: "no match interface WORD" to New cli: "no match interface WORD"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: match_tag_cmd
+	From cli: "match tag <1-4294967295>" to New cli: "match tag <1-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_match_tag_cmd
+	From cli: "no match tag" to New cli: "no match tag"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_match_tag_val_cmd
+	From cli: "no match tag <1-4294967295>" to New cli: "no match tag <1-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: set_metric_cmd
+	From cli: "set metric <0-4294967295>" to New cli: "set metric <0-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_set_metric_cmd
+	From cli: "no set metric" to New cli: "no set metric"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_set_metric_val_cmd
+	From cli: "no set metric <0-4294967295>" to New cli: "no set metric <0-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: set_ipv6_nexthop_local_cmd
+	From cli: "set ipv6 next-hop local X:X::X:X" to New cli: "set ipv6 next-hop local X:X::X:X"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_set_ipv6_nexthop_local_cmd
+	From cli: "no set ipv6 next-hop local" to New cli: "no set ipv6 next-hop local"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_set_ipv6_nexthop_local_val_cmd
+	From cli: "no set ipv6 next-hop local X:X::X:X" to New cli: "no set ipv6 next-hop local X:X::X:X"
+	Original Protocol: VTYSH_BGPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: set_tag_cmd
+	From cli: "set tag <1-4294967295>" to New cli: "set tag <1-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_set_tag_cmd
+	From cli: "no set tag" to New cli: "no set tag"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_set_tag_val_cmd
+	From cli: "no set tag <1-4294967295>" to New cli: "no set tag <1-4294967295>"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: router_zebra_cmd
+	From cli: "router zebra" to New cli: "router zebra"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: no_router_zebra_cmd
+	From cli: "no router zebra" to New cli: "no router zebra"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_RIPNGD
+Duplicate CLI Function: match_interface_cmd
+	From cli: "match interface WORD" to New cli: "match interface WORD"
+	Original Protocol: VTYSH_RIPNGD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_interface_cmd
+	From cli: "no match interface" to New cli: "no match interface"
+	Original Protocol: VTYSH_RIPNGD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_interface_val_cmd
+	From cli: "no match interface WORD" to New cli: "no match interface WORD"
+	Original Protocol: VTYSH_RIPNGD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: match_ip_next_hop_cmd
+	From cli: "match ip next-hop (<1-199>|<1300-2699>|WORD)" to New cli: "match ip next-hop (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_next_hop_cmd
+	From cli: "no match ip next-hop" to New cli: "no match ip next-hop"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_next_hop_val_cmd
+	From cli: "no match ip next-hop (<1-199>|<1300-2699>|WORD)" to New cli: "no match ip next-hop (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: match_ip_next_hop_prefix_list_cmd
+	From cli: "match ip next-hop prefix-list WORD" to New cli: "match ip next-hop prefix-list WORD"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_next_hop_prefix_list_cmd
+	From cli: "no match ip next-hop prefix-list" to New cli: "no match ip next-hop prefix-list"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_next_hop_prefix_list_val_cmd
+	From cli: "no match ip next-hop prefix-list WORD" to New cli: "no match ip next-hop prefix-list WORD"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: match_ip_address_cmd
+	From cli: "match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_address_cmd
+	From cli: "no match ip address" to New cli: "no match ip address"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_address_val_cmd
+	From cli: "no match ip address (<1-199>|<1300-2699>|WORD)" to New cli: "no match ip address (<1-199>|<1300-2699>|WORD)"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: match_ip_address_prefix_list_cmd
+	From cli: "match ip address prefix-list WORD" to New cli: "match ip address prefix-list WORD"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_address_prefix_list_cmd
+	From cli: "no match ip address prefix-list" to New cli: "no match ip address prefix-list"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+Duplicate CLI Function: no_match_ip_address_prefix_list_val_cmd
+	From cli: "no match ip address prefix-list WORD" to New cli: "no match ip address prefix-list WORD"
+	Original Protocol: VTYSH_RIPD to New Protocol: VTYSH_ZEBRA
+  CC       vtysh_cmd.o
+  CCLD     vtysh
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/vtysh'
+Making all in ospfclient
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ospfclient'
+  CC       ospf_apiclient.lo
+  CC       ospfclient-ospfclient.o
+  CCLD     libospfapiclient.la
+  CCLD     ospfclient
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ospfclient'
+Making all in doc
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/doc'
+Making all in m4
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/m4'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/m4'
+Making all in redhat
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/redhat'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/redhat'
+Making all in tests
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/tests'
+sed \
+	-e 's/"vtysh\.h"/"tests.h"/' \
+	-e 's/vtysh_init_cmd/test_init_cmd/' \
+	-e 's/VTYSH_[A-Z][A-Z_0-9]*/0/g' \
+	< ../vtysh/vtysh_cmd.c \
+	> test-commands-defun.c
+make  all-am
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/tests'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/tests'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/tests'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4'
+>>> quagga: Entering fakeroot...
+Making install in lib
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/lib'
+true
+make  install-am
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/lib'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/lib'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/lib'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/include/quagga'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libzebra.la '/tmp/pkg/quagga/usr/lib'
+ /usr/bin/install -c -m 644 buffer.h checksum.h command.h filter.h getopt.h hash.h if.h linklist.h log.h memory.h network.h prefix.h routemap.h distribute.h sockunion.h str.h stream.h table.h thread.h vector.h version.h vty.h zebra.h plist.h zclient.h sockopt.h smux.h md5.h if_rmap.h keychain.h privs.h sigevent.h pqueue.h jhash.h zassert.h memtypes.h workqueue.h route_types.h libospf.h vrf.h '/tmp/pkg/quagga/usr/include/quagga'
+ /usr/bin/install -c -m 644 fifo.h event_counter.h nexthop.h '/tmp/pkg/quagga/usr/include/quagga'
+libtool: install: /usr/bin/install -c .libs/libzebra.so.1.0.0 /tmp/pkg/quagga/usr/lib/libzebra.so.1.0.0
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libzebra.so.1.0.0 libzebra.so.1 || { rm -f libzebra.so.1 && ln -s libzebra.so.1.0.0 libzebra.so.1; }; })
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libzebra.so.1.0.0 libzebra.so || { rm -f libzebra.so && ln -s libzebra.so.1.0.0 libzebra.so; }; })
+libtool: install: /usr/bin/install -c .libs/libzebra.lai /tmp/pkg/quagga/usr/lib/libzebra.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/lib'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/lib'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/lib'
+Making install in qpb
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/qpb'
+make  install-am
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/qpb'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/qpb'
+make[3]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libquagga_pb.la '/tmp/pkg/quagga/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libquagga_pb.so.0.0.0 /tmp/pkg/quagga/usr/lib/libquagga_pb.so.0.0.0
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libquagga_pb.so.0.0.0 libquagga_pb.so.0 || { rm -f libquagga_pb.so.0 && ln -s libquagga_pb.so.0.0.0 libquagga_pb.so.0; }; })
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libquagga_pb.so.0.0.0 libquagga_pb.so || { rm -f libquagga_pb.so && ln -s libquagga_pb.so.0.0.0 libquagga_pb.so; }; })
+libtool: install: /usr/bin/install -c .libs/libquagga_pb.lai /tmp/pkg/quagga/usr/lib/libquagga_pb.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/qpb'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/qpb'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/qpb'
+Making install in fpm
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/fpm'
+make  install-am
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/fpm'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/fpm'
+make[3]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libfpm_pb.la '/tmp/pkg/quagga/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libfpm_pb.so.0.0.0 /tmp/pkg/quagga/usr/lib/libfpm_pb.so.0.0.0
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libfpm_pb.so.0.0.0 libfpm_pb.so.0 || { rm -f libfpm_pb.so.0 && ln -s libfpm_pb.so.0.0.0 libfpm_pb.so.0; }; })
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libfpm_pb.so.0.0.0 libfpm_pb.so || { rm -f libfpm_pb.so && ln -s libfpm_pb.so.0.0.0 libfpm_pb.so; }; })
+libtool: install: /usr/bin/install -c .libs/libfpm_pb.lai /tmp/pkg/quagga/usr/lib/libfpm_pb.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/fpm'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/fpm'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/fpm'
+Making install in zebra
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/zebra'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/zebra'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+ /usr/bin/install -c -m 644 zebra.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c zebra '/tmp/pkg/quagga/usr/sbin'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/zebra /tmp/pkg/quagga/usr/sbin/zebra
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/zebra'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/zebra'
+Making install in bgpd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/bgpd'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/bgpd'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/bin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+ /usr/bin/install -c -m 644 bgpd.conf.sample bgpd.conf.sample2 '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c bgpd '/tmp/pkg/quagga/usr/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c bgp_btoa '/tmp/pkg/quagga/usr/bin'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/bgpd /tmp/pkg/quagga/usr/sbin/bgpd
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/bgp_btoa /tmp/pkg/quagga/usr/bin/bgp_btoa
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/bgpd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/bgpd'
+Making install in ripd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/ripd'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ripd'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ripd '/tmp/pkg/quagga/usr/sbin'
+ /usr/bin/install -c -m 644 ripd.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ripd /tmp/pkg/quagga/usr/sbin/ripd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ripd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/ripd'
+Making install in ripngd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/ripngd'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ripngd'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+ /usr/bin/install -c -m 644 ripngd.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ripngd '/tmp/pkg/quagga/usr/sbin'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ripngd /tmp/pkg/quagga/usr/sbin/ripngd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ripngd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/ripngd'
+Making install in ospfd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/ospfd'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ospfd'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/lib'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libospf.la '/tmp/pkg/quagga/usr/lib'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/include/quagga/ospfd'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ospfd '/tmp/pkg/quagga/usr/sbin'
+ /usr/bin/install -c -m 644 ospfd.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+ /usr/bin/install -c -m 644 ospf_api.h ospf_asbr.h ospf_dump.h ospf_lsa.h ospf_lsdb.h ospf_nsm.h ospf_ism.h ospf_opaque.h ospfd.h '/tmp/pkg/quagga/usr/include/quagga/ospfd'
+libtool: warning: relinking 'libospf.la'
+libtool: install: (cd /tmp/src/quagga-1.2.4/ospfd; /bin/sh "/tmp/src/quagga-1.2.4/libtool"  --silent --tag CC --mode=relink cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fcommon -fPIC -version-info 0:0:0 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libospf.la -rpath /usr/lib ospfd.lo ospf_zebra.lo ospf_interface.lo ospf_ism.lo ospf_neighbor.lo ospf_nsm.lo ospf_dump.lo ospf_network.lo ospf_packet.lo ospf_lsa.lo ospf_spf.lo ospf_route.lo ospf_ase.lo ospf_abr.lo ospf_ia.lo ospf_flood.lo ospf_lsdb.lo ospf_asbr.lo ospf_routemap.lo ospf_snmp.lo ospf_opaque.lo ospf_te.lo ospf_ri.lo ospf_vty.lo ospf_api.lo ospf_apiserver.lo ../lib/libzebra.la -lresolv -lcrypt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L/usr/lib -lnetsnmpmibs -lnetsnmpagent -lnetsnmp -lssl -lssl -lcrypto -lrt -inst-prefix-dir /tmp/pkg/quagga)
+libtool: warning: 'libospf.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/quagga-1.2.4/lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ospfd /tmp/pkg/quagga/usr/sbin/ospfd
+libtool: install: /usr/bin/install -c .libs/libospf.so.0.0.0T /tmp/pkg/quagga/usr/lib/libospf.so.0.0.0
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libospf.so.0.0.0 libospf.so.0 || { rm -f libospf.so.0 && ln -s libospf.so.0.0.0 libospf.so.0; }; })
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libospf.so.0.0.0 libospf.so || { rm -f libospf.so && ln -s libospf.so.0.0.0 libospf.so; }; })
+libtool: install: /usr/bin/install -c .libs/libospf.lai /tmp/pkg/quagga/usr/lib/libospf.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ospfd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/ospfd'
+Making install in ospf6d
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/ospf6d'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ospf6d'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ospf6d '/tmp/pkg/quagga/usr/sbin'
+ /usr/bin/install -c -m 644 ospf6d.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ospf6d /tmp/pkg/quagga/usr/sbin/ospf6d
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ospf6d'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/ospf6d'
+Making install in nhrpd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/nhrpd'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/nhrpd'
+make[2]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c nhrpd '/tmp/pkg/quagga/usr/sbin'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/nhrpd /tmp/pkg/quagga/usr/sbin/nhrpd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/nhrpd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/nhrpd'
+Making install in isisd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/isisd'
+Making install in topology
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/isisd/topology'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/isisd/topology'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/isisd/topology'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/isisd/topology'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/isisd'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/isisd'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+ /usr/bin/install -c -m 644 isisd.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c isisd '/tmp/pkg/quagga/usr/sbin'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/isisd /tmp/pkg/quagga/usr/sbin/isisd
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/isisd'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/isisd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/isisd'
+Making install in pimd
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/pimd'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/pimd'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/bin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c test_igmpv3_join '/tmp/pkg/quagga/usr/bin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c pimd '/tmp/pkg/quagga/usr/sbin'
+ /usr/bin/install -c -m 644 pimd.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+libtool: install: /usr/bin/install -c test_igmpv3_join /tmp/pkg/quagga/usr/bin/test_igmpv3_join
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/pimd /tmp/pkg/quagga/usr/sbin/pimd
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/pimd'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/pimd'
+Making install in watchquagga
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/watchquagga'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/watchquagga'
+make[2]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c watchquagga '/tmp/pkg/quagga/usr/sbin'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/watchquagga /tmp/pkg/quagga/usr/sbin/watchquagga
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/watchquagga'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/watchquagga'
+Making install in vtysh
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/vtysh'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/vtysh'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/bin'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/doc/quagga/'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c vtysh '/tmp/pkg/quagga/usr/bin'
+ /usr/bin/install -c -m 644 vtysh.conf.sample '/tmp/pkg/quagga/usr/share/doc/quagga/'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/vtysh /tmp/pkg/quagga/usr/bin/vtysh
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/vtysh'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/vtysh'
+Making install in ospfclient
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/ospfclient'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/ospfclient'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/lib'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/sbin'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libospfapiclient.la '/tmp/pkg/quagga/usr/lib'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/include/quagga/ospfapi'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c ospfclient '/tmp/pkg/quagga/usr/sbin'
+ /usr/bin/install -c -m 644 ospf_apiclient.h '/tmp/pkg/quagga/usr/include/quagga/ospfapi'
+libtool: warning: relinking 'libospfapiclient.la'
+libtool: install: (cd /tmp/src/quagga-1.2.4/ospfclient; /bin/sh "/tmp/src/quagga-1.2.4/libtool"  --silent --tag CC --mode=relink cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fcommon -fPIC -version-info 0:0:0 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libospfapiclient.la -rpath /usr/lib ospf_apiclient.lo ../ospfd/libospf.la ../lib/libzebra.la -lresolv -lcrypt -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L/usr/lib -lnetsnmpmibs -lnetsnmpagent -lnetsnmp -lssl -lssl -lcrypto -lrt -inst-prefix-dir /tmp/pkg/quagga)
+libtool: warning: 'libospfapiclient.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/quagga-1.2.4/ospfd/libospf.la' has not been installed in '/usr/lib'
+libtool: warning: '../ospfd/libospf.la' has not been installed in '/usr/lib'
+libtool: warning: '/tmp/src/quagga-1.2.4/lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: warning: '../lib/libzebra.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/ospfclient /tmp/pkg/quagga/usr/sbin/ospfclient
+libtool: install: /usr/bin/install -c .libs/libospfapiclient.so.0.0.0T /tmp/pkg/quagga/usr/lib/libospfapiclient.so.0.0.0
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libospfapiclient.so.0.0.0 libospfapiclient.so.0 || { rm -f libospfapiclient.so.0 && ln -s libospfapiclient.so.0.0.0 libospfapiclient.so.0; }; })
+libtool: install: (cd /tmp/pkg/quagga/usr/lib && { ln -s -f libospfapiclient.so.0.0.0 libospfapiclient.so || { rm -f libospfapiclient.so && ln -s libospfapiclient.so.0.0.0 libospfapiclient.so; }; })
+libtool: install: /usr/bin/install -c .libs/libospfapiclient.lai /tmp/pkg/quagga/usr/lib/libospfapiclient.la
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/ospfclient'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/ospfclient'
+Making install in doc
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/doc'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/info'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/man/man1'
+ .././install-sh -c -d '/tmp/pkg/quagga/usr/share/man/man8'
+ /usr/bin/install -c -m 644 ./quagga.info ./quagga.info-1 ./quagga.info-2 '/tmp/pkg/quagga/usr/share/info'
+ /usr/bin/install -c -m 644 vtysh.1 '/tmp/pkg/quagga/usr/share/man/man1'
+ install-info --info-dir='/tmp/pkg/quagga/usr/share/info' '/tmp/pkg/quagga/usr/share/info/quagga.info'
+ /usr/bin/install -c -m 644 pimd.8 bgpd.8 isisd.8 ospf6d.8 ospfclient.8 ospfd.8 ripd.8 ripngd.8 nhrpd.8 watchquagga.8 zebra.8 '/tmp/pkg/quagga/usr/share/man/man8'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/doc'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/doc'
+Making install in m4
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/m4'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/m4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/m4'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/m4'
+Making install in redhat
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/redhat'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/redhat'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/redhat'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/redhat'
+Making install in tests
+make[1]: Entering directory '/tmp/src/quagga-1.2.4/tests'
+make  install-am
+make[2]: Entering directory '/tmp/src/quagga-1.2.4/tests'
+make[3]: Entering directory '/tmp/src/quagga-1.2.4/tests'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/quagga-1.2.4/tests'
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4/tests'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4/tests'
+make[1]: Entering directory '/tmp/src/quagga-1.2.4'
+make[2]: Entering directory '/tmp/src/quagga-1.2.4'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/quagga-1.2.4'
+make[1]: Leaving directory '/tmp/src/quagga-1.2.4'
+>>> quagga-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/quagga-dev/usr/include'
+'usr/lib/libfpm_pb.so' -> '/tmp/pkg/quagga-dev/usr/lib/libfpm_pb.so'
+'usr/lib/libospf.so' -> '/tmp/pkg/quagga-dev/usr/lib/libospf.so'
+'usr/lib/libospfapiclient.so' -> '/tmp/pkg/quagga-dev/usr/lib/libospfapiclient.so'
+'usr/lib/libquagga_pb.so' -> '/tmp/pkg/quagga-dev/usr/lib/libquagga_pb.so'
+'usr/lib/libzebra.so' -> '/tmp/pkg/quagga-dev/usr/lib/libzebra.so'
+>>> quagga-dev*: Preparing subpackage quagga-dev...
+>>> quagga-dev*: Stripping binaries
+>>> quagga-dev*: Running postcheck for quagga-dev
+>>> quagga-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/quagga-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/quagga-doc/usr/share/man'
+'usr/share/info' -> '/tmp/pkg/quagga-doc/usr/share/info'
+>>> quagga-doc*: Preparing subpackage quagga-doc...
+>>> quagga-doc*: Running postcheck for quagga-doc
+>>> quagga-dbg*: Running split function dbg...
+>>> quagga-dbg*: Preparing subpackage quagga-dbg...
+>>> quagga-dbg*: Stripping binaries
+>>> quagga-dbg*: Running postcheck for quagga-dbg
+>>> quagga-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/quagga-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/quagga-openrc/etc/init.d'
+>>> quagga-openrc*: Preparing subpackage quagga-openrc...
+>>> quagga-openrc*: Running postcheck for quagga-openrc
+>>> quagga*: Running postcheck for quagga
+>>> quagga*: Preparing package quagga...
+>>> quagga*: Stripping binaries
+>>> quagga*: Script found. /bin/sh added as a dependency for quagga-1.2.4-r10.apk
+>>> quagga*: Adding .pre-install
+>>> quagga*: Adding .post-install
+>>> quagga*: Adding .post-upgrade
+>>> quagga-dbg*: Scanning shared objects
+>>> quagga-dev*: Scanning shared objects
+>>> quagga-doc*: Scanning shared objects
+>>> quagga-openrc*: Scanning shared objects
+>>> quagga*: Scanning shared objects
+>>> quagga-dbg*: Tracing dependencies...
+	iproute2
+	!quagga<1.2.4-r10
+	!quagga>1.2.4-r10
+>>> quagga-dbg*: Package size: 9.6 MB
+>>> quagga-dbg*: Compressing data...
+>>> quagga-dbg*: Create checksum...
+>>> quagga-dbg*: Create quagga-dbg-1.2.4-r10.apk
+>>> quagga-dev*: Tracing dependencies...
+	quagga=1.2.4-r10
+>>> quagga-dev*: Package size: 278.9 KB
+>>> quagga-dev*: Compressing data...
+>>> quagga-dev*: Create checksum...
+>>> quagga-dev*: Create quagga-dev-1.2.4-r10.apk
+>>> quagga-doc*: Tracing dependencies...
+>>> quagga-doc*: Package size: 440.4 KB
+>>> quagga-doc*: Compressing data...
+>>> quagga-doc*: Create checksum...
+>>> quagga-doc*: Create quagga-doc-1.2.4-r10.apk
+>>> quagga-openrc*: Tracing dependencies...
+>>> quagga-openrc*: Package size: 1.6 KB
+>>> quagga-openrc*: Compressing data...
+>>> quagga-openrc*: Create checksum...
+>>> quagga-openrc*: Create quagga-openrc-1.2.4-r10.apk
+>>> quagga*: Tracing dependencies...
+	iproute2
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcares.so.2
+	so:libnetsnmp.so.40
+	so:libnetsnmpagent.so.40
+	so:libreadline.so.8
+>>> quagga*: Package size: 5.0 MB
+>>> quagga*: Compressing data...
+>>> quagga*: Create checksum...
+>>> quagga*: Create quagga-1.2.4-r10.apk
+>>> quagga: Updating the main/x86_64 repository index...
+>>> quagga: Signing the index...
+>>> quagga: Cleaning up srcdir
+>>> quagga: Cleaning up build chroot
+>>> quagga: Cleaning up pkgdir

@@ -1,0 +1,662 @@
+>>> mosquitto: Validating /home/packager/oily-pine/main/mosquitto/APKBUILD...
+>>> mosquitto: Cleaning up srcdir
+>>> mosquitto: Cleaning up pkgdir
+>>> mosquitto: Cleaning up tmpdir
+>>> mosquitto: Fetching https://mosquitto.org/files/source/mosquitto-2.0.20.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  781k  100  781k    0     0  1440k      0 --:--:-- --:--:-- --:--:-- 1438k
+>>> mosquitto: Fetching https://mosquitto.org/files/source/mosquitto-2.0.20.tar.gz
+>>> mosquitto: Checking sha512sums...
+mosquitto-2.0.20.tar.gz: OK
+mosquitto.initd: OK
+mosquitto.confd: OK
+>>> mosquitto: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/101) Installing musl (1.2.5-r10)
+(2/101) Installing libcrypto3 (3.5.0-r0)
+(3/101) Installing ca-certificates-bundle (20241121-r2)
+(4/101) Installing libssl3 (3.5.0-r0)
+(5/101) Installing zlib (1.3.1-r2)
+(6/101) Installing libapk2 (2.14.9-r2)
+(7/101) Installing apk-tools (2.14.9-r2)
+(8/101) Installing libcap2 (2.76-r0)
+(9/101) Installing libcap-getcap (2.76-r0)
+(10/101) Installing fakeroot (1.37.1.1-r0)
+(11/101) Installing scanelf (1.3.8-r1)
+(12/101) Installing musl-utils (1.2.5-r10)
+(13/101) Installing libgcc (14.3.0-r0)
+(14/101) Installing libstdc++ (14.3.0-r0)
+(15/101) Installing lzip (1.25-r0)
+(16/101) Installing openssl (3.5.0-r0)
+(17/101) Installing patch (2.8-r0)
+(18/101) Installing pkgconf (2.4.3-r0)
+(19/101) Installing acl-libs (2.3.2-r1)
+(20/101) Installing tar (1.35-r3)
+(21/101) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/101) Installing ssl_client (1.37.0-r18)
+(23/101) Installing busybox-binsh (1.37.0-r18)
+(24/101) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/101) Installing abuild-sudo (3.15.0-r0)
+(26/101) Installing alpine-baselayout-data (3.7.0-r0)
+(27/101) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/101) Installing bridge (1.5-r5)
+(29/101) Installing ifupdown-ng (0.12.1-r7)
+(30/101) Installing openrc-user (0.62.2-r2)
+(31/101) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/101) Installing mdev-conf (4.8-r0)
+(33/101) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/101) Installing alpine-conf (3.20.0-r0)
+(35/101) Installing alpine-keys (2.5-r0)
+(36/101) Installing alpine-release (3.22.0-r0)
+(37/101) Installing busybox-openrc (1.37.0-r18)
+(38/101) Installing busybox-suid (1.37.0-r18)
+(39/101) Installing alpine-base (3.22.0-r0)
+(40/101) Installing jansson (2.14.1-r0)
+(41/101) Installing zstd-libs (1.5.7-r0)
+(42/101) Installing binutils (2.44-r0)
+(43/101) Installing libmagic (5.46-r2)
+(44/101) Installing file (5.46-r2)
+(45/101) Installing libgomp (14.3.0-r0)
+(46/101) Installing libatomic (14.3.0-r0)
+(47/101) Installing gmp (6.3.0-r3)
+(48/101) Installing isl26 (0.26-r1)
+(49/101) Installing mpfr4 (4.2.1_p1-r0)
+(50/101) Installing mpc1 (1.3.1-r1)
+(51/101) Installing gcc (14.3.0-r0)
+(52/101) Installing libstdc++-dev (14.3.0-r0)
+(53/101) Installing musl-dev (1.2.5-r10)
+(54/101) Installing g++ (14.3.0-r0)
+(55/101) Installing make (4.4.1-r3)
+(56/101) Installing fortify-headers (1.1-r5)
+(57/101) Installing build-base (0.5-r3)
+(58/101) Installing c-ares (1.34.5-r0)
+(59/101) Installing c-ares-dev (1.34.5-r0)
+(60/101) Installing cjson (1.7.18-r1)
+(61/101) Installing cjson-dev (1.7.18-r1)
+(62/101) Installing brotli-libs (1.1.0-r2)
+(63/101) Installing libunistring (1.3-r0)
+(64/101) Installing libidn2 (2.3.7-r0)
+(65/101) Installing nghttp2-libs (1.65.0-r0)
+(66/101) Installing libpsl (0.21.5-r3)
+(67/101) Installing libcurl (8.14.0-r2)
+(68/101) Installing libexpat (2.7.1-r0)
+(69/101) Installing pcre2 (10.43-r1)
+(70/101) Installing git (2.49.0-r0)
+(71/101) Installing git-init-template (2.49.0-r0)
+(72/101) Installing libev (4.33-r1)
+(73/101) Installing libwebsockets (4.3.5-r2)
+(74/101) Installing libwebsockets-evlib_ev (4.3.5-r2)
+(75/101) Installing libevent (2.1.12-r8)
+(76/101) Installing libwebsockets-evlib_event (4.3.5-r2)
+(77/101) Installing libffi (3.4.8-r0)
+(78/101) Installing libintl (0.24.1-r0)
+(79/101) Installing libeconf (0.6.3-r0)
+(80/101) Installing libblkid (2.41-r9)
+(81/101) Installing libmount (2.41-r9)
+(82/101) Installing glib (2.84.2-r0)
+(83/101) Installing libwebsockets-evlib_glib (4.3.5-r2)
+(84/101) Installing libuv (1.51.0-r0)
+(85/101) Installing libwebsockets-evlib_uv (4.3.5-r2)
+(86/101) Installing libwebsockets-dev (4.3.5-r2)
+(87/101) Installing xz-libs (5.8.1-r0)
+(88/101) Installing libxml2 (2.13.8-r0)
+(89/101) Installing libxslt (1.1.43-r3)
+(90/101) Installing openssl-dev (3.5.0-r0)
+(91/101) Installing libuuid (2.41-r9)
+(92/101) Installing libfdisk (2.41-r9)
+(93/101) Installing sqlite-libs (3.50.0-r0)
+(94/101) Installing liblastlog2 (2.41-r9)
+(95/101) Installing libsmartcols (2.41-r9)
+(96/101) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(97/101) Installing libncursesw (6.5_p20250503-r0)
+(98/101) Installing readline (8.2.13-r1)
+(99/101) Installing sqlite (3.50.0-r0)
+(100/101) Installing sqlite-dev (3.50.0-r0)
+(101/101) Installing util-linux-dev (2.41-r9)
+Executing busybox-1.37.0-r18.trigger
+Executing glib-2.84.2-r0.trigger
+OK: 279 MiB in 101 packages
+>>> mosquitto: Fetching https://mosquitto.org/files/source/mosquitto-2.0.20.tar.gz
+>>> mosquitto: Checking sha512sums...
+mosquitto-2.0.20.tar.gz: OK
+mosquitto.initd: OK
+mosquitto.confd: OK
+>>> mosquitto: Unpacking /var/cache/distfiles/mosquitto-2.0.20.tar.gz...
+set -e; for d in lib apps client plugins src; do make -C ${d}; done
+set -e; for d in man; do make -C ${d}; done
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/man'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/lib'
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c mosquitto.c -o mosquitto.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c actions.c -o actions.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c callbacks.c -o callbacks.o
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/man'
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c connect.c -o connect.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_auth.c -o handle_auth.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_connack.c -o handle_connack.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_disconnect.c -o handle_disconnect.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_ping.c -o handle_ping.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_pubackcomp.c -o handle_pubackcomp.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_publish.c -o handle_publish.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_pubrec.c -o handle_pubrec.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_pubrel.c -o handle_pubrel.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_suback.c -o handle_suback.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c handle_unsuback.c -o handle_unsuback.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c helpers.c -o helpers.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c logging_mosq.c -o logging_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c loop.c -o loop.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c memory_mosq.c -o memory_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c messages_mosq.c -o messages_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c misc_mosq.c -o misc_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c net_mosq_ocsp.c -o net_mosq_ocsp.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c net_mosq.c -o net_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c options.c -o options.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c packet_datatypes.c -o packet_datatypes.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c packet_mosq.c -o packet_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c property_mosq.c -o property_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c read_handle.c -o read_handle.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c send_connect.c -o send_connect.o
+loop.c: In function 'mosquitto_loop':
+loop.c:86:33: warning: 'ares_fds' is deprecated: Use ARES_OPT_EVENT_THREAD or ARES_OPT_SOCK_STATE_CB instead [-Wdeprecated-declarations]
+   86 |                                 rc = ares_fds(mosq->achan, &readfds, &writefds);
+      |                                 ^~
+In file included from mosquitto_internal.h:39,
+                 from loop.c:28:
+/usr/include/ares.h:898:31: note: declared here
+  898 |   ARES_OPT_SOCK_STATE_CB) int ares_fds(const ares_channel_t *channel,
+      |                               ^~~~~~~~
+loop.c:176:25: warning: 'ares_process' is deprecated: Use ares_process_fds instead [-Wdeprecated-declarations]
+  176 |                         ares_process(mosq->achan, &readfds, &writefds);
+      |                         ^~~~~~~~~~~~
+/usr/include/ares.h:910:58: note: declared here
+  910 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_process_fds) void ares_process(
+      |                                                          ^~~~~~~~~~~~
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c send_disconnect.c -o send_disconnect.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c send_mosq.c -o send_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c send_publish.c -o send_publish.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c send_subscribe.c -o send_subscribe.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c send_unsubscribe.c -o send_unsubscribe.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c socks_mosq.c -o socks_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c srv_mosq.c -o srv_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c strings_mosq.c -o strings_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c thread_mosq.c -o thread_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c time_mosq.c -o time_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c tls_mosq.c -o tls_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c utf8_mosq.c -o utf8_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c util_mosq.c -o util_mosq.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c util_topic.c -o util_topic.o
+cc  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c will_mosq.c -o will_mosq.o
+srv_mosq.c: In function 'srv_callback':
+srv_mosq.c:44:17: warning: 'ares_parse_srv_reply' is deprecated: Use ares_dns_parse instead [-Wdeprecated-declarations]
+   44 |                 status = ares_parse_srv_reply(abuf, alen, &reply);
+      |                 ^~~~~~
+In file included from srv_mosq.c:22:
+/usr/include/ares.h:1116:55: note: declared here
+ 1116 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_dns_parse) int ares_parse_srv_reply(
+      |                                                       ^~~~~~~~~~~~~~~~~~~~
+srv_mosq.c: In function 'mosquitto_connect_srv':
+srv_mosq.c:81:9: warning: 'ares_init' is deprecated: Use ares_init_options instead [-Wdeprecated-declarations]
+   81 |         rc = ares_init(&mosq->achan);
+      |         ^~
+/usr/include/ares.h:487:70: note: declared here
+  487 | CARES_EXTERN             CARES_DEPRECATED_FOR(ares_init_options) int ares_init(
+      |                                                                      ^~~~~~~~~
+srv_mosq.c:102:17: warning: 'ares_search' is deprecated: Use ares_search_dnsrec instead [-Wdeprecated-declarations]
+  102 |                 ares_search(mosq->achan, h, ns_c_in, ns_t_srv, srv_callback, mosq);
+      |                 ^~~~~~~~~~~
+/usr/include/ares.h:859:60: note: declared here
+  859 | CARES_EXTERN CARES_DEPRECATED_FOR(ares_search_dnsrec) void ares_search(
+      |                                                            ^~~~~~~~~~~
+cc -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--version-script=linker.version -Wl,-soname,libmosquitto.so.1 -pthread mosquitto.o actions.o callbacks.o connect.o handle_auth.o handle_connack.o handle_disconnect.o handle_ping.o handle_pubackcomp.o handle_publish.o handle_pubrec.o handle_pubrel.o handle_suback.o handle_unsuback.o helpers.o logging_mosq.o loop.o memory_mosq.o messages_mosq.o misc_mosq.o net_mosq_ocsp.o net_mosq.o options.o packet_datatypes.o packet_mosq.o property_mosq.o read_handle.o send_connect.o send_disconnect.o send_mosq.o send_publish.o send_subscribe.o send_unsubscribe.o socks_mosq.o srv_mosq.o strings_mosq.o thread_mosq.o time_mosq.o tls_mosq.o utf8_mosq.o util_mosq.o util_topic.o will_mosq.o -o libmosquitto.so.1  -lrt -lssl -lcrypto -lcares
+make -C cpp
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+c++  -I. -I.. -I../include -I../../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -fPIC -c mosquittopp.cpp -o mosquittopp.o
+c++ -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,-soname,libmosquittopp.so.1 mosquittopp.o -o libmosquittopp.so.1 ../libmosquitto.so.1 
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/apps'
+set -e; for d in db_dump mosquitto_ctrl mosquitto_passwd; do make -C ${d}; done
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/db_dump'
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c db_dump.c -o db_dump.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c print.c -o print.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/memory_mosq.c -o memory_mosq.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../src/memory_public.c -o memory_public.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/packet_datatypes.c -o packet_datatypes.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/packet_mosq.c -o packet_mosq.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../src/persist_read.c -o persist_read.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../src/persist_read_v234.c -o persist_read_v234.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../src/persist_read_v5.c -o persist_read_v5.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/property_mosq.c -o property_mosq.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/send_disconnect.c -o send_disconnect.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c stubs.c -o stubs.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/time_mosq.c -o time_mosq.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../src/topic_tok.c -o topic_tok.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/util_topic.c -o util_topic.o
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -I../../include -I../../ -I../../lib -I../../src -I../../deps -DWITH_BROKER -DWITH_PERSISTENCE -c ../../lib/utf8_mosq.c -o utf8_mosq.o
+cc db_dump.o print.o memory_mosq.o memory_public.o packet_datatypes.o packet_mosq.o persist_read.o persist_read_v234.o persist_read_v5.o property_mosq.o send_disconnect.o stubs.o time_mosq.o topic_tok.o util_topic.o utf8_mosq.o -o mosquitto_db_dump -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs 
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/db_dump'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_ctrl'
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c mosquitto_ctrl.c -o mosquitto_ctrl.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c client.c -o client.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c dynsec.c -o dynsec.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c dynsec_client.c -o dynsec_client.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c dynsec_group.c -o dynsec_group.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c dynsec_role.c -o dynsec_role.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../mosquitto_passwd/get_password.c -o get_password.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../lib/memory_mosq.c -o memory_mosq.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../src/memory_public.c -o memory_public.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../lib/misc_mosq.c -o misc_mosq.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c options.c -o options.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../src/password_mosq.c -o password_mosq.o
+cc -I../mosquitto_passwd -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c example.c -o example.o
+cc  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared example.o -o mosquitto_ctrl_example.so
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mosquitto_ctrl.o client.o dynsec.o dynsec_client.o dynsec_group.o dynsec_role.o get_password.o memory_mosq.o memory_public.o misc_mosq.o options.o password_mosq.o ../../lib/libmosquitto.so.1 -o mosquitto_ctrl  -lcrypto   ../../lib/libmosquitto.so.1 -lcjson -ldl
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_ctrl'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_passwd'
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c mosquitto_passwd.c -o mosquitto_passwd.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c get_password.c -o get_password.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../lib/memory_mosq.c -o memory_mosq.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../src/memory_public.c -o memory_public.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../lib/misc_mosq.c -o misc_mosq.o
+cc  -I. -I../../ -I../../include -I../../src -I../../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION=\""2.0.20\"" -c ../../src/password_mosq.c -o password_mosq.o
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs mosquitto_passwd.o get_password.o memory_mosq.o memory_public.o misc_mosq.o password_mosq.o -o mosquitto_passwd  -lcrypto 
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_passwd'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/client'
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c pub_client.c -o pub_client.o
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c pub_shared.c -o pub_shared.o
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c client_shared.c -o client_shared.o
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c client_props.c -o client_props.o
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c sub_client.c -o sub_client.o
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c sub_client_output.c -o sub_client_output.o
+cc  -I.. -I../include -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_THREADING -DWITH_SOCKS -DWITH_SRV -DWITH_UNIX_SOCKETS -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_CJSON -c rr_client.c -o rr_client.o
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../lib pub_client.o pub_shared.o client_shared.o client_props.o -o mosquitto_pub  ../lib/libmosquitto.so.1 -lcjson 
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../lib sub_client.o sub_client_output.o client_shared.o client_props.o -o mosquitto_sub  ../lib/libmosquitto.so.1 -lcjson 
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -L../lib rr_client.o client_shared.o client_props.o pub_shared.o sub_client_output.o -o mosquitto_rr  ../lib/libmosquitto.so.1 -lcjson 
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/client'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins'
+set -e; for d in auth-by-ip deny-protocol-version dynamic-security message-timestamp payload-modification; do make -C ${d}; done
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/auth-by-ip'
+cc  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared mosquitto_auth_by_ip.c -o mosquitto_auth_by_ip.so
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/auth-by-ip'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/deny-protocol-version'
+cc  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -I../../include -I../../ -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared mosquitto_deny_protocol_version.c -o mosquitto_deny_protocol_version.so
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/deny-protocol-version'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/dynamic-security'
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c acl.c -o acl.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c auth.c -o auth.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c clients.c -o clients.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c clientlist.c -o clientlist.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c groups.c -o groups.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c grouplist.c -o grouplist.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c json_help.c -o json_help.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c plugin.c -o plugin.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c roles.c -o roles.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c rolelist.c -o rolelist.o
+cc -I../../src/ -DWITH_CJSON  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -c sub_matches_sub.c -o sub_matches_sub.o
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared acl.o auth.o clients.o clientlist.o groups.o grouplist.o json_help.o plugin.o roles.o rolelist.o sub_matches_sub.o -o mosquitto_dynamic_security.so -lcjson
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/dynamic-security'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/message-timestamp'
+cc  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared mosquitto_message_timestamp.c -o mosquitto_message_timestamp.so
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/message-timestamp'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/payload-modification'
+cc  -I../.. -I../../include -I../../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fPIC -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -fPIC -shared mosquitto_payload_modification.c -o mosquitto_payload_modification.so
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/payload-modification'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/src'
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c mosquitto.c -o mosquitto.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/alias_mosq.c -o alias_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c bridge.c -o bridge.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c bridge_topic.c -o bridge_topic.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c conf.c -o conf.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c conf_includedir.c -o conf_includedir.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c context.c -o context.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c control.c -o control.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c database.c -o database.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_auth.c -o handle_auth.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_connack.c -o handle_connack.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_connect.c -o handle_connect.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_disconnect.c -o handle_disconnect.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/handle_ping.c -o handle_ping.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/handle_pubackcomp.c -o handle_pubackcomp.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_publish.c -o handle_publish.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/handle_pubrec.c -o handle_pubrec.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/handle_pubrel.c -o handle_pubrel.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/handle_suback.c -o handle_suback.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_subscribe.c -o handle_subscribe.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/handle_unsuback.c -o handle_unsuback.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c handle_unsubscribe.c -o handle_unsubscribe.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c keepalive.c -o keepalive.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c logging.c -o logging.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c loop.c -o loop.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/memory_mosq.c -o memory_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c memory_public.c -o memory_public.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/misc_mosq.c -o misc_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c mux.c -o mux.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c mux_epoll.c -o mux_epoll.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c mux_poll.c -o mux_poll.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c net.c -o net.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/net_mosq.c -o net_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/net_mosq_ocsp.c -o net_mosq_ocsp.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/packet_datatypes.c -o packet_datatypes.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/packet_mosq.c -o packet_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c password_mosq.c -o password_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c property_broker.c -o property_broker.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/property_mosq.c -o property_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c persist_read.c -o persist_read.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c persist_read_v234.c -o persist_read_v234.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c persist_read_v5.c -o persist_read_v5.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c persist_write.c -o persist_write.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c persist_write_v5.c -o persist_write_v5.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c plugin.c -o plugin.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c plugin_public.c -o plugin_public.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c read_handle.c -o read_handle.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c retain.c -o retain.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c security.c -o security.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c security_default.c -o security_default.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c send_auth.c -o send_auth.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c send_connack.c -o send_connack.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/send_connect.c -o send_connect.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/send_disconnect.c -o send_disconnect.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/send_mosq.c -o send_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/send_publish.c -o send_publish.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c send_suback.c -o send_suback.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/send_subscribe.c -o send_subscribe.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c send_unsuback.c -o send_unsuback.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/send_unsubscribe.c -o send_unsubscribe.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c service.c -o service.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c session_expiry.c -o session_expiry.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c signals.c -o signals.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/strings_mosq.c -o strings_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c subs.c -o subs.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c sys_tree.c -o sys_tree.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/time_mosq.c -o time_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c topic_tok.c -o topic_tok.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/tls_mosq.c -o tls_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/utf8_mosq.c -o utf8_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/util_mosq.c -o util_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/util_topic.c -o util_topic.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c websockets.c -o websockets.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c will_delay.c -o will_delay.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c ../lib/will_mosq.c -o will_mosq.o
+cc  -I. -I.. -I../include -I../../include -I../lib -DWITH_TLS -DOPENSSL_API_COMPAT=0x10100000L -DWITH_TLS_PSK -DWITH_BRIDGE -DWITH_PERSISTENCE -DWITH_SYS_TREE -DWITH_EC -DWITH_CONTROL -DWITH_UNIX_SOCKETS -DWITH_WEBSOCKETS -DWITH_EPOLL -I../deps -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -DVERSION="\"2.0.20\"" -DWITH_BROKER -c xtreport.c -o xtreport.o
+cc -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--dynamic-list=linker.syms mosquitto.o alias_mosq.o bridge.o bridge_topic.o conf.o conf_includedir.o context.o control.o database.o handle_auth.o handle_connack.o handle_connect.o handle_disconnect.o handle_ping.o handle_pubackcomp.o handle_publish.o handle_pubrec.o handle_pubrel.o handle_suback.o handle_subscribe.o handle_unsuback.o handle_unsubscribe.o keepalive.o logging.o loop.o memory_mosq.o memory_public.o misc_mosq.o mux.o mux_epoll.o mux_poll.o net.o net_mosq.o net_mosq_ocsp.o packet_datatypes.o packet_mosq.o password_mosq.o property_broker.o property_mosq.o persist_read.o persist_read_v234.o persist_read_v5.o persist_write.o persist_write_v5.o plugin.o plugin_public.o read_handle.o retain.o security.o security_default.o send_auth.o send_connack.o send_connect.o send_disconnect.o send_mosq.o send_publish.o send_suback.o send_subscribe.o send_unsuback.o send_unsubscribe.o service.o session_expiry.o signals.o strings_mosq.o subs.o sys_tree.o time_mosq.o topic_tok.o tls_mosq.o utf8_mosq.o util_mosq.o util_topic.o websockets.o will_delay.o will_mosq.o xtreport.o -o mosquitto  -ldl -lm -lrt -lssl -lcrypto -lwebsockets 
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/src'
+>>> mosquitto: Entering fakeroot...
+set -e; for d in lib apps client plugins src; do make -C ${d}; done
+set -e; for d in man; do make -C ${d}; done
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/lib'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/man'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/man'
+make -C cpp
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/apps'
+set -e; for d in db_dump mosquitto_ctrl mosquitto_passwd; do make -C ${d}; done
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/db_dump'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/db_dump'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_ctrl'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_ctrl'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_passwd'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_passwd'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/client'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/client'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins'
+set -e; for d in auth-by-ip deny-protocol-version dynamic-security message-timestamp payload-modification; do make -C ${d}; done
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/auth-by-ip'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/auth-by-ip'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/deny-protocol-version'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/deny-protocol-version'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/dynamic-security'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/dynamic-security'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/message-timestamp'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/message-timestamp'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/payload-modification'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/payload-modification'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/src'
+set -e; for d in lib apps client plugins src; do make -C ${d} install; done
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/lib'
+make -C cpp
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+install -d "/tmp/pkg/mosquitto/usr/lib/"
+install  libmosquitto.so.1 "/tmp/pkg/mosquitto/usr/lib/libmosquitto.so.1"
+ln -sf libmosquitto.so.1 "/tmp/pkg/mosquitto/usr/lib/libmosquitto.so"
+install -d "/tmp/pkg/mosquitto/usr/include/"
+install ../include/mosquitto.h "/tmp/pkg/mosquitto/usr/include/mosquitto.h"
+install ../include/mqtt_protocol.h "/tmp/pkg/mosquitto/usr/include/mqtt_protocol.h"
+install -d "/tmp/pkg/mosquitto/usr/lib/pkgconfig"
+install -m644 ../libmosquitto.pc.in "/tmp/pkg/mosquitto/usr/lib/pkgconfig/libmosquitto.pc"
+sed -i -e "s#@CMAKE_INSTALL_PREFIX@#/usr#" -e "s#@VERSION@#2.0.20#" "/tmp/pkg/mosquitto/usr/lib/pkgconfig/libmosquitto.pc"
+make -C cpp install
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+install -d "/tmp/pkg/mosquitto/usr/lib/"
+install  libmosquittopp.so.1 "/tmp/pkg/mosquitto/usr/lib/libmosquittopp.so.1"
+ln -sf libmosquittopp.so.1 "/tmp/pkg/mosquitto/usr/lib/libmosquittopp.so"
+install -d "/tmp/pkg/mosquitto/usr/include/"
+install mosquittopp.h "/tmp/pkg/mosquitto/usr/include/mosquittopp.h"
+install -d "/tmp/pkg/mosquitto/usr/lib/pkgconfig/"
+install -m644 ../../libmosquittopp.pc.in "/tmp/pkg/mosquitto/usr/lib/pkgconfig/libmosquittopp.pc"
+sed -i -e "s#@CMAKE_INSTALL_PREFIX@#/usr#" -e "s#@VERSION@#2.0.20#" "/tmp/pkg/mosquitto/usr/lib/pkgconfig/libmosquittopp.pc"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib/cpp'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/lib'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/apps'
+set -e; for d in db_dump mosquitto_ctrl mosquitto_passwd; do make -C ${d} install; done
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/db_dump'
+make[2]: Nothing to be done for 'install'.
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/db_dump'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_ctrl'
+install -d "/tmp/pkg/mosquitto/usr/bin"
+install  mosquitto_ctrl "/tmp/pkg/mosquitto/usr/bin/mosquitto_ctrl"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_ctrl'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_passwd'
+install -d "/tmp/pkg/mosquitto/usr/bin"
+install  mosquitto_passwd "/tmp/pkg/mosquitto/usr/bin/mosquitto_passwd"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps/mosquitto_passwd'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/apps'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/client'
+install -d "/tmp/pkg/mosquitto/usr/bin"
+install  mosquitto_pub "/tmp/pkg/mosquitto/usr/bin/mosquitto_pub"
+install  mosquitto_sub "/tmp/pkg/mosquitto/usr/bin/mosquitto_sub"
+install  mosquitto_rr "/tmp/pkg/mosquitto/usr/bin/mosquitto_rr"
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/client'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins'
+set -e; for d in auth-by-ip deny-protocol-version dynamic-security message-timestamp payload-modification; do make -C ${d} install; done
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/auth-by-ip'
+# Don't install, these are examples only.
+#install -d "/tmp/pkg/mosquitto/usr/lib"
+#install  mosquitto_auth_by_ip.so "/tmp/pkg/mosquitto/usr/lib/mosquitto_auth_by_ip.so"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/auth-by-ip'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/deny-protocol-version'
+# Don't install, these are examples only.
+#install -d "/tmp/pkg/mosquitto/usr/lib"
+#install  mosquitto_deny_protocol_version.so "/tmp/pkg/mosquitto/usr/lib/mosquitto_deny_protocol_version.so"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/deny-protocol-version'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/dynamic-security'
+install -d "/tmp/pkg/mosquitto/usr/lib"
+install  mosquitto_dynamic_security.so "/tmp/pkg/mosquitto/usr/lib/mosquitto_dynamic_security.so"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/dynamic-security'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/message-timestamp'
+# Don't install, these are examples only.
+#install -d "/tmp/pkg/mosquitto/usr/lib"
+#install  mosquitto_message_timestamp.so "/tmp/pkg/mosquitto/usr/lib/mosquitto_message_timestamp.so"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/message-timestamp'
+make[2]: Entering directory '/tmp/src/mosquitto-2.0.20/plugins/payload-modification'
+# Don't install, these are examples only.
+#install -d "/tmp/pkg/mosquitto/usr/lib"
+#install  mosquitto_payload_modification.so "/tmp/pkg/mosquitto/usr/lib/mosquitto_payload_modification.so"
+make[2]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins/payload-modification'
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/plugins'
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/src'
+install -d "/tmp/pkg/mosquitto/usr/sbin"
+install  mosquitto "/tmp/pkg/mosquitto/usr/sbin/mosquitto"
+install -d "/tmp/pkg/mosquitto/usr/include"
+install ../include/mosquitto_broker.h "/tmp/pkg/mosquitto/usr/include/mosquitto_broker.h"
+install ../include/mosquitto_plugin.h "/tmp/pkg/mosquitto/usr/include/mosquitto_plugin.h"
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/src'
+set -e; for d in man; do make -C ${d} install; done
+make[1]: Entering directory '/tmp/src/mosquitto-2.0.20/man'
+install -d "/tmp/pkg/mosquitto/usr/share/man/man8"
+install -m 644 mosquitto.8 "/tmp/pkg/mosquitto/usr/share/man/man8/mosquitto.8"
+install -d "/tmp/pkg/mosquitto/usr/share/man/man5"
+install -m 644 mosquitto.conf.5 "/tmp/pkg/mosquitto/usr/share/man/man5/mosquitto.conf.5"
+install -d "/tmp/pkg/mosquitto/usr/share/man/man1"
+install -m 644 mosquitto_ctrl.1 "/tmp/pkg/mosquitto/usr/share/man/man1/mosquitto_ctrl.1"
+install -m 644 mosquitto_ctrl_dynsec.1 "/tmp/pkg/mosquitto/usr/share/man/man1/mosquitto_ctrl_dynsec.1"
+install -m 644 mosquitto_passwd.1 "/tmp/pkg/mosquitto/usr/share/man/man1/mosquitto_passwd.1"
+install -m 644 mosquitto_pub.1 "/tmp/pkg/mosquitto/usr/share/man/man1/mosquitto_pub.1"
+install -m 644 mosquitto_sub.1 "/tmp/pkg/mosquitto/usr/share/man/man1/mosquitto_sub.1"
+install -m 644 mosquitto_rr.1 "/tmp/pkg/mosquitto/usr/share/man/man1/mosquitto_rr.1"
+install -d "/tmp/pkg/mosquitto/usr/share/man/man7"
+install -m 644 mqtt.7 "/tmp/pkg/mosquitto/usr/share/man/man7/mqtt.7"
+install -m 644 mosquitto-tls.7 "/tmp/pkg/mosquitto/usr/share/man/man7/mosquitto-tls.7"
+install -d "/tmp/pkg/mosquitto/usr/share/man/man3"
+install -m 644 libmosquitto.3 "/tmp/pkg/mosquitto/usr/share/man/man3/libmosquitto.3"
+make[1]: Leaving directory '/tmp/src/mosquitto-2.0.20/man'
+install -d "/tmp/pkg/mosquitto/etc/mosquitto"
+install -m 644 mosquitto.conf "/tmp/pkg/mosquitto/etc/mosquitto/mosquitto.conf.example"
+install -m 644 aclfile.example "/tmp/pkg/mosquitto/etc/mosquitto/aclfile.example"
+install -m 644 pwfile.example "/tmp/pkg/mosquitto/etc/mosquitto/pwfile.example"
+install -m 644 pskfile.example "/tmp/pkg/mosquitto/etc/mosquitto/pskfile.example"
+>>> mosquitto-dbg*: Running split function dbg...
+>>> mosquitto-dbg*: Preparing subpackage mosquitto-dbg...
+>>> mosquitto-dbg*: Stripping binaries
+>>> mosquitto-dbg*: Running postcheck for mosquitto-dbg
+>>> mosquitto-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/mosquitto-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/mosquitto-dev/usr/lib/pkgconfig'
+'usr/lib/libmosquitto.so' -> '/tmp/pkg/mosquitto-dev/usr/lib/libmosquitto.so'
+'usr/lib/libmosquittopp.so' -> '/tmp/pkg/mosquitto-dev/usr/lib/libmosquittopp.so'
+>>> mosquitto-dev*: Preparing subpackage mosquitto-dev...
+>>> mosquitto-dev*: Stripping binaries
+>>> mosquitto-dev*: Running postcheck for mosquitto-dev
+>>> mosquitto-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/mosquitto-doc/usr/share/man'
+>>> mosquitto-doc*: Preparing subpackage mosquitto-doc...
+>>> mosquitto-doc*: Running postcheck for mosquitto-doc
+>>> mosquitto-libs++*: Running split function _pp...
+>>> mosquitto-libs++*: Preparing subpackage mosquitto-libs++...
+>>> mosquitto-libs++*: Stripping binaries
+>>> mosquitto-libs++*: Running postcheck for mosquitto-libs++
+>>> mosquitto-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/mosquitto-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/mosquitto-openrc/etc/init.d'
+>>> mosquitto-openrc*: Preparing subpackage mosquitto-openrc...
+>>> mosquitto-openrc*: Running postcheck for mosquitto-openrc
+>>> mosquitto-libs*: Running split function libs...
+'usr/lib/libmosquitto.so.1' -> '/tmp/pkg/mosquitto-libs/usr/lib/libmosquitto.so.1'
+>>> mosquitto-libs*: Preparing subpackage mosquitto-libs...
+>>> mosquitto-libs*: Stripping binaries
+>>> mosquitto-libs*: Running postcheck for mosquitto-libs
+>>> mosquitto-clients*: Running split function clients...
+>>> mosquitto-clients*: Preparing subpackage mosquitto-clients...
+>>> mosquitto-clients*: Stripping binaries
+>>> mosquitto-clients*: Running postcheck for mosquitto-clients
+>>> mosquitto*: Running postcheck for mosquitto
+>>> mosquitto*: Preparing package mosquitto...
+>>> mosquitto*: Stripping binaries
+>>> mosquitto*: Script found. /bin/sh added as a dependency for mosquitto-2.0.20-r0.apk
+>>> mosquitto*: Adding .pre-install
+>>> mosquitto-clients*: Scanning shared objects
+>>> mosquitto-dbg*: Scanning shared objects
+>>> mosquitto-dev*: Scanning shared objects
+>>> mosquitto-doc*: Scanning shared objects
+>>> mosquitto-libs++*: Scanning shared objects
+>>> mosquitto-libs*: Scanning shared objects
+>>> mosquitto-openrc*: Scanning shared objects
+>>> mosquitto*: Scanning shared objects
+>>> mosquitto-clients*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcjson.so.1
+	so:libmosquitto.so.1
+>>> mosquitto-clients*: Package size: 108.1 KB
+>>> mosquitto-clients*: Compressing data...
+>>> mosquitto-clients*: Create checksum...
+>>> mosquitto-clients*: Create mosquitto-clients-2.0.20-r0.apk
+>>> mosquitto-dbg*: Tracing dependencies...
+	!mosquitto-clients<2.0.20-r0
+	!mosquitto-clients>2.0.20-r0
+	!mosquitto-libs++<2.0.20-r0
+	!mosquitto-libs++>2.0.20-r0
+	!mosquitto-libs<2.0.20-r0
+	!mosquitto-libs>2.0.20-r0
+	!mosquitto<2.0.20-r0
+	!mosquitto>2.0.20-r0
+>>> mosquitto-dbg*: Package size: 2.4 MB
+>>> mosquitto-dbg*: Compressing data...
+>>> mosquitto-dbg*: Create checksum...
+>>> mosquitto-dbg*: Create mosquitto-dbg-2.0.20-r0.apk
+>>> mosquitto-dev*: Tracing dependencies...
+	mosquitto-libs++=2.0.20-r0
+	mosquitto-libs=2.0.20-r0
+	pkgconfig
+>>> mosquitto-dev*: Package size: 171.6 KB
+>>> mosquitto-dev*: Compressing data...
+>>> mosquitto-dev*: Create checksum...
+>>> mosquitto-dev*: Create mosquitto-dev-2.0.20-r0.apk
+>>> mosquitto-doc*: Tracing dependencies...
+>>> mosquitto-doc*: Package size: 62.9 KB
+>>> mosquitto-doc*: Compressing data...
+>>> mosquitto-doc*: Create checksum...
+>>> mosquitto-doc*: Create mosquitto-doc-2.0.20-r0.apk
+>>> mosquitto-libs++*: Tracing dependencies...
+	so:libmosquitto.so.1
+	so:libstdc++.so.6
+>>> mosquitto-libs++*: Package size: 21.9 KB
+>>> mosquitto-libs++*: Compressing data...
+>>> mosquitto-libs++*: Create checksum...
+>>> mosquitto-libs++*: Create mosquitto-libs++-2.0.20-r0.apk
+>>> mosquitto-libs*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libcares.so.2
+	so:libcrypto.so.3
+	so:libssl.so.3
+>>> mosquitto-libs*: Package size: 93.9 KB
+>>> mosquitto-libs*: Compressing data...
+>>> mosquitto-libs*: Create checksum...
+>>> mosquitto-libs*: Create mosquitto-libs-2.0.20-r0.apk
+>>> mosquitto-openrc*: Tracing dependencies...
+>>> mosquitto-openrc*: Package size: 678.0 B
+>>> mosquitto-openrc*: Compressing data...
+>>> mosquitto-openrc*: Create checksum...
+>>> mosquitto-openrc*: Create mosquitto-openrc-2.0.20-r0.apk
+>>> mosquitto*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcjson.so.1
+	so:libcrypto.so.3
+	so:libmosquitto.so.1
+	so:libssl.so.3
+	so:libwebsockets.so.19
+>>> mosquitto*: Package size: 522.1 KB
+>>> mosquitto*: Compressing data...
+>>> mosquitto*: Create checksum...
+>>> mosquitto*: Create mosquitto-2.0.20-r0.apk
+>>> mosquitto: Updating the main/x86_64 repository index...
+>>> mosquitto: Signing the index...
+>>> mosquitto: Cleaning up srcdir
+>>> mosquitto: Cleaning up build chroot
+>>> mosquitto: Cleaning up pkgdir

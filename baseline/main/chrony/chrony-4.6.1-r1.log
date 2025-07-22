@@ -1,0 +1,526 @@
+>>> chrony: Validating /home/packager/oily-pine/main/chrony/APKBUILD...
+>>> chrony: Cleaning up srcdir
+>>> chrony: Cleaning up pkgdir
+>>> chrony: Cleaning up tmpdir
+>>> chrony: Fetching https://chrony-project.org/releases/chrony-4.6.1.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  621k  100  621k    0     0   596k      0  0:00:01  0:00:01 --:--:--  597k
+>>> chrony: Fetching https://chrony-project.org/releases/chrony-4.6.1.tar.gz
+>>> chrony: Checking sha512sums...
+chrony-4.6.1.tar.gz: OK
+max_resolve_interval.patch: OK
+chronyd.confd: OK
+chronyd.initd: OK
+chrony.conf: OK
+timepps.h: OK
+>>> chrony: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/103) Installing musl (1.2.5-r10)
+(2/103) Installing libcrypto3 (3.5.0-r0)
+(3/103) Installing ca-certificates-bundle (20241121-r2)
+(4/103) Installing libssl3 (3.5.0-r0)
+(5/103) Installing zlib (1.3.1-r2)
+(6/103) Installing libapk2 (2.14.9-r2)
+(7/103) Installing apk-tools (2.14.9-r2)
+(8/103) Installing libcap2 (2.76-r0)
+(9/103) Installing libcap-getcap (2.76-r0)
+(10/103) Installing fakeroot (1.37.1.1-r0)
+(11/103) Installing scanelf (1.3.8-r1)
+(12/103) Installing musl-utils (1.2.5-r10)
+(13/103) Installing libgcc (14.3.0-r1)
+(14/103) Installing libstdc++ (14.3.0-r1)
+(15/103) Installing lzip (1.25-r0)
+(16/103) Installing openssl (3.5.0-r0)
+(17/103) Installing patch (2.8-r0)
+(18/103) Installing pkgconf (2.4.3-r0)
+(19/103) Installing acl-libs (2.3.2-r1)
+(20/103) Installing tar (1.35-r3)
+(21/103) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/103) Installing ssl_client (1.37.0-r18)
+(23/103) Installing busybox-binsh (1.37.0-r18)
+(24/103) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/103) Installing abuild-sudo (3.15.0-r0)
+(26/103) Installing alpine-baselayout-data (3.7.0-r0)
+(27/103) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/103) Installing bridge (1.5-r5)
+(29/103) Installing ifupdown-ng (0.12.1-r7)
+(30/103) Installing openrc-user (0.62.2-r2)
+(31/103) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/103) Installing mdev-conf (4.8-r0)
+(33/103) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/103) Installing alpine-conf (3.20.0-r0)
+(35/103) Installing alpine-keys (2.5-r0)
+(36/103) Installing alpine-release (3.22.0-r0)
+(37/103) Installing busybox-openrc (1.37.0-r18)
+(38/103) Installing busybox-suid (1.37.0-r18)
+(39/103) Installing alpine-base (3.22.0-r0)
+(40/103) Installing ca-certificates (20241121-r2)
+(41/103) Installing gmp (6.3.0-r3)
+(42/103) Installing libffi (3.4.8-r0)
+(43/103) Installing yaml (0.2.5-r2)
+(44/103) Installing ruby-libs (3.4.4-r0)
+(45/103) Installing libucontext (1.3.2-r0)
+(46/103) Installing ruby (3.4.4-r0)
+(47/103) Installing asciidoctor (2.0.23-r1)
+(48/103) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(49/103) Installing libncursesw (6.5_p20250503-r0)
+(50/103) Installing readline (8.2.13-r1)
+(51/103) Installing bash (5.2.37-r0)
+Executing bash-5.2.37-r0.post-install
+(52/103) Installing jansson (2.14.1-r0)
+(53/103) Installing zstd-libs (1.5.7-r0)
+(54/103) Installing binutils (2.44-r0)
+(55/103) Installing libmagic (5.46-r2)
+(56/103) Installing file (5.46-r2)
+(57/103) Installing libgomp (14.3.0-r1)
+(58/103) Installing libatomic (14.3.0-r1)
+(59/103) Installing isl26 (0.26-r1)
+(60/103) Installing mpfr4 (4.2.1_p1-r0)
+(61/103) Installing mpc1 (1.3.1-r1)
+(62/103) Installing gcc (14.3.0-r1)
+(63/103) Installing libstdc++-dev (14.3.0-r1)
+(64/103) Installing musl-dev (1.2.5-r10)
+(65/103) Installing g++ (14.3.0-r1)
+(66/103) Installing make (4.4.1-r3)
+(67/103) Installing fortify-headers (1.1-r5)
+(68/103) Installing build-base (0.5-r3)
+(69/103) Installing brotli-libs (1.1.0-r2)
+(70/103) Installing c-ares (1.34.5-r0)
+(71/103) Installing libunistring (1.3-r0)
+(72/103) Installing libidn2 (2.3.7-r0)
+(73/103) Installing nghttp2-libs (1.65.0-r0)
+(74/103) Installing libpsl (0.21.5-r3)
+(75/103) Installing libcurl (8.14.0-r2)
+(76/103) Installing libexpat (2.7.1-r0)
+(77/103) Installing pcre2 (10.43-r1)
+(78/103) Installing git (2.49.0-r0)
+(79/103) Installing git-init-template (2.49.0-r0)
+(80/103) Installing nettle (3.10.1-r0)
+(81/103) Installing libtasn1 (4.20.0-r0)
+(82/103) Installing p11-kit (0.25.5-r2)
+(83/103) Installing gnutls (3.8.8-r0)
+(84/103) Installing gnutls-c++ (3.8.8-r0)
+(85/103) Installing libgmpxx (6.3.0-r3)
+(86/103) Installing gmp-dev (6.3.0-r3)
+(87/103) Installing nettle-dev (3.10.1-r0)
+(88/103) Installing libidn2-dev (2.3.7-r0)
+(89/103) Installing libtasn1-progs (4.20.0-r0)
+(90/103) Installing libtasn1-dev (4.20.0-r0)
+(91/103) Installing p11-kit-dev (0.25.5-r2)
+(92/103) Installing zlib-dev (1.3.1-r2)
+(93/103) Installing gnutls-dev (3.8.8-r0)
+(94/103) Installing linux-headers (6.14.2-r0)
+(95/103) Installing libcap-dev (2.76-r0)
+(96/103) Installing libseccomp (2.6.0-r0)
+(97/103) Installing libseccomp-dev (2.6.0-r0)
+(98/103) Installing libbz2 (1.0.8-r6)
+(99/103) Installing perl (5.40.2-r0)
+(100/103) Installing perl-error (0.17030-r0)
+(101/103) Installing perl-git (2.49.0-r0)
+(102/103) Installing git-perl (2.49.0-r0)
+(103/103) Installing texinfo (7.2-r0)
+Executing busybox-1.37.0-r18.trigger
+Executing ca-certificates-20241121-r2.trigger
+OK: 337 MiB in 103 packages
+>>> chrony: Fetching https://chrony-project.org/releases/chrony-4.6.1.tar.gz
+>>> chrony: Checking sha512sums...
+chrony-4.6.1.tar.gz: OK
+max_resolve_interval.patch: OK
+chronyd.confd: OK
+chronyd.initd: OK
+chrony.conf: OK
+timepps.h: OK
+>>> chrony: Unpacking /var/cache/distfiles/chrony-4.6.1.tar.gz...
+>>> chrony: max_resolve_interval.patch
+patching file ntp_sources.c
+Hunk #1 succeeded at 113 (offset 4 lines).
+Configuring for  Linux-x86_64
+Checking for cc : Yes
+Checking for -fwrapv : Yes
+Checking for pkg-config : Yes
+Checking for 64-bit time_t : Yes
+Checking for math : Yes
+Checking for struct in_pktinfo : Yes
+Checking for IPv6 support : Yes
+Checking for struct in6_pktinfo : Yes
+Checking for O_NOFOLLOW flag : Yes
+Checking for clock_gettime() : Yes
+Checking for getaddrinfo() : Yes
+Checking for pthread : Yes
+Checking for getrandom() : Yes
+Checking for recvmmsg() : No
+Checking for recvmmsg() with _GNU_SOURCE : Yes
+Checking for SW/HW timestamping : Yes
+Checking for other timestamping options : Yes
+Checking for <sys/timepps.h> : Yes
+Checking for PPSAPI : Yes
+Checking for libcap : Yes
+Checking for seccomp : Yes
+Checking for <linux/rtc.h> : Yes
+Checking for <linux/ptp_clock.h> : Yes
+Checking for pthread_setschedparam() : Yes
+Checking for mlockall() : Yes
+Checking for setrlimit(RLIMIT_MEMLOCK, ...) : Yes
+Checking for nettle : Yes
+Checking for CMAC in nettle : Yes
+Checking for TLS1.3 in gnutls : Yes
+Checking for AES-SIV-CMAC in nettle : Yes
+Checking for AES-GCM-SIV in nettle : Yes
+Features : +CMDMON +NTP +REFCLOCK +RTC +PRIVDROP +SCFILTER +SIGND +ASYNCDNS +NTS -READLINE +SECHASH +IPV6 -DEBUG
+Creating Makefile
+Creating doc/Makefile
+Creating test/unit/Makefile
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c array.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c cmdparse.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c conf.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c leapdb.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c local.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c logging.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c main.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c memory.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c quantiles.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c reference.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c regress.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c rtc.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c samplefilt.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sched.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c socket.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sources.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sourcestats.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c stubs.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c smooth.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sys.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sys_null.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c tempcomp.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c util.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sys_generic.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sys_linux.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sys_timex.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c sys_posix.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c cmdmon.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c manual.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c pktlength.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_auth.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_core.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_ext.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_io.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_sources.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_signd.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c addrfilt.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c clientlog.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c keys.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nameserv.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c refclock.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c refclock_phc.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c refclock_pps.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c refclock_shm.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c refclock_sock.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nameserv_async.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c hwclock.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c ntp_io_linux.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c privops.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c rtc_linux.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c cmac_nettle.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c hash_nettle.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c siv_nettle.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nts_ke_client.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nts_ke_server.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nts_ke_session.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nts_ntp_auth.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nts_ntp_client.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c nts_ntp_server.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -I./pps-tools/  -I/usr/include/p11-kit-1 -c client.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -fwrapv -I./pps-tools/  -I/usr/include/p11-kit-1 -c getdate.c
+make -C doc docs
+make[1]: Entering directory '/tmp/src/chrony-4.6.1/doc'
+sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" < chrony.conf.man.in > chrony.conf.man
+sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" < chronyc.man.in > chronyc.man
+sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" < chronyd.man.in > chronyd.man
+asciidoctor  -b html -o - chrony.conf.adoc | sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" > chrony.conf.html
+asciidoctor  -b html -o - chronyc.adoc | sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" > chronyc.html
+asciidoctor  -b html -o - chronyd.adoc | sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" > chronyd.html
+asciidoctor  -b html -o - faq.adoc | sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" > faq.html
+asciidoctor  -b html -o - installation.adoc | sed -e "s%\@SYSCONFDIR\@%/etc/chrony%g; s%\@BINDIR\@%/usr/bin%g; s%\@SBINDIR\@%/usr/sbin%g; s%\@CHRONY_VERSION\@%4.6.1%g; s%\@DEFAULT_HWCLOCK_FILE\@%%g; s%\@DEFAULT_PID_FILE\@%/var/run/chrony/chronyd.pid%g; s%\@DEFAULT_RTC_DEVICE\@%/dev/rtc%g; s%\@DEFAULT_USER\@%chrony%g; s%\@CHRONYRUNDIR\@%/run/chrony%g; s%\@CHRONYVARDIR\@%/var/lib/chrony%g;" > installation.html
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o chronyd array.o cmdparse.o conf.o leapdb.o local.o logging.o main.o memory.o quantiles.o reference.o regress.o rtc.o samplefilt.o sched.o socket.o sources.o sourcestats.o stubs.o smooth.o sys.o sys_null.o tempcomp.o util.o sys_generic.o sys_linux.o sys_timex.o sys_posix.o cmdmon.o manual.o pktlength.o ntp_auth.o ntp_core.o ntp_ext.o ntp_io.o ntp_sources.o ntp_signd.o addrfilt.o clientlog.o keys.o nameserv.o refclock.o refclock_phc.o refclock_pps.o refclock_shm.o refclock_sock.o nameserv_async.o hwclock.o ntp_io_linux.o privops.o rtc_linux.o cmac_nettle.o hash_nettle.o siv_nettle.o nts_ke_client.o nts_ke_server.o nts_ke_session.o nts_ntp_auth.o nts_ntp_client.o nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lnettle -lgnutls -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o chronyc array.o client.o cmdparse.o getdate.o memory.o nameserv.o pktlength.o socket.o util.o cmac_nettle.o hash_nettle.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -lnettle -lgnutls 
+make[1]: Leaving directory '/tmp/src/chrony-4.6.1/doc'
+make -C test/unit check
+make[1]: Entering directory '/tmp/src/chrony-4.6.1/test/unit'
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c addrfilt.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c test.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c array.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c clientlog.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c cmac.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c hash.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c hwclock.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c keys.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c leapdb.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c ntp_auth.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c ntp_core.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c ntp_ext.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c ntp_sources.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c nts_ke_client.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c nts_ke_server.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c nts_ke_session.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c nts_ntp_auth.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c nts_ntp_client.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c nts_ntp_server.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c quantiles.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c regress.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c samplefilt.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c siv.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c smooth.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c socket.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c sources.c
+cc -I../..  -I./pps-tools/  -I/usr/include/p11-kit-1 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -c util.c
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o addrfilt.test addrfilt.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o array.test array.o test.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o cmac.test cmac.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o hash.test hash.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o hwclock.test hwclock.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o keys.test keys.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o leapdb.test leapdb.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o ntp_auth.test ntp_auth.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o ntp_ext.test ntp_ext.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o nts_ke_client.test nts_ke_client.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o nts_ke_server.test nts_ke_server.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o nts_ke_session.test nts_ke_session.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o nts_ntp_auth.test nts_ntp_auth.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o nts_ntp_client.test nts_ntp_client.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o nts_ntp_server.test nts_ntp_server.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o quantiles.test quantiles.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o regress.test regress.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o samplefilt.test samplefilt.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o siv.test siv.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o smooth.test smooth.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o socket.test socket.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o sources.test sources.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o util.test util.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o clientlog.test clientlog.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o ntp_core.test ntp_core.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_sources.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -flto=auto -pthread -o ntp_sources.test ntp_sources.o test.o ../../array.o ../../cmdparse.o ../../conf.o ../../leapdb.o ../../local.o ../../logging.o ../../memory.o ../../quantiles.o ../../reference.o ../../regress.o ../../rtc.o ../../samplefilt.o ../../sched.o ../../socket.o ../../sources.o ../../sourcestats.o ../../stubs.o ../../smooth.o ../../sys.o ../../sys_null.o ../../tempcomp.o ../../util.o ../../sys_generic.o ../../sys_linux.o ../../sys_timex.o ../../sys_posix.o ../../cmdmon.o ../../manual.o ../../pktlength.o ../../ntp_auth.o ../../ntp_core.o ../../ntp_ext.o ../../ntp_io.o ../../ntp_signd.o ../../addrfilt.o ../../clientlog.o ../../keys.o ../../nameserv.o ../../refclock.o ../../refclock_phc.o ../../refclock_pps.o ../../refclock_shm.o ../../refclock_sock.o ../../nameserv_async.o ../../hwclock.o ../../ntp_io_linux.o ../../privops.o ../../rtc_linux.o ../../cmac_nettle.o ../../hash_nettle.o ../../siv_nettle.o ../../nts_ke_client.o ../../nts_ke_server.o ../../nts_ke_session.o ../../nts_ntp_auth.o ../../nts_ntp_client.o ../../nts_ntp_server.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs  -lnettle -lgnutls  -lcap -lseccomp
+Testing addrfilt                       PASS
+Testing array                          PASS
+Testing clientlog                      PASS
+Testing cmac                           PASS
+Testing hash                           PASS
+Testing hwclock                        PASS
+Testing keys                           PASS
+Testing leapdb                         PASS
+Testing ntp_auth                       PASS
+Testing ntp_core                       PASS
+Testing ntp_ext                        PASS
+Testing ntp_sources                    PASS
+Testing nts_ke_client                  PASS
+Testing nts_ke_server                  PASS
+Testing nts_ke_session                 PASS
+Testing nts_ntp_auth                   PASS
+Testing nts_ntp_client                 PASS
+Testing nts_ntp_server                 PASS
+Testing quantiles                      PASS
+Testing regress                        PASS
+Testing samplefilt                     PASS
+Testing siv                            PASS
+Testing smooth                         PASS
+Testing socket                         PASS
+Testing sources                        PASS
+Testing util                           PASS
+make[1]: Leaving directory '/tmp/src/chrony-4.6.1/test/unit'
+cd test/simulation && ./run -i 20 -m 2
+001-defaults                                       SKIP
+002-largenetwork                                   SKIP
+003-largefreqoffset                                SKIP
+004-largetimeoffset                                SKIP
+005-externalstep                                   SKIP
+006-largejitter                                    SKIP
+007-largewander                                    SKIP
+008-ntpera                                         SKIP
+009-sourceselection                                SKIP
+010-multrecv                                       SKIP
+011-asymjitter                                     SKIP
+012-daemonts                                       SKIP
+013-nameserv                                       SKIP
+101-poll                                           SKIP
+102-iburst                                         SKIP
+103-initstepslew                                   SKIP
+104-driftfile                                      SKIP
+105-ntpauth                                        SKIP
+106-refclock                                       SKIP
+107-allowdeny                                      SKIP
+108-peer                                           SKIP
+109-makestep                                       SKIP
+110-chronyc                                        SKIP
+111-knownclient                                    SKIP
+112-port                                           SKIP
+113-leapsecond                                     SKIP
+114-presend                                        SKIP
+115-cmdmontime                                     SKIP
+116-minsources                                     SKIP
+117-fallbackdrift                                  SKIP
+118-maxdelay                                       SKIP
+119-smoothtime                                     SKIP
+120-selectoptions                                  SKIP
+121-local                                          SKIP
+122-xleave                                         SKIP
+123-mindelay                                       SKIP
+124-tai                                            SKIP
+125-packetloss                                     SKIP
+126-burst                                          SKIP
+127-filter                                         SKIP
+128-nocontrol                                      SKIP
+129-reload                                         SKIP
+130-quit                                           SKIP
+131-maxchange                                      SKIP
+132-logchange                                      SKIP
+133-hwtimestamp                                    SKIP
+134-log                                            SKIP
+135-ratelimit                                      SKIP
+136-broadcast                                      SKIP
+137-pool                                           SKIP
+138-syncloop                                       SKIP
+139-nts                                            SKIP
+140-noclientlog                                    SKIP
+141-copy                                           SKIP
+142-ntpoverptp                                     SKIP
+143-manual                                         SKIP
+144-monoroot                                       SKIP
+145-rtc                                            SKIP
+146-offline                                        SKIP
+147-refresh                                        SKIP
+148-replacement                                    SKIP
+201-freqaccumulation                               SKIP
+202-prefer                                         SKIP
+203-initreload                                     SKIP
+
+SUMMARY:
+  TOTAL  64
+  PASSED 0
+  FAILED 0    () ()
+  SKIPPED 64   (001-defaults 002-largenetwork 003-largefreqoffset 004-largetimeoffset 005-externalstep 006-largejitter 007-largewander 008-ntpera 009-sourceselection 010-multrecv 011-asymjitter 012-daemonts 013-nameserv 101-poll 102-iburst 103-initstepslew 104-driftfile 105-ntpauth 106-refclock 107-allowdeny 108-peer 109-makestep 110-chronyc 111-knownclient 112-port 113-leapsecond 114-presend 115-cmdmontime 116-minsources 117-fallbackdrift 118-maxdelay 119-smoothtime 120-selectoptions 121-local 122-xleave 123-mindelay 124-tai 125-packetloss 126-burst 127-filter 128-nocontrol 129-reload 130-quit 131-maxchange 132-logchange 133-hwtimestamp 134-log 135-ratelimit 136-broadcast 137-pool 138-syncloop 139-nts 140-noclientlog 141-copy 142-ntpoverptp 143-manual 144-monoroot 145-rtc 146-offline 147-refresh 148-replacement 201-freqaccumulation 202-prefer 203-initreload)
+cd test/system && ./run
+001-minimal   SKIP (not root)
+
+002-extended   SKIP (not root)
+
+003-memlock   SKIP (not root)
+
+004-priority   SKIP (not root)
+
+006-privdrop   SKIP (not root)
+
+007-cmdmon   SKIP (not root)
+
+008-confload   SKIP (not root)
+
+009-binddevice   SKIP (not root)
+
+010-nts   SKIP (not root)
+
+011-systemd   SKIP (not root)
+
+099-scfilter   SKIP (not root)
+
+100-clockupdate   SKIP (destructive test)
+
+101-rtc   SKIP (destructive test)
+
+102-hwtimestamp   SKIP (destructive test)
+
+103-refclock   SKIP (destructive test)
+
+104-systemdirs   SKIP (destructive test)
+
+199-scfilter   SKIP (destructive test)
+
+
+SUMMARY:
+  TOTAL  17
+  PASSED 0
+  FAILED 0    ()
+  SKIPPED 17   (001-minimal 002-extended 003-memlock 004-priority 006-privdrop 007-cmdmon 008-confload 009-binddevice 010-nts 011-systemd 099-scfilter 100-clockupdate 101-rtc 102-hwtimestamp 103-refclock 104-systemdirs 199-scfilter)
+>>> chrony: Entering fakeroot...
+[ -d /tmp/pkg/chrony/etc/chrony ] || mkdir -p /tmp/pkg/chrony/etc/chrony
+[ -d /tmp/pkg/chrony/usr/sbin ] || mkdir -p /tmp/pkg/chrony/usr/sbin
+[ -d /tmp/pkg/chrony/usr/bin ] || mkdir -p /tmp/pkg/chrony/usr/bin
+[ -d /tmp/pkg/chrony/var/lib/chrony ] || mkdir -p /tmp/pkg/chrony/var/lib/chrony
+if [ -f /tmp/pkg/chrony/usr/sbin/chronyd ]; then rm -f /tmp/pkg/chrony/usr/sbin/chronyd ; fi
+if [ -f /tmp/pkg/chrony/usr/bin/chronyc ]; then rm -f /tmp/pkg/chrony/usr/bin/chronyc ; fi
+cp chronyd /tmp/pkg/chrony/usr/sbin/chronyd
+chmod 755 /tmp/pkg/chrony/usr/sbin/chronyd
+cp chronyc /tmp/pkg/chrony/usr/bin/chronyc
+chmod 755 /tmp/pkg/chrony/usr/bin/chronyc
+make -C doc install
+make[1]: Entering directory '/tmp/src/chrony-4.6.1/doc'
+[ -d /tmp/pkg/chrony/usr/share/man/man1 ] || mkdir -p /tmp/pkg/chrony/usr/share/man/man1
+[ -d /tmp/pkg/chrony/usr/share/man/man5 ] || mkdir -p /tmp/pkg/chrony/usr/share/man/man5
+[ -d /tmp/pkg/chrony/usr/share/man/man8 ] || mkdir -p /tmp/pkg/chrony/usr/share/man/man8
+cp chronyc.man /tmp/pkg/chrony/usr/share/man/man1/chronyc.1
+chmod 644 /tmp/pkg/chrony/usr/share/man/man1/chronyc.1
+cp chronyd.man /tmp/pkg/chrony/usr/share/man/man8/chronyd.8
+chmod 644 /tmp/pkg/chrony/usr/share/man/man8/chronyd.8
+cp chrony.conf.man /tmp/pkg/chrony/usr/share/man/man5/chrony.conf.5
+chmod 644 /tmp/pkg/chrony/usr/share/man/man5/chrony.conf.5
+make[1]: Leaving directory '/tmp/src/chrony-4.6.1/doc'
+>>> chrony-dbg*: Running split function dbg...
+>>> chrony-dbg*: Preparing subpackage chrony-dbg...
+>>> chrony-dbg*: Stripping binaries
+>>> chrony-dbg*: Running postcheck for chrony-dbg
+>>> chrony-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/chrony-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/chrony-doc/usr/share/man'
+>>> chrony-doc*: Preparing subpackage chrony-doc...
+>>> chrony-doc*: Running postcheck for chrony-doc
+>>> chrony-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/chrony-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/chrony-openrc/etc/init.d'
+>>> chrony-openrc*: Preparing subpackage chrony-openrc...
+>>> chrony-openrc*: Running postcheck for chrony-openrc
+>>> chrony*: Running postcheck for chrony
+>>> chrony*: Preparing package chrony...
+>>> chrony*: Stripping binaries
+>>> chrony*: Script found. /bin/sh added as a dependency for chrony-4.6.1-r1.apk
+>>> chrony*: Adding .pre-install
+>>> chrony*: Adding .pre-upgrade
+>>> chrony-dbg*: Scanning shared objects
+>>> chrony-doc*: Scanning shared objects
+>>> chrony-openrc*: Scanning shared objects
+>>> chrony*: Scanning shared objects
+>>> chrony-dbg*: Tracing dependencies...
+	!chrony<4.6.1-r1
+	!chrony>4.6.1-r1
+>>> chrony-dbg*: Package size: 1.1 MB
+>>> chrony-dbg*: Compressing data...
+>>> chrony-dbg*: Create checksum...
+>>> chrony-dbg*: Create chrony-dbg-4.6.1-r1.apk
+>>> chrony-doc*: Tracing dependencies...
+>>> chrony-doc*: Package size: 68.4 KB
+>>> chrony-doc*: Compressing data...
+>>> chrony-doc*: Create checksum...
+>>> chrony-doc*: Create chrony-doc-4.6.1-r1.apk
+>>> chrony-openrc*: Tracing dependencies...
+>>> chrony-openrc*: Package size: 1.4 KB
+>>> chrony-openrc*: Compressing data...
+>>> chrony-openrc*: Create checksum...
+>>> chrony-openrc*: Create chrony-openrc-4.6.1-r1.apk
+>>> chrony*: Tracing dependencies...
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcap.so.2
+	so:libgnutls.so.30
+	so:libnettle.so.8
+	so:libseccomp.so.2
+>>> chrony*: Package size: 313.5 KB
+>>> chrony*: Compressing data...
+>>> chrony*: Create checksum...
+>>> chrony*: Create chrony-4.6.1-r1.apk
+>>> chrony: Updating the main/x86_64 repository index...
+>>> chrony: Signing the index...
+>>> chrony: Cleaning up srcdir
+>>> chrony: Cleaning up build chroot
+>>> chrony: Cleaning up pkgdir

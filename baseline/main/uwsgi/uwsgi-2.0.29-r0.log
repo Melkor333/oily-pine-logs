@@ -1,0 +1,1842 @@
+>>> uwsgi: Validating /home/packager/oily-pine/main/uwsgi/APKBUILD...
+>>> uwsgi: Cleaning up srcdir
+>>> uwsgi: Cleaning up pkgdir
+>>> uwsgi: Cleaning up tmpdir
+>>> uwsgi: Fetching uwsgi-2.0.29.tar.gz::https://github.com/unbit/uwsgi/archive/refs/tags/2.0.29.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  802k    0  802k    0     0   890k      0 --:--:-- --:--:-- --:--:-- 2268k
+>>> uwsgi: Fetching uwsgi-2.0.29.tar.gz::https://github.com/unbit/uwsgi/archive/refs/tags/2.0.29.tar.gz
+>>> uwsgi: Checking sha512sums...
+uwsgi-2.0.29.tar.gz: OK
+uwsgi.initd: OK
+uwsgi.ini: OK
+readme.emperor: OK
+alpine.buildconf: OK
+musl-ucontext.patch: OK
+>>> uwsgi: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/136) Installing musl (1.2.5-r10)
+(2/136) Installing libcrypto3 (3.5.0-r0)
+(3/136) Installing ca-certificates-bundle (20241121-r2)
+(4/136) Installing libssl3 (3.5.0-r0)
+(5/136) Installing zlib (1.3.1-r2)
+(6/136) Installing libapk2 (2.14.9-r2)
+(7/136) Installing apk-tools (2.14.9-r2)
+(8/136) Installing libcap2 (2.76-r0)
+(9/136) Installing libcap-getcap (2.76-r0)
+(10/136) Installing fakeroot (1.37.1.1-r0)
+(11/136) Installing scanelf (1.3.8-r1)
+(12/136) Installing musl-utils (1.2.5-r10)
+(13/136) Installing libgcc (14.3.0-r1)
+(14/136) Installing libstdc++ (14.3.0-r1)
+(15/136) Installing lzip (1.25-r0)
+(16/136) Installing openssl (3.5.0-r0)
+(17/136) Installing patch (2.8-r0)
+(18/136) Installing pkgconf (2.4.3-r0)
+(19/136) Installing acl-libs (2.3.2-r1)
+(20/136) Installing tar (1.35-r3)
+(21/136) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/136) Installing ssl_client (1.37.0-r18)
+(23/136) Installing busybox-binsh (1.37.0-r18)
+(24/136) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/136) Installing abuild-sudo (3.15.0-r0)
+(26/136) Installing alpine-baselayout-data (3.7.0-r0)
+(27/136) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/136) Installing bridge (1.5-r5)
+(29/136) Installing ifupdown-ng (0.12.1-r7)
+(30/136) Installing openrc-user (0.62.2-r2)
+(31/136) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/136) Installing mdev-conf (4.8-r0)
+(33/136) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/136) Installing alpine-conf (3.20.0-r0)
+(35/136) Installing alpine-keys (2.5-r0)
+(36/136) Installing alpine-release (3.22.0-r0)
+(37/136) Installing busybox-openrc (1.37.0-r18)
+(38/136) Installing busybox-suid (1.37.0-r18)
+(39/136) Installing alpine-base (3.22.0-r0)
+(40/136) Installing libattr (2.5.2-r2)
+(41/136) Installing attr-dev (2.5.2-r2)
+(42/136) Installing jansson (2.14.1-r0)
+(43/136) Installing zstd-libs (1.5.7-r0)
+(44/136) Installing binutils (2.44-r0)
+(45/136) Installing libmagic (5.46-r2)
+(46/136) Installing file (5.46-r2)
+(47/136) Installing libgomp (14.3.0-r1)
+(48/136) Installing libatomic (14.3.0-r1)
+(49/136) Installing gmp (6.3.0-r3)
+(50/136) Installing isl26 (0.26-r1)
+(51/136) Installing mpfr4 (4.2.1_p1-r0)
+(52/136) Installing mpc1 (1.3.1-r1)
+(53/136) Installing gcc (14.3.0-r1)
+(54/136) Installing libstdc++-dev (14.3.0-r1)
+(55/136) Installing musl-dev (1.2.5-r10)
+(56/136) Installing g++ (14.3.0-r1)
+(57/136) Installing make (4.4.1-r3)
+(58/136) Installing fortify-headers (1.1-r5)
+(59/136) Installing build-base (0.5-r3)
+(60/136) Installing brotli-libs (1.1.0-r2)
+(61/136) Installing brotli (1.1.0-r2)
+(62/136) Installing brotli-dev (1.1.0-r2)
+(63/136) Installing c-ares (1.34.5-r0)
+(64/136) Installing c-ares-dev (1.34.5-r0)
+(65/136) Installing libunistring (1.3-r0)
+(66/136) Installing libidn2 (2.3.7-r0)
+(67/136) Installing libidn2-dev (2.3.7-r0)
+(68/136) Installing libpsl (0.21.5-r3)
+(69/136) Installing libpsl-utils (0.21.5-r3)
+(70/136) Installing libpsl-dev (0.21.5-r3)
+(71/136) Installing nghttp2-libs (1.65.0-r0)
+(72/136) Installing nghttp2-dev (1.65.0-r0)
+(73/136) Installing openssl-dev (3.5.0-r0)
+(74/136) Installing zlib-dev (1.3.1-r2)
+(75/136) Installing zstd (1.5.7-r0)
+(76/136) Installing zstd-dev (1.5.7-r0)
+(77/136) Installing libcurl (8.14.0-r2)
+(78/136) Installing curl-dev (8.14.0-r2)
+(79/136) Installing geoip (1.6.12-r6)
+(80/136) Installing geoip-dev (1.6.12-r6)
+(81/136) Installing libexpat (2.7.1-r0)
+(82/136) Installing pcre2 (10.43-r1)
+(83/136) Installing git (2.49.0-r0)
+(84/136) Installing git-init-template (2.49.0-r0)
+(85/136) Installing jansson-dev (2.14.1-r0)
+(86/136) Installing linux-headers (6.14.2-r0)
+(87/136) Installing libcap-dev (2.76-r0)
+(88/136) Installing libpq (17.5-r0)
+(89/136) Installing libpq-dev (17.5-r0)
+(90/136) Installing libucontext (1.3.2-r0)
+(91/136) Installing libucontext-dev (1.3.2-r0)
+(92/136) Installing xz-libs (5.8.1-r0)
+(93/136) Installing xz (5.8.1-r0)
+(94/136) Installing xz-dev (5.8.1-r0)
+(95/136) Installing libxml2 (2.13.8-r0)
+(96/136) Installing libxml2-utils (2.13.8-r0)
+(97/136) Installing libxml2-dev (2.13.8-r0)
+(98/136) Installing libxslt (1.1.43-r3)
+(99/136) Installing libxslt-dev (1.1.43-r3)
+(100/136) Installing skalibs-libs (2.14.4.0-r0)
+(101/136) Installing utmps-libs (0.1.3.1-r0)
+(102/136) Installing linux-pam (1.7.0-r4)
+(103/136) Installing linux-pam-dev (1.7.0-r4)
+(104/136) Installing linenoise (1.0-r5)
+(105/136) Installing lua5.3-libs (5.3.6-r6)
+(106/136) Installing lua5.3 (5.3.6-r6)
+(107/136) Installing lua5.3-dev (5.3.6-r6)
+(108/136) Installing mailcap (2.1.54-r0)
+(109/136) Installing bsd-compat-headers (0.7.2-r6)
+(110/136) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(111/136) Installing libncursesw (6.5_p20250503-r0)
+(112/136) Installing libformw (6.5_p20250503-r0)
+(113/136) Installing libmenuw (6.5_p20250503-r0)
+(114/136) Installing libpanelw (6.5_p20250503-r0)
+(115/136) Installing libncurses++ (6.5_p20250503-r0)
+(116/136) Installing ncurses-dev (6.5_p20250503-r0)
+(117/136) Installing libedit (20250104.3.1-r1)
+(118/136) Installing libedit-dev (20250104.3.1-r1)
+(119/136) Installing libpcre2-16 (10.43-r1)
+(120/136) Installing libpcre2-32 (10.43-r1)
+(121/136) Installing pcre2-dev (10.43-r1)
+(122/136) Installing libbz2 (1.0.8-r6)
+(123/136) Installing libffi (3.4.8-r0)
+(124/136) Installing gdbm (1.24-r0)
+(125/136) Installing mpdecimal (4.0.1-r0)
+(126/136) Installing readline (8.2.13-r1)
+(127/136) Installing sqlite-libs (3.50.0-r0)
+(128/136) Installing python3 (3.12.10-r1)
+(129/136) Installing python3-pycache-pyc0 (3.12.10-r1)
+(130/136) Installing pyc (3.12.10-r1)
+(131/136) Installing python3-pyc (3.12.10-r1)
+(132/136) Installing python3-dev (3.12.10-r1)
+(133/136) Installing libsodium (1.0.20-r0)
+(134/136) Installing libzmq (4.3.5-r2)
+(135/136) Installing libsodium-dev (1.0.20-r0)
+(136/136) Installing zeromq-dev (4.3.5-r2)
+Executing busybox-1.37.0-r18.trigger
+OK: 362 MiB in 136 packages
+>>> uwsgi: Fetching uwsgi-2.0.29.tar.gz::https://github.com/unbit/uwsgi/archive/refs/tags/2.0.29.tar.gz
+>>> uwsgi: Checking sha512sums...
+uwsgi-2.0.29.tar.gz: OK
+uwsgi.initd: OK
+uwsgi.ini: OK
+readme.emperor: OK
+alpine.buildconf: OK
+musl-ucontext.patch: OK
+>>> uwsgi: Unpacking /var/cache/distfiles/uwsgi-2.0.29.tar.gz...
+>>> uwsgi: musl-ucontext.patch
+patching file plugins/ugreen/uwsgiplugin.py
+>>> uwsgi: Building core
+core/ssl.c: In function 'uwsgi_ssl_new_server_context':
+core/ssl.c:268:17: warning: 'PEM_read_bio_DHparams' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  268 |                 DH *dh = PEM_read_bio_DHparams(bio, NULL, NULL, NULL);
+      |                 ^~
+In file included from /usr/include/openssl/ssl.h:37,
+                 from ./uwsgi.h:357,
+                 from core/ssl.c:1:
+/usr/include/openssl/pem.h:478:1: note: declared here
+  478 | DECLARE_PEM_rw_attr(OSSL_DEPRECATEDIN_3_0, DHparams, DH)
+      | ^~~~~~~~~~~~~~~~~~~
+core/ssl.c:273:25: warning: 'DH_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  273 |                         DH_free(dh);
+      |                         ^~~~~~~
+In file included from /usr/include/openssl/dsa.h:31,
+                 from /usr/include/openssl/x509.h:37,
+                 from /usr/include/openssl/ssl.h:32:
+/usr/include/openssl/dh.h:211:28: note: declared here
+  211 | OSSL_DEPRECATEDIN_3_0 void DH_free(DH *dh);
+      |                            ^~~~~~~
+core/ssl.c:279:9: warning: 'EC_KEY_new_by_curve_name' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  279 |         EC_KEY *ecdh = EC_KEY_new_by_curve_name(NID_X9_62_prime256v1);
+      |         ^~~~~~
+In file included from /usr/include/openssl/x509.h:33:
+/usr/include/openssl/ec.h:1017:31: note: declared here
+ 1017 | OSSL_DEPRECATEDIN_3_0 EC_KEY *EC_KEY_new_by_curve_name(int nid);
+      |                               ^~~~~~~~~~~~~~~~~~~~~~~~
+core/ssl.c:283:17: warning: 'EC_KEY_free' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  283 |                 EC_KEY_free(ecdh);
+      |                 ^~~~~~~~~~~
+/usr/include/openssl/ec.h:1022:28: note: declared here
+ 1022 | OSSL_DEPRECATEDIN_3_0 void EC_KEY_free(EC_KEY *key);
+      |                            ^~~~~~~~~~~
+core/ssl.c: In function 'uwsgi_sha1':
+core/ssl.c:563:9: warning: 'SHA1_Init' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  563 |         SHA1_Init(&sha);
+      |         ^~~~~~~~~
+In file included from /usr/include/openssl/x509.h:41:
+/usr/include/openssl/sha.h:49:27: note: declared here
+   49 | OSSL_DEPRECATEDIN_3_0 int SHA1_Init(SHA_CTX *c);
+      |                           ^~~~~~~~~
+core/ssl.c:564:9: warning: 'SHA1_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  564 |         SHA1_Update(&sha, src, len);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/sha.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int SHA1_Update(SHA_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~~
+core/ssl.c:565:9: warning: 'SHA1_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  565 |         SHA1_Final((unsigned char *)dst, &sha);
+      |         ^~~~~~~~~~
+/usr/include/openssl/sha.h:51:27: note: declared here
+   51 | OSSL_DEPRECATEDIN_3_0 int SHA1_Final(unsigned char *md, SHA_CTX *c);
+      |                           ^~~~~~~~~~
+core/ssl.c: In function 'uwsgi_md5':
+core/ssl.c:571:9: warning: 'MD5_Init' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  571 |         MD5_Init(&md5);
+      |         ^~~~~~~~
+In file included from core/ssl.c:4:
+/usr/include/openssl/md5.h:49:27: note: declared here
+   49 | OSSL_DEPRECATEDIN_3_0 int MD5_Init(MD5_CTX *c);
+      |                           ^~~~~~~~
+core/ssl.c:572:9: warning: 'MD5_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  572 |         MD5_Update(&md5, src, len);
+      |         ^~~~~~~~~~
+/usr/include/openssl/md5.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int MD5_Update(MD5_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~
+core/ssl.c:573:9: warning: 'MD5_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  573 |         MD5_Final((unsigned char *)dst, &md5);
+      |         ^~~~~~~~~
+/usr/include/openssl/md5.h:51:27: note: declared here
+   51 | OSSL_DEPRECATEDIN_3_0 int MD5_Final(unsigned char *md, MD5_CTX *c);
+      |                           ^~~~~~~~~
+core/ssl.c: In function 'uwsgi_sha1_2n':
+core/ssl.c:579:9: warning: 'SHA1_Init' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  579 |         SHA1_Init(&sha);
+      |         ^~~~~~~~~
+/usr/include/openssl/sha.h:49:27: note: declared here
+   49 | OSSL_DEPRECATEDIN_3_0 int SHA1_Init(SHA_CTX *c);
+      |                           ^~~~~~~~~
+core/ssl.c:580:9: warning: 'SHA1_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  580 |         SHA1_Update(&sha, s1, len1);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/sha.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int SHA1_Update(SHA_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~~
+core/ssl.c:581:9: warning: 'SHA1_Update' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  581 |         SHA1_Update(&sha, s2, len2);
+      |         ^~~~~~~~~~~
+/usr/include/openssl/sha.h:50:27: note: declared here
+   50 | OSSL_DEPRECATEDIN_3_0 int SHA1_Update(SHA_CTX *c, const void *data, size_t len);
+      |                           ^~~~~~~~~~~
+core/ssl.c:582:9: warning: 'SHA1_Final' is deprecated: Since OpenSSL 3.0 [-Wdeprecated-declarations]
+  582 |         SHA1_Final((unsigned char *)dst, &sha);
+      |         ^~~~~~~~~~
+/usr/include/openssl/sha.h:51:27: note: declared here
+   51 | OSSL_DEPRECATEDIN_3_0 int SHA1_Final(unsigned char *md, SHA_CTX *c);
+      |                           ^~~~~~~~~~
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+detected CPU cores: 16
+configured CFLAGS: -O2 -I. -Wall -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -Wformat-signedness -DUWSGI_HAS_IFADDRS -DUWSGI_ZLIB -DUWSGI_LOCK_USE_MUTEX -DUWSGI_EVENT_USE_EPOLL -DUWSGI_EVENT_TIMER_USE_TIMERFD -DUWSGI_EVENT_FILEMONITOR_USE_INOTIFY  -DUWSGI_PCRE2 -DUWSGI_ROUTING -DUWSGI_CAP -DUWSGI_VERSION="\"2.0.29\"" -DUWSGI_VERSION_BASE="2" -DUWSGI_VERSION_MAJOR="0" -DUWSGI_VERSION_MINOR="29" -DUWSGI_VERSION_REVISION="0" -DUWSGI_VERSION_CUSTOM="\"\"" -DUWSGI_YAML -DUWSGI_JSON -DUWSGI_SSL -I/usr/include/libxml2 -DUWSGI_XML -DUWSGI_XML_LIBXML2 -DUWSGI_PLUGIN_DIR="\"/usr/lib/uwsgi\""
+*** uWSGI compiling server core ***
+[thread 2][gcc] core/utils.o
+[thread 1][gcc] core/protocol.o
+[thread 3][gcc] core/socket.o
+[thread 4][gcc] core/logging.o
+[thread 6][gcc] core/master.o
+[thread 7][gcc] core/master_utils.o
+[thread 5][gcc] core/emperor.o
+[thread 8][gcc] core/notify.o
+[thread 9][gcc] core/mule.o
+[thread 10][gcc] core/subscription.o
+[thread 11][gcc] core/stats.o
+[thread 12][gcc] core/sendfile.o
+[thread 14][gcc] core/async.o
+[thread 13][gcc] core/master_checks.o
+[thread 15][gcc] core/fifo.o
+[thread 0][gcc] core/offload.o
+[thread 12][gcc] core/io.o
+[thread 8][gcc] core/static.o
+[thread 11][gcc] core/websockets.o
+[thread 15][gcc] core/spooler.o
+[thread 9][gcc] core/snmp.o
+[thread 14][gcc] core/exceptions.o
+[thread 10][gcc] core/config.o
+[thread 0][gcc] core/setup_utils.o
+[thread 13][gcc] core/clock.o
+[thread 11][gcc] core/init.o
+[thread 3][gcc] core/buffer.o
+[thread 9][gcc] core/reader.o
+[thread 6][gcc] core/writer.o
+[thread 8][gcc] core/alarm.o
+[thread 1][gcc] core/cron.o
+[thread 11][gcc] core/hooks.o
+[thread 13][gcc] core/plugins.o
+[thread 14][gcc] core/lock.o
+[thread 0][gcc] core/cache.o
+[thread 10][gcc] core/daemons.o
+[thread 15][gcc] core/errors.o
+[thread 3][gcc] core/hash.o
+[thread 5][gcc] core/master_events.o
+[thread 12][gcc] core/chunked.o
+[thread 7][gcc] core/queue.o
+[thread 5][gcc] core/event.o
+[thread 3][gcc] core/signal.o
+[thread 10][gcc] core/strings.o
+[thread 1][gcc] core/progress.o
+[thread 11][gcc] core/timebomb.o
+[thread 9][gcc] core/ini.o
+[thread 15][gcc] core/fsmon.o
+[thread 12][gcc] core/mount.o
+[thread 4][gcc] core/metrics.o
+[thread 13][gcc] core/plugins_builder.o
+[thread 8][gcc] core/sharedarea.o
+[thread 2][gcc] core/rpc.o
+[thread 7][gcc] core/gateway.o
+[thread 11][gcc] core/loop.o
+[thread 14][gcc] core/cookie.o
+[thread 1][gcc] core/querystring.o
+[thread 6][gcc] core/rb_timers.o
+[thread 9][gcc] core/transformations.o
+[thread 10][gcc] core/uwsgi.o
+[thread 2][gcc] proto/base.o
+[thread 11][gcc] proto/uwsgi.o
+[thread 1][gcc] proto/http.o
+[thread 12][gcc] proto/fastcgi.o
+[thread 13][gcc] proto/scgi.o
+[thread 7][gcc] proto/puwsgi.o
+[thread 15][gcc] lib/linux_ns.o
+[thread 5][gcc] core/zlib.o
+[thread 3][gcc] core/regexp.o
+[thread 14][gcc] core/routing.o
+[thread 11][gcc] core/yaml.o
+[thread 9][gcc] core/json.o
+[thread 12][gcc] core/ssl.o
+[thread 8][gcc] core/legion.o
+[thread 2][gcc] core/xmlconf.o
+[thread 6][gcc] core/dot_h.o
+[thread 6][gcc] core/config_py.o
+*** uWSGI linking ***
+gcc -o uwsgi -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs core/utils.o core/protocol.o core/socket.o core/logging.o core/master.o core/master_utils.o core/emperor.o core/notify.o core/mule.o core/subscription.o core/stats.o core/sendfile.o core/async.o core/master_checks.o core/fifo.o core/offload.o core/io.o core/static.o core/websockets.o core/spooler.o core/snmp.o core/exceptions.o core/config.o core/setup_utils.o core/clock.o core/init.o core/buffer.o core/reader.o core/writer.o core/alarm.o core/cron.o core/hooks.o core/plugins.o core/lock.o core/cache.o core/daemons.o core/errors.o core/hash.o core/master_events.o core/chunked.o core/queue.o core/event.o core/signal.o core/strings.o core/progress.o core/timebomb.o core/ini.o core/fsmon.o core/mount.o core/metrics.o core/plugins_builder.o core/sharedarea.o core/rpc.o core/gateway.o core/loop.o core/cookie.o core/querystring.o core/rb_timers.o core/transformations.o core/uwsgi.o proto/base.o proto/uwsgi.o proto/http.o proto/fastcgi.o proto/scgi.o proto/puwsgi.o lib/linux_ns.o core/zlib.o core/regexp.o core/routing.o core/yaml.o core/json.o core/ssl.o core/legion.o core/xmlconf.o core/dot_h.o core/config_py.o -lpthread -lm -rdynamic -ldl -lz -lpcre2-8 -lcap -ljansson -lssl -lcrypto -lxml2 -lz -llzma -lm
+################# uWSGI configuration #################
+
+kernel = Linux
+execinfo = False
+ifaddrs = True
+locking = pthread_mutex
+event = epoll
+timer = timerfd
+filemonitor = inotify
+pcre = True
+routing = True
+capabilities = True
+yaml = embedded
+json = jansson
+ssl = True
+xml = libxml2
+debug = False
+plugin_dir = /usr/lib/uwsgi
+zlib = True
+ucontext = False
+malloc = libc
+
+############## end of uWSGI configuration #############
+total build time: 2 seconds
+*** uWSGI is ready, launch it with ./uwsgi ***
+>>> uwsgi: Building alarm_curl plugin (alarm_curl)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/alarm_curl ***
+[cc] ./alarm_curl_plugin.so
+build time: 0 seconds
+*** alarm_curl plugin built and available in ./alarm_curl_plugin.so ***
+>>> uwsgi: Building cache plugin (cache)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/cache ***
+[cc] ./cache_plugin.so
+build time: 0 seconds
+*** cache plugin built and available in ./cache_plugin.so ***
+>>> uwsgi: Building carbon plugin (carbon)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/carbon ***
+[cc] ./carbon_plugin.so
+build time: 0 seconds
+*** carbon plugin built and available in ./carbon_plugin.so ***
+>>> uwsgi: Building cgi plugin (cgi)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/cgi ***
+[cc] ./cgi_plugin.so
+build time: 0 seconds
+*** cgi plugin built and available in ./cgi_plugin.so ***
+>>> uwsgi: Building cheaper_backlog2 plugin (cheaper_backlog2)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/cheaper_backlog2 ***
+[cc] ./cheaper_backlog2_plugin.so
+build time: 0 seconds
+*** cheaper_backlog2 plugin built and available in ./cheaper_backlog2_plugin.so ***
+>>> uwsgi: Building cheaper_busyness plugin (cheaper_busyness)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/cheaper_busyness ***
+[cc] ./cheaper_busyness_plugin.so
+build time: 0 seconds
+*** cheaper_busyness plugin built and available in ./cheaper_busyness_plugin.so ***
+>>> uwsgi: Building corerouter plugin (corerouter)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/corerouter ***
+[cc] ./corerouter_plugin.so
+build time: 0 seconds
+*** corerouter plugin built and available in ./corerouter_plugin.so ***
+>>> uwsgi: Building curl_cron plugin (curl_cron)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/curl_cron ***
+[cc] ./curl_cron_plugin.so
+build time: 0 seconds
+*** curl_cron plugin built and available in ./curl_cron_plugin.so ***
+>>> uwsgi: Building dumbloop plugin (dumbloop)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/dumbloop ***
+[cc] ./dumbloop_plugin.so
+build time: 0 seconds
+*** dumbloop plugin built and available in ./dumbloop_plugin.so ***
+>>> uwsgi: Building dummy plugin (dummy)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/dummy ***
+[cc] ./dummy_plugin.so
+build time: 0 seconds
+*** dummy plugin built and available in ./dummy_plugin.so ***
+>>> uwsgi: Building echo plugin (echo)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/echo ***
+[cc] ./echo_plugin.so
+build time: 0 seconds
+*** echo plugin built and available in ./echo_plugin.so ***
+>>> uwsgi: Building emperor_amqp plugin (emperor_amqp)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/emperor_amqp ***
+[cc] ./emperor_amqp_plugin.so
+build time: 0 seconds
+*** emperor_amqp plugin built and available in ./emperor_amqp_plugin.so ***
+>>> uwsgi: Building emperor_pg plugin (emperor_pg)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/emperor_pg ***
+[cc] ./emperor_pg_plugin.so
+build time: 0 seconds
+*** emperor_pg plugin built and available in ./emperor_pg_plugin.so ***
+>>> uwsgi: Building emperor_zeromq plugin (emperor_zeromq)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/emperor_zeromq ***
+[cc] ./emperor_zeromq_plugin.so
+build time: 0 seconds
+*** emperor_zeromq plugin built and available in ./emperor_zeromq_plugin.so ***
+>>> uwsgi: Building fastrouter plugin (fastrouter)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/fastrouter ***
+[cc] ./fastrouter_plugin.so
+build time: 0 seconds
+*** fastrouter plugin built and available in ./fastrouter_plugin.so ***
+>>> uwsgi: Building forkptyrouter plugin (forkptyrouter)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/forkptyrouter ***
+[cc] ./forkptyrouter_plugin.so
+build time: 0 seconds
+*** forkptyrouter plugin built and available in ./forkptyrouter_plugin.so ***
+>>> uwsgi: Building geoip plugin (geoip)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/geoip ***
+[cc] ./geoip_plugin.so
+build time: 0 seconds
+*** geoip plugin built and available in ./geoip_plugin.so ***
+>>> uwsgi: Building gevent plugin (gevent3)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/gevent ***
+[cc] ./gevent3_plugin.so
+build time: 0 seconds
+*** gevent3 plugin built and available in ./gevent3_plugin.so ***
+>>> uwsgi: Building graylog2 plugin (graylog2)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/graylog2 ***
+[cc] ./graylog2_plugin.so
+build time: 0 seconds
+*** graylog2 plugin built and available in ./graylog2_plugin.so ***
+>>> uwsgi: Building http plugin (http)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/http ***
+[cc] ./http_plugin.so
+build time: 0 seconds
+*** http plugin built and available in ./http_plugin.so ***
+>>> uwsgi: Building legion_cache_fetch plugin (legion_cache_fetch)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/legion_cache_fetch ***
+[cc] ./legion_cache_fetch_plugin.so
+build time: 0 seconds
+*** legion_cache_fetch plugin built and available in ./legion_cache_fetch_plugin.so ***
+>>> uwsgi: Building logcrypto plugin (logcrypto)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/logcrypto ***
+[cc] ./logcrypto_plugin.so
+build time: 0 seconds
+*** logcrypto plugin built and available in ./logcrypto_plugin.so ***
+>>> uwsgi: Building logfile plugin (logfile)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/logfile ***
+[cc] ./logfile_plugin.so
+build time: 0 seconds
+*** logfile plugin built and available in ./logfile_plugin.so ***
+>>> uwsgi: Building logpipe plugin (logpipe)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/logpipe ***
+[cc] ./logpipe_plugin.so
+build time: 0 seconds
+*** logpipe plugin built and available in ./logpipe_plugin.so ***
+>>> uwsgi: Building logsocket plugin (logsocket)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/logsocket ***
+[cc] ./logsocket_plugin.so
+build time: 0 seconds
+*** logsocket plugin built and available in ./logsocket_plugin.so ***
+>>> uwsgi: Building logzmq plugin (logzmq)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/logzmq ***
+[cc] ./logzmq_plugin.so
+build time: 0 seconds
+*** logzmq plugin built and available in ./logzmq_plugin.so ***
+>>> uwsgi: Building lua plugin (lua)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/lua ***
+[cc] ./lua_plugin.so
+build time: 0 seconds
+*** lua plugin built and available in ./lua_plugin.so ***
+>>> uwsgi: Building msgpack plugin (msgpack)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/msgpack ***
+[cc] ./msgpack_plugin.so
+build time: 0 seconds
+*** msgpack plugin built and available in ./msgpack_plugin.so ***
+>>> uwsgi: Building nagios plugin (nagios)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/nagios ***
+[cc] ./nagios_plugin.so
+build time: 0 seconds
+*** nagios plugin built and available in ./nagios_plugin.so ***
+>>> uwsgi: Building notfound plugin (notfound)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/notfound ***
+[cc] ./notfound_plugin.so
+build time: 0 seconds
+*** notfound plugin built and available in ./notfound_plugin.so ***
+>>> uwsgi: Building pam plugin (pam)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/pam ***
+[cc] ./pam_plugin.so
+build time: 0 seconds
+*** pam plugin built and available in ./pam_plugin.so ***
+>>> uwsgi: Building ping plugin (ping)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/ping ***
+[cc] ./ping_plugin.so
+build time: 0 seconds
+*** ping plugin built and available in ./ping_plugin.so ***
+>>> uwsgi: Building pty plugin (pty)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/pty ***
+[cc] ./pty_plugin.so
+build time: 0 seconds
+*** pty plugin built and available in ./pty_plugin.so ***
+>>> uwsgi: Building python plugin (python3)
+plugins/python/python_plugin.c:138:9: warning: 'Py_NoSiteFlag' is deprecated [-Wdeprecated-declarations]
+  138 |         {"no-site", no_argument, 0, "do not import site module", uwsgi_opt_true, &Py_NoSiteFlag, 0},
+      |         ^
+In file included from /usr/include/python3.12/Python.h:48,
+                 from plugins/python/uwsgi_python.h:4,
+                 from plugins/python/python_plugin.c:1:
+/usr/include/python3.12/cpython/pydebug.h:14:37: note: declared here
+   14 | Py_DEPRECATED(3.12) PyAPI_DATA(int) Py_NoSiteFlag;
+      |                                     ^~~~~~~~~~~~~
+plugins/python/python_plugin.c: In function 'uwsgi_python_init':
+plugins/python/python_plugin.c:254:17: warning: 'Py_SetPythonHome' is deprecated [-Wdeprecated-declarations]
+  254 |                 Py_SetPythonHome(wpyhome);
+      |                 ^~~~~~~~~~~~~~~~
+In file included from /usr/include/python3.12/Python.h:94:
+/usr/include/python3.12/pylifecycle.h:40:38: note: declared here
+   40 | Py_DEPRECATED(3.11) PyAPI_FUNC(void) Py_SetPythonHome(const wchar_t *);
+      |                                      ^~~~~~~~~~~~~~~~
+plugins/python/python_plugin.c:278:9: warning: 'Py_SetProgramName' is deprecated [-Wdeprecated-declarations]
+  278 |         Py_SetProgramName(pname);
+      |         ^~~~~~~~~~~~~~~~~
+/usr/include/python3.12/pylifecycle.h:37:38: note: declared here
+   37 | Py_DEPRECATED(3.11) PyAPI_FUNC(void) Py_SetProgramName(const wchar_t *);
+      |                                      ^~~~~~~~~~~~~~~~~
+plugins/python/python_plugin.c:287:9: warning: 'Py_OptimizeFlag' is deprecated [-Wdeprecated-declarations]
+  287 |         Py_OptimizeFlag = up.optimize;
+      |         ^~~~~~~~~~~~~~~
+/usr/include/python3.12/cpython/pydebug.h:13:37: note: declared here
+   13 | Py_DEPRECATED(3.12) PyAPI_DATA(int) Py_OptimizeFlag;
+      |                                     ^~~~~~~~~~~~~~~
+plugins/python/pyutils.c: In function 'init_pyargv':
+plugins/python/pyutils.c:391:9: warning: 'PySys_SetArgv' is deprecated [-Wdeprecated-declarations]
+  391 |         PySys_SetArgv(up.argc, up.py_argv);
+      |         ^~~~~~~~~~~~~
+In file included from /usr/include/python3.12/Python.h:96,
+                 from plugins/python/uwsgi_python.h:4,
+                 from plugins/python/pyutils.c:1:
+/usr/include/python3.12/sysmodule.h:13:38: note: declared here
+   13 | Py_DEPRECATED(3.11) PyAPI_FUNC(void) PySys_SetArgv(int, wchar_t **);
+      |                                      ^~~~~~~~~~~~~
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/python ***
+[cc] ./python3_plugin.so
+build time: 3 seconds
+*** python3 plugin built and available in ./python3_plugin.so ***
+>>> uwsgi: Building rawrouter plugin (rawrouter)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/rawrouter ***
+[cc] ./rawrouter_plugin.so
+build time: 0 seconds
+*** rawrouter plugin built and available in ./rawrouter_plugin.so ***
+>>> uwsgi: Building redislog plugin (redislog)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/redislog ***
+[cc] ./redislog_plugin.so
+build time: 0 seconds
+*** redislog plugin built and available in ./redislog_plugin.so ***
+>>> uwsgi: Building router_basicauth plugin (router_basicauth)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_basicauth ***
+[cc] ./router_basicauth_plugin.so
+build time: 0 seconds
+*** router_basicauth plugin built and available in ./router_basicauth_plugin.so ***
+>>> uwsgi: Building router_cache plugin (router_cache)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_cache ***
+[cc] ./router_cache_plugin.so
+build time: 0 seconds
+*** router_cache plugin built and available in ./router_cache_plugin.so ***
+>>> uwsgi: Building router_expires plugin (router_expires)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_expires ***
+[cc] ./router_expires_plugin.so
+build time: 0 seconds
+*** router_expires plugin built and available in ./router_expires_plugin.so ***
+>>> uwsgi: Building router_hash plugin (router_hash)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_hash ***
+[cc] ./router_hash_plugin.so
+build time: 0 seconds
+*** router_hash plugin built and available in ./router_hash_plugin.so ***
+>>> uwsgi: Building router_http plugin (router_http)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_http ***
+[cc] ./router_http_plugin.so
+build time: 0 seconds
+*** router_http plugin built and available in ./router_http_plugin.so ***
+>>> uwsgi: Building router_memcached plugin (router_memcached)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_memcached ***
+[cc] ./router_memcached_plugin.so
+build time: 0 seconds
+*** router_memcached plugin built and available in ./router_memcached_plugin.so ***
+>>> uwsgi: Building router_metrics plugin (router_metrics)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_metrics ***
+[cc] ./router_metrics_plugin.so
+build time: 0 seconds
+*** router_metrics plugin built and available in ./router_metrics_plugin.so ***
+>>> uwsgi: Building router_radius plugin (router_radius)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_radius ***
+[cc] ./router_radius_plugin.so
+build time: 0 seconds
+*** router_radius plugin built and available in ./router_radius_plugin.so ***
+>>> uwsgi: Building router_redirect plugin (router_redirect)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_redirect ***
+[cc] ./router_redirect_plugin.so
+build time: 0 seconds
+*** router_redirect plugin built and available in ./router_redirect_plugin.so ***
+>>> uwsgi: Building router_redis plugin (router_redis)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_redis ***
+[cc] ./router_redis_plugin.so
+build time: 0 seconds
+*** router_redis plugin built and available in ./router_redis_plugin.so ***
+>>> uwsgi: Building router_rewrite plugin (router_rewrite)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_rewrite ***
+[cc] ./router_rewrite_plugin.so
+build time: 0 seconds
+*** router_rewrite plugin built and available in ./router_rewrite_plugin.so ***
+>>> uwsgi: Building router_static plugin (router_static)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_static ***
+[cc] ./router_static_plugin.so
+build time: 0 seconds
+*** router_static plugin built and available in ./router_static_plugin.so ***
+>>> uwsgi: Building router_uwsgi plugin (router_uwsgi)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/router_uwsgi ***
+[cc] ./router_uwsgi_plugin.so
+build time: 0 seconds
+*** router_uwsgi plugin built and available in ./router_uwsgi_plugin.so ***
+>>> uwsgi: Building rpc plugin (rpc)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/rpc ***
+[cc] ./rpc_plugin.so
+build time: 0 seconds
+*** rpc plugin built and available in ./rpc_plugin.so ***
+>>> uwsgi: Building rrdtool plugin (rrdtool)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/rrdtool ***
+[cc] ./rrdtool_plugin.so
+build time: 0 seconds
+*** rrdtool plugin built and available in ./rrdtool_plugin.so ***
+>>> uwsgi: Building rsyslog plugin (rsyslog)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/rsyslog ***
+[cc] ./rsyslog_plugin.so
+build time: 0 seconds
+*** rsyslog plugin built and available in ./rsyslog_plugin.so ***
+>>> uwsgi: Building signal plugin (signal)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/signal ***
+[cc] ./signal_plugin.so
+build time: 0 seconds
+*** signal plugin built and available in ./signal_plugin.so ***
+>>> uwsgi: Building spooler plugin (spooler)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/spooler ***
+[cc] ./spooler_plugin.so
+build time: 0 seconds
+*** spooler plugin built and available in ./spooler_plugin.so ***
+>>> uwsgi: Building sslrouter plugin (sslrouter)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/sslrouter ***
+[cc] ./sslrouter_plugin.so
+build time: 0 seconds
+*** sslrouter plugin built and available in ./sslrouter_plugin.so ***
+>>> uwsgi: Building stats_pusher_file plugin (stats_pusher_file)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/stats_pusher_file ***
+[cc] ./stats_pusher_file_plugin.so
+build time: 0 seconds
+*** stats_pusher_file plugin built and available in ./stats_pusher_file_plugin.so ***
+>>> uwsgi: Building stats_pusher_socket plugin (stats_pusher_socket)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/stats_pusher_socket ***
+[cc] ./stats_pusher_socket_plugin.so
+build time: 0 seconds
+*** stats_pusher_socket plugin built and available in ./stats_pusher_socket_plugin.so ***
+>>> uwsgi: Building stats_pusher_statsd plugin (stats_pusher_statsd)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/stats_pusher_statsd ***
+[cc] ./stats_pusher_statsd_plugin.so
+build time: 0 seconds
+*** stats_pusher_statsd plugin built and available in ./stats_pusher_statsd_plugin.so ***
+>>> uwsgi: Building symcall plugin (symcall)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/symcall ***
+[cc] ./symcall_plugin.so
+build time: 0 seconds
+*** symcall plugin built and available in ./symcall_plugin.so ***
+>>> uwsgi: Building syslog plugin (syslog)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/syslog ***
+[cc] ./syslog_plugin.so
+build time: 0 seconds
+*** syslog plugin built and available in ./syslog_plugin.so ***
+>>> uwsgi: Building transformation_chunked plugin (transformation_chunked)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/transformation_chunked ***
+[cc] ./transformation_chunked_plugin.so
+build time: 0 seconds
+*** transformation_chunked plugin built and available in ./transformation_chunked_plugin.so ***
+>>> uwsgi: Building transformation_gzip plugin (transformation_gzip)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/transformation_gzip ***
+[cc] ./transformation_gzip_plugin.so
+build time: 0 seconds
+*** transformation_gzip plugin built and available in ./transformation_gzip_plugin.so ***
+>>> uwsgi: Building transformation_offload plugin (transformation_offload)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/transformation_offload ***
+[cc] ./transformation_offload_plugin.so
+build time: 0 seconds
+*** transformation_offload plugin built and available in ./transformation_offload_plugin.so ***
+>>> uwsgi: Building transformation_template plugin (transformation_template)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/transformation_template ***
+[cc] ./transformation_template_plugin.so
+build time: 0 seconds
+*** transformation_template plugin built and available in ./transformation_template_plugin.so ***
+>>> uwsgi: Building transformation_tofile plugin (transformation_tofile)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/transformation_tofile ***
+[cc] ./transformation_tofile_plugin.so
+build time: 0 seconds
+*** transformation_tofile plugin built and available in ./transformation_tofile_plugin.so ***
+>>> uwsgi: Building tuntap plugin (tuntap)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/tuntap ***
+[cc] ./tuntap_plugin.so
+build time: 0 seconds
+*** tuntap plugin built and available in ./tuntap_plugin.so ***
+>>> uwsgi: Building ugreen plugin (ugreen)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/ugreen ***
+[cc] ./ugreen_plugin.so
+build time: 0 seconds
+*** ugreen plugin built and available in ./ugreen_plugin.so ***
+>>> uwsgi: Building webdav plugin (webdav)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/webdav ***
+[cc] ./webdav_plugin.so
+build time: 0 seconds
+*** webdav plugin built and available in ./webdav_plugin.so ***
+>>> uwsgi: Building xslt plugin (xslt)
+plugins/xslt/xslt.c: In function 'uwsgi_xslt_apply':
+plugins/xslt/xslt.c:88:9: warning: 'xmlSubstituteEntitiesDefault' is deprecated [-Wdeprecated-declarations]
+   88 |         xmlSubstituteEntitiesDefault(1);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/libxml2/libxml/tree.h:17,
+                 from /usr/include/libxml2/libxml/xpath.h:27,
+                 from /usr/include/libxslt/xsltutils.h:16,
+                 from plugins/xslt/xslt.c:3:
+/usr/include/libxml2/libxml/parser.h:948:17: note: declared here
+  948 |                 xmlSubstituteEntitiesDefault(int val);
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+plugins/xslt/xslt.c:89:9: warning: '__xmlLoadExtDtdDefaultValue' is deprecated [-Wdeprecated-declarations]
+   89 |         xmlLoadExtDtdDefaultValue = 1;
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/libxml2/libxml/xmlversion.h:343,
+                 from /usr/include/libxml2/libxml/xpath.h:22:
+/usr/include/libxml2/libxml/parser.h:885:1: note: declared here
+  885 | XML_GLOBALS_PARSER
+      | ^~~~~~~~~~~~~~~~~~
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/xslt ***
+[cc] ./xslt_plugin.so
+build time: 0 seconds
+*** xslt plugin built and available in ./xslt_plugin.so ***
+>>> uwsgi: Building zabbix plugin (zabbix)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/zabbix ***
+[cc] ./zabbix_plugin.so
+build time: 0 seconds
+*** zabbix plugin built and available in ./zabbix_plugin.so ***
+>>> uwsgi: Building zergpool plugin (zergpool)
+using profile: buildconf/alpine.ini
+detected include path: ['/usr/include/fortify', '/usr/include', '/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/include']
+*** uWSGI building and linking plugin plugins/zergpool ***
+[cc] ./zergpool_plugin.so
+build time: 0 seconds
+*** zergpool plugin built and available in ./zergpool_plugin.so ***
+>>> uwsgi: Entering fakeroot...
+>>> uwsgi-openrc*: Running split function openrc...
+'etc/init.d' -> '/tmp/pkg/uwsgi-openrc/etc/init.d'
+>>> uwsgi-openrc*: Preparing subpackage uwsgi-openrc...
+>>> uwsgi-openrc*: Running postcheck for uwsgi-openrc
+>>> uwsgi-alarm_curl*: Running split function _plugin...
+>>> uwsgi-alarm_curl*: Preparing subpackage uwsgi-alarm_curl...
+>>> uwsgi-alarm_curl*: Stripping binaries
+>>> uwsgi-alarm_curl*: Running postcheck for uwsgi-alarm_curl
+>>> uwsgi-cache*: Running split function _plugin...
+>>> uwsgi-cache*: Preparing subpackage uwsgi-cache...
+>>> uwsgi-cache*: Stripping binaries
+>>> uwsgi-cache*: Running postcheck for uwsgi-cache
+>>> uwsgi-carbon*: Running split function _plugin...
+>>> uwsgi-carbon*: Preparing subpackage uwsgi-carbon...
+>>> uwsgi-carbon*: Stripping binaries
+>>> uwsgi-carbon*: Running postcheck for uwsgi-carbon
+>>> uwsgi-cgi*: Running split function _plugin...
+>>> uwsgi-cgi*: Preparing subpackage uwsgi-cgi...
+>>> uwsgi-cgi*: Stripping binaries
+>>> uwsgi-cgi*: Running postcheck for uwsgi-cgi
+>>> uwsgi-cheaper_backlog2*: Running split function _plugin...
+>>> uwsgi-cheaper_backlog2*: Preparing subpackage uwsgi-cheaper_backlog2...
+>>> uwsgi-cheaper_backlog2*: Stripping binaries
+>>> uwsgi-cheaper_backlog2*: Running postcheck for uwsgi-cheaper_backlog2
+>>> uwsgi-cheaper_busyness*: Running split function _plugin...
+>>> uwsgi-cheaper_busyness*: Preparing subpackage uwsgi-cheaper_busyness...
+>>> uwsgi-cheaper_busyness*: Stripping binaries
+>>> uwsgi-cheaper_busyness*: Running postcheck for uwsgi-cheaper_busyness
+>>> uwsgi-corerouter*: Running split function _plugin...
+>>> uwsgi-corerouter*: Preparing subpackage uwsgi-corerouter...
+>>> uwsgi-corerouter*: Stripping binaries
+>>> uwsgi-corerouter*: Running postcheck for uwsgi-corerouter
+>>> uwsgi-curl_cron*: Running split function _plugin...
+>>> uwsgi-curl_cron*: Preparing subpackage uwsgi-curl_cron...
+>>> uwsgi-curl_cron*: Stripping binaries
+>>> uwsgi-curl_cron*: Running postcheck for uwsgi-curl_cron
+>>> uwsgi-dumbloop*: Running split function _plugin...
+>>> uwsgi-dumbloop*: Preparing subpackage uwsgi-dumbloop...
+>>> uwsgi-dumbloop*: Stripping binaries
+>>> uwsgi-dumbloop*: Running postcheck for uwsgi-dumbloop
+>>> uwsgi-dummy*: Running split function _plugin...
+>>> uwsgi-dummy*: Preparing subpackage uwsgi-dummy...
+>>> uwsgi-dummy*: Stripping binaries
+>>> uwsgi-dummy*: Running postcheck for uwsgi-dummy
+>>> uwsgi-echo*: Running split function _plugin...
+>>> uwsgi-echo*: Preparing subpackage uwsgi-echo...
+>>> uwsgi-echo*: Stripping binaries
+>>> uwsgi-echo*: Running postcheck for uwsgi-echo
+>>> uwsgi-emperor_amqp*: Running split function _plugin...
+>>> uwsgi-emperor_amqp*: Preparing subpackage uwsgi-emperor_amqp...
+>>> uwsgi-emperor_amqp*: Stripping binaries
+>>> uwsgi-emperor_amqp*: Running postcheck for uwsgi-emperor_amqp
+>>> uwsgi-emperor_pg*: Running split function _plugin...
+>>> uwsgi-emperor_pg*: Preparing subpackage uwsgi-emperor_pg...
+>>> uwsgi-emperor_pg*: Stripping binaries
+>>> uwsgi-emperor_pg*: Running postcheck for uwsgi-emperor_pg
+>>> uwsgi-emperor_zeromq*: Running split function _plugin...
+>>> uwsgi-emperor_zeromq*: Preparing subpackage uwsgi-emperor_zeromq...
+>>> uwsgi-emperor_zeromq*: Stripping binaries
+>>> uwsgi-emperor_zeromq*: Running postcheck for uwsgi-emperor_zeromq
+>>> uwsgi-fastrouter*: Running split function _plugin...
+>>> uwsgi-fastrouter*: Preparing subpackage uwsgi-fastrouter...
+>>> uwsgi-fastrouter*: Stripping binaries
+>>> uwsgi-fastrouter*: Running postcheck for uwsgi-fastrouter
+>>> uwsgi-forkptyrouter*: Running split function _plugin...
+>>> uwsgi-forkptyrouter*: Preparing subpackage uwsgi-forkptyrouter...
+>>> uwsgi-forkptyrouter*: Stripping binaries
+>>> uwsgi-forkptyrouter*: Running postcheck for uwsgi-forkptyrouter
+>>> uwsgi-geoip*: Running split function _plugin...
+>>> uwsgi-geoip*: Preparing subpackage uwsgi-geoip...
+>>> uwsgi-geoip*: Stripping binaries
+>>> uwsgi-geoip*: Running postcheck for uwsgi-geoip
+>>> uwsgi-gevent3*: Running split function _plugin...
+>>> uwsgi-gevent3*: Preparing subpackage uwsgi-gevent3...
+>>> uwsgi-gevent3*: Stripping binaries
+>>> uwsgi-gevent3*: Running postcheck for uwsgi-gevent3
+>>> uwsgi-graylog2*: Running split function _plugin...
+>>> uwsgi-graylog2*: Preparing subpackage uwsgi-graylog2...
+>>> uwsgi-graylog2*: Stripping binaries
+>>> uwsgi-graylog2*: Running postcheck for uwsgi-graylog2
+>>> uwsgi-http*: Running split function _plugin...
+>>> uwsgi-http*: Preparing subpackage uwsgi-http...
+>>> uwsgi-http*: Stripping binaries
+>>> uwsgi-http*: Running postcheck for uwsgi-http
+>>> uwsgi-legion_cache_fetch*: Running split function _plugin...
+>>> uwsgi-legion_cache_fetch*: Preparing subpackage uwsgi-legion_cache_fetch...
+>>> uwsgi-legion_cache_fetch*: Stripping binaries
+>>> uwsgi-legion_cache_fetch*: Running postcheck for uwsgi-legion_cache_fetch
+>>> uwsgi-logcrypto*: Running split function _plugin...
+>>> uwsgi-logcrypto*: Preparing subpackage uwsgi-logcrypto...
+>>> uwsgi-logcrypto*: Stripping binaries
+>>> uwsgi-logcrypto*: Running postcheck for uwsgi-logcrypto
+>>> uwsgi-logfile*: Running split function _plugin...
+>>> uwsgi-logfile*: Preparing subpackage uwsgi-logfile...
+>>> uwsgi-logfile*: Stripping binaries
+>>> uwsgi-logfile*: Running postcheck for uwsgi-logfile
+>>> uwsgi-logpipe*: Running split function _plugin...
+>>> uwsgi-logpipe*: Preparing subpackage uwsgi-logpipe...
+>>> uwsgi-logpipe*: Stripping binaries
+>>> uwsgi-logpipe*: Running postcheck for uwsgi-logpipe
+>>> uwsgi-logsocket*: Running split function _plugin...
+>>> uwsgi-logsocket*: Preparing subpackage uwsgi-logsocket...
+>>> uwsgi-logsocket*: Stripping binaries
+>>> uwsgi-logsocket*: Running postcheck for uwsgi-logsocket
+>>> uwsgi-logzmq*: Running split function _plugin...
+>>> uwsgi-logzmq*: Preparing subpackage uwsgi-logzmq...
+>>> uwsgi-logzmq*: Stripping binaries
+>>> uwsgi-logzmq*: Running postcheck for uwsgi-logzmq
+>>> uwsgi-lua*: Running split function _plugin...
+>>> uwsgi-lua*: Preparing subpackage uwsgi-lua...
+>>> uwsgi-lua*: Stripping binaries
+>>> uwsgi-lua*: Running postcheck for uwsgi-lua
+>>> uwsgi-msgpack*: Running split function _plugin...
+>>> uwsgi-msgpack*: Preparing subpackage uwsgi-msgpack...
+>>> uwsgi-msgpack*: Stripping binaries
+>>> uwsgi-msgpack*: Running postcheck for uwsgi-msgpack
+>>> uwsgi-nagios*: Running split function _plugin...
+>>> uwsgi-nagios*: Preparing subpackage uwsgi-nagios...
+>>> uwsgi-nagios*: Stripping binaries
+>>> uwsgi-nagios*: Running postcheck for uwsgi-nagios
+>>> uwsgi-notfound*: Running split function _plugin...
+>>> uwsgi-notfound*: Preparing subpackage uwsgi-notfound...
+>>> uwsgi-notfound*: Stripping binaries
+>>> uwsgi-notfound*: Running postcheck for uwsgi-notfound
+>>> uwsgi-pam*: Running split function _plugin...
+>>> uwsgi-pam*: Preparing subpackage uwsgi-pam...
+>>> uwsgi-pam*: Stripping binaries
+>>> uwsgi-pam*: Running postcheck for uwsgi-pam
+>>> uwsgi-ping*: Running split function _plugin...
+>>> uwsgi-ping*: Preparing subpackage uwsgi-ping...
+>>> uwsgi-ping*: Stripping binaries
+>>> uwsgi-ping*: Running postcheck for uwsgi-ping
+>>> uwsgi-pty*: Running split function _plugin...
+>>> uwsgi-pty*: Preparing subpackage uwsgi-pty...
+>>> uwsgi-pty*: Stripping binaries
+>>> uwsgi-pty*: Running postcheck for uwsgi-pty
+>>> uwsgi-python3*: Running split function _plugin...
+>>> uwsgi-python3*: Preparing subpackage uwsgi-python3...
+>>> uwsgi-python3*: Stripping binaries
+>>> WARNING: uwsgi-python3*: Redundant /usr/lib in rpath found
+>>> uwsgi-python3*: Running postcheck for uwsgi-python3
+>>> uwsgi-rawrouter*: Running split function _plugin...
+>>> uwsgi-rawrouter*: Preparing subpackage uwsgi-rawrouter...
+>>> uwsgi-rawrouter*: Stripping binaries
+>>> uwsgi-rawrouter*: Running postcheck for uwsgi-rawrouter
+>>> uwsgi-redislog*: Running split function _plugin...
+>>> uwsgi-redislog*: Preparing subpackage uwsgi-redislog...
+>>> uwsgi-redislog*: Stripping binaries
+>>> uwsgi-redislog*: Running postcheck for uwsgi-redislog
+>>> uwsgi-router_basicauth*: Running split function _plugin...
+>>> uwsgi-router_basicauth*: Preparing subpackage uwsgi-router_basicauth...
+>>> uwsgi-router_basicauth*: Stripping binaries
+>>> uwsgi-router_basicauth*: Running postcheck for uwsgi-router_basicauth
+>>> uwsgi-router_cache*: Running split function _plugin...
+>>> uwsgi-router_cache*: Preparing subpackage uwsgi-router_cache...
+>>> uwsgi-router_cache*: Stripping binaries
+>>> uwsgi-router_cache*: Running postcheck for uwsgi-router_cache
+>>> uwsgi-router_expires*: Running split function _plugin...
+>>> uwsgi-router_expires*: Preparing subpackage uwsgi-router_expires...
+>>> uwsgi-router_expires*: Stripping binaries
+>>> uwsgi-router_expires*: Running postcheck for uwsgi-router_expires
+>>> uwsgi-router_hash*: Running split function _plugin...
+>>> uwsgi-router_hash*: Preparing subpackage uwsgi-router_hash...
+>>> uwsgi-router_hash*: Stripping binaries
+>>> uwsgi-router_hash*: Running postcheck for uwsgi-router_hash
+>>> uwsgi-router_http*: Running split function _plugin...
+>>> uwsgi-router_http*: Preparing subpackage uwsgi-router_http...
+>>> uwsgi-router_http*: Stripping binaries
+>>> uwsgi-router_http*: Running postcheck for uwsgi-router_http
+>>> uwsgi-router_memcached*: Running split function _plugin...
+>>> uwsgi-router_memcached*: Preparing subpackage uwsgi-router_memcached...
+>>> uwsgi-router_memcached*: Stripping binaries
+>>> uwsgi-router_memcached*: Running postcheck for uwsgi-router_memcached
+>>> uwsgi-router_metrics*: Running split function _plugin...
+>>> uwsgi-router_metrics*: Preparing subpackage uwsgi-router_metrics...
+>>> uwsgi-router_metrics*: Stripping binaries
+>>> uwsgi-router_metrics*: Running postcheck for uwsgi-router_metrics
+>>> uwsgi-router_radius*: Running split function _plugin...
+>>> uwsgi-router_radius*: Preparing subpackage uwsgi-router_radius...
+>>> uwsgi-router_radius*: Stripping binaries
+>>> uwsgi-router_radius*: Running postcheck for uwsgi-router_radius
+>>> uwsgi-router_redirect*: Running split function _plugin...
+>>> uwsgi-router_redirect*: Preparing subpackage uwsgi-router_redirect...
+>>> uwsgi-router_redirect*: Stripping binaries
+>>> uwsgi-router_redirect*: Running postcheck for uwsgi-router_redirect
+>>> uwsgi-router_redis*: Running split function _plugin...
+>>> uwsgi-router_redis*: Preparing subpackage uwsgi-router_redis...
+>>> uwsgi-router_redis*: Stripping binaries
+>>> uwsgi-router_redis*: Running postcheck for uwsgi-router_redis
+>>> uwsgi-router_rewrite*: Running split function _plugin...
+>>> uwsgi-router_rewrite*: Preparing subpackage uwsgi-router_rewrite...
+>>> uwsgi-router_rewrite*: Stripping binaries
+>>> uwsgi-router_rewrite*: Running postcheck for uwsgi-router_rewrite
+>>> uwsgi-router_static*: Running split function _plugin...
+>>> uwsgi-router_static*: Preparing subpackage uwsgi-router_static...
+>>> uwsgi-router_static*: Stripping binaries
+>>> uwsgi-router_static*: Running postcheck for uwsgi-router_static
+>>> uwsgi-router_uwsgi*: Running split function _plugin...
+>>> uwsgi-router_uwsgi*: Preparing subpackage uwsgi-router_uwsgi...
+>>> uwsgi-router_uwsgi*: Stripping binaries
+>>> uwsgi-router_uwsgi*: Running postcheck for uwsgi-router_uwsgi
+>>> uwsgi-rpc*: Running split function _plugin...
+>>> uwsgi-rpc*: Preparing subpackage uwsgi-rpc...
+>>> uwsgi-rpc*: Stripping binaries
+>>> uwsgi-rpc*: Running postcheck for uwsgi-rpc
+>>> uwsgi-rrdtool*: Running split function _plugin...
+>>> uwsgi-rrdtool*: Preparing subpackage uwsgi-rrdtool...
+>>> uwsgi-rrdtool*: Stripping binaries
+>>> uwsgi-rrdtool*: Running postcheck for uwsgi-rrdtool
+>>> uwsgi-rsyslog*: Running split function _plugin...
+>>> uwsgi-rsyslog*: Preparing subpackage uwsgi-rsyslog...
+>>> uwsgi-rsyslog*: Stripping binaries
+libfakeroot internal error: payload not recognized!
+>>> uwsgi-rsyslog*: Running postcheck for uwsgi-rsyslog
+>>> uwsgi-signal*: Running split function _plugin...
+>>> uwsgi-signal*: Preparing subpackage uwsgi-signal...
+>>> uwsgi-signal*: Stripping binaries
+>>> uwsgi-signal*: Running postcheck for uwsgi-signal
+>>> uwsgi-spooler*: Running split function _plugin...
+>>> uwsgi-spooler*: Preparing subpackage uwsgi-spooler...
+>>> uwsgi-spooler*: Stripping binaries
+>>> uwsgi-spooler*: Running postcheck for uwsgi-spooler
+>>> uwsgi-sslrouter*: Running split function _plugin...
+>>> uwsgi-sslrouter*: Preparing subpackage uwsgi-sslrouter...
+>>> uwsgi-sslrouter*: Stripping binaries
+>>> uwsgi-sslrouter*: Running postcheck for uwsgi-sslrouter
+>>> uwsgi-stats_pusher_file*: Running split function _plugin...
+>>> uwsgi-stats_pusher_file*: Preparing subpackage uwsgi-stats_pusher_file...
+>>> uwsgi-stats_pusher_file*: Stripping binaries
+>>> uwsgi-stats_pusher_file*: Running postcheck for uwsgi-stats_pusher_file
+>>> uwsgi-stats_pusher_socket*: Running split function _plugin...
+>>> uwsgi-stats_pusher_socket*: Preparing subpackage uwsgi-stats_pusher_socket...
+>>> uwsgi-stats_pusher_socket*: Stripping binaries
+>>> uwsgi-stats_pusher_socket*: Running postcheck for uwsgi-stats_pusher_socket
+>>> uwsgi-stats_pusher_statsd*: Running split function _plugin...
+>>> uwsgi-stats_pusher_statsd*: Preparing subpackage uwsgi-stats_pusher_statsd...
+>>> uwsgi-stats_pusher_statsd*: Stripping binaries
+>>> uwsgi-stats_pusher_statsd*: Running postcheck for uwsgi-stats_pusher_statsd
+>>> uwsgi-symcall*: Running split function _plugin...
+>>> uwsgi-symcall*: Preparing subpackage uwsgi-symcall...
+>>> uwsgi-symcall*: Stripping binaries
+>>> uwsgi-symcall*: Running postcheck for uwsgi-symcall
+>>> uwsgi-syslog*: Running split function _plugin...
+>>> uwsgi-syslog*: Preparing subpackage uwsgi-syslog...
+>>> uwsgi-syslog*: Stripping binaries
+>>> uwsgi-syslog*: Running postcheck for uwsgi-syslog
+>>> uwsgi-transformation_chunked*: Running split function _plugin...
+>>> uwsgi-transformation_chunked*: Preparing subpackage uwsgi-transformation_chunked...
+>>> uwsgi-transformation_chunked*: Stripping binaries
+>>> uwsgi-transformation_chunked*: Running postcheck for uwsgi-transformation_chunked
+>>> uwsgi-transformation_gzip*: Running split function _plugin...
+>>> uwsgi-transformation_gzip*: Preparing subpackage uwsgi-transformation_gzip...
+>>> uwsgi-transformation_gzip*: Stripping binaries
+>>> uwsgi-transformation_gzip*: Running postcheck for uwsgi-transformation_gzip
+>>> uwsgi-transformation_offload*: Running split function _plugin...
+>>> uwsgi-transformation_offload*: Preparing subpackage uwsgi-transformation_offload...
+>>> uwsgi-transformation_offload*: Stripping binaries
+>>> uwsgi-transformation_offload*: Running postcheck for uwsgi-transformation_offload
+>>> uwsgi-transformation_template*: Running split function _plugin...
+>>> uwsgi-transformation_template*: Preparing subpackage uwsgi-transformation_template...
+>>> uwsgi-transformation_template*: Stripping binaries
+>>> uwsgi-transformation_template*: Running postcheck for uwsgi-transformation_template
+>>> uwsgi-transformation_tofile*: Running split function _plugin...
+>>> uwsgi-transformation_tofile*: Preparing subpackage uwsgi-transformation_tofile...
+>>> uwsgi-transformation_tofile*: Stripping binaries
+>>> uwsgi-transformation_tofile*: Running postcheck for uwsgi-transformation_tofile
+>>> uwsgi-tuntap*: Running split function _plugin...
+>>> uwsgi-tuntap*: Preparing subpackage uwsgi-tuntap...
+>>> uwsgi-tuntap*: Stripping binaries
+>>> uwsgi-tuntap*: Running postcheck for uwsgi-tuntap
+>>> uwsgi-ugreen*: Running split function _plugin...
+>>> uwsgi-ugreen*: Preparing subpackage uwsgi-ugreen...
+>>> uwsgi-ugreen*: Stripping binaries
+>>> uwsgi-ugreen*: Running postcheck for uwsgi-ugreen
+>>> uwsgi-webdav*: Running split function _plugin...
+>>> uwsgi-webdav*: Preparing subpackage uwsgi-webdav...
+>>> uwsgi-webdav*: Stripping binaries
+>>> uwsgi-webdav*: Running postcheck for uwsgi-webdav
+>>> uwsgi-xslt*: Running split function _plugin...
+>>> uwsgi-xslt*: Preparing subpackage uwsgi-xslt...
+>>> uwsgi-xslt*: Stripping binaries
+>>> uwsgi-xslt*: Running postcheck for uwsgi-xslt
+>>> uwsgi-zabbix*: Running split function _plugin...
+>>> uwsgi-zabbix*: Preparing subpackage uwsgi-zabbix...
+>>> uwsgi-zabbix*: Stripping binaries
+>>> uwsgi-zabbix*: Running postcheck for uwsgi-zabbix
+>>> uwsgi-zergpool*: Running split function _plugin...
+>>> uwsgi-zergpool*: Preparing subpackage uwsgi-zergpool...
+>>> uwsgi-zergpool*: Stripping binaries
+>>> uwsgi-zergpool*: Running postcheck for uwsgi-zergpool
+>>> uwsgi*: Running postcheck for uwsgi
+>>> uwsgi*: Preparing package uwsgi...
+>>> uwsgi*: Stripping binaries
+>>> uwsgi*: Script found. /bin/sh added as a dependency for uwsgi-2.0.29-r0.apk
+>>> uwsgi*: Adding .pre-install
+>>> uwsgi*: Adding .post-upgrade
+>>> uwsgi-alarm_curl*: Scanning shared objects
+>>> uwsgi-cache*: Scanning shared objects
+>>> uwsgi-carbon*: Scanning shared objects
+>>> uwsgi-cgi*: Scanning shared objects
+>>> uwsgi-cheaper_backlog2*: Scanning shared objects
+>>> uwsgi-cheaper_busyness*: Scanning shared objects
+>>> uwsgi-corerouter*: Scanning shared objects
+>>> uwsgi-curl_cron*: Scanning shared objects
+>>> uwsgi-dumbloop*: Scanning shared objects
+>>> uwsgi-dummy*: Scanning shared objects
+>>> uwsgi-echo*: Scanning shared objects
+>>> uwsgi-emperor_amqp*: Scanning shared objects
+>>> uwsgi-emperor_pg*: Scanning shared objects
+>>> uwsgi-emperor_zeromq*: Scanning shared objects
+>>> uwsgi-fastrouter*: Scanning shared objects
+>>> uwsgi-forkptyrouter*: Scanning shared objects
+>>> uwsgi-geoip*: Scanning shared objects
+>>> uwsgi-gevent3*: Scanning shared objects
+>>> uwsgi-graylog2*: Scanning shared objects
+>>> uwsgi-http*: Scanning shared objects
+>>> uwsgi-legion_cache_fetch*: Scanning shared objects
+>>> uwsgi-logcrypto*: Scanning shared objects
+>>> uwsgi-logfile*: Scanning shared objects
+>>> uwsgi-logpipe*: Scanning shared objects
+>>> uwsgi-logsocket*: Scanning shared objects
+>>> uwsgi-logzmq*: Scanning shared objects
+>>> uwsgi-lua*: Scanning shared objects
+>>> uwsgi-msgpack*: Scanning shared objects
+>>> uwsgi-nagios*: Scanning shared objects
+>>> uwsgi-notfound*: Scanning shared objects
+>>> uwsgi-openrc*: Scanning shared objects
+>>> uwsgi-pam*: Scanning shared objects
+>>> uwsgi-ping*: Scanning shared objects
+>>> uwsgi-pty*: Scanning shared objects
+>>> uwsgi-python3*: Scanning shared objects
+>>> uwsgi-rawrouter*: Scanning shared objects
+>>> uwsgi-redislog*: Scanning shared objects
+>>> uwsgi-router_basicauth*: Scanning shared objects
+>>> uwsgi-router_cache*: Scanning shared objects
+>>> uwsgi-router_expires*: Scanning shared objects
+>>> uwsgi-router_hash*: Scanning shared objects
+>>> uwsgi-router_http*: Scanning shared objects
+>>> uwsgi-router_memcached*: Scanning shared objects
+>>> uwsgi-router_metrics*: Scanning shared objects
+>>> uwsgi-router_radius*: Scanning shared objects
+>>> uwsgi-router_redirect*: Scanning shared objects
+>>> uwsgi-router_redis*: Scanning shared objects
+>>> uwsgi-router_rewrite*: Scanning shared objects
+>>> uwsgi-router_static*: Scanning shared objects
+>>> uwsgi-router_uwsgi*: Scanning shared objects
+>>> uwsgi-rpc*: Scanning shared objects
+>>> uwsgi-rrdtool*: Scanning shared objects
+>>> uwsgi-rsyslog*: Scanning shared objects
+>>> uwsgi-signal*: Scanning shared objects
+>>> uwsgi-spooler*: Scanning shared objects
+>>> uwsgi-sslrouter*: Scanning shared objects
+>>> uwsgi-stats_pusher_file*: Scanning shared objects
+>>> uwsgi-stats_pusher_socket*: Scanning shared objects
+>>> uwsgi-stats_pusher_statsd*: Scanning shared objects
+>>> uwsgi-symcall*: Scanning shared objects
+>>> uwsgi-syslog*: Scanning shared objects
+>>> uwsgi-transformation_chunked*: Scanning shared objects
+>>> uwsgi-transformation_gzip*: Scanning shared objects
+>>> uwsgi-transformation_offload*: Scanning shared objects
+>>> uwsgi-transformation_template*: Scanning shared objects
+>>> uwsgi-transformation_tofile*: Scanning shared objects
+>>> uwsgi-tuntap*: Scanning shared objects
+>>> uwsgi-ugreen*: Scanning shared objects
+>>> uwsgi-webdav*: Scanning shared objects
+>>> uwsgi-xslt*: Scanning shared objects
+>>> uwsgi-zabbix*: Scanning shared objects
+>>> uwsgi-zergpool*: Scanning shared objects
+>>> uwsgi*: Scanning shared objects
+>>> uwsgi-alarm_curl*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libcurl.so.4
+>>> uwsgi-alarm_curl*: Package size: 14.3 KB
+>>> uwsgi-alarm_curl*: Compressing data...
+>>> uwsgi-alarm_curl*: Create checksum...
+>>> uwsgi-alarm_curl*: Create uwsgi-alarm_curl-2.0.29-r0.apk
+>>> uwsgi-cache*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-cache*: Package size: 14.0 KB
+>>> uwsgi-cache*: Compressing data...
+>>> uwsgi-cache*: Create checksum...
+>>> uwsgi-cache*: Create uwsgi-cache-2.0.29-r0.apk
+>>> uwsgi-carbon*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-carbon*: Package size: 14.7 KB
+>>> uwsgi-carbon*: Compressing data...
+>>> uwsgi-carbon*: Create checksum...
+>>> uwsgi-carbon*: Create uwsgi-carbon-2.0.29-r0.apk
+>>> uwsgi-cgi*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-cgi*: Package size: 26.9 KB
+>>> uwsgi-cgi*: Compressing data...
+>>> uwsgi-cgi*: Create checksum...
+>>> uwsgi-cgi*: Create uwsgi-cgi-2.0.29-r0.apk
+>>> uwsgi-cheaper_backlog2*: Tracing dependencies...
+	uwsgi
+>>> uwsgi-cheaper_backlog2*: Package size: 14.0 KB
+>>> uwsgi-cheaper_backlog2*: Compressing data...
+>>> uwsgi-cheaper_backlog2*: Create checksum...
+>>> uwsgi-cheaper_backlog2*: Create uwsgi-cheaper_backlog2-2.0.29-r0.apk
+>>> uwsgi-cheaper_busyness*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-cheaper_busyness*: Package size: 14.5 KB
+>>> uwsgi-cheaper_busyness*: Compressing data...
+>>> uwsgi-cheaper_busyness*: Create checksum...
+>>> uwsgi-cheaper_busyness*: Create uwsgi-cheaper_busyness-2.0.29-r0.apk
+>>> uwsgi-corerouter*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-corerouter*: Package size: 38.0 KB
+>>> uwsgi-corerouter*: Compressing data...
+>>> uwsgi-corerouter*: Create checksum...
+>>> uwsgi-corerouter*: Create uwsgi-corerouter-2.0.29-r0.apk
+>>> uwsgi-curl_cron*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libcurl.so.4
+>>> uwsgi-curl_cron*: Package size: 14.4 KB
+>>> uwsgi-curl_cron*: Compressing data...
+>>> uwsgi-curl_cron*: Create checksum...
+>>> uwsgi-curl_cron*: Create uwsgi-curl_cron-2.0.29-r0.apk
+>>> uwsgi-dumbloop*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-dumbloop*: Package size: 14.2 KB
+>>> uwsgi-dumbloop*: Compressing data...
+>>> uwsgi-dumbloop*: Create checksum...
+>>> uwsgi-dumbloop*: Create uwsgi-dumbloop-2.0.29-r0.apk
+>>> uwsgi-dummy*: Tracing dependencies...
+	uwsgi
+>>> uwsgi-dummy*: Package size: 14.0 KB
+>>> uwsgi-dummy*: Compressing data...
+>>> uwsgi-dummy*: Create checksum...
+>>> uwsgi-dummy*: Create uwsgi-dummy-2.0.29-r0.apk
+>>> uwsgi-echo*: Tracing dependencies...
+	uwsgi
+>>> uwsgi-echo*: Package size: 14.0 KB
+>>> uwsgi-echo*: Compressing data...
+>>> uwsgi-echo*: Create checksum...
+>>> uwsgi-echo*: Create uwsgi-echo-2.0.29-r0.apk
+>>> uwsgi-emperor_amqp*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-emperor_amqp*: Package size: 22.0 KB
+>>> uwsgi-emperor_amqp*: Compressing data...
+>>> uwsgi-emperor_amqp*: Create checksum...
+>>> uwsgi-emperor_amqp*: Create uwsgi-emperor_amqp-2.0.29-r0.apk
+>>> uwsgi-emperor_pg*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libpq.so.5
+>>> uwsgi-emperor_pg*: Package size: 14.0 KB
+>>> uwsgi-emperor_pg*: Compressing data...
+>>> uwsgi-emperor_pg*: Create checksum...
+>>> uwsgi-emperor_pg*: Create uwsgi-emperor_pg-2.0.29-r0.apk
+>>> uwsgi-emperor_zeromq*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libzmq.so.5
+>>> uwsgi-emperor_zeromq*: Package size: 14.0 KB
+>>> uwsgi-emperor_zeromq*: Compressing data...
+>>> uwsgi-emperor_zeromq*: Create checksum...
+>>> uwsgi-emperor_zeromq*: Create uwsgi-emperor_zeromq-2.0.29-r0.apk
+>>> uwsgi-fastrouter*: Tracing dependencies...
+	uwsgi
+	uwsgi-corerouter
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-fastrouter*: Package size: 27.6 KB
+>>> uwsgi-fastrouter*: Compressing data...
+>>> uwsgi-fastrouter*: Create checksum...
+>>> uwsgi-fastrouter*: Create uwsgi-fastrouter-2.0.29-r0.apk
+>>> uwsgi-forkptyrouter*: Tracing dependencies...
+	uwsgi
+	uwsgi-corerouter
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-forkptyrouter*: Package size: 15.2 KB
+>>> uwsgi-forkptyrouter*: Compressing data...
+>>> uwsgi-forkptyrouter*: Create checksum...
+>>> uwsgi-forkptyrouter*: Create uwsgi-forkptyrouter-2.0.29-r0.apk
+>>> uwsgi-geoip*: Tracing dependencies...
+	uwsgi
+	so:libGeoIP.so.1
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-geoip*: Package size: 14.2 KB
+>>> uwsgi-geoip*: Compressing data...
+>>> uwsgi-geoip*: Create checksum...
+>>> uwsgi-geoip*: Create uwsgi-geoip-2.0.29-r0.apk
+>>> uwsgi-gevent3*: Tracing dependencies...
+	uwsgi
+	python3~3.12
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-gevent3*: Package size: 32.7 KB
+>>> uwsgi-gevent3*: Compressing data...
+>>> uwsgi-gevent3*: Create checksum...
+>>> uwsgi-gevent3*: Create uwsgi-gevent3-2.0.29-r0.apk
+>>> uwsgi-graylog2*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libz.so.1
+>>> uwsgi-graylog2*: Package size: 14.2 KB
+>>> uwsgi-graylog2*: Compressing data...
+>>> uwsgi-graylog2*: Create checksum...
+>>> uwsgi-graylog2*: Create uwsgi-graylog2-2.0.29-r0.apk
+>>> uwsgi-http*: Tracing dependencies...
+	uwsgi
+	uwsgi-corerouter
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-http*: Package size: 56.5 KB
+>>> uwsgi-http*: Compressing data...
+>>> uwsgi-http*: Create checksum...
+>>> uwsgi-http*: Create uwsgi-http-2.0.29-r0.apk
+>>> uwsgi-legion_cache_fetch*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-legion_cache_fetch*: Package size: 14.0 KB
+>>> uwsgi-legion_cache_fetch*: Compressing data...
+>>> uwsgi-legion_cache_fetch*: Create checksum...
+>>> uwsgi-legion_cache_fetch*: Create uwsgi-legion_cache_fetch-2.0.29-r0.apk
+>>> uwsgi-logcrypto*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-logcrypto*: Package size: 14.0 KB
+>>> uwsgi-logcrypto*: Compressing data...
+>>> uwsgi-logcrypto*: Create checksum...
+>>> uwsgi-logcrypto*: Create uwsgi-logcrypto-2.0.29-r0.apk
+>>> uwsgi-logfile*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-logfile*: Package size: 14.0 KB
+>>> uwsgi-logfile*: Compressing data...
+>>> uwsgi-logfile*: Create checksum...
+>>> uwsgi-logfile*: Create uwsgi-logfile-2.0.29-r0.apk
+>>> uwsgi-logpipe*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-logpipe*: Package size: 14.0 KB
+>>> uwsgi-logpipe*: Compressing data...
+>>> uwsgi-logpipe*: Create checksum...
+>>> uwsgi-logpipe*: Create uwsgi-logpipe-2.0.29-r0.apk
+>>> uwsgi-logsocket*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-logsocket*: Package size: 14.0 KB
+>>> uwsgi-logsocket*: Compressing data...
+>>> uwsgi-logsocket*: Create checksum...
+>>> uwsgi-logsocket*: Create uwsgi-logsocket-2.0.29-r0.apk
+>>> uwsgi-logzmq*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libzmq.so.5
+>>> uwsgi-logzmq*: Package size: 14.1 KB
+>>> uwsgi-logzmq*: Compressing data...
+>>> uwsgi-logzmq*: Create checksum...
+>>> uwsgi-logzmq*: Create uwsgi-logzmq-2.0.29-r0.apk
+>>> uwsgi-lua*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:liblua-5.3.so.0
+>>> uwsgi-lua*: Package size: 30.4 KB
+>>> uwsgi-lua*: Compressing data...
+>>> uwsgi-lua*: Create checksum...
+>>> uwsgi-lua*: Create uwsgi-lua-2.0.29-r0.apk
+>>> uwsgi-msgpack*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-msgpack*: Package size: 14.0 KB
+>>> uwsgi-msgpack*: Compressing data...
+>>> uwsgi-msgpack*: Create checksum...
+>>> uwsgi-msgpack*: Create uwsgi-msgpack-2.0.29-r0.apk
+>>> uwsgi-nagios*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-nagios*: Package size: 14.1 KB
+>>> uwsgi-nagios*: Compressing data...
+>>> uwsgi-nagios*: Create checksum...
+>>> uwsgi-nagios*: Create uwsgi-nagios-2.0.29-r0.apk
+>>> uwsgi-notfound*: Tracing dependencies...
+	uwsgi
+>>> uwsgi-notfound*: Package size: 14.1 KB
+>>> uwsgi-notfound*: Compressing data...
+>>> uwsgi-notfound*: Create checksum...
+>>> uwsgi-notfound*: Create uwsgi-notfound-2.0.29-r0.apk
+>>> uwsgi-openrc*: Tracing dependencies...
+>>> uwsgi-openrc*: Package size: 2.2 KB
+>>> uwsgi-openrc*: Compressing data...
+>>> uwsgi-openrc*: Create checksum...
+>>> uwsgi-openrc*: Create uwsgi-openrc-2.0.29-r0.apk
+>>> uwsgi-pam*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libpam.so.0
+>>> uwsgi-pam*: Package size: 14.3 KB
+>>> uwsgi-pam*: Compressing data...
+>>> uwsgi-pam*: Create checksum...
+>>> uwsgi-pam*: Create uwsgi-pam-2.0.29-r0.apk
+>>> uwsgi-ping*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-ping*: Package size: 14.2 KB
+>>> uwsgi-ping*: Compressing data...
+>>> uwsgi-ping*: Create checksum...
+>>> uwsgi-ping*: Create uwsgi-ping-2.0.29-r0.apk
+>>> uwsgi-pty*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-pty*: Package size: 14.4 KB
+>>> uwsgi-pty*: Compressing data...
+>>> uwsgi-pty*: Create checksum...
+>>> uwsgi-pty*: Create uwsgi-pty-2.0.29-r0.apk
+>>> uwsgi-python3*: Tracing dependencies...
+	uwsgi
+	python3~3.12
+	so:libc.musl-x86_64.so.1
+	so:libpython3.12.so.1.0
+>>> uwsgi-python3*: Package size: 178.6 KB
+>>> uwsgi-python3*: Compressing data...
+>>> uwsgi-python3*: Create checksum...
+>>> uwsgi-python3*: Create uwsgi-python3-2.0.29-r0.apk
+>>> uwsgi-rawrouter*: Tracing dependencies...
+	uwsgi
+	uwsgi-corerouter
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-rawrouter*: Package size: 19.4 KB
+>>> uwsgi-rawrouter*: Compressing data...
+>>> uwsgi-rawrouter*: Create checksum...
+>>> uwsgi-rawrouter*: Create uwsgi-rawrouter-2.0.29-r0.apk
+>>> uwsgi-redislog*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-redislog*: Package size: 14.0 KB
+>>> uwsgi-redislog*: Compressing data...
+>>> uwsgi-redislog*: Create checksum...
+>>> uwsgi-redislog*: Create uwsgi-redislog-2.0.29-r0.apk
+>>> uwsgi-router_basicauth*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_basicauth*: Package size: 14.0 KB
+>>> uwsgi-router_basicauth*: Compressing data...
+>>> uwsgi-router_basicauth*: Create checksum...
+>>> uwsgi-router_basicauth*: Create uwsgi-router_basicauth-2.0.29-r0.apk
+>>> uwsgi-router_cache*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_cache*: Package size: 18.0 KB
+>>> uwsgi-router_cache*: Compressing data...
+>>> uwsgi-router_cache*: Create checksum...
+>>> uwsgi-router_cache*: Create uwsgi-router_cache-2.0.29-r0.apk
+>>> uwsgi-router_expires*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_expires*: Package size: 14.0 KB
+>>> uwsgi-router_expires*: Compressing data...
+>>> uwsgi-router_expires*: Create checksum...
+>>> uwsgi-router_expires*: Create uwsgi-router_expires-2.0.29-r0.apk
+>>> uwsgi-router_hash*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_hash*: Package size: 14.0 KB
+>>> uwsgi-router_hash*: Compressing data...
+>>> uwsgi-router_hash*: Create checksum...
+>>> uwsgi-router_hash*: Create uwsgi-router_hash-2.0.29-r0.apk
+>>> uwsgi-router_http*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_http*: Package size: 14.0 KB
+>>> uwsgi-router_http*: Compressing data...
+>>> uwsgi-router_http*: Create checksum...
+>>> uwsgi-router_http*: Create uwsgi-router_http-2.0.29-r0.apk
+>>> uwsgi-router_memcached*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_memcached*: Package size: 14.0 KB
+>>> uwsgi-router_memcached*: Compressing data...
+>>> uwsgi-router_memcached*: Create checksum...
+>>> uwsgi-router_memcached*: Create uwsgi-router_memcached-2.0.29-r0.apk
+>>> uwsgi-router_metrics*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_metrics*: Package size: 14.0 KB
+>>> uwsgi-router_metrics*: Compressing data...
+>>> uwsgi-router_metrics*: Create checksum...
+>>> uwsgi-router_metrics*: Create uwsgi-router_metrics-2.0.29-r0.apk
+>>> uwsgi-router_radius*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_radius*: Package size: 14.0 KB
+>>> uwsgi-router_radius*: Compressing data...
+>>> uwsgi-router_radius*: Create checksum...
+>>> uwsgi-router_radius*: Create uwsgi-router_radius-2.0.29-r0.apk
+>>> uwsgi-router_redirect*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_redirect*: Package size: 14.0 KB
+>>> uwsgi-router_redirect*: Compressing data...
+>>> uwsgi-router_redirect*: Create checksum...
+>>> uwsgi-router_redirect*: Create uwsgi-router_redirect-2.0.29-r0.apk
+>>> uwsgi-router_redis*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_redis*: Package size: 14.0 KB
+>>> uwsgi-router_redis*: Compressing data...
+>>> uwsgi-router_redis*: Create checksum...
+>>> uwsgi-router_redis*: Create uwsgi-router_redis-2.0.29-r0.apk
+>>> uwsgi-router_rewrite*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_rewrite*: Package size: 14.0 KB
+>>> uwsgi-router_rewrite*: Compressing data...
+>>> uwsgi-router_rewrite*: Create checksum...
+>>> uwsgi-router_rewrite*: Create uwsgi-router_rewrite-2.0.29-r0.apk
+>>> uwsgi-router_static*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_static*: Package size: 14.0 KB
+>>> uwsgi-router_static*: Compressing data...
+>>> uwsgi-router_static*: Create checksum...
+>>> uwsgi-router_static*: Create uwsgi-router_static-2.0.29-r0.apk
+>>> uwsgi-router_uwsgi*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-router_uwsgi*: Package size: 14.0 KB
+>>> uwsgi-router_uwsgi*: Compressing data...
+>>> uwsgi-router_uwsgi*: Create checksum...
+>>> uwsgi-router_uwsgi*: Create uwsgi-router_uwsgi-2.0.29-r0.apk
+>>> uwsgi-rpc*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-rpc*: Package size: 22.0 KB
+>>> uwsgi-rpc*: Compressing data...
+>>> uwsgi-rpc*: Create checksum...
+>>> uwsgi-rpc*: Create uwsgi-rpc-2.0.29-r0.apk
+>>> uwsgi-rrdtool*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-rrdtool*: Package size: 14.2 KB
+>>> uwsgi-rrdtool*: Compressing data...
+>>> uwsgi-rrdtool*: Create checksum...
+>>> uwsgi-rrdtool*: Create uwsgi-rrdtool-2.0.29-r0.apk
+>>> uwsgi-rsyslog*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-rsyslog*: Package size: 14.2 KB
+>>> uwsgi-rsyslog*: Compressing data...
+>>> uwsgi-rsyslog*: Create checksum...
+>>> uwsgi-rsyslog*: Create uwsgi-rsyslog-2.0.29-r0.apk
+>>> uwsgi-signal*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-signal*: Package size: 14.0 KB
+>>> uwsgi-signal*: Compressing data...
+>>> uwsgi-signal*: Create checksum...
+>>> uwsgi-signal*: Create uwsgi-signal-2.0.29-r0.apk
+>>> uwsgi-spooler*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-spooler*: Package size: 14.0 KB
+>>> uwsgi-spooler*: Compressing data...
+>>> uwsgi-spooler*: Create checksum...
+>>> uwsgi-spooler*: Create uwsgi-spooler-2.0.29-r0.apk
+>>> uwsgi-sslrouter*: Tracing dependencies...
+	uwsgi
+	uwsgi-corerouter
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-sslrouter*: Package size: 23.4 KB
+>>> uwsgi-sslrouter*: Compressing data...
+>>> uwsgi-sslrouter*: Create checksum...
+>>> uwsgi-sslrouter*: Create uwsgi-sslrouter-2.0.29-r0.apk
+>>> uwsgi-stats_pusher_file*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-stats_pusher_file*: Package size: 14.0 KB
+>>> uwsgi-stats_pusher_file*: Compressing data...
+>>> uwsgi-stats_pusher_file*: Create checksum...
+>>> uwsgi-stats_pusher_file*: Create uwsgi-stats_pusher_file-2.0.29-r0.apk
+>>> uwsgi-stats_pusher_socket*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-stats_pusher_socket*: Package size: 14.0 KB
+>>> uwsgi-stats_pusher_socket*: Compressing data...
+>>> uwsgi-stats_pusher_socket*: Create checksum...
+>>> uwsgi-stats_pusher_socket*: Create uwsgi-stats_pusher_socket-2.0.29-r0.apk
+>>> uwsgi-stats_pusher_statsd*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-stats_pusher_statsd*: Package size: 14.0 KB
+>>> uwsgi-stats_pusher_statsd*: Compressing data...
+>>> uwsgi-stats_pusher_statsd*: Create checksum...
+>>> uwsgi-stats_pusher_statsd*: Create uwsgi-stats_pusher_statsd-2.0.29-r0.apk
+>>> uwsgi-symcall*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-symcall*: Package size: 14.3 KB
+>>> uwsgi-symcall*: Compressing data...
+>>> uwsgi-symcall*: Create checksum...
+>>> uwsgi-symcall*: Create uwsgi-symcall-2.0.29-r0.apk
+>>> uwsgi-syslog*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-syslog*: Package size: 14.4 KB
+>>> uwsgi-syslog*: Compressing data...
+>>> uwsgi-syslog*: Create checksum...
+>>> uwsgi-syslog*: Create uwsgi-syslog-2.0.29-r0.apk
+>>> uwsgi-transformation_chunked*: Tracing dependencies...
+	uwsgi
+>>> uwsgi-transformation_chunked*: Package size: 14.0 KB
+>>> uwsgi-transformation_chunked*: Compressing data...
+>>> uwsgi-transformation_chunked*: Create checksum...
+>>> uwsgi-transformation_chunked*: Create uwsgi-transformation_chunked-2.0.29-r0.apk
+>>> uwsgi-transformation_gzip*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-transformation_gzip*: Package size: 14.0 KB
+>>> uwsgi-transformation_gzip*: Compressing data...
+>>> uwsgi-transformation_gzip*: Create checksum...
+>>> uwsgi-transformation_gzip*: Create uwsgi-transformation_gzip-2.0.29-r0.apk
+>>> uwsgi-transformation_offload*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-transformation_offload*: Package size: 14.0 KB
+>>> uwsgi-transformation_offload*: Compressing data...
+>>> uwsgi-transformation_offload*: Create checksum...
+>>> uwsgi-transformation_offload*: Create uwsgi-transformation_offload-2.0.29-r0.apk
+>>> uwsgi-transformation_template*: Tracing dependencies...
+	uwsgi
+>>> uwsgi-transformation_template*: Package size: 14.0 KB
+>>> uwsgi-transformation_template*: Compressing data...
+>>> uwsgi-transformation_template*: Create checksum...
+>>> uwsgi-transformation_template*: Create uwsgi-transformation_template-2.0.29-r0.apk
+>>> uwsgi-transformation_tofile*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-transformation_tofile*: Package size: 14.0 KB
+>>> uwsgi-transformation_tofile*: Compressing data...
+>>> uwsgi-transformation_tofile*: Create checksum...
+>>> uwsgi-transformation_tofile*: Create uwsgi-transformation_tofile-2.0.29-r0.apk
+>>> uwsgi-tuntap*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-tuntap*: Package size: 34.5 KB
+>>> uwsgi-tuntap*: Compressing data...
+>>> uwsgi-tuntap*: Create checksum...
+>>> uwsgi-tuntap*: Create uwsgi-tuntap-2.0.29-r0.apk
+>>> uwsgi-ugreen*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libucontext.so.1
+>>> uwsgi-ugreen*: Package size: 14.2 KB
+>>> uwsgi-ugreen*: Compressing data...
+>>> uwsgi-ugreen*: Create checksum...
+>>> uwsgi-ugreen*: Create uwsgi-ugreen-2.0.29-r0.apk
+>>> uwsgi-webdav*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libxml2.so.2
+>>> uwsgi-webdav*: Package size: 35.3 KB
+>>> uwsgi-webdav*: Compressing data...
+>>> uwsgi-webdav*: Create checksum...
+>>> uwsgi-webdav*: Create uwsgi-webdav-2.0.29-r0.apk
+>>> uwsgi-xslt*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+	so:libxml2.so.2
+	so:libxslt.so.1
+>>> uwsgi-xslt*: Package size: 18.5 KB
+>>> uwsgi-xslt*: Compressing data...
+>>> uwsgi-xslt*: Create checksum...
+>>> uwsgi-xslt*: Create uwsgi-xslt-2.0.29-r0.apk
+>>> uwsgi-zabbix*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-zabbix*: Package size: 14.1 KB
+>>> uwsgi-zabbix*: Compressing data...
+>>> uwsgi-zabbix*: Create checksum...
+>>> uwsgi-zabbix*: Create uwsgi-zabbix-2.0.29-r0.apk
+>>> uwsgi-zergpool*: Tracing dependencies...
+	uwsgi
+	so:libc.musl-x86_64.so.1
+>>> uwsgi-zergpool*: Package size: 14.2 KB
+>>> uwsgi-zergpool*: Compressing data...
+>>> uwsgi-zergpool*: Create checksum...
+>>> uwsgi-zergpool*: Create uwsgi-zergpool-2.0.29-r0.apk
+>>> uwsgi*: Tracing dependencies...
+	mailcap
+	/bin/sh
+	so:libc.musl-x86_64.so.1
+	so:libcap.so.2
+	so:libcrypto.so.3
+	so:libjansson.so.4
+	so:libpcre2-8.so.0
+	so:libssl.so.3
+	so:libxml2.so.2
+	so:libz.so.1
+>>> uwsgi*: Package size: 752.2 KB
+>>> uwsgi*: Compressing data...
+>>> uwsgi*: Create checksum...
+>>> uwsgi*: Create uwsgi-2.0.29-r0.apk
+>>> uwsgi: Updating the main/x86_64 repository index...
+>>> uwsgi: Signing the index...
+>>> uwsgi: Cleaning up srcdir
+>>> uwsgi: Cleaning up build chroot
+>>> uwsgi: Cleaning up pkgdir

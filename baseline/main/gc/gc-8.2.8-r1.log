@@ -1,0 +1,713 @@
+>>> gc: Validating /home/packager/oily-pine/main/gc/APKBUILD...
+>>> gc: Cleaning up srcdir
+>>> gc: Cleaning up pkgdir
+>>> gc: Cleaning up tmpdir
+>>> gc: Fetching https://github.com/ivmai/bdwgc/releases/download/v8.2.8/gc-8.2.8.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 1190k  100 1190k    0     0  1151k      0  0:00:01  0:00:01 --:--:-- 1151k
+>>> gc: Fetching https://github.com/ivmai/bdwgc/releases/download/v8.2.8/gc-8.2.8.tar.gz
+>>> gc: Checking sha512sums...
+gc-8.2.8.tar.gz: OK
+>>> gc: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/69) Installing musl (1.2.5-r10)
+(2/69) Installing libcrypto3 (3.5.0-r0)
+(3/69) Installing ca-certificates-bundle (20241121-r2)
+(4/69) Installing libssl3 (3.5.0-r0)
+(5/69) Installing zlib (1.3.1-r2)
+(6/69) Installing libapk2 (2.14.9-r2)
+(7/69) Installing apk-tools (2.14.9-r2)
+(8/69) Installing libcap2 (2.76-r0)
+(9/69) Installing libcap-getcap (2.76-r0)
+(10/69) Installing fakeroot (1.37.1.1-r0)
+(11/69) Installing scanelf (1.3.8-r1)
+(12/69) Installing musl-utils (1.2.5-r10)
+(13/69) Installing libgcc (14.3.0-r0)
+(14/69) Installing libstdc++ (14.3.0-r0)
+(15/69) Installing lzip (1.25-r0)
+(16/69) Installing openssl (3.5.0-r0)
+(17/69) Installing patch (2.8-r0)
+(18/69) Installing pkgconf (2.4.3-r0)
+(19/69) Installing acl-libs (2.3.2-r1)
+(20/69) Installing tar (1.35-r3)
+(21/69) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/69) Installing ssl_client (1.37.0-r18)
+(23/69) Installing busybox-binsh (1.37.0-r18)
+(24/69) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/69) Installing abuild-sudo (3.15.0-r0)
+(26/69) Installing alpine-baselayout-data (3.7.0-r0)
+(27/69) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/69) Installing bridge (1.5-r5)
+(29/69) Installing ifupdown-ng (0.12.1-r7)
+(30/69) Installing openrc-user (0.62.2-r2)
+(31/69) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/69) Installing mdev-conf (4.8-r0)
+(33/69) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/69) Installing alpine-conf (3.20.0-r0)
+(35/69) Installing alpine-keys (2.5-r0)
+(36/69) Installing alpine-release (3.22.0-r0)
+(37/69) Installing busybox-openrc (1.37.0-r18)
+(38/69) Installing busybox-suid (1.37.0-r18)
+(39/69) Installing alpine-base (3.22.0-r0)
+(40/69) Installing jansson (2.14.1-r0)
+(41/69) Installing zstd-libs (1.5.7-r0)
+(42/69) Installing binutils (2.44-r0)
+(43/69) Installing libmagic (5.46-r2)
+(44/69) Installing file (5.46-r2)
+(45/69) Installing libgomp (14.3.0-r0)
+(46/69) Installing libatomic (14.3.0-r0)
+(47/69) Installing gmp (6.3.0-r3)
+(48/69) Installing isl26 (0.26-r1)
+(49/69) Installing mpfr4 (4.2.1_p1-r0)
+(50/69) Installing mpc1 (1.3.1-r1)
+(51/69) Installing gcc (14.3.0-r0)
+(52/69) Installing libstdc++-dev (14.3.0-r0)
+(53/69) Installing musl-dev (1.2.5-r10)
+(54/69) Installing g++ (14.3.0-r0)
+(55/69) Installing make (4.4.1-r3)
+(56/69) Installing fortify-headers (1.1-r5)
+(57/69) Installing build-base (0.5-r3)
+(58/69) Installing brotli-libs (1.1.0-r2)
+(59/69) Installing c-ares (1.34.5-r0)
+(60/69) Installing libunistring (1.3-r0)
+(61/69) Installing libidn2 (2.3.7-r0)
+(62/69) Installing nghttp2-libs (1.65.0-r0)
+(63/69) Installing libpsl (0.21.5-r3)
+(64/69) Installing libcurl (8.14.0-r2)
+(65/69) Installing libexpat (2.7.1-r0)
+(66/69) Installing pcre2 (10.43-r1)
+(67/69) Installing git (2.49.0-r0)
+(68/69) Installing git-init-template (2.49.0-r0)
+(69/69) Installing linux-headers (6.14.2-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 265 MiB in 69 packages
+>>> gc: Fetching https://github.com/ivmai/bdwgc/releases/download/v8.2.8/gc-8.2.8.tar.gz
+>>> gc: Checking sha512sums...
+gc-8.2.8.tar.gz: OK
+>>> gc: Unpacking /var/cache/distfiles/gc-8.2.8.tar.gz...
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking target system type... x86_64-alpine-linux-musl
+checking GC version numbers... major=8 minor=2                 micro=8
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether to enable maintainer-specific portions of Makefiles... no
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking whether the compiler supports GNU C++... yes
+checking whether c++ accepts -g... yes
+checking for c++ option to enable C++11 features... none needed
+checking dependency style of c++... gcc3
+checking dependency style of cc... gcc3
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for x86_64-alpine-linux-musl-file... no
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking how to run the C++ preprocessor... c++ -E
+checking for ld used by c++... /usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) is GNU ld... yes
+checking whether the c++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking for c++ option to produce PIC... -fPIC -DPIC
+checking if c++ PIC flag -fPIC -DPIC works... yes
+checking if c++ static flag -static works... yes
+checking if c++ supports -c -o file.o... yes
+checking if c++ supports -c -o file.o... (cached) yes
+checking whether the c++ linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking dynamic linker characteristics... (cached) GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking for emscripten... no
+checking for thread model used by GCC... posix
+checking for inline... inline
+configure: WARNING: "Explicit GC_INIT() calls may be required."
+checking for pthread_self in -lpthread... yes
+checking for clock_gettime without additional libraries... yes
+checking whether compiler supports -Wextra... yes
+checking whether compiler supports -Wpedantic... yes
+checking for xlc... no
+checking whether compiler supports -fno-strict-aliasing... yes
+checking for getcontext... no
+checking for dl_iterate_phdr... yes
+checking for dlopen in -ldl... yes
+checking for execinfo.h... no
+checking whether to build shared libraries... yes
+checking which machine-dependent code should be used... 
+checking whether AIX gcc optimization fix is necessary... no
+checking whether -Wno-frame-address works... yes
+checking for dladdr... yes
+checking for sigsetjmp... yes
+checking for pthread_setname_np... yes (with tid)
+checking for sys/dg_sys_info.h... no
+checking for compiler intrinsics support... yes
+checking which libatomic_ops to use... none
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating bdw-gc.pc
+config.status: creating include/config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+config.status: executing default commands
+make[1]: Entering directory '/tmp/src/gc-8.2.8'
+depbase=`echo allchblk.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT allchblk.lo -MD -MP -MF $depbase.Tpo -c -o allchblk.lo allchblk.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo alloc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT alloc.lo -MD -MP -MF $depbase.Tpo -c -o alloc.lo alloc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo blacklst.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT blacklst.lo -MD -MP -MF $depbase.Tpo -c -o blacklst.lo blacklst.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo dbg_mlc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT dbg_mlc.lo -MD -MP -MF $depbase.Tpo -c -o dbg_mlc.lo dbg_mlc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo dyn_load.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT dyn_load.lo -MD -MP -MF $depbase.Tpo -c -o dyn_load.lo dyn_load.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo finalize.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT finalize.lo -MD -MP -MF $depbase.Tpo -c -o finalize.lo finalize.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo gc_dlopen.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT gc_dlopen.lo -MD -MP -MF $depbase.Tpo -c -o gc_dlopen.lo gc_dlopen.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo headers.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT headers.lo -MD -MP -MF $depbase.Tpo -c -o headers.lo headers.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo mach_dep.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT mach_dep.lo -MD -MP -MF $depbase.Tpo -c -o mach_dep.lo mach_dep.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo malloc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT malloc.lo -MD -MP -MF $depbase.Tpo -c -o malloc.lo malloc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo mallocx.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT mallocx.lo -MD -MP -MF $depbase.Tpo -c -o mallocx.lo mallocx.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo mark.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT mark.lo -MD -MP -MF $depbase.Tpo -c -o mark.lo mark.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo mark_rts.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT mark_rts.lo -MD -MP -MF $depbase.Tpo -c -o mark_rts.lo mark_rts.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo misc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT misc.lo -MD -MP -MF $depbase.Tpo -c -o misc.lo misc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo new_hblk.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT new_hblk.lo -MD -MP -MF $depbase.Tpo -c -o new_hblk.lo new_hblk.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo obj_map.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT obj_map.lo -MD -MP -MF $depbase.Tpo -c -o obj_map.lo obj_map.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT headers.lo -MD -MP -MF .deps/headers.Tpo -c headers.c  -fPIC -DPIC -o .libs/headers.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT blacklst.lo -MD -MP -MF .deps/blacklst.Tpo -c blacklst.c  -fPIC -DPIC -o .libs/blacklst.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT dbg_mlc.lo -MD -MP -MF .deps/dbg_mlc.Tpo -c dbg_mlc.c  -fPIC -DPIC -o .libs/dbg_mlc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mach_dep.lo -MD -MP -MF .deps/mach_dep.Tpo -c mach_dep.c  -fPIC -DPIC -o .libs/mach_dep.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT dyn_load.lo -MD -MP -MF .deps/dyn_load.Tpo -c dyn_load.c  -fPIC -DPIC -o .libs/dyn_load.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT alloc.lo -MD -MP -MF .deps/alloc.Tpo -c alloc.c  -fPIC -DPIC -o .libs/alloc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT malloc.lo -MD -MP -MF .deps/malloc.Tpo -c malloc.c  -fPIC -DPIC -o .libs/malloc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT allchblk.lo -MD -MP -MF .deps/allchblk.Tpo -c allchblk.c  -fPIC -DPIC -o .libs/allchblk.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT finalize.lo -MD -MP -MF .deps/finalize.Tpo -c finalize.c  -fPIC -DPIC -o .libs/finalize.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mark_rts.lo -MD -MP -MF .deps/mark_rts.Tpo -c mark_rts.c  -fPIC -DPIC -o .libs/mark_rts.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT misc.lo -MD -MP -MF .deps/misc.Tpo -c misc.c  -fPIC -DPIC -o .libs/misc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT gc_dlopen.lo -MD -MP -MF .deps/gc_dlopen.Tpo -c gc_dlopen.c  -fPIC -DPIC -o .libs/gc_dlopen.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT new_hblk.lo -MD -MP -MF .deps/new_hblk.Tpo -c new_hblk.c  -fPIC -DPIC -o .libs/new_hblk.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mark.lo -MD -MP -MF .deps/mark.Tpo -c mark.c  -fPIC -DPIC -o .libs/mark.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT obj_map.lo -MD -MP -MF .deps/obj_map.Tpo -c obj_map.c  -fPIC -DPIC -o .libs/obj_map.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mallocx.lo -MD -MP -MF .deps/mallocx.Tpo -c mallocx.c  -fPIC -DPIC -o .libs/mallocx.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT gc_dlopen.lo -MD -MP -MF .deps/gc_dlopen.Tpo -c gc_dlopen.c -o gc_dlopen.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mach_dep.lo -MD -MP -MF .deps/mach_dep.Tpo -c mach_dep.c -o mach_dep.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT new_hblk.lo -MD -MP -MF .deps/new_hblk.Tpo -c new_hblk.c -o new_hblk.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT obj_map.lo -MD -MP -MF .deps/obj_map.Tpo -c obj_map.c -o obj_map.o >/dev/null 2>&1
+depbase=`echo os_dep.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT os_dep.lo -MD -MP -MF $depbase.Tpo -c -o os_dep.lo os_dep.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo ptr_chck.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT ptr_chck.lo -MD -MP -MF $depbase.Tpo -c -o ptr_chck.lo ptr_chck.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT dyn_load.lo -MD -MP -MF .deps/dyn_load.Tpo -c dyn_load.c -o dyn_load.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT headers.lo -MD -MP -MF .deps/headers.Tpo -c headers.c -o headers.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT os_dep.lo -MD -MP -MF .deps/os_dep.Tpo -c os_dep.c  -fPIC -DPIC -o .libs/os_dep.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT blacklst.lo -MD -MP -MF .deps/blacklst.Tpo -c blacklst.c -o blacklst.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT ptr_chck.lo -MD -MP -MF .deps/ptr_chck.Tpo -c ptr_chck.c  -fPIC -DPIC -o .libs/ptr_chck.o
+depbase=`echo reclaim.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT reclaim.lo -MD -MP -MF $depbase.Tpo -c -o reclaim.lo reclaim.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo specific.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT specific.lo -MD -MP -MF $depbase.Tpo -c -o specific.lo specific.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT reclaim.lo -MD -MP -MF .deps/reclaim.Tpo -c reclaim.c  -fPIC -DPIC -o .libs/reclaim.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT specific.lo -MD -MP -MF .deps/specific.Tpo -c specific.c  -fPIC -DPIC -o .libs/specific.o
+depbase=`echo typd_mlc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT typd_mlc.lo -MD -MP -MF $depbase.Tpo -c -o typd_mlc.lo typd_mlc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT allchblk.lo -MD -MP -MF .deps/allchblk.Tpo -c allchblk.c -o allchblk.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT typd_mlc.lo -MD -MP -MF .deps/typd_mlc.Tpo -c typd_mlc.c  -fPIC -DPIC -o .libs/typd_mlc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mark_rts.lo -MD -MP -MF .deps/mark_rts.Tpo -c mark_rts.c -o mark_rts.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT ptr_chck.lo -MD -MP -MF .deps/ptr_chck.Tpo -c ptr_chck.c -o ptr_chck.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT specific.lo -MD -MP -MF .deps/specific.Tpo -c specific.c -o specific.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mallocx.lo -MD -MP -MF .deps/mallocx.Tpo -c mallocx.c -o mallocx.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT malloc.lo -MD -MP -MF .deps/malloc.Tpo -c malloc.c -o malloc.o >/dev/null 2>&1
+depbase=`echo pthread_start.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT pthread_start.lo -MD -MP -MF $depbase.Tpo -c -o pthread_start.lo pthread_start.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo pthread_support.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT pthread_support.lo -MD -MP -MF $depbase.Tpo -c -o pthread_support.lo pthread_support.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT alloc.lo -MD -MP -MF .deps/alloc.Tpo -c alloc.c -o alloc.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT pthread_support.lo -MD -MP -MF .deps/pthread_support.Tpo -c pthread_support.c  -fPIC -DPIC -o .libs/pthread_support.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT pthread_start.lo -MD -MP -MF .deps/pthread_start.Tpo -c pthread_start.c  -fPIC -DPIC -o .libs/pthread_start.o
+depbase=`echo pthread_stop_world.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT pthread_stop_world.lo -MD -MP -MF $depbase.Tpo -c -o pthread_stop_world.lo pthread_stop_world.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT mark.lo -MD -MP -MF .deps/mark.Tpo -c mark.c -o mark.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT pthread_stop_world.lo -MD -MP -MF .deps/pthread_stop_world.Tpo -c pthread_stop_world.c  -fPIC -DPIC -o .libs/pthread_stop_world.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT misc.lo -MD -MP -MF .deps/misc.Tpo -c misc.c -o misc.o >/dev/null 2>&1
+depbase=`echo thread_local_alloc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT thread_local_alloc.lo -MD -MP -MF $depbase.Tpo -c -o thread_local_alloc.lo thread_local_alloc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT dbg_mlc.lo -MD -MP -MF .deps/dbg_mlc.Tpo -c dbg_mlc.c -o dbg_mlc.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT pthread_start.lo -MD -MP -MF .deps/pthread_start.Tpo -c pthread_start.c -o pthread_start.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT thread_local_alloc.lo -MD -MP -MF .deps/thread_local_alloc.Tpo -c thread_local_alloc.c  -fPIC -DPIC -o .libs/thread_local_alloc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT reclaim.lo -MD -MP -MF .deps/reclaim.Tpo -c reclaim.c -o reclaim.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT typd_mlc.lo -MD -MP -MF .deps/typd_mlc.Tpo -c typd_mlc.c -o typd_mlc.o >/dev/null 2>&1
+depbase=`echo gcj_mlc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT gcj_mlc.lo -MD -MP -MF $depbase.Tpo -c -o gcj_mlc.lo gcj_mlc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo fnlz_mlc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT fnlz_mlc.lo -MD -MP -MF $depbase.Tpo -c -o fnlz_mlc.lo fnlz_mlc.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+depbase=`echo gc_badalc.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CXX   --mode=compile c++ -DHAVE_CONFIG_H   -I./include -I./include    -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g  -MT gc_badalc.lo -MD -MP -MF $depbase.Tpo -c -o gc_badalc.lo gc_badalc.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT gcj_mlc.lo -MD -MP -MF .deps/gcj_mlc.Tpo -c gcj_mlc.c  -fPIC -DPIC -o .libs/gcj_mlc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT fnlz_mlc.lo -MD -MP -MF .deps/fnlz_mlc.Tpo -c fnlz_mlc.c  -fPIC -DPIC -o .libs/fnlz_mlc.o
+depbase=`echo gc_cpp.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CXX   --mode=compile c++ -DHAVE_CONFIG_H   -I./include -I./include    -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g  -MT gc_cpp.lo -MD -MP -MF $depbase.Tpo -c -o gc_cpp.lo gc_cpp.cc &&\
+mv -f $depbase.Tpo $depbase.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT pthread_stop_world.lo -MD -MP -MF .deps/pthread_stop_world.Tpo -c pthread_stop_world.c -o pthread_stop_world.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT thread_local_alloc.lo -MD -MP -MF .deps/thread_local_alloc.Tpo -c thread_local_alloc.c -o thread_local_alloc.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT cord/libcord_la-cordbscs.lo -MD -MP -MF cord/.deps/libcord_la-cordbscs.Tpo -c -o cord/libcord_la-cordbscs.lo `test -f 'cord/cordbscs.c' || echo './'`cord/cordbscs.c
+libtool: compile:  c++ -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -MT gc_badalc.lo -MD -MP -MF .deps/gc_badalc.Tpo -c gc_badalc.cc  -fPIC -DPIC -o .libs/gc_badalc.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT finalize.lo -MD -MP -MF .deps/finalize.Tpo -c finalize.c -o finalize.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT fnlz_mlc.lo -MD -MP -MF .deps/fnlz_mlc.Tpo -c fnlz_mlc.c -o fnlz_mlc.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT cord/libcord_la-cordbscs.lo -MD -MP -MF cord/.deps/libcord_la-cordbscs.Tpo -c cord/cordbscs.c  -fPIC -DPIC -o cord/.libs/libcord_la-cordbscs.o
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT cord/libcord_la-cordprnt.lo -MD -MP -MF cord/.deps/libcord_la-cordprnt.Tpo -c -o cord/libcord_la-cordprnt.lo `test -f 'cord/cordprnt.c' || echo './'`cord/cordprnt.c
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT cord/libcord_la-cordxtra.lo -MD -MP -MF cord/.deps/libcord_la-cordxtra.Tpo -c -o cord/libcord_la-cordxtra.lo `test -f 'cord/cordxtra.c' || echo './'`cord/cordxtra.c
+libtool: compile:  c++ -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -MT gc_cpp.lo -MD -MP -MF .deps/gc_cpp.Tpo -c gc_cpp.cc  -fPIC -DPIC -o .libs/gc_cpp.o
+libtool: compile:  c++ -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -MT gc_badalc.lo -MD -MP -MF .deps/gc_badalc.Tpo -c gc_badalc.cc -o gc_badalc.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT cord/libcord_la-cordprnt.lo -MD -MP -MF cord/.deps/libcord_la-cordprnt.Tpo -c cord/cordprnt.c  -fPIC -DPIC -o cord/.libs/libcord_la-cordprnt.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT os_dep.lo -MD -MP -MF .deps/os_dep.Tpo -c os_dep.c -o os_dep.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT gcj_mlc.lo -MD -MP -MF .deps/gcj_mlc.Tpo -c gcj_mlc.c -o gcj_mlc.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT cord/libcord_la-cordxtra.lo -MD -MP -MF cord/.deps/libcord_la-cordxtra.Tpo -c cord/cordxtra.c  -fPIC -DPIC -o cord/.libs/libcord_la-cordxtra.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT pthread_support.lo -MD -MP -MF .deps/pthread_support.Tpo -c pthread_support.c -o pthread_support.o >/dev/null 2>&1
+libtool: compile:  c++ -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -MT gc_cpp.lo -MD -MP -MF .deps/gc_cpp.Tpo -c gc_cpp.cc -o gc_cpp.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT cord/libcord_la-cordprnt.lo -MD -MP -MF cord/.deps/libcord_la-cordprnt.Tpo -c cord/cordprnt.c -o cord/libcord_la-cordprnt.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT cord/libcord_la-cordbscs.lo -MD -MP -MF cord/.deps/libcord_la-cordbscs.Tpo -c cord/cordbscs.c -o cord/libcord_la-cordbscs.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT cord/libcord_la-cordxtra.lo -MD -MP -MF cord/.deps/libcord_la-cordxtra.Tpo -c cord/cordxtra.c -o cord/libcord_la-cordxtra.o >/dev/null 2>&1
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -version-info 6:4:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libgc.la -rpath /usr/lib allchblk.lo alloc.lo blacklst.lo dbg_mlc.lo dyn_load.lo finalize.lo gc_dlopen.lo headers.lo mach_dep.lo malloc.lo mallocx.lo mark.lo mark_rts.lo misc.lo new_hblk.lo obj_map.lo os_dep.lo ptr_chck.lo reclaim.lo specific.lo typd_mlc.lo  pthread_start.lo pthread_support.lo  pthread_stop_world.lo thread_local_alloc.lo   gcj_mlc.lo fnlz_mlc.lo  -lpthread -ldl   
+mv -f cord/.deps/libcord_la-cordprnt.Tpo cord/.deps/libcord_la-cordprnt.Plo
+libtool: link: cc -shared  -fPIC -DPIC  .libs/allchblk.o .libs/alloc.o .libs/blacklst.o .libs/dbg_mlc.o .libs/dyn_load.o .libs/finalize.o .libs/gc_dlopen.o .libs/headers.o .libs/mach_dep.o .libs/malloc.o .libs/mallocx.o .libs/mark.o .libs/mark_rts.o .libs/misc.o .libs/new_hblk.o .libs/obj_map.o .libs/os_dep.o .libs/ptr_chck.o .libs/reclaim.o .libs/specific.o .libs/typd_mlc.o .libs/pthread_start.o .libs/pthread_support.o .libs/pthread_stop_world.o .libs/thread_local_alloc.o .libs/gcj_mlc.o .libs/fnlz_mlc.o   -lpthread -ldl  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libgc.so.1 -o .libs/libgc.so.1.5.4
+libtool: link: (cd ".libs" && rm -f "libgc.so.1" && ln -s "libgc.so.1.5.4" "libgc.so.1")
+libtool: link: (cd ".libs" && rm -f "libgc.so" && ln -s "libgc.so.1.5.4" "libgc.so")
+libtool: link: ar cr .libs/libgc.a  allchblk.o alloc.o blacklst.o dbg_mlc.o dyn_load.o finalize.o gc_dlopen.o headers.o mach_dep.o malloc.o mallocx.o mark.o mark_rts.o misc.o new_hblk.o obj_map.o os_dep.o ptr_chck.o reclaim.o specific.o typd_mlc.o pthread_start.o pthread_support.o pthread_stop_world.o thread_local_alloc.o gcj_mlc.o fnlz_mlc.o
+libtool: link: ranlib .libs/libgc.a
+libtool: link: ( cd ".libs" && rm -f "libgc.la" && ln -s "../libgc.la" "libgc.la" )
+/bin/sh ./libtool  --tag=CXX   --mode=link c++ -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g  -version-info 6:0:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libgccpp.la -rpath /usr/lib gc_badalc.lo gc_cpp.lo libgc.la 
+/bin/sh ./libtool  --tag=CXX   --mode=link c++ -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g  -version-info 6:0:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libgctba.la -rpath /usr/lib gc_badalc.lo libgc.la 
+mv -f cord/.deps/libcord_la-cordxtra.Tpo cord/.deps/libcord_la-cordxtra.Plo
+mv -f cord/.deps/libcord_la-cordbscs.Tpo cord/.deps/libcord_la-cordbscs.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -version-info 6:1:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libcord.la -rpath /usr/lib cord/libcord_la-cordbscs.lo cord/libcord_la-cordprnt.lo cord/libcord_la-cordxtra.lo libgc.la 
+libtool: link: c++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtbeginS.o  .libs/gc_badalc.o .libs/gc_cpp.o   -Wl,-rpath -Wl,/tmp/src/gc-8.2.8/.libs ./.libs/libgc.so -lpthread -ldl -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0 -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../.. -lstdc++ -lm -lssp_nonshared -lc -lgcc_s /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtendS.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crtn.o  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libgccpp.so.1 -o .libs/libgccpp.so.1.5.0
+libtool: link: c++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtbeginS.o  .libs/gc_badalc.o   -Wl,-rpath -Wl,/tmp/src/gc-8.2.8/.libs ./.libs/libgc.so -lpthread -ldl -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0 -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../.. -lstdc++ -lm -lssp_nonshared -lc -lgcc_s /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtendS.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crtn.o  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libgctba.so.1 -o .libs/libgctba.so.1.5.0
+libtool: link: cc -shared  -fPIC -DPIC  cord/.libs/libcord_la-cordbscs.o cord/.libs/libcord_la-cordprnt.o cord/.libs/libcord_la-cordxtra.o   -Wl,-rpath -Wl,/tmp/src/gc-8.2.8/.libs ./.libs/libgc.so -lpthread -ldl  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libcord.so.1 -o .libs/libcord.so.1.5.1
+libtool: link: (cd ".libs" && rm -f "libgccpp.so.1" && ln -s "libgccpp.so.1.5.0" "libgccpp.so.1")
+libtool: link: (cd ".libs" && rm -f "libgccpp.so" && ln -s "libgccpp.so.1.5.0" "libgccpp.so")
+libtool: link: ar cr .libs/libgccpp.a  gc_badalc.o gc_cpp.o
+libtool: link: (cd ".libs" && rm -f "libgctba.so.1" && ln -s "libgctba.so.1.5.0" "libgctba.so.1")
+libtool: link: (cd ".libs" && rm -f "libgctba.so" && ln -s "libgctba.so.1.5.0" "libgctba.so")
+libtool: link: ranlib .libs/libgccpp.a
+libtool: link: (cd ".libs" && rm -f "libcord.so.1" && ln -s "libcord.so.1.5.1" "libcord.so.1")
+libtool: link: ar cr .libs/libgctba.a  gc_badalc.o
+libtool: link: (cd ".libs" && rm -f "libcord.so" && ln -s "libcord.so.1.5.1" "libcord.so")
+libtool: link: ( cd ".libs" && rm -f "libgccpp.la" && ln -s "../libgccpp.la" "libgccpp.la" )
+libtool: link: ranlib .libs/libgctba.a
+libtool: link: ar cr .libs/libcord.a  cord/libcord_la-cordbscs.o cord/libcord_la-cordprnt.o cord/libcord_la-cordxtra.o
+libtool: link: ranlib .libs/libcord.a
+libtool: link: ( cd ".libs" && rm -f "libgctba.la" && ln -s "../libgctba.la" "libgctba.la" )
+libtool: link: ( cd ".libs" && rm -f "libcord.la" && ln -s "../libcord.la" "libcord.la" )
+make[1]: Leaving directory '/tmp/src/gc-8.2.8'
+make[1]: Entering directory '/tmp/src/gc-8.2.8'
+make  cordtest gctest  leaktest middletest smashtest hugetest realloc_test staticrootstest  test_atomic_ops threadleaktest threadkey_test subthreadcreate_test initsecondarythread_test test_cpp disclaim_test disclaim_bench disclaim_weakmap_test libstaticrootslib_test.la libstaticrootslib2_test.la
+make[2]: Entering directory '/tmp/src/gc-8.2.8'
+depbase=`echo cord/tests/cordtest.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT cord/tests/cordtest.o -MD -MP -MF $depbase.Tpo -c -o cord/tests/cordtest.o cord/tests/cordtest.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/test.o -MD -MP -MF $depbase.Tpo -c -o tests/test.o tests/test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/leak_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/leak_test.o -MD -MP -MF $depbase.Tpo -c -o tests/leak_test.o tests/leak_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/middle.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/middle.o -MD -MP -MF $depbase.Tpo -c -o tests/middle.o tests/middle.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/smash_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/smash_test.o -MD -MP -MF $depbase.Tpo -c -o tests/smash_test.o tests/smash_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/huge_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/huge_test.o -MD -MP -MF $depbase.Tpo -c -o tests/huge_test.o tests/huge_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/realloc_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/realloc_test.o -MD -MP -MF $depbase.Tpo -c -o tests/realloc_test.o tests/realloc_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+cc -DHAVE_CONFIG_H   -I./include -I./include    -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/staticrootstest-staticrootstest.o -MD -MP -MF tests/.deps/staticrootstest-staticrootstest.Tpo -c -o tests/staticrootstest-staticrootstest.o `test -f 'tests/staticrootstest.c' || echo './'`tests/staticrootstest.c
+depbase=`echo tests/staticrootslib.lo | sed 's|[^/]*$|.deps/&|;s|\.lo$||'`;\
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/staticrootslib.lo -MD -MP -MF $depbase.Tpo -c -o tests/staticrootslib.lo tests/staticrootslib.c &&\
+mv -f $depbase.Tpo $depbase.Plo
+/bin/sh ./libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H   -I./include -I./include    -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/libstaticrootslib2_test_la-staticrootslib.lo -MD -MP -MF tests/.deps/libstaticrootslib2_test_la-staticrootslib.Tpo -c -o tests/libstaticrootslib2_test_la-staticrootslib.lo `test -f 'tests/staticrootslib.c' || echo './'`tests/staticrootslib.c
+depbase=`echo tests/test_atomic_ops.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/test_atomic_ops.o -MD -MP -MF $depbase.Tpo -c -o tests/test_atomic_ops.o tests/test_atomic_ops.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/thread_leak_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/thread_leak_test.o -MD -MP -MF $depbase.Tpo -c -o tests/thread_leak_test.o tests/thread_leak_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/threadkey_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/threadkey_test.o -MD -MP -MF $depbase.Tpo -c -o tests/threadkey_test.o tests/threadkey_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/subthread_create.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/subthread_create.o -MD -MP -MF $depbase.Tpo -c -o tests/subthread_create.o tests/subthread_create.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/initsecondarythread.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/initsecondarythread.o -MD -MP -MF $depbase.Tpo -c -o tests/initsecondarythread.o tests/initsecondarythread.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/test_cpp.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+c++ -DHAVE_CONFIG_H   -I./include -I./include    -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g  -MT tests/test_cpp.o -MD -MP -MF $depbase.Tpo -c -o tests/test_cpp.o tests/test_cpp.cc &&\
+mv -f $depbase.Tpo $depbase.Po
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT tests/staticrootslib.lo -MD -MP -MF tests/.deps/staticrootslib.Tpo -c tests/staticrootslib.c  -fPIC -DPIC -o tests/.libs/staticrootslib.o
+depbase=`echo tests/disclaim_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/disclaim_test.o -MD -MP -MF $depbase.Tpo -c -o tests/disclaim_test.o tests/disclaim_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+depbase=`echo tests/disclaim_bench.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/disclaim_bench.o -MD -MP -MF $depbase.Tpo -c -o tests/disclaim_bench.o tests/disclaim_bench.c &&\
+mv -f $depbase.Tpo $depbase.Po
+mv -f tests/.deps/staticrootstest-staticrootstest.Tpo tests/.deps/staticrootstest-staticrootstest.Po
+depbase=`echo tests/disclaim_weakmap_test.o | sed 's|[^/]*$|.deps/&|;s|\.o$||'`;\
+cc -DHAVE_CONFIG_H   -I./include -I./include      -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -MT tests/disclaim_weakmap_test.o -MD -MP -MF $depbase.Tpo -c -o tests/disclaim_weakmap_test.o tests/disclaim_weakmap_test.c &&\
+mv -f $depbase.Tpo $depbase.Po
+tests/test.c: In function 'run_one_test':
+tests/test.c:1416:11: warning: allocation of insufficient size '0' for type 'char' with size '1' [-Walloc-size]
+ 1416 |       x = (char*)GC_malloc(0);
+      |           ^
+tests/test.c:1424:11: warning: allocation of insufficient size '0' for type 'char' with size '1' [-Walloc-size]
+ 1424 |       x = (char*)GC_malloc_uncollectable(0);
+      |           ^
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o hugetest tests/huge_test.o  ./libgc.la  
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o threadkey_test tests/threadkey_test.o  ./libgc.la  -lpthread -ldl 
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o initsecondarythread_test tests/initsecondarythread.o  ./libgc.la  -lpthread -ldl 
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o leaktest tests/leak_test.o  ./libgc.la  
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT tests/libstaticrootslib2_test_la-staticrootslib.lo -MD -MP -MF tests/.deps/libstaticrootslib2_test_la-staticrootslib.Tpo -c tests/staticrootslib.c  -fPIC -DPIC -o tests/.libs/libstaticrootslib2_test_la-staticrootslib.o
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o smashtest tests/smash_test.o  ./libgc.la  
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o test_atomic_ops tests/test_atomic_ops.o  ./libgc.la  -lpthread -ldl 
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o subthreadcreate_test tests/subthread_create.o  ./libgc.la  -lpthread -ldl 
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o middletest tests/middle.o  ./libgc.la  
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT tests/staticrootslib.lo -MD -MP -MF tests/.deps/staticrootslib.Tpo -c tests/staticrootslib.c -o tests/staticrootslib.o >/dev/null 2>&1
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/initsecondarythread_test tests/initsecondarythread.o  ./.libs/libgc.so -lpthread -ldl
+libtool: compile:  cc -DHAVE_CONFIG_H -I./include -I./include -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -MT tests/libstaticrootslib2_test_la-staticrootslib.lo -MD -MP -MF tests/.deps/libstaticrootslib2_test_la-staticrootslib.Tpo -c tests/staticrootslib.c -o tests/libstaticrootslib2_test_la-staticrootslib.o >/dev/null 2>&1
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/leaktest tests/leak_test.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/hugetest tests/huge_test.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/threadkey_test tests/threadkey_test.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/subthreadcreate_test tests/subthread_create.o  ./.libs/libgc.so -lpthread -ldl
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o realloc_test tests/realloc_test.o  ./libgc.la  
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o threadleaktest tests/thread_leak_test.o  ./libgc.la  -lpthread -ldl 
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/smashtest tests/smash_test.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/middletest tests/middle.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/test_atomic_ops tests/test_atomic_ops.o  ./.libs/libgc.so -lpthread -ldl
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -no-undefined -rpath /nowhere -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libstaticrootslib_test.la  tests/staticrootslib.lo  ./libgc.la  
+mv -f tests/.deps/libstaticrootslib2_test_la-staticrootslib.Tpo tests/.deps/libstaticrootslib2_test_la-staticrootslib.Plo
+/bin/sh ./libtool  --tag=CC   --mode=link cc -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address  -no-undefined -rpath /nowhere -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libstaticrootslib2_test.la  tests/libstaticrootslib2_test_la-staticrootslib.lo  ./libgc.la  
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o disclaim_bench tests/disclaim_bench.o  ./libgc.la  
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/realloc_test tests/realloc_test.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/threadleaktest tests/thread_leak_test.o  ./.libs/libgc.so -lpthread -ldl
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o disclaim_test tests/disclaim_test.o  ./libgc.la  -lpthread -ldl 
+libtool: link: cc -shared  -fPIC -DPIC  tests/.libs/staticrootslib.o   -Wl,-rpath -Wl,/tmp/src/gc-8.2.8/.libs ./.libs/libgc.so -lpthread -ldl  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libstaticrootslib_test.so.0 -o .libs/libstaticrootslib_test.so.0.0.0
+libtool: link: cc -shared  -fPIC -DPIC  tests/.libs/libstaticrootslib2_test_la-staticrootslib.o   -Wl,-rpath -Wl,/tmp/src/gc-8.2.8/.libs ./.libs/libgc.so -lpthread -ldl  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libstaticrootslib2_test.so.0 -o .libs/libstaticrootslib2_test.so.0.0.0
+libtool: link: (cd ".libs" && rm -f "libstaticrootslib_test.so.0" && ln -s "libstaticrootslib_test.so.0.0.0" "libstaticrootslib_test.so.0")
+libtool: link: (cd ".libs" && rm -f "libstaticrootslib_test.so" && ln -s "libstaticrootslib_test.so.0.0.0" "libstaticrootslib_test.so")
+libtool: link: ar cr .libs/libstaticrootslib_test.a  tests/staticrootslib.o
+libtool: link: (cd ".libs" && rm -f "libstaticrootslib2_test.so.0" && ln -s "libstaticrootslib2_test.so.0.0.0" "libstaticrootslib2_test.so.0")
+libtool: link: (cd ".libs" && rm -f "libstaticrootslib2_test.so" && ln -s "libstaticrootslib2_test.so.0.0.0" "libstaticrootslib2_test.so")
+libtool: link: ranlib .libs/libstaticrootslib_test.a
+libtool: link: ar cr .libs/libstaticrootslib2_test.a  tests/libstaticrootslib2_test_la-staticrootslib.o
+libtool: link: ( cd ".libs" && rm -f "libstaticrootslib_test.la" && ln -s "../libstaticrootslib_test.la" "libstaticrootslib_test.la" )
+libtool: link: ranlib .libs/libstaticrootslib2_test.a
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/disclaim_bench tests/disclaim_bench.o  ./.libs/libgc.so -lpthread -ldl
+make[2]: 'libstaticrootslib_test.la' is up to date.
+libtool: link: ( cd ".libs" && rm -f "libstaticrootslib2_test.la" && ln -s "../libstaticrootslib2_test.la" "libstaticrootslib2_test.la" )
+make[2]: 'libstaticrootslib2_test.la' is up to date.
+/bin/sh ./libtool  --tag=CC   --mode=link cc -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o staticrootstest tests/staticrootstest-staticrootstest.o   libstaticrootslib_test.la libstaticrootslib2_test.la ./libgc.la 
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o disclaim_weakmap_test tests/disclaim_weakmap_test.o  ./libgc.la  -lpthread -ldl 
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/disclaim_test tests/disclaim_test.o  ./.libs/libgc.so -lpthread -ldl
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o cordtest cord/tests/cordtest.o ./libcord.la ./libgc.la 
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/disclaim_weakmap_test tests/disclaim_weakmap_test.o  ./.libs/libgc.so -lpthread -ldl
+libtool: link: cc -DSTATICROOTSLIB2 -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/staticrootstest tests/staticrootstest-staticrootstest.o  ./.libs/libstaticrootslib_test.so ./.libs/libstaticrootslib2_test.so /tmp/src/gc-8.2.8/.libs/libgc.so ./.libs/libgc.so -lpthread -ldl -Wl,-rpath -Wl,/nowhere
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/cordtest cord/tests/cordtest.o  ./.libs/libcord.so /tmp/src/gc-8.2.8/.libs/libgc.so ./.libs/libgc.so -lpthread -ldl
+/bin/sh ./libtool  --tag=CXX   --mode=link c++ -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o test_cpp tests/test_cpp.o libgccpp.la    ./libgc.la 
+libtool: link: c++ -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/test_cpp tests/test_cpp.o  ./.libs/libgccpp.so /tmp/src/gc-8.2.8/.libs/libgc.so ./.libs/libgc.so -lpthread -ldl
+/bin/sh ./libtool  --tag=CC   --mode=link cc   -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o gctest tests/test.o  ./libgc.la  -lpthread -ldl 
+libtool: link: cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/gctest tests/test.o  ./.libs/libgc.so -lpthread -ldl
+make[2]: Leaving directory '/tmp/src/gc-8.2.8'
+make  check-TESTS
+make[2]: Entering directory '/tmp/src/gc-8.2.8'
+make[3]: Entering directory '/tmp/src/gc-8.2.8'
+PASS: leaktest
+PASS: hugetest
+PASS: test_atomic_ops
+PASS: smashtest
+PASS: initsecondarythread_test
+PASS: cordtest
+PASS: subthreadcreate_test
+PASS: threadleaktest
+PASS: threadkey_test
+PASS: middletest
+PASS: staticrootstest
+PASS: realloc_test
+PASS: disclaim_test
+PASS: disclaim_bench
+PASS: test_cpp
+PASS: gctest
+PASS: disclaim_weakmap_test
+============================================================================
+Testsuite summary for gc 8.2.8
+============================================================================
+# TOTAL: 17
+# PASS:  17
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[3]: Leaving directory '/tmp/src/gc-8.2.8'
+make[2]: Leaving directory '/tmp/src/gc-8.2.8'
+make[1]: Leaving directory '/tmp/src/gc-8.2.8'
+>>> gc: Entering fakeroot...
+make[1]: Entering directory '/tmp/src/gc-8.2.8'
+make[2]: Entering directory '/tmp/src/gc-8.2.8'
+ ./install-sh -c -d '/tmp/pkg/gc/usr/share/doc/gc'
+ ./install-sh -c -d '/tmp/pkg/gc/usr/include'
+ ./install-sh -c -d '/tmp/pkg/gc/usr/share/man/man3'
+ ./install-sh -c -d '/tmp/pkg/gc/usr/lib/pkgconfig'
+ ./install-sh -c -d '/tmp/pkg/gc/usr/include/gc'
+ ./install-sh -c -d '/tmp/pkg/gc/usr/lib'
+ /bin/sh ./libtool   --mode=install /usr/bin/install -c   libgc.la libgccpp.la libgctba.la libcord.la '/tmp/pkg/gc/usr/lib'
+ /usr/bin/install -c -m 644 include/extra/gc_cpp.h include/extra/gc.h '/tmp/pkg/gc/usr/include'
+ /usr/bin/install -c -m 644 bdw-gc.pc '/tmp/pkg/gc/usr/lib/pkgconfig'
+ /usr/bin/install -c -m 644 'doc/gc.man' '/tmp/pkg/gc/usr/share/man/man3/gc.3'
+ /usr/bin/install -c -m 644 include/gc_pthread_redirects.h include/gc_gcj.h include/gc_disclaim.h include/gc_allocator.h include/gc_cpp.h include/gc.h include/gc_backptr.h include/gc_config_macros.h include/gc_inline.h include/gc_mark.h include/gc_tiny_fl.h include/gc_typed.h include/gc_version.h include/javaxfc.h include/leak_detector.h include/cord.h include/cord_pos.h include/ec.h '/tmp/pkg/gc/usr/include/gc'
+ /usr/bin/install -c -m 644 AUTHORS README.md doc/README.DGUX386 doc/README.Mac doc/README.OS2 doc/README.amiga doc/README.arm.cross doc/README.autoconf doc/README.cmake doc/README.cords doc/README.darwin doc/README.emscripten doc/README.environment doc/README.ews4800 doc/README.hp doc/README.linux doc/README.macros doc/README.rs6000 doc/README.sgi doc/README.solaris2 doc/README.symbian doc/README.uts doc/README.win32 doc/README.win64 doc/debugging.md doc/finalization.md doc/gcdescr.md doc/gcinterface.md doc/leak.md doc/overview.md doc/porting.md doc/scale.md doc/simple_example.md doc/tree.md '/tmp/pkg/gc/usr/share/doc/gc'
+libtool: install: /usr/bin/install -c .libs/libgc.so.1.5.4 /tmp/pkg/gc/usr/lib/libgc.so.1.5.4
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libgc.so.1.5.4 libgc.so.1 || { rm -f libgc.so.1 && ln -s libgc.so.1.5.4 libgc.so.1; }; })
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libgc.so.1.5.4 libgc.so || { rm -f libgc.so && ln -s libgc.so.1.5.4 libgc.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgc.lai /tmp/pkg/gc/usr/lib/libgc.la
+libtool: warning: relinking 'libgccpp.la'
+libtool: install: (cd /tmp/src/gc-8.2.8; /bin/sh "/tmp/src/gc-8.2.8/libtool"  --tag CXX --mode=relink c++ -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -version-info 6:0:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libgccpp.la -rpath /usr/lib gc_badalc.lo gc_cpp.lo libgc.la -inst-prefix-dir /tmp/pkg/gc)
+libtool: relink: c++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtbeginS.o  .libs/gc_badalc.o .libs/gc_cpp.o   -L/tmp/pkg/gc/usr/lib -L/usr/lib -lgc -lpthread -ldl -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0 -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../.. -lstdc++ -lm -lssp_nonshared -lc -lgcc_s /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtendS.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crtn.o  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libgccpp.so.1 -o .libs/libgccpp.so.1.5.0
+libtool: install: /usr/bin/install -c .libs/libgccpp.so.1.5.0T /tmp/pkg/gc/usr/lib/libgccpp.so.1.5.0
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libgccpp.so.1.5.0 libgccpp.so.1 || { rm -f libgccpp.so.1 && ln -s libgccpp.so.1.5.0 libgccpp.so.1; }; })
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libgccpp.so.1.5.0 libgccpp.so || { rm -f libgccpp.so && ln -s libgccpp.so.1.5.0 libgccpp.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgccpp.lai /tmp/pkg/gc/usr/lib/libgccpp.la
+libtool: warning: relinking 'libgctba.la'
+libtool: install: (cd /tmp/src/gc-8.2.8; /bin/sh "/tmp/src/gc-8.2.8/libtool"  --tag CXX --mode=relink c++ -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -g -version-info 6:0:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libgctba.la -rpath /usr/lib gc_badalc.lo libgc.la -inst-prefix-dir /tmp/pkg/gc)
+libtool: relink: c++  -fPIC -DPIC -shared -nostdlib /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crti.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtbeginS.o  .libs/gc_badalc.o   -L/tmp/pkg/gc/usr/lib -L/usr/lib -lgc -lpthread -ldl -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0 -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib -L/lib/../lib -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../x86_64-alpine-linux-musl/lib -L/usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../.. -lstdc++ -lm -lssp_nonshared -lc -lgcc_s /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/crtendS.o /usr/lib/gcc/x86_64-alpine-linux-musl/14.3.0/../../../../lib/crtn.o  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libgctba.so.1 -o .libs/libgctba.so.1.5.0
+libtool: install: /usr/bin/install -c .libs/libgctba.so.1.5.0T /tmp/pkg/gc/usr/lib/libgctba.so.1.5.0
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libgctba.so.1.5.0 libgctba.so.1 || { rm -f libgctba.so.1 && ln -s libgctba.so.1.5.0 libgctba.so.1; }; })
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libgctba.so.1.5.0 libgctba.so || { rm -f libgctba.so && ln -s libgctba.so.1.5.0 libgctba.so; }; })
+libtool: install: /usr/bin/install -c .libs/libgctba.lai /tmp/pkg/gc/usr/lib/libgctba.la
+libtool: warning: relinking 'libcord.la'
+libtool: install: (cd /tmp/src/gc-8.2.8; /bin/sh "/tmp/src/gc-8.2.8/libtool"  --tag CC --mode=relink cc -fexceptions -Wall -Wextra -Wpedantic -Wno-long-long -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -g -fno-strict-aliasing -Wno-frame-address -version-info 6:1:5 -no-undefined -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libcord.la -rpath /usr/lib cord/libcord_la-cordbscs.lo cord/libcord_la-cordprnt.lo cord/libcord_la-cordxtra.lo libgc.la -inst-prefix-dir /tmp/pkg/gc)
+libtool: relink: cc -shared  -fPIC -DPIC  cord/.libs/libcord_la-cordbscs.o cord/.libs/libcord_la-cordprnt.o cord/.libs/libcord_la-cordxtra.o   -L/tmp/pkg/gc/usr/lib -L/usr/lib -lgc -lpthread -ldl  -Os -g -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libcord.so.1 -o .libs/libcord.so.1.5.1
+libtool: install: /usr/bin/install -c .libs/libcord.so.1.5.1T /tmp/pkg/gc/usr/lib/libcord.so.1.5.1
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libcord.so.1.5.1 libcord.so.1 || { rm -f libcord.so.1 && ln -s libcord.so.1.5.1 libcord.so.1; }; })
+libtool: install: (cd /tmp/pkg/gc/usr/lib && { ln -s -f libcord.so.1.5.1 libcord.so || { rm -f libcord.so && ln -s libcord.so.1.5.1 libcord.so; }; })
+libtool: install: /usr/bin/install -c .libs/libcord.lai /tmp/pkg/gc/usr/lib/libcord.la
+libtool: install: /usr/bin/install -c .libs/libgc.a /tmp/pkg/gc/usr/lib/libgc.a
+libtool: install: chmod 644 /tmp/pkg/gc/usr/lib/libgc.a
+libtool: install: ranlib /tmp/pkg/gc/usr/lib/libgc.a
+libtool: install: /usr/bin/install -c .libs/libgccpp.a /tmp/pkg/gc/usr/lib/libgccpp.a
+libtool: install: chmod 644 /tmp/pkg/gc/usr/lib/libgccpp.a
+libtool: install: ranlib /tmp/pkg/gc/usr/lib/libgccpp.a
+libtool: install: /usr/bin/install -c .libs/libgctba.a /tmp/pkg/gc/usr/lib/libgctba.a
+libtool: install: chmod 644 /tmp/pkg/gc/usr/lib/libgctba.a
+libtool: install: ranlib /tmp/pkg/gc/usr/lib/libgctba.a
+libtool: install: /usr/bin/install -c .libs/libcord.a /tmp/pkg/gc/usr/lib/libcord.a
+libtool: install: chmod 644 /tmp/pkg/gc/usr/lib/libcord.a
+libtool: install: ranlib /tmp/pkg/gc/usr/lib/libcord.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[2]: Leaving directory '/tmp/src/gc-8.2.8'
+make[1]: Leaving directory '/tmp/src/gc-8.2.8'
+>>> gc-dbg*: Running split function dbg...
+>>> gc-dbg*: Preparing subpackage gc-dbg...
+>>> gc-dbg*: Stripping binaries
+>>> gc-dbg*: Running postcheck for gc-dbg
+>>> gc-static*: Running split function static...
+'usr/lib/libgccpp.a' -> '/tmp/pkg/gc-static/usr/lib/libgccpp.a'
+'usr/lib/libcord.a' -> '/tmp/pkg/gc-static/usr/lib/libcord.a'
+'usr/lib/libgc.a' -> '/tmp/pkg/gc-static/usr/lib/libgc.a'
+'usr/lib/libgctba.a' -> '/tmp/pkg/gc-static/usr/lib/libgctba.a'
+>>> gc-static*: Preparing subpackage gc-static...
+>>> gc-static*: Stripping binaries
+>>> gc-static*: Running postcheck for gc-static
+>>> gc-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/gc-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/gc-dev/usr/lib/pkgconfig'
+'usr/lib/libcord.so' -> '/tmp/pkg/gc-dev/usr/lib/libcord.so'
+'usr/lib/libgc.so' -> '/tmp/pkg/gc-dev/usr/lib/libgc.so'
+'usr/lib/libgccpp.so' -> '/tmp/pkg/gc-dev/usr/lib/libgccpp.so'
+'usr/lib/libgctba.so' -> '/tmp/pkg/gc-dev/usr/lib/libgctba.so'
+>>> gc-dev*: Preparing subpackage gc-dev...
+>>> gc-dev*: Stripping binaries
+>>> gc-dev*: Running postcheck for gc-dev
+>>> gc-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/gc-doc/usr/share/doc'
+'usr/share/man' -> '/tmp/pkg/gc-doc/usr/share/man'
+'usr/share/licenses' -> '/tmp/pkg/gc-doc/usr/share/licenses'
+>>> gc-doc*: Preparing subpackage gc-doc...
+>>> gc-doc*: Running postcheck for gc-doc
+>>> libgc++*: Running split function libgccpp...
+>>> libgc++*: Preparing subpackage libgc++...
+>>> libgc++*: Stripping binaries
+>>> libgc++*: Running postcheck for libgc++
+>>> gc*: Running postcheck for gc
+>>> gc*: Preparing package gc...
+>>> gc*: Stripping binaries
+>>> gc-dbg*: Scanning shared objects
+>>> gc-dev*: Scanning shared objects
+>>> gc-doc*: Scanning shared objects
+>>> gc-static*: Scanning shared objects
+>>> gc*: Scanning shared objects
+>>> libgc++*: Scanning shared objects
+>>> gc-dbg*: Tracing dependencies...
+	!gc<8.2.8-r1
+	!gc>8.2.8-r1
+	!libgc++<8.2.8-r1
+	!libgc++>8.2.8-r1
+>>> gc-dbg*: Package size: 519.2 KB
+>>> gc-dbg*: Compressing data...
+>>> gc-dbg*: Create checksum...
+>>> gc-dbg*: Create gc-dbg-8.2.8-r1.apk
+>>> gc-dev*: Tracing dependencies...
+	gc=8.2.8-r1
+	libgc++=8.2.8-r1
+	pkgconfig
+>>> gc-dev*: Package size: 251.2 KB
+>>> gc-dev*: Compressing data...
+>>> gc-dev*: Create checksum...
+>>> gc-dev*: Create gc-dev-8.2.8-r1.apk
+>>> gc-doc*: Tracing dependencies...
+>>> gc-doc*: Package size: 302.8 KB
+>>> gc-doc*: Compressing data...
+>>> gc-doc*: Create checksum...
+>>> gc-doc*: Create gc-doc-8.2.8-r1.apk
+>>> gc-static*: Tracing dependencies...
+>>> gc-static*: Package size: 1.1 MB
+>>> gc-static*: Compressing data...
+>>> gc-static*: Create checksum...
+>>> gc-static*: Create gc-static-8.2.8-r1.apk
+>>> gc*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libstdc++.so.6
+>>> gc*: Package size: 213.9 KB
+>>> gc*: Compressing data...
+>>> gc*: Create checksum...
+>>> gc*: Create gc-8.2.8-r1.apk
+>>> libgc++*: Tracing dependencies...
+	so:libgc.so.1
+	so:libstdc++.so.6
+>>> libgc++*: Package size: 14.6 KB
+>>> libgc++*: Compressing data...
+>>> libgc++*: Create checksum...
+>>> libgc++*: Create libgc++-8.2.8-r1.apk
+>>> gc: Updating the main/x86_64 repository index...
+>>> gc: Signing the index...
+>>> gc: Cleaning up srcdir
+>>> gc: Cleaning up build chroot
+>>> gc: Cleaning up pkgdir

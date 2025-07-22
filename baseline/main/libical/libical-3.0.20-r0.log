@@ -1,0 +1,973 @@
+>>> libical: Validating /home/packager/oily-pine/main/libical/APKBUILD...
+>>> libical: Cleaning up srcdir
+>>> libical: Cleaning up pkgdir
+>>> libical: Cleaning up tmpdir
+>>> libical: Fetching https://github.com/libical/libical/releases/download/v3.0.20/libical-3.0.20.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  951k  100  951k    0     0  1054k      0 --:--:-- --:--:-- --:--:-- 2420k
+>>> libical: Fetching https://github.com/libical/libical/releases/download/v3.0.20/libical-3.0.20.tar.gz
+>>> libical: Checking sha512sums...
+libical-3.0.20.tar.gz: OK
+>>> libical: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/240) Installing musl (1.2.5-r10)
+(2/240) Installing libcrypto3 (3.5.0-r0)
+(3/240) Installing ca-certificates-bundle (20241121-r2)
+(4/240) Installing libssl3 (3.5.0-r0)
+(5/240) Installing zlib (1.3.1-r2)
+(6/240) Installing libapk2 (2.14.9-r2)
+(7/240) Installing apk-tools (2.14.9-r2)
+(8/240) Installing libcap2 (2.76-r0)
+(9/240) Installing libcap-getcap (2.76-r0)
+(10/240) Installing fakeroot (1.37.1.1-r0)
+(11/240) Installing scanelf (1.3.8-r1)
+(12/240) Installing musl-utils (1.2.5-r10)
+(13/240) Installing libgcc (14.3.0-r0)
+(14/240) Installing libstdc++ (14.3.0-r0)
+(15/240) Installing lzip (1.25-r0)
+(16/240) Installing openssl (3.5.0-r0)
+(17/240) Installing patch (2.8-r0)
+(18/240) Installing pkgconf (2.4.3-r0)
+(19/240) Installing acl-libs (2.3.2-r1)
+(20/240) Installing tar (1.35-r3)
+(21/240) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/240) Installing ssl_client (1.37.0-r18)
+(23/240) Installing busybox-binsh (1.37.0-r18)
+(24/240) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/240) Installing abuild-sudo (3.15.0-r0)
+(26/240) Installing alpine-baselayout-data (3.7.0-r0)
+(27/240) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/240) Installing bridge (1.5-r5)
+(29/240) Installing ifupdown-ng (0.12.1-r7)
+(30/240) Installing openrc-user (0.62.2-r2)
+(31/240) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/240) Installing mdev-conf (4.8-r0)
+(33/240) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/240) Installing alpine-conf (3.20.0-r0)
+(35/240) Installing alpine-keys (2.5-r0)
+(36/240) Installing alpine-release (3.22.0-r0)
+(37/240) Installing busybox-openrc (1.37.0-r18)
+(38/240) Installing busybox-suid (1.37.0-r18)
+(39/240) Installing alpine-base (3.22.0-r0)
+(40/240) Installing jansson (2.14.1-r0)
+(41/240) Installing zstd-libs (1.5.7-r0)
+(42/240) Installing binutils (2.44-r0)
+(43/240) Installing libmagic (5.46-r2)
+(44/240) Installing file (5.46-r2)
+(45/240) Installing libgomp (14.3.0-r0)
+(46/240) Installing libatomic (14.3.0-r0)
+(47/240) Installing gmp (6.3.0-r3)
+(48/240) Installing isl26 (0.26-r1)
+(49/240) Installing mpfr4 (4.2.1_p1-r0)
+(50/240) Installing mpc1 (1.3.1-r1)
+(51/240) Installing gcc (14.3.0-r0)
+(52/240) Installing libstdc++-dev (14.3.0-r0)
+(53/240) Installing musl-dev (1.2.5-r10)
+(54/240) Installing g++ (14.3.0-r0)
+(55/240) Installing make (4.4.1-r3)
+(56/240) Installing fortify-headers (1.1-r5)
+(57/240) Installing build-base (0.5-r3)
+(58/240) Installing libbz2 (1.0.8-r6)
+(59/240) Installing libexpat (2.7.1-r0)
+(60/240) Installing lz4-libs (1.10.0-r0)
+(61/240) Installing xz-libs (5.8.1-r0)
+(62/240) Installing libarchive (3.8.0-r0)
+(63/240) Installing rhash-libs (1.4.5-r0)
+(64/240) Installing libuv (1.51.0-r0)
+(65/240) Installing cmake (4.0.2-r0)
+(66/240) Installing brotli-libs (1.1.0-r2)
+(67/240) Installing c-ares (1.34.5-r0)
+(68/240) Installing libunistring (1.3-r0)
+(69/240) Installing libidn2 (2.3.7-r0)
+(70/240) Installing nghttp2-libs (1.65.0-r0)
+(71/240) Installing libpsl (0.21.5-r3)
+(72/240) Installing libcurl (8.14.0-r2)
+(73/240) Installing pcre2 (10.43-r1)
+(74/240) Installing git (2.49.0-r0)
+(75/240) Installing git-init-template (2.49.0-r0)
+(76/240) Installing bzip2-dev (1.0.8-r6)
+(77/240) Installing libxml2 (2.13.8-r0)
+(78/240) Installing libxml2-utils (2.13.8-r0)
+(79/240) Installing docbook-xml (4.5-r10)
+Executing docbook-xml-4.5-r10.post-install
+(80/240) Installing libxslt (1.1.43-r3)
+(81/240) Installing docbook-xsl-ns (1.79.2-r11)
+Executing docbook-xsl-ns-1.79.2-r11.post-install
+(82/240) Installing docbook-xsl-nons (1.79.2-r11)
+Executing docbook-xsl-nons-1.79.2-r11.post-install
+(83/240) Installing docbook-xsl (1.79.2-r11)
+(84/240) Installing xz (5.8.1-r0)
+(85/240) Installing gettext-asprintf (0.24.1-r0)
+(86/240) Installing libintl (0.24.1-r0)
+(87/240) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(88/240) Installing libncursesw (6.5_p20250503-r0)
+(89/240) Installing gettext-libs (0.24.1-r0)
+(90/240) Installing gettext-envsubst (0.24.1-r0)
+(91/240) Installing gettext (0.24.1-r0)
+(92/240) Installing gettext-dev (0.24.1-r0)
+(93/240) Installing libffi (3.4.8-r0)
+(94/240) Installing gdbm (1.24-r0)
+(95/240) Installing mpdecimal (4.0.1-r0)
+(96/240) Installing libpanelw (6.5_p20250503-r0)
+(97/240) Installing readline (8.2.13-r1)
+(98/240) Installing sqlite-libs (3.50.0-r0)
+(99/240) Installing python3 (3.12.10-r1)
+(100/240) Installing python3-pycache-pyc0 (3.12.10-r1)
+(101/240) Installing pyc (3.12.10-r1)
+(102/240) Installing python3-pyc (3.12.10-r1)
+(103/240) Installing py3-parsing (3.2.3-r0)
+(104/240) Installing py3-parsing-pyc (3.2.3-r0)
+(105/240) Installing py3-packaging (25.0-r0)
+(106/240) Installing py3-packaging-pyc (25.0-r0)
+(107/240) Installing libeconf (0.6.3-r0)
+(108/240) Installing libblkid (2.41-r9)
+(109/240) Installing libmount (2.41-r9)
+(110/240) Installing glib (2.84.2-r0)
+(111/240) Installing linux-headers (6.14.2-r0)
+(112/240) Installing libffi-dev (3.4.8-r0)
+(113/240) Installing bsd-compat-headers (0.7.2-r6)
+(114/240) Installing libformw (6.5_p20250503-r0)
+(115/240) Installing libmenuw (6.5_p20250503-r0)
+(116/240) Installing libncurses++ (6.5_p20250503-r0)
+(117/240) Installing ncurses-dev (6.5_p20250503-r0)
+(118/240) Installing libedit (20250104.3.1-r1)
+(119/240) Installing libedit-dev (20250104.3.1-r1)
+(120/240) Installing zlib-dev (1.3.1-r2)
+(121/240) Installing libpcre2-16 (10.43-r1)
+(122/240) Installing libpcre2-32 (10.43-r1)
+(123/240) Installing pcre2-dev (10.43-r1)
+(124/240) Installing libuuid (2.41-r9)
+(125/240) Installing libfdisk (2.41-r9)
+(126/240) Installing liblastlog2 (2.41-r9)
+(127/240) Installing libsmartcols (2.41-r9)
+(128/240) Installing sqlite (3.50.0-r0)
+(129/240) Installing sqlite-dev (3.50.0-r0)
+(130/240) Installing util-linux-dev (2.41-r9)
+(131/240) Installing glib-dev (2.84.2-r0)
+(132/240) Installing cairo-tools (1.18.2-r1)
+(133/240) Installing libpng (1.6.47-r0)
+(134/240) Installing freetype (2.13.3-r0)
+(135/240) Installing fontconfig (2.15.0-r3)
+(136/240) Installing expat (2.7.1-r0)
+(137/240) Installing expat-dev (2.7.1-r0)
+(138/240) Installing brotli (1.1.0-r2)
+(139/240) Installing brotli-dev (1.1.0-r2)
+(140/240) Installing libpng-dev (1.6.47-r0)
+(141/240) Installing freetype-dev (2.13.3-r0)
+(142/240) Installing fontconfig-dev (2.15.0-r3)
+(143/240) Installing libxau (1.0.12-r0)
+(144/240) Installing xorgproto (2024.1-r0)
+(145/240) Installing libxau-dev (1.0.12-r0)
+(146/240) Installing libmd (1.1.0-r0)
+(147/240) Installing libbsd (0.12.2-r0)
+(148/240) Installing libxdmcp (1.1.5-r1)
+(149/240) Installing libxcb (1.17.0-r0)
+(150/240) Installing libx11 (1.8.11-r0)
+(151/240) Installing libxext (1.3.6-r2)
+(152/240) Installing xcb-proto (1.17.0-r0)
+(153/240) Installing xcb-proto-pyc (1.17.0-r0)
+(154/240) Installing libxdmcp-dev (1.1.5-r1)
+(155/240) Installing libxcb-dev (1.17.0-r0)
+(156/240) Installing xtrans (1.5.2-r0)
+(157/240) Installing libx11-dev (1.8.11-r0)
+(158/240) Installing libxext-dev (1.3.6-r2)
+(159/240) Installing libxrender (0.9.12-r0)
+(160/240) Installing libxrender-dev (0.9.12-r0)
+(161/240) Installing pixman (0.46.0-r0)
+(162/240) Installing pixman-dev (0.46.0-r0)
+(163/240) Installing util-macros (1.20.1-r0)
+(164/240) Installing xcb-util (0.4.1-r3)
+(165/240) Installing xcb-util-dev (0.4.1-r3)
+(166/240) Installing cairo (1.18.2-r1)
+(167/240) Installing cairo-gobject (1.18.2-r1)
+(168/240) Installing cairo-dev (1.18.2-r1)
+(169/240) Installing libltdl (2.5.4-r1)
+(170/240) Installing libtool (2.5.4-r1)
+(171/240) Installing py3-setuptools (80.9.0-r0)
+(172/240) Installing py3-setuptools-pyc (80.9.0-r0)
+(173/240) Installing gobject-introspection (1.84.0-r0)
+(174/240) Installing gobject-introspection-dev (1.84.0-r0)
+(175/240) Installing icu-data-en (76.1-r0)
+Executing icu-data-en-76.1-r0.post-install
+*
+* If you need ICU with non-English locales and legacy charset support, install
+* package icu-data-full.
+*
+(176/240) Installing icu-libs (76.1-r0)
+(177/240) Installing icu (76.1-r0)
+(178/240) Installing icu-dev (76.1-r0)
+(179/240) Installing xz-dev (5.8.1-r0)
+(180/240) Installing libxml2-dev (2.13.8-r0)
+(181/240) Installing perl (5.40.2-r0)
+(182/240) Installing perl-error (0.17030-r0)
+(183/240) Installing perl-git (2.49.0-r0)
+(184/240) Installing git-perl (2.49.0-r0)
+(185/240) Installing py3-gobject3 (3.52.3-r1)
+(186/240) Installing py3-gobject3-pyc (3.52.3-r1)
+(187/240) Installing samurai (1.2-r7)
+(188/240) Installing tzdata (2025b-r0)
+(189/240) Installing libice (1.1.2-r0)
+(190/240) Installing libsm (1.2.5-r0)
+(191/240) Installing libxt (1.3.1-r0)
+(192/240) Installing libxpm (3.5.17-r0)
+(193/240) Installing aom-libs (3.12.1-r0)
+(194/240) Installing libdav1d (1.5.1-r0)
+(195/240) Installing libjpeg-turbo (3.1.0-r0)
+(196/240) Installing libyuv (0.0.1887.20251502-r1)
+(197/240) Installing libavif (1.2.1-r1)
+(198/240) Installing libsharpyuv (1.5.0-r0)
+(199/240) Installing libwebp (1.5.0-r0)
+(200/240) Installing tiff (4.7.0-r0)
+(201/240) Installing libgd (2.3.3-r10)
+(202/240) Installing gd (2.3.3-r10)
+(203/240) Installing aom-dev (3.12.1-r0)
+(204/240) Installing dav1d-dev (1.5.1-r0)
+(205/240) Installing libavif-dev (1.2.1-r1)
+(206/240) Installing libturbojpeg (3.1.0-r0)
+(207/240) Installing libjpeg-turbo-dev (3.1.0-r0)
+(208/240) Installing libtiffxx (4.7.0-r0)
+(209/240) Installing libwebpdecoder (1.5.0-r0)
+(210/240) Installing libwebpdemux (1.5.0-r0)
+(211/240) Installing libwebpmux (1.5.0-r0)
+(212/240) Installing libwebp-dev (1.5.0-r0)
+(213/240) Installing zstd (1.5.7-r0)
+(214/240) Installing zstd-dev (1.5.7-r0)
+(215/240) Installing tiff-dev (4.7.0-r0)
+(216/240) Installing libxpm-dev (3.5.17-r0)
+(217/240) Installing gd-dev (2.3.3-r10)
+(218/240) Installing libgmpxx (6.3.0-r3)
+(219/240) Installing gmp-dev (6.3.0-r3)
+(220/240) Installing libice-dev (1.1.2-r0)
+(221/240) Installing libsm-dev (1.2.5-r0)
+(222/240) Installing libxft (2.3.8-r3)
+(223/240) Installing graphite2 (1.3.14-r6)
+(224/240) Installing harfbuzz (11.2.1-r0)
+(225/240) Installing fribidi (1.0.16-r1)
+(226/240) Installing pango (1.56.3-r0)
+(227/240) Installing pango-tools (1.56.3-r0)
+(228/240) Installing fribidi-dev (1.0.16-r1)
+(229/240) Installing harfbuzz-cairo (11.2.1-r0)
+(230/240) Installing harfbuzz-gobject (11.2.1-r0)
+(231/240) Installing harfbuzz-icu (11.2.1-r0)
+(232/240) Installing harfbuzz-subset (11.2.1-r0)
+(233/240) Installing graphite2-dev (1.3.14-r6)
+(234/240) Installing harfbuzz-dev (11.2.1-r0)
+(235/240) Installing libxft-dev (2.3.8-r3)
+(236/240) Installing pango-dev (1.56.3-r0)
+(237/240) Installing python3-dev (3.12.10-r1)
+(238/240) Installing graphviz-libs (12.2.1-r0)
+(239/240) Installing graphviz-dev (12.2.1-r0)
+(240/240) Installing vala (0.56.18-r0)
+Executing busybox-1.37.0-r18.trigger
+Executing glib-2.84.2-r0.trigger
+No schema files found: doing nothing.
+OK: 578 MiB in 240 packages
+>>> libical: Fetching https://github.com/libical/libical/releases/download/v3.0.20/libical-3.0.20.tar.gz
+>>> libical: Checking sha512sums...
+libical-3.0.20.tar.gz: OK
+>>> libical: Unpacking /var/cache/distfiles/libical-3.0.20.tar.gz...
+CMake Deprecation Warning at CMakeLists.txt:91 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- The C compiler identification is GNU 14.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- The CXX compiler identification is GNU 14.3.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Perl: /usr/bin/perl (found version "5.40.2")
+-- Found the following ICU libraries:
+--   uc (required)
+--   i18n (required)
+--   data (required)
+-- Found ICU: /usr/include (found version "76.1")
+-- Could NOT find BerkeleyDB (missing: BerkeleyDB_INCLUDE_DIRS BerkeleyDB_LIBRARY) (found version "0.0.0")
+-- Found BerkeleyDB libraries:
+-- Looking for include file byteswap.h
+-- Looking for include file byteswap.h - found
+-- Looking for include file dirent.h
+-- Looking for include file dirent.h - found
+-- Looking for include file endian.h
+-- Looking for include file endian.h - found
+-- Looking for include file inttypes.h
+-- Looking for include file inttypes.h - found
+-- Looking for include file pthread.h
+-- Looking for include file pthread.h - found
+-- Looking for include file sys/endian.h
+-- Looking for include file sys/endian.h - not found
+-- Looking for include file sys/param.h
+-- Looking for include file sys/param.h - found
+-- Looking for include file sys/utsname.h
+-- Looking for include file sys/utsname.h - found
+-- Looking for include file fcntl.h
+-- Looking for include file fcntl.h - found
+-- Looking for include file unistd.h
+-- Looking for include file unistd.h - found
+-- Looking for include file wctype.h
+-- Looking for include file wctype.h - found
+-- Looking for include file stdbool.h
+-- Looking for include file stdbool.h - found
+-- Looking for access
+-- Looking for access - found
+-- Looking for fork
+-- Looking for fork - found
+-- Looking for getopt
+-- Looking for getopt - found
+-- Looking for getpid
+-- Looking for getpid - found
+-- Looking for getpwent
+-- Looking for getpwent - found
+-- Looking for gmtime_r
+-- Looking for gmtime_r - found
+-- Looking for localtime_r
+-- Looking for localtime_r - found
+-- Looking for mkdir
+-- Looking for mkdir - found
+-- Looking for open
+-- Looking for open - found
+-- Looking for nanosleep
+-- Looking for nanosleep - found
+-- Looking for signal
+-- Looking for signal - found
+-- Looking for stat
+-- Looking for stat - found
+-- Looking for fstat
+-- Looking for fstat - found
+-- Looking for strdup
+-- Looking for strdup - found
+-- Looking for strcasecmp
+-- Looking for strcasecmp - found
+-- Looking for strncasecmp
+-- Looking for strncasecmp - found
+-- Looking for read
+-- Looking for read - found
+-- Looking for unlink
+-- Looking for unlink - found
+-- Looking for usleep
+-- Looking for usleep - found
+-- Looking for waitpid
+-- Looking for waitpid - found
+-- Looking for write
+-- Looking for write - found
+-- Looking for alarm
+-- Looking for alarm - found
+-- Looking for backtrace
+-- Looking for backtrace - not found
+-- Looking for iswspace
+-- Looking for iswspace - found
+-- Looking for setenv
+-- Looking for setenv - found
+-- Looking for unsetenv
+-- Looking for unsetenv - found
+-- Looking for snprintf
+-- Looking for snprintf - found
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of intptr_t
+-- Check size of intptr_t - done
+-- Check size of pid_t
+-- Check size of pid_t - done
+-- Check size of size_t
+-- Check size of size_t - done
+-- Check size of ssize_t
+-- Check size of ssize_t - done
+-- Check size of time_t
+-- Check size of time_t - done
+-- Check size of wint_t
+-- Check size of wint_t - failed
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Looking for pthread_attr_get_np in pthread
+-- Looking for pthread_attr_get_np in pthread - not found
+-- Looking for pthread_getattr_np in pthread
+-- Looking for pthread_getattr_np in pthread - found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Looking for include files pthread.h, pthread_np.h
+-- Looking for include files pthread.h, pthread_np.h - not found
+-- Found PkgConfig: /usr/bin/pkg-config (found version "2.4.3")
+-- Checking for module 'gobject-introspection-1.0>=0.6.7'
+--   Found gobject-introspection-1.0, version 1.84.0
+-- Checking for modules 'glib-2.0>=2.32;gobject-2.0>=2.32'
+--   Found glib-2.0, version 2.84.2
+--   Found gobject-2.0, version 2.84.2
+-- Checking for module 'libxml-2.0>=2.7.3'
+--   Found libxml-2.0, version 2.13.8
+-- Performing Test HAVE_GCC_UNUSED_BUT_SET
+-- Performing Test HAVE_GCC_UNUSED_BUT_SET - Success
+-- Performing Test HAVE_GCC_LOGICAL_OP
+-- Performing Test HAVE_GCC_LOGICAL_OP - Success
+-- Performing Test HAVE_GCC_POINTER_MEMACCESS
+-- Performing Test HAVE_GCC_POINTER_MEMACCESS - Success
+-- Performing Test HAVE_GCC_FORMAT_SECURITY
+-- Performing Test HAVE_GCC_FORMAT_SECURITY - Success
+-- Performing Test HAVE_GCC_REDUNDANT_DECLS
+-- Performing Test HAVE_GCC_REDUNDANT_DECLS - Success
+-- Performing Test HAVE_GCC_UNREACHABLE_CODE
+-- Performing Test HAVE_GCC_UNREACHABLE_CODE - Success
+-- Performing Test HAVE_GCC_VARARGS
+-- Performing Test HAVE_GCC_VARARGS - Success
+-- Performing Test HAVE_GXX_UNUSED_BUT_SET
+-- Performing Test HAVE_GXX_UNUSED_BUT_SET - Success
+-- Performing Test HAVE_GXX_LOGICAL_OP
+-- Performing Test HAVE_GXX_LOGICAL_OP - Success
+-- Performing Test HAVE_GXX_POINTER_MEMACCESS
+-- Performing Test HAVE_GXX_POINTER_MEMACCESS - Success
+-- Performing Test HAVE_GXX_REORDER
+-- Performing Test HAVE_GXX_REORDER - Success
+-- Performing Test HAVE_GXX_FORMAT_SECURITY
+-- Performing Test HAVE_GXX_FORMAT_SECURITY - Success
+-- Performing Test HAVE_GXX_REDUNDANT_DECLS
+-- Performing Test HAVE_GXX_REDUNDANT_DECLS - Success
+-- Performing Test HAVE_GXX_UNREACHABLE_CODE
+-- Performing Test HAVE_GXX_UNREACHABLE_CODE - Success
+-- Performing Test HAVE_GXX_VARARGS
+-- Performing Test HAVE_GXX_VARARGS - Success
+-- Could NOT find Doxygen (missing: DOXYGEN_EXECUTABLE) 
+-- The following features have been enabled:
+
+ * Option WITH_CXX_BINDINGS, build the C++ bindings. Requires a C++ compiler
+ * Option SHARED_ONLY, build shared libraries only
+ * RSCALE support (RFC7529), build in RSCALE support
+ * Option GOBJECT_INTROSPECTION, build GObject introspection "typelib" files
+ * Option ICAL_BUILD_DOCS, build API documentation and reference manual
+ * Option ICAL_GLIB_VAPI, build Vala "vapi" files
+ * Option ICAL_GLIB, build libical-glib interface
+ * Option LIBICAL_BUILD_TESTING, build tests
+ * libical-glib testing, python3 is required to run the regression tests
+
+-- The following OPTIONAL packages have been found:
+
+ * GObjectIntrospection (required version >= 0.6.7), <https://wiki.gnome.org/Projects/GObjectIntrospection>
+   Needed in order to build the GObject introspection "typelib" files.
+ * GLib (required version >= 2.32), A library of handy utility functions, <https://www.gtk.org>
+   For the optional libical-glib interface
+ * PkgConfig
+ * LibXML (required version >= 2.7.3), a library providing XML and HTML support, <http://xmlsoft.org>
+   For the optional libical-glib interface
+
+-- The following RECOMMENDED packages have been found:
+
+ * ICU
+   For RSCALE (RFC7529) support
+
+-- The following REQUIRED packages have been found:
+
+ * Perl
+   Required by the libical build system.
+
+-- The following features have been disabled:
+
+ * Option STATIC_ONLY, build static libraries only
+ * Berkeley DB storage support, build in support for Berkeley DB storage
+ * Option ICAL_ERRORS_ARE_FATAL, icalerror_* calls will abort instead of internally signaling an error
+ * Option ICAL_ALLOW_EMPTY_PROPERTIES, prevents empty properties from being replaced with X-LIC-ERROR properties
+ * Option USE_BUILTIN_TZDATA, use our own timezone data rather then the system timezone data
+
+-- The following OPTIONAL packages have not been found:
+
+ * BerkeleyDB
+   For Berkeley DB storage support
+ * Doxygen, API Documentation system, <http://www.doxygen.org>
+   Needed to build the API documentation.
+
+-- Configuring done (2.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /tmp/src/libical-3.0.20/build
+[1/148] Building C object src/libical-glib/CMakeFiles/ical-glib-src-generator.dir/tools/xml-parser.c.o
+[2/148] Building C object src/libical-glib/CMakeFiles/ical-glib-src-generator.dir/tools/generator.c.o
+[3/148] Generating icalss.h
+[4/148] Generating icalderivedvalue.h
+[5/148] Generating icalderivedparameter.h
+[6/148] Generating icalderivedproperty.h
+[7/148] Generating icalderivedvalue.c
+[8/148] Generating icalrestriction.c
+[9/148] Generating icalderivedparameter.c
+[10/148] Generating icalderivedproperty.c
+[11/148] Generating ical.h
+[12/148] Building C object src/test/CMakeFiles/icalcomponent_timefuzz.dir/icalcomponent_timefuzz.c.o
+[13/148] Building C object src/test/CMakeFiles/icaltime_fuzz.dir/icaltime_fuzz.c.o
+[14/148] Building C object src/test/CMakeFiles/icalcomponent_fuzz2.dir/icalcomponent_fuzz2.c.o
+[15/148] Building C object src/test/CMakeFiles/icalcomponent_fuzz1.dir/icalcomponent_fuzz1.c.o
+[16/148] Building C object src/test/CMakeFiles/parser_ctrl.dir/icalparser_ctrl_test.c.o
+[17/148] Building C object src/test/CMakeFiles/icalrecurtest.dir/icalrecur_test.c.o
+[18/148] Building C object src/test/CMakeFiles/builtin_timezones.dir/builtin_timezones.c.o
+[19/148] Building C object src/test/CMakeFiles/timezones.dir/timezones.c.o
+[20/148] Building C object src/test/CMakeFiles/process.dir/process.c.o
+[21/148] Building C object src/test/CMakeFiles/testvcal.dir/testvcal.c.o
+[22/148] Building C object src/test/CMakeFiles/testmime.dir/testmime.c.o
+[23/148] Building C object src/test/CMakeFiles/icaltm_test.dir/icaltm_test.c.o
+[24/148] Building C object src/test/CMakeFiles/icalrecur_test.dir/icalrecur_test.c.o
+[25/148] Building C object src/test/CMakeFiles/recur.dir/recur.c.o
+[26/148] Building C object src/test/CMakeFiles/stow.dir/stow.c.o
+[27/148] Building C object src/test/CMakeFiles/parser.dir/icaltestparser.c.o
+[28/148] Building CXX object src/test/CMakeFiles/regression.dir/regression-cxx.cpp.o
+[29/148] Building C object src/test/CMakeFiles/regression.dir/regression-storage.c.o
+[30/148] Building C object src/test/CMakeFiles/regression.dir/regression-recur.c.o
+[31/148] Building C object src/test/CMakeFiles/regression.dir/regression-utils.c.o
+[32/148] Building C object src/test/CMakeFiles/regression.dir/regression-classify.c.o
+[33/148] Building C object src/test/CMakeFiles/regression.dir/regression-component.c.o
+[34/148] Building C object src/test/CMakeFiles/regression.dir/regression.c.o
+[35/148] Building C object src/test/CMakeFiles/copycluster.dir/copycluster.c.o
+[36/148] Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vcc.c.o
+[37/148] Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vcaltmp.c.o
+[38/148] Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/vobject.c.o
+[39/148] Building C object src/libicalvcal/CMakeFiles/icalvcal.dir/icalvcal.c.o
+[40/148] Building CXX object src/libicalss/CMakeFiles/icalss_cxx.dir/icalspanlist_cxx.cpp.o
+[41/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalssyacc.c.o
+[42/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalsslexer.c.o
+[43/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalmessage.c.o
+[44/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalspanlist.c.o
+[45/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalset.c.o
+[46/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalfileset.c.o
+[47/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icaldirset.c.o
+[48/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalgauge.c.o
+[49/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalcluster.c.o
+[50/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalclassify.c.o
+[51/148] Building C object src/libicalss/CMakeFiles/icalss.dir/icalcalendar.c.o
+[52/148] Building CXX object src/libical/CMakeFiles/ical_cxx.dir/vcomponent_cxx.cpp.o
+[53/148] Building CXX object src/libical/CMakeFiles/ical_cxx.dir/icalvalue_cxx.cpp.o
+[54/148] Building CXX object src/libical/CMakeFiles/ical_cxx.dir/icalproperty_cxx.cpp.o
+[55/148] Building CXX object src/libical/CMakeFiles/ical_cxx.dir/icalparameter_cxx.cpp.o
+[56/148] Building C object src/libical/CMakeFiles/ical.dir/caldate.c.o
+[57/148] Building C object src/libical/CMakeFiles/ical.dir/icallangbind.c.o
+[58/148] Building C object src/libical/CMakeFiles/ical.dir/sspm.c.o
+[59/148] Building C object src/libical/CMakeFiles/ical.dir/pvl.c.o
+[60/148] Building C object src/libical/CMakeFiles/ical.dir/icalvalue.c.o
+[61/148] Building C object src/libical/CMakeFiles/ical.dir/icaltypes.c.o
+[62/148] Building C object src/libical/CMakeFiles/ical.dir/icalperiod.c.o
+[63/148] Building C object src/libical/CMakeFiles/ical.dir/icalduration.c.o
+[64/148] Building C object src/libical/CMakeFiles/ical.dir/icaltimezone.c.o
+[65/148] Building C object src/libical/CMakeFiles/ical.dir/icaltz-util.c.o
+[66/148] Building C object src/libical/CMakeFiles/ical.dir/icaltime.c.o
+[67/148] Building C object src/libical/CMakeFiles/ical.dir/icalrecur.c.o
+[68/148] Building C object src/libical/CMakeFiles/ical.dir/icalproperty.c.o
+[69/148] Building C object src/libical/CMakeFiles/ical.dir/icalparser.c.o
+[70/148] Building C object src/libical/CMakeFiles/ical.dir/icalparameter.c.o
+[71/148] Building C object src/libical/CMakeFiles/ical.dir/icalmime.c.o
+[72/148] Building C object src/libical/CMakeFiles/ical.dir/icalmemory.c.o
+[73/148] Building C object src/libical/CMakeFiles/ical.dir/icalerror.c.o
+[74/148] Building C object src/libical/CMakeFiles/ical.dir/icalenums.c.o
+[75/148] Building C object src/libical/CMakeFiles/ical.dir/icalcomponent.c.o
+[76/148] Building C object src/libical/CMakeFiles/ical.dir/icalattach.c.o
+[77/148] Building C object src/libical/CMakeFiles/ical.dir/icalarray.c.o
+[78/148] Building C object src/libical/CMakeFiles/ical.dir/icalderivedvalue.c.o
+[79/148] Building C object src/libical/CMakeFiles/ical.dir/icalrestriction.c.o
+[80/148] Building C object src/libical/CMakeFiles/ical.dir/icalderivedparameter.c.o
+[81/148] Building C object src/libical/CMakeFiles/ical.dir/icalderivedproperty.c.o
+[82/148] Linking C executable bin/ical-glib-src-generator
+[83/148] Linking C shared library lib/libical.so.3.0.20
+[84/148] Creating library symlink lib/libical.so.3 lib/libical.so
+[85/148] Generate the libical-glib sources
+[86/148] Linking C shared library lib/libicalvcal.so.3.0.20
+[87/148] Linking C shared library lib/libicalss.so.3.0.20
+[88/148] Generating ICal-3.0.gir
+[89/148] Linking CXX shared library lib/libical_cxx.so.3.0.20
+[90/148] Creating library symlink lib/libicalvcal.so.3 lib/libicalvcal.so
+[91/148] Creating library symlink lib/libicalss.so.3 lib/libicalss.so
+[92/148] Linking CXX executable bin/icalrecurtest
+[93/148] Creating library symlink lib/libical_cxx.so.3 lib/libical_cxx.so
+[94/148] Linking CXX shared library lib/libicalss_cxx.so.3.0.20
+[95/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-object.c.o
+[96/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-value.c.o
+[97/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-unknowntokenhandling.c.o
+[98/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-trigger.c.o
+[99/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-timezone.c.o
+[100/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-time.c.o
+[101/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-time-span.c.o
+[102/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-restriction.c.o
+[103/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-reqstat.c.o
+[104/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-recur.c.o
+[105/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-recurrence.c.o
+[106/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-recur-iterator.c.o
+[107/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-property.c.o
+[108/148] Creating library symlink lib/libicalss_cxx.so.3 lib/libicalss_cxx.so
+[109/148] Linking C executable bin/icalcomponent_timefuzz
+[110/148] Linking C executable bin/icaltime_fuzz
+[111/148] Linking C executable bin/icalcomponent_fuzz2
+[112/148] Linking C executable bin/icalcomponent_fuzz1
+[113/148] Linking C executable bin/parser_ctrl
+[114/148] Linking C executable bin/builtin_timezones
+[115/148] Linking C executable bin/timezones
+[116/148] Linking C executable bin/process
+[117/148] Linking C executable bin/testvcal
+[118/148] Linking C executable bin/testmime
+[119/148] Linking C executable bin/icaltm_test
+[120/148] Linking C executable bin/icalrecur_test
+[121/148] Linking C executable bin/recur
+[122/148] Linking C executable bin/stow
+[123/148] Linking C executable bin/parser
+[124/148] Linking CXX executable bin/regression
+[125/148] Linking C executable bin/copycluster
+[126/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-period.c.o
+[127/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-parser.c.o
+[128/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-parameter.c.o
+[129/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-mime.c.o
+[130/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-memory.c.o
+[131/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-geo.c.o
+[132/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-error.c.o
+[133/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-enums.c.o
+[134/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-duration.c.o
+[135/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-derived-value.c.o
+[136/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-derived-property.c.o
+[137/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-derived-parameter.c.o
+[138/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-datetimeperiod.c.o
+/tmp/src/libical-3.0.20/build/src/libical-glib/i-cal-object.c: In function 'i_cal_object_class_init':
+/tmp/src/libical-3.0.20/build/src/libical-glib/i-cal-object.c:227:5: warning: 'g_type_class_add_private' is deprecated [-Wdeprecated-declarations]
+  227 |     g_type_class_add_private(class, sizeof(ICalObjectPrivate));
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /usr/include/glib-2.0/gobject/gobject.h:26,
+                 from /usr/include/glib-2.0/gobject/gbinding.h:31,
+                 from /usr/include/glib-2.0/glib-object.h:24,
+                 from /tmp/src/libical-3.0.20/build/src/libical-glib/i-cal-object.h:26,
+                 from /tmp/src/libical-3.0.20/build/src/libical-glib/i-cal-object.c:21:
+/usr/include/glib-2.0/gobject/gtype.h:1503:10: note: declared here
+ 1503 | void     g_type_class_add_private       (gpointer                    g_class,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~
+/tmp/src/libical-3.0.20/build/src/libical-glib/i-cal-object.c: In function 'i_cal_object_init':
+/tmp/src/libical-3.0.20/build/src/libical-glib/i-cal-object.c:322:13: warning: Deprecated pre-processor symbol: replace with "G_ADD_PRIVATE"
+  322 |     iobject->priv = G_TYPE_INSTANCE_GET_PRIVATE(iobject, I_CAL_TYPE_OBJECT, ICalObjectPrivate);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[139/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-component.c.o
+[140/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-comp-iter.c.o
+[141/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-attach.c.o
+[142/148] Building C object src/libical-glib/CMakeFiles/ical-glib.dir/i-cal-array.c.o
+g-ir-scanner: link: /usr/bin/cc -o /tmp/src/libical-3.0.20/build/src/libical/tmp-introspectl42ob134/ICal-3.0 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt /tmp/src/libical-3.0.20/build/src/libical/tmp-introspectl42ob134/ICal-3.0.o -L. -Wl,-rpath,. -Wl,--no-as-needed -L/tmp/src/libical-3.0.20/build/lib -Wl,-rpath,/tmp/src/libical-3.0.20/build/lib -lical -lgio-2.0 -lgobject-2.0 -Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0 -lintl -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+g-ir-scanner: ICal: warning: 842 warnings suppressed (use --warn-all to see them)
+[143/148] Generating ICal-3.0.typelib
+[144/148] Linking C shared library lib/libical-glib.so.3.0.20
+[145/148] Creating library symlink lib/libical-glib.so.3 lib/libical-glib.so
+[146/148] Generating ICalGLib-3.0.gir
+g-ir-scanner: link: /usr/bin/cc -o /tmp/src/libical-3.0.20/build/src/libical-glib/tmp-introspectik043818/ICalGLib-3.0 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt /tmp/src/libical-3.0.20/build/src/libical-glib/tmp-introspectik043818/ICalGLib-3.0.o -L. -Wl,-rpath,. -Wl,--no-as-needed -L/tmp/src/libical-3.0.20/build/lib -Wl,-rpath,/tmp/src/libical-3.0.20/build/lib -lical-glib -lgio-2.0 -lgobject-2.0 -Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0 -lintl -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+i-cal-array.c:170: Warning: ICalGLib: invalid "scope" annotation: only valid on callback parameters
+i-cal-component.c:1612: Warning: ICalGLib: invalid "closure" annotation: only valid on callback parameters
+i-cal-component.c:1645: Warning: ICalGLib: invalid "closure" annotation: only valid on callback parameters
+i-cal-mime.c:30: Warning: ICalGLib: invalid "closure" annotation: only valid on callback parameters
+i-cal-parser.c:165: Warning: ICalGLib: invalid "closure" annotation: only valid on callback parameters
+i-cal-parser.c:210: Warning: ICalGLib: invalid "closure" annotation: only valid on callback parameters
+[147/148] Generating libical-glib.vapi
+[148/148] Generating ICalGLib-3.0.typelib
+Generation succeeded - 0 warning(s)
+Test project /tmp/src/libical-3.0.20/build
+      Start  1: regression
+      Start  2: parser-0
+      Start  3: parser-1-1
+      Start  4: parser-1
+      Start  5: parser-2
+      Start  6: parser-2445
+      Start  7: parser-2446
+      Start  8: parser-3
+      Start  9: parser-4
+      Start 10: parser-5
+      Start 11: parser-6
+      Start 12: parser-7
+      Start 13: parser-8
+      Start 14: parser-calendar
+      Start 15: parser-caltime
+      Start 16: parser-classify
+ 1/60 Test  #2: parser-0 .........................   Passed    0.01 sec
+ 2/60 Test  #3: parser-1-1 .......................   Passed    0.01 sec
+ 3/60 Test  #4: parser-1 .........................   Passed    0.01 sec
+ 4/60 Test  #5: parser-2 .........................   Passed    0.01 sec
+ 5/60 Test  #8: parser-3 .........................   Passed    0.01 sec
+ 6/60 Test #10: parser-5 .........................   Passed    0.01 sec
+      Start 17: parser-crash
+      Start 18: parser-get_char_test
+      Start 19: parser-incoming
+      Start 20: parser-issue250
+      Start 21: parser-issue251
+      Start 22: parser-issue252
+ 7/60 Test  #6: parser-2445 ......................   Passed    0.01 sec
+ 8/60 Test  #7: parser-2446 ......................   Passed    0.01 sec
+ 9/60 Test  #9: parser-4 .........................   Passed    0.01 sec
+10/60 Test #11: parser-6 .........................   Passed    0.01 sec
+11/60 Test #12: parser-7 .........................   Passed    0.01 sec
+12/60 Test #14: parser-calendar ..................   Passed    0.01 sec
+13/60 Test #13: parser-8 .........................   Passed    0.01 sec
+14/60 Test #16: parser-classify ..................   Passed    0.01 sec
+15/60 Test #15: parser-caltime ...................   Passed    0.01 sec
+      Start 23: parser-issue253
+      Start 24: parser-issue339
+      Start 25: parser-large
+      Start 26: parser-malloc
+      Start 27: parser-overlaps
+      Start 28: parser-process-calendar
+      Start 29: parser-process-incoming
+      Start 30: parser-recur-errors
+      Start 31: parser-restriction
+16/60 Test #19: parser-incoming ..................   Passed    0.01 sec
+17/60 Test #17: parser-crash .....................   Passed    0.01 sec
+18/60 Test #18: parser-get_char_test .............   Passed    0.01 sec
+19/60 Test #20: parser-issue250 ..................   Passed    0.01 sec
+20/60 Test #21: parser-issue251 ..................   Passed    0.01 sec
+21/60 Test #22: parser-issue252 ..................   Passed    0.01 sec
+22/60 Test #23: parser-issue253 ..................   Passed    0.00 sec
+      Start 32: parser-smallcluster
+      Start 33: parser-spanlist
+      Start 34: parser-stresstest
+      Start 35: parser-zday
+      Start 36: recur
+      Start 37: icaltm_test
+      Start 38: testmime
+23/60 Test #24: parser-issue339 ..................   Passed    0.01 sec
+24/60 Test #28: parser-process-calendar ..........   Passed    0.01 sec
+25/60 Test #27: parser-overlaps ..................   Passed    0.01 sec
+26/60 Test #26: parser-malloc ....................   Passed    0.01 sec
+27/60 Test #29: parser-process-incoming ..........   Passed    0.01 sec
+28/60 Test #30: parser-recur-errors ..............   Passed    0.01 sec
+29/60 Test #31: parser-restriction ...............   Passed    0.01 sec
+30/60 Test #32: parser-smallcluster ..............   Passed    0.00 sec
+31/60 Test #33: parser-spanlist ..................   Passed    0.00 sec
+      Start 39: testvcal
+      Start 40: process
+      Start 41: timezones
+      Start 42: builtin_timezones
+      Start 43: parser_ctrl
+      Start 44: icalcomponent_fuzz1
+      Start 45: icalcomponent_fuzz2
+      Start 46: icaltime_fuzz
+      Start 47: icalcomponent_timefuzz
+32/60 Test #35: parser-zday ......................   Passed    0.01 sec
+33/60 Test #34: parser-stresstest ................   Passed    0.01 sec
+34/60 Test #38: testmime .........................   Passed    0.01 sec
+35/60 Test #39: testvcal .........................   Passed    0.01 sec
+      Start 48: libical-glib-array
+      Start 49: libical-glib-attach
+      Start 50: libical-glib-component
+      Start 51: libical-glib-comprehensive
+36/60 Test #43: parser_ctrl ......................   Passed    0.01 sec
+37/60 Test #45: icalcomponent_fuzz2 ..............   Passed    0.01 sec
+38/60 Test #40: process ..........................   Passed    0.01 sec
+39/60 Test #44: icalcomponent_fuzz1 ..............   Passed    0.01 sec
+40/60 Test #46: icaltime_fuzz ....................   Passed    0.01 sec
+41/60 Test #47: icalcomponent_timefuzz ...........   Passed    0.01 sec
+      Start 52: libical-glib-duration
+      Start 53: libical-glib-error
+      Start 54: libical-glib-misc
+      Start 55: libical-glib-parameter
+      Start 56: libical-glib-period
+      Start 57: libical-glib-property
+42/60 Test #36: recur ............................   Passed    0.05 sec
+      Start 58: libical-glib-recurrence
+43/60 Test #37: icaltm_test ......................   Passed    0.06 sec
+      Start 59: libical-glib-timezone
+44/60 Test #55: libical-glib-parameter ...........   Passed    0.08 sec
+      Start 60: libical-glib-value
+45/60 Test #57: libical-glib-property ............   Passed    0.10 sec
+46/60 Test #56: libical-glib-period ..............   Passed    0.11 sec
+47/60 Test #48: libical-glib-array ...............   Passed    0.13 sec
+48/60 Test #50: libical-glib-component ...........   Passed    0.13 sec
+49/60 Test #25: parser-large .....................   Passed    0.15 sec
+50/60 Test #52: libical-glib-duration ............   Passed    0.14 sec
+51/60 Test #59: libical-glib-timezone ............   Passed    0.09 sec
+52/60 Test #49: libical-glib-attach ..............   Passed    0.15 sec
+53/60 Test #53: libical-glib-error ...............   Passed    0.15 sec
+54/60 Test #54: libical-glib-misc ................   Passed    0.15 sec
+55/60 Test #51: libical-glib-comprehensive .......   Passed    0.16 sec
+56/60 Test #58: libical-glib-recurrence ..........   Passed    0.13 sec
+57/60 Test #60: libical-glib-value ...............   Passed    0.08 sec
+58/60 Test #41: timezones ........................   Passed    0.23 sec
+59/60 Test  #1: regression .......................   Passed    0.28 sec
+60/60 Test #42: builtin_timezones ................   Passed    2.83 sec
+
+100% tests passed, 0 tests failed out of 60
+
+Total Test time (real) =   2.85 sec
+>>> libical: Entering fakeroot...
+-- Install configuration: "MinSizeRel"
+-- Installing: /tmp/pkg/libical/usr/lib/pkgconfig/libical.pc
+-- Installing: /tmp/pkg/libical/usr/lib/cmake/LibIcal/LibIcalConfigVersion.cmake
+-- Installing: /tmp/pkg/libical/usr/lib/cmake/LibIcal/LibIcalConfig.cmake
+-- Installing: /tmp/pkg/libical/usr/lib/cmake/LibIcal/LibIcalTargets.cmake
+-- Installing: /tmp/pkg/libical/usr/lib/cmake/LibIcal/LibIcalTargets-minsizerel.cmake
+-- Installing: /tmp/pkg/libical/usr/share/gir-1.0/ICal-3.0.gir
+-- Installing: /tmp/pkg/libical/usr/lib/girepository-1.0/ICal-3.0.typelib
+-- Installing: /tmp/pkg/libical/usr/lib/libical.so.3.0.20
+-- Installing: /tmp/pkg/libical/usr/lib/libical.so.3
+-- Installing: /tmp/pkg/libical/usr/lib/libical.so
+-- Installing: /tmp/pkg/libical/usr/lib/libical_cxx.so.3.0.20
+-- Installing: /tmp/pkg/libical/usr/lib/libical_cxx.so.3
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/libical/usr/lib/libical_cxx.so.3.0.20" to ""
+-- Installing: /tmp/pkg/libical/usr/lib/libical_cxx.so
+-- Installing: /tmp/pkg/libical/usr/include/libical/ical.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalarray.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalattach.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalcomponent.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalderivedproperty.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalderivedparameter.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalderivedvalue.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalduration.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalenums.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalerror.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icallangbind.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalmemory.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalmime.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalparameter.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalparser.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalperiod.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalproperty.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalrecur.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalrestriction.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icaltime.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icaltz-util.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icaltimezone.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icaltypes.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalvalue.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/libical_ical_export.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/pvl.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/sspm.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalparameter_cxx.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalproperty_cxx.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalvalue_cxx.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icptrholder_cxx.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/vcomponent_cxx.h
+-- Installing: /tmp/pkg/libical/usr/lib/libicalss.so.3.0.20
+-- Installing: /tmp/pkg/libical/usr/lib/libicalss.so.3
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/libical/usr/lib/libicalss.so.3.0.20" to ""
+-- Installing: /tmp/pkg/libical/usr/lib/libicalss.so
+-- Installing: /tmp/pkg/libical/usr/lib/libicalss_cxx.so.3.0.20
+-- Installing: /tmp/pkg/libical/usr/lib/libicalss_cxx.so.3
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/libical/usr/lib/libicalss_cxx.so.3.0.20" to ""
+-- Installing: /tmp/pkg/libical/usr/lib/libicalss_cxx.so
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalss.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalcalendar.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalclassify.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalcluster.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icaldirset.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icaldirsetimpl.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalfileset.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalfilesetimpl.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalgauge.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalgaugeimpl.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalmessage.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalset.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalspanlist.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalssyacc.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/libical_icalss_export.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalspanlist_cxx.h
+-- Installing: /tmp/pkg/libical/usr/lib/libicalvcal.so.3.0.20
+-- Installing: /tmp/pkg/libical/usr/lib/libicalvcal.so.3
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/libical/usr/lib/libicalvcal.so.3.0.20" to ""
+-- Installing: /tmp/pkg/libical/usr/lib/libicalvcal.so
+-- Installing: /tmp/pkg/libical/usr/include/libical/icalvcal.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/vcaltmp.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/vcc.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/vobject.h
+-- Installing: /tmp/pkg/libical/usr/include/libical/libical_vcal_export.h
+-- Installing: /tmp/pkg/libical/usr/libexec/libical/ical-glib-src-generator
+-- Installing: /tmp/pkg/libical/usr/lib/cmake/LibIcal/IcalGlibSrcGenerator.cmake
+-- Installing: /tmp/pkg/libical/usr/lib/cmake/LibIcal/IcalGlibSrcGenerator-minsizerel.cmake
+-- Installing: /tmp/pkg/libical/usr/share/gir-1.0/ICalGLib-3.0.gir
+-- Installing: /tmp/pkg/libical/usr/lib/girepository-1.0/ICalGLib-3.0.typelib
+-- Installing: /tmp/pkg/libical/usr/share/vala/vapi/libical-glib.vapi
+-- Installing: /tmp/pkg/libical/usr/lib/libical-glib.so.3.0.20
+-- Installing: /tmp/pkg/libical/usr/lib/libical-glib.so.3
+-- Set non-toolchain portion of runtime path of "/tmp/pkg/libical/usr/lib/libical-glib.so.3.0.20" to ""
+-- Installing: /tmp/pkg/libical/usr/lib/libical-glib.so
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/libical-glib.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-object.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-forward-declarations.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-array.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-attach.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-comp-iter.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-component.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-datetimeperiod.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-derived-parameter.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-derived-property.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-derived-value.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-duration.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-enums.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-error.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-geo.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-memory.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-mime.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-parameter.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-parser.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-period.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-property.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-recur-iterator.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-recurrence.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-recur.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-reqstat.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-restriction.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-time-span.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-time.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-timezone.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-trigger.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-unknowntokenhandling.h
+-- Installing: /tmp/pkg/libical/usr/include/libical-glib/i-cal-value.h
+-- Installing: /tmp/pkg/libical/usr/lib/pkgconfig/libical-glib.pc
+>>> libical-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/libical-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/libical-dev/usr/lib/pkgconfig'
+'usr/share/vala/vapi' -> '/tmp/pkg/libical-dev/usr/share/vala/vapi'
+'usr/share/gir-1.0' -> '/tmp/pkg/libical-dev/usr/share/gir-1.0'
+'usr/lib/cmake' -> '/tmp/pkg/libical-dev/usr/lib/cmake'
+'usr/lib/libical-glib.so' -> '/tmp/pkg/libical-dev/usr/lib/libical-glib.so'
+'usr/lib/libical.so' -> '/tmp/pkg/libical-dev/usr/lib/libical.so'
+'usr/lib/libical_cxx.so' -> '/tmp/pkg/libical-dev/usr/lib/libical_cxx.so'
+'usr/lib/libicalss.so' -> '/tmp/pkg/libical-dev/usr/lib/libicalss.so'
+'usr/lib/libicalss_cxx.so' -> '/tmp/pkg/libical-dev/usr/lib/libicalss_cxx.so'
+'usr/lib/libicalvcal.so' -> '/tmp/pkg/libical-dev/usr/lib/libicalvcal.so'
+>>> libical-dev*: Preparing subpackage libical-dev...
+>>> libical-dev*: Stripping binaries
+>>> libical-dev*: Running postcheck for libical-dev
+>>> libical*: Running postcheck for libical
+>>> libical*: Preparing package libical...
+>>> libical*: Stripping binaries
+>>> libical-dev*: Scanning shared objects
+>>> libical*: Scanning shared objects
+>>> libical-dev*: Tracing dependencies...
+	libxml2-dev
+	gobject-introspection-dev
+	libical=3.0.20-r0
+	pc:glib-2.0
+	pc:gobject-2.0
+	pc:icu-i18n
+	pkgconfig
+>>> libical-dev*: Package size: 2.8 MB
+>>> libical-dev*: Compressing data...
+>>> libical-dev*: Create checksum...
+>>> libical-dev*: Create libical-dev-3.0.20-r0.apk
+>>> libical*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libgcc_s.so.1
+	so:libglib-2.0.so.0
+	so:libgobject-2.0.so.0
+	so:libicui18n.so.76
+	so:libicuuc.so.76
+	so:libstdc++.so.6
+	so:libxml2.so.2
+>>> libical*: Package size: 1.3 MB
+>>> libical*: Compressing data...
+>>> libical*: Create checksum...
+>>> libical*: Create libical-3.0.20-r0.apk
+>>> libical: Updating the main/x86_64 repository index...
+>>> libical: Signing the index...
+>>> libical: Cleaning up srcdir
+>>> libical: Cleaning up build chroot
+>>> libical: Cleaning up pkgdir

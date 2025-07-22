@@ -1,0 +1,234 @@
+>>> perl-json: Validating /home/packager/oily-pine/main/perl-json/APKBUILD...
+>>> perl-json: Cleaning up srcdir
+>>> perl-json: Cleaning up pkgdir
+>>> perl-json: Cleaning up tmpdir
+>>> perl-json: Fetching https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.10.tar.gz
+>>> perl-json: Fetching https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.10.tar.gz
+>>> perl-json: Checking sha512sums...
+JSON-4.10.tar.gz: OK
+>>> perl-json: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/73) Installing musl (1.2.5-r10)
+(2/73) Installing libcrypto3 (3.5.0-r0)
+(3/73) Installing ca-certificates-bundle (20241121-r2)
+(4/73) Installing libssl3 (3.5.0-r0)
+(5/73) Installing zlib (1.3.1-r2)
+(6/73) Installing libapk2 (2.14.9-r2)
+(7/73) Installing apk-tools (2.14.9-r2)
+(8/73) Installing libcap2 (2.76-r0)
+(9/73) Installing libcap-getcap (2.76-r0)
+(10/73) Installing fakeroot (1.37.1.1-r0)
+(11/73) Installing scanelf (1.3.8-r1)
+(12/73) Installing musl-utils (1.2.5-r10)
+(13/73) Installing libgcc (14.3.0-r0)
+(14/73) Installing libstdc++ (14.3.0-r0)
+(15/73) Installing lzip (1.25-r0)
+(16/73) Installing openssl (3.5.0-r0)
+(17/73) Installing patch (2.8-r0)
+(18/73) Installing pkgconf (2.4.3-r0)
+(19/73) Installing acl-libs (2.3.2-r1)
+(20/73) Installing tar (1.35-r3)
+(21/73) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/73) Installing ssl_client (1.37.0-r18)
+(23/73) Installing busybox-binsh (1.37.0-r18)
+(24/73) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/73) Installing abuild-sudo (3.15.0-r0)
+(26/73) Installing alpine-baselayout-data (3.7.0-r0)
+(27/73) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/73) Installing bridge (1.5-r5)
+(29/73) Installing ifupdown-ng (0.12.1-r7)
+(30/73) Installing openrc-user (0.62.2-r2)
+(31/73) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/73) Installing mdev-conf (4.8-r0)
+(33/73) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/73) Installing alpine-conf (3.20.0-r0)
+(35/73) Installing alpine-keys (2.5-r0)
+(36/73) Installing alpine-release (3.22.0-r0)
+(37/73) Installing busybox-openrc (1.37.0-r18)
+(38/73) Installing busybox-suid (1.37.0-r18)
+(39/73) Installing alpine-base (3.22.0-r0)
+(40/73) Installing jansson (2.14.1-r0)
+(41/73) Installing zstd-libs (1.5.7-r0)
+(42/73) Installing binutils (2.44-r0)
+(43/73) Installing libmagic (5.46-r2)
+(44/73) Installing file (5.46-r2)
+(45/73) Installing libgomp (14.3.0-r0)
+(46/73) Installing libatomic (14.3.0-r0)
+(47/73) Installing gmp (6.3.0-r3)
+(48/73) Installing isl26 (0.26-r1)
+(49/73) Installing mpfr4 (4.2.1_p1-r0)
+(50/73) Installing mpc1 (1.3.1-r1)
+(51/73) Installing gcc (14.3.0-r0)
+(52/73) Installing libstdc++-dev (14.3.0-r0)
+(53/73) Installing musl-dev (1.2.5-r10)
+(54/73) Installing g++ (14.3.0-r0)
+(55/73) Installing make (4.4.1-r3)
+(56/73) Installing fortify-headers (1.1-r5)
+(57/73) Installing build-base (0.5-r3)
+(58/73) Installing brotli-libs (1.1.0-r2)
+(59/73) Installing c-ares (1.34.5-r0)
+(60/73) Installing libunistring (1.3-r0)
+(61/73) Installing libidn2 (2.3.7-r0)
+(62/73) Installing nghttp2-libs (1.65.0-r0)
+(63/73) Installing libpsl (0.21.5-r3)
+(64/73) Installing libcurl (8.14.0-r2)
+(65/73) Installing libexpat (2.7.1-r0)
+(66/73) Installing pcre2 (10.43-r1)
+(67/73) Installing git (2.49.0-r0)
+(68/73) Installing git-init-template (2.49.0-r0)
+(69/73) Installing libbz2 (1.0.8-r6)
+(70/73) Installing perl (5.40.2-r0)
+(71/73) Installing perl-error (0.17030-r0)
+(72/73) Installing perl-git (2.49.0-r0)
+(73/73) Installing git-perl (2.49.0-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 296 MiB in 73 packages
+>>> perl-json: Fetching https://cpan.metacpan.org/authors/id/I/IS/ISHIGAKI/JSON-4.10.tar.gz
+>>> perl-json: Checking sha512sums...
+JSON-4.10.tar.gz: OK
+>>> perl-json: Unpacking /var/cache/distfiles/JSON-4.10.tar.gz...
+Welcome to JSON (v.4.10)
+=============================
+
+ ** BACKWARD INCOMPATIBILITY **
+
+Since version 2.90, stringification (and string comparison) for
+JSON::true and JSON::false has not been overloaded. It shouldn't
+matter as long as you treat them as boolean values, but a code that
+expects they are stringified as "true" or "false" doesn't work as
+you have expected any more.
+
+    if (JSON::true eq 'true') {  # now fails
+
+    print "The result is 1 now."; # => The result is 1 now.
+
+And now these boolean values don't inherit JSON::Boolean, either.
+When you need to test a value is a JSON boolean value or not, use
+JSON::is_bool function, instead of testing the value inherits
+a particular boolean class or not.
+
+Checking if your kit is complete...
+Looks good
+Generating a Unix-style Makefile
+Writing Makefile for JSON
+Writing MYMETA.yml and MYMETA.json
+cp lib/JSON/backportPP/Boolean.pm blib/lib/JSON/backportPP/Boolean.pm
+cp lib/JSON/backportPP/Compat5005.pm blib/lib/JSON/backportPP/Compat5005.pm
+cp lib/JSON.pm blib/lib/JSON.pm
+cp lib/JSON/backportPP/Compat5006.pm blib/lib/JSON/backportPP/Compat5006.pm
+cp lib/JSON/backportPP.pm blib/lib/JSON/backportPP.pm
+Manifying 5 pod documents
+PERL_DL_NONLAZY=1 "/usr/bin/perl" "-MExtUtils::Command::MM" "-MTest::Harness" "-e" "undef *Test::Harness::Switches; test_harness(0, 'blib/lib', 'blib/arch')" t/*.t
+# JSON::backportPP 4.12
+t/00_backend_version.t ......................... ok
+t/00_load.t .................................... ok
+t/00_load_backport_pp.t ........................ ok
+t/01_utf8.t .................................... ok
+t/02_error.t ................................... ok
+t/03_types.t ................................... ok
+t/04_dwiw_encode.t ............................. ok
+t/05_dwiw_decode.t ............................. ok
+t/06_pc_pretty.t ............................... ok
+t/07_pc_esc.t .................................. ok
+t/08_pc_base.t ................................. ok
+t/09_pc_extra_number.t ......................... ok
+t/104_sortby.t ................................. ok
+t/105_esc_slash.t .............................. ok
+t/106_allow_barekey.t .......................... ok
+t/107_allow_singlequote.t ...................... ok
+t/108_decode.t ................................. ok
+t/109_encode.t ................................. ok
+t/10_pc_keysort.t .............................. ok
+t/110_bignum.t ................................. ok
+t/112_upgrade.t ................................ ok
+t/113_overloaded_eq.t .......................... ok
+t/114_decode_prefix.t .......................... ok
+t/115_tie_ixhash.t ............................. ok
+t/116_incr_parse_fixed.t ....................... ok
+t/117_numbers.t ................................ ok
+t/118_boolean_values.t ......................... ok
+t/119_incr_parse_utf8.t ........................ ok
+t/11_pc_expo.t ................................. ok
+t/120_incr_parse_truncated.t ................... ok
+t/12_blessed.t ................................. ok
+t/13_limit.t ................................... ok
+t/14_latin1.t .................................. ok
+t/15_prefix.t .................................. ok
+t/16_tied.t .................................... ok
+t/17_relaxed.t ................................. ok
+t/18_json_checker.t ............................ ok
+t/19_incr.t .................................... ok
+t/20_faihu.t ................................... ok
+t/20_unknown.t ................................. ok
+t/21_evans.t ................................... ok
+t/22_comment_at_eof.t .......................... ok
+t/52_object.t .................................. ok
+t/99_binary.t .................................. ok
+t/e00_func.t ................................... ok
+t/e01_property.t ............................... ok
+# 1
+t/e02_bool.t ................................... ok
+t/e03_bool2.t .................................. ok
+t/e11_conv_blessed_univ.t ...................... ok
+t/e90_misc.t ................................... ok
+t/gh_28_json_test_suite.t ...................... ok
+t/gh_29_trailing_false_value.t ................. ok
+t/rt_116998_wrong_character_offset.t ........... ok
+t/rt_122270_is_bool_for_obsolete_xs_boolean.t .. ok
+t/rt_122270_old_xs_boolean.t ................... ok
+t/rt_90071_incr_parse.t ........................ ok
+t/x00_load.t ................................... ok
+t/x02_error.t .................................. ok
+t/x12_blessed.t ................................ ok
+t/x16_tied.t ................................... ok
+t/x17_strange_overload.t ....................... ok
+t/xe04_escape_slash.t .......................... ok
+t/xe05_indent_length.t ......................... ok
+t/xe12_boolean.t ............................... ok
+t/xe19_xs_and_suportbypp.t ..................... ok
+t/xe20_croak_message.t ......................... ok
+t/xe21_is_pp.t ................................. ok
+t/zero-mojibake.t .............................. ok
+All tests successful.
+Files=68, Tests=26111, 26 wallclock secs ( 0.64 usr  0.09 sys + 24.68 cusr  0.64 csys = 26.05 CPU)
+Result: PASS
+>>> perl-json: Entering fakeroot...
+Manifying 5 pod documents
+Appending installation info to /tmp/pkg/perl-json/usr/lib/perl5/core_perl/perllocal.pod
+Installing /tmp/pkg/perl-json/usr/share/perl5/vendor_perl/JSON.pm
+Installing /tmp/pkg/perl-json/usr/share/perl5/vendor_perl/JSON/backportPP.pm
+Installing /tmp/pkg/perl-json/usr/share/perl5/vendor_perl/JSON/backportPP/Compat5005.pm
+Installing /tmp/pkg/perl-json/usr/share/perl5/vendor_perl/JSON/backportPP/Compat5006.pm
+Installing /tmp/pkg/perl-json/usr/share/perl5/vendor_perl/JSON/backportPP/Boolean.pm
+Installing /tmp/pkg/perl-json/usr/share/man/man3/JSON.3pm
+Installing /tmp/pkg/perl-json/usr/share/man/man3/JSON::backportPP.3pm
+Installing /tmp/pkg/perl-json/usr/share/man/man3/JSON::backportPP::Compat5005.3pm
+Installing /tmp/pkg/perl-json/usr/share/man/man3/JSON::backportPP::Compat5006.3pm
+Installing /tmp/pkg/perl-json/usr/share/man/man3/JSON::backportPP::Boolean.3pm
+>>> perl-json-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/perl-json-doc/usr/share/man'
+>>> perl-json-doc*: Preparing subpackage perl-json-doc...
+>>> perl-json-doc*: Running postcheck for perl-json-doc
+>>> perl-json*: Running postcheck for perl-json
+>>> perl-json*: Preparing package perl-json...
+>>> perl-json-doc*: Tracing dependencies...
+>>> perl-json-doc*: Package size: 40.5 KB
+>>> perl-json-doc*: Compressing data...
+>>> perl-json-doc*: Create checksum...
+>>> perl-json-doc*: Create perl-json-doc-4.10-r1.apk
+>>> perl-json*: Tracing dependencies...
+	perl
+>>> perl-json*: Package size: 170.1 KB
+>>> perl-json*: Compressing data...
+>>> perl-json*: Create checksum...
+>>> perl-json*: Create perl-json-4.10-r1.apk
+>>> perl-json: Updating the main/x86_64 repository index...
+>>> perl-json: Signing the index...
+>>> perl-json: Cleaning up srcdir
+>>> perl-json: Cleaning up build chroot
+>>> perl-json: Cleaning up pkgdir

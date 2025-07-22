@@ -1,0 +1,674 @@
+>>> ruby-minitest: Validating /home/packager/oily-pine/main/ruby-minitest/APKBUILD...
+>>> ruby-minitest: Cleaning up srcdir
+>>> ruby-minitest: Cleaning up pkgdir
+>>> ruby-minitest: Cleaning up tmpdir
+>>> ruby-minitest: Fetching https://github.com/minitest/minitest/archive/v5.25.5/minitest-5.25.5.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 93172    0 93172    0     0   122k      0 --:--:-- --:--:-- --:--:--  122k
+>>> ruby-minitest: Fetching https://rubygems.org/downloads/minitest-5.25.5.gem
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   99k  100   99k    0     0  1722k      0 --:--:-- --:--:-- --:--:-- 1736k
+>>> ruby-minitest: Fetching https://github.com/minitest/minitest/archive/v5.25.5/minitest-5.25.5.tar.gz
+>>> ruby-minitest: Fetching https://rubygems.org/downloads/minitest-5.25.5.gem
+>>> ruby-minitest: Checking sha512sums...
+minitest-5.25.5.tar.gz: OK
+minitest-5.25.5.gem: OK
+>>> ruby-minitest: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/75) Installing musl (1.2.5-r10)
+(2/75) Installing libcrypto3 (3.5.0-r0)
+(3/75) Installing ca-certificates-bundle (20241121-r2)
+(4/75) Installing libssl3 (3.5.0-r0)
+(5/75) Installing zlib (1.3.1-r2)
+(6/75) Installing libapk2 (2.14.9-r2)
+(7/75) Installing apk-tools (2.14.9-r2)
+(8/75) Installing libcap2 (2.76-r0)
+(9/75) Installing libcap-getcap (2.76-r0)
+(10/75) Installing fakeroot (1.37.1.1-r0)
+(11/75) Installing scanelf (1.3.8-r1)
+(12/75) Installing musl-utils (1.2.5-r10)
+(13/75) Installing libgcc (14.3.0-r1)
+(14/75) Installing libstdc++ (14.3.0-r1)
+(15/75) Installing lzip (1.25-r0)
+(16/75) Installing openssl (3.5.0-r0)
+(17/75) Installing patch (2.8-r0)
+(18/75) Installing pkgconf (2.4.3-r0)
+(19/75) Installing acl-libs (2.3.2-r1)
+(20/75) Installing tar (1.35-r3)
+(21/75) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/75) Installing ssl_client (1.37.0-r18)
+(23/75) Installing busybox-binsh (1.37.0-r18)
+(24/75) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/75) Installing abuild-sudo (3.15.0-r0)
+(26/75) Installing alpine-baselayout-data (3.7.0-r0)
+(27/75) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/75) Installing bridge (1.5-r5)
+(29/75) Installing ifupdown-ng (0.12.1-r7)
+(30/75) Installing openrc-user (0.62.2-r2)
+(31/75) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/75) Installing mdev-conf (4.8-r0)
+(33/75) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/75) Installing alpine-conf (3.20.0-r0)
+(35/75) Installing alpine-keys (2.5-r0)
+(36/75) Installing alpine-release (3.22.0-r0)
+(37/75) Installing busybox-openrc (1.37.0-r18)
+(38/75) Installing busybox-suid (1.37.0-r18)
+(39/75) Installing alpine-base (3.22.0-r0)
+(40/75) Installing jansson (2.14.1-r0)
+(41/75) Installing zstd-libs (1.5.7-r0)
+(42/75) Installing binutils (2.44-r0)
+(43/75) Installing libmagic (5.46-r2)
+(44/75) Installing file (5.46-r2)
+(45/75) Installing libgomp (14.3.0-r1)
+(46/75) Installing libatomic (14.3.0-r1)
+(47/75) Installing gmp (6.3.0-r3)
+(48/75) Installing isl26 (0.26-r1)
+(49/75) Installing mpfr4 (4.2.1_p1-r0)
+(50/75) Installing mpc1 (1.3.1-r1)
+(51/75) Installing gcc (14.3.0-r1)
+(52/75) Installing libstdc++-dev (14.3.0-r1)
+(53/75) Installing musl-dev (1.2.5-r10)
+(54/75) Installing g++ (14.3.0-r1)
+(55/75) Installing make (4.4.1-r3)
+(56/75) Installing fortify-headers (1.1-r5)
+(57/75) Installing build-base (0.5-r3)
+(58/75) Installing brotli-libs (1.1.0-r2)
+(59/75) Installing c-ares (1.34.5-r0)
+(60/75) Installing libunistring (1.3-r0)
+(61/75) Installing libidn2 (2.3.7-r0)
+(62/75) Installing nghttp2-libs (1.65.0-r0)
+(63/75) Installing libpsl (0.21.5-r3)
+(64/75) Installing libcurl (8.14.0-r2)
+(65/75) Installing libexpat (2.7.1-r0)
+(66/75) Installing pcre2 (10.43-r1)
+(67/75) Installing git (2.49.0-r0)
+(68/75) Installing git-init-template (2.49.0-r0)
+(69/75) Installing ca-certificates (20241121-r2)
+(70/75) Installing libffi (3.4.8-r0)
+(71/75) Installing yaml (0.2.5-r2)
+(72/75) Installing ruby-libs (3.4.4-r0)
+(73/75) Installing libucontext (1.3.2-r0)
+(74/75) Installing ruby (3.4.4-r0)
+(75/75) Installing ruby-rdoc (3.4.4-r0)
+Executing busybox-1.37.0-r18.trigger
+Executing ca-certificates-20241121-r2.trigger
+OK: 279 MiB in 75 packages
+>>> ruby-minitest: Fetching https://github.com/minitest/minitest/archive/v5.25.5/minitest-5.25.5.tar.gz
+>>> ruby-minitest: Fetching https://rubygems.org/downloads/minitest-5.25.5.gem
+>>> ruby-minitest: Checking sha512sums...
+minitest-5.25.5.tar.gz: OK
+minitest-5.25.5.gem: OK
+>>> ruby-minitest: Unpacking /var/cache/distfiles/minitest-5.25.5.tar.gz...
+WARNING:  expected RubyGems version 3.6.7, was 3.6.3
+WARNING:  See https://guides.rubygems.org/specification-reference/ for help
+  Successfully built RubyGem
+  Name: minitest
+  Version: 5.25.5
+  File: minitest-5.25.5.gem
+cannot load such file -- hoe
+Run options: --verbose --seed 65142
+
+# Running:
+
+TestSpecInTestCase#test_expectation_triggered = 0.00 s = .
+TestSpecInTestCase#test_expectation_with_a_message = 0.00 s = .
+TestSpecInTestCase#test_expectation = 0.00 s = .
+ValueMonadTest#test_value_monad_expect_alias = 0.00 s = .
+ValueMonadTest#test_value_monad_method = 0.00 s = .
+ValueMonadTest#test_value_monad_value_alias = 0.00 s = .
+Minitest::Spec::expect#test_0001_can use expect = 0.00 s = .
+Minitest::Spec::expect#test_0002_can use expect with a lambda = 0.00 s = .
+Minitest::Spec::expect#test_0006_deprecates expectation used without _ = 0.00 s = .
+Minitest::Spec::expect#test_0003_can use expect in a thread = 0.00 s = .
+Minitest::Spec::expect#test_0005_fails gracefully when expectation used outside of `it` = 0.00 s = .
+Minitest::Spec::expect#test_0004_can NOT use must_equal in a thread. It must use expect in a thread = 0.00 s = .
+Minitest::Spec::expect#test_0007_deprecates expectation used without _ with empty backtrace_filter = 0.00 s = .
+TestMinitestUnitOrder#test_all_teardowns_are_guaranteed_to_run = 0.00 s = .
+TestMinitestUnitOrder#test_setup_and_teardown_survive_inheritance = 0.00 s = .
+TestMinitestUnitOrder#test_after_teardown = 0.00 s = .
+TestMinitestUnitOrder#test_before_setup = 0.00 s = .
+Minitest::Spec::let#test_0001_is evaluated once per example = 0.00 s = .
+Minitest::Spec::let#test_0002_is REALLY evaluated once per example = 0.00 s = .
+Minitest::Spec::let#test_0003_raises an error if the name begins with "test" = 0.00 s = .
+Minitest::Spec::let#test_0004_raises an error if the name shadows a normal instance method = 0.00 s = .
+Minitest::Spec::let#test_0005_doesn't raise an error if it is just another let = 0.00 s = .
+Minitest::Spec::let#test_0006_procs come after dont_flip = 0.00 s = .
+TestMinitestRunnable#test_marshal = 0.00 s = .
+TestMinitestRunnable#test_spec_marshal = 0.00 s = .
+TestMinitestRunnable#test_spec_marshal_with_exception_nameerror = 0.00 s = .
+TestMinitestRunnable#test_spec_marshal_with_exception = 0.00 s = .
+TestMinitestRunnable#test_spec_marshal_with_exception__worse_error_typeerror = 0.00 s = .
+TestMinitestRunnable#test_spec_marshal_with_exception__better_error_typeerror = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_subclass = 0.00 s = .
+TestMinitestAssertions#test_refute_pattern_expects_nomatchingpatternerror = 0.00 s = .
+TestMinitestAssertions#test_assert_in_epsilon_triggered_negative_case = 0.00 s = .
+TestMinitestAssertions#test_assert_in_epsilon = 0.00 s = .
+TestMinitestAssertions#test_refute_equal = 0.00 s = .
+TestMinitestAssertions#test_assert_output_out = 0.00 s = .
+TestMinitestAssertions#test_assert_same = 0.00 s = .
+TestMinitestAssertions#test_refute_respond_to = 0.00 s = .
+TestMinitestAssertions#test_skip = 0.00 s = .
+TestMinitestAssertions#test_assert_pattern = 0.00 s = .
+TestMinitestAssertions#test_assert_match_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_operator_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_module = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_default = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_long_msg = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_short_multiline = 0.00 s = .
+TestMinitestAssertions#test_assert_in_epsilon_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_respond_to__include_all = 0.00 s = .
+TestMinitestAssertions#test_refute_empty_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_operator_bad_object = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_short_msg = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_lambda = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_diff_deactivated = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_string_encodings = 0.00 s = .
+TestMinitestAssertions#test_assert_pattern_raises_other_exceptions = 0.00 s = .
+TestMinitestAssertions#test_refute_match_matcher_object = 0.00 s = .
+TestMinitestAssertions#test_assert_send = 0.00 s = .
+TestMinitestAssertions#test_assert_operator = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_triggered_none = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_triggered_different = 0.00 s = .
+TestMinitestAssertions#test_refute_instance_of = 0.00 s = .
+TestMinitestAssertions#test_assert_send_bad = 0.00 s = .
+TestMinitestAssertions#test_refute_in_epsilon = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_subclass_triggered = 0.00 s = .
+TestMinitestAssertions#test_delta_consistency = 0.00 s = .
+TestMinitestAssertions#test_assert_output_uncaught_throw = 0.00 s = .
+TestMinitestAssertions#test_assert_output_neither = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_unescape_newlines = 0.00 s = .
+TestMinitestAssertions#test_refute_match_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_default_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_throw_caught = 0.00 s = .
+TestMinitestAssertions#test_assert_kind_of = 0.00 s = .
+TestMinitestAssertions#test_refute_includes = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_string_both_escaped_unescaped_newlines = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_raise_mismatch = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_triggered_different_msg = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_hex_invisible = 0.00 s = .
+TestMinitestAssertions#test_refute_pattern = 0.00 s = .
+TestMinitestAssertions#test_assert_path_exists = 0.00 s = .
+TestMinitestAssertions#test_refute_equal_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_in_delta = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_signals = 0.00 s = .
+TestMinitestAssertions#test_refute_pattern_with_no_block = 0.00 s = .
+TestMinitestAssertions#test_assert_match_object_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_empty = 0.00 s = .
+TestMinitestAssertions#test_assert_includes = 0.00 s = .
+TestMinitestAssertions#test_refute_nil = 0.00 s = .
+TestMinitestAssertions#test_refute_pattern_raises_other_exceptions = 0.00 s = .
+TestMinitestAssertions#test_assert_path_exists_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_message = 0.00 s = .
+TestMinitestAssertions#test_refute_in_epsilon_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_hex = 0.00 s = .
+TestMinitestAssertions#test_flunk_message = 0.00 s = .
+TestMinitestAssertions#test_refute_predicate_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_throws_argument_exception = 0.00 s = .
+TestMinitestAssertions#test_assert = 0.00 s = .
+TestMinitestAssertions#test_epsilon_consistency = 0.00 s = .
+TestMinitestAssertions#test_assert_output_uncaught_raise = 0.00 s = .
+TestMinitestAssertions#test_assert_nil_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_silent = 0.00 s = .
+TestMinitestAssertions#test_assert_in_delta_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_match_matcher_object = 0.00 s = .
+TestMinitestAssertions#test_assert_throws_unthrown = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_string_encodings_both_different = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_string_bug791 = 0.00 s = .
+TestMinitestAssertions#test_class_asserts_match_refutes = 0.00 s = .
+TestMinitestAssertions#test_assert_match_matchee_to_str = 0.00 s = .
+TestMinitestAssertions#test_refute_same = 0.00 s = .
+TestMinitestAssertions#test_assert_silent_triggered_err = 0.00 s = .
+TestMinitestAssertions#test_refute_respond_to_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_operator = 0.00 s = .
+TestMinitestAssertions#test_assert_operator_triggered = 0.00 s = .
+TestMinitestAssertions#test_fail_after = 0.00 s = .
+TestMinitestAssertions#test_assert_output_triggered_both = 0.00 s = .
+TestMinitestAssertions#test_assert_predicate_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_includes_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_respond_to__include_all = 0.00 s = .
+TestMinitestAssertions#test_refute_includes_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_output_triggered_err = 0.00 s = .
+TestMinitestAssertions#test_assert_throws_value = 0.00 s = .
+TestMinitestAssertions#test_assert_same_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_raise = 0.00 s = .
+TestMinitestAssertions#test_assert_empty_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_instance_of_triggered = 0.00 s = .
+TestMinitestAssertions#test_pass = 0.00 s = .
+TestMinitestAssertions#test_assert_output_both_regexps = 0.00 s = .
+TestMinitestAssertions#test_assert_instance_of_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_skip = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_exit = 0.00 s = .
+TestMinitestAssertions#test_assert_instance_of = 0.00 s = .
+TestMinitestAssertions#test_assert_operator_bad_object = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_collection_array_hex_invisible = 0.00 s = .
+TestMinitestAssertions#test_assert_nil = 0.00 s = .
+TestMinitestAssertions#test_assert_pattern_traps_nomatchingpatternerror = 0.00 s = .
+TestMinitestAssertions#test_flunk = 0.00 s = .
+TestMinitestAssertions#test_assert_respond_to__include_all_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_throw_nested_bad = 0.00 s = .
+TestMinitestAssertions#test_refute_path_exists = 0.00 s = .
+TestMinitestAssertions#test_refute_path_exists_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_respond_to = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_collection_hash_hex_invisible = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_long = 0.00 s = .
+TestMinitestAssertions#test_assert_output_no_block = 0.00 s = .
+TestMinitestAssertions#test_refute_match_object_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert__triggered_message = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_short = 0.00 s = .
+TestMinitestAssertions#test_assert_match = 0.00 s = .
+TestMinitestAssertions#test_assert_predicate = 0.00 s = .
+TestMinitestAssertions#test_refute_nil_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_equal = 0.00 s = .
+TestMinitestAssertions#test_refute_kind_of = 0.00 s = .
+TestMinitestAssertions#test_assert_throws = 0.00 s = .
+TestMinitestAssertions#test_assert__triggered_lambda = 0.00 s = .
+TestMinitestAssertions#test_refute_in_delta = 0.00 s = .
+TestMinitestAssertions#test_assert_output_triggered_out = 0.00 s = .
+TestMinitestAssertions#test_refute = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_raise_bad = 0.00 s = .
+TestMinitestAssertions#test_capture_subprocess_io = 0.00 s = .
+TestMinitestAssertions#test_assert_output_err = 0.00 s = .
+TestMinitestAssertions#test_refute_same_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_throw_mismatch = 0.00 s = .
+TestMinitestAssertions#test_assert_output_both = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_without_block = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_does_not_allow_lhs_nil_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_throw_caught_bad = 0.00 s = .
+TestMinitestAssertions#test_refute_respond_to__include_all_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_kind_of_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_kind_of_triggered = 0.00 s = .
+TestMinitestAssertions#test_refute_predicate = 0.00 s = .
+TestMinitestAssertions#test_assert__triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_output_nested_assert_uncaught = 0.00 s = .
+TestMinitestAssertions#test_refute_match = 0.00 s = .
+TestMinitestAssertions#test_assert_throws_name_error = 0.00 s = .
+TestMinitestAssertions#test_assert_silent_triggered_out = 0.00 s = .
+TestMinitestAssertions#test_refute_empty = 0.00 s = .
+TestMinitestAssertions#test_assert_raises_triggered_none_msg = 0.00 s = .
+TestMinitestAssertions#test_assert_raises = 0.00 s = .
+TestMinitestAssertions#test_refute_in_delta_triggered = 0.00 s = .
+TestMinitestAssertions#test_skip_until = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_does_not_allow_lhs_nil = 0.00 s = .
+TestMinitestAssertions#test_assert_pattern_with_no_block = 0.00 s = .
+TestMinitestAssertions#test_capture_io = 0.00 s = .
+TestMinitestAssertions#test_assert_equal_different_long_invisible = 0.00 s = .
+TestMinitestAssertions#test_assert_respond_to_triggered = 0.00 s = .
+TestMinitestAssertions#test_assert_throws_different = 0.00 s = .
+Minitest::Spec::infect_an_assertion#test_0002_infects assertions with kwargs (dont_flip) = 0.00 s = .
+Minitest::Spec::infect_an_assertion#test_0001_infects assertions with kwargs = 0.00 s = .
+Minitest::Spec#test_0020_needs to verify floats within an epsilon = 0.00 s = .
+Minitest::Spec#test_0017_needs to verify floats outside a delta = 0.00 s = .
+Minitest::Spec#test_0016_needs to warn on equality with nil = 0.00 s = .
+Minitest::Spec#test_0027_needs to verify nil = 0.00 s = .
+Minitest::Spec#test_0005_needs to be sensible about wont_include order = 0.00 s = .
+Minitest::Spec#test_0013_needs to verify binary messages = 0.00 s = .
+Minitest::Spec#test_0038_needs to verify using any binary operator = 0.00 s = .
+Minitest::Spec#test_0028_needs to verify non-emptyness = 0.00 s = .
+Minitest::Spec#test_0040_needs to verify using respond_to = 0.00 s = .
+Minitest::Spec#test_0007_needs to catch an unexpected exception = 0.00 s = .
+Minitest::Spec#test_0026_needs to verify mismatch = 0.00 s = .
+Minitest::Spec#test_0010_needs to ensure silence = 0.00 s = .
+Minitest::Spec#test_0014_needs to verify emptyness = 0.00 s = .
+Minitest::Spec#test_0032_needs to verify output in stderr = 0.00 s = .
+Minitest::Spec#test_0035_needs to verify throw = 0.00 s = .
+Minitest::Spec#test_0009_needs to error on bad pattern match = 0.00 s = .
+Minitest::Spec#test_0018_needs to verify floats outside an epsilon = 0.00 s = .
+Minitest::Spec#test_0025_needs to verify kinds of objects = 0.00 s = .
+Minitest::Spec#test_0001_needs to be able to catch a Minitest::Assertion exception = 0.00 s = .
+Minitest::Spec#test_0034_needs to verify regexp matches = 0.00 s = .
+Minitest::Spec#test_0006_needs to catch an expected exception = 0.00 s = .
+Minitest::Spec#test_0012_needs to raise if an expected exception is not raised = 0.00 s = .
+Minitest::Spec#test_0002_needs to check for file existence = 0.00 s = .
+Minitest::Spec#test_0030_needs to verify non-nil = 0.00 s = .
+Minitest::Spec#test_0022_needs to verify inequality = 0.00 s = .
+Minitest::Spec#test_0003_needs to check for file non-existence = 0.00 s = .
+Minitest::Spec#test_0031_needs to verify objects not responding to a message = 0.00 s = .
+Minitest::Spec#test_0037_needs to verify using any (negative) predicate = 0.00 s = .
+Minitest::Spec#test_0004_needs to be sensible about must_include order = 0.00 s = .
+Minitest::Spec#test_0036_needs to verify types of objects = 0.00 s = .
+Minitest::Spec#test_0024_needs to verify kinds of a class = 0.00 s = .
+Minitest::Spec#test_0033_needs to verify output in stdout = 0.00 s = .
+Minitest::Spec#test_0011_needs to have all methods named well = 0.00 s = .
+Minitest::Spec#test_0023_needs to verify instances of a class = 0.00 s = .
+Minitest::Spec#test_0019_needs to verify floats within a delta = 0.00 s = .
+Minitest::Spec#test_0021_needs to verify identity = 0.00 s = .
+Minitest::Spec#test_0008_needs to pattern match = 0.00 s = .
+Minitest::Spec#test_0015_needs to verify equality = 0.00 s = .
+Minitest::Spec#test_0029_needs to verify non-identity = 0.00 s = .
+Minitest::Spec#test_0039_needs to verify using any predicate = 0.00 s = .
+TestMinitestAssertionHelpers#test_diff_equal = 0.00 s = .
+TestMinitestAssertionHelpers#test_diff_str_mixed = 0.00 s = .
+TestMinitestAssertionHelpers#test_message_deferred = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_str_encoding = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff_str_encoding_both = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_str_bad_encoding = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff_str_bad_encoding = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff_str_normal = 0.00 s = .
+TestMinitestAssertionHelpers#test_diff_str_multiline = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff_str_bad_encoding_both = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_str_immutable = 0.00 s = .
+TestMinitestAssertionHelpers#test_message = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff_str_encoding = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp_for_diff_str_nerd = 0.00 s = .
+TestMinitestAssertionHelpers#test_diff_str_simple = 0.00 s = .
+TestMinitestAssertionHelpers#test_mu_pp = 0.00 s = .
+TestUnexpectedError#test_1_line_cycles = 0.00 s = .
+TestUnexpectedError#test_absurd_patterns = 0.00 s = .
+TestUnexpectedError#test_sanity3 = 0.01 s = .
+TestUnexpectedError#test_longer_c_than_b = 0.00 s = .
+TestUnexpectedError#test_normal2 = 0.00 s = .
+TestUnexpectedError#test_normal = 0.00 s = .
+TestMinitestTest#test_dup = 0.00 s = .
+TestMinitestTest#test_marshal = 0.00 s = .
+TestMinitestTest#test_spec_marshal_with_exception__worse_error_typeerror = 0.00 s = .
+TestMinitestTest#test_spec_marshal = 0.00 s = .
+TestMinitestTest#test_spec_marshal_with_exception__better_error_typeerror = 0.00 s = .
+TestMinitestTest#test_spec_marshal_with_exception = 0.00 s = .
+TestMinitestTest#test_spec_marshal_with_exception_nameerror = 0.00 s = .
+TestMinitestUnitInherited#test_inherited_hook_plays_nice_with_others = 0.00 s = .
+TestMetaStatic#test_children = 0.00 s = .
+TestMetaStatic#test_it_wont_add_test_methods_to_children = 0.00 s = .
+TestMetaStatic#test_it_wont_remove_existing_child_test_methods = 0.00 s = .
+TestMinitestBenchmark#test_fit_linear_noisy = 0.00 s = .
+TestMinitestBenchmark#test_fit_logarithmic_noisy = 0.00 s = .
+TestMinitestBenchmark#test_cls_bench_exp = 0.00 s = .
+TestMinitestBenchmark#test_fit_power_clean = 0.00 s = .
+TestMinitestBenchmark#test_fit_constant_noisy = 0.00 s = .
+TestMinitestBenchmark#test_fit_linear_clean = 0.00 s = .
+TestMinitestBenchmark#test_cls_bench_range = 0.00 s = .
+TestMinitestBenchmark#test_cls_bench_linear = 0.00 s = .
+TestMinitestBenchmark#test_fit_power_noisy = 0.00 s = .
+TestMinitestBenchmark#test_fit_constant_clean = 0.00 s = .
+TestMinitestBenchmark#test_fit_exponential_noisy = 0.00 s = .
+TestMinitestBenchmark#test_fit_logarithmic_clean = 0.00 s = .
+TestMinitestBenchmark#test_cls_runnable_methods = 0.00 s = .
+TestMinitestBenchmark#test_fit_exponential_clean = 0.00 s = .
+TestMeta#test_register_spec_type = 0.00 s = .
+TestMeta#test_bug_dsl_expectations = 0.00 s = .
+TestMeta#test_structure_postfix_it = 0.00 s = .
+TestMeta#test_structure_subclasses = 0.00 s = .
+TestMeta#test_name = 0.00 s = .
+TestMeta#test_describe_first_structure = 0.00 s = .
+TestMeta#test_structure = 0.00 s = .
+TestMeta#test_name_inside_class = 0.00 s = .
+TestMeta#test_spec_type = 0.00 s = .
+TestMeta#test_name2 = 0.00 s = .
+TestMeta#test_setup_teardown_behavior = 0.00 s = .
+TestMinitestRunner#test_class_runnables = 0.00 s = .
+TestMinitestRunner#test_run_test = 0.00 s = .
+TestMinitestRunner#test_run_skip_show_skips = 0.00 s = .
+TestMinitestRunner#test_run_error = 0.00 s = .
+TestMinitestRunner#test_run_filtered_excluding_suite_name_string = 0.00 s = .
+TestMinitestRunner#test_run_failing_filtered = 0.00 s = .
+TestMinitestRunner#test_run_filtered_string_method_only = 0.00 s = .
+TestMinitestRunner#test_run_failing = 0.00 s = .
+TestMinitestRunner#test_run_with_other_runner = 0.00 s = .
+TestMinitestRunner#test_run_skip_verbose = 0.00 s = .
+TestMinitestRunner#test_run_passing = 0.00 s = .
+TestMinitestRunner#test_run_error_teardown = 0.00 s = .
+TestMinitestRunner#test_run_filtered_including_suite_name = 0.00 s = .
+TestMinitestRunner#test_seed = 0.00 s = .
+TestMinitestRunner#test_run_failing_excluded = 0.00 s = .
+TestMinitestRunner#test_run_parallel = 0.00 s = .
+TestMinitestRunner#test_run_filtered_excluding_suite_name = 0.00 s = .
+TestMinitestRunner#test_run_filtered_including_suite_name_string = 0.00 s = .
+TestMinitestRunner#test_run_skip = 0.00 s = .
+TestMinitestRunner#test_run_filtered_excluding_string_method_only = 0.00 s = .
+TestMinitestUnitTestCase#test_autorun_does_not_affect_fork_exit_status = 0.00 s = .
+TestMinitestUnitTestCase#test_autorun_does_not_affect_fork_success_status = 0.00 s = .
+TestMinitestUnitTestCase#test_runnable_methods_random = 0.00 s = .
+TestMinitestUnitTestCase#test_autorun_optionally_can_affect_fork_exit_status = 0.00 s = .
+TestMinitestUnitTestCase#test_i_suck_and_my_tests_are_order_dependent_bang_sets_test_order_alpha = 0.00 s = .
+TestMinitestUnitTestCase#test_i_suck_and_my_tests_are_order_dependent_bang_does_not_warn = 0.00 s = .
+TestMinitestUnitTestCase#test_runnable_methods_sorted = 0.00 s = .
+TestMinitestReporter#test_options_skip_E = 0.00 s = .
+TestMinitestReporter#test_report_error = 0.00 s = .
+TestMinitestReporter#test_record_fail = 0.00 s = .
+TestMinitestReporter#test_options_skip_F = 0.00 s = .
+TestMinitestReporter#test_report_failure = 0.00 s = .
+TestMinitestReporter#test_passed_eh_skipped = 0.00 s = .
+TestMinitestReporter#test_start = 0.00 s = .
+TestMinitestReporter#test_record_skip = 0.00 s = .
+TestMinitestReporter#test_passed_eh_error = 0.00 s = .
+TestMinitestReporter#test_passed_eh_failure = 0.00 s = .
+TestMinitestReporter#test_report_failure_uses_backtrace_filter_complex_sorbet = 0.00 s = .
+TestMinitestReporter#test_report_empty = 0.00 s = .
+TestMinitestReporter#test_report_passing = 0.00 s = .
+TestMinitestReporter#test_report_failure_uses_backtrace_filter = 0.00 s = .
+TestMinitestReporter#test_passed_eh_empty = 0.00 s = .
+TestMinitestReporter#test_record_pass = 0.00 s = .
+TestMinitestReporter#test_to_s = 0.00 s = .
+TestMinitestReporter#test_record_error = 0.00 s = .
+TestMinitestReporter#test_record_pass_with_metadata = 0.00 s = .
+TestMinitestReporter#test_report_error__sse = 0.00 s = .
+TestMinitestReporter#test_report_skipped = 0.00 s = .
+TestMinitestReporter#test_passed_eh_skipped_verbose = 0.00 s = .
+TestMinitestStub#test_stub_yield_self = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_5 = 0.00 s = .
+TestMinitestStub#test_stub_value = 0.00 s = .
+TestMinitestStub#test_stub_value_block_6 = 0.00 s = S
+TestMinitestStub#test_stub_lambda_block_args_6 = 0.00 s = S
+TestMinitestStub#test_stub_value_block_args_5 = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_call_args_6 = 0.00 s = S
+TestMinitestStub#test_stub_lambda_args = 0.00 s = .
+TestMinitestStub#test_stub_callable_block_5 = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_args_6_2 = 0.00 s = S
+TestMinitestStub#test_stub_callable_block_6 = 0.00 s = S
+TestMinitestStub#test_stub_value_block_args_6_2 = 0.00 s = S
+TestMinitestStub#test_dynamic_method = 0.00 s = .
+TestMinitestStub#test_stub__hash_as_last_real_arg = 0.00 s = .
+TestMinitestStub#test_stub_value_block_5 = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_args_5 = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_call_6 = 0.00 s = S
+TestMinitestStub#test_stub_block = 0.00 s = .
+TestMinitestStub#test_stub_lambda = 0.00 s = .
+TestMinitestStub#test_mock_with_yield = 0.00 s = .
+TestMinitestStub#test_stub_private_module_method_indirect = 0.00 s = .
+TestMinitestStub#test_mock_with_yield_kwargs = 0.00 s = .
+TestMinitestStub#test_stub_value_block_args_6 = 0.00 s = S
+TestMinitestStub#test_stub_NameError = 0.00 s = .
+TestMinitestStub#test_stub_value_block_args_5__break_if_not_passed = 0.00 s = .
+TestMinitestStub#test_stub_private_module_method = 0.00 s = .
+TestMinitestStub#test_stub_value__literal = 0.00 s = .
+TestMinitestStub#test_stub_callable_keyword_args = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_call_args_6_2 = 0.00 s = S
+TestMinitestStub#test_stub_lambda_block_call_5 = 0.00 s = .
+TestMinitestStub#test_stub_public_module_method = 0.00 s = .
+TestMinitestStub#test_stub_block_args = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_call_args_5 = 0.00 s = .
+TestMinitestStub#test_stub_callable = 0.00 s = .
+TestMinitestStub#test_stub_lambda_block_6 = 0.00 s = S
+TestMinitestStub#test_stub_value_args = 0.00 s = .
+TestMinitestUnitRecording#test_record_error_in_test_and_teardown = 0.00 s = .
+TestMinitestUnitRecording#test_record_skip = 0.00 s = .
+TestMinitestUnitRecording#test_record_error = 0.00 s = .
+TestMinitestUnitRecording#test_to_s_error_in_test_and_teardown = 0.00 s = .
+TestMinitestUnitRecording#test_record_error_teardown = 0.00 s = .
+TestMinitestUnitRecording#test_record_passing = 0.00 s = .
+TestMinitestUnitRecording#test_record_failing = 0.00 s = .
+TestMinitestUnitRecording#test_run_with_bogus_reporter = 0.00 s = .
+Minitest::Spec::subject#test_0001_is evaluated once per example = 0.00 s = .
+TestMinitestMock#test_allow_expectations_to_be_added_after_creation = 0.00 s = .
+TestMinitestMock#test_assert_mock__fail_msg = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__block_bad_missing = 0.00 s = .
+TestMinitestMock#test_do_not_create_stub_method_on_new_mocks = 0.00 s = .
+TestMinitestMock#test_no_method_error_on_unexpected_methods = 0.00 s = .
+TestMinitestMock#test_set_expectation_on_special_methods = 0.00 s = .
+TestMinitestMock#test_mock_block_raises_if_kwargs_passed = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args__old_style_bad = 0.00 s = .
+TestMinitestMock#test_not_verify_if_new_expected_method_is_not_called = 0.00 s = .
+TestMinitestMock#test_delegator_calls_are_propagated = 0.00 s = .
+TestMinitestMock#test_return_mock_does_not_raise = 0.00 s = .
+TestMinitestMock#test_assert_mock__fail_exp = 0.00 s = .
+TestMinitestMock#test_mock_block_raises_if_args_passed = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args_bad_val = 0.00 s = .
+TestMinitestMock#test_blow_up_if_not_called = 0.00 s = .
+TestMinitestMock#test_handles_kwargs_in_error_message = 0.00 s = .
+TestMinitestMock#test_assert_mock__pass = 0.00 s = .
+TestMinitestMock#test_assert_mock__fail_exp_msg = 0.00 s = .
+TestMinitestMock#test_mock_forward_keyword_arguments = 0.00 s = .
+TestMinitestMock#test_mock_allow_all_kwargs__old_style_env = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args_bad_missing = 0.00 s = .
+TestMinitestMock#test_same_method_expects_are_verified_when_all_called = 0.00 s = .
+TestMinitestMock#test_same_method_expects_blow_up_when_not_all_called = 0.00 s = .
+TestMinitestMock#test_verify_allows_called_args_to_be_loosely_specified = 0.00 s = .
+TestMinitestMock#test_expectations_can_be_satisfied_via_public_send = 0.00 s = .
+TestMinitestMock#test_blow_up_on_wrong_arguments = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args__old_style_env = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args__old_style_both = 0.00 s = .
+TestMinitestMock#test_expectations_can_be_satisfied_via_send = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__block_bad_extra = 0.00 s = .
+TestMinitestMock#test_verify_fails_when_mock_block_returns_false = 0.00 s = .
+TestMinitestMock#test_mock_called_via_send_with_args = 0.00 s = .
+TestMinitestMock#test_create_stub_method = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__block = 0.00 s = .
+TestMinitestMock#test_verify_passes_when_mock_block_returns_true = 0.00 s = .
+TestMinitestMock#test_mock_returns_retval_when_called_with_block = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args_bad_key = 0.00 s = .
+TestMinitestMock#test_verify__error = 0.00 s = .
+TestMinitestMock#test_allow_return_value_specification = 0.00 s = .
+TestMinitestMock#test_mock_args_does_not_raise = 0.00 s = .
+TestMinitestMock#test_assert_mock__fail = 0.00 s = .
+TestMinitestMock#test_not_blow_up_if_everything_called = 0.00 s = .
+TestMinitestMock#test_mock_called_via_send = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__block_bad_value = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_function_params = 0.00 s = .
+TestMinitestMock#test_respond_appropriately = 0.00 s = .
+TestMinitestMock#test_blow_up_on_wrong_number_of_arguments = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_function_block = 0.00 s = .
+TestMinitestMock#test_method_missing_empty = 0.00 s = .
+TestMinitestMock#test_verify_raises_with_strict_args = 0.00 s = .
+TestMinitestMock#test_mock_allow_all_kwargs__old_style_env__rewrite = 0.00 s = .
+TestMinitestMock#test_assign_per_mock_return_values = 0.00 s = .
+TestMinitestMock#test_mock_is_a_blank_slate = 0.00 s = .
+TestMinitestMock#test_expect_with_non_array_args = 0.00 s = .
+TestMinitestMock#test_mock_block_is_passed_keyword_args__args_bad_extra = 0.00 s = .
+TestMinitestMock#test_same_method_expects_with_same_args_blow_up_when_not_all_called = 0.00 s = .
+TestMinitestMock#test_mock_called_via___send__ = 0.00 s = .
+TestMinitestUnit#test_passed_eh_teardown_skipped = 0.00 s = .
+TestMinitestUnit#test_passed_eh_teardown_flunked = 0.00 s = .
+TestMinitestUnit#test_skipped_is_reachable = 0.00 s = .
+TestMinitestUnit#test_infectious_binary_encoding = TestMinitestUnit#test_filter_backtrace_unit_starts = 0.00 s = .
+TestMinitestGuard#test_jruby_eh = 0.00 s = .
+TestMinitestGuard#test_windows_eh = 0.00 s = .
+TestMinitestGuard#test_rubinius_eh = 0.00 s = .
+TestMinitestUnit#test_filter_backtrace__empty = 0.00 s = .
+TestMinitestUnit#test_filter_backtrace_all_unit = 0.00 s = .
+TestMinitestUnit#test_passed_eh_teardown_good = 0.00 s = .
+TestMinitestGuard#test_mri_eh = 0.00 s = .
+TestMinitestUnit#test_filter_backtrace = 0.00 s = .
+TestMinitestGuard#test_maglev_eh = 0.00 s = .
+0.00 s = .
+TestMinitestGuard#test_osx_eh = 0.00 s = .
+
+Finished in 0.082335s, 5489.7902 runs/s, 15947.1118 assertions/s.
+
+  1) Skipped:
+TestMinitestStub#test_stub_value_block_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  2) Skipped:
+TestMinitestStub#test_stub_lambda_block_args_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  3) Skipped:
+TestMinitestStub#test_stub_lambda_block_call_args_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  4) Skipped:
+TestMinitestStub#test_stub_lambda_block_args_6_2 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  5) Skipped:
+TestMinitestStub#test_stub_callable_block_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  6) Skipped:
+TestMinitestStub#test_stub_value_block_args_6_2 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  7) Skipped:
+TestMinitestStub#test_stub_lambda_block_call_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  8) Skipped:
+TestMinitestStub#test_stub_value_block_args_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+  9) Skipped:
+TestMinitestStub#test_stub_lambda_block_call_args_6_2 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+ 10) Skipped:
+TestMinitestStub#test_stub_lambda_block_6 [test/minitest/test_minitest_mock.rb:1205]:
+not yet
+
+452 runs, 1313 assertions, 0 failures, 0 errors, 10 skips
+>>> ruby-minitest: Entering fakeroot...
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/.autotest
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/History.rdoc
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/Manifest.txt
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/README.rdoc
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/Rakefile
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/design_rationale.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/hoe/minitest.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/assertions.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/autorun.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/benchmark.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/compress.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/error_on_warning.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/expectations.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/hell.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/manual_plugins.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/mock.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/parallel.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/pride.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/pride_plugin.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/spec.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/test.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/test_task.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/lib/minitest/unit.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/metametameta.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_assertions.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_benchmark.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_mock.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_reporter.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_spec.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_test.rb
+/tmp/pkg/ruby-minitest/usr/lib/ruby/gems/3.4.0/gems/minitest-5.25.5/test/minitest/test_minitest_test_task.rb
+Successfully installed minitest-5.25.5
+1 gem installed
+>>> ruby-minitest-doc*: Running split function doc...
+'usr/lib/ruby/gems/3.4.0/doc' -> '/tmp/pkg/ruby-minitest-doc/usr/lib/ruby/gems/3.4.0/doc'
+>>> ruby-minitest-doc*: Preparing subpackage ruby-minitest-doc...
+>>> ruby-minitest-doc*: Running postcheck for ruby-minitest-doc
+>>> ruby-minitest*: Running postcheck for ruby-minitest
+>>> ruby-minitest*: Preparing package ruby-minitest...
+>>> ruby-minitest-doc*: Tracing dependencies...
+	ruby
+>>> ruby-minitest-doc*: Package size: 1.0 B
+>>> ruby-minitest-doc*: Compressing data...
+>>> ruby-minitest-doc*: Create checksum...
+>>> ruby-minitest-doc*: Create ruby-minitest-doc-5.25.5-r0.apk
+>>> ruby-minitest*: Tracing dependencies...
+	ruby
+>>> ruby-minitest*: Package size: 122.1 KB
+>>> ruby-minitest*: Compressing data...
+>>> ruby-minitest*: Create checksum...
+>>> ruby-minitest*: Create ruby-minitest-5.25.5-r0.apk
+>>> ruby-minitest: Updating the main/x86_64 repository index...
+>>> ruby-minitest: Signing the index...
+>>> ruby-minitest: Cleaning up srcdir
+>>> ruby-minitest: Cleaning up build chroot
+>>> ruby-minitest: Cleaning up pkgdir

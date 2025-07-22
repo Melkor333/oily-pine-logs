@@ -1,0 +1,729 @@
+>>> linux-pam: Validating /home/packager/oily-pine/main/linux-pam/APKBUILD...
+>>> linux-pam: Cleaning up srcdir
+>>> linux-pam: Cleaning up pkgdir
+>>> linux-pam: Cleaning up tmpdir
+>>> linux-pam: Fetching https://github.com/linux-pam/linux-pam/releases/download/v1.7.0/Linux-PAM-1.7.0.tar.xz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  495k  100  495k    0     0   479k      0  0:00:01  0:00:01 --:--:--  762k
+>>> linux-pam: Fetching https://github.com/linux-pam/linux-pam/releases/download/v1.7.0/Linux-PAM-1.7.0.tar.xz
+>>> linux-pam: Checking sha512sums...
+Linux-PAM-1.7.0.tar.xz: OK
+base-auth.pamd: OK
+base-account.pamd: OK
+base-password.pamd: OK
+base-session.pamd: OK
+base-session-noninteractive.pamd: OK
+other.pamd: OK
+login.pamd: OK
+su.pamd: OK
+>>> linux-pam: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/96) Installing musl (1.2.5-r10)
+(2/96) Installing libcrypto3 (3.5.0-r0)
+(3/96) Installing ca-certificates-bundle (20241121-r2)
+(4/96) Installing libssl3 (3.5.0-r0)
+(5/96) Installing zlib (1.3.1-r2)
+(6/96) Installing libapk2 (2.14.9-r2)
+(7/96) Installing apk-tools (2.14.9-r2)
+(8/96) Installing libcap2 (2.76-r0)
+(9/96) Installing libcap-getcap (2.76-r0)
+(10/96) Installing fakeroot (1.37.1.1-r0)
+(11/96) Installing scanelf (1.3.8-r1)
+(12/96) Installing musl-utils (1.2.5-r10)
+(13/96) Installing libgcc (14.3.0-r0)
+(14/96) Installing libstdc++ (14.3.0-r0)
+(15/96) Installing lzip (1.25-r0)
+(16/96) Installing openssl (3.5.0-r0)
+(17/96) Installing patch (2.8-r0)
+(18/96) Installing pkgconf (2.4.3-r0)
+(19/96) Installing acl-libs (2.3.2-r1)
+(20/96) Installing tar (1.35-r3)
+(21/96) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/96) Installing ssl_client (1.37.0-r18)
+(23/96) Installing busybox-binsh (1.37.0-r18)
+(24/96) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/96) Installing abuild-sudo (3.15.0-r0)
+(26/96) Installing alpine-baselayout-data (3.7.0-r0)
+(27/96) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/96) Installing bridge (1.5-r5)
+(29/96) Installing ifupdown-ng (0.12.1-r7)
+(30/96) Installing openrc-user (0.62.2-r2)
+(31/96) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/96) Installing mdev-conf (4.8-r0)
+(33/96) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/96) Installing alpine-conf (3.20.0-r0)
+(35/96) Installing alpine-keys (2.5-r0)
+(36/96) Installing alpine-release (3.22.0-r0)
+(37/96) Installing busybox-openrc (1.37.0-r18)
+(38/96) Installing busybox-suid (1.37.0-r18)
+(39/96) Installing alpine-base (3.22.0-r0)
+(40/96) Installing m4 (1.4.20-r0)
+(41/96) Installing bison (3.8.2-r2)
+(42/96) Installing jansson (2.14.1-r0)
+(43/96) Installing zstd-libs (1.5.7-r0)
+(44/96) Installing binutils (2.44-r0)
+(45/96) Installing libmagic (5.46-r2)
+(46/96) Installing file (5.46-r2)
+(47/96) Installing libgomp (14.3.0-r0)
+(48/96) Installing libatomic (14.3.0-r0)
+(49/96) Installing gmp (6.3.0-r3)
+(50/96) Installing isl26 (0.26-r1)
+(51/96) Installing mpfr4 (4.2.1_p1-r0)
+(52/96) Installing mpc1 (1.3.1-r1)
+(53/96) Installing gcc (14.3.0-r0)
+(54/96) Installing libstdc++-dev (14.3.0-r0)
+(55/96) Installing musl-dev (1.2.5-r10)
+(56/96) Installing g++ (14.3.0-r0)
+(57/96) Installing make (4.4.1-r3)
+(58/96) Installing fortify-headers (1.1-r5)
+(59/96) Installing build-base (0.5-r3)
+(60/96) Installing flex (2.6.4-r7)
+(61/96) Installing flex-libs (2.6.4-r7)
+(62/96) Installing flex-dev (2.6.4-r7)
+(63/96) Installing brotli-libs (1.1.0-r2)
+(64/96) Installing c-ares (1.34.5-r0)
+(65/96) Installing libunistring (1.3-r0)
+(66/96) Installing libidn2 (2.3.7-r0)
+(67/96) Installing nghttp2-libs (1.65.0-r0)
+(68/96) Installing libpsl (0.21.5-r3)
+(69/96) Installing libcurl (8.14.0-r2)
+(70/96) Installing libexpat (2.7.1-r0)
+(71/96) Installing pcre2 (10.43-r1)
+(72/96) Installing git (2.49.0-r0)
+(73/96) Installing git-init-template (2.49.0-r0)
+(74/96) Installing linux-headers (6.14.2-r0)
+(75/96) Installing samurai (1.2-r7)
+(76/96) Installing libbz2 (1.0.8-r6)
+(77/96) Installing libffi (3.4.8-r0)
+(78/96) Installing gdbm (1.24-r0)
+(79/96) Installing xz-libs (5.8.1-r0)
+(80/96) Installing mpdecimal (4.0.1-r0)
+(81/96) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(82/96) Installing libncursesw (6.5_p20250503-r0)
+(83/96) Installing libpanelw (6.5_p20250503-r0)
+(84/96) Installing readline (8.2.13-r1)
+(85/96) Installing sqlite-libs (3.50.0-r0)
+(86/96) Installing python3 (3.12.10-r1)
+(87/96) Installing python3-pycache-pyc0 (3.12.10-r1)
+(88/96) Installing pyc (3.12.10-r1)
+(89/96) Installing meson-pyc (1.8.1-r0)
+(90/96) Installing python3-pyc (3.12.10-r1)
+(91/96) Installing meson (1.8.1-r0)
+(92/96) Installing abuild-meson (1.8.1-r0)
+(93/96) Installing skalibs-libs (2.14.4.0-r0)
+(94/96) Installing skalibs-dev (2.14.4.0-r0)
+(95/96) Installing utmps-libs (0.1.3.1-r0)
+(96/96) Installing utmps-dev (0.1.3.1-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 312 MiB in 96 packages
+>>> linux-pam: Fetching https://github.com/linux-pam/linux-pam/releases/download/v1.7.0/Linux-PAM-1.7.0.tar.xz
+>>> linux-pam: Checking sha512sums...
+Linux-PAM-1.7.0.tar.xz: OK
+base-auth.pamd: OK
+base-account.pamd: OK
+base-password.pamd: OK
+base-session.pamd: OK
+base-session-noninteractive.pamd: OK
+other.pamd: OK
+login.pamd: OK
+su.pamd: OK
+>>> linux-pam: Unpacking /var/cache/distfiles/Linux-PAM-1.7.0.tar.xz...
+The Meson build system
+Version: 1.8.1
+Source dir: /tmp/src/Linux-PAM-1.7.0
+Build dir: /tmp/src/Linux-PAM-1.7.0/build
+Build type: native build
+Project name: Linux-PAM
+Project version: 1.7.0
+C compiler for the host machine: cc (gcc 14.3.0 "cc (Alpine 14.3.0) 14.3.0")
+C linker for the host machine: cc ld.bfd 2.44
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Checking for size of "long" : 8 
+Compiler for C supports arguments -Wbad-function-cast: YES 
+Compiler for C supports arguments -Wcast-align: YES 
+Compiler for C supports arguments -Wcast-align=strict: YES 
+Compiler for C supports arguments -Wcast-qual: YES 
+Compiler for C supports arguments -Wdeprecated: YES 
+Compiler for C supports arguments -Wformat=2: YES 
+Compiler for C supports arguments -Winit-self: YES 
+Compiler for C supports arguments -Wmain: YES 
+Compiler for C supports arguments -Wmissing-declarations: YES 
+Compiler for C supports arguments -Wmissing-format-attribute: YES 
+Compiler for C supports arguments -Wmissing-prototypes: YES 
+Compiler for C supports arguments -Wnull-dereference: YES 
+Compiler for C supports arguments -Wpointer-arith: YES 
+Compiler for C supports arguments -Wreturn-type: YES 
+Compiler for C supports arguments -Wshadow: YES 
+Compiler for C supports arguments -Wstrict-prototypes: YES 
+Compiler for C supports arguments -Wundef: YES 
+Compiler for C supports arguments -Wuninitialized: YES 
+Compiler for C supports arguments -Wunused: YES 
+Compiler for C supports arguments -Wwrite-strings: YES 
+Compiler for C supports link arguments -Wl,--fatal-warnings: YES 
+Compiler for C supports link arguments -Wl,-O1: YES 
+Compiler for C supports link arguments -Wl,-z,relro: YES 
+Compiler for C supports link arguments -Wl,-z,now: YES 
+Has header "crypt.h" : YES 
+Has header "paths.h" : YES 
+Has header "sys/random.h" : YES 
+Checking for function "close_range" : NO 
+Checking for function "explicit_bzero" : YES 
+Checking for function "getdomainname" : YES 
+Checking for function "getgrgid_r" : YES 
+Checking for function "getgrnam_r" : YES 
+Checking for function "getgrouplist" : YES 
+Checking for function "getmntent_r" : YES 
+Checking for function "getpwnam" : YES 
+Checking for function "getpwnam_r" : YES 
+Checking for function "getpwuid_r" : YES 
+Checking for function "getrandom" : YES 
+Checking for function "getspnam_r" : YES 
+Checking for function "getutent_r" : NO 
+Checking for function "innetgr" : NO 
+Checking for function "memset_explicit" : NO 
+Checking for function "quotactl" : YES 
+Checking for function "ruserok" : NO 
+Checking for function "ruserok_af" : NO 
+Checking for function "unshare" : YES 
+Checking for size of "__NR_keyctl" : 4 
+Checking for size of "_PATH_MAILDIR" : 10 
+Run-time dependency dl found: YES
+Run-time dependency intl found: NO (tried builtin and system)
+Found pkg-config: YES (/usr/bin/pkg-config) 2.4.3
+Did not find CMake 'cmake'
+Found CMake: NO
+Run-time dependency audit found: NO (tried pkgconfig and cmake)
+Run-time dependency libcrypt found: NO (tried pkgconfig and cmake)
+Run-time dependency libxcrypt found: NO (tried pkgconfig and cmake)
+Library crypt found: YES
+Checking for function "crypt_r" with dependency -lcrypt: YES 
+Run-time dependency libeconf found: NO (tried pkgconfig and cmake)
+Run-time dependency libselinux found: NO (tried pkgconfig and cmake)
+Run-time dependency libsystemd found: NO (tried pkgconfig and cmake)
+Run-time dependency systemd found: NO (tried pkgconfig and cmake)
+Library db found: NO
+Library gdbm found: NO
+Library ndbm found: NO
+Checking for function "lckpwdf" : YES 
+Run-time dependency libtirpc found: NO (tried pkgconfig and cmake)
+Checking for function "getrpcport" with dependency libtirpc: NO 
+Checking for function "rpcb_getaddr" with dependency libtirpc: NO 
+Run-time dependency libnsl found: NO (tried pkgconfig and cmake)
+Program xsltproc found: NO
+Program xmllint found: NO
+Program w3m found: NO
+Program elinks found: NO
+Program fop found: NO
+Program xmlcatalog found: NO
+Program flex found: YES (/usr/bin/flex)
+Program bison found: YES (/usr/bin/bison)
+Program gettext found: NO
+Configuring config.h using configuration
+Configuring pam_namespace_helper using configuration
+Configuring pam_namespace.service using configuration
+Build targets in project: 95
+
+Linux-PAM 1.7.0
+
+  User defined options
+    auto_features     : auto
+    b_lto             : false
+    b_pie             : true
+    b_staticpic       : true
+    bindir            : /usr/bin
+    buildtype         : plain
+    datadir           : /usr/share
+    docdir            : /usr/share/man
+    examples          : false
+    htmldir           : /usr/share/doc/Linux-PAM
+    includedir        : /usr/include
+    infodir           : /usr/share/info
+    libdir            : /usr/lib
+    libexecdir        : /usr/libexec
+    localedir         : /usr/share/locale
+    localstatedir     : /var
+    mandir            : /usr/share/man
+    prefix            : /usr
+    python.bytecompile: 0
+    sbindir           : /usr/sbin
+    sharedstatedir    : /var/lib
+    sysconfdir        : /etc
+    werror            : false
+    wrap_mode         : nodownload
+
+Found ninja-1.9 at /usr/bin/ninja
+ninja: entering directory '/tmp/src/Linux-PAM-1.7.0/build'
+[1/250] Generating conf/pam_conv1/pam_conv_y.[ch] with a custom command
+[2/250] Compiling C object modules/pam_xauth/pam_xauth.so.p/pam_xauth.c.o
+[3/250] Compiling C object modules/pam_wheel/pam_wheel.so.p/pam_wheel.c.o
+[4/250] Compiling C object modules/pam_warn/tst-pam_warn-retval.p/tst-pam_warn-retval.c.o
+[5/250] Compiling C object modules/pam_warn/pam_warn.so.p/pam_warn.c.o
+[6/250] Compiling C object modules/pam_usertype/pam_usertype.so.p/pam_usertype.c.o
+[7/250] Compiling C object modules/pam_unix/bigcrypt.p/bigcrypt_main.c.o
+[8/250] Compiling C object modules/pam_unix/bigcrypt.p/bigcrypt.c.o
+[9/250] Compiling C object modules/pam_unix/unix_chkpwd.p/passverify.c.o
+[10/250] Compiling C object modules/pam_unix/unix_chkpwd.p/md5_broken.c.o
+[11/250] Compiling C object modules/pam_unix/unix_chkpwd.p/md5_good.c.o
+[12/250] Compiling C object modules/pam_unix/unix_chkpwd.p/bigcrypt.c.o
+[13/250] Compiling C object modules/pam_unix/unix_chkpwd.p/audit.c.o
+[14/250] Compiling C object modules/pam_unix/unix_chkpwd.p/unix_chkpwd.c.o
+[15/250] Compiling C object modules/pam_unix/pam_unix.so.p/md5_broken.c.o
+[16/250] Compiling C object modules/pam_unix/pam_unix.so.p/md5_good.c.o
+[17/250] Compiling C object modules/pam_unix/pam_unix.so.p/passverify.c.o
+[18/250] Compiling C object modules/pam_unix/pam_unix.so.p/support.c.o
+[19/250] Compiling C object modules/pam_unix/pam_unix.so.p/pam_unix_sess.c.o
+[20/250] Compiling C object modules/pam_unix/pam_unix.so.p/pam_unix_passwd.c.o
+[21/250] Compiling C object modules/pam_unix/pam_unix.so.p/pam_unix_auth.c.o
+[22/250] Compiling C object conf/pam_conv1/pam_conv1.p/meson-generated_.._pam_conv_y.c.o
+[23/250] Generating conf/pam_conv1/pam_conv_l.c with a custom command
+[24/250] Compiling C object modules/pam_unix/pam_unix.so.p/pam_unix_acct.c.o
+[25/250] Compiling C object conf/pam_conv1/pam_conv1.p/meson-generated_.._pam_conv_l.c.o
+[26/250] Compiling C object modules/pam_unix/pam_unix.so.p/bigcrypt.c.o
+[27/250] Compiling C object modules/pam_umask/pam_umask.so.p/pam_umask.c.o
+[28/250] Compiling C object modules/pam_timestamp/hmacfile.p/sha1.c.o
+[29/250] Compiling C object modules/pam_timestamp/hmacfile.p/hmacsha1.c.o
+[30/250] Compiling C object modules/pam_timestamp/hmacfile.p/hmacfile.c.o
+[31/250] Compiling C object modules/pam_timestamp/pam_timestamp_check.p/pam_timestamp_check.c.o
+[32/250] Compiling C object modules/pam_timestamp/pam_timestamp.so.p/sha1.c.o
+[33/250] Compiling C object modules/pam_timestamp/pam_timestamp.so.p/hmacsha1.c.o
+[34/250] Compiling C object modules/pam_timestamp/pam_timestamp.so.p/pam_timestamp.c.o
+[35/250] Compiling C object modules/pam_time/tst-pam_time-retval.p/tst-pam_time-retval.c.o
+[36/250] Compiling C object modules/pam_time/pam_time.so.p/pam_time.c.o
+[37/250] Compiling C object modules/pam_succeed_if/tst-pam_succeed_if-retval.p/tst-pam_succeed_if-retval.c.o
+[38/250] Compiling C object modules/pam_succeed_if/pam_succeed_if.so.p/pam_succeed_if.c.o
+[39/250] Compiling C object modules/pam_stress/pam_stress.so.p/pam_stress.c.o
+[40/250] Compiling C object modules/pam_shells/pam_shells.so.p/pam_shells.c.o
+[41/250] Compiling C object modules/pam_setquota/pam_setquota.so.p/pam_setquota.c.o
+[42/250] Compiling C object modules/pam_securetty/pam_securetty.so.p/pam_securetty.c.o
+[43/250] Compiling C object modules/pam_rootok/tst-pam_rootok-retval.p/tst-pam_rootok-retval.c.o
+[44/250] Compiling C object modules/pam_rootok/pam_rootok.so.p/pam_rootok.c.o
+[45/250] Compiling C object modules/pam_pwhistory/tst-pam_pwhistory-retval.p/tst-pam_pwhistory-retval.c.o
+[46/250] Compiling C object modules/pam_pwhistory/pwhistory_helper.p/opasswd.c.o
+[47/250] Compiling C object modules/pam_pwhistory/pwhistory_helper.p/pwhistory_helper.c.o
+[48/250] Compiling C object modules/pam_pwhistory/pam_pwhistory.so.p/pwhistory_config.c.o
+[49/250] Linking target conf/pam_conv1/pam_conv1
+[50/250] Compiling C object modules/pam_pwhistory/pam_pwhistory.so.p/opasswd.c.o
+In file included from [01m[K../modules/pam_timestamp/pam_timestamp.c:67[m[K,
+                 from [01m[K../modules/pam_timestamp/pam_timestamp_check.c:42[m[K:
+[01m[K/usr/include/utmps/utmp.h:13:9:[m[K [01;35m[Kwarning: [m[K"_PATH_UTMP" redefined
+   13 | #define [01;35m[K_PATH_UTMP[m[K UTMP_FILE
+      |         [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K../modules/pam_timestamp/pam_timestamp.c:57[m[K:
+[01m[K/usr/include/paths.h:21:9:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+   21 | #define [01;36m[K_PATH_UTMP[m[K      "/dev/null/utmp"
+      |         [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/utmps/utmp.h:14:9:[m[K [01;35m[Kwarning: [m[K"_PATH_WTMP" redefined
+   14 | #define [01;35m[K_PATH_WTMP[m[K WTMP_FILE
+      |         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/paths.h:23:9:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+   23 | #define [01;36m[K_PATH_WTMP[m[K      "/dev/null/wtmp"
+      |         [01;36m[K^~~~~~~~~~[m[K
+[01m[K../modules/pam_timestamp/pam_timestamp.c:[m[K In function '[01m[Kcheck_login_time[m[K':
+[01m[K../modules/pam_timestamp/pam_timestamp.c:229:21:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kutbuf[m[K' [[01;35m[K-Wunused-variable[m[K]
+  229 |         struct utmp [01;35m[Kutbuf[m[K, *ut;
+      |                     [01;35m[K^~~~~[m[K
+[51/250] Compiling C object modules/pam_pwhistory/pam_pwhistory.so.p/pam_pwhistory.c.o
+[52/250] Compiling C object modules/pam_permit/tst-pam_permit-retval.p/tst-pam_permit-retval.c.o
+[53/250] Compiling C object modules/pam_permit/pam_permit.so.p/pam_permit.c.o
+[54/250] Compiling C object modules/pam_nologin/tst-pam_nologin-retval.p/tst-pam_nologin-retval.c.o
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:[m[K In function '[01m[Kevaluate_innetgr[m[K':
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:265:73:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Khost[m[K' [[01;35m[K-Wunused-parameter[m[K]
+  265 | evaluate_innetgr(const pam_handle_t* pamh SOMETIMES_UNUSED, [01;35m[Kconst char *host[m[K, const char *user, const char *group)
+      |                                                             [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:265:91:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Kuser[m[K' [[01;35m[K-Wunused-parameter[m[K]
+  265 | evaluate_innetgr(const pam_handle_t* pamh SOMETIMES_UNUSED, const char *host, [01;35m[Kconst char *user[m[K, const char *group)
+      |                                                                               [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:265:109:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Kgroup[m[K' [[01;35m[K-Wunused-parameter[m[K]
+  265 | evaluate_innetgr(const pam_handle_t* pamh SOMETIMES_UNUSED, const char *host, const char *user, [01;35m[Kconst char *group[m[K)
+      |                                                                                                 [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:[m[K In function '[01m[Kevaluate_notinnetgr[m[K':
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:278:76:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Khost[m[K' [[01;35m[K-Wunused-parameter[m[K]
+  278 | evaluate_notinnetgr(const pam_handle_t* pamh SOMETIMES_UNUSED, [01;35m[Kconst char *host[m[K, const char *user, const char *group)
+      |                                                                [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:278:94:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Kuser[m[K' [[01;35m[K-Wunused-parameter[m[K]
+  278 | evaluate_notinnetgr(const pam_handle_t* pamh SOMETIMES_UNUSED, const char *host, [01;35m[Kconst char *user[m[K, const char *group)
+      |                                                                                  [01;35m[K~~~~~~~~~~~~^~~~[m[K
+[01m[K../modules/pam_succeed_if/pam_succeed_if.c:278:112:[m[K [01;35m[Kwarning: [m[Kunused parameter '[01m[Kgroup[m[K' [[01;35m[K-Wunused-parameter[m[K]
+  278 | evaluate_notinnetgr(const pam_handle_t* pamh SOMETIMES_UNUSED, const char *host, const char *user, [01;35m[Kconst char *group[m[K)
+      |                                                                                                    [01;35m[K~~~~~~~~~~~~^~~~~[m[K
+[55/250] Compiling C object modules/pam_nologin/pam_nologin.so.p/pam_nologin.c.o
+[56/250] Compiling C object modules/pam_namespace/pam_namespace.so.p/argv_parse.c.o
+[57/250] Compiling C object modules/pam_namespace/pam_namespace.so.p/md5.c.o
+[58/250] Compiling C object modules/pam_namespace/pam_namespace.so.p/pam_namespace.c.o
+[59/250] Compiling C object modules/pam_motd/pam_motd.so.p/pam_motd.c.o
+[60/250] Compiling C object modules/pam_mkhomedir/tst-pam_mkhomedir-retval.p/tst-pam_mkhomedir-retval.c.o
+[61/250] Compiling C object modules/pam_mkhomedir/mkhomedir_helper.p/mkhomedir_helper.c.o
+[62/250] Compiling C object modules/pam_mkhomedir/pam_mkhomedir.so.p/pam_mkhomedir.c.o
+[63/250] Compiling C object modules/pam_mail/pam_mail.so.p/pam_mail.c.o
+[64/250] Compiling C object modules/pam_loginuid/pam_loginuid.so.p/pam_loginuid.c.o
+In file included from [01m[K../modules/pam_timestamp/pam_timestamp.c:67[m[K:
+[01m[K/usr/include/utmps/utmp.h:13:9:[m[K [01;35m[Kwarning: [m[K"_PATH_UTMP" redefined
+   13 | #define [01;35m[K_PATH_UTMP[m[K UTMP_FILE
+      |         [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K../modules/pam_timestamp/pam_timestamp.c:57[m[K:
+[01m[K/usr/include/paths.h:21:9:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+   21 | #define [01;36m[K_PATH_UTMP[m[K      "/dev/null/utmp"
+      |         [01;36m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/utmps/utmp.h:14:9:[m[K [01;35m[Kwarning: [m[K"_PATH_WTMP" redefined
+   14 | #define [01;35m[K_PATH_WTMP[m[K WTMP_FILE
+      |         [01;35m[K^~~~~~~~~~[m[K
+[01m[K/usr/include/paths.h:23:9:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+   23 | #define [01;36m[K_PATH_WTMP[m[K      "/dev/null/wtmp"
+      |         [01;36m[K^~~~~~~~~~[m[K
+[01m[K../modules/pam_timestamp/pam_timestamp.c:[m[K In function '[01m[Kcheck_login_time[m[K':
+[01m[K../modules/pam_timestamp/pam_timestamp.c:229:21:[m[K [01;35m[Kwarning: [m[Kunused variable '[01m[Kutbuf[m[K' [[01;35m[K-Wunused-variable[m[K]
+  229 |         struct utmp [01;35m[Kutbuf[m[K, *ut;
+      |                     [01;35m[K^~~~~[m[K
+[65/250] Compiling C object modules/pam_localuser/tst-pam_localuser-retval.p/tst-pam_localuser-retval.c.o
+[66/250] Compiling C object modules/pam_localuser/pam_localuser.so.p/pam_localuser.c.o
+[67/250] Compiling C object modules/pam_listfile/tst-pam_listfile-retval.p/tst-pam_listfile-retval.c.o
+[68/250] Compiling C object modules/pam_listfile/pam_listfile.so.p/pam_listfile.c.o
+[69/250] Compiling C object modules/pam_limits/pam_limits.so.p/pam_limits.c.o
+[70/250] Compiling C object modules/pam_keyinit/pam_keyinit.so.p/pam_keyinit.c.o
+[71/250] Compiling C object modules/pam_issue/pam_issue.so.p/pam_issue.c.o
+[72/250] Compiling C object modules/pam_group/pam_group.so.p/pam_group.c.o
+[73/250] Compiling C object modules/pam_ftp/pam_ftp.so.p/pam_ftp.c.o
+[74/250] Compiling C object modules/pam_filter/upperLOWER/upperLOWER.p/upperLOWER.c.o
+[75/250] Compiling C object modules/pam_filter/pam_filter.so.p/pam_filter.c.o
+[76/250] Compiling C object modules/pam_faillock/tst-pam_faillock-retval.p/tst-pam_faillock-retval.c.o
+[77/250] Compiling C object modules/pam_faillock/faillock.p/faillock_config.c.o
+[78/250] Compiling C object modules/pam_faillock/faillock.p/faillock.c.o
+[79/250] Compiling C object modules/pam_faillock/faillock.p/main.c.o
+[80/250] Compiling C object modules/pam_faillock/pam_faillock.so.p/faillock_config.c.o
+[81/250] Compiling C object modules/pam_faillock/pam_faillock.so.p/faillock.c.o
+[82/250] Compiling C object modules/pam_faillock/pam_faillock.so.p/pam_faillock.c.o
+[83/250] Compiling C object modules/pam_faildelay/tst-pam_faildelay-retval.p/tst-pam_faildelay-retval.c.o
+[84/250] Compiling C object modules/pam_faildelay/pam_faildelay.so.p/pam_faildelay.c.o
+[85/250] Compiling C object modules/pam_exec/pam_exec.so.p/pam_exec.c.o
+[86/250] Compiling C object modules/pam_env/tst-pam_env-retval.p/tst-pam_env-retval.c.o
+[87/250] Compiling C object modules/pam_env/pam_env.so.p/pam_env.c.o
+[88/250] Compiling C object modules/pam_echo/tst-pam_echo-retval.p/tst-pam_echo-retval.c.o
+[89/250] Compiling C object modules/pam_echo/pam_echo.so.p/pam_echo.c.o
+[90/250] Compiling C object modules/pam_deny/tst-pam_deny-retval.p/tst-pam_deny-retval.c.o
+[91/250] Compiling C object modules/pam_deny/pam_deny.so.p/pam_deny.c.o
+[92/250] Compiling C object modules/pam_debug/tst-pam_debug-retval.p/tst-pam_debug-retval.c.o
+[93/250] Compiling C object modules/pam_debug/pam_debug.so.p/pam_debug.c.o
+[94/250] Compiling C object modules/pam_canonicalize_user/tst-pam_canonicalize_user-retval.p/tst-pam_canonicalize_user-retval.c.o
+[95/250] Compiling C object modules/pam_canonicalize_user/pam_canonicalize_user.so.p/pam_canonicalize_user.c.o
+[96/250] Compiling C object modules/pam_access/pam_access.so.p/pam_access.c.o
+[97/250] Compiling C object tests/tst-pam_start_confdir.p/tst-pam_start_confdir.c.o
+[98/250] Compiling C object tests/tst-pam_mkargv.p/tst-pam_mkargv.c.o
+[99/250] Compiling C object tests/tst-pam_set_data.p/tst-pam_set_data.c.o
+[100/250] Compiling C object tests/tst-pam_get_data.p/tst-pam_get_data.c.o
+[101/250] Compiling C object tests/tst-pam_get_user.p/tst-pam_get_user.c.o
+[102/250] Compiling C object tests/tst-pam_getenvlist.p/tst-pam_getenvlist.c.o
+[103/250] Compiling C object tests/tst-pam_set_item.p/tst-pam_set_item.c.o
+[104/250] Compiling C object tests/tst-pam_get_item.p/tst-pam_get_item.c.o
+[105/250] Compiling C object tests/tst-pam_get_authtok.p/tst-pam_get_authtok.c.o
+[106/250] Compiling C object tests/tst-pam_setcred.p/tst-pam_setcred.c.o
+[107/250] Compiling C object tests/tst-pam_chauthtok.p/tst-pam_chauthtok.c.o
+[108/250] Compiling C object tests/tst-pam_authenticate.p/tst-pam_authenticate.c.o
+[109/250] Compiling C object tests/tst-pam_acct_mgmt.p/tst-pam_acct_mgmt.c.o
+[110/250] Compiling C object tests/tst-pam_close_session.p/tst-pam_close_session.c.o
+[111/250] Compiling C object tests/tst-pam_open_session.p/tst-pam_open_session.c.o
+[112/250] Compiling C object tests/tst-pam_fail_delay.p/tst-pam_fail_delay.c.o
+[113/250] Compiling C object tests/tst-pam_end.p/tst-pam_end.c.o
+[114/250] Compiling C object tests/tst-pam_start.p/tst-pam_start.c.o
+[115/250] Compiling C object tests/tst-dlopen.p/tst-dlopen.c.o
+[116/250] Generating doc/specs/parse_y.[ch] with a custom command
+[117/250] Compiling C object libpam_misc/libpam_misc.so.0.82.1.p/misc_conv.c.o
+[118/250] Compiling C object libpam_misc/libpam_misc.so.0.82.1.p/help_env.c.o
+[119/250] Compiling C object libpamc/libpamc.so.0.82.1.p/pamc_load.c.o
+[120/250] Compiling C object libpamc/libpamc.so.0.82.1.p/pamc_converse.c.o
+[121/250] Compiling C object libpamc/libpamc.so.0.82.1.p/pamc_client.c.o
+[122/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_vprompt.c.o
+[123/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_syslog.c.o
+[124/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_strerror.c.o
+[125/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_start.c.o
+[126/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_session.c.o
+[127/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_prelude.c.o
+[128/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_password.c.o
+[129/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_searchkey.c.o
+[130/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_sanitize.c.o
+[131/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_priv.c.o
+[132/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_ioloop.c.o
+[133/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_ingroup.c.o
+[134/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_getspnam.c.o
+[135/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_getpwuid.c.o
+[136/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_getpwnam.c.o
+[137/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_getlogin.c.o
+[138/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_getgrnam.c.o
+[139/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_getgrgid.c.o
+[140/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_cleanup.c.o
+[141/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_modutil_check_user.c.o
+[142/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_misc.c.o
+[143/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_item.c.o
+[144/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_handlers.c.o
+[145/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_get_authtok.c.o
+[146/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_env.c.o
+[147/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_end.c.o
+[01m[K../libpam/pam_modutil_ingroup.c:17:9:[m[K [01;35m[Kwarning: [m[K"NGROUPS_MAX" redefined
+   17 | #define [01;35m[KNGROUPS_MAX[m[K 65536
+      |         [01;35m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/fortify/stdlib.h:30[m[K,
+                 from [01m[K../libpam/include/security/_pam_macros.h:14[m[K,
+                 from [01m[K../libpam/pam_modutil_private.h:12[m[K,
+                 from [01m[K../libpam/pam_modutil_ingroup.c:8[m[K:
+[01m[K/usr/include/limits.h:48:9:[m[K [01;36m[Knote: [m[Kthis is the location of the previous definition
+   48 | #define [01;36m[KNGROUPS_MAX[m[K 32
+      |         [01;36m[K^~~~~~~~~~~[m[K
+[148/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_dynamic.c.o
+[149/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_dispatch.c.o
+[150/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_delay.c.o
+[151/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_data.c.o
+[152/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_auth.c.o
+[153/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_audit.c.o
+[154/250] Compiling C object libpam/libpam.so.0.85.1.p/pam_account.c.o
+../doc/specs/parse_y.y: warning: 2 shift/reduce conflicts [-Wconflicts-sr]
+../doc/specs/parse_y.y: warning: 8 reduce/reduce conflicts [-Wconflicts-rr]
+../doc/specs/parse_y.y: note: rerun with option '-Wcounterexamples' to generate conflict counterexamples
+../doc/specs/parse_y.y:97.3-123.1: warning: rule useless in parser due to conflicts [-Wother]
+   97 | | doc stuff RIGHT stuff RIGHT stuff NEWLINE {
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[155/250] Compiling C object doc/specs/padout.p/meson-generated_.._parse_y.c.o
+[156/250] Generating doc/specs/parse_l.c with a custom command
+[157/250] Compiling C object libpam_internal/libpam_internal.a.p/pam_line.c.o
+[158/250] Compiling C object libpam_internal/libpam_internal.a.p/pam_econf.c.o
+[159/250] Compiling C object libpam_internal/libpam_internal.a.p/pam_debug.c.o
+[160/250] Compiling C object doc/specs/padout.p/meson-generated_.._parse_l.c.o
+[161/250] Linking static target libpam_internal/libpam_internal.a
+[162/250] Linking target libpamc/libpamc.so.0.82.1
+[163/250] Linking target libpam/libpam.so.0.85.1
+[164/250] Linking target doc/specs/padout
+[165/250] Generating doc/specs/draft-morgan-pam-current.txt with a custom command
+[166/250] Generating symbol file libpam/libpam.so.0.85.1.p/libpam.so.0.85.1.symbols
+[167/250] Linking target modules/pam_xauth/pam_xauth.so
+[168/250] Linking target modules/pam_wheel/pam_wheel.so
+[169/250] Linking target modules/pam_warn/tst-pam_warn-retval
+[170/250] Linking target modules/pam_warn/pam_warn.so
+[171/250] Linking target modules/pam_usertype/pam_usertype.so
+[172/250] Linking target modules/pam_unix/bigcrypt
+[173/250] Linking target modules/pam_unix/unix_chkpwd
+[174/250] Linking target modules/pam_unix/pam_unix.so
+[175/250] Linking target modules/pam_umask/pam_umask.so
+[176/250] Linking target modules/pam_timestamp/hmacfile
+[177/250] Linking target modules/pam_timestamp/pam_timestamp_check
+[178/250] Linking target modules/pam_timestamp/pam_timestamp.so
+[179/250] Linking target modules/pam_time/tst-pam_time-retval
+[180/250] Linking target modules/pam_time/pam_time.so
+[181/250] Linking target modules/pam_succeed_if/tst-pam_succeed_if-retval
+[182/250] Linking target modules/pam_succeed_if/pam_succeed_if.so
+[183/250] Linking target modules/pam_stress/pam_stress.so
+[184/250] Linking target modules/pam_shells/pam_shells.so
+[185/250] Linking target modules/pam_setquota/pam_setquota.so
+[186/250] Linking target modules/pam_securetty/pam_securetty.so
+[187/250] Linking target modules/pam_rootok/tst-pam_rootok-retval
+[188/250] Linking target modules/pam_rootok/pam_rootok.so
+[189/250] Linking target modules/pam_pwhistory/tst-pam_pwhistory-retval
+[190/250] Linking target modules/pam_pwhistory/pwhistory_helper
+[191/250] Linking target modules/pam_pwhistory/pam_pwhistory.so
+[192/250] Linking target modules/pam_permit/tst-pam_permit-retval
+[193/250] Linking target modules/pam_permit/pam_permit.so
+[194/250] Linking target modules/pam_nologin/tst-pam_nologin-retval
+[195/250] Linking target modules/pam_nologin/pam_nologin.so
+[196/250] Linking target modules/pam_namespace/pam_namespace.so
+[197/250] Linking target modules/pam_motd/pam_motd.so
+[198/250] Linking target modules/pam_mkhomedir/tst-pam_mkhomedir-retval
+[199/250] Linking target modules/pam_mkhomedir/mkhomedir_helper
+[200/250] Linking target modules/pam_mkhomedir/pam_mkhomedir.so
+[201/250] Linking target modules/pam_mail/pam_mail.so
+[202/250] Linking target modules/pam_loginuid/pam_loginuid.so
+[203/250] Linking target modules/pam_localuser/tst-pam_localuser-retval
+[204/250] Linking target modules/pam_localuser/pam_localuser.so
+[205/250] Linking target modules/pam_listfile/tst-pam_listfile-retval
+[206/250] Linking target modules/pam_listfile/pam_listfile.so
+[207/250] Linking target modules/pam_limits/pam_limits.so
+[208/250] Linking target modules/pam_keyinit/pam_keyinit.so
+[209/250] Linking target modules/pam_issue/pam_issue.so
+[210/250] Linking target modules/pam_group/pam_group.so
+[211/250] Linking target modules/pam_ftp/pam_ftp.so
+[212/250] Linking target modules/pam_filter/upperLOWER/upperLOWER
+[213/250] Linking target modules/pam_filter/pam_filter.so
+[214/250] Linking target modules/pam_faillock/tst-pam_faillock-retval
+[215/250] Linking target modules/pam_faillock/faillock
+[216/250] Linking target modules/pam_faillock/pam_faillock.so
+[217/250] Linking target modules/pam_faildelay/tst-pam_faildelay-retval
+[218/250] Linking target modules/pam_faildelay/pam_faildelay.so
+[219/250] Linking target modules/pam_exec/pam_exec.so
+[220/250] Linking target modules/pam_env/tst-pam_env-retval
+[221/250] Linking target modules/pam_env/pam_env.so
+[222/250] Linking target modules/pam_echo/tst-pam_echo-retval
+[223/250] Linking target modules/pam_echo/pam_echo.so
+[224/250] Linking target modules/pam_deny/tst-pam_deny-retval
+[225/250] Linking target modules/pam_deny/pam_deny.so
+[226/250] Linking target modules/pam_debug/tst-pam_debug-retval
+[227/250] Linking target modules/pam_debug/pam_debug.so
+[228/250] Linking target modules/pam_canonicalize_user/tst-pam_canonicalize_user-retval
+[229/250] Linking target modules/pam_canonicalize_user/pam_canonicalize_user.so
+[230/250] Linking target modules/pam_access/pam_access.so
+[231/250] Linking target tests/tst-pam_start_confdir
+[232/250] Linking target tests/tst-pam_mkargv
+[233/250] Linking target tests/tst-pam_set_data
+[234/250] Linking target tests/tst-pam_get_data
+[235/250] Linking target tests/tst-pam_get_user
+[236/250] Linking target tests/tst-pam_getenvlist
+[237/250] Linking target tests/tst-pam_set_item
+[238/250] Linking target tests/tst-pam_get_item
+[239/250] Linking target tests/tst-pam_get_authtok
+[240/250] Linking target tests/tst-pam_setcred
+[241/250] Linking target tests/tst-pam_chauthtok
+[242/250] Linking target tests/tst-pam_authenticate
+[243/250] Linking target tests/tst-pam_acct_mgmt
+[244/250] Linking target tests/tst-pam_close_session
+[245/250] Linking target tests/tst-pam_open_session
+[246/250] Linking target tests/tst-pam_fail_delay
+[247/250] Linking target tests/tst-pam_end
+[248/250] Linking target tests/tst-pam_start
+[249/250] Linking target tests/tst-dlopen
+[250/250] Linking target libpam_misc/libpam_misc.so.0.82.1
+INFO: autodetecting backend as ninja
+INFO: calculating backend command to run: /usr/bin/ninja -C /tmp/src/Linux-PAM-1.7.0/build
+>>> linux-pam: Entering fakeroot...
+ninja: entering directory '/tmp/src/Linux-PAM-1.7.0/build'
+ninja: nothing to do
+Installing libpam/libpam.so.0.85.1 to /tmp/pkg/linux-pam/usr/lib
+Installing libpamc/libpamc.so.0.82.1 to /tmp/pkg/linux-pam/usr/lib
+Installing libpam_misc/libpam_misc.so.0.82.1 to /tmp/pkg/linux-pam/usr/lib
+Installing doc/specs/draft-morgan-pam-current.txt to /tmp/pkg/linux-pam/usr/share/man
+Installing modules/pam_access/pam_access.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_canonicalize_user/pam_canonicalize_user.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_debug/pam_debug.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_deny/pam_deny.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_echo/pam_echo.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_env/pam_env.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_exec/pam_exec.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_faildelay/pam_faildelay.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_faillock/pam_faillock.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_faillock/faillock to /tmp/pkg/linux-pam/usr/sbin
+Installing modules/pam_filter/pam_filter.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_filter/upperLOWER/upperLOWER to /tmp/pkg/linux-pam/usr/lib/security/pam_filter
+Installing modules/pam_ftp/pam_ftp.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_group/pam_group.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_issue/pam_issue.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_keyinit/pam_keyinit.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_limits/pam_limits.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_listfile/pam_listfile.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_localuser/pam_localuser.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_loginuid/pam_loginuid.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_mail/pam_mail.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_mkhomedir/pam_mkhomedir.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_mkhomedir/mkhomedir_helper to /tmp/pkg/linux-pam/usr/sbin
+Installing modules/pam_motd/pam_motd.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_namespace/pam_namespace.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_nologin/pam_nologin.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_permit/pam_permit.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_pwhistory/pam_pwhistory.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_pwhistory/pwhistory_helper to /tmp/pkg/linux-pam/usr/sbin
+Installing modules/pam_rootok/pam_rootok.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_securetty/pam_securetty.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_setquota/pam_setquota.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_shells/pam_shells.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_stress/pam_stress.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_succeed_if/pam_succeed_if.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_time/pam_time.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_timestamp/pam_timestamp.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_timestamp/pam_timestamp_check to /tmp/pkg/linux-pam/usr/sbin
+Installing modules/pam_umask/pam_umask.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_unix/pam_unix.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_unix/unix_chkpwd to /tmp/pkg/linux-pam/usr/sbin
+Installing modules/pam_usertype/pam_usertype.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_warn/pam_warn.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_wheel/pam_wheel.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing modules/pam_xauth/pam_xauth.so to /tmp/pkg/linux-pam/usr/lib/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/_pam_compat.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/_pam_macros.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/_pam_types.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/pam_appl.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/pam_ext.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/pam_modules.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam/include/security/pam_modutil.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpamc/include/security/pam_client.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/libpam_misc/include/security/pam_misc.h to /tmp/pkg/linux-pam/usr/include/security
+Installing new directory /tmp/pkg/linux-pam/etc/security/limits.d
+Installing new directory /tmp/pkg/linux-pam/etc/security/namespace.d
+Installing /tmp/src/Linux-PAM-1.7.0/build/meson-private/pam.pc to /tmp/pkg/linux-pam/usr/lib/pkgconfig
+Installing /tmp/src/Linux-PAM-1.7.0/build/meson-private/pamc.pc to /tmp/pkg/linux-pam/usr/lib/pkgconfig
+Installing /tmp/src/Linux-PAM-1.7.0/build/meson-private/pam_misc.pc to /tmp/pkg/linux-pam/usr/lib/pkgconfig
+Installing /tmp/src/Linux-PAM-1.7.0/doc/index.html to /tmp/pkg/linux-pam/usr/share/doc/Linux-PAM
+Installing /tmp/src/Linux-PAM-1.7.0/doc/specs/rfc86.0.txt to /tmp/pkg/linux-pam/usr/share/man
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_access/access.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_env/pam_env.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_env/environment to /tmp/pkg/linux-pam/etc
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_faillock/faillock.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_filter/pam_filter.h to /tmp/pkg/linux-pam/usr/include/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_group/group.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_limits/limits.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/build/modules/pam_namespace/pam_namespace_helper to /tmp/pkg/linux-pam/usr/sbin
+Installing /tmp/src/Linux-PAM-1.7.0/build/modules/pam_namespace/pam_namespace.service to /tmp/pkg/linux-pam/usr/lib/systemd/system
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_namespace/namespace.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_namespace/namespace.init to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_pwhistory/pwhistory.conf to /tmp/pkg/linux-pam/etc/security
+Installing /tmp/src/Linux-PAM-1.7.0/modules/pam_time/time.conf to /tmp/pkg/linux-pam/etc/security
+Installing symlink pointing to libpam.so.0.85.1 to /tmp/pkg/linux-pam/usr/lib/libpam.so.0
+Installing symlink pointing to libpam.so.0 to /tmp/pkg/linux-pam/usr/lib/libpam.so
+Installing symlink pointing to libpamc.so.0.82.1 to /tmp/pkg/linux-pam/usr/lib/libpamc.so.0
+Installing symlink pointing to libpamc.so.0 to /tmp/pkg/linux-pam/usr/lib/libpamc.so
+Installing symlink pointing to libpam_misc.so.0.82.1 to /tmp/pkg/linux-pam/usr/lib/libpam_misc.so.0
+Installing symlink pointing to libpam_misc.so.0 to /tmp/pkg/linux-pam/usr/lib/libpam_misc.so
+>>> linux-pam-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/linux-pam-dev/usr/include'
+'usr/lib/pkgconfig' -> '/tmp/pkg/linux-pam-dev/usr/lib/pkgconfig'
+'usr/lib/libpam.so' -> '/tmp/pkg/linux-pam-dev/usr/lib/libpam.so'
+'usr/lib/libpam_misc.so' -> '/tmp/pkg/linux-pam-dev/usr/lib/libpam_misc.so'
+'usr/lib/libpamc.so' -> '/tmp/pkg/linux-pam-dev/usr/lib/libpamc.so'
+>>> linux-pam-dev*: Preparing subpackage linux-pam-dev...
+>>> linux-pam-dev*: Stripping binaries
+>>> linux-pam-dev*: Running postcheck for linux-pam-dev
+>>> linux-pam-manual*: Running split function manual...
+'usr/share/doc/Linux-PAM' -> '/tmp/pkg/linux-pam-manual/usr/share/doc/Linux-PAM'
+>>> linux-pam-manual*: Preparing subpackage linux-pam-manual...
+>>> linux-pam-manual*: Running postcheck for linux-pam-manual
+>>> WARNING: linux-pam-manual*: Found /usr/share/doc but package name doesn't end with -doc
+>>> linux-pam-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/linux-pam-doc/usr/share/man'
+>>> linux-pam-doc*: Preparing subpackage linux-pam-doc...
+>>> linux-pam-doc*: Running postcheck for linux-pam-doc
+>>> linux-pam*: Running postcheck for linux-pam
+>>> linux-pam*: Preparing package linux-pam...
+>>> linux-pam*: Stripping binaries
+>>> linux-pam-dev*: Scanning shared objects
+>>> linux-pam-doc*: Scanning shared objects
+>>> linux-pam-manual*: Scanning shared objects
+>>> linux-pam*: Scanning shared objects
+>>> linux-pam-dev*: Tracing dependencies...
+	linux-pam=1.7.0-r3
+	pkgconfig
+>>> linux-pam-dev*: Package size: 49.9 KB
+>>> linux-pam-dev*: Compressing data...
+>>> linux-pam-dev*: Create checksum...
+>>> linux-pam-dev*: Create linux-pam-dev-1.7.0-r3.apk
+>>> linux-pam-doc*: Tracing dependencies...
+>>> linux-pam-doc*: Package size: 97.1 KB
+>>> linux-pam-doc*: Compressing data...
+>>> linux-pam-doc*: Create checksum...
+>>> linux-pam-doc*: Create linux-pam-doc-1.7.0-r3.apk
+>>> linux-pam-manual*: Tracing dependencies...
+>>> linux-pam-manual*: Package size: 561.0 B
+>>> linux-pam-manual*: Compressing data...
+>>> linux-pam-manual*: Create checksum...
+>>> linux-pam-manual*: Create linux-pam-manual-1.7.0-r3.apk
+>>> linux-pam*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libutmps.so.0.1
+>>> linux-pam*: Package size: 822.1 KB
+>>> linux-pam*: Compressing data...
+>>> linux-pam*: Create checksum...
+>>> linux-pam*: Create linux-pam-1.7.0-r3.apk
+>>> linux-pam: Updating the main/x86_64 repository index...
+>>> linux-pam: Signing the index...
+>>> linux-pam: Cleaning up srcdir
+>>> linux-pam: Cleaning up build chroot
+>>> linux-pam: Cleaning up pkgdir

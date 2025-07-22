@@ -1,0 +1,597 @@
+>>> f2fs-tools: Validating /home/packager/oily-pine/main/f2fs-tools/APKBUILD...
+>>> f2fs-tools: Cleaning up srcdir
+>>> f2fs-tools: Cleaning up pkgdir
+>>> f2fs-tools: Cleaning up tmpdir
+>>> f2fs-tools: Fetching https://git.kernel.org/cgit/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.16.0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   162  100   162    0     0   1596      0 --:--:-- --:--:-- --:--:--  1603
+100  259k    0  259k    0     0  1114k      0 --:--:-- --:--:-- --:--:-- 1114k
+>>> f2fs-tools: Fetching https://git.kernel.org/cgit/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.16.0.tar.gz
+>>> f2fs-tools: Checking sha512sums...
+f2fs-tools-1.16.0.tar.gz: OK
+no-lfs64.patch: OK
+>>> f2fs-tools: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/94) Installing musl (1.2.5-r10)
+(2/94) Installing libcrypto3 (3.5.0-r0)
+(3/94) Installing ca-certificates-bundle (20241121-r2)
+(4/94) Installing libssl3 (3.5.0-r0)
+(5/94) Installing zlib (1.3.1-r2)
+(6/94) Installing libapk2 (2.14.9-r2)
+(7/94) Installing apk-tools (2.14.9-r2)
+(8/94) Installing libcap2 (2.76-r0)
+(9/94) Installing libcap-getcap (2.76-r0)
+(10/94) Installing fakeroot (1.37.1.1-r0)
+(11/94) Installing scanelf (1.3.8-r1)
+(12/94) Installing musl-utils (1.2.5-r10)
+(13/94) Installing libgcc (14.3.0-r1)
+(14/94) Installing libstdc++ (14.3.0-r1)
+(15/94) Installing lzip (1.25-r0)
+(16/94) Installing openssl (3.5.0-r0)
+(17/94) Installing patch (2.8-r0)
+(18/94) Installing pkgconf (2.4.3-r0)
+(19/94) Installing acl-libs (2.3.2-r1)
+(20/94) Installing tar (1.35-r3)
+(21/94) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/94) Installing ssl_client (1.37.0-r18)
+(23/94) Installing busybox-binsh (1.37.0-r18)
+(24/94) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/94) Installing abuild-sudo (3.15.0-r0)
+(26/94) Installing alpine-baselayout-data (3.7.0-r0)
+(27/94) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/94) Installing bridge (1.5-r5)
+(29/94) Installing ifupdown-ng (0.12.1-r7)
+(30/94) Installing openrc-user (0.62.2-r2)
+(31/94) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/94) Installing mdev-conf (4.8-r0)
+(33/94) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/94) Installing alpine-conf (3.20.0-r0)
+(35/94) Installing alpine-keys (2.5-r0)
+(36/94) Installing alpine-release (3.22.0-r0)
+(37/94) Installing busybox-openrc (1.37.0-r18)
+(38/94) Installing busybox-suid (1.37.0-r18)
+(39/94) Installing alpine-base (3.22.0-r0)
+(40/94) Installing m4 (1.4.20-r0)
+(41/94) Installing libbz2 (1.0.8-r6)
+(42/94) Installing perl (5.40.2-r0)
+(43/94) Installing autoconf (2.72-r1)
+(44/94) Installing automake (1.18-r0)
+(45/94) Installing bsd-compat-headers (0.7.2-r6)
+(46/94) Installing jansson (2.14.1-r0)
+(47/94) Installing zstd-libs (1.5.7-r0)
+(48/94) Installing binutils (2.44-r0)
+(49/94) Installing libmagic (5.46-r2)
+(50/94) Installing file (5.46-r2)
+(51/94) Installing libgomp (14.3.0-r1)
+(52/94) Installing libatomic (14.3.0-r1)
+(53/94) Installing gmp (6.3.0-r3)
+(54/94) Installing isl26 (0.26-r1)
+(55/94) Installing mpfr4 (4.2.1_p1-r0)
+(56/94) Installing mpc1 (1.3.1-r1)
+(57/94) Installing gcc (14.3.0-r1)
+(58/94) Installing libstdc++-dev (14.3.0-r1)
+(59/94) Installing musl-dev (1.2.5-r10)
+(60/94) Installing g++ (14.3.0-r1)
+(61/94) Installing make (4.4.1-r3)
+(62/94) Installing fortify-headers (1.1-r5)
+(63/94) Installing build-base (0.5-r3)
+(64/94) Installing brotli-libs (1.1.0-r2)
+(65/94) Installing c-ares (1.34.5-r0)
+(66/94) Installing libunistring (1.3-r0)
+(67/94) Installing libidn2 (2.3.7-r0)
+(68/94) Installing nghttp2-libs (1.65.0-r0)
+(69/94) Installing libpsl (0.21.5-r3)
+(70/94) Installing libcurl (8.14.0-r2)
+(71/94) Installing libexpat (2.7.1-r0)
+(72/94) Installing pcre2 (10.43-r1)
+(73/94) Installing git (2.49.0-r0)
+(74/94) Installing git-init-template (2.49.0-r0)
+(75/94) Installing perl-error (0.17030-r0)
+(76/94) Installing perl-git (2.49.0-r0)
+(77/94) Installing git-perl (2.49.0-r0)
+(78/94) Installing libltdl (2.5.4-r1)
+(79/94) Installing libtool (2.5.4-r1)
+(80/94) Installing linux-headers (6.14.2-r0)
+(81/94) Installing libeconf (0.6.3-r0)
+(82/94) Installing libblkid (2.41-r9)
+(83/94) Installing libuuid (2.41-r9)
+(84/94) Installing libfdisk (2.41-r9)
+(85/94) Installing sqlite-libs (3.50.0-r0)
+(86/94) Installing liblastlog2 (2.41-r9)
+(87/94) Installing libmount (2.41-r9)
+(88/94) Installing libsmartcols (2.41-r9)
+(89/94) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(90/94) Installing libncursesw (6.5_p20250503-r0)
+(91/94) Installing readline (8.2.13-r1)
+(92/94) Installing sqlite (3.50.0-r0)
+(93/94) Installing sqlite-dev (3.50.0-r0)
+(94/94) Installing util-linux-dev (2.41-r9)
+Executing busybox-1.37.0-r18.trigger
+OK: 313 MiB in 94 packages
+>>> f2fs-tools: Fetching https://git.kernel.org/cgit/linux/kernel/git/jaegeuk/f2fs-tools.git/snapshot/f2fs-tools-1.16.0.tar.gz
+>>> f2fs-tools: Checking sha512sums...
+f2fs-tools-1.16.0.tar.gz: OK
+no-lfs64.patch: OK
+>>> f2fs-tools: Unpacking /var/cache/distfiles/f2fs-tools-1.16.0.tar.gz...
+>>> f2fs-tools: no-lfs64.patch
+patching file configure.ac
+patching file fsck/Makefile.am
+patching file include/android_config.h
+patching file lib/Makefile.am
+patching file lib/libf2fs.c
+patching file lib/libf2fs_io.c
+patching file lib/libf2fs_zoned.c
+patching file mkfs/Makefile.am
+patching file mkfs/f2fs_format.c
+patching file mkfs/f2fs_format_main.c
+patching file mkfs/f2fs_format_utils.c
+patching file mkfs/f2fs_format_utils.h
+patching file tools/Makefile.am
+patching file tools/f2fs_io/Makefile.am
+patching file tools/f2fs_io/f2fs_io.c
+patching file tools/f2fs_io_parse.c
+patching file tools/f2fscrypt.c
+patching file tools/fibmap.c
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'build-aux'.
+libtoolize: linking file 'build-aux/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: linking file 'm4/libtool.m4'
+libtoolize: linking file 'm4/ltoptions.m4'
+libtoolize: linking file 'm4/ltsugar.m4'
+libtoolize: linking file 'm4/ltversion.m4'
+libtoolize: linking file 'm4/lt~obsolete.m4'
+configure.ac:67: installing 'build-aux/ar-lib'
+configure.ac:66: installing 'build-aux/compile'
+configure.ac:68: installing 'build-aux/config.guess'
+configure.ac:68: installing 'build-aux/config.sub'
+configure.ac:38: installing 'build-aux/install-sh'
+configure.ac:38: installing 'build-aux/missing'
+fsck/Makefile.am: installing 'build-aux/depcomp'
+checking whether make supports nested variables... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking xargs -n works... yes
+checking how to create a pax tar archive... gnutar
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of cc... gcc3
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking for ldconfig... /sbin/ldconfig
+checking for blkid_probe_all in -lblkid... yes
+checking for main in -llzo2... no
+checking for main in -llz4... no
+checking for getcon in -lselinux... no
+checking for uuid_clear in -luuid... yes
+checking for clock_gettime in -lwinpthread... no
+checking for attr/xattr.h... no
+checking for blkid/blkid.h... yes
+checking for byteswap.h... yes
+checking for fcntl.h... yes
+checking for kernel/uapi/linux/blkzoned.h... no
+checking for linux/blkzoned.h... yes
+checking for linux/falloc.h... yes
+checking for linux/fiemap.h... yes
+checking for linux/fs.h... yes
+checking for linux/hdreg.h... yes
+checking for linux/limits.h... yes
+checking for linux/posix_acl.h... yes
+checking for linux/types.h... yes
+checking for linux/xattr.h... yes
+checking for mach/mach_time.h... no
+checking for mntent.h... yes
+checking for pthread_time.h... no
+checking for scsi/sg.h... yes
+checking for selinux/android.h... no
+checking for selinux/selinux.h... no
+checking for sparse/sparse.h... no
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for sys/acl.h... no
+checking for sys/ioctl.h... yes
+checking for sys/mount.h... yes
+checking for sys/stat.h... (cached) yes
+checking for sys/syscall.h... yes
+checking for sys/sysmacros.h... yes
+checking for sys/utsname.h... yes
+checking for sys/xattr.h... yes
+checking for unistd.h... (cached) yes
+checking for uuid/uuid.h... yes
+checking for inline... inline
+checking for int32_t... yes
+checking for int8_t... yes
+checking for size_t... yes
+checking for library containing getmntent... none required
+checking for add_key... no
+checking for fallocate... yes
+checking for fsetxattr... yes
+checking for fstat... yes
+checking for fstat64... no
+checking for fsync... yes
+checking for getgid... yes
+checking for getmntent... (cached) yes
+checking for getuid... yes
+checking for keyctl... no
+checking for memset... yes
+checking for setmntent... yes
+checking for clock_gettime... yes
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether bswap_64 is declared... yes
+checking for CLOCK_BOOTIME... yes
+checking for struct blk_zone.capacity... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating man/Makefile
+config.status: creating lib/Makefile
+config.status: creating mkfs/Makefile
+config.status: creating fsck/Makefile
+config.status: creating tools/Makefile
+config.status: creating tools/f2fs_io/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make  all-recursive
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0'
+Making all in man
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/man'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/man'
+Making all in lib
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/lib'
+  CC       libf2fs_la-libf2fs.lo
+  CC       libf2fs_la-libf2fs_io.lo
+  CC       libf2fs_la-libf2fs_zoned.lo
+  CC       libf2fs_la-nls_utf8.lo
+  CCLD     libf2fs.la
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/lib'
+Making all in mkfs
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+  CC       f2fs_format_main.o
+  CC       f2fs_format.o
+  CC       f2fs_format_utils.o
+  CC       libf2fs_format_la-f2fs_format_main.lo
+  CC       libf2fs_format_la-f2fs_format.lo
+  CC       libf2fs_format_la-f2fs_format_utils.lo
+  CCLD     mkfs.f2fs
+  CCLD     libf2fs_format.la
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+Making all in fsck
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+  CC       main.o
+  CC       fsck.o
+  CC       dump.o
+  CC       mount.o
+  CC       defrag.o
+  CC       resize.o
+  CC       node.o
+  CC       segment.o
+  CC       dir.o
+  CC       sload.o
+  CC       xattr.o
+  CC       compress.o
+  CC       dict.o
+  CC       mkquota.o
+  CC       quotaio.o
+  CC       quotaio_tree.o
+  CC       quotaio_v2.o
+In function 'update_extent_info',
+    inlined from 'update_largest_extent' at segment.c:559:3,
+    inlined from 'f2fs_build_file' at segment.c:714:3:
+segment.c:484:29: warning: 'cur_ext.fofs' may be used uninitialized [-Wmaybe-uninitialized]
+  484 |         inode->i.i_ext.fofs = cpu_to_le32(ext->fofs);
+segment.c: In function 'f2fs_build_file':
+segment.c:495:41: note: 'cur_ext.fofs' was declared here
+  495 |         struct extent_info largest_ext, cur_ext;
+      |                                         ^~~~~~~
+In function 'update_extent_info',
+    inlined from 'update_largest_extent' at segment.c:559:3,
+    inlined from 'f2fs_build_file' at segment.c:714:3:
+segment.c:485:33: warning: 'cur_ext.blk' may be used uninitialized [-Wmaybe-uninitialized]
+  485 |         inode->i.i_ext.blk_addr = cpu_to_le32(ext->blk);
+segment.c: In function 'f2fs_build_file':
+segment.c:495:41: note: 'cur_ext.blk' was declared here
+  495 |         struct extent_info largest_ext, cur_ext;
+      |                                         ^~~~~~~
+  CCLD     fsck.f2fs
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+Making all in tools
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools'
+Making all in f2fs_io
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools/f2fs_io'
+  CC       f2fs_io.o
+  CCLD     f2fs_io
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools/f2fs_io'
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools'
+  CC       fibmap.o
+  CC       f2fs_io_parse.o
+  CC       f2fscrypt.o
+  CC       sha512.o
+  CCLD     fibmap.f2fs
+  CCLD     parse.f2fs
+  CCLD     f2fscrypt
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0'
+>>> f2fs-tools: Entering fakeroot...
+Making install in man
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0/man'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/man'
+make[2]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/share/man/man8'
+ /usr/bin/install -c -m 644 mkfs.f2fs.8 fsck.f2fs.8 dump.f2fs.8 defrag.f2fs.8 resize.f2fs.8 sload.f2fs.8 f2fs_io.8 f2fslabel.8 '/tmp/pkg/f2fs-tools/usr/share/man/man8'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/man'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/man'
+Making install in lib
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0/lib'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/lib'
+make[2]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/lib'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libf2fs.la '/tmp/pkg/f2fs-tools/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libf2fs.so.10.0.0 /tmp/pkg/f2fs-tools/usr/lib/libf2fs.so.10.0.0
+libtool: install: (cd /tmp/pkg/f2fs-tools/usr/lib && { ln -s -f libf2fs.so.10.0.0 libf2fs.so.10 || { rm -f libf2fs.so.10 && ln -s libf2fs.so.10.0.0 libf2fs.so.10; }; })
+libtool: install: (cd /tmp/pkg/f2fs-tools/usr/lib && { ln -s -f libf2fs.so.10.0.0 libf2fs.so || { rm -f libf2fs.so && ln -s libf2fs.so.10.0.0 libf2fs.so; }; })
+libtool: install: /usr/bin/install -c .libs/libf2fs.lai /tmp/pkg/f2fs-tools/usr/lib/libf2fs.la
+libtool: install: /usr/bin/install -c .libs/libf2fs.a /tmp/pkg/f2fs-tools/usr/lib/libf2fs.a
+libtool: install: chmod 644 /tmp/pkg/f2fs-tools/usr/lib/libf2fs.a
+libtool: install: ranlib /tmp/pkg/f2fs-tools/usr/lib/libf2fs.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make  install-exec-hook
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/lib'
+if test -n "/usr/lib" -a "/usr/lib" != "/usr/lib" -a \
+    -f "/tmp/pkg/f2fs-tools/usr/lib/libf2fs.so"; then \
+	/bin/mkdir -p /tmp/pkg/f2fs-tools/usr/lib; \
+	mv /tmp/pkg/f2fs-tools/usr/lib/libf2fs.so.* /tmp/pkg/f2fs-tools/usr/lib; \
+	so_img_name=$(readlink /tmp/pkg/f2fs-tools/usr/lib/libf2fs.so); \
+	so_img_rel_target=$(echo /usr/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /tmp/pkg/f2fs-tools/usr/lib && \
+		rm -f libf2fs.so && \
+		ln -s $so_img_rel_target/usr/lib/$so_img_name libf2fs.so); \
+fi
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/lib'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/lib'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/lib'
+Making install in mkfs
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/lib'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/include'
+ /bin/sh ../libtool   --mode=install /usr/bin/install -c   libf2fs_format.la '/tmp/pkg/f2fs-tools/usr/lib'
+ /usr/bin/install -c -m 644 ../include/f2fs_fs.h '/tmp/pkg/f2fs-tools/usr/include'
+libtool: warning: relinking 'libf2fs_format.la'
+libtool: install: (cd /tmp/src/f2fs-tools-1.16.0/mkfs; /bin/sh "/tmp/src/f2fs-tools-1.16.0/libtool"  --silent --tag CC --mode=relink cc -DWITH_BLKDISCARD -D_FILE_OFFSET_BITS=64 -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -lblkid -luuid -L../lib -lf2fs -version-info 9:0:0 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libf2fs_format.la -rpath /usr/lib libf2fs_format_la-f2fs_format_main.lo libf2fs_format_la-f2fs_format.lo libf2fs_format_la-f2fs_format_utils.lo -inst-prefix-dir /tmp/pkg/f2fs-tools)
+libtool: install: /usr/bin/install -c .libs/libf2fs_format.so.9.0.0T /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.so.9.0.0
+libtool: install: (cd /tmp/pkg/f2fs-tools/usr/lib && { ln -s -f libf2fs_format.so.9.0.0 libf2fs_format.so.9 || { rm -f libf2fs_format.so.9 && ln -s libf2fs_format.so.9.0.0 libf2fs_format.so.9; }; })
+libtool: install: (cd /tmp/pkg/f2fs-tools/usr/lib && { ln -s -f libf2fs_format.so.9.0.0 libf2fs_format.so || { rm -f libf2fs_format.so && ln -s libf2fs_format.so.9.0.0 libf2fs_format.so; }; })
+libtool: install: /usr/bin/install -c .libs/libf2fs_format.lai /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.la
+libtool: install: /usr/bin/install -c .libs/libf2fs_format.a /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.a
+libtool: install: chmod 644 /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.a
+libtool: install: ranlib /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/sbin'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c mkfs.f2fs '/tmp/pkg/f2fs-tools/usr/sbin'
+libtool: warning: '../lib/libf2fs.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/mkfs.f2fs /tmp/pkg/f2fs-tools/usr/sbin/mkfs.f2fs
+make  install-exec-hook
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+if test -n "/usr/lib" -a "/usr/lib" != "/usr/lib" -a \
+    -f "/tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.so"; then \
+	/bin/mkdir -p /tmp/pkg/f2fs-tools/usr/lib; \
+	mv /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.so.* /tmp/pkg/f2fs-tools/usr/lib; \
+	so_img_name=$(readlink /tmp/pkg/f2fs-tools/usr/lib/libf2fs_format.so); \
+	so_img_rel_target=$(echo /usr/lib | sed 's,\(^/\|\)[^/][^/]*,..,g'); \
+	(cd /tmp/pkg/f2fs-tools/usr/lib && \
+		rm -f libf2fs_format.so && \
+		ln -s $so_img_rel_target/usr/lib/$so_img_name libf2fs_format.so); \
+fi
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/mkfs'
+Making install in fsck
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/include'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c fsck.f2fs '/tmp/pkg/f2fs-tools/usr/sbin'
+ /usr/bin/install -c -m 644 ../include/quota.h '/tmp/pkg/f2fs-tools/usr/include'
+make  install-data-hook
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+ln -sf fsck.f2fs /tmp/pkg/f2fs-tools//usr/sbin/dump.f2fs
+ln -sf fsck.f2fs /tmp/pkg/f2fs-tools//usr/sbin/defrag.f2fs
+ln -sf fsck.f2fs /tmp/pkg/f2fs-tools//usr/sbin/resize.f2fs
+ln -sf fsck.f2fs /tmp/pkg/f2fs-tools//usr/sbin/sload.f2fs
+ln -sf fsck.f2fs /tmp/pkg/f2fs-tools//usr/sbin/f2fslabel
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+libtool: warning: '../lib/libf2fs.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/fsck.f2fs /tmp/pkg/f2fs-tools/usr/sbin/fsck.f2fs
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/fsck'
+Making install in tools
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools'
+Making install in f2fs_io
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools/f2fs_io'
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools/f2fs_io'
+make[3]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/sbin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c f2fs_io '/tmp/pkg/f2fs-tools/usr/sbin'
+libtool: install: /usr/bin/install -c f2fs_io /tmp/pkg/f2fs-tools/usr/sbin/f2fs_io
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools/f2fs_io'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools/f2fs_io'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools'
+make[3]: Entering directory '/tmp/src/f2fs-tools-1.16.0/tools'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/sbin'
+ /bin/mkdir -p '/tmp/pkg/f2fs-tools/usr/share/man/man8'
+  /bin/sh ../libtool   --mode=install /usr/bin/install -c fibmap.f2fs parse.f2fs f2fscrypt '/tmp/pkg/f2fs-tools/usr/sbin'
+ /usr/bin/install -c -m 644 f2fscrypt.8 '/tmp/pkg/f2fs-tools/usr/share/man/man8'
+libtool: install: /usr/bin/install -c fibmap.f2fs /tmp/pkg/f2fs-tools/usr/sbin/fibmap.f2fs
+libtool: install: /usr/bin/install -c parse.f2fs /tmp/pkg/f2fs-tools/usr/sbin/parse.f2fs
+libtool: install: /usr/bin/install -c f2fscrypt /tmp/pkg/f2fs-tools/usr/sbin/f2fscrypt
+make[3]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools'
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0/tools'
+make[1]: Entering directory '/tmp/src/f2fs-tools-1.16.0'
+make[2]: Entering directory '/tmp/src/f2fs-tools-1.16.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/f2fs-tools-1.16.0'
+make[1]: Leaving directory '/tmp/src/f2fs-tools-1.16.0'
+>>> f2fs-tools-static*: Running split function static...
+'usr/lib/libf2fs_format.a' -> '/tmp/pkg/f2fs-tools-static/usr/lib/libf2fs_format.a'
+'usr/lib/libf2fs.a' -> '/tmp/pkg/f2fs-tools-static/usr/lib/libf2fs.a'
+>>> f2fs-tools-static*: Preparing subpackage f2fs-tools-static...
+>>> f2fs-tools-static*: Stripping binaries
+>>> f2fs-tools-static*: Running postcheck for f2fs-tools-static
+>>> f2fs-tools-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/f2fs-tools-dev/usr/include'
+'usr/lib/libf2fs.so' -> '/tmp/pkg/f2fs-tools-dev/usr/lib/libf2fs.so'
+'usr/lib/libf2fs_format.so' -> '/tmp/pkg/f2fs-tools-dev/usr/lib/libf2fs_format.so'
+>>> f2fs-tools-dev*: Preparing subpackage f2fs-tools-dev...
+>>> f2fs-tools-dev*: Stripping binaries
+>>> f2fs-tools-dev*: Running postcheck for f2fs-tools-dev
+>>> f2fs-tools-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/f2fs-tools-doc/usr/share/man'
+>>> f2fs-tools-doc*: Preparing subpackage f2fs-tools-doc...
+>>> f2fs-tools-doc*: Running postcheck for f2fs-tools-doc
+>>> f2fs-tools-libs*: Running split function libs...
+'usr/lib/libf2fs.so.10' -> '/tmp/pkg/f2fs-tools-libs/usr/lib/libf2fs.so.10'
+'usr/lib/libf2fs.so.10.0.0' -> '/tmp/pkg/f2fs-tools-libs/usr/lib/libf2fs.so.10.0.0'
+'usr/lib/libf2fs_format.so.9' -> '/tmp/pkg/f2fs-tools-libs/usr/lib/libf2fs_format.so.9'
+'usr/lib/libf2fs_format.so.9.0.0' -> '/tmp/pkg/f2fs-tools-libs/usr/lib/libf2fs_format.so.9.0.0'
+>>> f2fs-tools-libs*: Preparing subpackage f2fs-tools-libs...
+>>> f2fs-tools-libs*: Stripping binaries
+>>> f2fs-tools-libs*: Running postcheck for f2fs-tools-libs
+>>> f2fs-tools*: Running postcheck for f2fs-tools
+>>> f2fs-tools*: Preparing package f2fs-tools...
+>>> f2fs-tools*: Stripping binaries
+>>> f2fs-tools-dev*: Scanning shared objects
+>>> f2fs-tools-doc*: Scanning shared objects
+>>> f2fs-tools-libs*: Scanning shared objects
+>>> f2fs-tools-static*: Scanning shared objects
+>>> f2fs-tools*: Scanning shared objects
+>>> f2fs-tools-dev*: Tracing dependencies...
+	f2fs-tools-libs=1.16.0-r3
+>>> f2fs-tools-dev*: Package size: 55.3 KB
+>>> f2fs-tools-dev*: Compressing data...
+>>> f2fs-tools-dev*: Create checksum...
+>>> f2fs-tools-dev*: Create f2fs-tools-dev-1.16.0-r3.apk
+>>> f2fs-tools-doc*: Tracing dependencies...
+>>> f2fs-tools-doc*: Package size: 9.8 KB
+>>> f2fs-tools-doc*: Compressing data...
+>>> f2fs-tools-doc*: Create checksum...
+>>> f2fs-tools-doc*: Create f2fs-tools-doc-1.16.0-r3.apk
+>>> f2fs-tools-libs*: Tracing dependencies...
+	so:libblkid.so.1
+	so:libc.musl-x86_64.so.1
+	so:libuuid.so.1
+>>> f2fs-tools-libs*: Package size: 140.2 KB
+>>> f2fs-tools-libs*: Compressing data...
+>>> f2fs-tools-libs*: Create checksum...
+>>> f2fs-tools-libs*: Create f2fs-tools-libs-1.16.0-r3.apk
+>>> f2fs-tools-static*: Tracing dependencies...
+>>> f2fs-tools-static*: Package size: 195.4 KB
+>>> f2fs-tools-static*: Compressing data...
+>>> f2fs-tools-static*: Create checksum...
+>>> f2fs-tools-static*: Create f2fs-tools-static-1.16.0-r3.apk
+>>> f2fs-tools*: Tracing dependencies...
+	so:libblkid.so.1
+	so:libc.musl-x86_64.so.1
+	so:libf2fs.so.10
+	so:libuuid.so.1
+>>> f2fs-tools*: Package size: 313.2 KB
+>>> f2fs-tools*: Compressing data...
+>>> f2fs-tools*: Create checksum...
+>>> f2fs-tools*: Create f2fs-tools-1.16.0-r3.apk
+>>> f2fs-tools: Updating the main/x86_64 repository index...
+>>> f2fs-tools: Signing the index...
+>>> f2fs-tools: Cleaning up srcdir
+>>> f2fs-tools: Cleaning up build chroot
+>>> f2fs-tools: Cleaning up pkgdir

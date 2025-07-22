@@ -1,0 +1,743 @@
+>>> libspf2: Validating /home/packager/oily-pine/main/libspf2/APKBUILD...
+>>> libspf2: Cleaning up srcdir
+>>> libspf2: Cleaning up pkgdir
+>>> libspf2: Cleaning up tmpdir
+>>> libspf2: Fetching libspf2-1.2.11.tar.gz::https://github.com/shevek/libspf2/archive/8131fe140704eaae695e76b5cd09e39bd1dd220b.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100  524k    0  524k    0     0   610k      0 --:--:-- --:--:-- --:--:-- 1697k
+>>> libspf2: Fetching libspf2-1.2.11.tar.gz::https://github.com/shevek/libspf2/archive/8131fe140704eaae695e76b5cd09e39bd1dd220b.tar.gz
+>>> libspf2: Checking sha512sums...
+libspf2-1.2.11.tar.gz: OK
+CVE-2021-20314.patch: OK
+CVE-2023-42118.patch: OK
+00001.patch: OK
+00002.patch: OK
+netdb_success.patch: OK
+musl-res_close.patch: OK
+implicit.patch: OK
+>>> libspf2: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/78) Installing musl (1.2.5-r10)
+(2/78) Installing libcrypto3 (3.5.0-r0)
+(3/78) Installing ca-certificates-bundle (20241121-r2)
+(4/78) Installing libssl3 (3.5.0-r0)
+(5/78) Installing zlib (1.3.1-r2)
+(6/78) Installing libapk2 (2.14.9-r2)
+(7/78) Installing apk-tools (2.14.9-r2)
+(8/78) Installing libcap2 (2.76-r0)
+(9/78) Installing libcap-getcap (2.76-r0)
+(10/78) Installing fakeroot (1.37.1.1-r0)
+(11/78) Installing scanelf (1.3.8-r1)
+(12/78) Installing musl-utils (1.2.5-r10)
+(13/78) Installing libgcc (14.3.0-r1)
+(14/78) Installing libstdc++ (14.3.0-r1)
+(15/78) Installing lzip (1.25-r0)
+(16/78) Installing openssl (3.5.0-r0)
+(17/78) Installing patch (2.8-r0)
+(18/78) Installing pkgconf (2.4.3-r0)
+(19/78) Installing acl-libs (2.3.2-r1)
+(20/78) Installing tar (1.35-r3)
+(21/78) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/78) Installing ssl_client (1.37.0-r18)
+(23/78) Installing busybox-binsh (1.37.0-r18)
+(24/78) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/78) Installing abuild-sudo (3.15.0-r0)
+(26/78) Installing alpine-baselayout-data (3.7.0-r0)
+(27/78) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/78) Installing bridge (1.5-r5)
+(29/78) Installing ifupdown-ng (0.12.1-r7)
+(30/78) Installing openrc-user (0.62.2-r2)
+(31/78) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/78) Installing mdev-conf (4.8-r0)
+(33/78) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/78) Installing alpine-conf (3.20.0-r0)
+(35/78) Installing alpine-keys (2.5-r0)
+(36/78) Installing alpine-release (3.22.0-r0)
+(37/78) Installing busybox-openrc (1.37.0-r18)
+(38/78) Installing busybox-suid (1.37.0-r18)
+(39/78) Installing alpine-base (3.22.0-r0)
+(40/78) Installing m4 (1.4.20-r0)
+(41/78) Installing libbz2 (1.0.8-r6)
+(42/78) Installing perl (5.40.2-r0)
+(43/78) Installing autoconf (2.72-r1)
+(44/78) Installing automake (1.18-r0)
+(45/78) Installing jansson (2.14.1-r0)
+(46/78) Installing zstd-libs (1.5.7-r0)
+(47/78) Installing binutils (2.44-r0)
+(48/78) Installing libmagic (5.46-r2)
+(49/78) Installing file (5.46-r2)
+(50/78) Installing libgomp (14.3.0-r1)
+(51/78) Installing libatomic (14.3.0-r1)
+(52/78) Installing gmp (6.3.0-r3)
+(53/78) Installing isl26 (0.26-r1)
+(54/78) Installing mpfr4 (4.2.1_p1-r0)
+(55/78) Installing mpc1 (1.3.1-r1)
+(56/78) Installing gcc (14.3.0-r1)
+(57/78) Installing libstdc++-dev (14.3.0-r1)
+(58/78) Installing musl-dev (1.2.5-r10)
+(59/78) Installing g++ (14.3.0-r1)
+(60/78) Installing make (4.4.1-r3)
+(61/78) Installing fortify-headers (1.1-r5)
+(62/78) Installing build-base (0.5-r3)
+(63/78) Installing brotli-libs (1.1.0-r2)
+(64/78) Installing c-ares (1.34.5-r0)
+(65/78) Installing libunistring (1.3-r0)
+(66/78) Installing libidn2 (2.3.7-r0)
+(67/78) Installing nghttp2-libs (1.65.0-r0)
+(68/78) Installing libpsl (0.21.5-r3)
+(69/78) Installing libcurl (8.14.0-r2)
+(70/78) Installing libexpat (2.7.1-r0)
+(71/78) Installing pcre2 (10.43-r1)
+(72/78) Installing git (2.49.0-r0)
+(73/78) Installing git-init-template (2.49.0-r0)
+(74/78) Installing perl-error (0.17030-r0)
+(75/78) Installing perl-git (2.49.0-r0)
+(76/78) Installing git-perl (2.49.0-r0)
+(77/78) Installing libltdl (2.5.4-r1)
+(78/78) Installing libtool (2.5.4-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 302 MiB in 78 packages
+>>> libspf2: Fetching libspf2-1.2.11.tar.gz::https://github.com/shevek/libspf2/archive/8131fe140704eaae695e76b5cd09e39bd1dd220b.tar.gz
+>>> libspf2: Checking sha512sums...
+libspf2-1.2.11.tar.gz: OK
+CVE-2021-20314.patch: OK
+CVE-2023-42118.patch: OK
+00001.patch: OK
+00002.patch: OK
+netdb_success.patch: OK
+musl-res_close.patch: OK
+implicit.patch: OK
+>>> libspf2: Unpacking /var/cache/distfiles/libspf2-1.2.11.tar.gz...
+>>> libspf2: CVE-2021-20314.patch
+patching file src/libspf2/spf_request.c
+>>> libspf2: CVE-2023-42118.patch
+patching file src/libspf2/spf_compile.c
+>>> libspf2: 00001.patch
+patching file src/libspf2/spf_compile.c
+Hunk #1 succeeded at 581 (offset 4 lines).
+Hunk #2 succeeded at 590 (offset 4 lines).
+Hunk #3 succeeded at 599 (offset 4 lines).
+patching file src/libspf2/spf_dns.c
+patching file src/libspf2/spf_dns_zone.c
+patching file src/libspf2/spf_id2str.c
+>>> libspf2: 00002.patch
+patching file configure.ac
+Hunk #1 succeeded at 274 (offset 1 line).
+Hunk #2 succeeded at 281 (offset 1 line).
+patching file src/libspf2/Makefile.am
+patching file src/Makefile.am
+patching file aclocal.m4
+patching file configure
+patching file config.h.in
+patching file src/libspf2/Makefile.in
+patching file src/Makefile.in
+patching file src/spfd/spfd.c
+patching file src/spfquery/spfquery.c
+>>> libspf2: netdb_success.patch
+patching file src/include/spf_dns.h
+>>> libspf2: musl-res_close.patch
+patching file src/libspf2/spf_dns_resolv.c
+Hunk #1 succeeded at 608 (offset 2 lines).
+>>> libspf2: implicit.patch
+patching file src/libspf2/spf_utils.c
+>>> libspf2: Updating ./config/config.sub
+libtoolize: putting auxiliary files in AC_CONFIG_AUX_DIR, 'config'.
+libtoolize: linking file 'config/ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: linking file 'm4/libtool.m4'
+libtoolize: linking file 'm4/ltoptions.m4'
+libtoolize: linking file 'm4/ltsugar.m4'
+libtoolize: linking file 'm4/ltversion.m4'
+libtoolize: linking file 'm4/lt~obsolete.m4'
+configure.ac:54: installing 'config/compile'
+configure.ac:7: installing 'config/missing'
+src/libspf2/Makefile.am: installing 'config/depcomp'
+configure.ac:9: warning: 'AM_CONFIG_HEADER': this macro is obsolete.
+configure.ac:9: You should use the 'AC_CONFIG_HEADERS' macro instead.
+aclocal.m4:708: AM_CONFIG_HEADER is expanded from...
+configure.ac:9: the top level
+configure.ac:42: warning: The macro 'AC_HELP_STRING' is obsolete.
+configure.ac:42: You should run autoupdate.
+./lib/autoconf/general.m4:204: AC_HELP_STRING is expanded from...
+configure.ac:42: the top level
+configure.ac:55: warning: The macro 'ac_cv_prog_gcc' is obsolete.
+configure.ac:55: You should run autoupdate.
+./lib/autoconf/c.m4:448: ac_cv_prog_gcc is expanded from...
+configure.ac:55: the top level
+configure.ac:71: warning: The macro 'AC_PROG_LIBTOOL' is obsolete.
+configure.ac:71: You should run autoupdate.
+m4/libtool.m4:100: AC_PROG_LIBTOOL is expanded from...
+configure.ac:71: the top level
+configure.ac:87: warning: The macro 'AC_HEADER_STDC' is obsolete.
+configure.ac:87: You should run autoupdate.
+./lib/autoconf/headers.m4:663: AC_HEADER_STDC is expanded from...
+configure.ac:87: the top level
+configure.ac:89: warning: The macro 'AC_HEADER_TIME' is obsolete.
+configure.ac:89: You should run autoupdate.
+./lib/autoconf/headers.m4:702: AC_HEADER_TIME is expanded from...
+configure.ac:89: the top level
+configure.ac:116: warning: The macro 'AC_TRY_LINK' is obsolete.
+configure.ac:116: You should run autoupdate.
+./lib/autoconf/general.m4:2918: AC_TRY_LINK is expanded from...
+lib/m4sugar/m4sh.m4:690: _AS_IF_ELSE is expanded from...
+lib/m4sugar/m4sh.m4:697: AS_IF is expanded from...
+./lib/autoconf/general.m4:1553: AC_ARG_WITH is expanded from...
+configure.ac:116: the top level
+configure.ac:193: warning: The macro 'AC_TYPE_SIGNAL' is obsolete.
+configure.ac:193: You should run autoupdate.
+./lib/autoconf/types.m4:805: AC_TYPE_SIGNAL is expanded from...
+configure.ac:193: the top level
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether sleep supports fractional seconds... yes
+checking filesystem timestamp resolution... 2
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... /bin/mkdir -p
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking xargs -n works... yes
+checking whether UID '1000' is supported by ustar format... yes
+checking whether GID '1000' is supported by ustar format... yes
+checking how to create a ustar tar archive... gnutar
+./configure: line 3864: AX_WITH_PERL: not found
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking whether make supports the include directive... yes (GNU style)
+checking dependency style of cc... gcc3
+checking how to run the C preprocessor... cc -E
+checking whether make sets $(MAKE)... (cached) yes
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for fgrep... /bin/grep -F
+checking for ld used by cc... /usr/x86_64-alpine-linux-musl/bin/ld
+checking if the linker (/usr/x86_64-alpine-linux-musl/bin/ld) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 98304
+checking how to convert x86_64-alpine-linux-musl file names to x86_64-alpine-linux-musl format... func_convert_file_noop
+checking how to convert x86_64-alpine-linux-musl file names to toolchain format... func_convert_file_noop
+checking for /usr/x86_64-alpine-linux-musl/bin/ld option to reload object files... -r
+checking for file... file
+checking for x86_64-alpine-linux-musl-objdump... no
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for x86_64-alpine-linux-musl-dlltool... no
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for archiver @FILE support... @
+checking for x86_64-alpine-linux-musl-strip... no
+checking for strip... strip
+checking command to parse /usr/bin/nm -B output from cc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for x86_64-alpine-linux-musl-mt... no
+checking for mt... no
+checking if : is a manifest tool... no
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for sys/time.h... yes
+checking for vfork.h... no
+checking for sys/select.h... yes
+checking for sys/socket.h... yes
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if cc supports -fno-rtti -fno-exceptions... no
+checking for cc option to produce PIC... -fPIC -DPIC
+checking if cc PIC flag -fPIC -DPIC works... yes
+checking if cc static flag -static works... yes
+checking if cc supports -c -o file.o... yes
+checking if cc supports -c -o file.o... (cached) yes
+checking whether the cc linker (/usr/x86_64-alpine-linux-musl/bin/ld -m elf_x86_64) supports shared libraries... yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether ln -s works... yes
+checking if ld accepts --rpath... yes
+checking for egrep... (cached) /bin/grep -E
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking size of int... 4
+checking for limits.h... yes
+checking for sys/param.h... yes
+checking for syslog.h... yes
+checking for sys/time.h... (cached) yes
+checking for errno.h... yes
+checking for sys/types.h... (cached) yes
+checking for fcntl.h... yes
+checking for malloc.h... yes
+checking for nmemory.h... no
+checking for stddef.h... yes
+checking for inttypes.h... (cached) yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking for strings.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for stdarg.h... yes
+checking for pthread.h... yes
+checking for pwd.h... yes
+checking for grp.h... yes
+checking for libintl.h... no
+checking for getopt.h... yes
+checking for netdb.h... yes
+checking for netinet/in.h... yes
+checking for sys/socket.h... (cached) yes
+checking for arpa/inet.h... yes
+checking for arpa/nameser.h... yes
+checking for resolv.h... yes
+checking for pthread.h... (cached) yes
+checking for res_query in -lresolv (with resolv.h if present)... yes
+checking for inet_pton in -lnsl... no
+checking for socket in -lsocket... no
+checking for gettext in -lintl... no
+checking for pthread_create in -lpthread... yes
+checking for an ANSI C-conforming const... yes
+checking for inline... inline
+checking for pid_t... yes
+checking for uid_t... yes
+checking for gid_t... yes
+checking for size_t... yes
+checking for working volatile... yes
+checking whether byte ordering is bigendian... no
+checking for inline... (cached) inline
+checking whether char is unsigned... no
+checking for u_char... yes
+checking for u_int8_t... yes
+checking for u_int16_t... yes
+checking for u_int32_t... yes
+checking for uint8_t... yes
+checking for uint16_t... yes
+checking for uint32_t... yes
+checking for ns_type... yes
+checking for struct in6_addr... yes
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking for GNU libc compatible malloc... yes
+checking for working memcmp... yes
+checking for GNU libc compatible realloc... yes
+checking whether setpgrp requires zero arguments... yes
+checking types of arguments for select... int,fd_set *,struct timeval *
+checking return type of signal handlers... void
+checking for cc options needed to detect all undeclared functions... none needed
+checking whether res_ninit is declared... no
+checking whether res_ndestroy is declared... no
+checking whether ns_t_spf is declared... yes
+checking whether ns_t_invalid is declared... yes
+checking for ftruncate... yes
+checking for gethostname... yes
+checking for memmove... yes
+checking for memset... yes
+checking for socket... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strcasecmp... yes
+checking for strncasecmp... yes
+checking for strspn... yes
+checking for strtoul... yes
+checking for gethostbyname... yes
+checking for inet_ntoa... yes
+checking for select... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating Doxyfile
+config.status: creating src/Makefile
+config.status: creating src/include/Makefile
+config.status: creating src/libspf2/Makefile
+config.status: creating src/spfquery/Makefile
+config.status: creating src/spftest/Makefile
+config.status: creating src/spfd/Makefile
+config.status: creating src/spf_example/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+make  all-recursive
+make[1]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+Making all in src
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+Making all in include
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+Making all in libspf2
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_compile.lo -MD -MP -MF .deps/spf_compile.Tpo -c -o spf_compile.lo spf_compile.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns.lo -MD -MP -MF .deps/spf_dns.Tpo -c -o spf_dns.lo spf_dns.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_cache.lo -MD -MP -MF .deps/spf_dns_cache.Tpo -c -o spf_dns_cache.lo spf_dns_cache.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_null.lo -MD -MP -MF .deps/spf_dns_null.Tpo -c -o spf_dns_null.lo spf_dns_null.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_resolv.lo -MD -MP -MF .deps/spf_dns_resolv.Tpo -c -o spf_dns_resolv.lo spf_dns_resolv.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_rr.lo -MD -MP -MF .deps/spf_dns_rr.Tpo -c -o spf_dns_rr.lo spf_dns_rr.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_test.lo -MD -MP -MF .deps/spf_dns_test.Tpo -c -o spf_dns_test.lo spf_dns_test.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_windns.lo -MD -MP -MF .deps/spf_dns_windns.Tpo -c -o spf_dns_windns.lo spf_dns_windns.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_zone.lo -MD -MP -MF .deps/spf_dns_zone.Tpo -c -o spf_dns_zone.lo spf_dns_zone.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_expand.lo -MD -MP -MF .deps/spf_expand.Tpo -c -o spf_expand.lo spf_expand.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_get_exp.lo -MD -MP -MF .deps/spf_get_exp.Tpo -c -o spf_get_exp.lo spf_get_exp.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_get_spf.lo -MD -MP -MF .deps/spf_get_spf.Tpo -c -o spf_get_spf.lo spf_get_spf.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_id2str.lo -MD -MP -MF .deps/spf_id2str.Tpo -c -o spf_id2str.lo spf_id2str.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_interpret.lo -MD -MP -MF .deps/spf_interpret.Tpo -c -o spf_interpret.lo spf_interpret.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log.lo -MD -MP -MF .deps/spf_log.Tpo -c -o spf_log.lo spf_log.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_default.lo -MD -MP -MF .deps/spf_log_default.Tpo -c -o spf_log_default.lo spf_log_default.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_compile.lo -MD -MP -MF .deps/spf_compile.Tpo -c spf_compile.c  -fPIC -DPIC -o .libs/spf_compile.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_rr.lo -MD -MP -MF .deps/spf_dns_rr.Tpo -c spf_dns_rr.c  -fPIC -DPIC -o .libs/spf_dns_rr.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_null.lo -MD -MP -MF .deps/spf_dns_null.Tpo -c spf_dns_null.c  -fPIC -DPIC -o .libs/spf_dns_null.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_cache.lo -MD -MP -MF .deps/spf_dns_cache.Tpo -c spf_dns_cache.c  -fPIC -DPIC -o .libs/spf_dns_cache.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_windns.lo -MD -MP -MF .deps/spf_dns_windns.Tpo -c spf_dns_windns.c  -fPIC -DPIC -o .libs/spf_dns_windns.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_expand.lo -MD -MP -MF .deps/spf_expand.Tpo -c spf_expand.c  -fPIC -DPIC -o .libs/spf_expand.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_interpret.lo -MD -MP -MF .deps/spf_interpret.Tpo -c spf_interpret.c  -fPIC -DPIC -o .libs/spf_interpret.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_id2str.lo -MD -MP -MF .deps/spf_id2str.Tpo -c spf_id2str.c  -fPIC -DPIC -o .libs/spf_id2str.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_resolv.lo -MD -MP -MF .deps/spf_dns_resolv.Tpo -c spf_dns_resolv.c  -fPIC -DPIC -o .libs/spf_dns_resolv.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_default.lo -MD -MP -MF .deps/spf_log_default.Tpo -c spf_log_default.c  -fPIC -DPIC -o .libs/spf_log_default.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log.lo -MD -MP -MF .deps/spf_log.Tpo -c spf_log.c  -fPIC -DPIC -o .libs/spf_log.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_test.lo -MD -MP -MF .deps/spf_dns_test.Tpo -c spf_dns_test.c  -fPIC -DPIC -o .libs/spf_dns_test.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns.lo -MD -MP -MF .deps/spf_dns.Tpo -c spf_dns.c  -fPIC -DPIC -o .libs/spf_dns.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_get_spf.lo -MD -MP -MF .deps/spf_get_spf.Tpo -c spf_get_spf.c  -fPIC -DPIC -o .libs/spf_get_spf.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_get_exp.lo -MD -MP -MF .deps/spf_get_exp.Tpo -c spf_get_exp.c  -fPIC -DPIC -o .libs/spf_get_exp.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_zone.lo -MD -MP -MF .deps/spf_dns_zone.Tpo -c spf_dns_zone.c  -fPIC -DPIC -o .libs/spf_dns_zone.o
+In file included from ../../src/include/spf.h:31,
+                 from ../../src/include/spf_response.h:166,
+                 from ../../src/include/spf_record.h:25,
+                 from ../../src/include/spf_internal.h:83,
+                 from spf_compile.c:17:
+spf_compile.c: In function 'SPF_c_parse_macro':
+spf_compile.c:611:44: warning: format '%d' expects argument of type 'int', but argument 5 has type 'size_t' {aka 'long unsigned int'} [-Wformat=]
+  611 |                                 SPF_debugf("Adding illegal %%-follower '%c' at %d",
+      |                                            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  612 |                                 src[idx], idx);
+      |                                           ~~~
+      |                                           |
+      |                                           size_t {aka long unsigned int}
+../../src/include/spf_log.h:66:66: note: in definition of macro 'SPF_debugf'
+   66 | #define SPF_debugf(format, ... ) SPF_debugx( __FILE__, __LINE__, format, ##__VA_ARGS__ )
+      |                                                                  ^~~~~~
+spf_compile.c:611:81: note: format string is defined here
+  611 |                                 SPF_debugf("Adding illegal %%-follower '%c' at %d",
+      |                                                                                ~^
+      |                                                                                 |
+      |                                                                                 int
+      |                                                                                %ld
+spf_dns_cache.c: In function 'SPF_dns_cache_rr_fixup':
+spf_dns_cache.c:345:25: warning: suggest parentheses around '&&' within '||' [-Wparentheses]
+  344 |     if ( cached_rr->ttl < spfhook->txt_ttl
+      |          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  345 |                         && cached_rr->rr_type == ns_t_txt || cached_rr->rr_type == ns_t_spf )
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_windns.lo -MD -MP -MF .deps/spf_dns_windns.Tpo -c spf_dns_windns.c -o spf_dns_windns.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_default.lo -MD -MP -MF .deps/spf_log_default.Tpo -c spf_log_default.c -o spf_log_default.o >/dev/null 2>&1
+spf_expand.c: In function 'SPF_record_expand_data':
+spf_expand.c:90:26: warning: variable 'p_err' set but not used [-Wunused-but-set-variable]
+   90 |         const char      *p_err; // XXX Check this value, when returned.
+      |                          ^~~~~
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_get_spf.lo -MD -MP -MF .deps/spf_get_spf.Tpo -c spf_get_spf.c -o spf_get_spf.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_test.lo -MD -MP -MF .deps/spf_dns_test.Tpo -c spf_dns_test.c -o spf_dns_test.o >/dev/null 2>&1
+mv -f .deps/spf_dns_windns.Tpo .deps/spf_dns_windns.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_stdio.lo -MD -MP -MF .deps/spf_log_stdio.Tpo -c -o spf_log_stdio.lo spf_log_stdio.c
+mv -f .deps/spf_log_default.Tpo .deps/spf_log_default.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_syslog.lo -MD -MP -MF .deps/spf_log_syslog.Tpo -c -o spf_log_syslog.lo spf_log_syslog.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_null.lo -MD -MP -MF .deps/spf_dns_null.Tpo -c spf_dns_null.c -o spf_dns_null.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_stdio.lo -MD -MP -MF .deps/spf_log_stdio.Tpo -c spf_log_stdio.c  -fPIC -DPIC -o .libs/spf_log_stdio.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_syslog.lo -MD -MP -MF .deps/spf_log_syslog.Tpo -c spf_log_syslog.c  -fPIC -DPIC -o .libs/spf_log_syslog.o
+mv -f .deps/spf_get_spf.Tpo .deps/spf_get_spf.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_print.lo -MD -MP -MF .deps/spf_print.Tpo -c -o spf_print.lo spf_print.c
+mv -f .deps/spf_dns_test.Tpo .deps/spf_dns_test.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_record.lo -MD -MP -MF .deps/spf_record.Tpo -c -o spf_record.lo spf_record.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns.lo -MD -MP -MF .deps/spf_dns.Tpo -c spf_dns.c -o spf_dns.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_print.lo -MD -MP -MF .deps/spf_print.Tpo -c spf_print.c  -fPIC -DPIC -o .libs/spf_print.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_get_exp.lo -MD -MP -MF .deps/spf_get_exp.Tpo -c spf_get_exp.c -o spf_get_exp.o >/dev/null 2>&1
+mv -f .deps/spf_dns_null.Tpo .deps/spf_dns_null.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_request.lo -MD -MP -MF .deps/spf_request.Tpo -c -o spf_request.lo spf_request.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_record.lo -MD -MP -MF .deps/spf_record.Tpo -c spf_record.c  -fPIC -DPIC -o .libs/spf_record.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_id2str.lo -MD -MP -MF .deps/spf_id2str.Tpo -c spf_id2str.c -o spf_id2str.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_request.lo -MD -MP -MF .deps/spf_request.Tpo -c spf_request.c  -fPIC -DPIC -o .libs/spf_request.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_rr.lo -MD -MP -MF .deps/spf_dns_rr.Tpo -c spf_dns_rr.c -o spf_dns_rr.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_zone.lo -MD -MP -MF .deps/spf_dns_zone.Tpo -c spf_dns_zone.c -o spf_dns_zone.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_stdio.lo -MD -MP -MF .deps/spf_log_stdio.Tpo -c spf_log_stdio.c -o spf_log_stdio.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log_syslog.lo -MD -MP -MF .deps/spf_log_syslog.Tpo -c spf_log_syslog.c -o spf_log_syslog.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_cache.lo -MD -MP -MF .deps/spf_dns_cache.Tpo -c spf_dns_cache.c -o spf_dns_cache.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_log.lo -MD -MP -MF .deps/spf_log.Tpo -c spf_log.c -o spf_log.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_print.lo -MD -MP -MF .deps/spf_print.Tpo -c spf_print.c -o spf_print.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_record.lo -MD -MP -MF .deps/spf_record.Tpo -c spf_record.c -o spf_record.o >/dev/null 2>&1
+mv -f .deps/spf_print.Tpo .deps/spf_print.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_response.lo -MD -MP -MF .deps/spf_response.Tpo -c -o spf_response.lo spf_response.c
+mv -f .deps/spf_get_exp.Tpo .deps/spf_get_exp.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_server.lo -MD -MP -MF .deps/spf_server.Tpo -c -o spf_server.lo spf_server.c
+mv -f .deps/spf_log_syslog.Tpo .deps/spf_log_syslog.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_strerror.lo -MD -MP -MF .deps/spf_strerror.Tpo -c -o spf_strerror.lo spf_strerror.c
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_expand.lo -MD -MP -MF .deps/spf_expand.Tpo -c spf_expand.c -o spf_expand.o >/dev/null 2>&1
+mv -f .deps/spf_dns.Tpo .deps/spf_dns.Plo
+mv -f .deps/spf_log_stdio.Tpo .deps/spf_log_stdio.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_utils.lo -MD -MP -MF .deps/spf_utils.Tpo -c -o spf_utils.lo spf_utils.c
+/bin/sh ../../libtool  --tag=CC   --mode=compile cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_win32.lo -MD -MP -MF .deps/spf_win32.Tpo -c -o spf_win32.lo spf_win32.c
+mv -f .deps/spf_dns_rr.Tpo .deps/spf_dns_rr.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_response.lo -MD -MP -MF .deps/spf_response.Tpo -c spf_response.c  -fPIC -DPIC -o .libs/spf_response.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_server.lo -MD -MP -MF .deps/spf_server.Tpo -c spf_server.c  -fPIC -DPIC -o .libs/spf_server.o
+mv -f .deps/spf_record.Tpo .deps/spf_record.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_utils.lo -MD -MP -MF .deps/spf_utils.Tpo -c spf_utils.c  -fPIC -DPIC -o .libs/spf_utils.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_strerror.lo -MD -MP -MF .deps/spf_strerror.Tpo -c spf_strerror.c  -fPIC -DPIC -o .libs/spf_strerror.o
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_dns_resolv.lo -MD -MP -MF .deps/spf_dns_resolv.Tpo -c spf_dns_resolv.c -o spf_dns_resolv.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_win32.lo -MD -MP -MF .deps/spf_win32.Tpo -c spf_win32.c  -fPIC -DPIC -o .libs/spf_win32.o
+mv -f .deps/spf_log.Tpo .deps/spf_log.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_win32.lo -MD -MP -MF .deps/spf_win32.Tpo -c spf_win32.c -o spf_win32.o >/dev/null 2>&1
+mv -f .deps/spf_win32.Tpo .deps/spf_win32.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_strerror.lo -MD -MP -MF .deps/spf_strerror.Tpo -c spf_strerror.c -o spf_strerror.o >/dev/null 2>&1
+mv -f .deps/spf_dns_cache.Tpo .deps/spf_dns_cache.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_compile.lo -MD -MP -MF .deps/spf_compile.Tpo -c spf_compile.c -o spf_compile.o >/dev/null 2>&1
+mv -f .deps/spf_dns_zone.Tpo .deps/spf_dns_zone.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_request.lo -MD -MP -MF .deps/spf_request.Tpo -c spf_request.c -o spf_request.o >/dev/null 2>&1
+mv -f .deps/spf_expand.Tpo .deps/spf_expand.Plo
+mv -f .deps/spf_strerror.Tpo .deps/spf_strerror.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_utils.lo -MD -MP -MF .deps/spf_utils.Tpo -c spf_utils.c -o spf_utils.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_response.lo -MD -MP -MF .deps/spf_response.Tpo -c spf_response.c -o spf_response.o >/dev/null 2>&1
+mv -f .deps/spf_dns_resolv.Tpo .deps/spf_dns_resolv.Plo
+mv -f .deps/spf_id2str.Tpo .deps/spf_id2str.Plo
+mv -f .deps/spf_utils.Tpo .deps/spf_utils.Plo
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_interpret.lo -MD -MP -MF .deps/spf_interpret.Tpo -c spf_interpret.c -o spf_interpret.o >/dev/null 2>&1
+libtool: compile:  cc -DHAVE_CONFIG_H -I. -I../.. -I../../src/include -I../../src -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_server.lo -MD -MP -MF .deps/spf_server.Tpo -c spf_server.c -o spf_server.o >/dev/null 2>&1
+mv -f .deps/spf_request.Tpo .deps/spf_request.Plo
+mv -f .deps/spf_response.Tpo .deps/spf_response.Plo
+mv -f .deps/spf_server.Tpo .deps/spf_server.Plo
+mv -f .deps/spf_compile.Tpo .deps/spf_compile.Plo
+mv -f .deps/spf_interpret.Tpo .deps/spf_interpret.Plo
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -version-info 3:0:1 -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o libspf2.la -rpath /usr/lib spf_compile.lo spf_dns.lo spf_dns_cache.lo spf_dns_null.lo spf_dns_resolv.lo spf_dns_rr.lo spf_dns_test.lo spf_dns_windns.lo spf_dns_zone.lo spf_expand.lo spf_get_exp.lo spf_get_spf.lo spf_id2str.lo spf_interpret.lo spf_log.lo spf_log_default.lo spf_log_stdio.lo spf_log_syslog.lo spf_print.lo spf_record.lo spf_request.lo spf_response.lo spf_server.lo spf_strerror.lo spf_utils.lo spf_win32.lo  -lpthread -lresolv 
+libtool: link: cc -shared  -fPIC -DPIC  .libs/spf_compile.o .libs/spf_dns.o .libs/spf_dns_cache.o .libs/spf_dns_null.o .libs/spf_dns_resolv.o .libs/spf_dns_rr.o .libs/spf_dns_test.o .libs/spf_dns_windns.o .libs/spf_dns_zone.o .libs/spf_expand.o .libs/spf_get_exp.o .libs/spf_get_spf.o .libs/spf_id2str.o .libs/spf_interpret.o .libs/spf_log.o .libs/spf_log_default.o .libs/spf_log_stdio.o .libs/spf_log_syslog.o .libs/spf_print.o .libs/spf_record.o .libs/spf_request.o .libs/spf_response.o .libs/spf_server.o .libs/spf_strerror.o .libs/spf_utils.o .libs/spf_win32.o   -lpthread -lresolv  -Os -Werror=format-security -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs   -Wl,-soname -Wl,libspf2.so.2 -o .libs/libspf2.so.2.1.0
+libtool: link: (cd ".libs" && rm -f "libspf2.so.2" && ln -s "libspf2.so.2.1.0" "libspf2.so.2")
+libtool: link: (cd ".libs" && rm -f "libspf2.so" && ln -s "libspf2.so.2.1.0" "libspf2.so")
+libtool: link: ar cr .libs/libspf2.a  spf_compile.o spf_dns.o spf_dns_cache.o spf_dns_null.o spf_dns_resolv.o spf_dns_rr.o spf_dns_test.o spf_dns_windns.o spf_dns_zone.o spf_expand.o spf_get_exp.o spf_get_spf.o spf_id2str.o spf_interpret.o spf_log.o spf_log_default.o spf_log_stdio.o spf_log_syslog.o spf_print.o spf_record.o spf_request.o spf_response.o spf_server.o spf_strerror.o spf_utils.o spf_win32.o
+libtool: link: ranlib .libs/libspf2.a
+libtool: link: ( cd ".libs" && rm -f "libspf2.la" && ln -s "../libspf2.la" "libspf2.la" )
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+Making all in spfquery
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spfquery.o -MD -MP -MF .deps/spfquery.Tpo -c -o spfquery.o spfquery.c
+mv -f .deps/spfquery.Tpo .deps/spfquery.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spfquery spfquery.o ../../src/libspf2/libspf2.la -lpthread -lresolv 
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spfquery_static spfquery.o ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o spfquery_static spfquery.o  ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/spfquery spfquery.o  ../../src/libspf2/.libs/libspf2.so -lpthread -lresolv
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+Making all in spftest
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src/include   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spftest.o -MD -MP -MF .deps/spftest.Tpo -c -o spftest.o spftest.c
+mv -f .deps/spftest.Tpo .deps/spftest.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spftest spftest.o ../../src/libspf2/libspf2.la -lpthread -lresolv 
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spftest_static spftest.o ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o spftest_static spftest.o  ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/spftest spftest.o  ../../src/libspf2/.libs/libspf2.so -lpthread -lresolv
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+Making all in spfd
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spfd.o -MD -MP -MF .deps/spfd.Tpo -c -o spfd.o spfd.c
+mv -f .deps/spfd.Tpo .deps/spfd.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spfd spfd.o ../../src/libspf2/libspf2.la -lpthread -lresolv 
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spfd_static spfd.o ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o spfd_static spfd.o  ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/spfd spfd.o  ../../src/libspf2/.libs/libspf2.so -lpthread -lresolv
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+Making all in spf_example
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+cc -DHAVE_CONFIG_H -I. -I../..  -I../../src/include -I../../src/include   -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -MT spf_example.o -MD -MP -MF .deps/spf_example.Tpo -c -o spf_example.o spf_example.c
+mv -f .deps/spf_example.Tpo .deps/spf_example.Po
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall  -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spf_example spf_example.o ../../src/libspf2/libspf2.la -lpthread -lresolv 
+/bin/sh ../../libtool  --tag=CC   --mode=link cc  -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -static -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o spf_example_static spf_example.o ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv 
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o spf_example_static spf_example.o  ../../src/libspf2/.libs/libspf2.a -lpthread -lresolv
+libtool: link: cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -Wall -Wl,--as-needed -Wl,-O1 -Wl,--sort-common -Wl,-z -Wl,pack-relative-relocs -o .libs/spf_example spf_example.o  ../../src/libspf2/.libs/libspf2.so -lpthread -lresolv
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+make[1]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+>>> libspf2: Entering fakeroot...
+Making install in src
+make[1]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+Making install in include
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/tmp/pkg/libspf2/usr/include/spf2'
+ /usr/bin/install -c -m 644 spf.h spf_dns.h spf_dns_cache.h spf_dns_null.h spf_dns_resolv.h spf_dns_rr.h spf_dns_test.h spf_dns_zone.h spf_lib_version.h spf_log.h spf_record.h spf_request.h spf_response.h spf_server.h '/tmp/pkg/libspf2/usr/include/spf2'
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/include'
+Making install in libspf2
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/libspf2/usr/lib'
+ /bin/sh ../../libtool   --mode=install /usr/bin/install -c   libspf2.la '/tmp/pkg/libspf2/usr/lib'
+libtool: install: /usr/bin/install -c .libs/libspf2.so.2.1.0 /tmp/pkg/libspf2/usr/lib/libspf2.so.2.1.0
+libtool: install: (cd /tmp/pkg/libspf2/usr/lib && { ln -s -f libspf2.so.2.1.0 libspf2.so.2 || { rm -f libspf2.so.2 && ln -s libspf2.so.2.1.0 libspf2.so.2; }; })
+libtool: install: (cd /tmp/pkg/libspf2/usr/lib && { ln -s -f libspf2.so.2.1.0 libspf2.so || { rm -f libspf2.so && ln -s libspf2.so.2.1.0 libspf2.so; }; })
+libtool: install: /usr/bin/install -c .libs/libspf2.lai /tmp/pkg/libspf2/usr/lib/libspf2.la
+libtool: install: /usr/bin/install -c .libs/libspf2.a /tmp/pkg/libspf2/usr/lib/libspf2.a
+libtool: install: chmod 644 /tmp/pkg/libspf2/usr/lib/libspf2.a
+libtool: install: ranlib /tmp/pkg/libspf2/usr/lib/libspf2.a
+libtool: warning: remember to run 'libtool --finish /usr/lib'
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/libspf2'
+Making install in spfquery
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/libspf2/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c spfquery spfquery_static '/tmp/pkg/libspf2/usr/bin'
+libtool: warning: '../../src/libspf2/libspf2.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/spfquery /tmp/pkg/libspf2/usr/bin/spfquery
+libtool: install: /usr/bin/install -c spfquery_static /tmp/pkg/libspf2/usr/bin/spfquery_static
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfquery'
+Making install in spftest
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/libspf2/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c spftest spftest_static '/tmp/pkg/libspf2/usr/bin'
+libtool: warning: '../../src/libspf2/libspf2.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/spftest /tmp/pkg/libspf2/usr/bin/spftest
+libtool: install: /usr/bin/install -c spftest_static /tmp/pkg/libspf2/usr/bin/spftest_static
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spftest'
+Making install in spfd
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/libspf2/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c spfd spfd_static '/tmp/pkg/libspf2/usr/bin'
+libtool: warning: '../../src/libspf2/libspf2.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/spfd /tmp/pkg/libspf2/usr/bin/spfd
+libtool: install: /usr/bin/install -c spfd_static /tmp/pkg/libspf2/usr/bin/spfd_static
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spfd'
+Making install in spf_example
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[4]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[4]: Nothing to be done for 'install-data-am'.
+ /bin/mkdir -p '/tmp/pkg/libspf2/usr/bin'
+  /bin/sh ../../libtool   --mode=install /usr/bin/install -c spf_example spf_example_static '/tmp/pkg/libspf2/usr/bin'
+libtool: warning: '../../src/libspf2/libspf2.la' has not been installed in '/usr/lib'
+libtool: install: /usr/bin/install -c .libs/spf_example /tmp/pkg/libspf2/usr/bin/spf_example
+libtool: install: /usr/bin/install -c spf_example_static /tmp/pkg/libspf2/usr/bin/spf_example_static
+make[4]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src/spf_example'
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[3]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[1]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b/src'
+make[1]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+make[2]: Entering directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+make[1]: Leaving directory '/tmp/src/libspf2-8131fe140704eaae695e76b5cd09e39bd1dd220b'
+>>> libspf2-dev*: Running split function dev...
+'usr/include' -> '/tmp/pkg/libspf2-dev/usr/include'
+'usr/lib/libspf2.a' -> '/tmp/pkg/libspf2-dev/usr/lib/libspf2.a'
+'usr/lib/libspf2.so' -> '/tmp/pkg/libspf2-dev/usr/lib/libspf2.so'
+>>> libspf2-dev*: Preparing subpackage libspf2-dev...
+>>> libspf2-dev*: Stripping binaries
+>>> libspf2-dev*: Running postcheck for libspf2-dev
+>>> libspf2-tools*: Running split function tools...
+>>> libspf2-tools*: Preparing subpackage libspf2-tools...
+>>> libspf2-tools*: Stripping binaries
+>>> libspf2-tools*: Running postcheck for libspf2-tools
+>>> libspf2*: Running postcheck for libspf2
+>>> libspf2*: Preparing package libspf2...
+>>> libspf2*: Stripping binaries
+>>> libspf2-dev*: Scanning shared objects
+>>> libspf2-tools*: Scanning shared objects
+>>> libspf2*: Scanning shared objects
+>>> libspf2-dev*: Tracing dependencies...
+	libspf2=1.2.11-r4
+>>> libspf2-dev*: Package size: 233.6 KB
+>>> libspf2-dev*: Compressing data...
+>>> libspf2-dev*: Create checksum...
+>>> libspf2-dev*: Create libspf2-dev-1.2.11-r4.apk
+>>> libspf2-tools*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libspf2.so.2
+>>> libspf2-tools*: Package size: 44.5 KB
+>>> libspf2-tools*: Compressing data...
+>>> libspf2-tools*: Create checksum...
+>>> libspf2-tools*: Create libspf2-tools-1.2.11-r4.apk
+>>> libspf2*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+>>> libspf2*: Package size: 93.7 KB
+>>> libspf2*: Compressing data...
+>>> libspf2*: Create checksum...
+>>> libspf2*: Create libspf2-1.2.11-r4.apk
+>>> libspf2: Updating the main/x86_64 repository index...
+>>> libspf2: Signing the index...
+>>> libspf2: Cleaning up srcdir
+>>> libspf2: Cleaning up build chroot
+>>> libspf2: Cleaning up pkgdir

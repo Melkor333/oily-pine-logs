@@ -1,0 +1,1989 @@
+>>> sqlite-tools: Validating /home/packager/oily-pine/main/sqlite-tools/APKBUILD...
+>>> sqlite-tools: Cleaning up srcdir
+>>> sqlite-tools: Cleaning up pkgdir
+>>> sqlite-tools: Cleaning up tmpdir
+>>> sqlite-tools: Fetching https://www.sqlite.org/2025/sqlite-src-3490200.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  6 13.7M    6  848k    0     0   799k      0  0:00:17  0:00:01  0:00:16  799k100 13.7M  100 13.7M    0     0  6943k      0  0:00:02  0:00:02 --:--:-- 6947k
+>>> sqlite-tools: Fetching https://www.sqlite.org/2025/sqlite-src-3490200.zip
+>>> sqlite-tools: Checking sha512sums...
+sqlite-src-3490200.zip: OK
+date4-test-musl.patch: OK
+stdout-invalid-argument.patch: OK
+tclsqlite-include-stdint.patch: OK
+>>> sqlite-tools: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/93) Installing musl (1.2.5-r10)
+(2/93) Installing libcrypto3 (3.5.0-r0)
+(3/93) Installing ca-certificates-bundle (20241121-r2)
+(4/93) Installing libssl3 (3.5.0-r0)
+(5/93) Installing zlib (1.3.1-r2)
+(6/93) Installing libapk2 (2.14.9-r2)
+(7/93) Installing apk-tools (2.14.9-r2)
+(8/93) Installing libcap2 (2.76-r0)
+(9/93) Installing libcap-getcap (2.76-r0)
+(10/93) Installing fakeroot (1.37.1.1-r0)
+(11/93) Installing scanelf (1.3.8-r1)
+(12/93) Installing musl-utils (1.2.5-r10)
+(13/93) Installing libgcc (14.3.0-r1)
+(14/93) Installing libstdc++ (14.3.0-r1)
+(15/93) Installing lzip (1.25-r0)
+(16/93) Installing openssl (3.5.0-r0)
+(17/93) Installing patch (2.8-r0)
+(18/93) Installing pkgconf (2.4.3-r0)
+(19/93) Installing acl-libs (2.3.2-r1)
+(20/93) Installing tar (1.35-r3)
+(21/93) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/93) Installing ssl_client (1.37.0-r18)
+(23/93) Installing busybox-binsh (1.37.0-r18)
+(24/93) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/93) Installing abuild-sudo (3.15.0-r0)
+(26/93) Installing alpine-baselayout-data (3.7.0-r0)
+(27/93) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/93) Installing bridge (1.5-r5)
+(29/93) Installing ifupdown-ng (0.12.1-r7)
+(30/93) Installing openrc-user (0.62.2-r2)
+(31/93) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/93) Installing mdev-conf (4.8-r0)
+(33/93) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/93) Installing alpine-conf (3.20.0-r0)
+(35/93) Installing alpine-keys (2.5-r0)
+(36/93) Installing alpine-release (3.22.0-r0)
+(37/93) Installing busybox-openrc (1.37.0-r18)
+(38/93) Installing busybox-suid (1.37.0-r18)
+(39/93) Installing alpine-base (3.22.0-r0)
+(40/93) Installing m4 (1.4.20-r0)
+(41/93) Installing libbz2 (1.0.8-r6)
+(42/93) Installing perl (5.40.2-r0)
+(43/93) Installing autoconf (2.72-r1)
+(44/93) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(45/93) Installing libncursesw (6.5_p20250503-r0)
+(46/93) Installing readline (8.2.13-r1)
+(47/93) Installing bash (5.2.37-r0)
+Executing bash-5.2.37-r0.post-install
+(48/93) Installing jansson (2.14.1-r0)
+(49/93) Installing zstd-libs (1.5.7-r0)
+(50/93) Installing binutils (2.44-r0)
+(51/93) Installing libmagic (5.46-r2)
+(52/93) Installing file (5.46-r2)
+(53/93) Installing libgomp (14.3.0-r1)
+(54/93) Installing libatomic (14.3.0-r1)
+(55/93) Installing gmp (6.3.0-r3)
+(56/93) Installing isl26 (0.26-r1)
+(57/93) Installing mpfr4 (4.2.1_p1-r0)
+(58/93) Installing mpc1 (1.3.1-r1)
+(59/93) Installing gcc (14.3.0-r1)
+(60/93) Installing libstdc++-dev (14.3.0-r1)
+(61/93) Installing musl-dev (1.2.5-r10)
+(62/93) Installing g++ (14.3.0-r1)
+(63/93) Installing make (4.4.1-r3)
+(64/93) Installing fortify-headers (1.1-r5)
+(65/93) Installing build-base (0.5-r3)
+(66/93) Installing brotli-libs (1.1.0-r2)
+(67/93) Installing c-ares (1.34.5-r0)
+(68/93) Installing libunistring (1.3-r0)
+(69/93) Installing libidn2 (2.3.7-r0)
+(70/93) Installing nghttp2-libs (1.65.0-r0)
+(71/93) Installing libpsl (0.21.5-r3)
+(72/93) Installing libcurl (8.14.0-r2)
+(73/93) Installing libexpat (2.7.1-r0)
+(74/93) Installing pcre2 (10.43-r1)
+(75/93) Installing git (2.49.0-r0)
+(76/93) Installing git-init-template (2.49.0-r0)
+(77/93) Installing perl-error (0.17030-r0)
+(78/93) Installing perl-git (2.49.0-r0)
+(79/93) Installing git-perl (2.49.0-r0)
+(80/93) Installing libhistory (8.2.13-r1)
+(81/93) Installing libformw (6.5_p20250503-r0)
+(82/93) Installing libmenuw (6.5_p20250503-r0)
+(83/93) Installing libpanelw (6.5_p20250503-r0)
+(84/93) Installing libncurses++ (6.5_p20250503-r0)
+(85/93) Installing ncurses-dev (6.5_p20250503-r0)
+(86/93) Installing readline-dev (8.2.13-r1)
+(87/93) Installing sqlite (3.50.0-r0)
+(88/93) Installing sqlite-libs (3.50.0-r0)
+(89/93) Installing sqlite-dev (3.50.0-r0)
+(90/93) Installing tzdata (2025b-r0)
+(91/93) Installing tcl (8.6.16-r0)
+(92/93) Installing zlib-dev (1.3.1-r2)
+(93/93) Installing tcl-dev (8.6.16-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 310 MiB in 93 packages
+>>> sqlite-tools: Fetching https://www.sqlite.org/2025/sqlite-src-3490200.zip
+>>> sqlite-tools: Checking sha512sums...
+sqlite-src-3490200.zip: OK
+date4-test-musl.patch: OK
+stdout-invalid-argument.patch: OK
+tclsqlite-include-stdint.patch: OK
+>>> sqlite-tools: Unpacking /var/cache/distfiles/sqlite-src-3490200.zip...
+>>> sqlite-tools: date4-test-musl.patch
+patching file test/date4.test
+>>> sqlite-tools: stdout-invalid-argument.patch
+patching file test/tester.tcl
+Hunk #1 succeeded at 1556 (offset -29 lines).
+>>> sqlite-tools: tclsqlite-include-stdint.patch
+patching file src/tclsqlite.c
+Hunk #1 succeeded at 77 (offset 9 lines).
+>>> sqlite-tools: TEA version number ok
+created directory: 'autoconf/tea/generic'
+Configuring SQLite version 3.49.2
+Host System...x86_64-alpine-linux-musl
+Build System...x86_64-alpine-linux-musl
+Source dir = /tmp/src/sqlite-src-3490200
+Build dir  = /tmp/src/sqlite-src-3490200
+C compiler... cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_ENABLE_FTS3_PARENTHESIS 	-DSQLITE_ENABLE_COLUMN_METADATA 	-DSQLITE_SECURE_DELETE 	-DSQLITE_ENABLE_UNLOCK_NOTIFY 	-DSQLITE_ENABLE_RTREE 	-DSQLITE_ENABLE_GEOPOLY 	-DSQLITE_USE_URI 	-DSQLITE_ENABLE_DBSTAT_VTAB 	-DSQLITE_SOUNDEX 	-DSQLITE_MAX_VARIABLE_NUMBER=250000 
+C++ compiler... c++ -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt 
+Build C compiler...cc
+Checking for stdlib.h...ok
+Warning: Failed to find x86_64-alpine-linux-musl-ld, falling back to ld which may be incorrect
+Warning: Failed to find x86_64-alpine-linux-musl-ar, falling back to ar which may be incorrect
+Looking for install ... /usr/bin/install
+Checking for int8_t...ok
+Checking for int16_t...ok
+Checking for int32_t...ok
+Checking for int64_t...ok
+Checking for intptr_t...ok
+Checking for uint8_t...ok
+Checking for uint16_t...ok
+Checking for uint32_t...ok
+Checking for uint64_t...ok
+Checking for uintptr_t...ok
+Checking for gmtime_r...ok
+Checking for isnan...not found
+Checking for localtime_r...ok
+Checking for localtime_s...not found
+Checking for malloc_usable_size...ok
+Checking for strchrnul...ok
+Checking for usleep...ok
+Checking for utime...ok
+Checking for pread...ok
+Checking for pread64...not found
+Checking for pwrite...ok
+Checking for pwrite64...not found
+Checking libs for fdatasync...none needed
+Checking libs for nanosleep...none needed
+Checking for sys/types.h...ok
+Checking for sys/stat.h...ok
+Checking for dlfcn.h...ok
+Checking for unistd.h...ok
+Checking for stdlib.h...ok
+Checking for malloc.h...ok
+Checking for memory.h...ok
+Checking for string.h...ok
+Checking for strings.h...ok
+Checking for inttypes.h...ok
+Checking for zlib.h...ok
+Checking libs for deflate...-lz
+Use amalgamation for builds? yes
+Use gcov? no
+test-runner flags: no
+Use #line macros in the amalgamation: no
+Checking for a suitable tcl... 
+Checking for tclsh9.0...no
+Checking for tclsh8.6.../usr/bin/tclsh8.6
+/usr/bin/tclsh8.6 recommends the tclConfig.sh from /usr/lib
+Using tclConfig.sh: /usr/lib/tclConfig.sh
+Using tclsh: /usr/bin/tclsh8.6
+Checking for TCL to use for code generation... 
+Checking for dirent.h...ok
+Checking for sys/time.h...ok
+Checking for realpath...ok
+TCL for code generation: jimsh
+Emscripten SDK? not found
+Checking for sys/types.h...(cached) ok
+Checking if -D_FILE_OFFSET_BITS=64 is needed...no
+Build shared library? yes
+Build static library? yes
+SQLITE_DEBUG build? no
+Checking whether the C compiler accepts -rpath /usr/lib...no
+Checking whether the C compiler accepts -Wl,-rpath,/usr/lib...yes
+Checking whether the C compiler accepts -Wl,-soname,libsqlite3.so.0...yes
+Setting SONAME using: -Wl,-soname,libsqlite3.so.0
+Support threadsafe operation? Checking for libs...
+Checking libs for pthread_create...none needed
+Checking libs for pthread_mutexattr_init...none needed
+Checking for line-editing capability...
+Checking libs for tgetent...-lncurses
+Checking libs for readline...-lreadline
+Using readline flags: -I/usr/include -lreadline -lncurses
+Line-editing support for the sqlite3 shell: readline
+Checking libs for dlopen...none needed
+Loadable extension support enabled.
+Checking libs for ceil...none needed
+Enabling math SQL functions 
+ICU support is disabled.
+Feature flags...
+  + fts3
+  + fts4
+  + fts5
+  - geopoly
+  - rtree
+  + session
+  - update-limit
+  - memsys5
+  - memsys3
+  - scanstatus
+  + json
+Library feature flags: -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1
+Shell options: -DHAVE_READLINE=1 -DSQLITE_HAVE_ZLIB=1
+Created Makefile from Makefile.in
+Created sqlite3.pc from sqlite3.pc.in
+Created sqlite_cfg.h
+>>> sqlite-tools: Building sqlite3_analyzer
+Created .tclenv.sh
+cc -g -o mkkeywordhash -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1   /tmp/src/sqlite-src-3490200/tool/mkkeywordhash.c
+cc -g -o jimsh -O1 -DHAVE_REALPATH /tmp/src/sqlite-src-3490200/autosetup/jimsh0.c
+cc -g -o src-verify /tmp/src/sqlite-src-3490200/tool/src-verify.c
+touch .main.mk.checks
+cc -g -o lemon /tmp/src/sqlite-src-3490200/tool/lemon.c
+cc -g -o mksourceid /tmp/src/sqlite-src-3490200/tool/mksourceid.c
+./mkkeywordhash > keywordhash.h
+cp /tmp/src/sqlite-src-3490200/tool/lempar.c .
+cp /tmp/src/sqlite-src-3490200/src/parse.y .
+cp /tmp/src/sqlite-src-3490200/ext/fts5/fts5parse.y .
+./lemon -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1   -S parse.y
+rm -f fts5parse.h
+./lemon  -S fts5parse.y
+cat parse.h /tmp/src/sqlite-src-3490200/src/vdbe.c | ./jimsh /tmp/src/sqlite-src-3490200/tool/mkopcodeh.tcl >opcodes.h
+./jimsh /tmp/src/sqlite-src-3490200/tool/mkshellc.tcl shell.c
+./jimsh /tmp/src/sqlite-src-3490200/tool/mksqlite3h.tcl /tmp/src/sqlite-src-3490200 -o sqlite3.h
+./jimsh /tmp/src/sqlite-src-3490200/ext/fts5/tool/mkfts5c.tcl
+./jimsh /tmp/src/sqlite-src-3490200/tool/mkopcodec.tcl opcodes.h >opcodes.c
+cp /tmp/src/sqlite-src-3490200/ext/fts5/fts5.h .
+rm -rf tsrc
+mkdir tsrc
+cp -f /tmp/src/sqlite-src-3490200/src/alter.c /tmp/src/sqlite-src-3490200/src/analyze.c /tmp/src/sqlite-src-3490200/src/attach.c /tmp/src/sqlite-src-3490200/src/auth.c /tmp/src/sqlite-src-3490200/src/backup.c /tmp/src/sqlite-src-3490200/src/bitvec.c /tmp/src/sqlite-src-3490200/src/btmutex.c /tmp/src/sqlite-src-3490200/src/btree.c /tmp/src/sqlite-src-3490200/src/btree.h /tmp/src/sqlite-src-3490200/src/btreeInt.h /tmp/src/sqlite-src-3490200/src/build.c /tmp/src/sqlite-src-3490200/src/callback.c /tmp/src/sqlite-src-3490200/src/complete.c /tmp/src/sqlite-src-3490200/src/ctime.c /tmp/src/sqlite-src-3490200/src/date.c /tmp/src/sqlite-src-3490200/src/dbpage.c /tmp/src/sqlite-src-3490200/src/dbstat.c /tmp/src/sqlite-src-3490200/src/delete.c /tmp/src/sqlite-src-3490200/src/expr.c /tmp/src/sqlite-src-3490200/src/fault.c /tmp/src/sqlite-src-3490200/src/fkey.c /tmp/src/sqlite-src-3490200/src/func.c /tmp/src/sqlite-src-3490200/src/global.c /tmp/src/sqlite-src-3490200/src/hash.c /tmp/src/sqlite-src-3490200/src/hash.h /tmp/src/sqlite-src-3490200/src/hwtime.h /tmp/src/sqlite-src-3490200/src/insert.c /tmp/src/sqlite-src-3490200/src/json.c /tmp/src/sqlite-src-3490200/src/legacy.c /tmp/src/sqlite-src-3490200/src/loadext.c /tmp/src/sqlite-src-3490200/src/main.c /tmp/src/sqlite-src-3490200/src/malloc.c /tmp/src/sqlite-src-3490200/src/mem0.c /tmp/src/sqlite-src-3490200/src/mem1.c /tmp/src/sqlite-src-3490200/src/mem2.c /tmp/src/sqlite-src-3490200/src/mem3.c /tmp/src/sqlite-src-3490200/src/mem5.c /tmp/src/sqlite-src-3490200/src/memdb.c /tmp/src/sqlite-src-3490200/src/memjournal.c /tmp/src/sqlite-src-3490200/src/msvc.h /tmp/src/sqlite-src-3490200/src/mutex.c /tmp/src/sqlite-src-3490200/src/mutex.h /tmp/src/sqlite-src-3490200/src/mutex_noop.c /tmp/src/sqlite-src-3490200/src/mutex_unix.c /tmp/src/sqlite-src-3490200/src/mutex_w32.c /tmp/src/sqlite-src-3490200/src/notify.c /tmp/src/sqlite-src-3490200/src/os.c /tmp/src/sqlite-src-3490200/src/os.h /tmp/src/sqlite-src-3490200/src/os_common.h /tmp/src/sqlite-src-3490200/src/os_setup.h /tmp/src/sqlite-src-3490200/src/os_kv.c /tmp/src/sqlite-src-3490200/src/os_unix.c /tmp/src/sqlite-src-3490200/src/os_win.c /tmp/src/sqlite-src-3490200/src/os_win.h /tmp/src/sqlite-src-3490200/src/pager.c /tmp/src/sqlite-src-3490200/src/pager.h /tmp/src/sqlite-src-3490200/src/parse.y /tmp/src/sqlite-src-3490200/src/pcache.c /tmp/src/sqlite-src-3490200/src/pcache.h /tmp/src/sqlite-src-3490200/src/pcache1.c /tmp/src/sqlite-src-3490200/src/pragma.c /tmp/src/sqlite-src-3490200/src/pragma.h /tmp/src/sqlite-src-3490200/src/prepare.c /tmp/src/sqlite-src-3490200/src/printf.c /tmp/src/sqlite-src-3490200/src/random.c /tmp/src/sqlite-src-3490200/src/resolve.c /tmp/src/sqlite-src-3490200/src/rowset.c /tmp/src/sqlite-src-3490200/src/select.c /tmp/src/sqlite-src-3490200/src/status.c /tmp/src/sqlite-src-3490200/src/shell.c.in /tmp/src/sqlite-src-3490200/src/sqlite.h.in /tmp/src/sqlite-src-3490200/src/sqlite3ext.h /tmp/src/sqlite-src-3490200/src/sqliteInt.h /tmp/src/sqlite-src-3490200/src/sqliteLimit.h /tmp/src/sqlite-src-3490200/src/table.c /tmp/src/sqlite-src-3490200/src/tclsqlite.c /tmp/src/sqlite-src-3490200/src/threads.c /tmp/src/sqlite-src-3490200/src/tokenize.c /tmp/src/sqlite-src-3490200/src/treeview.c /tmp/src/sqlite-src-3490200/src/trigger.c /tmp/src/sqlite-src-3490200/src/utf.c /tmp/src/sqlite-src-3490200/src/update.c /tmp/src/sqlite-src-3490200/src/upsert.c /tmp/src/sqlite-src-3490200/src/util.c /tmp/src/sqlite-src-3490200/src/vacuum.c /tmp/src/sqlite-src-3490200/src/vdbe.c /tmp/src/sqlite-src-3490200/src/vdbe.h /tmp/src/sqlite-src-3490200/src/vdbeapi.c /tmp/src/sqlite-src-3490200/src/vdbeaux.c /tmp/src/sqlite-src-3490200/src/vdbeblob.c /tmp/src/sqlite-src-3490200/src/vdbemem.c /tmp/src/sqlite-src-3490200/src/vdbesort.c /tmp/src/sqlite-src-3490200/src/vdbetrace.c /tmp/src/sqlite-src-3490200/src/vdbevtab.c /tmp/src/sqlite-src-3490200/src/vdbeInt.h /tmp/src/sqlite-src-3490200/src/vtab.c /tmp/src/sqlite-src-3490200/src/vxworks.h /tmp/src/sqlite-src-3490200/src/wal.c /tmp/src/sqlite-src-3490200/src/wal.h /tmp/src/sqlite-src-3490200/src/walker.c /tmp/src/sqlite-src-3490200/src/where.c /tmp/src/sqlite-src-3490200/src/wherecode.c /tmp/src/sqlite-src-3490200/src/whereexpr.c /tmp/src/sqlite-src-3490200/src/whereInt.h /tmp/src/sqlite-src-3490200/src/window.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3.h /tmp/src/sqlite-src-3490200/ext/fts3/fts3Int.h /tmp/src/sqlite-src-3490200/ext/fts3/fts3_aux.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_expr.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_hash.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_hash.h /tmp/src/sqlite-src-3490200/ext/fts3/fts3_icu.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_porter.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_snippet.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_tokenizer.h /tmp/src/sqlite-src-3490200/ext/fts3/fts3_tokenizer.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_tokenizer1.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_tokenize_vtab.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_unicode.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_unicode2.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_write.c /tmp/src/sqlite-src-3490200/ext/icu/sqliteicu.h /tmp/src/sqlite-src-3490200/ext/icu/icu.c /tmp/src/sqlite-src-3490200/ext/rtree/rtree.h /tmp/src/sqlite-src-3490200/ext/rtree/rtree.c /tmp/src/sqlite-src-3490200/ext/rtree/geopoly.c /tmp/src/sqlite-src-3490200/ext/session/sqlite3session.c /tmp/src/sqlite-src-3490200/ext/session/sqlite3session.h /tmp/src/sqlite-src-3490200/ext/rbu/sqlite3rbu.h /tmp/src/sqlite-src-3490200/ext/rbu/sqlite3rbu.c /tmp/src/sqlite-src-3490200/ext/misc/stmt.c keywordhash.h opcodes.c opcodes.h parse.c parse.h sqlite_cfg.h shell.c sqlite3.h tsrc
+rm -f tsrc/sqlite.h.in tsrc/parse.y
+./jimsh /tmp/src/sqlite-src-3490200/tool/vdbe-compress.tcl  <tsrc/vdbe.c >vdbe.new
+mv -f vdbe.new tsrc/vdbe.c
+cp fts5.c fts5.h tsrc
+touch .target_source
+./jimsh /tmp/src/sqlite-src-3490200/tool/mksqlite3c.tcl --linemacros=0 
+cp tsrc/sqlite3ext.h .
+cp /tmp/src/sqlite-src-3490200/ext/session/sqlite3session.h .
+./jimsh /tmp/src/sqlite-src-3490200/tool/mkccode.tcl /tmp/src/sqlite-src-3490200/tool/sqlite3_analyzer.c.in \
+	 \
+	-DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1  \
+	> sqlite3_analyzer.c
+cc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_SECURE_DELETE -DSQLITE_USE_URI -DSQLITE_SOUNDEX -DSQLITE_MAX_VARIABLE_NUMBER=250000  -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1   -DNDEBUG -D_HAVE_SQLITE_CONFIG_H -DBUILD_sqlite -I. -I/tmp/src/sqlite-src-3490200/src -I/tmp/src/sqlite-src-3490200/ext/rtree -I/tmp/src/sqlite-src-3490200/ext/icu -I/tmp/src/sqlite-src-3490200/ext/fts3 -I/tmp/src/sqlite-src-3490200/ext/session -I/tmp/src/sqlite-src-3490200/ext/misc -c sqlite3.c
+cc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_SECURE_DELETE -DSQLITE_USE_URI -DSQLITE_SOUNDEX -DSQLITE_MAX_VARIABLE_NUMBER=250000  -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1   -DNDEBUG -D_HAVE_SQLITE_CONFIG_H -DBUILD_sqlite -I. -I/tmp/src/sqlite-src-3490200/src -I/tmp/src/sqlite-src-3490200/ext/rtree -I/tmp/src/sqlite-src-3490200/ext/icu -I/tmp/src/sqlite-src-3490200/ext/fts3 -I/tmp/src/sqlite-src-3490200/ext/session -I/tmp/src/sqlite-src-3490200/ext/misc  -shared -o libsqlite3.so sqlite3.o -Wl,-rpath,/usr/lib    -lz   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs \
+	 -Wl,-soname,libsqlite3.so.0
+. ./.tclenv.sh || exit $?; cc -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_SECURE_DELETE -DSQLITE_USE_URI -DSQLITE_SOUNDEX -DSQLITE_MAX_VARIABLE_NUMBER=250000  -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1   -DNDEBUG -D_HAVE_SQLITE_CONFIG_H -DBUILD_sqlite -I. -I/tmp/src/sqlite-src-3490200/src -I/tmp/src/sqlite-src-3490200/ext/rtree -I/tmp/src/sqlite-src-3490200/ext/icu -I/tmp/src/sqlite-src-3490200/ext/fts3 -I/tmp/src/sqlite-src-3490200/ext/session -I/tmp/src/sqlite-src-3490200/ext/misc  sqlite3_analyzer.c -o sqlite3_analyzer \
+	-L. -lsqlite3 \
+	$TCL_LIB_SPEC $TCL_INCLUDE_SPEC $TCL_LIBS
+>>> sqlite-tools: Building showdb
+>>> sqlite-tools: Building showjournal
+>>> sqlite-tools: Building showstat4
+>>> sqlite-tools: Building showwal
+>>> sqlite-tools: Building sqldiff
+>>> sqlite-tools: Building testfixture
+sh /tmp/src/sqlite-src-3490200/tool/cktclsh.sh 8.5 /usr/bin/tclsh8.6
+touch has_tclsh85
+. ./.tclenv.sh || exit $?; cc -fPIC -O2 -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_ENABLE_FTS3_PARENTHESIS 	-DSQLITE_ENABLE_COLUMN_METADATA 	-DSQLITE_SECURE_DELETE 	-DSQLITE_ENABLE_UNLOCK_NOTIFY 	-DSQLITE_ENABLE_RTREE 	-DSQLITE_ENABLE_GEOPOLY 	-DSQLITE_USE_URI 	-DSQLITE_ENABLE_DBSTAT_VTAB 	-DSQLITE_SOUNDEX 	-DSQLITE_MAX_VARIABLE_NUMBER=250000 -DSQLITE_ENABLE_COLUMN_METADATA -DSQLITE_ENABLE_DBSTAT_VTAB -DSQLITE_ENABLE_FTS3 -DSQLITE_ENABLE_FTS3_PARENTHESIS -DSQLITE_ENABLE_FTS4 -DSQLITE_ENABLE_FTS5 -DSQLITE_ENABLE_GEOPOLY -DSQLITE_ENABLE_MATH_FUNCTIONS -DSQLITE_ENABLE_PREUPDATE_HOOK -DSQLITE_ENABLE_RTREE -DSQLITE_ENABLE_SESSION -DSQLITE_ENABLE_UNLOCK_NOTIFY -DSQLITE_THREADSAFE=1   -DNDEBUG -D_HAVE_SQLITE_CONFIG_H -DBUILD_sqlite -I. -I/tmp/src/sqlite-src-3490200/src -I/tmp/src/sqlite-src-3490200/ext/rtree -I/tmp/src/sqlite-src-3490200/ext/icu -I/tmp/src/sqlite-src-3490200/ext/fts3 -I/tmp/src/sqlite-src-3490200/ext/session -I/tmp/src/sqlite-src-3490200/ext/misc  -DSQLITE_NO_SYNC=1 -DSQLITE_TEST=1 -DSQLITE_CRASH_TEST=1 -DTCLSH_INIT_PROC=sqlite3TestInit -DSQLITE_SERVER=1 -DSQLITE_PRIVATE="" -DSQLITE_CORE -DBUILD_sqlite -DSQLITE_SERIES_CONSTRAINT_VERIFY=1 -DSQLITE_DEFAULT_PAGE_SIZE=1024 -DSQLITE_ENABLE_STMTVTAB -DSQLITE_ENABLE_DBPAGE_VTAB -DSQLITE_ENABLE_BYTECODE_VTAB -DSQLITE_CKSUMVFS_STATIC -DSQLITE_STATIC_RANDOMJSON -DSQLITE_STRICT_SUBTYPE=1 \
+	-o testfixture /tmp/src/sqlite-src-3490200/src/test1.c /tmp/src/sqlite-src-3490200/src/test2.c /tmp/src/sqlite-src-3490200/src/test3.c /tmp/src/sqlite-src-3490200/src/test4.c /tmp/src/sqlite-src-3490200/src/test5.c /tmp/src/sqlite-src-3490200/src/test6.c /tmp/src/sqlite-src-3490200/src/test8.c /tmp/src/sqlite-src-3490200/src/test9.c /tmp/src/sqlite-src-3490200/src/test_autoext.c /tmp/src/sqlite-src-3490200/src/test_backup.c /tmp/src/sqlite-src-3490200/src/test_bestindex.c /tmp/src/sqlite-src-3490200/src/test_blob.c /tmp/src/sqlite-src-3490200/src/test_btree.c /tmp/src/sqlite-src-3490200/src/test_config.c /tmp/src/sqlite-src-3490200/src/test_delete.c /tmp/src/sqlite-src-3490200/src/test_demovfs.c /tmp/src/sqlite-src-3490200/src/test_devsym.c /tmp/src/sqlite-src-3490200/src/test_fs.c /tmp/src/sqlite-src-3490200/src/test_func.c /tmp/src/sqlite-src-3490200/src/test_hexio.c /tmp/src/sqlite-src-3490200/src/test_init.c /tmp/src/sqlite-src-3490200/src/test_intarray.c /tmp/src/sqlite-src-3490200/src/test_journal.c /tmp/src/sqlite-src-3490200/src/test_malloc.c /tmp/src/sqlite-src-3490200/src/test_md5.c /tmp/src/sqlite-src-3490200/src/test_multiplex.c /tmp/src/sqlite-src-3490200/src/test_mutex.c /tmp/src/sqlite-src-3490200/src/test_onefile.c /tmp/src/sqlite-src-3490200/src/test_osinst.c /tmp/src/sqlite-src-3490200/src/test_pcache.c /tmp/src/sqlite-src-3490200/src/test_quota.c /tmp/src/sqlite-src-3490200/src/test_rtree.c /tmp/src/sqlite-src-3490200/src/test_schema.c /tmp/src/sqlite-src-3490200/src/test_superlock.c /tmp/src/sqlite-src-3490200/src/test_syscall.c /tmp/src/sqlite-src-3490200/src/test_tclsh.c /tmp/src/sqlite-src-3490200/src/test_tclvar.c /tmp/src/sqlite-src-3490200/src/test_thread.c /tmp/src/sqlite-src-3490200/src/test_vdbecov.c /tmp/src/sqlite-src-3490200/src/test_vfs.c /tmp/src/sqlite-src-3490200/src/test_windirent.c /tmp/src/sqlite-src-3490200/src/test_window.c /tmp/src/sqlite-src-3490200/src/test_wsd.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_term.c /tmp/src/sqlite-src-3490200/ext/fts3/fts3_test.c /tmp/src/sqlite-src-3490200/ext/session/test_session.c /tmp/src/sqlite-src-3490200/ext/recover/sqlite3recover.c /tmp/src/sqlite-src-3490200/ext/recover/dbdata.c /tmp/src/sqlite-src-3490200/ext/recover/test_recover.c /tmp/src/sqlite-src-3490200/ext/intck/test_intck.c /tmp/src/sqlite-src-3490200/ext/intck/sqlite3intck.c /tmp/src/sqlite-src-3490200/ext/rbu/test_rbu.c /tmp/src/sqlite-src-3490200/ext/expert/sqlite3expert.c /tmp/src/sqlite-src-3490200/ext/expert/test_expert.c /tmp/src/sqlite-src-3490200/ext/misc/amatch.c /tmp/src/sqlite-src-3490200/ext/misc/appendvfs.c /tmp/src/sqlite-src-3490200/ext/misc/basexx.c /tmp/src/sqlite-src-3490200/ext/misc/carray.c /tmp/src/sqlite-src-3490200/ext/misc/cksumvfs.c /tmp/src/sqlite-src-3490200/ext/misc/closure.c /tmp/src/sqlite-src-3490200/ext/misc/csv.c /tmp/src/sqlite-src-3490200/ext/misc/decimal.c /tmp/src/sqlite-src-3490200/ext/misc/eval.c /tmp/src/sqlite-src-3490200/ext/misc/explain.c /tmp/src/sqlite-src-3490200/ext/misc/fileio.c /tmp/src/sqlite-src-3490200/ext/misc/fuzzer.c /tmp/src/sqlite-src-3490200/ext/fts5/fts5_tcl.c /tmp/src/sqlite-src-3490200/ext/fts5/fts5_test_mi.c /tmp/src/sqlite-src-3490200/ext/fts5/fts5_test_tok.c /tmp/src/sqlite-src-3490200/ext/misc/ieee754.c /tmp/src/sqlite-src-3490200/ext/misc/mmapwarm.c /tmp/src/sqlite-src-3490200/ext/misc/nextchar.c /tmp/src/sqlite-src-3490200/ext/misc/normalize.c /tmp/src/sqlite-src-3490200/ext/misc/percentile.c /tmp/src/sqlite-src-3490200/ext/misc/prefixes.c /tmp/src/sqlite-src-3490200/ext/misc/qpvtab.c /tmp/src/sqlite-src-3490200/ext/misc/randomjson.c /tmp/src/sqlite-src-3490200/ext/misc/regexp.c /tmp/src/sqlite-src-3490200/ext/misc/remember.c /tmp/src/sqlite-src-3490200/ext/misc/series.c /tmp/src/sqlite-src-3490200/ext/misc/spellfix.c /tmp/src/sqlite-src-3490200/ext/misc/stmtrand.c /tmp/src/sqlite-src-3490200/ext/misc/totype.c /tmp/src/sqlite-src-3490200/ext/misc/unionvtab.c /tmp/src/sqlite-src-3490200/ext/misc/wholenumber.c /tmp/src/sqlite-src-3490200/ext/misc/zipfile.c /tmp/src/sqlite-src-3490200/ext/rtree/test_rtreedoc.c /tmp/src/sqlite-src-3490200/src/tclsqlite.c sqlite3.c \
+	$TCL_LIB_SPEC $TCL_INCLUDE_SPEC \
+	-Wl,-rpath,/usr/lib    -lz   -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs
+>>> sqlite-tools: Building libtclsqlite3.so
+checking TEA configuration... ok (TEA 3.13)
+configure: configuring sqlite 3.49.2
+checking system version... Linux-6.12.30-0-lts
+checking for Tcl configuration... found /usr/lib/tclConfig.sh
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking for existence of /usr/lib/tclConfig.sh... loading
+checking platform... unix
+configure: --exec-prefix defaulting to TCL_EXEC_PREFIX /usr
+checking for x86_64-alpine-linux-musl-gcc... (cached) cc
+checking whether the compiler supports GNU C... (cached) yes
+checking whether cc accepts -g... (cached) yes
+checking for cc option to enable C11 features... (cached) none needed
+checking how to run the C preprocessor... cc -E
+checking whether make sets $(MAKE)... yes
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking if the compiler understands -pipe... yes
+checking whether byte ordering is bigendian... no
+checking for sqlite3.h... yes
+checking for sqlite3_initialize in -lsqlite3... yes
+checking for Tcl public headers... /usr/include
+checking for pthread_mutex_init in -lpthread... yes
+checking for building with threads... yes (default)
+checking how to build libraries... shared
+checking for x86_64-alpine-linux-musl-ranlib... ranlib
+checking if 64bit support is requested... no
+checking if 64bit Sparc VIS support is requested... no
+checking if compiler supports visibility "hidden"... yes
+checking if rpath support is requested... yes
+checking system version... (cached) Linux-6.12.30-0-lts
+checking for x86_64-alpine-linux-musl-ar... no
+checking for ar... ar
+checking for cast to union support... yes
+checking for stdbool.h... yes
+checking for required early compiler flags... none
+checking for 64-bit integer type... yes
+checking for build with symbols... no
+checking for egrep -e... /bin/grep -E
+checking for tclsh... /usr/bin/tclsh8.6
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating pkgIndex.tcl
+cc -DPACKAGE_NAME=\"sqlite\" -DPACKAGE_TARNAME=\"sqlite\" -DPACKAGE_VERSION=\"3.49.2\" -DPACKAGE_STRING=\"sqlite\ 3.49.2\" -DPACKAGE_BUGREPORT=\"\" -DPACKAGE_URL=\"\" -DBUILD_sqlite=/\*\*/ -DHAVE_STDIO_H=1 -DHAVE_STDLIB_H=1 -DHAVE_STRING_H=1 -DHAVE_INTTYPES_H=1 -DHAVE_STDINT_H=1 -DHAVE_STRINGS_H=1 -DHAVE_SYS_STAT_H=1 -DHAVE_SYS_TYPES_H=1 -DHAVE_UNISTD_H=1 -DSTDC_HEADERS=1 -DTcl_Size=int -DUSE_SYSTEM_SQLITE=1 -DUSE_THREAD_ALLOC=1 -D_REENTRANT=1 -D_THREAD_SAFE=1 -DTCL_THREADS=1 -DSQLITE_THREADSAFE=1 -DUSE_TCL_STUBS=1 -DUSE_TCLOO_STUBS=1 -DMODULE_SCOPE=extern\ __attribute__\(\(__visibility__\(\"hidden\"\)\)\) -DHAVE_HIDDEN=1 -DHAVE_CAST_TO_UNION=1 -DHAVE_STDBOOL_H=1 -DTCL_WIDE_INT_IS_LONG=1 -DTCL_CFG_OPTIMIZED=1 -DTCL_MAJOR_VERSION=8 -DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS4=1 -DSQLITE_ENABLE_FTS5=1 -DSQLITE_3_SUFFIX_ONLY=1 -DSQLITE_ENABLE_RTREE=1 -DSQLITE_ENABLE_GEOPOLY=1 -DSQLITE_ENABLE_MATH_FUNCTIONS=1 -DSQLITE_ENABLE_DESERIALIZE=1 -DSQLITE_ENABLE_DBPAGE_VTAB=1 -DSQLITE_ENABLE_BYTECODE_VTAB=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -I"/usr/include" -I. -I./..    -O2 -fomit-frame-pointer -DNDEBUG -Wall -fPIC -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_ENABLE_FTS3_PARENTHESIS 	-DSQLITE_ENABLE_COLUMN_METADATA 	-DSQLITE_SECURE_DELETE 	-DSQLITE_ENABLE_UNLOCK_NOTIFY 	-DSQLITE_ENABLE_RTREE 	-DSQLITE_ENABLE_GEOPOLY 	-DSQLITE_USE_URI 	-DSQLITE_ENABLE_DBSTAT_VTAB 	-DSQLITE_SOUNDEX 	-DSQLITE_MAX_VARIABLE_NUMBER=250000 -pipe -O2 -fomit-frame-pointer -DNDEBUG -Wall -fPIC  -c `echo ./generic/tclsqlite3.c` -o tclsqlite3.o
+If you have documentation to create, place the commands to
+build the docs in the 'doc:' target.  For example:
+        xml2nroff sample.xml > sample.n
+        xml2html sample.xml > sample.html
+rm -f libsqlite3.49.2.so
+cc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DSQLITE_ENABLE_FTS3_PARENTHESIS 	-DSQLITE_ENABLE_COLUMN_METADATA 	-DSQLITE_SECURE_DELETE 	-DSQLITE_ENABLE_UNLOCK_NOTIFY 	-DSQLITE_ENABLE_RTREE 	-DSQLITE_ENABLE_GEOPOLY 	-DSQLITE_USE_URI 	-DSQLITE_ENABLE_DBSTAT_VTAB 	-DSQLITE_SOUNDEX 	-DSQLITE_MAX_VARIABLE_NUMBER=250000 -pipe -O2 -fomit-frame-pointer -DNDEBUG -Wall -fPIC   -shared -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -Wl,--export-dynamic   -o libsqlite3.49.2.so tclsqlite3.o -lpthread  -lsqlite3 -L/usr/lib -ltclstub8.6 
+: libsqlite3.49.2.so
+./testfixture /tmp/src/sqlite-src-3490200/test/veryquick.test --verbose=file --output=test-out.txt
+Copying output to file /tmp/src/sqlite-src-3490200/test-out.txt
+Time: expert1.test 109 ms
+-------------------------------------------------
+| id           | hex(block)                     |
+-------------------------------------------------
+| 1            | 0101                           |
+| 10           | 000000000102020002010101020101 |
+| 137438953473 | 0000000D05306161616101020204   |
+| 274877906945 | 0000000D05306161616101030204   |
+-------------------------------------------------
+-------------------------------------------------------
+| id           | hex(block)                           |
+-------------------------------------------------------
+| 1            | 0101                                 |
+| 10           | 000000000103030003010101020101030101 |
+| 137438953473 | 0000000D05306161616101020204         |
+| 274877906945 | 0000000C053061616161010104           |
+| 412316860417 | 0000000D05306161616101020204         |
+-------------------------------------------------------
+-------------------------------------------------
+| id           | hex(block)                     |
+-------------------------------------------------
+| 1            | 0101                           |
+| 10           | 000000000102020002010101020101 |
+| 137438953473 | 0000000D05306161616101020204   |
+| 274877906945 | 0000000D05306161616101030204   |
+-------------------------------------------------
+-------------------------------------------------------
+| id           | hex(block)                           |
+-------------------------------------------------------
+| 1            | 0101                                 |
+| 10           | 000000000103030003010101020101030101 |
+| 137438953473 | 0000000D05306161616101020204         |
+| 274877906945 | 0000000C053061616161010104           |
+| 412316860417 | 0000000D05306161616101020204         |
+-------------------------------------------------------
+-------------------------------------------------
+| id           | hex(block)                     |
+-------------------------------------------------
+| 1            | 0101                           |
+| 10           | 000000000102020002010101020101 |
+| 137438953473 | 0000000B0530616161610104       |
+| 274877906945 | 0000000D05306161616101000004   |
+-------------------------------------------------
+-------------------------------------------------------
+| id           | hex(block)                           |
+-------------------------------------------------------
+| 1            | 0101                                 |
+| 10           | 000000000103030003010101020101030101 |
+| 137438953473 | 0000000B0530616161610104             |
+| 274877906945 | 0000000C053061616161010004           |
+| 412316860417 | 0000000B0530616161610104             |
+-------------------------------------------------------
+Time: fts5aa.test 2706 ms
+Time: fts5ab.test 423 ms
+Time: fts5ad.test 300 ms
+Time: fts5ae.test 37 ms
+Time: fts5af.test 126 ms
+Time: fts5ag.test 119 ms
+Time: fts5ah.test 2358 ms
+Time: fts5ai.test 7 ms
+Time: fts5ak.test 13 ms
+Time: fts5al.test 25 ms
+Time: fts5alter.test 15 ms
+Time: fts5auto.test 1148 ms
+Time: fts5aux.test 19 ms
+Time: fts5aux2.test 5 ms
+Time: fts5auxdata.test 5 ms
+Time: fts5blob.test 12 ms
+Time: fts5cat.test 7 ms
+Time: fts5circref.test 7 ms
+Time: fts5colset.test 8 ms
+Time: fts5columnsize.test 12 ms
+Time: fts5config.test 14 ms
+Time: fts5conflict.test 11 ms
+Time: fts5connect.test 61 ms
+Time: fts5content.test 17 ms
+Time: fts5contentless.test 201 ms
+Time: fts5contentless2.test 1901 ms
+Time: fts5contentless3.test 15 ms
+Time: fts5contentless4.test 2113 ms
+Time: fts5contentless5.test 15 ms
+Time: fts5delete.test 108 ms
+Time: fts5detail.test 16 ms
+Time: fts5determin.test 12 ms
+Time: fts5doclist.test 165 ms
+Time: fts5ea.test 5 ms
+Time: fts5eb.test 13 ms
+Time: fts5expr.test 95 ms
+Time: fts5first.test 7 ms
+Time: fts5full.test 316 ms
+Time: fts5fuzz1.test 7 ms
+Time: fts5hash.test 230 ms
+
+addr  opcode        p1      p2      p3      p4                p5  #
+----  ------------  ------  ------  ------  ----------------  --  -
+0     Init          0       184     181                       0  
+1     Expire        1       1       0                         0  
+2     Integer       99      1       0                         0  
+3     Null          0       8       15                        0  
+4     IntegrityCk   1       7       8       [6,5,4,3,2,0,1]   0  
+5     IsNull        2       11      0                         0  
+6     String8       0       3       0       *** in database main ***
+ 0  
+7     Concat        2       3       3                         0  
+8     ResultRow     3       1       0                         0  
+9     IfPos         1       11      1                         0  
+10    Halt          0       0       0                         0  
+11    String8       0       2       0       wrong # of entries in index  0  
+12    Eq            8       18      8                         0  
+13    String8       0       4       0       sqlite_autoindex_x1_config_1 0  
+14    Concat        4       2       3                         0  
+15    ResultRow     3       1       0                         0  
+16    IfPos         1       18      1                         0  
+17    Halt          0       0       0                         0  
+18    Eq            11      24      11                        0  
+19    String8       0       4       0       sqlite_autoindex_x1_idx_1 0  
+20    Concat        4       2       3                         0  
+21    ResultRow     3       1       0                         0  
+22    IfPos         1       24      1                         0  
+23    Halt          0       0       0                         0  
+24    Null          1       16      16                        0  
+25    OpenRead      2       6       0       k(1,)             0  
+26    Integer       0       7       0                         0  
+27    Integer       0       8       0                         0  
+28    Rewind        2       46      0                         0  
+29      AddImm        7       1       0                         0  
+30      Column        2       1       3                         128  
+31      IdxGT         2       37      16      1                 0  
+32      IsNull        16      37      0                         0  
+33      String8       0       3       0       row not in PRIMARY KEY order for x1_config 0  
+34      ResultRow     3       1       0                         0  
+35      IfPos         1       37      1                         0  
+36      Halt          0       0       0                         0  
+37      Column        2       0       16                        0  
+38      IsType        2       45      0       5                 13  
+39      Column        2       0       3                         0  
+40      NotNull       3       45      0                         0  
+41      String8       0       3       0       NULL value in x1_config.k 0  
+42      ResultRow     3       1       0                         0  
+43      IfPos         1       45      1                         0  
+44      Halt          0       0       0                         0  
+45    Next          2       29      0                         0  
+46    OpenRead      1       5       0       2                 0  
+47    Integer       0       7       0                         0  
+48    Rewind        1       52      0                         0  
+49      AddImm        7       1       0                         0  
+50      Column        1       1       3                         128  
+51    Next          1       49      0                         0  
+52    OpenRead      1       4       0       3                 0  
+53    Integer       0       7       0                         0  
+54    Rewind        1       58      0                         0  
+55      AddImm        7       1       0                         0  
+56      Column        1       2       3                         128  
+57    Next          1       55      0                         0  
+58    Null          1       17      18                        0  
+59    OpenRead      2       3       0       k(2,,)            0  
+60    Integer       0       7       0                         0  
+61    Integer       0       8       0                         0  
+62    Rewind        2       88      0                         0  
+63      AddImm        7       1       0                         0  
+64      Column        2       2       3                         128  
+65      IdxGT         2       71      17      2                 0  
+66      IsNull        17      71      0                         0  
+67      String8       0       3       0       row not in PRIMARY KEY order for x1_idx 0  
+68      ResultRow     3       1       0                         0  
+69      IfPos         1       71      1                         0  
+70      Halt          0       0       0                         0  
+71      Column        2       0       17                        0  
+72      Column        2       1       18                        0  
+73      IsType        2       80      0       5                 13  
+74      Column        2       0       3                         0  
+75      NotNull       3       80      0                         0  
+76      String8       0       3       0       NULL value in x1_idx.segid 0  
+77      ResultRow     3       1       0                         0  
+78      IfPos         1       80      1                         0  
+79      Halt          0       0       0                         0  
+80      IsType        2       87      1       5                 13  
+81      Column        2       1       3                         0  
+82      NotNull       3       87      0                         0  
+83      String8       0       3       0       NULL value in x1_idx.term 0  
+84      ResultRow     3       1       0                         0  
+85      IfPos         1       87      1                         0  
+86      Halt          0       0       0                         0  
+87    Next          2       63      0                         0  
+88    OpenRead      1       2       0       2                 0  
+89    Integer       0       7       0                         0  
+90    Rewind        1       94      0                         0  
+91      AddImm        7       1       0                         0  
+92      Column        1       1       3                         128  
+93    Next          1       91      0                         0  
+94    OpenRead      1       1       0       5                 0  
+95    Integer       0       7       0                         0  
+96    Rewind        1       128     0                         0  
+97      AddImm        7       1       0                         0  
+98      Column        1       4       3                         128  
+99      IsType        1       104     0       5                 28  
+100     String8       0       3       0       NUMERIC value in sqlite_master.type 0  
+101     ResultRow     3       1       0                         0  
+102     IfPos         1       104     1                         0  
+103     Halt          0       0       0                         0  
+104     IsType        1       109     1       5                 28  
+105     String8       0       3       0       NUMERIC value in sqlite_master.name 0  
+106     ResultRow     3       1       0                         0  
+107     IfPos         1       109     1                         0  
+108     Halt          0       0       0                         0  
+109     IsType        1       114     2       5                 28  
+110     String8       0       3       0       NUMERIC value in sqlite_master.tbl_name 0  
+111     ResultRow     3       1       0                         0  
+112     IfPos         1       114     1                         0  
+113     Halt          0       0       0                         0  
+114     IsType        1       122     3       5                 27  
+115     Column        1       3       3                         0  
+116     Affinity      3       1       0       C                 0  
+117     IsType        -1      122     3       5                 28  
+118     String8       0       3       0       TEXT value in sqlite_master.rootpage 0  
+119     ResultRow     3       1       0                         0  
+120     IfPos         1       122     1                         0  
+121     Halt          0       0       0                         0  
+122     IsType        1       127     4       5                 28  
+123     String8       0       3       0       NUMERIC value in sqlite_master.sql 0  
+124     ResultRow     3       1       0                         0  
+125     IfPos         1       127     1                         0  
+126     Halt          0       0       0                         0  
+127   Next          1       97      0                         0  
+128   VCheck        0       3       0       807cb7eaa77f      0  
+129   IsNull        3       133     0                         0  
+130   ResultRow     3       1       0                         0  
+131   IfPos         1       133     1                         0  
+132   Halt          0       0       0                         0  
+133   Null          0       8       9                         0  
+134   IntegrityCk   1       1       8       [1]               1  
+135   IsNull        2       141     0                         0  
+136   String8       0       3       0       *** in database temp ***
+ 0  
+137   Concat        2       3       3                         0  
+138   ResultRow     3       1       0                         0  
+139   IfPos         1       141     1                         0  
+140   Halt          0       0       0                         0  
+141   String8       0       2       0       wrong # of entries in index  0  
+142   OpenRead      1       1       1       5                 0  
+143   Integer       0       7       0                         0  
+144   Rewind        1       176     0                         0  
+145     AddImm        7       1       0                         0  
+146     Column        1       4       3                         128  
+147     IsType        1       152     0       5                 28  
+148     String8       0       3       0       NUMERIC value in sqlite_temp_master.type 0  
+149     ResultRow     3       1       0                         0  
+150     IfPos         1       152     1                         0  
+151     Halt          0       0       0                         0  
+152     IsType        1       157     1       5                 28  
+153     String8       0       3       0       NUMERIC value in sqlite_temp_master.name 0  
+154     ResultRow     3       1       0                         0  
+155     IfPos         1       157     1                         0  
+156     Halt          0       0       0                         0  
+157     IsType        1       162     2       5                 28  
+158     String8       0       3       0       NUMERIC value in sqlite_temp_master.tbl_name 0  
+159     ResultRow     3       1       0                         0  
+160     IfPos         1       162     1                         0  
+161     Halt          0       0       0                         0  
+162     IsType        1       170     3       5                 27  
+163     Column        1       3       3                         0  
+164     Affinity      3       1       0       C                 0  
+165     IsType        -1      170     3       5                 28  
+166     String8       0       3       0       TEXT value in sqlite_temp_master.rootpage 0  
+167     ResultRow     3       1       0                         0  
+168     IfPos         1       170     1                         0  
+169     Halt          0       0       0                         0  
+170     IsType        1       175     4       5                 28  
+171     String8       0       3       0       NUMERIC value in sqlite_temp_master.sql 0  
+172     ResultRow     3       1       0                         0  
+173     IfPos         1       175     1                         0  
+174     Halt          0       0       0                         0  
+175   Next          1       145     0                         0  
+176   AddImm        1       -99     0                         0  
+177   IfNotZero     1       180     0                         0  
+178   String8       0       3       0       ok                0  
+
+179   ResultRow     3       1       0                         0  
+180   Halt          0       0       0                         0  
+181   String8       0       3       0       database disk image is malformed 0  
+182   Goto          0       179     0                         0  
+183   Halt          0       0       0                         0  
+184   Transaction   0       0       6       0                 1  
+185   Transaction   1       0       0       0                 1  
+186   Goto          0       1       0                         0  
+----  ------------  ------  ------  ------  ----------------  --  -
+Time: fts5integrity.test 547 ms
+Time: fts5integrity2.test 6 ms
+Time: fts5interrupt.test 194 ms
+Time: fts5lastrowid.test 5 ms
+Time: fts5leftjoin.test 5 ms
+Time: fts5limits.test 7 ms
+Time: fts5locale.test 53 ms
+Time: fts5matchinfo.test 105 ms
+Time: fts5merge.test 102 ms
+Time: fts5merge2.test 60 ms
+----------------------------------------------------------------------------------------------
+| fts5_source_id()                                                                           |
+----------------------------------------------------------------------------------------------
+| fts5: 2025-05-07 10:39:52 17144570b0d96ae63cd6f3edca39e27ebd74925252bbaf6723bcb2f6b4861fb1 |
+----------------------------------------------------------------------------------------------
+Time: fts5misc.test 61 ms
+Time: fts5multi.test 9 ms
+Time: fts5multiclient.test 30 ms
+Time: fts5near.test 11 ms
+Time: fts5onepass.test 12 ms
+Time: fts5optimize.test 127 ms
+Time: fts5optimize2.test 4974 ms
+Time: fts5optimize3.test 1927 ms
+Time: fts5origintext.test 401 ms
+Time: fts5origintext2.test 7 ms
+Time: fts5origintext3.test 30 ms
+Time: fts5origintext4.test 155 ms
+Time: fts5origintext5.test 4250 ms
+Time: fts5origintext6.test 175 ms
+Time: fts5phrase.test 14 ms
+Time: fts5plan.test 5 ms
+Time: fts5porter.test 553 ms
+Time: fts5porter2.test 4 ms
+Time: fts5prefix2.test 11 ms
+Time: fts5query.test 93 ms
+Time: fts5rank.test 17 ms
+Time: fts5rebuild.test 5 ms
+Time: fts5restart.test 96 ms
+Time: fts5rowid.test 413 ms
+Time: fts5savepoint.test 8 ms
+----------------------------------------------
+| id           | quote(block)                |
+----------------------------------------------
+| 1            | X'0000'                     |
+| 10           | X'000000020101010001010101' |
+| 137438953473 | X'00000004'                 |
+----------------------------------------------
+Time: fts5secure.test 472 ms
+Time: fts5secure2.test 7 ms
+Time: fts5secure3.test 3303 ms
+Time: fts5secure4.test 676 ms
+Time: fts5secure5.test 160 ms
+Time: fts5secure6.test 310 ms
+Time: fts5secure7.test 2027 ms
+Time: fts5secure8.test 6 ms
+Time: fts5simple.test 69 ms
+Time: fts5simple2.test 26 ms
+Time: fts5simple3.test 19 ms
+Time: fts5synonym.test 84 ms
+Time: fts5synonym2.test 1972 ms
+Time: fts5tok1.test 7 ms
+Time: fts5tok2.test 1260 ms
+Time: fts5tokendata.test 9 ms
+Time: fts5tokenizer.test 22 ms
+Time: fts5tokenizer2.test 6 ms
+Time: fts5tokenizer3.test 7 ms
+Time: fts5trigram.test 26 ms
+Time: fts5trigram2.test 9 ms
+Time: fts5ubsan.test 5 ms
+Time: fts5umlaut.test 11 ms
+Time: fts5unicode2.test 160 ms
+Time: fts5unicode3.test 688 ms
+Time: fts5unicode4.test 4 ms
+Time: fts5unindexed.test 7 ms
+Time: fts5unindexed2.test 12 ms
+Time: fts5update.test 1316 ms
+Time: fts5update2.test 26 ms
+Time: fts5version.test 7 ms
+Time: fts5vocab.test 97 ms
+Time: fts5vocab2.test 102 ms
+Time: intck1.test 436 ms
+Time: intck2.test 477 ms
+Time: intckbusy.test 4 ms
+Time: intckcorrupt.test 22 ms
+Time: lsm1_simple.test 3 ms
+Time: rbu1.test 3 ms
+Time: rbu10.test 3 ms
+Time: rbu11.test 3 ms
+Time: rbu12.test 3 ms
+Time: rbu13.test 3 ms
+Time: rbu14.test 3 ms
+Time: rbu3.test 3 ms
+Time: rbu5.test 3 ms
+Time: rbu6.test 3 ms
+Time: rbu7.test 3 ms
+Time: rbu8.test 3 ms
+Time: rbu9.test 3 ms
+Time: rbuA.test 3 ms
+Time: rbuB.test 3 ms
+Time: rbuC.test 3 ms
+Time: rbubusy.test 3 ms
+Time: rbucollate.test 3 ms
+Time: rbudiff.test 3 ms
+Time: rbudor.test 3 ms
+Time: rbuexlock.test 3 ms
+Time: rbuexpr.test 3 ms
+Time: rbufts.test 3 ms
+Time: rbumisc.test 3 ms
+Time: rbumulti.test 3 ms
+Time: rbupartial.test 3 ms
+Time: rbupass.test 3 ms
+Time: rbuprogress.test 3 ms
+Time: rburename.test 3 ms
+Time: rburesume.test 3 ms
+Time: rbusave.test 3 ms
+Time: rbusplit.test 3 ms
+Time: rbutemplimit.test 3 ms
+Time: rbuvacuum.test 3 ms
+Time: rbuvacuum2.test 3 ms
+Time: rbuvacuum3.test 3 ms
+Time: rbuvacuum4.test 3 ms
+Time: recover1.test 100 ms
+Time: recoverbuild.test 5 ms
+Time: recoverclobber.test 5 ms
+Time: recovercorrupt2.test 21 ms
+Time: recovercorrupt3.test 8 ms
+Time: recovercorrupt4.test 6 ms
+Time: recoverold.test 39 ms
+Time: recoverpgsz.test 91 ms
+Time: recoverrowid.test 6 ms
+Time: recoverslowidx.test 6 ms
+Time: recoversql.test 12 ms
+Time: rtree1.test 61 ms
+Time: rtree2.test 319 ms
+Time: rtree5.test 5 ms
+Time: rtree6.test 6 ms
+Time: rtree7.test 9 ms
+Time: rtree8.test 164 ms
+Time: rtree9.test 145 ms
+Time: rtreeA.test 63 ms
+Time: rtreeB.test 4 ms
+Time: rtreeC.test 15 ms
+Time: rtreeD.test 14 ms
+Time: rtreeE.test 227 ms
+Time: rtreeF.test 5 ms
+Time: rtreeG.test 5 ms
+Time: rtreeH.test 104 ms
+Time: rtreeI.test 5 ms
+Time: rtreeJ.test 8 ms
+Time: rtreecheck.test 22 ms
+Time: rtreecirc.test 6 ms
+Time: rtreeconnect.test 5 ms
+Time: rtreedoc.test 92 ms
+Time: rtreedoc2.test 11 ms
+Time: rtreedoc3.test 1175 ms
+Time: rtreefuzz001.test 9 ms
+Time: tkt3363.test 6 ms
+Time: changesetfuzz1.test 3 ms
+Time: session1.test 67 ms
+Time: session2.test 251 ms
+Time: session3.test 9 ms
+Time: session4.test 10 ms
+Time: session5.test 600 ms
+Time: session6.test 6 ms
+Time: session8.test 8 ms
+Time: session9.test 20 ms
+Time: sessionA.test 6 ms
+Time: sessionC.test 7 ms
+Time: sessionD.test 14 ms
+Time: sessionE.test 6 ms
+Time: sessionF.test 11 ms
+Time: sessionG.test 3781 ms
+Time: sessionH.test 242 ms
+Time: session_gen.test 19 ms
+Time: sessionalter.test 50 ms
+Time: sessionat.test 33 ms
+Time: sessionblob.test 42 ms
+Time: sessionchange.test 4 ms
+LOG SQLITE_CONSTRAINT_UNIQUE abort at 12 in [INSERT INTO main."t1"("a", "b", "c") VALUES(?, ?, ?)]: UNIQUE constraint failed: t1.c
+Time: sessionconflict.test 5 ms
+Time: sessiondiff.test 15 ms
+Time: sessioninvert.test 21 ms
+Time: sessionmem.test 5 ms
+Time: sessionnoact.test 13 ms
+Time: sessionnoop.test 7 ms
+Time: sessionnoop2.test 12 ms
+Time: sessionrebase.test 56 ms
+Time: sessionrowid.test 24 ms
+Time: sessionsize.test 7 ms
+Time: sessionstat1.test 15 ms
+Time: sessionwor.test 8 ms
+Time: 8_3_names.test 3 ms
+Time: affinity2.test 6 ms
+Time: affinity3.test 6 ms
+Time: aggerror.test 4 ms
+Time: aggnested.test 12 ms
+Time: aggorderby.test 6 ms
+Time: alias.test 3 ms
+Time: alter.test 30 ms
+Time: alter2.test 12 ms
+Time: alter3.test 25 ms
+Time: alter4.test 18 ms
+Time: alterauth.test 5 ms
+Time: alterauth2.test 5 ms
+Time: altercol.test 67 ms
+Time: altercorrupt.test 5 ms
+Time: alterdropcol.test 117 ms
+Time: alterdropcol2.test 14 ms
+Time: alterlegacy.test 23 ms
+Time: alterqf.test 6 ms
+Time: altertab.test 46 ms
+Time: altertab2.test 23 ms
+Time: altertab3.test 69 ms
+Time: altertrig.test 14 ms
+Query against fts4aux: 73312 microseconds per iteration
+Query against ordinary table: 5437 microseconds per iteration
+Temp table initialized from fts4aux: 3778 microseconds per iteration
+Query against temp table: 5498 microseconds per iteration
+Time: amatch1.test 286 ms
+Time: analyze.test 12 ms
+Time: analyze3.test 3 ms
+Time: analyze4.test 7 ms
+Time: analyze5.test 3 ms
+Time: analyze6.test 3 ms
+Time: analyze7.test 5 ms
+Time: analyze8.test 3 ms
+Time: analyze9.test 4 ms
+Time: analyzeC.test 6 ms
+Time: analyzeD.test 3 ms
+Time: analyzeE.test 3 ms
+Time: analyzeF.test 3 ms
+Time: analyzeG.test 3 ms
+Time: analyzer1.test 11 ms
+Time: atof1.test 1300 ms
+No f2fs atomic-batch-write support. Skipping tests...
+Time: atomic.test 3 ms
+No f2fs atomic-batch-write support. Skipping tests...
+Time: atomic2.test 3 ms
+Time: attach.test 18 ms
+Time: attach2.test 10 ms
+Time: attach3.test 8 ms
+Testing with SQLITE_MAX_ATTACHED=10
+Time: attach4.test 8 ms
+Time: auth.test 28 ms
+Time: auth2.test 5 ms
+Time: auth3.test 5 ms
+Time: autoanalyze1.test 3 ms
+Time: autoinc.test 20 ms
+Time: autoindex1.test 34 ms
+Time: autoindex2.test 7 ms
+Time: autoindex3.test 6 ms
+Time: autoindex4.test 11 ms
+Time: autoindex5.test 7 ms
+Time: autovacuum.test 156 ms
+Time: autovacuum2.test 4 ms
+Time: avfs.test 3 ms
+Time: avtrans.test 638 ms
+WARNING: No historical binaries to test against.
+WARNING: Omitting backwards-compatibility tests
+Time: backcompat.test 4 ms
+Time: backup2.test 314 ms
+Time: backup4.test 6 ms
+Time: backup5.test 4 ms
+Time: badutf.test 4 ms
+Time: badutf2.test 5 ms
+Time: basexx1.test 11 ms
+Time: bestindex1.test 7 ms
+Time: bestindex2.test 5 ms
+Time: bestindex3.test 6 ms
+Time: bestindex4.test 150 ms
+Time: bestindex5.test 6 ms
+Time: bestindex6.test 4 ms
+Time: bestindex7.test 4 ms
+Time: bestindex8.test 10 ms
+Time: bestindex9.test 6 ms
+Time: bestindexA.test 4 ms
+
+addr  opcode        p1      p2      p3      p4                p5  #
+----  ------------  ------  ------  ------  ----------------  --  -
+0     Init          0       17      0                         0  
+
+1     OpenWrite     0       3       0       2                 0  
+2     Null          0       2       0                         0  
+3     Null          0       3       0                         0  
+4     NewRowid      0       1       0                         0  
+5     MakeRecord    2       2       4                         0  
+6     Insert        0       4       1       y2                57  
+7     Copy          1       5       0                         0  
+8     MakeRecord    5       1       6                         0  
+9     NewRowid      2       7       0                         0  
+10    Insert        2       6       7                         0  
+11    FkCheck       0       0       0                         0  
+12    Rewind        2       16      0                         0  
+13      Column        2       0       5                         0  
+14      ResultRow     5       1       0                         0  
+15    Next          2       13      0                         0  
+16    Halt          0       0       0                         0  
+17    Transaction   0       1       4       0                 1  
+18    OpenEphemera  2       1       0                         0  
+19    Goto          0       1       0                         0  
+----  ------------  ------  ------  ------  ----------------  --  -
+Time: bestindexB.test 5 ms
+Time: bestindexC.test 10 ms
+Time: bestindexD.test 4 ms
+Time: between.test 7 ms
+Skipping bigmmap.test - requires SQLITE_MAX_MMAP_SIZE >= 8G
+Time: bigmmap.test 3 ms
+Time: bigrow.test 102 ms
+Time: bind.test 16 ms
+Time: bind2.test 4 ms
+Time: bindxfer.test 4 ms
+Time: bitvec.test 480 ms
+Time: blob.test 5 ms
+Time: bloom1.test 9 ms
+Time: boundary1.test 64 ms
+Time: boundary2.test 129 ms
+Time: boundary3.test 92 ms
+Time: boundary4.test 11 ms
+Time: btree01.test 189 ms
+Time: btree02.test 5 ms
+Time: busy.test 8 ms
+Time: busy2.test 6055 ms
+Time: cache.test 10 ms
+Time: cacheflush.test 13 ms
+Time: cachespill.test 6 ms
+Time: capi2.test 10 ms
+Time: capi3.test 96 ms
+Time: capi3b.test 5 ms
+Time: capi3c.test 98 ms
+Time: capi3d.test 84 ms
+Time: capi3e.test 10 ms
+Time: carray01.test 5 ms
+Time: cast.test 9 ms
+Time: changes.test 58 ms
+Time: changes2.test 5 ms
+Time: check.test 14 ms
+Time: chunksize.test 4 ms
+Time: cksumvfs.test 4 ms
+Time: close.test 5 ms
+Time: closure01.test 306 ms
+Time: coalesce.test 5 ms
+Time: collate1.test 10 ms
+Time: collate2.test 11 ms
+Time: collate3.test 12 ms
+Time: collate4.test 16 ms
+Time: collate5.test 54 ms
+Time: collate6.test 5 ms
+Time: collate7.test 4 ms
+Time: collate8.test 5 ms
+Time: collate9.test 5 ms
+Time: collateA.test 6 ms
+Time: collateB.test 5 ms
+Time: colmeta.test 9 ms
+Time: colname.test 9 ms
+Time: columncount.test 5 ms
+Time: conflict.test 41 ms
+Time: conflict2.test 40 ms
+Time: conflict3.test 13 ms
+Time: contrib01.test 5 ms
+Time: corrupt2.test 27 ms
+Time: corrupt3.test 3 ms
+Time: corrupt4.test 67 ms
+Time: corrupt5.test 4 ms
+Time: corrupt6.test 7 ms
+Time: corrupt7.test 4 ms
+Time: corrupt8.test 29 ms
+Time: corrupt9.test 7 ms
+Time: corruptA.test 5 ms
+Time: corruptB.test 39 ms
+Time: corruptD.test 7 ms
+Time: corruptE.test 11 ms
+Time: corruptF.test 97 ms
+Time: corruptG.test 4 ms
+Time: corruptH.test 7 ms
+Time: corruptI.test 10 ms
+Time: corruptJ.test 5 ms
+Time: corruptK.test 7 ms
+Time: corruptL.test 20 ms
+Time: corruptM.test 8 ms
+Time: corruptN.test 8 ms
+Time: cost.test 15 ms
+Time: count.test 96 ms
+Time: countofview.test 6 ms
+Time: coveridxscan.test 6 ms
+Time: crash8.test 176 ms
+Time: crashM.test 3 ms
+Time: createtab.test 28 ms
+Time: cse.test 19 ms
+Time: csv01.test 108 ms
+Time: ctime.test 12 ms
+Time: cursorhint.test 5 ms
+Time: cursorhint2.test 5 ms
+Time: dataversion1.test 4 ms
+Time: date.test 79 ms
+Time: date2.test 9 ms
+Time: date3.test 6 ms
+Time: date4.test 735 ms
+Time: date5.test 25 ms
+Time: dbdata.test 3 ms
+Time: dbfuzz001.test 5 ms
+Time: dbpage.test 9 ms
+Time: dbstatus.test 6 ms
+Time: dbstatus2.test 5 ms
+Time: decimal.test 23 ms
+Time: delete.test 32 ms
+Time: delete2.test 4 ms
+Time: delete4.test 13 ms
+Time: delete_db.test 12 ms
+Time: descidx1.test 9 ms
+Time: descidx2.test 5 ms
+Time: descidx3.test 5 ms
+Time: diskfull.test 547 ms
+Time: distinct.test 15 ms
+Time: distinct2.test 13 ms
+Time: distinctagg.test 11 ms
+Time: e_blobbytes.test 174 ms
+Time: e_blobclose.test 9 ms
+Time: e_blobopen.test 13 ms
+Time: e_blobwrite.test 6 ms
+Time: e_changes.test 17 ms
+Time: e_createtable.test 109 ms
+Time: e_delete.test 9 ms
+Time: e_droptrigger.test 74 ms
+Time: e_dropview.test 24 ms
+Time: e_expr.test 506 ms
+Time: e_insert.test 17 ms
+Time: e_reindex.test 13 ms
+Time: e_resolve.test 10 ms
+Time: e_select.test 51 ms
+Time: e_select2.test 50 ms
+Time: e_totalchanges.test 11 ms
+Time: e_update.test 14 ms
+Time: e_uri.test 20 ms
+Time: e_vacuum.test 74 ms
+Time: e_wal.test 8 ms
+Time: e_walauto.test 578 ms
+Time: e_walckpt.test 87 ms
+Time: e_walhook.test 5 ms
+Time: emptytable.test 4 ms
+Time: enc.test 18 ms
+Time: enc2.test 16 ms
+Time: enc3.test 5 ms
+Time: enc4.test 35 ms
+Time: eqp.test 11 ms
+Time: eqp2.test 4 ms
+Time: errmsg.test 5 ms
+Time: errofst1.test 4 ms
+Time: eval.test 5 ms
+Time: exclusive.test 9 ms
+Time: exclusive2.test 7 ms
+Time: exec.test 4 ms
+Time: exists.test 61 ms
+Time: expr.test 50 ms
+Time: expr2.test 4 ms
+Time: extension01.test 4 ms
+Time: external_reader.test 9 ms
+Time: fallocate.test 21 ms
+Time: filectrl.test 4 ms
+Time: filefmt.test 13 ms
+Time: filter1.test 10 ms
+Time: filter2.test 5 ms
+Time: fkey1.test 10 ms
+Time: fkey2.test 90 ms
+Time: fkey3.test 8 ms
+Time: fkey4.test 4 ms
+Time: fkey5.test 13 ms
+Time: fkey6.test 9 ms
+Time: fkey7.test 5 ms
+Time: fkey8.test 15 ms
+Time: fordelete.test 7 ms
+Time: format4.test 4 ms
+Time: fpconv1.test 362 ms
+Time: fts-9fd058691.test 6 ms
+Time: fts3aa.test 13 ms
+Time: fts3ab.test 9 ms
+Time: fts3ac.test 10 ms
+Time: fts3ad.test 8 ms
+Time: fts3ae.test 6 ms
+Time: fts3af.test 6 ms
+Time: fts3ag.test 5 ms
+Time: fts3ah.test 5 ms
+Time: fts3ai.test 5 ms
+Time: fts3aj.test 6 ms
+Time: fts3ak.test 5 ms
+Time: fts3al.test 5 ms
+Time: fts3am.test 5 ms
+Time: fts3ao.test 19 ms
+Time: fts3atoken.test 6 ms
+Time: fts3auto.test 343 ms
+Time: fts3aux1.test 17 ms
+Time: fts3aux2.test 6 ms
+Time: fts3b.test 418 ms
+Time: fts3c.test 18 ms
+Time: fts3comp1.test 7 ms
+Time: fts3conf.test 44 ms
+Time: fts3corrupt.test 12 ms
+Time: fts3corrupt3.test 5 ms
+Time: fts3corrupt4.test 93 ms
+Time: fts3corrupt5.test 5 ms
+Time: fts3corrupt6.test 125 ms
+Time: fts3corrupt7.test 7 ms
+Time: fts3d.test 23 ms
+Time: fts3defer2.test 30 ms
+Time: fts3defer3.test 7 ms
+Time: fts3drop.test 5 ms
+Time: fts3dropmod.test 5 ms
+Time: fts3e.test 7 ms
+Time: fts3expr.test 211 ms
+Time: fts3expr2.test 117 ms
+Time: fts3expr3.test 863 ms
+Time: fts3expr4.test 3 ms
+Time: fts3expr5.test 4 ms
+Time: fts3f.test 5 ms
+Time: fts3first.test 11 ms
+Time: fts3fuzz001.test 6 ms
+Time: fts3integrity.test 5 ms
+Time: fts3join.test 8 ms
+Time: fts3matchinfo.test 41 ms
+Time: fts3matchinfo2.test 5 ms
+Time: fts3misc.test 270 ms
+Time: fts3near.test 12 ms
+Time: fts3offsets.test 7 ms
+Time: fts3prefix.test 42 ms
+Time: fts3prefix2.test 18 ms
+Time: fts3query.test 180 ms
+Time: fts3rank.test 5 ms
+Time: fts3shared.test 8 ms
+Time: fts3snippet2.test 9 ms
+Time: fts3tok1.test 6 ms
+Time: fts3varint.test 5 ms
+Time: fts4aa.test 200 ms
+Time: fts4content.test 33 ms
+Time: fts4docid.test 14 ms
+Time: fts4incr.test 142 ms
+Time: fts4intck1.test 6 ms
+Time: fts4lastrowid.test 5 ms
+Time: fts4min.test 5 ms
+Time: fts4noti.test 34 ms
+Time: fts4onepass.test 11 ms
+Time: fts4opt.test 1199 ms
+Time: fts4record.test 6 ms
+Time: fts4rename.test 5 ms
+Time: fts4umlaut.test 11 ms
+Time: fts4unicode.test 254 ms
+Time: fts4upfrom.test 12 ms
+Time: func.test 439 ms
+Time: func2.test 7 ms
+Time: func3.test 5 ms
+Time: func4.test 11 ms
+Time: func5.test 4 ms
+Time: func6.test 3 ms
+Time: func7.test 6 ms
+Time: func8.test 5 ms
+Time: func9.test 4 ms
+Time: fuzz-oss1.test 85 ms
+Time: fuzz2.test 5 ms
+Time: fuzz4.test 5 ms
+Time: fuzzer1.test 58 ms
+Time: gencol1.test 37 ms
+Time: having.test 7 ms
+Time: hexlit.test 7 ms
+Time: hidden.test 3 ms
+Time: hook.test 25 ms
+Time: hook2.test 7 ms
+Time: icu.test 3 ms
+Time: ieee754.test 4 ms
+Time: imposter1.test 6 ms
+Time: in.test 16 ms
+Time: in3.test 13 ms
+Time: in4.test 16 ms
+Time: in5.test 10 ms
+Time: in6.test 6 ms
+Time: in7.test 10 ms
+Time: incrblob.test 19 ms
+Time: incrblob2.test 30 ms
+Time: incrblob3.test 16 ms
+Time: incrblob4.test 9 ms
+Time: incrcorrupt.test 6 ms
+Time: incrvacuum.test 77 ms
+Time: incrvacuum2.test 195 ms
+Time: incrvacuum3.test 280 ms
+Time: index.test 34 ms
+Time: index2.test 90 ms
+Time: index3.test 5 ms
+Time: index4.test 429 ms
+Time: index5.test 2039 ms
+Time: index6.test 21 ms
+Time: index7.test 15 ms
+Time: index8.test 4 ms
+Time: index9.test 5 ms
+Time: indexA.test 19 ms
+Time: indexedby.test 10 ms
+Time: indexexpr1.test 23 ms
+Time: indexexpr2.test 14 ms
+Time: indexexpr3.test 5 ms
+Time: init.test 7 ms
+Time: insert.test 15 ms
+Time: insert2.test 10 ms
+Time: insert3.test 70 ms
+Time: insert4.test 22 ms
+Time: insert5.test 4 ms
+Time: instr.test 8 ms
+Time: intarray.test 56 ms
+Time: interrupt.test 228 ms
+Time: interrupt2.test 10 ms
+Time: intpkey.test 11 ms
+Time: intreal.test 6 ms
+Time: io.test 32 ms
+Time: istrue.test 9 ms
+Time: join.test 31 ms
+Time: join2.test 14 ms
+Time: join3.test 95 ms
+Time: join4.test 4 ms
+Time: join5.test 111 ms
+Time: join6.test 7 ms
+Time: join7.test 37 ms
+Time: join8.test 33 ms
+Time: join9.test 41 ms
+Time: joinA.test 17 ms
+Time: joinB.test 128 ms
+Time: joinC.test 83 ms
+Time: joinD.test 635 ms
+Time: joinE.test 6 ms
+Time: joinF.test 9 ms
+Time: joinH.test 15 ms
+Time: journal1.test 4 ms
+Time: journal2.test 17 ms
+Time: journal3.test 6 ms
+Time: jrnlmode.test 13 ms
+Time: jrnlmode2.test 5 ms
+Time: jrnlmode3.test 16 ms
+Time: json101.test 16 ms
+Time: json102.test 14 ms
+Time: json103.test 5 ms
+Time: json104.test 5 ms
+Time: json105.test 5 ms
+Time: json106.test 3196 ms
+Time: json107.test 4 ms
+Time: json108.test 4 ms
+Time: json501.test 9 ms
+Time: json502.test 4 ms
+Time: jsonb01.test 5 ms
+Time: keyword1.test 29 ms
+Time: lastinsert.test 8 ms
+Time: laststmtchanges.test 7 ms
+ (6 ms - want less than 1000.0)  (5 ms - want less than 1000.0) Time: like.test 22 ms
+Time: like2.test 20 ms
+Time: like3.test 26 ms
+Time: limit.test 25 ms
+Time: limit2.test 12 ms
+Time: literal.test 19 ms
+Time: literal2.test 4 ms
+Time: loadext2.test 4 ms
+Time: lock.test 811 ms
+Time: lock2.test 7 ms
+Time: lock3.test 4 ms
+Time: lock4.test 50 ms
+Time: lock5.test 56 ms
+Time: lock6.test 4 ms
+Time: lock7.test 4 ms
+Time: lookaside.test 5 ms
+VERSION: 3.49.2 2025-05-07 10:39:52 17144570b0d96ae63cd6f3edca39e27ebd74925252bbaf6723bcb2f6b486alt1
+Time: main.test 7 ms
+Time: manydb.test 273 ms
+Time: mem5.test 3 ms
+Time: memdb.test 99 ms
+Time: memdb1.test 20 ms
+Time: memdb2.test 5 ms
+Time: memjournal.test 12 ms
+Time: memjournal2.test 2205 ms
+Time: memsubsys1.test 60 ms
+Time: memsubsys2.test 4 ms
+Time: merge1.test 5 ms
+Time: minmax.test 14 ms
+Time: minmax2.test 10 ms
+Time: minmax3.test 9 ms
+Time: minmax4.test 9 ms
+Time: misc1.test 117 ms
+Time: misc2.test 13 ms
+Time: misc3.test 10 ms
+Time: misc4.test 7 ms
+Time: misc5.test 45 ms
+Time: misc6.test 3 ms
+Time: misc8.test 7 ms
+Time: misuse.test 5 ms
+Time: mjournal.test 5 ms
+Time: mmap1.test 108 ms
+Time: mmap2.test 111 ms
+Time: mmap3.test 11 ms
+Time: mmapcorrupt.test 5 ms
+Time: mmapwarm.test 31 ms
+Time: multiplex.test 413 ms
+Time: multiplex2.test 98 ms
+SQLite compiled without SQLITE_ENABLE_8_3_NAMES. Skipping tests multiplex3-*.
+Time: multiplex3.test 4 ms
+Time: multiplex4.test 11 ms
+Time: mutex1.test 6 ms
+Time: nan.test 23 ms
+Time: nockpt.test 7 ms
+Time: nolock.test 8 ms
+Time: normalize.test 4 ms
+Time: notify1.test 204 ms
+Running sqlite3_blocking_step test for 5 seconds
+Running sqlite3_step test for 5 seconds
+The following test seeks to demonstrate that the sqlite3_unlock_notify()
+interface helps multi-core systems to run more efficiently.  This test
+sometimes fails on single-core machines.
+sqlite3_step 5848 sqlite3_blocking_step 8223
+ blocking: 64.1% non-blocking 23.1% ...Time: notify2.test 9226 ms
+Time: notify3.test 9 ms
+Time: notnull.test 19 ms
+Time: notnull2.test 8 ms
+Time: null.test 8 ms
+Time: nulls1.test 14 ms
+Time: numcast.test 5 ms
+Time: numindex1.test 7 ms
+Time: offset1.test 6 ms
+Time: openv2.test 4 ms
+Time: orderby1.test 199 ms
+Time: orderby2.test 6 ms
+Time: orderby3.test 5 ms
+Time: orderby4.test 5 ms
+Time: orderby5.test 7 ms
+Time: orderby6.test 39 ms
+Time: orderby7.test 5 ms
+Time: orderby8.test 67 ms
+Time: orderby9.test 5 ms
+Time: orderbyA.test 11 ms
+Time: orderbyB.test 5 ms
+Time: oserror.test 58 ms
+Time: ovfl.test 33 ms
+Time: pager1.test 1241 ms
+Time: pager2.test 1352 ms
+Time: pager3.test 5 ms
+Time: pager4.test 5 ms
+Time: pageropt.test 3 ms
+Time: pagesize.test 86 ms
+Time: parser1.test 5 ms
+Time: pcache.test 3 ms
+Time: pcache2.test 5 ms
+Time: pendingrace.test 6 ms
+Time: percentile.test 392 ms
+Time: pragma.test 46 ms
+Time: pragma2.test 16 ms
+Time: pragma3.test 9 ms
+Time: pragma4.test 96 ms
+Time: pragma5.test 5 ms
+Time: pragma6.test 4 ms
+Time: prefixes.test 4 ms
+Time: printf.test 91 ms
+Time: printf2.test 6 ms
+Time: progress.test 5 ms
+Time: ptrchng.test 5 ms
+Time: pushdown.test 12 ms
+Time: queryonly.test 4 ms
+Time: quickcheck.test 4 ms
+Time: quota-glob.test 6 ms
+Time: quota.test 211 ms
+Time: quota2.test 14 ms
+Time: quote.test 10 ms
+Time: randexpr1.test 461 ms
+Time: rdonly.test 5 ms
+Time: readonly.test 1263 ms
+Time: recover.test 3 ms
+Time: regexp1.test 8 ms
+Time: regexp2.test 7 ms
+Time: reindex.test 8 ms
+Time: resetdb.test 12 ms
+Time: resolver01.test 6 ms
+Time: returning1.test 19 ms
+Time: rollback.test 5 ms
+Time: rollback2.test 19 ms
+Time: round1.test 2980 ms
+Time: rowallock.test 16 ms
+Time: rowhash.test 1179 ms
+Time: rowid.test 37 ms
+Time: rowvalue.test 29 ms
+Time: rowvalue2.test 329 ms
+Time: rowvalue3.test 15 ms
+Time: rowvalue4.test 27 ms
+Time: rowvalue5.test 5 ms
+Time: rowvalue6.test 4 ms
+Time: rowvalue7.test 5 ms
+Time: rowvalue8.test 4 ms
+Time: rowvalue9.test 16 ms
+Time: rowvalueA.test 20 ms
+Time: rowvaluevtab.test 14 ms
+Time: savepoint.test 158 ms
+Time: savepoint2.test 885 ms
+Time: savepoint5.test 4 ms
+Time: savepoint7.test 25 ms
+Time: scanstatus.test 3 ms
+Time: scanstatus2.test 3 ms
+Time: schema.test 8 ms
+Time: schema2.test 7 ms
+Time: schema3.test 21 ms
+Time: schema4.test 10 ms
+Time: schema5.test 5 ms
+Time: schema6.test 14 ms
+Time: securedel.test 4 ms
+Time: seekscan1.test 8 ms
+Time: select1.test 22 ms
+time with cache: 34444 microseconds per iteration
+time without cache: 91462 microseconds per iteration
+Time: select2.test 145 ms
+Time: select3.test 23 ms
+Time: select4.test 16 ms
+Time: select5.test 7 ms
+Time: select6.test 12 ms
+Time: select7.test 9 ms
+Time: select8.test 4 ms
+Time: selectA.test 28 ms
+Time: selectB.test 17 ms
+Time: selectC.test 8 ms
+Time: selectD.test 10 ms
+Time: selectE.test 4 ms
+Time: selectF.test 4 ms
+Time: selectG.test 284 ms
+Time: selectH.test 7 ms
+Time: shared.test 77 ms
+Time: shared2.test 16 ms
+Time: shared3.test 8 ms
+Time: shared4.test 7 ms
+Time: shared6.test 7 ms
+Time: shared7.test 4 ms
+Time: shared8.test 5 ms
+Time: shared9.test 10 ms
+Time: sharedA.test 1007 ms
+Time: sharedB.test 13 ms
+Time: sharedlock.test 5 ms
+Time: shell1.test 4 ms
+Time: shell2.test 3 ms
+Time: shell3.test 3 ms
+Time: shell4.test 3 ms
+Time: shell5.test 3 ms
+Time: shell6.test 3 ms
+Time: shell7.test 3 ms
+Time: shell8.test 3 ms
+Time: shell9.test 3 ms
+Time: shmlock.test 404 ms
+Time: shortread1.test 4 ms
+Time: shrink.test 18 ms
+Time: sidedelete.test 86 ms
+Time: skipscan1.test 14 ms
+Time: skipscan2.test 54 ms
+Time: skipscan3.test 7 ms
+Time: skipscan5.test 3 ms
+Time: skipscan6.test 3 ms
+Time: snapshot.test 3 ms
+Time: snapshot2.test 3 ms
+Time: snapshot3.test 3 ms
+Time: snapshot4.test 3 ms
+Time: snapshot_up.test 3 ms
+Time: softheap1.test 4 ms
+Time: sort.test 323 ms
+Time: sort2.test 669 ms
+Time: sort5.test 159 ms
+Time: sorterref.test 5 ms
+Time: spellfix.test 55 ms
+Time: spellfix2.test 7 ms
+Time: spellfix3.test 4 ms
+Time: spellfix4.test 98 ms
+Time: sqldiff1.test 8 ms
+Time: sqllog.test 3 ms
+Time: starschema1.test 22 ms
+Time: stat.test 14 ms
+Time: stmt.test 5 ms
+Time: stmtrand.test 4 ms
+Time: stmtvtab1.test 4 ms
+Time: strict1.test 7 ms
+Time: strict2.test 7 ms
+Time: subjournal.test 17 ms
+Time: subquery.test 15 ms
+Time: subquery2.test 7 ms
+Time: subselect.test 6 ms
+Time: substr.test 11 ms
+Time: subtype1.test 5 ms
+Time: superlock.test 26 ms
+Time: swarmvtab.test 915 ms
+Time: swarmvtab2.test 11 ms
+Time: swarmvtab3.test 137 ms
+Time: symlink.test 10 ms
+Time: symlink2.test 3 ms
+Time: sync.test 4 ms
+Time: sync2.test 5 ms
+Time: syscall.test 61 ms
+Time: tabfunc01.test 10 ms
+Time: table.test 447 ms
+Time: tableapi.test 117 ms
+Time: tableopts.test 5 ms
+Time: tclsqlite.test 13 ms
+Time: tempdb.test 5 ms
+Time: tempdb2.test 7 ms
+Time: temptable.test 10 ms
+Time: temptable2.test 3667 ms
+Time: temptable3.test 5 ms
+Time: temptrigger.test 9 ms
+Time: thread1.test 7 ms
+Time: thread2.test 5 ms
+Time: thread3.test 305 ms
+Time: timediff1.test 58 ms
+Time: tkt-02a8e81d44.test 4 ms
+Time: tkt-18458b1a.test 5 ms
+Time: tkt-26ff0c2d1e.test 4 ms
+Time: tkt-2a5629202f.test 5 ms
+Time: tkt-2d1a5c67d.test 37 ms
+Time: tkt-2ea2425d34.test 4 ms
+Time: tkt-31338dca7e.test 8 ms
+Time: tkt-313723c356.test 33 ms
+Time: tkt-385a5b56b9.test 5 ms
+Time: tkt-38cb5df375.test 25 ms
+Time: tkt-3998683a16.test 4 ms
+Time: tkt-3a77c9714e.test 5 ms
+Time: tkt-3fe897352e.test 4 ms
+Time: tkt-4a03edc4c8.test 4 ms
+Time: tkt-4c86b126f2.test 4 ms
+Time: tkt-4dd95f6943.test 24 ms
+Time: tkt-4ef7e3cfca.test 6 ms
+Time: tkt-54844eea3f.test 5 ms
+Time: tkt-5d863f876e.test 12 ms
+Time: tkt-5e10420e8d.test 9 ms
+Time: tkt-5ee23731f.test 4 ms
+Time: tkt-6bfb98dfc0.test 5 ms
+Time: tkt-752e1646fc.test 4 ms
+Time: tkt-78e04e52ea.test 5 ms
+Time: tkt-7a31705a7e6.test 4 ms
+Time: tkt-7bbfb7d442.test 6 ms
+Time: tkt-80ba201079.test 8 ms
+Time: tkt-80e031a00f.test 12 ms
+Time: tkt-8454a207b9.test 5 ms
+Time: tkt-868145d012.test 4 ms
+Time: tkt-8c63ff0ec.test 4 ms
+Time: tkt-91e2e8ba6f.test 4 ms
+Time: tkt-99378177930f87bd.test 7 ms
+Time: tkt-9a8b09f8e6.test 6 ms
+Time: tkt-9d68c883.test 46 ms
+Time: tkt-9f2eb3abac.test 79 ms
+Time: tkt-a7b7803e.test 4 ms
+Time: tkt-a7debbe0.test 8 ms
+Time: tkt-a8a0d2996a.test 5 ms
+Time: tkt-b1d3a2e531.test 6 ms
+Time: tkt-b351d95f9.test 4 ms
+Time: tkt-b72787b1.test 4 ms
+Time: tkt-b75a9ca6b0.test 5 ms
+Time: tkt-ba7cbfaedc.test 6 ms
+Time: tkt-bd484a090c.test 4 ms
+Time: tkt-bdc6bbbb38.test 8 ms
+Time: tkt-c48d99d690.test 4 ms
+Time: tkt-c694113d5.test 4 ms
+Time: tkt-cbd054fa6b.test 3 ms
+Time: tkt-d11f09d36e.test 56 ms
+Time: tkt-d635236375.test 4 ms
+Time: tkt-d82e3f3721.test 5 ms
+Time: tkt-f3e5abed55.test 6 ms
+Time: tkt-f67b41381a.test 7 ms
+Time: tkt-f777251dc7a.test 5 ms
+Time: tkt-f7b4edec.test 4 ms
+Time: tkt-f973c7ac31.test 5 ms
+Time: tkt-fa7bf5ec.test 4 ms
+Time: tkt-fc62af4523.test 215 ms
+Time: tkt-fc7bd6358f.test 6 ms
+Time: tkt1435.test 4 ms
+Time: tkt1443.test 4 ms
+Time: tkt1444.test 4 ms
+Time: tkt1449.test 10 ms
+Time: tkt1473.test 8 ms
+Time: tkt1501.test 4 ms
+Time: tkt1512.test 4 ms
+Time: tkt1514.test 4 ms
+Time: tkt1536.test 4 ms
+Time: tkt1537.test 6 ms
+Time: tkt1567.test 16 ms
+Time: tkt1644.test 5 ms
+Time: tkt1667.test 91 ms
+Time: tkt1873.test 4 ms
+Time: tkt2141.test 4 ms
+Time: tkt2192.test 6 ms
+Time: tkt2213.test 3 ms
+Time: tkt2251.test 5 ms
+Time: tkt2285.test 4 ms
+Time: tkt2332.test 26 ms
+Time: tkt2339.test 5 ms
+Time: tkt2391.test 4 ms
+Time: tkt2409.test 101 ms
+Time: tkt2450.test 4 ms
+Time: tkt2565.test 8 ms
+Time: tkt2640.test 5 ms
+Time: tkt2643.test 4 ms
+Time: tkt2767.test 4 ms
+Time: tkt2817.test 5 ms
+Time: tkt2820.test 6 ms
+Time: tkt2822.test 6 ms
+Time: tkt2832.test 5 ms
+Time: tkt2854.test 5 ms
+Time: tkt2920.test 4 ms
+Time: tkt2927.test 8 ms
+Time: tkt2942.test 4 ms
+Time: tkt3080.test 5 ms
+Time: tkt3093.test 4 ms
+Time: tkt3121.test 4 ms
+Time: tkt3201.test 5 ms
+Time: tkt3292.test 4 ms
+Time: tkt3298.test 5 ms
+Time: tkt3334.test 4 ms
+Time: tkt3346.test 4 ms
+Time: tkt3357.test 4 ms
+Time: tkt3419.test 5 ms
+Time: tkt3424.test 4 ms
+Time: tkt3442.test 4 ms
+Time: tkt3457.test 4 ms
+Time: tkt3461.test 4 ms
+Time: tkt3493.test 5 ms
+Time: tkt3508.test 4 ms
+Time: tkt3522.test 4 ms
+Time: tkt3527.test 5 ms
+Time: tkt3541.test 4 ms
+Time: tkt3554.test 4 ms
+Time: tkt3581.test 4 ms
+Time: tkt35xx.test 5 ms
+Time: tkt3630.test 4 ms
+Time: tkt3718.test 12 ms
+Time: tkt3731.test 4 ms
+Time: tkt3757.test 4 ms
+Time: tkt3761.test 4 ms
+Time: tkt3762.test 10 ms
+Time: tkt3773.test 4 ms
+Time: tkt3791.test 4 ms
+Time: tkt3793.test 10 ms
+Time: tkt3810.test 5 ms
+Time: tkt3824.test 5 ms
+Time: tkt3832.test 4 ms
+Time: tkt3838.test 5 ms
+Time: tkt3841.test 4 ms
+Time: tkt3871.test 6 ms
+Time: tkt3879.test 4 ms
+Time: tkt3911.test 4 ms
+Time: tkt3918.test 6 ms
+Time: tkt3922.test 4 ms
+Time: tkt3929.test 10 ms
+Time: tkt3935.test 4 ms
+Time: tkt3992.test 5 ms
+Time: tkt3997.test 4 ms
+Time: tkt4018.test 624 ms
+Time: tokenize.test 4 ms
+Time: tpch01.test 8 ms
+Time: trace.test 7 ms
+Time: trace2.test 5 ms
+Time: trace3.test 7 ms
+Time: trans.test 600 ms
+Time: trans3.test 5 ms
+Time: transitive1.test 17 ms
+Time: trigger1.test 19 ms
+Time: trigger2.test 63 ms
+Time: trigger3.test 7 ms
+Time: trigger4.test 9 ms
+Time: trigger5.test 4 ms
+Time: trigger6.test 4 ms
+Time: trigger7.test 6 ms
+Time: trigger8.test 4 ms
+Time: trigger9.test 8 ms
+Time: triggerA.test 483 ms
+Time: triggerB.test 45 ms
+Time: triggerC.test 686 ms
+Time: triggerD.test 8 ms
+Time: triggerE.test 6 ms
+Time: triggerF.test 7 ms
+Time: triggerG.test 6 ms
+Time: triggerupfrom.test 8 ms
+Time: trustschema1.test 9 ms
+Time: types.test 24 ms
+Time: types2.test 23 ms
+Time: types3.test 4 ms
+Time: unhex.test 4 ms
+Time: unionall.test 16 ms
+Time: unionall2.test 2300 ms
+Time: unionvtab.test 21 ms
+Time: unique.test 7 ms
+Time: unique2.test 8 ms
+Time: unixexcl.test 22 ms
+Time: unordered.test 6 ms
+Time: update.test 50 ms
+Time: update2.test 13 ms
+Time: upfrom1.test 10 ms
+Time: upfrom2.test 19 ms
+Time: upfrom3.test 15 ms
+Time: upfrom4.test 7 ms
+Time: upsert1.test 13 ms
+Time: upsert2.test 8 ms
+Time: upsert3.test 4 ms
+Time: upsert4.test 22 ms
+Time: upsert5.test 65 ms
+Time: uri.test 22 ms
+Time: uri2.test 3 ms
+Time: utf16align.test 6 ms
+Time: vacuum-into.test 15 ms
+Time: vacuum.test 31 ms
+Time: vacuum2.test 12 ms
+Time: vacuum4.test 5 ms
+Time: vacuum5.test 49 ms
+Time: vacuum6.test 2896 ms
+Time: vacuummem.test 1476 ms
+
+addr  opcode        p1      p2      p3      p4                p5  #
+----  ------------  ------  ------  ------  ----------------  --  -
+0     Init          0       26      0                         0  
+1     InitCoroutin  1       19      2                         0  
+2     Integer       1       4       0                         0  
+3     Integer       1       5       0                         0  
+4     Integer       1       6       0                         0  
+5     Yield         1       0       0                         0  
+6     Integer       2       4       0                         0  
+7     Integer       2       5       0                         0  
+8     Integer       2       6       0                         0  
+9     Yield         1       0       0                         0  
+10    Integer       3       4       0                         0  
+11    Integer       3       5       0                         0  
+12    Integer       3       6       0                         0  
+13    Yield         1       0       0                         0  
+14    Integer       4       4       0                         0  
+15    Integer       4       5       0                         0  
+16    Integer       4       6       0                         0  
+17    Yield         1       0       0                         0  
+18    EndCoroutine  1       0       0                         0  
+19    OpenWrite     0       2       0       3                 0  
+
+20    Yield         1       25      0                         0  
+21      NewRowid      0       3       0                         0  
+22      MakeRecord    4       3       14                        0  
+23      Insert        0       14      3       x1                57  
+24    Goto          0       20      0                         0  
+25    Halt          0       0       0                         0  
+26    Transaction   0       1       1       0                 1  
+27    Goto          0       1       0                         0  
+----  ------------  ------  ------  ------  ----------------  --  -
+Time: values.test 29 ms
+Time: varint.test 41 ms
+Time: view.test 22 ms
+Time: view2.test 4 ms
+Time: vtab1.test 148 ms
+Time: vtab2.test 6 ms
+Time: vtab3.test 5 ms
+Time: vtab4.test 6 ms
+Time: vtab5.test 6 ms
+Time: vtab6.test 242 ms
+Time: vtab7.test 6 ms
+Time: vtab8.test 5 ms
+Time: vtab9.test 5 ms
+Time: vtabA.test 8 ms
+Time: vtabB.test 5 ms
+Time: vtabC.test 626 ms
+Time: vtabD.test 424 ms
+Time: vtabE.test 4 ms
+Time: vtabF.test 5 ms
+Time: vtabH.test 9 ms
+Time: vtabI.test 6 ms
+Time: vtabJ.test 6 ms
+Time: vtabK.test 8 ms
+Time: vtabL.test 5 ms
+Time: vtab_alter.test 6 ms
+Time: vtab_shared.test 13 ms
+Time: vtabdistinct.test 4 ms
+Time: vtabdrop.test 8 ms
+Time: vtabrhs1.test 4 ms
+Time: wal.test 472 ms
+Time: wal2.test 98 ms
+Time: wal3.test 2816 ms
+Time: wal4.test 88 ms
+Time: wal5.test 312 ms
+Time: wal6.test 13 ms
+Time: wal64k.test 280 ms
+Time: wal7.test 14 ms
+Time: wal8.test 6 ms
+Time: wal9.test 217 ms
+Time: walbak.test 29 ms
+Time: walbig.test 6 ms
+Time: walblock.test 3 ms
+Time: walcksum.test 34 ms
+Time: walcrash4.test 640 ms
+Time: walhook.test 6 ms
+Time: walmode.test 16 ms
+Time: walnoshm.test 7 ms
+Time: waloverwrite.test 44 ms
+Time: walpersist.test 20 ms
+Time: walprotocol2.test 6 ms
+Time: walro.test 20 ms
+Time: walro2.test 172 ms
+Time: walseh1.test 10 ms
+Time: walsetlk.test 15261 ms
+Time: walshared.test 5 ms
+# WARNING: This next test takes around 12 seconds
+Time: walvfs.test 9982 ms
+Time: where.test 35 ms
+Time: where2.test 19 ms
+Time: where3.test 20 ms
+Time: where4.test 8 ms
+Time: where5.test 6 ms
+Time: where6.test 5 ms
+Time: where7.test 207 ms
+Time: where8.test 1187 ms
+Time: where9.test 23 ms
+Time: whereA.test 7 ms
+Time: whereB.test 11 ms
+Time: whereC.test 7 ms
+Time: whereD.test 15 ms
+Time: whereE.test 13 ms
+Time: whereF.test 11 ms
+Time: whereG.test 18 ms
+Time: whereH.test 8 ms
+Time: whereI.test 5 ms
+Time: whereJ.test 4 ms
+Time: whereK.test 4 ms
+Time: whereL.test 9 ms
+Time: whereM.test 5 ms
+Time: whereN.test 5 ms
+Time: wherelimit.test 3 ms
+Time: wherelimit2.test 3 ms
+Time: wherelimit3.test 5 ms
+Time: widetab1.test 7 ms
+Time: win32heap.test 1 ms
+Time: win32lock.test 1 ms
+Time: win32longpath.test 1 ms
+Time: win32nolock.test 1 ms
+Time: window1.test 67 ms
+Time: window2.test 15 ms
+Time: window3.test 694 ms
+Time: window4.test 32 ms
+Time: window5.test 4 ms
+Time: window6.test 15 ms
+Time: window7.test 5 ms
+Time: window8.test 217 ms
+Time: window9.test 11 ms
+Time: windowA.test 6 ms
+Time: windowB.test 14 ms
+Time: windowC.test 11 ms
+Time: windowD.test 5 ms
+Time: windowE.test 5 ms
+Time: windowerr.test 4 ms
+Time: windowpushd.test 9 ms
+Time: with1.test 355 ms
+Time: with2.test 23 ms
+Time: with3.test 9 ms
+Time: with4.test 4 ms
+Time: with5.test 7 ms
+Time: with6.test 9 ms
+Time: withM.test 205 ms
+Time: without_rowid1.test 20 ms
+Time: without_rowid2.test 6 ms
+Time: without_rowid3.test 97 ms
+Time: without_rowid4.test 58 ms
+Time: without_rowid5.test 8 ms
+Time: without_rowid6.test 9 ms
+Time: without_rowid7.test 4 ms
+Time: zeroblob.test 15 ms
+Time: zerodamage.test 6 ms
+Skipping zipfile tests, hit load error: no such extension: zipfile
+Time: zipfile.test 3 ms
+Skipping zipfile2 tests, hit load error: no such extension: zipfile
+Time: zipfile2.test 3 ms
+SQLite 2025-05-07 10:39:52 17144570b0d96ae63cd6f3edca39e27ebd74925252bbaf6723bcb2f6b486alt1
+0 errors out of 393381 tests on build-edge-x86_64 Linux 64-bit
+All memory allocations freed - no leaks
+Maximum memory usage: 84672 bytes
+Current memory usage: 0 bytes
+Number of malloc()  : -1 calls
+>>> sqlite-tools: Entering fakeroot...
+created directory: '/tmp/pkg/sqlite-tools/'
+created directory: '/tmp/pkg/sqlite-tools/usr/'
+created directory: '/tmp/pkg/sqlite-tools/usr/bin/'
+'showdb' -> '/tmp/pkg/sqlite-tools/usr/bin/showdb'
+'showjournal' -> '/tmp/pkg/sqlite-tools/usr/bin/showjournal'
+'showstat4' -> '/tmp/pkg/sqlite-tools/usr/bin/showstat4'
+'showwal' -> '/tmp/pkg/sqlite-tools/usr/bin/showwal'
+'sqldiff' -> '/tmp/pkg/sqlite-tools/usr/bin/sqldiff'
+'sqlite3_analyzer' -> '/tmp/pkg/sqlite-tools/usr/bin/sqlite3_analyzer'
+If you have documentation to create, place the commands to
+build the docs in the 'doc:' target.  For example:
+        xml2nroff sample.xml > sample.n
+        xml2html sample.xml > sample.html
+Installing header files in /tmp/pkg/sqlite-tools/usr/include
+ /bin/sh ./tclconfig/install-sh -c  -m 644 libsqlite3.49.2.so /tmp/pkg/sqlite-tools/usr/lib/sqlite3.49.2/libsqlite3.49.2.so
+Installing documentation in /tmp/pkg/sqlite-tools/usr/share/man
+Installing ./doc/sqlite3.n
+ Install pkgIndex.tcl /tmp/pkg/sqlite-tools/usr/lib/sqlite3.49.2
+created directory: '/tmp/pkg/sqlite-tools/usr/share/licenses/'
+created directory: '/tmp/pkg/sqlite-tools/usr/share/licenses/sqlite-tcl/'
+'license.terms' -> '/tmp/pkg/sqlite-tools/usr/share/licenses/sqlite-tcl/license.terms'
+>>> sqlite-analyzer*: Running split function analyzer...
+'usr/bin/sqlite3_analyzer' -> '/tmp/pkg/sqlite-analyzer/usr/bin/sqlite3_analyzer'
+>>> sqlite-analyzer*: Preparing subpackage sqlite-analyzer...
+>>> sqlite-analyzer*: Stripping binaries
+>>> sqlite-analyzer*: Running postcheck for sqlite-analyzer
+>>> sqlite-tcl*: Running split function tcl...
+'usr/include' -> '/tmp/pkg/sqlite-tcl/usr/include'
+'usr/lib' -> '/tmp/pkg/sqlite-tcl/usr/lib'
+>>> sqlite-tcl*: Preparing subpackage sqlite-tcl...
+>>> sqlite-tcl*: Stripping binaries
+>>> sqlite-tcl*: Running postcheck for sqlite-tcl
+>>> sqlite-tcl-doc*: Running split function _tcl_doc...
+/tmp/pkg/sqlite-tools/usr/share/man/mann/sqlite3.n: 100% - replaced with /tmp/pkg/sqlite-tools/usr/share/man/mann/sqlite3.n.gz
+'usr/share/licenses/sqlite-tcl' -> '/tmp/pkg/sqlite-tcl-doc/usr/share/licenses/sqlite-tcl'
+'usr/share/man/mann/sqlite3.n.gz' -> '/tmp/pkg/sqlite-tcl-doc/usr/share/man/mann/sqlite3.n.gz'
+>>> sqlite-tcl-doc*: Preparing subpackage sqlite-tcl-doc...
+>>> sqlite-tcl-doc*: Running postcheck for sqlite-tcl-doc
+>>> sqlite-tools*: Running postcheck for sqlite-tools
+>>> sqlite-tools*: Preparing package sqlite-tools...
+>>> sqlite-tools*: Stripping binaries
+>>> sqlite-analyzer*: Scanning shared objects
+>>> sqlite-tcl-doc*: Scanning shared objects
+>>> sqlite-tcl*: Scanning shared objects
+>>> sqlite-tools*: Scanning shared objects
+>>> sqlite-analyzer*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libsqlite3.so.0
+	so:libtcl8.6.so
+>>> sqlite-analyzer*: Package size: 82.6 KB
+>>> sqlite-analyzer*: Compressing data...
+>>> sqlite-analyzer*: Create checksum...
+>>> sqlite-analyzer*: Create sqlite-analyzer-3.49.2-r0.apk
+>>> sqlite-tcl-doc*: Tracing dependencies...
+>>> sqlite-tcl-doc*: Package size: 584.0 B
+>>> sqlite-tcl-doc*: Compressing data...
+>>> sqlite-tcl-doc*: Create checksum...
+>>> sqlite-tcl-doc*: Create sqlite-tcl-doc-3.49.2-r0.apk
+>>> sqlite-tcl*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libsqlite3.so.0
+>>> sqlite-tcl*: Package size: 58.6 KB
+>>> sqlite-tcl*: Compressing data...
+>>> sqlite-tcl*: Create checksum...
+>>> sqlite-tcl*: Create sqlite-tcl-3.49.2-r0.apk
+>>> sqlite-tools*: Tracing dependencies...
+	so:libc.musl-x86_64.so.1
+	so:libsqlite3.so.0
+>>> sqlite-tools*: Package size: 113.7 KB
+>>> sqlite-tools*: Compressing data...
+>>> sqlite-tools*: Create checksum...
+>>> sqlite-tools*: Create sqlite-tools-3.49.2-r0.apk
+>>> sqlite-tools: Updating the main/x86_64 repository index...
+>>> sqlite-tools: Signing the index...
+>>> sqlite-tools: Cleaning up srcdir
+>>> sqlite-tools: Cleaning up build chroot
+>>> sqlite-tools: Cleaning up pkgdir

@@ -1,0 +1,977 @@
+>>> wasi-compiler-rt: Validating /home/packager/oily-pine/main/wasi-compiler-rt/APKBUILD...
+>>> wasi-compiler-rt: Cleaning up srcdir
+>>> wasi-compiler-rt: Cleaning up pkgdir
+>>> wasi-compiler-rt: Cleaning up tmpdir
+>>> wasi-compiler-rt: Fetching https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.2/llvm-project-20.1.2.src.tar.xz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+  0  140M    0  156k    0     0   159k      0  0:15:00 --:--:--  0:15:00  159k 33  140M   33 46.5M    0     0  23.5M      0  0:00:05  0:00:01  0:00:04 46.3M 38  140M   38 53.8M    0     0  18.0M      0  0:00:07  0:00:02  0:00:05 26.8M 43  140M   43 61.4M    0     0  15.4M      0  0:00:09  0:00:03  0:00:06 20.4M 49  140M   49 69.9M    0     0  14.0M      0  0:00:10  0:00:04  0:00:06 17.4M 54  140M   54 76.9M    0     0  12.8M      0  0:00:10  0:00:05  0:00:05 15.3M 58  140M   58 81.7M    0     0  11.7M      0  0:00:11  0:00:06  0:00:05 7217k 62  140M   62 87.6M    0     0  10.9M      0  0:00:12  0:00:07  0:00:05 6905k 66  140M   66 93.7M    0     0  10.4M      0  0:00:13  0:00:08  0:00:05 6624k 71  140M   71  100M    0     0  10.0M      0  0:00:13  0:00:09  0:00:04 6262k 76  140M   76  107M    0     0   9.7M      0  0:00:14  0:00:10  0:00:04 6278k 82  140M   82  115M    0     0  9851k      0  0:00:14  0:00:11  0:00:03 6853k 87  140M   87  123M    0     0  9747k      0  0:00:14  0:00:12  0:00:02 7362k 94  140M   94  132M    0     0  9675k      0  0:00:14  0:00:13  0:00:01 7849k100  140M  100  140M    0     0  9683k      0  0:00:14  0:00:14 --:--:-- 8401k
+>>> wasi-compiler-rt: Fetching wasi-sdk-wasi-sdk-25.tar.gz::https://github.com/WebAssembly/wasi-sdk/archive/refs/tags/wasi-sdk-25.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+100 41534    0 41534    0     0  58865      0 --:--:-- --:--:-- --:--:-- 58865
+>>> wasi-compiler-rt: Fetching https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.2/llvm-project-20.1.2.src.tar.xz
+>>> wasi-compiler-rt: Fetching wasi-sdk-wasi-sdk-25.tar.gz::https://github.com/WebAssembly/wasi-sdk/archive/refs/tags/wasi-sdk-25.tar.gz
+>>> wasi-compiler-rt: Checking sha512sums...
+llvm-project-20.1.2.src.tar.xz: OK
+wasi-sdk-wasi-sdk-25.tar.gz: OK
+>>> wasi-compiler-rt: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/112) Installing musl (1.2.5-r10)
+(2/112) Installing libcrypto3 (3.5.0-r0)
+(3/112) Installing ca-certificates-bundle (20241121-r2)
+(4/112) Installing libssl3 (3.5.0-r0)
+(5/112) Installing zlib (1.3.1-r2)
+(6/112) Installing libapk2 (2.14.9-r2)
+(7/112) Installing apk-tools (2.14.9-r2)
+(8/112) Installing libcap2 (2.76-r0)
+(9/112) Installing libcap-getcap (2.76-r0)
+(10/112) Installing fakeroot (1.37.1.1-r0)
+(11/112) Installing scanelf (1.3.8-r1)
+(12/112) Installing musl-utils (1.2.5-r10)
+(13/112) Installing libgcc (14.3.0-r1)
+(14/112) Installing libstdc++ (14.3.0-r1)
+(15/112) Installing lzip (1.25-r0)
+(16/112) Installing openssl (3.5.0-r0)
+(17/112) Installing patch (2.8-r0)
+(18/112) Installing pkgconf (2.4.3-r0)
+(19/112) Installing acl-libs (2.3.2-r1)
+(20/112) Installing tar (1.35-r3)
+(21/112) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/112) Installing ssl_client (1.37.0-r18)
+(23/112) Installing busybox-binsh (1.37.0-r18)
+(24/112) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/112) Installing abuild-sudo (3.15.0-r0)
+(26/112) Installing alpine-baselayout-data (3.7.0-r0)
+(27/112) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/112) Installing bridge (1.5-r5)
+(29/112) Installing ifupdown-ng (0.12.1-r7)
+(30/112) Installing openrc-user (0.62.2-r2)
+(31/112) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/112) Installing mdev-conf (4.8-r0)
+(33/112) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/112) Installing alpine-conf (3.20.0-r0)
+(35/112) Installing alpine-keys (2.5-r0)
+(36/112) Installing alpine-release (3.22.0-r0)
+(37/112) Installing busybox-openrc (1.37.0-r18)
+(38/112) Installing busybox-suid (1.37.0-r18)
+(39/112) Installing alpine-base (3.22.0-r0)
+(40/112) Installing jansson (2.14.1-r0)
+(41/112) Installing zstd-libs (1.5.7-r0)
+(42/112) Installing binutils (2.44-r0)
+(43/112) Installing libmagic (5.46-r2)
+(44/112) Installing file (5.46-r2)
+(45/112) Installing libgomp (14.3.0-r1)
+(46/112) Installing libatomic (14.3.0-r1)
+(47/112) Installing gmp (6.3.0-r3)
+(48/112) Installing isl26 (0.26-r1)
+(49/112) Installing mpfr4 (4.2.1_p1-r0)
+(50/112) Installing mpc1 (1.3.1-r1)
+(51/112) Installing gcc (14.3.0-r1)
+(52/112) Installing libstdc++-dev (14.3.0-r1)
+(53/112) Installing musl-dev (1.2.5-r10)
+(54/112) Installing g++ (14.3.0-r1)
+(55/112) Installing make (4.4.1-r3)
+(56/112) Installing fortify-headers (1.1-r5)
+(57/112) Installing build-base (0.5-r3)
+(58/112) Installing clang20-headers (20.1.6-r0)
+(59/112) Installing libffi (3.4.8-r0)
+(60/112) Installing xz-libs (5.8.1-r0)
+(61/112) Installing libxml2 (2.13.8-r0)
+(62/112) Installing llvm20-libs (20.1.6-r0)
+(63/112) Installing clang20-libs (20.1.6-r0)
+(64/112) Installing llvm20-linker-tools (20.1.6-r0)
+(65/112) Installing clang20 (20.1.6-r0)
+(66/112) Installing libbz2 (1.0.8-r6)
+(67/112) Installing libexpat (2.7.1-r0)
+(68/112) Installing lz4-libs (1.10.0-r0)
+(69/112) Installing libarchive (3.8.0-r0)
+(70/112) Installing rhash-libs (1.4.5-r0)
+(71/112) Installing libuv (1.51.0-r0)
+(72/112) Installing cmake (4.0.2-r0)
+(73/112) Installing brotli-libs (1.1.0-r2)
+(74/112) Installing c-ares (1.34.5-r0)
+(75/112) Installing libunistring (1.3-r0)
+(76/112) Installing libidn2 (2.3.7-r0)
+(77/112) Installing nghttp2-libs (1.65.0-r0)
+(78/112) Installing libpsl (0.21.5-r3)
+(79/112) Installing libcurl (8.14.0-r2)
+(80/112) Installing pcre2 (10.43-r1)
+(81/112) Installing git (2.49.0-r0)
+(82/112) Installing git-init-template (2.49.0-r0)
+(83/112) Installing zlib-dev (1.3.1-r2)
+(84/112) Installing xz (5.8.1-r0)
+(85/112) Installing xz-dev (5.8.1-r0)
+(86/112) Installing libxml2-utils (2.13.8-r0)
+(87/112) Installing libxml2-dev (2.13.8-r0)
+(88/112) Installing gdbm (1.24-r0)
+(89/112) Installing mpdecimal (4.0.1-r0)
+(90/112) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(91/112) Installing libncursesw (6.5_p20250503-r0)
+(92/112) Installing libpanelw (6.5_p20250503-r0)
+(93/112) Installing readline (8.2.13-r1)
+(94/112) Installing sqlite-libs (3.50.0-r0)
+(95/112) Installing python3 (3.12.10-r1)
+(96/112) Installing python3-pycache-pyc0 (3.12.10-r1)
+(97/112) Installing pyc (3.12.10-r1)
+(98/112) Installing llvm20-test-utils-pyc (20.1.6-r0)
+(99/112) Installing python3-pyc (3.12.10-r1)
+(100/112) Installing llvm20-test-utils (20.1.6-r0)
+(101/112) Installing llvm20 (20.1.6-r0)
+(102/112) Installing linux-headers (6.14.2-r0)
+(103/112) Installing libffi-dev (3.4.8-r0)
+(104/112) Installing zstd (1.5.7-r0)
+(105/112) Installing zstd-dev (1.5.7-r0)
+(106/112) Installing llvm20-dev (20.1.6-r0)
+(107/112) Installing llvm20-gtest (20.1.6-r0)
+(108/112) Installing llvm20-static (20.1.6-r0)
+(109/112) Installing python3-dev (3.12.10-r1)
+(110/112) Installing samurai (1.2-r7)
+(111/112) Installing wasi-libc (0.20250204-r0)
+(112/112) Installing wasi-libcxx (20.1.6-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 1279 MiB in 112 packages
+>>> wasi-compiler-rt: Fetching https://github.com/llvm/llvm-project/releases/download/llvmorg-20.1.2/llvm-project-20.1.2.src.tar.xz
+>>> wasi-compiler-rt: Fetching wasi-sdk-wasi-sdk-25.tar.gz::https://github.com/WebAssembly/wasi-sdk/archive/refs/tags/wasi-sdk-25.tar.gz
+>>> wasi-compiler-rt: Checking sha512sums...
+llvm-project-20.1.2.src.tar.xz: OK
+wasi-sdk-wasi-sdk-25.tar.gz: OK
+>>> wasi-compiler-rt: Unpacking /var/cache/distfiles/llvm-project-20.1.2.src.tar.xz...
+>>> wasi-compiler-rt: Unpacking /var/cache/distfiles/wasi-sdk-wasi-sdk-25.tar.gz...
+-- The C compiler identification is Clang 20.1.6
+-- The CXX compiler identification is Clang 20.1.6
+-- The ASM compiler identification is Clang with GNU-like command-line
+-- Found assembler: /usr/bin/clang
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - failed
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - failed
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Looking for unwind.h
+-- Looking for unwind.h - not found
+-- Looking for rpc/xdr.h
+-- Looking for rpc/xdr.h - not found
+-- Performing Test COMPILER_RT_HAS_NO_DEFAULT_CONFIG_FLAG
+-- Performing Test COMPILER_RT_HAS_NO_DEFAULT_CONFIG_FLAG - Failed
+-- Could NOT find LLVM (missing: LLVM_DIR)
+CMake Warning at cmake/Modules/CompilerRTUtils.cmake:314 (message):
+  UNSUPPORTED COMPILER-RT CONFIGURATION DETECTED: LLVM cmake package not
+  found.
+
+  Reconfigure with -DLLVM_CMAKE_DIR=/path/to/llvm.
+Call Stack (most recent call first):
+  CMakeLists.txt:110 (load_llvm_config)
+
+
+-- LLVM_MAIN_SRC_DIR: "/tmp/src/llvm-project-20.1.2.src/llvm"
+-- Attempting to mock the changes made by LLVMConfig.cmake
+-- LLVM_CMAKE_DIR: "/tmp/src/llvm-project-20.1.2.src/llvm/cmake/modules"
+-- Using CMAKE_C_COMPILER_TARGET (wasm32-wasi) as LLVM_TARGET_TRIPLE
+-- TARGET_TRIPLE: "wasm32-wasi"
+-- Linker detection: GNU ld
+-- Found Python3: /usr/bin/python3.12 (found version "3.12.10") found components: Interpreter
+-- cmake c compiler target: wasm32-wasi
+-- Performing Test CXX_SUPPORTS_UNWINDLIB_NONE_FLAG
+-- Performing Test CXX_SUPPORTS_UNWINDLIB_NONE_FLAG - Failed
+-- Looking for fopen in c
+-- Looking for fopen in c - not found
+-- Looking for __gcc_personality_v0 in gcc_s
+-- Looking for __gcc_personality_v0 in gcc_s - not found
+-- Performing Test C_SUPPORTS_NODEFAULTLIBS_FLAG
+-- Performing Test C_SUPPORTS_NODEFAULTLIBS_FLAG - Failed
+-- Looking for __atomic_load_8 in atomic
+-- Looking for __atomic_load_8 in atomic - not found
+-- Performing Test COMPILER_RT_HAS_FFREESTANDING_FLAG
+-- Performing Test COMPILER_RT_HAS_FFREESTANDING_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_OMIT_FRAME_POINTER_FLAG
+-- Performing Test COMPILER_RT_HAS_OMIT_FRAME_POINTER_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_STD_C11_FLAG
+-- Performing Test COMPILER_RT_HAS_STD_C11_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FCF_PROTECTION_FLAG
+-- Performing Test COMPILER_RT_HAS_FCF_PROTECTION_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FPIE_FLAG
+-- Performing Test COMPILER_RT_HAS_FPIE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_BUILTIN_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_BUILTIN_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_EXCEPTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_EXCEPTIONS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FOMIT_FRAME_POINTER_FLAG
+-- Performing Test COMPILER_RT_HAS_FOMIT_FRAME_POINTER_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FUNWIND_TABLES_FLAG
+-- Performing Test COMPILER_RT_HAS_FUNWIND_TABLES_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_STACK_PROTECTOR_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_STACK_PROTECTOR_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_SANITIZE_SAFE_STACK_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_SANITIZE_SAFE_STACK_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_HIDDEN_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FRTTI_FLAG
+-- Performing Test COMPILER_RT_HAS_FRTTI_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_RTTI_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_RTTI_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_FUNCTION_SECTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_FUNCTION_SECTIONS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FTLS_MODEL_INITIAL_EXEC
+-- Performing Test COMPILER_RT_HAS_FTLS_MODEL_INITIAL_EXEC - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_LTO_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_LTO_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_GENERATE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_GENERATE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_GENERATE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_GENERATE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_USE_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PROFILE_INSTR_USE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_COVERAGE_MAPPING_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_COVERAGE_MAPPING_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MCRC32_FLAG
+-- Performing Test COMPILER_RT_HAS_MCRC32_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG
+-- Performing Test COMPILER_RT_HAS_MSSE4_2_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SYSROOT_FLAG
+-- Performing Test COMPILER_RT_HAS_SYSROOT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MCRC_FLAG
+-- Performing Test COMPILER_RT_HAS_MCRC_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FNO_PARTIAL_INLINING_FLAG
+-- Performing Test COMPILER_RT_HAS_FNO_PARTIAL_INLINING_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_TRIVIAL_AUTO_INIT
+-- Performing Test COMPILER_RT_HAS_TRIVIAL_AUTO_INIT - Failed
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_INLINES_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_FVISIBILITY_INLINES_HIDDEN_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GR_FLAG
+-- Performing Test COMPILER_RT_HAS_GR_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GS_FLAG
+-- Performing Test COMPILER_RT_HAS_GS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_MT_FLAG
+-- Performing Test COMPILER_RT_HAS_MT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_Oy_FLAG
+-- Performing Test COMPILER_RT_HAS_Oy_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_GLINE_TABLES_ONLY_FLAG
+-- Performing Test COMPILER_RT_HAS_GLINE_TABLES_ONLY_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_G_FLAG
+-- Performing Test COMPILER_RT_HAS_G_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_Zi_FLAG
+-- Performing Test COMPILER_RT_HAS_Zi_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WALL_FLAG
+-- Performing Test COMPILER_RT_HAS_WALL_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WERROR_FLAG
+-- Performing Test COMPILER_RT_HAS_WERROR_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WFRAME_LARGER_THAN_FLAG
+-- Performing Test COMPILER_RT_HAS_WFRAME_LARGER_THAN_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WGLOBAL_CONSTRUCTORS_FLAG
+-- Performing Test COMPILER_RT_HAS_WGLOBAL_CONSTRUCTORS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WC99_EXTENSIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_WC99_EXTENSIONS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WGNU_FLAG
+-- Performing Test COMPILER_RT_HAS_WGNU_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WGNU_ANONYMOUS_STRUCT_FLAG
+-- Performing Test COMPILER_RT_HAS_WGNU_ANONYMOUS_STRUCT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WVARIADIC_MACROS_FLAG
+-- Performing Test COMPILER_RT_HAS_WVARIADIC_MACROS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WUNUSED_PARAMETER_FLAG
+-- Performing Test COMPILER_RT_HAS_WUNUSED_PARAMETER_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WCOVERED_SWITCH_DEFAULT_FLAG
+-- Performing Test COMPILER_RT_HAS_WCOVERED_SWITCH_DEFAULT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WSUGGEST_OVERRIDE_FLAG
+-- Performing Test COMPILER_RT_HAS_WSUGGEST_OVERRIDE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WTHREAD_SAFETY_FLAG
+-- Performing Test COMPILER_RT_HAS_WTHREAD_SAFETY_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WTHREAD_SAFETY_REFERENCE_FLAG
+-- Performing Test COMPILER_RT_HAS_WTHREAD_SAFETY_REFERENCE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WTHREAD_SAFETY_BETA_FLAG
+-- Performing Test COMPILER_RT_HAS_WTHREAD_SAFETY_BETA_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WNO_PEDANTIC
+-- Performing Test COMPILER_RT_HAS_WNO_PEDANTIC - Failed
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT - Failed
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT_PEDANTIC
+-- Performing Test COMPILER_RT_HAS_WNO_FORMAT_PEDANTIC - Failed
+-- Performing Test COMPILER_RT_HAS_EXTERNAL_FLAG
+-- Performing Test COMPILER_RT_HAS_EXTERNAL_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_W4_FLAG
+-- Performing Test COMPILER_RT_HAS_W4_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WX_FLAG
+-- Performing Test COMPILER_RT_HAS_WX_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4146_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4146_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4206_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4206_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4291_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4291_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4221_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4221_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4391_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4391_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4722_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4722_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_WD4800_FLAG
+-- Performing Test COMPILER_RT_HAS_WD4800_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_ARRAY_BOUNDS_FLAG
+-- Performing Test COMPILER_RT_HAS_ARRAY_BOUNDS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_UNINITIALIZED_FLAG
+-- Performing Test COMPILER_RT_HAS_UNINITIALIZED_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SHADOW_FLAG
+-- Performing Test COMPILER_RT_HAS_SHADOW_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_EMPTY_BODY_FLAG
+-- Performing Test COMPILER_RT_HAS_EMPTY_BODY_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SIZEOF_POINTER_MEMACCESS_FLAG
+-- Performing Test COMPILER_RT_HAS_SIZEOF_POINTER_MEMACCESS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SIZEOF_ARRAY_ARGUMENT_FLAG
+-- Performing Test COMPILER_RT_HAS_SIZEOF_ARRAY_ARGUMENT_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SUSPICIOUS_MEMACCESS_FLAG
+-- Performing Test COMPILER_RT_HAS_SUSPICIOUS_MEMACCESS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_BUILTIN_MEMCPY_CHK_SIZE_FLAG
+-- Performing Test COMPILER_RT_HAS_BUILTIN_MEMCPY_CHK_SIZE_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_ARRAY_BOUNDS_POINTER_ARITHMETIC_FLAG
+-- Performing Test COMPILER_RT_HAS_ARRAY_BOUNDS_POINTER_ARITHMETIC_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_RETURN_STACK_ADDRESS_FLAG
+-- Performing Test COMPILER_RT_HAS_RETURN_STACK_ADDRESS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SIZEOF_ARRAY_DECAY_FLAG
+-- Performing Test COMPILER_RT_HAS_SIZEOF_ARRAY_DECAY_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_FORMAT_INSUFFICIENT_ARGS_FLAG
+-- Performing Test COMPILER_RT_HAS_FORMAT_INSUFFICIENT_ARGS_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_BUILTIN_FORMAL_SECURITY_FLAG
+-- Performing Test COMPILER_RT_HAS_BUILTIN_FORMAL_SECURITY_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SIZEOF_ARRAY_DIV_FLAG
+-- Performing Test COMPILER_RT_HAS_SIZEOF_ARRAY_DIV_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_SIZEOF_POINTER_DIV_FLAG
+-- Performing Test COMPILER_RT_HAS_SIZEOF_POINTER_DIV_FLAG - Failed
+-- Looking for __func__
+-- Looking for __func__ - not found
+-- Performing Test COMPILER_RT_HAS_NOSTDINCXX_FLAG
+-- Performing Test COMPILER_RT_HAS_NOSTDINCXX_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_NOSTDLIBXX_FLAG
+-- Performing Test COMPILER_RT_HAS_NOSTDLIBXX_FLAG - Failed
+-- Looking for include file sys/auxv.h
+-- Looking for include file sys/auxv.h - not found
+-- Looking for dlopen in dl
+-- Looking for dlopen in dl - not found
+-- Looking for shm_open in rt
+-- Looking for shm_open in rt - not found
+-- Looking for pow in m
+-- Looking for pow in m - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - not found
+-- Looking for backtrace in execinfo
+-- Looking for backtrace in execinfo - not found
+-- Looking for __cxa_throw in c++
+-- Looking for __cxa_throw in c++ - not found
+-- Looking for __cxa_throw in stdc++
+-- Looking for __cxa_throw in stdc++ - not found
+-- Performing Test COMPILER_RT_HAS_Z_TEXT
+-- Performing Test COMPILER_RT_HAS_Z_TEXT - Failed
+-- Performing Test COMPILER_RT_HAS_FUSE_LD_LLD_FLAG
+-- Performing Test COMPILER_RT_HAS_FUSE_LD_LLD_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_VERSION_SCRIPT
+-- Performing Test COMPILER_RT_HAS_VERSION_SCRIPT - Failed
+-- Compiler-RT supported architectures: wasm32
+-- Performing Test COMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG
+-- Performing Test COMPILER_RT_HAS_VISIBILITY_HIDDEN_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_XRAY_COMPILER_FLAG
+-- Performing Test COMPILER_RT_HAS_XRAY_COMPILER_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_NOGPULIB_FLAG
+-- Performing Test COMPILER_RT_HAS_NOGPULIB_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FLTO_FLAG
+-- Performing Test COMPILER_RT_HAS_FLTO_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_FCONVERGENT_FUNCTIONS_FLAG
+-- Performing Test COMPILER_RT_HAS_FCONVERGENT_FUNCTIONS_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_CODE_OBJECT_VERSION_FLAG
+-- Performing Test COMPILER_RT_HAS_CODE_OBJECT_VERSION_FLAG - Success
+-- Performing Test COMPILER_RT_HAS_WBUILTIN_DECLARATION_MISMATCH_FLAG
+-- Performing Test COMPILER_RT_HAS_WBUILTIN_DECLARATION_MISMATCH_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_ZL_FLAG
+-- Performing Test COMPILER_RT_HAS_ZL_FLAG - Failed
+-- Performing Test COMPILER_RT_HAS_ATOMIC_KEYWORD
+-- Performing Test COMPILER_RT_HAS_ATOMIC_KEYWORD - Success
+-- Performing Test COMPILER_RT_HAS_ASM_LSE
+-- Performing Test COMPILER_RT_HAS_ASM_LSE - Failed
+-- Performing Test COMPILER_RT_HAS_AARCH64_SME
+-- Performing Test COMPILER_RT_HAS_AARCH64_SME - Failed
+-- Builtin supported architectures: wasm32
+-- Performing additional configure checks with target flags:  -fvisibility=hidden
+-- Performing Test COMPILER_RT_HAS_wasm32_FLOAT16
+-- Performing Test COMPILER_RT_HAS_wasm32_FLOAT16 - Failed
+-- Performing Test COMPILER_RT_HAS_wasm32_BFLOAT16
+-- Performing Test COMPILER_RT_HAS_wasm32_BFLOAT16 - Failed
+-- Performing Test COMPILER_RT_TARGET_HAS_ATOMICS
+-- Performing Test COMPILER_RT_TARGET_HAS_ATOMICS - Failed
+-- Performing Test COMPILER_RT_TARGET_HAS_FCNTL_LCK
+-- Performing Test COMPILER_RT_TARGET_HAS_FCNTL_LCK - Failed
+-- Performing Test COMPILER_RT_TARGET_HAS_FLOCK
+-- Performing Test COMPILER_RT_TARGET_HAS_FLOCK - Failed
+-- Performing Test COMPILER_RT_TARGET_HAS_UNAME
+-- Performing Test COMPILER_RT_TARGET_HAS_UNAME - Failed
+-- Configuring done (5.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /tmp/src/llvm-project-20.1.2.src/build
+[1/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingUtil.c.obj
+[2/191] Building CXX object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingRuntime.cpp.obj
+[3/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingPlatformWindows.c.obj
+[4/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingPlatformOther.c.obj
+[5/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingPlatformLinux.c.obj
+[6/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingPlatformFuchsia.c.obj
+[7/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingPlatformDarwin.c.obj
+[8/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingPlatformAIX.c.obj
+[9/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingWriter.c.obj
+[10/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingVersionVar.c.obj
+[11/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingNameVar.c.obj
+[12/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingMergeFile.c.obj
+[13/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingMerge.c.obj
+[14/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingFile.c.obj
+[15/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingBuffer.c.obj
+[16/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingValue.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[17/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfilingInternal.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[18/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/InstrProfiling.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[19/191] Building C object lib/profile/CMakeFiles/clang_rt.profile-wasm32.dir/GCDAProfiling.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[20/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/clear_cache.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[21/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/umodti3.c.obj
+[22/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/umodsi3.c.obj
+clang++: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang++: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[23/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/umoddi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[24/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/udivti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[25/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/udivsi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[26/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/udivmodti4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[27/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/udivmodsi4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[28/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/udivmoddi4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[29/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/udivdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[30/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ucmpti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[31/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ucmpdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[32/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/truncsfhf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[33/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/truncdfsf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[34/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/truncdfhf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[35/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/trampoline_setup.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[36/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/subvti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[37/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/subvsi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[38/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/subvdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[39/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/subsf3.c.obj
+[40/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/subdf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[41/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/powisf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[42/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/powidf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[43/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/popcountti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[44/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/popcountsi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[45/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/popcountdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[46/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/parityti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[47/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/paritysi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[48/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/paritydi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[49/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/os_version_check.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[50/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negvti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[51/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negvsi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[52/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negvdi2.c.obj
+[53/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[54/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negsf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[55/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[56/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/negdf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[57/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulvti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[58/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulvsi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[59/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulvdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[60/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/multi3.c.obj
+[61/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulsf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[62/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulsc3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[63/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/muloti4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[64/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulosi4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[65/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/mulodi4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[66/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/muldi3.c.obj
+[67/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/muldf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[68/191] Linking CXX static library lib/wasi/libclang_rt.profile-wasm32.a
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[69/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/muldc3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[70/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/modti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[71/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/modsi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[72/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/moddi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[73/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/lshrti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[74/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/lshrdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[75/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/int_util.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[76/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fp_mode.c.obj
+[77/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatuntisf.c.obj
+[78/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatuntidf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[79/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatunsisf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[80/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatunsidf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[81/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatundisf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[82/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatundidf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[83/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floattisf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[84/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floattidf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[85/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatsisf.c.obj
+[86/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatsidf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[87/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatdisf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[88/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatdidf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[89/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunssfti.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[90/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunssfsi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[91/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunssfdi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[92/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunsdfti.c.obj
+[93/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunsdfsi.c.obj
+[94/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunsdfdi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[95/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixsfti.c.obj
+[96/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixsfsi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[97/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixsfdi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[98/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixdfti.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[99/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixdfsi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[100/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixdfdi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[101/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ffsti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[102/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ffssi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[103/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ffsdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[104/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/extendhfsf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[105/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/extendsfdf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[106/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[107/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divsi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[108/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divsf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[109/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divsc3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[110/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divmodti4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[111/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divmodsi4.c.obj
+[112/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divmoddi4.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[113/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[114/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divdf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[115/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divdc3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[116/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ctzti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[117/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ctzsi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[118/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ctzdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[119/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/comparesf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[120/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/comparedf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[121/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/cmpti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[122/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/cmpdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[123/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/clzti2.c.obj
+[124/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/clzsi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[125/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/clzdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[126/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/bswapsi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[127/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/bswapdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[128/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ashrti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[129/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ashrdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[130/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ashlti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[131/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/ashldi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[132/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/apple_versioning.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[133/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/addvti3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[134/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/addvsi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[135/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/addvdi3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[136/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/addsf3.c.obj
+[137/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/adddf3.c.obj
+[138/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/absvti2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[139/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/absvsi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[140/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/absvdi2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[141/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/trunctfsf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[142/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/trunctfhf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[143/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/trunctfdf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[144/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/subtf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[145/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/powitf2.c.obj
+[146/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/multf3.c.obj
+[147/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/multc3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[148/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatuntitf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[149/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatunsitf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[150/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatunditf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[151/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floattitf.c.obj
+[152/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatsitf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[153/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/floatditf.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[154/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunstfti.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[155/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunstfsi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[156/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixunstfdi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[157/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixtfti.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[158/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixtfsi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[159/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/fixtfdi.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[160/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/extendsftf2.c.obj
+[161/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/extendhftf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[162/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/extenddftf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[163/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divtf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[164/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/divtc3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[165/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/comparetf2.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[166/191] Building C object lib/builtins/CMakeFiles/clang_rt.builtins-wasm32.dir/addtf3.c.obj
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[167/191] Copying compiler-rt's profile/instr_prof_interface.h...
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[168/191] Copying compiler-rt's profile/InstrProfData.inc...
+[169/191] Copying compiler-rt's orc_rt/c_api.h...
+[170/191] Copying compiler-rt's xray/xray_records.h...
+[171/191] Copying compiler-rt's xray/xray_log_interface.h...
+[172/191] Copying compiler-rt's xray/xray_interface.h...
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[173/191] Copying compiler-rt's profile/MemProfData.inc...
+[174/191] Copying compiler-rt's sanitizer/memprof_interface.h...
+[175/191] Copying compiler-rt's fuzzer/FuzzedDataProvider.h...
+[176/191] Copying compiler-rt's sanitizer/ubsan_interface.h...
+[177/191] Copying compiler-rt's sanitizer/tsan_interface_atomic.h...
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[178/191] Copying compiler-rt's sanitizer/tsan_interface.h...
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[179/191] Copying compiler-rt's sanitizer/scudo_interface.h...
+[180/191] Copying compiler-rt's sanitizer/rtsan_interface.h...
+[181/191] Copying compiler-rt's sanitizer/netbsd_syscall_hooks.h...
+[182/191] Copying compiler-rt's sanitizer/msan_interface.h...
+[183/191] Copying compiler-rt's sanitizer/lsan_interface.h...
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[184/191] Copying compiler-rt's sanitizer/linux_syscall_hooks.h...
+[185/191] Copying compiler-rt's sanitizer/hwasan_interface.h...
+[186/191] Copying compiler-rt's sanitizer/dfsan_interface.h...
+[187/191] Copying compiler-rt's sanitizer/coverage_interface.h...
+[188/191] Copying compiler-rt's sanitizer/common_interface_defs.h...
+[189/191] Copying compiler-rt's sanitizer/asan_interface.h...
+[190/191] Copying compiler-rt's sanitizer/allocator_interface.h...
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fstack-clash-protection' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-fno-plt' [-Wunused-command-line-argument]
+[191/191] Linking C static library lib/wasi/libclang_rt.builtins-wasm32.a
+>>> wasi-compiler-rt: Entering fakeroot...
+-- Install configuration: "MinSizeRel"
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/allocator_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/asan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/common_interface_defs.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/coverage_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/dfsan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/hwasan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/linux_syscall_hooks.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/lsan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/msan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/netbsd_syscall_hooks.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/rtsan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/scudo_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/tsan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/tsan_interface_atomic.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/ubsan_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/fuzzer/FuzzedDataProvider.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/sanitizer/memprof_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/xray/xray_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/xray/xray_log_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/xray/xray_records.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/orc/c_api.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/profile/InstrProfData.inc
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/include/profile/instr_prof_interface.h
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/lib/wasi/libclang_rt.builtins-wasm32.a
+-- Installing: /tmp/pkg/wasi-compiler-rt/usr/lib/llvm20/lib/clang/20/lib/wasi/libclang_rt.profile-wasm32.a
+>>> wasi-compiler-rt*: Running postcheck for wasi-compiler-rt
+>>> wasi-compiler-rt*: Preparing package wasi-compiler-rt...
+>>> wasi-compiler-rt*: Stripping binaries
+>>> wasi-compiler-rt*: Scanning shared objects
+>>> wasi-compiler-rt*: Tracing dependencies...
+>>> wasi-compiler-rt*: Package size: 187.6 KB
+>>> wasi-compiler-rt*: Compressing data...
+>>> wasi-compiler-rt*: Create checksum...
+>>> wasi-compiler-rt*: Create wasi-compiler-rt-20.1.2-r0.apk
+>>> wasi-compiler-rt: Updating the main/x86_64 repository index...
+>>> wasi-compiler-rt: Signing the index...
+>>> wasi-compiler-rt: Cleaning up srcdir
+>>> wasi-compiler-rt: Cleaning up build chroot
+>>> wasi-compiler-rt: Cleaning up pkgdir

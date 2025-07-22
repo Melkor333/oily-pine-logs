@@ -1,0 +1,641 @@
+>>> cgdb: Validating /home/packager/oily-pine/main/cgdb/APKBUILD...
+>>> cgdb: Cleaning up srcdir
+>>> cgdb: Cleaning up pkgdir
+>>> cgdb: Cleaning up tmpdir
+>>> cgdb: Fetching http://cgdb.me/files/cgdb-0.8.0.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  1  757k    1  9036    0     0  19702      0  0:00:39 --:--:--  0:00:39 19686 42  757k   42  323k    0     0   230k      0  0:00:03  0:00:01  0:00:02  230k100  757k  100  757k    0     0   476k      0  0:00:01  0:00:01 --:--:--  476k
+>>> cgdb: Fetching http://cgdb.me/files/cgdb-0.8.0.tar.gz
+>>> cgdb: Checking sha512sums...
+cgdb-0.8.0.tar.gz: OK
+doc-path.patch: OK
+>>> cgdb: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/100) Installing musl (1.2.5-r10)
+(2/100) Installing libcrypto3 (3.5.0-r0)
+(3/100) Installing ca-certificates-bundle (20241121-r2)
+(4/100) Installing libssl3 (3.5.0-r0)
+(5/100) Installing zlib (1.3.1-r2)
+(6/100) Installing libapk2 (2.14.9-r2)
+(7/100) Installing apk-tools (2.14.9-r2)
+(8/100) Installing libcap2 (2.76-r0)
+(9/100) Installing libcap-getcap (2.76-r0)
+(10/100) Installing fakeroot (1.37.1.1-r0)
+(11/100) Installing scanelf (1.3.8-r1)
+(12/100) Installing musl-utils (1.2.5-r10)
+(13/100) Installing libgcc (14.3.0-r1)
+(14/100) Installing libstdc++ (14.3.0-r1)
+(15/100) Installing lzip (1.25-r0)
+(16/100) Installing openssl (3.5.0-r0)
+(17/100) Installing patch (2.8-r0)
+(18/100) Installing pkgconf (2.4.3-r0)
+(19/100) Installing acl-libs (2.3.2-r1)
+(20/100) Installing tar (1.35-r3)
+(21/100) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/100) Installing ssl_client (1.37.0-r18)
+(23/100) Installing busybox-binsh (1.37.0-r18)
+(24/100) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/100) Installing abuild-sudo (3.15.0-r0)
+(26/100) Installing alpine-baselayout-data (3.7.0-r0)
+(27/100) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/100) Installing bridge (1.5-r5)
+(29/100) Installing ifupdown-ng (0.12.1-r7)
+(30/100) Installing openrc-user (0.62.2-r2)
+(31/100) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/100) Installing mdev-conf (4.8-r0)
+(33/100) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/100) Installing alpine-conf (3.20.0-r0)
+(35/100) Installing alpine-keys (2.5-r0)
+(36/100) Installing alpine-release (3.22.0-r0)
+(37/100) Installing busybox-openrc (1.37.0-r18)
+(38/100) Installing busybox-suid (1.37.0-r18)
+(39/100) Installing alpine-base (3.22.0-r0)
+(40/100) Installing m4 (1.4.20-r0)
+(41/100) Installing bison (3.8.2-r2)
+(42/100) Installing jansson (2.14.1-r0)
+(43/100) Installing zstd-libs (1.5.7-r0)
+(44/100) Installing binutils (2.44-r0)
+(45/100) Installing libmagic (5.46-r2)
+(46/100) Installing file (5.46-r2)
+(47/100) Installing libgomp (14.3.0-r1)
+(48/100) Installing libatomic (14.3.0-r1)
+(49/100) Installing gmp (6.3.0-r3)
+(50/100) Installing isl26 (0.26-r1)
+(51/100) Installing mpfr4 (4.2.1_p1-r0)
+(52/100) Installing mpc1 (1.3.1-r1)
+(53/100) Installing gcc (14.3.0-r1)
+(54/100) Installing libstdc++-dev (14.3.0-r1)
+(55/100) Installing musl-dev (1.2.5-r10)
+(56/100) Installing g++ (14.3.0-r1)
+(57/100) Installing make (4.4.1-r3)
+(58/100) Installing fortify-headers (1.1-r5)
+(59/100) Installing build-base (0.5-r3)
+(60/100) Installing flex (2.6.4-r7)
+(61/100) Installing musl-dbg (1.2.5-r10)
+(62/100) Installing libexpat (2.7.1-r0)
+(63/100) Installing ncurses-terminfo-base (6.5_p20250503-r0)
+(64/100) Installing libncursesw (6.5_p20250503-r0)
+(65/100) Installing libbz2 (1.0.8-r6)
+(66/100) Installing libffi (3.4.8-r0)
+(67/100) Installing gdbm (1.24-r0)
+(68/100) Installing xz-libs (5.8.1-r0)
+(69/100) Installing mpdecimal (4.0.1-r0)
+(70/100) Installing libpanelw (6.5_p20250503-r0)
+(71/100) Installing readline (8.2.13-r1)
+(72/100) Installing sqlite-libs (3.50.0-r0)
+(73/100) Installing python3 (3.12.10-r1)
+(74/100) Installing python3-pycache-pyc0 (3.12.10-r1)
+(75/100) Installing pyc (3.12.10-r1)
+(76/100) Installing python3-pyc (3.12.10-r1)
+(77/100) Installing gdb (15.2-r0)
+(78/100) Installing gcc-gdb (14.3.0-r1)
+(79/100) Installing brotli-libs (1.1.0-r2)
+(80/100) Installing c-ares (1.34.5-r0)
+(81/100) Installing libunistring (1.3-r0)
+(82/100) Installing libidn2 (2.3.7-r0)
+(83/100) Installing nghttp2-libs (1.65.0-r0)
+(84/100) Installing libpsl (0.21.5-r3)
+(85/100) Installing libcurl (8.14.0-r2)
+(86/100) Installing pcre2 (10.43-r1)
+(87/100) Installing git (2.49.0-r0)
+(88/100) Installing git-init-template (2.49.0-r0)
+(89/100) Installing perl (5.40.2-r0)
+(90/100) Installing perl-error (0.17030-r0)
+(91/100) Installing perl-git (2.49.0-r0)
+(92/100) Installing git-perl (2.49.0-r0)
+(93/100) Installing help2man (1.49.3-r1)
+(94/100) Installing libformw (6.5_p20250503-r0)
+(95/100) Installing libmenuw (6.5_p20250503-r0)
+(96/100) Installing libncurses++ (6.5_p20250503-r0)
+(97/100) Installing ncurses-dev (6.5_p20250503-r0)
+(98/100) Installing libhistory (8.2.13-r1)
+(99/100) Installing readline-dev (8.2.13-r1)
+(100/100) Installing texinfo (7.2-r0)
+Executing busybox-1.37.0-r18.trigger
+OK: 358 MiB in 100 packages
+>>> cgdb: Fetching http://cgdb.me/files/cgdb-0.8.0.tar.gz
+>>> cgdb: Checking sha512sums...
+cgdb-0.8.0.tar.gz: OK
+doc-path.patch: OK
+>>> cgdb: Unpacking /var/cache/distfiles/cgdb-0.8.0.tar.gz...
+>>> cgdb: doc-path.patch
+patching file cgdb/interface.cpp
+>>> cgdb: Updating ./config/config.sub
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... config/install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether cc accepts -g... yes
+checking for cc option to accept ISO C89... none needed
+checking whether cc understands -c and -o together... yes
+checking for style of include used by make... GNU
+checking dependency style of cc... gcc3
+checking whether we are using the GNU C++ compiler... yes
+checking whether c++ accepts -g... yes
+checking dependency style of c++... gcc3
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for flex... flex
+checking lex output file root... lex.yy
+checking lex library... none needed
+checking whether yytext is a pointer... no
+checking for bison... bison -y
+checking build system type... x86_64-alpine-linux-musl
+checking host system type... x86_64-alpine-linux-musl
+checking how to run the C preprocessor... cc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking pty.h usability... yes
+checking pty.h presence... yes
+checking for pty.h... yes
+checking sys/stropts.h usability... yes
+checking sys/stropts.h presence... yes
+checking for sys/stropts.h... yes
+checking util.h usability... no
+checking util.h presence... no
+checking for util.h... no
+checking libutil.h usability... no
+checking libutil.h presence... no
+checking for libutil.h... no
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking sys/select.h usability... yes
+checking sys/select.h presence... yes
+checking for sys/select.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking grp.h usability... yes
+checking grp.h presence... yes
+checking for grp.h... yes
+checking pwd.h usability... yes
+checking pwd.h presence... yes
+checking for pwd.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking stdarg.h usability... yes
+checking stdarg.h presence... yes
+checking for stdarg.h... yes
+checking stdio.h usability... yes
+checking stdio.h presence... yes
+checking for stdio.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking for sys/stat.h... (cached) yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking time.h usability... yes
+checking time.h presence... yes
+checking for time.h... yes
+checking for sys/types.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking ctype.h usability... yes
+checking ctype.h presence... yes
+checking for ctype.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking math.h usability... yes
+checking math.h presence... yes
+checking for math.h... yes
+checking regex.h usability... yes
+checking regex.h presence... yes
+checking for regex.h... yes
+checking curses.h usability... yes
+checking curses.h presence... yes
+checking for curses.h... yes
+checking getopt.h usability... yes
+checking getopt.h presence... yes
+checking for getopt.h... yes
+checking for /dev/ptmx... yes
+checking for /proc/self/status... yes
+checking for pty.h... (cached) yes
+checking for openpty in -lutil... yes
+checking for an ANSI C-conforming const... yes
+checking for uid_t in sys/types.h... yes
+checking for mode_t... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking whether setpgrp takes no argument... yes
+checking return type of signal handlers... void
+checking for vprintf... yes
+checking for _doprnt... no
+checking for putenv... yes
+checking for select... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for ttyname_r... yes
+checking for makeinfo... yes
+checking for initscr in -lncurses... yes
+checking for initscr in -lncursesw... yes
+checking Checking attribute printf support... yes
+checking for tgetent... no
+checking for tgetent in -lncursesw... yes
+checking which library has the termcap functions... using libncursesw
+checking version of installed readline library... 8.2
+checking readline.h usability... no
+checking readline.h presence... no
+checking for readline.h... no
+checking readline/readline.h usability... yes
+checking readline/readline.h presence... yes
+checking for readline/readline.h... yes
+checking history.h usability... no
+checking history.h presence... no
+checking for history.h... no
+checking readline/history.h usability... yes
+checking readline/history.h presence... yes
+checking for readline/history.h... yes
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating cgdb_custom_config.h
+config.status: creating Makefile
+config.status: creating lib/Makefile
+config.status: creating lib/kui/Makefile
+config.status: creating lib/rline/Makefile
+config.status: creating lib/tgdb/Makefile
+config.status: creating lib/tokenizer/Makefile
+config.status: creating lib/util/Makefile
+config.status: creating lib/vterm/Makefile
+config.status: creating doc/Makefile
+config.status: creating cgdb/Makefile
+config.status: creating test/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+make  all-recursive
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0'
+Making all in lib
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+Making all in util
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/util'
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT cgdb_clog.o -MD -MP -MF .deps/cgdb_clog.Tpo -c -o cgdb_clog.o cgdb_clog.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT fork_util.o -MD -MP -MF .deps/fork_util.Tpo -c -o fork_util.o fork_util.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT fs_util.o -MD -MP -MF .deps/fs_util.Tpo -c -o fs_util.o fs_util.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT io.o -MD -MP -MF .deps/io.Tpo -c -o io.o io.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT pseudo.o -MD -MP -MF .deps/pseudo.Tpo -c -o pseudo.o pseudo.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT stretchy.o -MD -MP -MF .deps/stretchy.Tpo -c -o stretchy.o stretchy.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT sys_util.o -MD -MP -MF .deps/sys_util.Tpo -c -o sys_util.o sys_util.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT sys_win.o -MD -MP -MF .deps/sys_win.Tpo -c -o sys_win.o sys_win.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT terminal.o -MD -MP -MF .deps/terminal.Tpo -c -o terminal.o terminal.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT driver.o -MD -MP -MF .deps/driver.Tpo -c -o driver.o driver.cpp
+mv -f .deps/terminal.Tpo .deps/terminal.Po
+mv -f .deps/driver.Tpo .deps/driver.Po
+mv -f .deps/pseudo.Tpo .deps/pseudo.Po
+mv -f .deps/cgdb_clog.Tpo .deps/cgdb_clog.Po
+mv -f .deps/io.Tpo .deps/io.Po
+mv -f .deps/fork_util.Tpo .deps/fork_util.Po
+mv -f .deps/sys_win.Tpo .deps/sys_win.Po
+mv -f .deps/stretchy.Tpo .deps/stretchy.Po
+mv -f .deps/fs_util.Tpo .deps/fs_util.Po
+mv -f .deps/sys_util.Tpo .deps/sys_util.Po
+rm -f libcgdbutil.a
+ar cru libcgdbutil.a cgdb_clog.o fork_util.o fs_util.o io.o pseudo.o stretchy.o sys_util.o sys_win.o terminal.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libcgdbutil.a
+c++  -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -L../../lib/util -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o cgdbutil_driver driver.o libcgdbutil.a -lreadline -lncursesw  -lutil
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/util'
+Making all in rline
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/rline'
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT rline.o -MD -MP -MF .deps/rline.Tpo -c -o rline.o rline.cpp
+mv -f .deps/rline.Tpo .deps/rline.Po
+rm -f librline.a
+ar cru librline.a rline.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib librline.a
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/rline'
+Making all in tgdb
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -I../../lib/tgdb -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT tgdb.o -MD -MP -MF .deps/tgdb.Tpo -c -o tgdb.o tgdb.cpp
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT gdbwire.o -MD -MP -MF .deps/gdbwire.Tpo -c -o gdbwire.o gdbwire.c
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -I../../lib/tgdb -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT driver.o -MD -MP -MF .deps/driver.Tpo -c -o driver.o driver.cpp
+mv -f .deps/driver.Tpo .deps/driver.Po
+mv -f .deps/tgdb.Tpo .deps/tgdb.Po
+mv -f .deps/gdbwire.Tpo .deps/gdbwire.Po
+rm -f libtgdb.a
+ar cru libtgdb.a tgdb.o gdbwire.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libtgdb.a
+c++ -I../../lib/util -I../../lib/tgdb -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -L../../lib/util -L../../lib/tgdb -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o tgdb_driver driver.o libtgdb.a ../../lib/util/libcgdbutil.a -lreadline -lncursesw  -lutil
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+Making all in kui
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/kui'
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT kui.o -MD -MP -MF .deps/kui.Tpo -c -o kui.o kui.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT kui_term.o -MD -MP -MF .deps/kui_term.Tpo -c -o kui_term.o kui_term.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT kui_tree.o -MD -MP -MF .deps/kui_tree.Tpo -c -o kui_tree.o kui_tree.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT kui_driver-kui_driver.o -MD -MP -MF .deps/kui_driver-kui_driver.Tpo -c -o kui_driver-kui_driver.o `test -f 'kui_driver.cpp' || echo './'`kui_driver.cpp
+mv -f .deps/kui_driver-kui_driver.Tpo .deps/kui_driver-kui_driver.Po
+mv -f .deps/kui_term.Tpo .deps/kui_term.Po
+mv -f .deps/kui_tree.Tpo .deps/kui_tree.Po
+mv -f .deps/kui.Tpo .deps/kui.Po
+rm -f libkui.a
+ar cru libkui.a kui.o kui_term.o kui_tree.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libkui.a
+c++ -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -L../../lib/util -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o kui_driver kui_driver-kui_driver.o libkui.a ../../lib/util/libcgdbutil.a -lreadline -lncursesw  -lutil
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/kui'
+Making all in tokenizer
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT adalexer.o -MD -MP -MF .deps/adalexer.Tpo -c -o adalexer.o adalexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT clexer.o -MD -MP -MF .deps/clexer.Tpo -c -o clexer.o clexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT asmlexer.o -MD -MP -MF .deps/asmlexer.Tpo -c -o asmlexer.o asmlexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT dlexer.o -MD -MP -MF .deps/dlexer.Tpo -c -o dlexer.o dlexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT golexer.o -MD -MP -MF .deps/golexer.Tpo -c -o golexer.o golexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT cgdbhelplexer.o -MD -MP -MF .deps/cgdbhelplexer.Tpo -c -o cgdbhelplexer.o cgdbhelplexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT rustlexer.o -MD -MP -MF .deps/rustlexer.Tpo -c -o rustlexer.o rustlexer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT tokenizer.o -MD -MP -MF .deps/tokenizer.Tpo -c -o tokenizer.o tokenizer.cpp
+c++ -DHAVE_CONFIG_H -I. -I../..    -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT tokenizer_driver.o -MD -MP -MF .deps/tokenizer_driver.Tpo -c -o tokenizer_driver.o tokenizer_driver.cpp
+mv -f .deps/tokenizer_driver.Tpo .deps/tokenizer_driver.Po
+mv -f .deps/tokenizer.Tpo .deps/tokenizer.Po
+mv -f .deps/adalexer.Tpo .deps/adalexer.Po
+mv -f .deps/clexer.Tpo .deps/clexer.Po
+mv -f .deps/golexer.Tpo .deps/golexer.Po
+mv -f .deps/asmlexer.Tpo .deps/asmlexer.Po
+mv -f .deps/dlexer.Tpo .deps/dlexer.Po
+mv -f .deps/rustlexer.Tpo .deps/rustlexer.Po
+mv -f .deps/cgdbhelplexer.Tpo .deps/cgdbhelplexer.Po
+rm -f libtokenizer.a
+ar cru libtokenizer.a adalexer.o clexer.o asmlexer.o dlexer.o golexer.o cgdbhelplexer.o rustlexer.o tokenizer.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libtokenizer.a
+c++ -I../../lib/util -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -L. -L../../lib/util -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o tokenizer_driver tokenizer_driver.o ./libtokenizer.a ../../lib/util/libcgdbutil.a -lreadline -lncursesw  -lutil
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+Making all in vterm
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT encoding.o -MD -MP -MF .deps/encoding.Tpo -c -o encoding.o encoding.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT keyboard.o -MD -MP -MF .deps/keyboard.Tpo -c -o keyboard.o keyboard.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT mouse.o -MD -MP -MF .deps/mouse.Tpo -c -o mouse.o mouse.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT parser.o -MD -MP -MF .deps/parser.Tpo -c -o parser.o parser.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT pen.o -MD -MP -MF .deps/pen.Tpo -c -o pen.o pen.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT screen.o -MD -MP -MF .deps/screen.Tpo -c -o screen.o screen.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT state.o -MD -MP -MF .deps/state.Tpo -c -o state.o state.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT unicode.o -MD -MP -MF .deps/unicode.Tpo -c -o unicode.o unicode.c
+cc -DHAVE_CONFIG_H -I. -I../..     -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -std=c11 -fpermissive -MT vterm.o -MD -MP -MF .deps/vterm.Tpo -c -o vterm.o vterm.c
+mv -f .deps/encoding.Tpo .deps/encoding.Po
+mv -f .deps/unicode.Tpo .deps/unicode.Po
+mv -f .deps/keyboard.Tpo .deps/keyboard.Po
+mv -f .deps/mouse.Tpo .deps/mouse.Po
+mv -f .deps/parser.Tpo .deps/parser.Po
+mv -f .deps/vterm.Tpo .deps/vterm.Po
+mv -f .deps/pen.Tpo .deps/pen.Po
+mv -f .deps/screen.Tpo .deps/screen.Po
+mv -f .deps/state.Tpo .deps/state.Po
+rm -f libcgdbvterm.a
+ar cru libcgdbvterm.a encoding.o keyboard.o mouse.o parser.o pen.o screen.o state.o unicode.o vterm.o 
+ar: `u' modifier ignored since `D' is the default (see `U')
+ranlib libcgdbvterm.a
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+Making all in cgdb
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/cgdb'
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT cgdb.o -MD -MP -MF .deps/cgdb.Tpo -c -o cgdb.o cgdb.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT cgdbrc.o -MD -MP -MF .deps/cgdbrc.Tpo -c -o cgdbrc.o cgdbrc.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT command_lexer.o -MD -MP -MF .deps/command_lexer.Tpo -c -o command_lexer.o command_lexer.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT filedlg.o -MD -MP -MF .deps/filedlg.Tpo -c -o filedlg.o filedlg.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT highlight.o -MD -MP -MF .deps/highlight.Tpo -c -o highlight.o highlight.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT highlight_groups.o -MD -MP -MF .deps/highlight_groups.Tpo -c -o highlight_groups.o highlight_groups.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT interface.o -MD -MP -MF .deps/interface.Tpo -c -o interface.o interface.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT logo.o -MD -MP -MF .deps/logo.Tpo -c -o logo.o logo.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT scroller.o -MD -MP -MF .deps/scroller.Tpo -c -o scroller.o scroller.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT vterminal.o -MD -MP -MF .deps/vterminal.Tpo -c -o vterminal.o vterminal.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT sources.o -MD -MP -MF .deps/sources.Tpo -c -o sources.o sources.cpp
+c++ -DHAVE_CONFIG_H -DPKGDATADIR=\"/usr/share/cgdb\" -DTOPBUILDDIR=\"/tmp/src/cgdb-0.8.0\" -I. -I..    -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -MT usage.o -MD -MP -MF .deps/usage.Tpo -c -o usage.o usage.cpp
+mv -f .deps/usage.Tpo .deps/usage.Po
+mv -f .deps/highlight.Tpo .deps/highlight.Po
+mv -f .deps/command_lexer.Tpo .deps/command_lexer.Po
+mv -f .deps/vterminal.Tpo .deps/vterminal.Po
+mv -f .deps/cgdbrc.Tpo .deps/cgdbrc.Po
+mv -f .deps/logo.Tpo .deps/logo.Po
+mv -f .deps/scroller.Tpo .deps/scroller.Po
+mv -f .deps/filedlg.Tpo .deps/filedlg.Po
+mv -f .deps/sources.Tpo .deps/sources.Po
+mv -f .deps/cgdb.Tpo .deps/cgdb.Po
+mv -f .deps/highlight_groups.Tpo .deps/highlight_groups.Po
+mv -f .deps/interface.Tpo .deps/interface.Po
+c++ -I../lib/kui -I../lib/rline -I../lib/util -I../lib/tgdb -I../lib/tokenizer -I../lib/vterm -std=c++11 -Os -fstack-clash-protection -Wformat -Werror=format-security -D_GLIBCXX_ASSERTIONS=1 -D_LIBCPP_ENABLE_THREAD_SAFETY_ANNOTATIONS=1 -D_LIBCPP_ENABLE_HARDENED_MODE=1 -fno-plt -std=c++11 -L../lib/kui -L../lib/rline -L../lib/tokenizer -L../lib/util -L../lib/vterm -L../lib/tgdb -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o cgdb cgdb.o cgdbrc.o command_lexer.o filedlg.o highlight.o highlight_groups.o interface.o logo.o scroller.o vterminal.o sources.o usage.o ../lib/tgdb/libtgdb.a ../lib/tokenizer/libtokenizer.a ../lib/kui/libkui.a ../lib/rline/librline.a ../lib/vterm/libcgdbvterm.a ../lib/util/libcgdbutil.a -lreadline -lncursesw  -lutil
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/cgdb'
+Making all in doc
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/doc'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/doc'
+Making all in test
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/test'
+make[2]: Nothing to be done for 'all'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/test'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0'
+make[2]: Nothing to be done for 'all-am'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0'
+Making check in lib
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+Making check in util
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/util'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/util'
+Making check in rline
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/rline'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/rline'
+Making check in tgdb
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+Making check in kui
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/kui'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/kui'
+Making check in tokenizer
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+Making check in vterm
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+Making check in cgdb
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/cgdb'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/cgdb'
+Making check in doc
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/doc'
+make[1]: Nothing to be done for 'check'.
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/doc'
+Making check in test
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/test'
+make  check-DEJAGNU
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/test'
+Making a new site.exp file ...
+srcdir='.'; export srcdir; \
+EXPECT=expect; export EXPECT; \
+if /bin/sh -c "runtest --version" > /dev/null 2>&1; then \
+  exit_status=0; l='kui.base'; for tool in $l; do \
+    if runtest  --tool $tool --srcdir $srcdir ; \
+    then :; else exit_status=1; fi; \
+  done; \
+else echo "WARNING: could not find 'runtest'" 1>&2; :;\
+fi; \
+exit $exit_status
+WARNING: could not find 'runtest'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/test'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/test'
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0'
+>>> cgdb: Entering fakeroot...
+Making install in lib
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+Making install in util
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/util'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/util'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/util'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/util'
+Making install in rline
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/rline'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/rline'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/rline'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/rline'
+Making install in tgdb
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tgdb'
+Making install in kui
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/kui'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/kui'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/kui'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/kui'
+Making install in tokenizer
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/tokenizer'
+Making install in vterm
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib/vterm'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+make[3]: Entering directory '/tmp/src/cgdb-0.8.0/lib'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/lib'
+Making install in cgdb
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/cgdb'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/cgdb'
+make[2]: Nothing to be done for 'install-data-am'.
+ ../config/install-sh -c -d '/tmp/pkg/cgdb/usr/bin'
+  /usr/bin/install -c cgdb '/tmp/pkg/cgdb/usr/bin'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/cgdb'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/cgdb'
+Making install in doc
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/doc'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/doc'
+make[2]: Nothing to be done for 'install-exec-am'.
+ ../config/install-sh -c -d '/tmp/pkg/cgdb/usr/share/cgdb'
+ ../config/install-sh -c -d '/tmp/pkg/cgdb/usr/share/info'
+ /usr/bin/install -c -m 644 cgdb.txt '/tmp/pkg/cgdb/usr/share/cgdb'
+ /usr/bin/install -c -m 644 ./cgdb.info '/tmp/pkg/cgdb/usr/share/info'
+ install-info --info-dir='/tmp/pkg/cgdb/usr/share/info' '/tmp/pkg/cgdb/usr/share/info/cgdb.info'
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/doc'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/doc'
+Making install in test
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0/test'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0/test'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0/test'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0/test'
+make[1]: Entering directory '/tmp/src/cgdb-0.8.0'
+make[2]: Entering directory '/tmp/src/cgdb-0.8.0'
+make[2]: Nothing to be done for 'install-exec-am'.
+make[2]: Nothing to be done for 'install-data-am'.
+make[2]: Leaving directory '/tmp/src/cgdb-0.8.0'
+make[1]: Leaving directory '/tmp/src/cgdb-0.8.0'
+>>> cgdb-doc*: Running split function doc...
+'usr/share/doc' -> '/tmp/pkg/cgdb-doc/usr/share/doc'
+'usr/share/info' -> '/tmp/pkg/cgdb-doc/usr/share/info'
+>>> cgdb-doc*: Preparing subpackage cgdb-doc...
+>>> cgdb-doc*: Running postcheck for cgdb-doc
+>>> cgdb*: Running postcheck for cgdb
+>>> cgdb*: Preparing package cgdb...
+>>> cgdb*: Stripping binaries
+>>> cgdb-doc*: Scanning shared objects
+>>> cgdb*: Scanning shared objects
+>>> cgdb-doc*: Tracing dependencies...
+>>> cgdb-doc*: Package size: 136.5 KB
+>>> cgdb-doc*: Compressing data...
+>>> cgdb-doc*: Create checksum...
+>>> cgdb-doc*: Create cgdb-doc-0.8.0-r4.apk
+>>> cgdb*: Tracing dependencies...
+	gdb
+	so:libc.musl-x86_64.so.1
+	so:libgcc_s.so.1
+	so:libncursesw.so.6
+	so:libreadline.so.8
+	so:libstdc++.so.6
+>>> cgdb*: Package size: 312.7 KB
+>>> cgdb*: Compressing data...
+>>> cgdb*: Create checksum...
+>>> cgdb*: Create cgdb-0.8.0-r4.apk
+>>> cgdb: Updating the main/x86_64 repository index...
+>>> cgdb: Signing the index...
+>>> cgdb: Cleaning up srcdir
+>>> cgdb: Cleaning up build chroot
+>>> cgdb: Cleaning up pkgdir

@@ -1,0 +1,545 @@
+>>> sshguard: Validating /home/packager/oily-pine/main/sshguard/APKBUILD...
+>>> sshguard: Cleaning up srcdir
+>>> sshguard: Cleaning up pkgdir
+>>> sshguard: Cleaning up tmpdir
+>>> sshguard: Fetching https://downloads.sourceforge.net/project/sshguard/sshguard/2.4.3/sshguard-2.4.3.tar.gz
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   387  100   387    0     0   1675      0 --:--:-- --:--:-- --:--:--  1682
+  0     0    0     0    0     0      0      0 --:--:--  0:00:01 --:--:--     0100 1092k  100 1092k    0     0   741k      0  0:00:01  0:00:01 --:--:-- 2830k
+>>> sshguard: Fetching https://downloads.sourceforge.net/project/sshguard/sshguard/2.4.3/sshguard-2.4.3.tar.gz
+>>> sshguard: Checking sha512sums...
+sshguard-2.4.3.tar.gz: OK
+sshguard.initd: OK
+sshguard.confd: OK
+>>> sshguard: Preparing build chroot...
+fetch http://dl-cdn.alpinelinux.org/alpine/edge/main/x86_64/APKINDEX.tar.gz
+(1/85) Installing musl (1.2.5-r10)
+(2/85) Installing libcrypto3 (3.5.0-r0)
+(3/85) Installing ca-certificates-bundle (20241121-r2)
+(4/85) Installing libssl3 (3.5.0-r0)
+(5/85) Installing zlib (1.3.1-r2)
+(6/85) Installing libapk2 (2.14.9-r2)
+(7/85) Installing apk-tools (2.14.9-r2)
+(8/85) Installing libcap2 (2.76-r0)
+(9/85) Installing libcap-getcap (2.76-r0)
+(10/85) Installing fakeroot (1.37.1.1-r0)
+(11/85) Installing scanelf (1.3.8-r1)
+(12/85) Installing musl-utils (1.2.5-r10)
+(13/85) Installing libgcc (14.3.0-r1)
+(14/85) Installing libstdc++ (14.3.0-r1)
+(15/85) Installing lzip (1.25-r0)
+(16/85) Installing openssl (3.5.0-r0)
+(17/85) Installing patch (2.8-r0)
+(18/85) Installing pkgconf (2.4.3-r0)
+(19/85) Installing acl-libs (2.3.2-r1)
+(20/85) Installing tar (1.35-r3)
+(21/85) Installing busybox (1.37.0-r18)
+Executing busybox-1.37.0-r18.post-install
+(22/85) Installing ssl_client (1.37.0-r18)
+(23/85) Installing busybox-binsh (1.37.0-r18)
+(24/85) Installing abuild (3.15.0-r0)
+Executing abuild-3.15.0-r0.pre-install
+(25/85) Installing abuild-sudo (3.15.0-r0)
+(26/85) Installing alpine-baselayout-data (3.7.0-r0)
+(27/85) Installing alpine-baselayout (3.7.0-r0)
+Executing alpine-baselayout-3.7.0-r0.pre-install
+Executing alpine-baselayout-3.7.0-r0.post-install
+(28/85) Installing bridge (1.5-r5)
+(29/85) Installing ifupdown-ng (0.12.1-r7)
+(30/85) Installing openrc-user (0.62.2-r2)
+(31/85) Installing openrc (0.62.2-r2)
+Executing openrc-0.62.2-r2.post-install
+(32/85) Installing mdev-conf (4.8-r0)
+(33/85) Installing busybox-mdev-openrc (1.37.0-r18)
+(34/85) Installing alpine-conf (3.20.0-r0)
+(35/85) Installing alpine-keys (2.5-r0)
+(36/85) Installing alpine-release (3.22.0-r0)
+(37/85) Installing busybox-openrc (1.37.0-r18)
+(38/85) Installing busybox-suid (1.37.0-r18)
+(39/85) Installing alpine-base (3.22.0-r0)
+(40/85) Installing m4 (1.4.20-r0)
+(41/85) Installing libbz2 (1.0.8-r6)
+(42/85) Installing perl (5.40.2-r0)
+(43/85) Installing autoconf (2.72-r1)
+(44/85) Installing automake (1.18-r0)
+(45/85) Installing bison (3.8.2-r2)
+(46/85) Installing jansson (2.14.1-r0)
+(47/85) Installing zstd-libs (1.5.7-r0)
+(48/85) Installing binutils (2.44-r0)
+(49/85) Installing libmagic (5.46-r2)
+(50/85) Installing file (5.46-r2)
+(51/85) Installing libgomp (14.3.0-r1)
+(52/85) Installing libatomic (14.3.0-r1)
+(53/85) Installing gmp (6.3.0-r3)
+(54/85) Installing isl26 (0.26-r1)
+(55/85) Installing mpfr4 (4.2.1_p1-r0)
+(56/85) Installing mpc1 (1.3.1-r1)
+(57/85) Installing gcc (14.3.0-r1)
+(58/85) Installing libstdc++-dev (14.3.0-r1)
+(59/85) Installing musl-dev (1.2.5-r10)
+(60/85) Installing g++ (14.3.0-r1)
+(61/85) Installing make (4.4.1-r3)
+(62/85) Installing fortify-headers (1.1-r5)
+(63/85) Installing build-base (0.5-r3)
+(64/85) Installing flex (2.6.4-r7)
+(65/85) Installing brotli-libs (1.1.0-r2)
+(66/85) Installing c-ares (1.34.5-r0)
+(67/85) Installing libunistring (1.3-r0)
+(68/85) Installing libidn2 (2.3.7-r0)
+(69/85) Installing nghttp2-libs (1.65.0-r0)
+(70/85) Installing libpsl (0.21.5-r3)
+(71/85) Installing libcurl (8.14.0-r2)
+(72/85) Installing libexpat (2.7.1-r0)
+(73/85) Installing pcre2 (10.43-r1)
+(74/85) Installing git (2.49.0-r0)
+(75/85) Installing git-init-template (2.49.0-r0)
+(76/85) Installing perl-error (0.17030-r0)
+(77/85) Installing perl-git (2.49.0-r0)
+(78/85) Installing git-perl (2.49.0-r0)
+(79/85) Installing libmnl (1.0.5-r2)
+(80/85) Installing libnftnl (1.2.9-r0)
+(81/85) Installing libxtables (1.8.11-r1)
+(82/85) Installing iptables (1.8.11-r1)
+(83/85) Installing iptables-openrc (1.8.11-r1)
+(84/85) Installing libltdl (2.5.4-r1)
+(85/85) Installing libtool (2.5.4-r1)
+Executing busybox-1.37.0-r18.trigger
+OK: 305 MiB in 85 packages
+>>> sshguard: Fetching https://downloads.sourceforge.net/project/sshguard/sshguard/2.4.3/sshguard-2.4.3.tar.gz
+>>> sshguard: Checking sha512sums...
+sshguard-2.4.3.tar.gz: OK
+sshguard.initd: OK
+sshguard.confd: OK
+>>> sshguard: Unpacking /var/cache/distfiles/sshguard-2.4.3.tar.gz...
+checking whether to enable maintainer-specific portions of Makefiles... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a race-free mkdir -p... ./install-sh -c -d
+checking for gawk... no
+checking for mawk... no
+checking for nawk... no
+checking for awk... awk
+checking whether make sets $(MAKE)... yes
+checking whether make supports nested variables... yes
+checking whether make supports nested variables... (cached) yes
+checking whether make supports the include directive... yes (GNU style)
+checking for x86_64-alpine-linux-musl-gcc... cc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether the compiler supports GNU C... yes
+checking whether cc accepts -g... yes
+checking for cc option to enable C11 features... none needed
+checking whether cc understands -c and -o together... yes
+checking dependency style of cc... gcc3
+checking for stdio.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for strings.h... yes
+checking for sys/stat.h... yes
+checking for sys/types.h... yes
+checking for unistd.h... yes
+checking for wchar.h... yes
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking whether _XOPEN_SOURCE should be defined... no
+## -------------- ##
+## Program Checks ##
+## -------------- ##
+checking for x86_64-alpine-linux-musl-ranlib... no
+checking for ranlib... ranlib
+checking for bison... bison -y
+checking for x86_64-alpine-linux-musl-ar... no
+checking for x86_64-alpine-linux-musl-lib... no
+checking for x86_64-alpine-linux-musl-link... no
+checking for ar... ar
+checking the archiver (ar) interface... ar
+checking for flex... flex
+checking for lex output file root... lex.yy
+checking for lex library... none needed
+checking for library containing yywrap... no
+checking whether yytext is a pointer... yes
+## ----------------------------------- ##
+## Headers, Types, and Compiler Checks ##
+## ----------------------------------- ##
+checking for getopt.h... yes
+checking for capsicum_helpers.h... no
+checking for libcasper.h... no
+checking for rst2man... no
+checking for rst2man.py... no
+configure: WARNING: rst2man not found; using pre-built man pages
+## ----------------- ##
+## Library Functions ##
+## ----------------- ##
+checking for library containing gethostbyname... none required
+checking for library containing pthread_create... none required
+checking for library containing socket... none required
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating src/Makefile
+config.status: creating src/blocker/Makefile
+config.status: creating src/fw/Makefile
+config.status: creating src/parser/Makefile
+config.status: creating src/common/config.h
+config.status: executing depfiles commands
+Making all in src
+make[1]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+Making all in blocker
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/blocker'
+  CC       sandbox.o
+  CC       service_names.o
+  CC       simclist.o
+  CC       attack.o
+  CC       blocker.o
+  CC       blocklist.o
+  CC       hash_32a.o
+  CC       sshguard_blacklist.o
+  CC       sshguard_options.o
+  CC       sshguard_whitelist.o
+  CCLD     sshg-blocker
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/blocker'
+Making all in fw
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/fw'
+  CC       hosts.o
+cat sshg-fw-firewalld.sh ./sshg-fw.in > sshg-fw-firewalld
+  CC       simclist.o
+cat sshg-fw-ipfilter.sh ./sshg-fw.in > sshg-fw-ipfilter
+cat sshg-fw-ipfw.sh ./sshg-fw.in > sshg-fw-ipfw
+cat sshg-fw-ipset.sh ./sshg-fw.in > sshg-fw-ipset
+cat sshg-fw-iptables.sh ./sshg-fw.in > sshg-fw-iptables
+cat sshg-fw-nft-sets.sh ./sshg-fw.in > sshg-fw-nft-sets
+cat sshg-fw-null.sh ./sshg-fw.in > sshg-fw-null
+cat sshg-fw-pf.sh ./sshg-fw.in > sshg-fw-pf
+  CCLD     sshg-fw-hosts
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/fw'
+Making all in parser
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make  all-am
+make[3]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+  CC       sandbox.o
+  CC       attack.o
+  CC       attack_parser.o
+  CC       attack_scanner.o
+  CC       parser.o
+  CCLD     sshg-parser
+make[3]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+sed -e 's|@libexecdir[@]|/usr/libexec|g' -e 's|@sysconfdir[@]|/etc|g' -e 's|@sshguardversion[@]|2.4.3|g' ./sshguard.in > sshguard
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[1]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[1]: Entering directory '/tmp/src/sshguard-2.4.3'
+make[1]: Nothing to be done for 'all-am'.
+make[1]: Leaving directory '/tmp/src/sshguard-2.4.3'
+Making check in src
+make[1]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+Making check in blocker
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/blocker'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/blocker'
+Making check in fw
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/fw'
+make[2]: Nothing to be done for 'check'.
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/fw'
+Making check in parser
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make  check-am
+make[3]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make  check-TESTS
+make[4]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[5]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+PASS: test-sshg-parser 1
+PASS: test-sshg-parser 2
+PASS: test-sshg-parser 3
+PASS: test-sshg-parser 4
+PASS: test-sshg-parser 5
+PASS: test-sshg-parser 6
+PASS: test-sshg-parser 7
+PASS: test-sshg-parser 8
+PASS: test-sshg-parser 9
+PASS: test-sshg-parser 10
+PASS: test-sshg-parser 11
+PASS: test-sshg-parser 12
+PASS: test-sshg-parser 13
+PASS: test-sshg-parser 14
+PASS: test-sshg-parser 15
+PASS: test-sshg-parser 16
+PASS: test-sshg-parser 17
+PASS: test-sshg-parser 18
+PASS: test-sshg-parser 19
+PASS: test-sshg-parser 20
+PASS: test-sshg-parser 21
+PASS: test-sshg-parser 22
+PASS: test-sshg-parser 23
+PASS: test-sshg-parser 24
+PASS: test-sshg-parser 25
+PASS: test-sshg-parser 26
+PASS: test-sshg-parser 27
+PASS: test-sshg-parser 28
+PASS: test-sshg-parser 29
+PASS: test-sshg-parser 30
+PASS: test-sshg-parser 31
+PASS: test-sshg-parser 32
+PASS: test-sshg-parser 33
+PASS: test-sshg-parser 34
+PASS: test-sshg-parser 35
+PASS: test-sshg-parser 36
+PASS: test-sshg-parser 37
+PASS: test-sshg-parser 38
+PASS: test-sshg-parser 39
+PASS: test-sshg-parser 40
+PASS: test-sshg-parser 41
+PASS: test-sshg-parser 42
+PASS: test-sshg-parser 43
+PASS: test-sshg-parser 44
+PASS: test-sshg-parser 45
+PASS: test-sshg-parser 46
+PASS: test-sshg-parser 47
+PASS: test-sshg-parser 48
+PASS: test-sshg-parser 49
+PASS: test-sshg-parser 50
+PASS: test-sshg-parser 51
+PASS: test-sshg-parser 52
+PASS: test-sshg-parser 53
+PASS: test-sshg-parser 54
+PASS: test-sshg-parser 55
+PASS: test-sshg-parser 56
+PASS: test-sshg-parser 57
+PASS: test-sshg-parser 58
+PASS: test-sshg-parser 59
+PASS: test-sshg-parser 60
+PASS: test-sshg-parser 61
+PASS: test-sshg-parser 62
+PASS: test-sshg-parser 63
+PASS: test-sshg-parser 64
+PASS: test-sshg-parser 65
+PASS: test-sshg-parser 66
+PASS: test-sshg-parser 67
+PASS: test-sshg-parser 68
+PASS: test-sshg-parser 69
+PASS: test-sshg-parser 70
+PASS: test-sshg-parser 71
+PASS: test-sshg-parser 72
+PASS: test-sshg-parser 73
+PASS: test-sshg-parser 74
+PASS: test-sshg-parser 75
+PASS: test-sshg-parser 76
+PASS: test-sshg-parser 77
+PASS: test-sshg-parser 78
+PASS: test-sshg-parser 79
+PASS: test-sshg-parser 80
+PASS: test-sshg-parser 81
+PASS: test-sshg-parser 82
+PASS: test-sshg-parser 83
+PASS: test-sshg-parser 84
+PASS: test-sshg-parser 85
+PASS: test-sshg-parser 86
+PASS: test-sshg-parser 87
+PASS: test-sshg-parser 88
+PASS: test-sshg-parser 89
+PASS: test-sshg-parser 90
+PASS: test-sshg-parser 91
+PASS: test-sshg-parser 92
+PASS: test-sshg-parser 93
+PASS: test-sshg-parser 94
+PASS: test-sshg-parser 95
+PASS: test-sshg-parser 96
+PASS: test-sshg-parser 97
+PASS: test-sshg-parser 98
+PASS: test-sshg-parser 99
+PASS: test-sshg-parser 100
+PASS: test-sshg-parser 101
+PASS: test-sshg-parser 102
+PASS: test-sshg-parser 103
+PASS: test-sshg-parser 104
+PASS: test-sshg-parser 105
+PASS: test-sshg-parser 106
+PASS: test-sshg-parser 107
+PASS: test-sshg-parser 108
+PASS: test-sshg-parser 109
+PASS: test-sshg-parser 110
+PASS: test-sshg-parser 111
+PASS: test-sshg-parser 112
+PASS: test-sshg-parser 113
+PASS: test-sshg-parser 114
+PASS: test-sshg-parser 115
+PASS: test-sshg-parser 116
+PASS: test-sshg-parser 117
+PASS: test-sshg-parser 118
+PASS: test-sshg-parser 119
+PASS: test-sshg-parser 120
+PASS: test-sshg-parser 121
+PASS: test-sshg-parser 122
+PASS: test-sshg-parser 123
+PASS: test-sshg-parser 124
+PASS: test-sshg-parser 125
+PASS: test-sshg-parser 126
+PASS: test-sshg-parser 127
+PASS: test-sshg-parser 128
+PASS: test-sshg-parser 129
+PASS: test-sshg-parser 130
+PASS: test-sshg-parser 131
+PASS: test-sshg-parser 132
+PASS: test-sshg-parser 133
+PASS: test-sshg-parser 134
+PASS: test-sshg-parser 135
+PASS: test-sshg-parser 136
+PASS: test-sshg-parser 137
+PASS: test-sshg-parser 138
+PASS: test-sshg-parser 139
+PASS: test-sshg-parser 140
+PASS: test-sshg-parser 141
+PASS: test-sshg-parser 142
+PASS: test-sshg-parser 143
+PASS: test-sshg-parser 144
+PASS: test-sshg-parser 145
+PASS: test-sshg-parser 146
+PASS: test-sshg-parser 147
+PASS: test-sshg-parser 148
+PASS: test-sshg-parser 149
+PASS: test-sshg-parser 150
+PASS: test-sshg-parser 151
+PASS: test-sshg-parser 152
+PASS: test-sshg-parser 153
+PASS: test-sshg-parser 154
+PASS: test-sshg-parser 155
+PASS: test-sshg-parser 156
+PASS: test-sshg-parser 157
+PASS: test-sshg-parser 158
+PASS: test-sshg-parser 159
+PASS: test-sshg-parser 160
+PASS: test-sshg-parser 161
+PASS: test-sshg-parser 162
+PASS: test-sshg-parser 163
+PASS: test-sshg-parser 164
+PASS: test-sshg-parser 165
+PASS: test-sshg-parser 166
+PASS: test-sshg-parser 167
+PASS: test-sshg-parser 168
+PASS: test-sshg-parser 169
+PASS: test-sshg-parser 170
+PASS: test-sshg-parser 171
+PASS: test-sshg-parser 172
+PASS: test-sshg-parser 173
+PASS: test-sshg-parser 174
+PASS: test-sshg-parser 175
+PASS: test-sshg-parser 176
+PASS: test-sshg-parser 177
+PASS: test-sshg-parser 178
+PASS: test-sshg-parser 179
+============================================================================
+Testsuite summary for sshguard 2.4.3
+============================================================================
+# TOTAL: 179
+# PASS:  179
+# SKIP:  0
+# XFAIL: 0
+# FAIL:  0
+# XPASS: 0
+# ERROR: 0
+============================================================================
+make[5]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[4]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[3]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+make[2]: Nothing to be done for 'check-am'.
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[1]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[1]: Entering directory '/tmp/src/sshguard-2.4.3'
+make[1]: Nothing to be done for 'check-am'.
+make[1]: Leaving directory '/tmp/src/sshguard-2.4.3'
+>>> sshguard: Entering fakeroot...
+Making install in src
+make[1]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+Making install in blocker
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/blocker'
+make[3]: Entering directory '/tmp/src/sshguard-2.4.3/src/blocker'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././install-sh -c -d '/tmp/pkg/sshguard/usr/libexec'
+  /usr/bin/install -c sshg-blocker '/tmp/pkg/sshguard/usr/libexec'
+make[3]: Leaving directory '/tmp/src/sshguard-2.4.3/src/blocker'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/blocker'
+Making install in fw
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/fw'
+make[3]: Entering directory '/tmp/src/sshguard-2.4.3/src/fw'
+ ../.././install-sh -c -d '/tmp/pkg/sshguard/usr/libexec'
+make[3]: Nothing to be done for 'install-data-am'.
+ ../.././install-sh -c -d '/tmp/pkg/sshguard/usr/libexec'
+  /usr/bin/install -c sshg-fw-hosts '/tmp/pkg/sshguard/usr/libexec'
+ /usr/bin/install -c sshg-fw-firewalld sshg-fw-ipfilter sshg-fw-ipfw sshg-fw-ipset sshg-fw-iptables sshg-fw-nft-sets sshg-fw-null sshg-fw-pf '/tmp/pkg/sshguard/usr/libexec'
+make[3]: Leaving directory '/tmp/src/sshguard-2.4.3/src/fw'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/fw'
+Making install in parser
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make  install-am
+make[3]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[4]: Entering directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[4]: Nothing to be done for 'install-data-am'.
+ ../.././install-sh -c -d '/tmp/pkg/sshguard/usr/libexec'
+  /usr/bin/install -c sshg-parser '/tmp/pkg/sshguard/usr/libexec'
+make[4]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[3]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src/parser'
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+make[3]: Entering directory '/tmp/src/sshguard-2.4.3/src'
+ .././install-sh -c -d '/tmp/pkg/sshguard/usr/libexec'
+make[3]: Nothing to be done for 'install-data-am'.
+ .././install-sh -c -d '/tmp/pkg/sshguard/usr/sbin'
+ /usr/bin/install -c sshg-logtail '/tmp/pkg/sshguard/usr/libexec'
+ /usr/bin/install -c sshguard '/tmp/pkg/sshguard/usr/sbin'
+make[3]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[1]: Leaving directory '/tmp/src/sshguard-2.4.3/src'
+make[1]: Entering directory '/tmp/src/sshguard-2.4.3'
+make[2]: Entering directory '/tmp/src/sshguard-2.4.3'
+make[2]: Nothing to be done for 'install-exec-am'.
+ ./install-sh -c -d '/tmp/pkg/sshguard/usr/share/man/man7'
+ ./install-sh -c -d '/tmp/pkg/sshguard/usr/share/man/man8'
+ /usr/bin/install -c -m 644 doc/sshguard.8 '/tmp/pkg/sshguard/usr/share/man/man8'
+ /usr/bin/install -c -m 644 doc/sshguard-setup.7 '/tmp/pkg/sshguard/usr/share/man/man7'
+make[2]: Leaving directory '/tmp/src/sshguard-2.4.3'
+make[1]: Leaving directory '/tmp/src/sshguard-2.4.3'
+>>> sshguard-openrc*: Running split function openrc...
+'etc/conf.d' -> '/tmp/pkg/sshguard-openrc/etc/conf.d'
+'etc/init.d' -> '/tmp/pkg/sshguard-openrc/etc/init.d'
+>>> sshguard-openrc*: Preparing subpackage sshguard-openrc...
+>>> sshguard-openrc*: Running postcheck for sshguard-openrc
+>>> sshguard-doc*: Running split function doc...
+'usr/share/man' -> '/tmp/pkg/sshguard-doc/usr/share/man'
+>>> sshguard-doc*: Preparing subpackage sshguard-doc...
+>>> sshguard-doc*: Running postcheck for sshguard-doc
+>>> sshguard*: Running postcheck for sshguard
+>>> sshguard*: Preparing package sshguard...
+>>> sshguard*: Stripping binaries
+>>> sshguard-doc*: Scanning shared objects
+>>> sshguard-openrc*: Scanning shared objects
+>>> sshguard*: Scanning shared objects
+>>> sshguard-doc*: Tracing dependencies...
+>>> sshguard-doc*: Package size: 5.7 KB
+>>> sshguard-doc*: Compressing data...
+>>> sshguard-doc*: Create checksum...
+>>> sshguard-doc*: Create sshguard-doc-2.4.3-r1.apk
+>>> sshguard-openrc*: Tracing dependencies...
+>>> sshguard-openrc*: Package size: 829.0 B
+>>> sshguard-openrc*: Compressing data...
+>>> sshguard-openrc*: Create checksum...
+>>> sshguard-openrc*: Create sshguard-openrc-2.4.3-r1.apk
+>>> sshguard*: Tracing dependencies...
+	iptables
+	so:libc.musl-x86_64.so.1
+>>> sshguard*: Package size: 4.5 MB
+>>> sshguard*: Compressing data...
+>>> sshguard*: Create checksum...
+>>> sshguard*: Create sshguard-2.4.3-r1.apk
+>>> sshguard: Updating the main/x86_64 repository index...
+>>> sshguard: Signing the index...
+>>> sshguard: Cleaning up srcdir
+>>> sshguard: Cleaning up build chroot
+>>> sshguard: Cleaning up pkgdir
