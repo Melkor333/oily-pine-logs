@@ -1,210 +1,0 @@
-pigz: not found
->>> xxhash: Building main/xxhash 0.8.3-r0 (using abuild 3.14.1-r4) started Sun, 18 May 2025 08:55:30 +0000
->>> xxhash: Validating /home/packager/aports/main/xxhash/APKBUILD...
->>> xxhash: Analyzing dependencies...
->>> xxhash: Installing for build: build-base
-(1/1) Installing .makedepends-xxhash (20250518.085532)
-OK: 261 MiB in 82 packages
->>> xxhash: Cleaning up srcdir
->>> xxhash: Cleaning up pkgdir
->>> xxhash: Cleaning up tmpdir
->>> xxhash: Fetching xxhash-0.8.3.tar.gz::https://github.com/Cyan4973/xxHash/archive/v0.8.3.tar.gz
-Connecting to github.com (140.82.121.3:443)
-Connecting to codeload.github.com (140.82.121.10:443)
-saving to '/var/cache/distfiles/xxhash-0.8.3.tar.gz.part'
-xxhash-0.8.3.tar.gz. 100% |********************************| 1120k  0:00:00 ETA
-'/var/cache/distfiles/xxhash-0.8.3.tar.gz.part' saved
->>> xxhash: Fetching xxhash-0.8.3.tar.gz::https://github.com/Cyan4973/xxHash/archive/v0.8.3.tar.gz
->>> xxhash: Checking sha512sums...
-xxhash-0.8.3.tar.gz: OK
->>> xxhash: Unpacking /var/cache/distfiles/xxhash-0.8.3.tar.gz...
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2     -c -o xxhash.o xxhash.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -fPIC  xxhash.c xxh_x86dispatch.c -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -shared -Wl,-soname=libxxhash.so.0 -o libxxhash.so.0.8.3
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o cli/xxhsum.o cli/xxhsum.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o cli/xsum_os_specific.o cli/xsum_os_specific.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o cli/xsum_arch.o cli/xsum_arch.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o cli/xsum_output.o cli/xsum_output.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o cli/xsum_sanity_check.o cli/xsum_sanity_check.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o cli/xsum_bench.o cli/xsum_bench.c
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1  -c -o xxh_x86dispatch.o xxh_x86dispatch.c
-ar rcs libxxhash.a xxhash.o
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2   -DXXHSUM_DISPATCH=1 xxhash.o cli/xxhsum.o cli/xsum_os_specific.o cli/xsum_arch.o cli/xsum_output.o cli/xsum_sanity_check.o cli/xsum_bench.o xxh_x86dispatch.o -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs -o xxhsum
-ln -sf xxhsum xxh32sum
-ln -sf xxhsum xxh64sum
-ln -sf xxhsum xxh128sum
-ln -sf xxhsum xxh3sum
-ln -sf libxxhash.so.0.8.3 libxxhash.so.0
-ln -sf libxxhash.so.0.8.3 libxxhash.so
-make -C tests test_sanity
-make[1]: Entering directory '/home/packager/aports/main/xxhash/src/xxHash-0.8.3/tests'
-gcc -Os -fstack-clash-protection -Wformat -Werror=format-security -fno-plt -DXXH_FORCE_MEMORY_ACCESS=1 -flto=auto -O2 -Wall -Wextra -Wconversion -Wcast-qual -Wcast-align -Wshadow -Wstrict-aliasing=1 -Wswitch-enum -Wdeclaration-after-statement -Wstrict-prototypes -Wundef -Wpointer-arith -Wformat-security -Wvla -Wformat=2 -Winit-self -Wfloat-equal -Wwrite-strings -Wredundant-decls -Wstrict-overflow=2  -Wall -Wextra -Wundef -g -Wl,--as-needed,-O1,--sort-common -Wl,-z,pack-relative-relocs sanity_test.c -o sanity_test
-./sanity_test
-OK. (passes 49948 tests)
-make[1]: Leaving directory '/home/packager/aports/main/xxhash/src/xxHash-0.8.3/tests'
-# stdin
-# If you get "Wrong parameters" on Emscripten+Node.js, recompile with `NODE_JS=1`
-./xxhsum < xxhash.c
-5ffb01494ce73724  stdin
-# multiple files
-./xxhsum xxhash.*
-5ffb01494ce73724  xxhash.c
-33c1f3c9184bb74a  xxhash.h
-1aa6f094e45a92e6  xxhash.o
-# internal bench
-./xxhsum -bi0
-xxhsum 0.8.3 by Yann Collet 
-compiled as 64-bit x86 autoVec (SSE2 detected) little endian with GCC 14.2.0 
-Sample of 100 KB...        
-                                                                                 1-XXH32                         :     102400 -> 1-XXH32                         :     102400 ->    38021 it/s ( 3713.0 MB/s)  1#XXH32                         :     102400 ->    38021 it/s ( 3713.0 MB/s) 
-                                                                                 1-XXH64                         :     102400 -> 1-XXH64                         :     102400 ->    76866 it/s ( 7506.4 MB/s)  3#XXH64                         :     102400 ->    76866 it/s ( 7506.4 MB/s) 
-                                                                                 1-XXH3_64b                      :     102400 -> 1-XXH3_64b                      :     102400 ->    61974 it/s ( 6052.1 MB/s)  5#XXH3_64b                      :     102400 ->    61974 it/s ( 6052.1 MB/s) 
-                                                                                 1-XXH128                        :     102400 -> 1-XXH128                        :     102400 ->    63151 it/s ( 6167.1 MB/s) 11#XXH128                        :     102400 ->    63151 it/s ( 6167.1 MB/s) 
-# long bench command
-./xxhsum --benchmark-all -i0
-xxhsum 0.8.3 by Yann Collet 
-compiled as 64-bit x86 autoVec (SSE2 detected) little endian with GCC 14.2.0 
-Sample of 100 KB...        
-                                                                                 1-XXH32                         :     102400 -> 1-XXH32                         :     102400 ->    34288 it/s ( 3348.4 MB/s)  1#XXH32                         :     102400 ->    34288 it/s ( 3348.4 MB/s) 
-                                                                                 1-XXH32 unaligned               :     102400 -> 1-XXH32 unaligned               :     102400 ->    42668 it/s ( 4166.8 MB/s)  2#XXH32 unaligned               :     102400 ->    42668 it/s ( 4166.8 MB/s) 
-                                                                                 1-XXH64                         :     102400 -> 1-XXH64                         :     102400 ->   126847 it/s (12387.4 MB/s)  3#XXH64                         :     102400 ->   126847 it/s (12387.4 MB/s) 
-                                                                                 1-XXH64 unaligned               :     102400 -> 1-XXH64 unaligned               :     102400 ->   125152 it/s (12221.9 MB/s)  4#XXH64 unaligned               :     102400 ->   125152 it/s (12221.9 MB/s) 
-                                                                                 1-XXH3_64b                      :     102400 -> 1-XXH3_64b                      :     102400 ->   104675 it/s (10222.1 MB/s)  5#XXH3_64b                      :     102400 ->   104675 it/s (10222.1 MB/s) 
-                                                                                 1-XXH3_64b unaligned            :     102400 -> 1-XXH3_64b unaligned            :     102400 ->    97170 it/s ( 9489.2 MB/s)  6#XXH3_64b unaligned            :     102400 ->    97170 it/s ( 9489.2 MB/s) 
-                                                                                 1-XXH3_64b w/seed               :     102400 -> 1-XXH3_64b w/seed               :     102400 ->   105967 it/s (10348.3 MB/s)  7#XXH3_64b w/seed               :     102400 ->   105967 it/s (10348.3 MB/s) 
-                                                                                 1-XXH3_64b w/seed unaligned     :     102400 -> 1-XXH3_64b w/seed unaligned     :     102400 ->    98848 it/s ( 9653.2 MB/s)  8#XXH3_64b w/seed unaligned     :     102400 ->    98848 it/s ( 9653.2 MB/s) 
-                                                                                 1-XXH3_64b w/secret             :     102400 -> 1-XXH3_64b w/secret             :     102400 ->    98470 it/s ( 9616.2 MB/s)  9#XXH3_64b w/secret             :     102400 ->    98470 it/s ( 9616.2 MB/s) 
-                                                                                 1-XXH3_64b w/secret unaligned   :     102400 -> 1-XXH3_64b w/secret unaligned   :     102400 ->    90114 it/s ( 8800.2 MB/s) 10#XXH3_64b w/secret unaligned   :     102400 ->    90114 it/s ( 8800.2 MB/s) 
-                                                                                 1-XXH128                        :     102400 -> 1-XXH128                        :     102400 ->   105425 it/s (10295.4 MB/s) 11#XXH128                        :     102400 ->   105425 it/s (10295.4 MB/s) 
-                                                                                 1-XXH128 unaligned              :     102400 -> 1-XXH128 unaligned              :     102400 ->    97353 it/s ( 9507.2 MB/s) 12#XXH128 unaligned              :     102400 ->    97353 it/s ( 9507.2 MB/s) 
-                                                                                 1-XXH128 w/seed                 :     102400 -> 1-XXH128 w/seed                 :     102400 ->   104675 it/s (10222.1 MB/s) 13#XXH128 w/seed                 :     102400 ->   104675 it/s (10222.1 MB/s) 
-                                                                                 1-XXH128 w/seed unaligned       :     102400 -> 1-XXH128 w/seed unaligned       :     102400 ->   110991 it/s (10839.0 MB/s) 14#XXH128 w/seed unaligned       :     102400 ->   110991 it/s (10839.0 MB/s) 
-                                                                                 1-XXH128 w/secret               :     102400 -> 1-XXH128 w/secret               :     102400 ->   119490 it/s (11668.9 MB/s) 15#XXH128 w/secret               :     102400 ->   119490 it/s (11668.9 MB/s) 
-                                                                                 1-XXH128 w/secret unaligned     :     102400 -> 1-XXH128 w/secret unaligned     :     102400 ->   110753 it/s (10815.7 MB/s) 16#XXH128 w/secret unaligned     :     102400 ->   110753 it/s (10815.7 MB/s) 
-                                                                                 1-XXH32_stream                  :     102400 -> 1-XXH32_stream                  :     102400 ->    30940 it/s ( 3021.5 MB/s) 17#XXH32_stream                  :     102400 ->    30940 it/s ( 3021.5 MB/s) 
-                                                                                 1-XXH32_stream unaligned        :     102400 -> 1-XXH32_stream unaligned        :     102400 ->    32370 it/s ( 3161.1 MB/s) 18#XXH32_stream unaligned        :     102400 ->    32370 it/s ( 3161.1 MB/s) 
-                                                                                 1-XXH64_stream                  :     102400 -> 1-XXH64_stream                  :     102400 ->   145480 it/s (14207.1 MB/s) 19#XXH64_stream                  :     102400 ->   145480 it/s (14207.1 MB/s) 
-                                                                                 1-XXH64_stream unaligned        :     102400 -> 1-XXH64_stream unaligned        :     102400 ->   142659 it/s (13931.6 MB/s) 20#XXH64_stream unaligned        :     102400 ->   142659 it/s (13931.6 MB/s) 
-                                                                                 1-XXH3_stream                   :     102400 -> 1-XXH3_stream                   :     102400 ->    83199 it/s ( 8124.9 MB/s) 21#XXH3_stream                   :     102400 ->    83199 it/s ( 8124.9 MB/s) 
-                                                                                 1-XXH3_stream unaligned         :     102400 -> 1-XXH3_stream unaligned         :     102400 ->    80532 it/s ( 7864.4 MB/s) 22#XXH3_stream unaligned         :     102400 ->    80532 it/s ( 7864.4 MB/s) 
-                                                                                 1-XXH3_stream w/seed            :     102400 -> 1-XXH3_stream w/seed            :     102400 ->   116648 it/s (11391.4 MB/s) 23#XXH3_stream w/seed            :     102400 ->   116648 it/s (11391.4 MB/s) 
-                                                                                 1-XXH3_stream w/seed unaligned  :     102400 -> 1-XXH3_stream w/seed unaligned  :     102400 ->   107741 it/s (10521.5 MB/s) 24#XXH3_stream w/seed unaligned  :     102400 ->   107741 it/s (10521.5 MB/s) 
-                                                                                 1-XXH128_stream                 :     102400 -> 1-XXH128_stream                 :     102400 ->    82268 it/s ( 8034.0 MB/s) 25#XXH128_stream                 :     102400 ->    82268 it/s ( 8034.0 MB/s) 
-                                                                                 1-XXH128_stream unaligned       :     102400 -> 1-XXH128_stream unaligned       :     102400 ->    79414 it/s ( 7755.3 MB/s) 26#XXH128_stream unaligned       :     102400 ->    79414 it/s ( 7755.3 MB/s) 
-                                                                                 1-XXH128_stream w/seed          :     102400 -> 1-XXH128_stream w/seed          :     102400 ->   116780 it/s (11404.3 MB/s) 27#XXH128_stream w/seed          :     102400 ->   116780 it/s (11404.3 MB/s) 
-                                                                                 1-XXH128_stream w/seed unaligne :     102400 -> 1-XXH128_stream w/seed unaligne :     102400 ->   107069 it/s (10455.9 MB/s) 28#XXH128_stream w/seed unaligne :     102400 ->   107069 it/s (10455.9 MB/s) 
-# bench multiple variants
-./xxhsum -b1,2,3 -i0
-xxhsum 0.8.3 by Yann Collet 
-compiled as 64-bit x86 autoVec (SSE2 detected) little endian with GCC 14.2.0 
-Sample of 100 KB...        
-                                                                                 1-XXH32                         :     102400 -> 1-XXH32                         :     102400 ->    73153 it/s ( 7143.9 MB/s)  1#XXH32                         :     102400 ->    73153 it/s ( 7143.9 MB/s) 
-                                                                                 1-XXH32 unaligned               :     102400 -> 1-XXH32 unaligned               :     102400 ->    68667 it/s ( 6705.7 MB/s)  2#XXH32 unaligned               :     102400 ->    68667 it/s ( 6705.7 MB/s) 
-                                                                                 1-XXH64                         :     102400 -> 1-XXH64                         :     102400 ->   134465 it/s (13131.3 MB/s)  3#XXH64                         :     102400 ->   134465 it/s (13131.3 MB/s) 
-# file bench
-./xxhsum -bi0 xxhash.c
-xxhsum 0.8.3 by Yann Collet 
-compiled as 64-bit x86 autoVec (SSE2 detected) little endian with GCC 14.2.0 
-                                                                                 1-XXH32                         :       1855 -> 1-XXH32                         :       1855 ->  3531250 it/s ( 6247.0 MB/s)  1#XXH32                         :       1855 ->  3531250 it/s ( 6247.0 MB/s) 
-                                                                                 1-XXH64                         :       1855 -> 1-XXH64                         :       1855 ->  6284761 it/s (11118.2 MB/s)  3#XXH64                         :       1855 ->  6284761 it/s (11118.2 MB/s) 
-                                                                                 1-XXH3_64b                      :       1855 -> 1-XXH3_64b                      :       1855 ->  5544652 it/s ( 9808.9 MB/s)  5#XXH3_64b                      :       1855 ->  5544652 it/s ( 9808.9 MB/s) 
-                                                                                 1-XXH128                        :       1855 -> 1-XXH128                        :       1855 ->  4829060 it/s ( 8542.9 MB/s) 11#XXH128                        :       1855 ->  4829060 it/s ( 8542.9 MB/s) 
-# 32-bit
-./xxhsum -H0 xxhash.c
-623b23d3  xxhash.c
-# 128-bit
-./xxhsum -H2 xxhash.c
-7615c59c2d746e27e873a692555aca2b  xxhash.c
-# XXH3 (enforce BSD style)
-./xxhsum -H3 xxhash.c | grep "XXH3"
-XXH3_e873a692555aca2b  xxhash.c
-# request incorrect variant
-./xxhsum -H9 xxhash.c ; test $? -eq 1
-Wrong parameters
-
-xxhsum 0.8.3 by Yann Collet 
-Create or verify checksums using fast non-cryptographic algorithm xxHash 
-
-Usage: xxhsum [options] [files] 
-
-When no filename provided or when '-' is provided, uses stdin as input. 
-
-Options: 
-  -H#             select an xxhash algorithm (default: 1) 
-                  0: XXH32 
-                  1: XXH64 
-                  2: XXH128 (also called XXH3_128bits) 
-                  3: XXH3 (also called XXH3_64bits) 
-  -c, --check     read xxHash checksum from [files] and check them 
-      --filelist  generate hashes for files listed in [files] 
-  -h, --help      display a long help page about advanced options 
-
- .......   checks completed successfully   ....... 
->>> xxhash: Entering fakeroot...
-Installing libxxhash.a
-Installing libxxhash
-creating pkgconfig
-Installing xxhsum
-Installing man pages
-Installing pkgconfig
-xxhash installation completed
->>> xxhash-dev*: Running split function dev...
-'usr/include' -> '/home/packager/aports/main/xxhash/pkg/xxhash-dev/usr/include'
-'usr/lib/pkgconfig' -> '/home/packager/aports/main/xxhash/pkg/xxhash-dev/usr/lib/pkgconfig'
-'usr/lib/libxxhash.so' -> '/home/packager/aports/main/xxhash/pkg/xxhash-dev/usr/lib/libxxhash.so'
->>> xxhash-dev*: Preparing subpackage xxhash-dev...
->>> xxhash-dev*: Stripping binaries
->>> xxhash-dev*: Running postcheck for xxhash-dev
->>> xxhash-doc*: Running split function doc...
-'usr/share/man' -> '/home/packager/aports/main/xxhash/pkg/xxhash-doc/usr/share/man'
->>> xxhash-doc*: Preparing subpackage xxhash-doc...
->>> xxhash-doc*: Running postcheck for xxhash-doc
->>> libxxhash*: Running split function libs...
-'usr/lib/libxxhash.so.0' -> '/home/packager/aports/main/xxhash/pkg/libxxhash/usr/lib/libxxhash.so.0'
-'usr/lib/libxxhash.so.0.8.3' -> '/home/packager/aports/main/xxhash/pkg/libxxhash/usr/lib/libxxhash.so.0.8.3'
->>> libxxhash*: Preparing subpackage libxxhash...
->>> libxxhash*: Stripping binaries
->>> libxxhash*: Running postcheck for libxxhash
->>> xxhash*: Running postcheck for xxhash
->>> xxhash*: Preparing package xxhash...
->>> xxhash*: Stripping binaries
->>> libxxhash*: Scanning shared objects
->>> xxhash-dev*: Scanning shared objects
->>> xxhash-doc*: Scanning shared objects
->>> xxhash*: Scanning shared objects
->>> libxxhash*: Tracing dependencies...
-	so:libc.musl-x86_64.so.1
->>> libxxhash*: Package size: 69.7 KB
->>> libxxhash*: Compressing data...
->>> libxxhash*: Create checksum...
-pigz: not found
->>> libxxhash*: Create libxxhash-0.8.3-r0.apk
->>> xxhash-dev*: Tracing dependencies...
-	libxxhash=0.8.3-r0
-	pkgconfig
->>> xxhash-dev*: Package size: 264.8 KB
->>> xxhash-dev*: Compressing data...
->>> xxhash-dev*: Create checksum...
-pigz: not found
->>> xxhash-dev*: Create xxhash-dev-0.8.3-r0.apk
->>> xxhash-doc*: Tracing dependencies...
->>> xxhash-doc*: Package size: 1.9 KB
->>> xxhash-doc*: Compressing data...
->>> xxhash-doc*: Create checksum...
-pigz: not found
->>> xxhash-doc*: Create xxhash-doc-0.8.3-r0.apk
->>> xxhash*: Tracing dependencies...
-	so:libc.musl-x86_64.so.1
->>> xxhash*: Package size: 98.0 KB
->>> xxhash*: Compressing data...
->>> xxhash*: Create checksum...
-pigz: not found
->>> xxhash*: Create xxhash-0.8.3-r0.apk
->>> xxhash: Build complete at Sun, 18 May 2025 08:55:45 +0000 elapsed time 0h 0m 15s
->>> xxhash: Cleaning up srcdir
->>> xxhash: Cleaning up pkgdir
->>> xxhash: Uninstalling dependencies...
-(1/1) Purging .makedepends-xxhash (20250518.085532)
-OK: 261 MiB in 81 packages
->>> xxhash: Updating the main/x86_64 repository index...
->>> xxhash: Signing the index...
-pigz: not found
